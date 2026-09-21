@@ -1,0 +1,83 @@
+{
+ "dampingSweep": [
+  {
+   "w": 0.0,
+   "median": 0.3853
+  },
+  {
+   "w": 0.2,
+   "median": 0.3387
+  },
+  {
+   "w": 0.4,
+   "median": 0.3147
+  },
+  {
+   "w": 0.6,
+   "median": 0.294
+  },
+  {
+   "w": 0.8,
+   "median": 0.2796
+  },
+  {
+   "w": 1.0,
+   "median": 0.2792
+  }
+ ],
+ "bootstrap": {
+  "median": 0.3147,
+  "ci95": [
+   0.29,
+   0.3424
+  ],
+  "rounds": 2000,
+  "excludesRandom": true
+ },
+ "ablation": [
+  {
+   "datatype": "affected_pathway",
+   "median": 0.3145,
+   "delta": -0.0002
+  },
+  {
+   "datatype": "animal_model",
+   "median": 0.3184,
+   "delta": 0.0037
+  },
+  {
+   "datatype": "genetic_association",
+   "median": 0.2967,
+   "delta": -0.018
+  },
+  {
+   "datatype": "genetic_literature",
+   "median": 0.3136,
+   "delta": -0.0011
+  },
+  {
+   "datatype": "literature",
+   "median": 0.3591,
+   "delta": 0.0444
+  },
+  {
+   "datatype": "rna_expression",
+   "median": 0.3159,
+   "delta": 0.0012
+  },
+  {
+   "datatype": "somatic_mutation",
+   "median": 0.3155,
+   "delta": 0.0008
+  }
+ ],
+ "negativeControl": {
+  "real": 0.3147,
+  "mismatched": 0.4254,
+  "collapses": true
+ },
+ "conservativeFloor": {
+  "median": 0.3538,
+  "betterThanChance": true
+ }
+}

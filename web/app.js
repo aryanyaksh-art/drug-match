@@ -21,6 +21,7 @@ const $ = (s) => document.querySelector(s);
 const stage = $('#stage');
 let index = [];
 let validation = null;
+const perDisease = {};
 let cursor = -1;
 
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g,
@@ -36,7 +37,11 @@ async function boot() {
     index = payload.diseases;
     try {
       const v = await fetch('data/validation.json');
-      if (v.ok) validation = (await v.json()).summary;
+      if (v.ok) {
+        const payload = await v.json();
+        validation = payload.summary;
+        (payload.perDisease || []).forEach((d) => { perDisease[d.id] = d; });
+      }
     } catch (_) { /* validation is optional */ }
     renderChips();
     renderFootMeta(payload);
@@ -194,11 +199,11 @@ let currentName = '';
 
 function render(r) {
   currentName = r.name;
-  // "Thin" means there is little for the method to work with: few druggable
-  // genes in absolute terms, a small candidate pool, or most of the disease's
-  // top genes having no approved drug against them at all.
-  const druggableShare = r.genesScored ? r.genesWithDrugs / r.genesScored : 0;
-  const thin = r.candidates.length < 8 || r.genesWithDrugs < 8 || druggableShare < 0.25;
+  // Two separate honesty signals, which used to be conflated. "Thin" is about
+  // how much the method had to work with; "poor" is about whether it actually
+  // performed. A disease can have a small pool and still rank its real
+  // treatment first, which is exactly what alkaptonuria does.
+  const thin = r.candidatesConsidered < 25;
   const v = validation
     ? `<div class="vbadge">Tested against ${validation.knownPairsEvaluated} drug&ndash;disease pairs that
        are already known to work: for <strong>${validation.diseasesWhereTopCandidateIsKnown} of
@@ -210,6 +215,22 @@ function render(r) {
        alone, ignoring the disease, put them at ${pct(validation.methods.popularity.medianPercentile)}
        &mdash; so the biology is doing the work, not the arithmetic.</span>` : ''}</div>` : '';
 
+  const pd = perDisease[r.id];
+  const one = pd && pd.knownEvaluated === 1;
+  const poor = pd && pd.medianPercentile > 0.5;
+  const local = pd ? `<div class="vlocal">
+      <strong>For this disease specifically:</strong>
+      ${one
+        ? `the one drug already known to treat it is <strong>${esc(pd.bestDrug)}</strong>,
+           which our ranking places at ${pd.bestRank} of ${pd.candidatePool}.`
+        : `of the ${pd.knownEvaluated} drugs already known to treat it, the best-placed is
+           <strong>${esc(pd.bestDrug)}</strong> at rank ${pd.bestRank} of ${pd.candidatePool},
+           and the median sits at ${pct(pd.medianPercentile)}.`}
+      ${poor
+        ? ` That is below where random guessing would land, so treat this disease's results with caution.`
+        : ` The engine was never told about ${one ? 'it' : 'any of them'}.`}
+    </div>` : '';
+
   stage.innerHTML = `
     <div class="dhead">
       <h2>${esc(r.name)}</h2>
@@ -219,11 +240,15 @@ function render(r) {
       top <b>${r.genesScored}</b> scored · <b>${r.genesWithDrugs}</b> of those have an approved drug ·
       <b>${r.candidatesConsidered}</b> candidates ranked ·
       <b>${r.knownDrugCount}</b> known drug${r.knownDrugCount === 1 ? '' : 's'} held out</p>
+    ${local}
     ${v}
-    ${thin ? `<div class="thin">Thin result. Only ${r.genesWithDrugs} of the top
-      ${r.genesScored} genes linked to this disease are hit by any approved drug, so there is
-      little for the method to work with. That is the honest answer for this disease, and it is
-      exactly the situation that makes these conditions hard to treat.</div>` : ''}
+    ${thin ? `<div class="thin">Thin result. Only ${r.candidatesConsidered} approved drugs
+      can be reached from this disease's genes at all, so there is little for the method to work
+      with. That is the honest answer here, and it is exactly the situation that makes these
+      conditions hard to treat.</div>` : ''}
+    ${poor && !thin ? `<div class="thin">This is one of the diseases our method handles badly.
+      Drugs already known to treat it rank below where random guessing would put them, so the
+      suggestions below are weak evidence. We are showing it rather than hiding it.</div>` : ''}
     <p class="secttl">Approved drugs not currently used for this disease</p>
     <div id="cards">${r.candidates.map(card).join('') || '<p class="empty">No candidates found.</p>'}</div>
     ${r.knownRanked.length ? `
