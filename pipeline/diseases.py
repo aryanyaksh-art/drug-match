@@ -126,7 +126,21 @@ COMMON = [
     ("MONDO_0005105", "Melanoma"),
 ]
 
-ALL = [(i, n, "rare") for i, n in RARE] + [(i, n, "common") for i, n in COMMON]
+# Diseases chosen programmatically by pipeline/select_diseases.py, which walks
+# the ontology under ten therapeutic areas and keeps everything meeting a rule
+# fixed in advance. They carry no rarity label: the selection rule does not
+# know which are rare, and guessing would make the rare-only statistic
+# meaningless. Rare-vs-common figures are reported over the curated set only.
+try:
+    from generated_diseases import GENERATED
+except ImportError:
+    GENERATED = []
+
+_CURATED_IDS = {i for i, _n in RARE} | {i for i, _n in COMMON}
+
+ALL = ([(i, n, "rare") for i, n in RARE]
+       + [(i, n, "common") for i, n in COMMON]
+       + [(i, n, "other") for i, n in GENERATED if i not in _CURATED_IDS])
 
 RARITY = {i: r for i, _, r in ALL}
 NAMES = {i: n for i, n, _ in ALL}

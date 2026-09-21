@@ -43,6 +43,10 @@ async function boot() {
         (payload.perDisease || []).forEach((d) => { perDisease[d.id] = d; });
       }
     } catch (_) { /* validation is optional */ }
+    try {
+      const a = await fetch('data/analysis.json');
+      if (a.ok) renderAnalysis(await a.json());
+    } catch (_) { /* analysis is optional */ }
     renderChips();
     renderFootMeta(payload);
     stage.innerHTML = '<p class="empty">Search a disease above, or pick one of the examples.</p>';
@@ -69,6 +73,39 @@ function renderFootMeta(payload) {
     `excluded evidence: ${payload.excludedDatatypes.join(', ')}`];
   if (validation) bits.push(`${validation.knownPairsEvaluated} known drug-disease pairs used for validation`);
   $('#footmeta').textContent = bits.join(' · ');
+}
+
+function renderAnalysis(a) {
+  const el = document.getElementById('analysis');
+  if (!el) return;
+  const sweep = a.dampingSweep.map((d) =>
+    `<tr><td>${d.w.toFixed(1)}${Math.abs(d.w - 0.4) < 1e-9 ? ' (ours)' : ''}</td>
+     <td>${pct(d.median)}</td></tr>`).join('');
+  const worst = [...a.ablation].sort((x, y) => y.delta - x.delta)[0];
+  el.innerHTML = `
+    <p><strong>Is the result stable?</strong> Resampling diseases 
+       ${a.bootstrap.rounds.toLocaleString()} times puts the median between
+       ${pct(a.bootstrap.ci95[0])} and ${pct(a.bootstrap.ci95[1])}.
+       That interval ${a.bootstrap.excludesRandom ? 'excludes' : 'does not exclude'} the 50%
+       a random ranking would give.</p>
+
+    <p><strong>Did we pick a lucky constant?</strong> No, and we can prove it by admitting
+       the opposite — a larger damping exponent would score better than the one we use.
+       We keep 0.4 because that is the value the Rephetio paper published, and tuning it
+       would mean we had fitted something.</p>
+    <table class="mini"><tr><th>exponent</th><th>median</th></tr>${sweep}</table>
+
+    <p><strong>What if the evidence itself leaks?</strong> Removing ${esc(worst.datatype)}
+       hurts more than removing anything else, and literature evidence is partly a
+       consequence of a drug already linking a gene to a disease. Stripping every
+       literature-derived source still leaves a median of
+       ${pct(a.conservativeFloor.median)}, so the result does not rest on it.</p>
+
+    <p><strong>Does it break when it should?</strong> Scoring each disease against a
+       different disease's known drugs moves the median to
+       ${pct(a.negativeControl.mismatched)}. It does not reach a clean 50%, because many
+       diseases share common treatments, so some drugs rank well everywhere. We report
+       that rather than explain it away.</p>`;
 }
 
 /* ---------- search ---------- */
@@ -172,13 +209,23 @@ function card(d, i) {
     : 'Approved drug';
   const moa = d.mechanisms.length
     ? `<p class="moa"><strong>Mechanism:</strong> ${esc(d.mechanisms.join('; '))}</p>` : '';
+  const warnList = (d.warnings || []).map((w) =>
+    `${esc(w.type)}${w.detail ? ` — ${esc(w.detail)}` : ''}`);
+  const safety = warnList.length
+    ? `<div class="safety"><strong>Safety on record:</strong> ${warnList.join('; ')}.
+       ${d.withdrawn
+         ? 'This drug has been withdrawn in at least one market. It is shown because the biology connects, not because it is a sensible candidate.'
+         : 'Relevant to any repurposing decision, and not something this ranking accounts for.'}</div>`
+    : '';
   return `
     <div class="card">
       <button class="chead" aria-expanded="false" data-card="${i}">
         <span class="rank">${d.rank}</span>
         <span class="cmain">
           <span class="dname">${esc(d.name)}</span>
-          <span class="dfor">${esc(approved)}</span>
+          <span class="dfor">${esc(approved)}${
+            d.withdrawn ? ' <span class="flag warn">withdrawn</span>'
+            : d.blackBox ? ' <span class="flag">black box</span>' : ''}</span>
         </span>
         <span class="score">
           <span class="bar"><i style="width:${Math.round(d.score * 100)}%"></i></span>
@@ -191,6 +238,7 @@ function card(d, i) {
           Showing its ${d.paths.length} strongest route${d.paths.length === 1 ? '' : 's'} into this disease.</p>
         ${evidenceRows(d.paths, d.name)}
         ${moa}
+        ${safety}
       </div>
     </div>`;
 }
@@ -234,7 +282,10 @@ function render(r) {
   stage.innerHTML = `
     <div class="dhead">
       <h2>${esc(r.name)}</h2>
-      <span class="tag ${r.rarity}">${r.rarity === 'rare' ? 'rare disease' : 'common disease'}</span>
+      <span class="tag ${r.rarity}">${
+        r.rarity === 'rare' ? 'rare disease'
+        : r.rarity === 'common' ? 'common disease'
+        : 'auto-selected'}</span>
     </div>
     <p class="dmeta"><b>${r.associatedGeneCount.toLocaleString()}</b> associated genes ·
       top <b>${r.genesScored}</b> scored · <b>${r.genesWithDrugs}</b> of those have an approved drug ·

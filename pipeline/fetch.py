@@ -232,6 +232,7 @@ def fetch_drugs(gene_cache):
     id name drugType maximumClinicalStage
     mechanismsOfAction { rows { mechanismOfAction actionType } }
     indications { rows { maxClinicalStage disease { id name } } }
+    drugWarnings { warningType toxicityClass description }
   }""" % (alias("m", i), chembl))
         data = gql("query {" + "\n".join(parts) + "\n}")
         for i, chembl in enumerate(chunk):
@@ -246,9 +247,24 @@ def fetch_drugs(gene_cache):
                 if name.lower() not in seen:
                     seen.add(name.lower())
                     approved_for.append(name)
+            # Safety matters here: we are suggesting existing drugs for new
+            # uses, and a reader deserves to know if one was withdrawn or
+            # carries a black box warning before it is treated as a lead.
+            warnings, seen_w = [], set()
+            for row in (node.get("drugWarnings") or []):
+                label = row.get("warningType")
+                tox = row.get("toxicityClass") or row.get("description")
+                key = (label, tox)
+                if not label or key in seen_w:
+                    continue
+                seen_w.add(key)
+                warnings.append({"type": label, "detail": tox})
             cache[chembl] = {
                 "id": node["id"],
                 "name": node["name"],
+                "warnings": warnings[:6],
+                "withdrawn": any(w["type"] == "Withdrawn" for w in warnings),
+                "blackBox": any(w["type"] == "Black Box Warning" for w in warnings),
                 "drugType": node.get("drugType"),
                 "maximumClinicalStage": node.get("maximumClinicalStage"),
                 "mechanisms": moa[:3],
