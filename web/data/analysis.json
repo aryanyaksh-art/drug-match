@@ -2,34 +2,34 @@
  "dampingSweep": [
   {
    "w": 0.0,
-   "median": 0.3853
+   "median": 0.3982
   },
   {
    "w": 0.2,
-   "median": 0.3387
+   "median": 0.357
   },
   {
    "w": 0.4,
-   "median": 0.3147
+   "median": 0.3333
   },
   {
    "w": 0.6,
-   "median": 0.294
+   "median": 0.3143
   },
   {
    "w": 0.8,
-   "median": 0.2796
+   "median": 0.3022
   },
   {
    "w": 1.0,
-   "median": 0.2792
+   "median": 0.3019
   }
  ],
  "bootstrap": {
-  "median": 0.3147,
+  "median": 0.3333,
   "ci95": [
-   0.29,
-   0.3424
+   0.3111,
+   0.3623
   ],
   "rounds": 2000,
   "excludesRandom": true
@@ -37,47 +37,72 @@
  "ablation": [
   {
    "datatype": "affected_pathway",
-   "median": 0.3145,
-   "delta": -0.0002
+   "median": 0.3333,
+   "delta": 0.0
   },
   {
    "datatype": "animal_model",
-   "median": 0.3184,
-   "delta": 0.0037
+   "median": 0.3405,
+   "delta": 0.0071
   },
   {
    "datatype": "genetic_association",
-   "median": 0.2967,
-   "delta": -0.018
+   "median": 0.3181,
+   "delta": -0.0153
   },
   {
    "datatype": "genetic_literature",
-   "median": 0.3136,
-   "delta": -0.0011
+   "median": 0.3333,
+   "delta": 0.0
   },
   {
    "datatype": "literature",
-   "median": 0.3591,
-   "delta": 0.0444
+   "median": 0.3672,
+   "delta": 0.0339
   },
   {
    "datatype": "rna_expression",
-   "median": 0.3159,
-   "delta": 0.0012
+   "median": 0.3343,
+   "delta": 0.0009
   },
   {
    "datatype": "somatic_mutation",
-   "median": 0.3155,
-   "delta": 0.0008
+   "median": 0.3308,
+   "delta": -0.0026
   }
  ],
  "negativeControl": {
-  "real": 0.3147,
-  "mismatched": 0.4254,
+  "real": 0.3333,
+  "mismatched": 0.4253,
   "collapses": true
  },
  "conservativeFloor": {
-  "median": 0.3538,
+  "median": 0.3633,
   "betterThanChance": true
+ },
+ "interactionHop": {
+  "directOnlyMedian": 0.3514,
+  "withHopMedian": 0.3333,
+  "helpsOverall": true,
+  "diseasesImproved": 108,
+  "diseasesWorsened": 77,
+  "diseasesUnchanged": 21,
+  "byRarity": {
+   "rare": {
+    "directOnly": 0.3418,
+    "withHop": 0.2825,
+    "delta": -0.0593
+   },
+   "common": {
+    "directOnly": 0.34,
+    "withHop": 0.3224,
+    "delta": -0.0176
+   },
+   "other": {
+    "directOnly": 0.3776,
+    "withHop": 0.3851,
+    "delta": 0.0074
+   }
+  }
  }
 }

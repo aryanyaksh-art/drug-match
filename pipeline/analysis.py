@@ -185,6 +185,71 @@ def main():
     report["conservativeFloor"] = {"median": round(floor, 4),
                                    "betterThanChance": floor < 0.45}
 
+    # ---- 6. does the interaction hop actually help? ----------------------
+    # It rescued alkaptonuria spectacularly, which proves nothing on its own.
+    # A change that fixes one case and quietly degrades fifty others is a bad
+    # change. This measures it across every disease, both ways.
+    print()
+    print("6. the interaction hop, measured across all diseases")
+    two_only = [percentiles_for(n, drugs_of_gene, genes_of_drug, None)
+                for _efo, n in nodes]
+    two_med = median_of([p for p in two_only if p])
+    print("   direct paths only:      %.1f%%" % (100 * two_med))
+    print("   with interaction hop:   %.1f%%" % (100 * point))
+    better = point < two_med
+    print("   the hop %s" % ("helps overall" if better
+                             else "HURTS overall -- reconsider it"))
+
+    # how many diseases improve, worsen, stay put
+    improved = worsened = same = 0
+    for (efo, node), before in zip(nodes, two_only):
+        after = percentiles_for(node, drugs_of_gene, genes_of_drug, interactions)
+        if not before or not after:
+            continue
+        b, a = statistics.median(before), statistics.median(after)
+        if a < b - 0.01:
+            improved += 1
+        elif a > b + 0.01:
+            worsened += 1
+        else:
+            same += 1
+    print("   per disease: %d improved, %d worsened, %d unchanged"
+          % (improved, worsened, same))
+
+    # The claim worth testing is narrower than "it helps". The hop exists for
+    # diseases whose own causal gene is undruggable, which is the rare-disease
+    # situation. So the effect should be larger there than elsewhere.
+    from diseases import RARITY
+    strata = {}
+    for (efo, node), before in zip(nodes, two_only):
+        after = percentiles_for(node, drugs_of_gene, genes_of_drug, interactions)
+        if not before or not after:
+            continue
+        bucket = strata.setdefault(RARITY.get(efo, "other"), {"b": [], "a": []})
+        bucket["b"].extend(before)
+        bucket["a"].extend(after)
+    print("   %-10s %10s %10s %8s" % ("group", "direct", "with hop", "change"))
+    by_rarity = {}
+    for name in ("rare", "common", "other"):
+        bucket = strata.get(name)
+        if not bucket or not bucket["b"]:
+            continue
+        b = statistics.median(bucket["b"])
+        a = statistics.median(bucket["a"])
+        by_rarity[name] = {"directOnly": round(b, 4), "withHop": round(a, 4),
+                           "delta": round(a - b, 4)}
+        print("   %-10s %9.1f%% %9.1f%% %+7.1f%%"
+              % (name, 100 * b, 100 * a, 100 * (a - b)))
+    report["interactionHop"] = {
+        "directOnlyMedian": round(two_med, 4),
+        "withHopMedian": round(point, 4),
+        "helpsOverall": better,
+        "diseasesImproved": improved,
+        "diseasesWorsened": worsened,
+        "diseasesUnchanged": same,
+        "byRarity": by_rarity,
+    }
+
     with open(os.path.join(ROOT, "web", "data", "analysis.json"), "w",
               encoding="utf-8") as fh:
         json.dump(report, fh, indent=1)
