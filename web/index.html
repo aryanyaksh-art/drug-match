@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Off The Shelf — drug repurposing candidates</title>
+<meta name="description" content="Finds already-approved drugs that could treat diseases with no good treatment, and shows the biology behind each suggestion.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <h1>Off The Shelf</h1>
+    <p class="tagline">Type a disease. Get existing approved drugs that might treat it, each with the biology that explains why.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="searchrow">
+    <label class="srch" for="q">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+      <input id="q" type="text" placeholder="Search a disease" autocomplete="off" aria-label="Search a disease">
+    </label>
+    <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+  </div>
+
+  <div id="chips" class="chips"></div>
+
+  <section id="stage" class="stage">
+    <p class="loading">Loading disease index…</p>
+  </section>
+
+  <details class="how">
+    <summary>How the ranking works</summary>
+    <div class="howbody">
+      <p>Every candidate is reached by a two-step path: a drug <strong>targets a gene</strong>, and that gene is <strong>associated with the disease</strong>. We add up every such path a drug has into the disease.</p>
+      <p>Paths are not counted equally. A gene that hundreds of drugs hit, or a drug that hits hundreds of genes, tells you very little — everything connects through it. So each path is divided by how connected the gene and the drug are, using the damping exponent <code>w = 0.4</code> published in Project Rephetio. A path through a specific, sparsely-connected gene counts for much more than one through a hub.</p>
+      <p class="warn">Open Targets scores gene–disease links partly from <em>known drug</em> evidence. Using that would mean reading the answer off the back of the book, so we exclude it. Every number shown here comes from genetics, animal models, expression and literature only.</p>
+      <p class="credit">Method after <a href="https://doi.org/10.7554/eLife.26726" target="_blank" rel="noopener">Himmelstein et al., Project Rephetio, eLife 2017</a>. Data from the <a href="https://platform.opentargets.org/" target="_blank" rel="noopener">Open Targets Platform</a>. Related modern work: <a href="https://doi.org/10.1038/s41591-024-03233-x" target="_blank" rel="noopener">TxGNN, Nature Medicine 2024</a>.</p>
+    </div>
+  </details>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>This is a hypothesis generator for researchers, not medical advice.</strong> Nothing here has been tested in patients for the disease it is listed under. Every candidate shown would need laboratory work and clinical trials before it could be used. Do not make any treatment decision from this page.</p>
+    <p class="meta" id="footmeta"></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
