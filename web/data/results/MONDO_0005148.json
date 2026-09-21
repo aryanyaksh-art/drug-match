@@ -7,54 +7,10 @@
  "genesScored": 50,
  "genesWithDrugs": 38,
  "knownDrugCount": 615,
- "candidatesConsidered": 89,
+ "candidatesConsidered": 176,
+ "pathsTwoHop": 128,
+ "pathsThreeHop": 262,
  "candidates": [
-  {
-   "id": "CHEMBL2325741",
-   "name": "Capivasertib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Serine/threonine-protein kinase AKT inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.5401,
-   "rawScore": 0.753008,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "AKT2",
-     "geneId": "ENSG00000105221",
-     "geneName": "AKT serine/threonine kinase 2",
-     "assoc": 0.9936,
-     "contribution": 0.753008,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7034
-      },
-      {
-       "id": "literature",
-       "score": 0.6591
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6267
-      }
-     ]
-    }
-   ]
-  },
   {
    "id": "CHEMBL253371",
    "name": "Alverine",
@@ -67,9 +23,9 @@
     "Hepatocyte nuclear factor 4-alpha activator",
     "Serotonin 1a (5-HT1a) receptor antagonist"
    ],
-   "rank": 5,
-   "score": 0.5362,
-   "rawScore": 0.749386,
+   "rank": 3,
+   "score": 0.5785,
+   "rawScore": 2.13491,
    "geneCount": 2,
    "paths": [
     {
@@ -100,7 +56,142 @@
        "id": "somatic_mutation",
        "score": 0.1976
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HNF1A",
+     "geneId": "ENSG00000135100",
+     "geneName": "HNF1 homeobox A",
+     "assoc": 0.9995,
+     "contribution": 0.748391,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9656
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8888
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2461
+      }
+     ],
+     "hops": 3,
+     "via": "HNF4A",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "HNF1B",
+     "geneId": "ENSG00000275410",
+     "geneName": "HNF1 homeobox B",
+     "assoc": 0.9879,
+     "contribution": 0.637132,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8299
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7998
+      },
+      {
+       "id": "literature",
+       "score": 0.6446
+      }
+     ],
+     "hops": 3,
+     "via": "HNF4A",
+     "viaScore": 0.851
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2325741",
+   "name": "Capivasertib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast neoplasm",
+    "breast cancer"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Serine/threonine-protein kinase AKT inhibitor"
+   ],
+   "rank": 5,
+   "score": 0.3536,
+   "rawScore": 1.318545,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "AKT2",
+     "geneId": "ENSG00000105221",
+     "geneName": "AKT serine/threonine kinase 2",
+     "assoc": 0.9936,
+     "contribution": 0.753008,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7034
+      },
+      {
+       "id": "literature",
+       "score": 0.6591
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6267
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AKT2",
+     "geneId": "ENSG00000105221",
+     "geneName": "AKT serine/threonine kinase 2",
+     "assoc": 0.9936,
+     "contribution": 0.565537,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7034
+      },
+      {
+       "id": "literature",
+       "score": 0.6591
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6267
+      }
+     ],
+     "hops": 3,
+     "via": "AKT1",
+     "viaScore": 0.991
     }
    ]
   },
@@ -115,9 +206,9 @@
    "mechanisms": [
     "Sulfonylurea receptor 1, Kir6.2 blocker"
    ],
-   "rank": 11,
-   "score": 0.3081,
-   "rawScore": 0.536899,
+   "rank": 14,
+   "score": 0.325,
+   "rawScore": 1.21466,
    "geneCount": 2,
    "paths": [
     {
@@ -148,7 +239,10 @@
        "id": "animal_model",
        "score": 0.5446
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "KCNJ11",
@@ -174,7 +268,503 @@
        "id": "somatic_mutation",
        "score": 0.7133
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1159",
+   "name": "Pinacidil Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Sulfonylurea receptor 2, Kir6.2 opener"
+   ],
+   "rank": 19,
+   "score": 0.2873,
+   "rawScore": 1.077598,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.280162,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "ABCC9",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL802",
+   "name": "Minoxidil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hypotrichosis",
+    "hypertensive disorder",
+    "Hypertension"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sulfonylurea receptor 2, Kir6.2 opener"
+   ],
+   "rank": 20,
+   "score": 0.2873,
+   "rawScore": 1.077598,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.280162,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "ABCC9",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL53418",
+   "name": "Danthron",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Constipation"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Retinoid X receptor alpha antagonist"
+   ],
+   "rank": 32,
+   "score": 0.2223,
+   "rawScore": 0.841778,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9998,
+     "contribution": 0.524686,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9525
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9191
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5861
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.6042,
+     "contribution": 0.317092,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4805
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2382
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301624",
+   "name": "Setmelanotide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "obesity disorder",
+    "Obesity",
+    "Bardet-Biedl syndrome"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Melanocortin receptor 4 agonist",
+    "Melanocortin receptor 4 agonist"
+   ],
+   "rank": 34,
+   "score": 0.1872,
+   "rawScore": 0.71446,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FTO",
+     "geneId": "ENSG00000140718",
+     "geneName": "FTO alpha-ketoglutarate dependent dioxygenase",
+     "assoc": 0.9987,
+     "contribution": 0.71446,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9721
+      },
+      {
+       "id": "literature",
+       "score": 0.9521
+      }
+     ],
+     "hops": 3,
+     "via": "MC4R",
+     "viaScore": 0.944
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Melanocortin receptor 4 agonist",
+    "Melanocortin receptor 4 agonist"
+   ],
+   "rank": 35,
+   "score": 0.1872,
+   "rawScore": 0.71446,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FTO",
+     "geneId": "ENSG00000140718",
+     "geneName": "FTO alpha-ketoglutarate dependent dioxygenase",
+     "assoc": 0.9987,
+     "contribution": 0.71446,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9721
+      },
+      {
+       "id": "literature",
+       "score": 0.9521
+      }
+     ],
+     "hops": 3,
+     "via": "MC4R",
+     "viaScore": 0.944
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743079",
+   "name": "Teprotumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Graves ophthalmopathy",
+    "Graves disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Insulin-like growth factor I receptor antagonist"
+   ],
+   "rank": 44,
+   "score": 0.15,
+   "rawScore": 0.579331,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "INSR",
+     "geneId": "ENSG00000171105",
+     "geneName": "insulin receptor",
+     "assoc": 0.9017,
+     "contribution": 0.579331,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6265
+      },
+      {
+       "id": "literature",
+       "score": 0.5307
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "IGF1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1023",
+   "name": "Bexarotene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Retinoid X receptor agonist"
+   ],
+   "rank": 45,
+   "score": 0.1398,
+   "rawScore": 0.542436,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9998,
+     "contribution": 0.338104,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9525
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9191
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5861
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.6042,
+     "contribution": 0.204332,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4805
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2382
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
     }
    ]
   },
@@ -190,8 +780,8 @@
     "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 18,
-   "score": 0.2899,
+   "rank": 46,
+   "score": 0.1336,
    "rawScore": 0.519969,
    "geneCount": 2,
    "paths": [
@@ -219,7 +809,10 @@
        "id": "animal_model",
        "score": 0.5861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "PPARA",
@@ -237,7 +830,284 @@
        "id": "genetic_association",
        "score": 0.2382
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1342",
+   "name": "Oxybate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "GABA-B receptor agonist",
+    "GABA-B receptor agonist",
+    "GABA-B receptor agonist"
+   ],
+   "rank": 47,
+   "score": 0.1312,
+   "rawScore": 0.510966,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.255763,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "GABBR1",
+     "viaScore": 0.912
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.255202,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "GABBR2",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL701",
+   "name": "Baclofen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "brain injury",
+    "Spasticity",
+    "spinal cord disorder",
+    "cerebral palsy"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "GABA-B receptor agonist"
+   ],
+   "rank": 48,
+   "score": 0.1312,
+   "rawScore": 0.510966,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.255763,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "GABBR1",
+     "viaScore": 0.912
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.255202,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 3,
+     "via": "GABBR2",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "rank": 49,
+   "score": 0.1219,
+   "rawScore": 0.47747,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AKT2",
+     "geneId": "ENSG00000105221",
+     "geneName": "AKT serine/threonine kinase 2",
+     "assoc": 0.9936,
+     "contribution": 0.47747,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7034
+      },
+      {
+       "id": "literature",
+       "score": 0.6591
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6267
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.984
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1580",
+   "name": "Pentostatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "anemia",
+    "hairy cell leukemia",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Adenosine deaminase inhibitor"
+   ],
+   "rank": 51,
+   "score": 0.121,
+   "rawScore": 0.47394,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.9714,
+     "contribution": 0.47394,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9714
+      }
+     ],
+     "hops": 3,
+     "via": "ADA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5315093",
+   "name": "Autologous Cd34+ Enriched Cell Fraction That Contains Cd34+ Cells Transduced With Retroviral Vector That Encodes For The Human Ada Cdna Sequence",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "severe combined immunodeficiency"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "ADA exogenous gene"
+   ],
+   "rank": 52,
+   "score": 0.121,
+   "rawScore": 0.47394,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.9714,
+     "contribution": 0.47394,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9714
+      }
+     ],
+     "hops": 3,
+     "via": "ADA",
+     "viaScore": 0.999
     }
    ]
   },
@@ -253,17 +1123,17 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor agonist"
    ],
-   "rank": 19,
-   "score": 0.2899,
-   "rawScore": 0.519969,
-   "geneCount": 2,
+   "rank": 53,
+   "score": 0.1122,
+   "rawScore": 0.44212,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "PPARG",
      "geneId": "ENSG00000132170",
      "geneName": "peroxisome proliferator activated receptor gamma",
      "assoc": 0.9998,
-     "contribution": 0.329817,
+     "contribution": 0.280438,
      "drugsOnGene": 8,
      "evidence": [
       {
@@ -282,14 +1152,17 @@
        "id": "animal_model",
        "score": 0.5861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "PPARA",
      "geneId": "ENSG00000186951",
      "geneName": "peroxisome proliferator activated receptor alpha",
      "assoc": 0.6042,
-     "contribution": 0.190151,
+     "contribution": 0.161682,
      "drugsOnGene": 9,
      "evidence": [
       {
@@ -300,7 +1173,59 @@
        "id": "genetic_association",
        "score": 0.2382
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL313972",
+   "name": "Masoprocol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "prostate cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Insulin-like growth factor I receptor inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "rank": 54,
+   "score": 0.1114,
+   "rawScore": 0.439051,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "INSR",
+     "geneId": "ENSG00000171105",
+     "geneName": "insulin receptor",
+     "assoc": 0.9017,
+     "contribution": 0.439051,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6265
+      },
+      {
+       "id": "literature",
+       "score": 0.5307
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "IGF1R",
+     "viaScore": 0.997
     }
    ]
   },
@@ -315,8 +1240,8 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 20,
-   "score": 0.1989,
+   "rank": 57,
+   "score": 0.1103,
    "rawScore": 0.435197,
    "geneCount": 1,
    "paths": [
@@ -344,61 +1269,28 @@
        "id": "animal_model",
        "score": 0.5861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL2220442",
-   "name": "Fluvastatin",
+   "id": "CHEMBL923",
+   "name": "Risedronic Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.156,
-   "rawScore": 0.395229,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "HMGCR",
-     "geneId": "ENSG00000113161",
-     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
-     "assoc": 0.908,
-     "contribution": 0.395229,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8357
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4402
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1477",
-   "name": "Cerivastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "familial hyperlipidemia",
-    "cardiovascular disorder"
+    "bone disorder",
+    "Paget disease"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "HMG-CoA reductase inhibitor"
+    "Farnesyl diphosphate synthase inhibitor"
    ],
-   "rank": 31,
-   "score": 0.156,
-   "rawScore": 0.395229,
+   "rank": 58,
+   "score": 0.1085,
+   "rawScore": 0.428796,
    "geneCount": 1,
    "paths": [
     {
@@ -406,8 +1298,8 @@
      "geneId": "ENSG00000113161",
      "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
      "assoc": 0.908,
-     "contribution": 0.395229,
-     "drugsOnGene": 8,
+     "contribution": 0.428796,
+     "drugsOnGene": 6,
      "evidence": [
       {
        "id": "literature",
@@ -417,7 +1309,488 @@
        "id": "genetic_association",
        "score": 0.4402
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "FDPS",
+     "viaScore": 0.967
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL834",
+   "name": "Pamidronic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypercalcemia",
+    "bone disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Farnesyl diphosphate synthase inhibitor"
+   ],
+   "rank": 60,
+   "score": 0.1085,
+   "rawScore": 0.428796,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.428796,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4402
+      }
+     ],
+     "hops": 3,
+     "via": "FDPS",
+     "viaScore": 0.967
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL870",
+   "name": "Alendronic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "bone disorder",
+    "Paget disease",
+    "osteoporosis",
+    "postmenopausal osteoporosis"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Farnesyl diphosphate synthase inhibitor"
+   ],
+   "rank": 61,
+   "score": 0.1085,
+   "rawScore": 0.428796,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.428796,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4402
+      }
+     ],
+     "hops": 3,
+     "via": "FDPS",
+     "viaScore": 0.967
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL319144",
+   "name": "Minodronic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "osteoporosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Farnesyl diphosphate synthase inhibitor"
+   ],
+   "rank": 62,
+   "score": 0.1085,
+   "rawScore": 0.428796,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.428796,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4402
+      }
+     ],
+     "hops": 3,
+     "via": "FDPS",
+     "viaScore": 0.967
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL924",
+   "name": "Zoledronic Acid Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypercalcemia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Farnesyl diphosphate synthase inhibitor"
+   ],
+   "rank": 63,
+   "score": 0.1085,
+   "rawScore": 0.428796,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.428796,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4402
+      }
+     ],
+     "hops": 3,
+     "via": "FDPS",
+     "viaScore": 0.967
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1131",
+   "name": "Acitretin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "psoriasis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "rank": 64,
+   "score": 0.1036,
+   "rawScore": 0.41109,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9998,
+     "contribution": 0.256235,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9525
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9191
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5861
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.6042,
+     "contribution": 0.154855,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4805
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2382
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL705",
+   "name": "Alitretinoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Eczematoid dermatitis",
+    "Kaposi's sarcoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "rank": 65,
+   "score": 0.1036,
+   "rawScore": 0.41109,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9998,
+     "contribution": 0.256235,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9525
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9191
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5861
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.6042,
+     "contribution": 0.154855,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4805
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2382
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL464",
+   "name": "Etretinate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "keratosis",
+    "psoriasis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "rank": 66,
+   "score": 0.1036,
+   "rawScore": 0.41109,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9998,
+     "contribution": 0.256235,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9525
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9191
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5861
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.6042,
+     "contribution": 0.154855,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4805
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2382
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 partial agonist"
+   ],
+   "rank": 67,
+   "score": 0.0999,
+   "rawScore": 0.397335,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.9714,
+     "contribution": 0.397335,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9714
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL518924",
+   "name": "Mavorixafor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "inborn error of immunity"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "rank": 68,
+   "score": 0.0999,
+   "rawScore": 0.397335,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.9714,
+     "contribution": 0.397335,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9714
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "rank": 69,
+   "score": 0.0999,
+   "rawScore": 0.397335,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.9714,
+     "contribution": 0.397335,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9714
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.985
     }
    ]
   },
@@ -435,8 +1808,8 @@
    "mechanisms": [
     "HMG-CoA reductase inhibitor"
    ],
-   "rank": 37,
-   "score": 0.156,
+   "rank": 71,
+   "score": 0.0993,
    "rawScore": 0.395229,
    "geneCount": 1,
    "paths": [
@@ -456,51 +1829,140 @@
        "id": "genetic_association",
        "score": 0.4402
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL2108966",
-   "name": "Insulin, Neutral",
-   "drugType": "Protein",
+   "id": "CHEMBL2220442",
+   "name": "Fluvastatin",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus"
+    "cardiovascular disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Insulin receptor agonist"
+    "HMG-CoA reductase inhibitor"
    ],
-   "rank": 62,
-   "score": 0.0363,
-   "rawScore": 0.283773,
+   "rank": 73,
+   "score": 0.0993,
+   "rawScore": 0.395229,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "INSR",
-     "geneId": "ENSG00000171105",
-     "geneName": "insulin receptor",
-     "assoc": 0.9017,
-     "contribution": 0.283773,
-     "drugsOnGene": 18,
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.395229,
+     "drugsOnGene": 8,
      "evidence": [
       {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
        "id": "genetic_association",
-       "score": 0.6265
+       "score": 0.4402
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1477",
+   "name": "Cerivastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "familial hyperlipidemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor"
+   ],
+   "rank": 77,
+   "score": 0.0993,
+   "rawScore": 0.395229,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGCR",
+     "geneId": "ENSG00000113161",
+     "geneName": "3-hydroxy-3-methylglutaryl-CoA reductase",
+     "assoc": 0.908,
+     "contribution": 0.395229,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8357
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4402
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3218576",
+   "name": "Copanlisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "follicular lymphoma",
+    "non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-delta subunit inhibitor"
+   ],
+   "rank": 87,
+   "score": 0.0901,
+   "rawScore": 0.361855,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "AKT2",
+     "geneId": "ENSG00000105221",
+     "geneName": "AKT serine/threonine kinase 2",
+     "assoc": 0.9936,
+     "contribution": 0.361855,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7034
       },
       {
        "id": "literature",
-       "score": 0.5307
+       "score": 0.6591
       },
       {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.1945
+       "id": "animal_model",
+       "score": 0.6267
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.984
     }
    ]
   },
@@ -513,8 +1975,8 @@
    "mechanisms": [
     "Insulin receptor agonist"
    ],
-   "rank": 66,
-   "score": 0.0363,
+   "rank": 88,
+   "score": 0.0686,
    "rawScore": 0.283773,
    "geneCount": 1,
    "paths": [
@@ -542,7 +2004,10 @@
        "id": "somatic_mutation",
        "score": 0.1945
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -557,8 +2022,8 @@
    "mechanisms": [
     "Insulin receptor agonist"
    ],
-   "rank": 68,
-   "score": 0.0363,
+   "rank": 89,
+   "score": 0.0686,
    "rawScore": 0.283773,
    "geneCount": 1,
    "paths": [
@@ -586,13 +2051,61 @@
        "id": "somatic_mutation",
        "score": 0.1945
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1201629",
-   "name": "Insulin Purified Beef",
+   "id": "CHEMBL1201644",
+   "name": "Insulin Zinc Susp Recombinant Human",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Insulin receptor agonist"
+   ],
+   "rank": 93,
+   "score": 0.0686,
+   "rawScore": 0.283773,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "INSR",
+     "geneId": "ENSG00000171105",
+     "geneName": "insulin receptor",
+     "assoc": 0.9017,
+     "contribution": 0.283773,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6265
+      },
+      {
+       "id": "literature",
+       "score": 0.5307
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.1945
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108966",
+   "name": "Insulin, Neutral",
    "drugType": "Protein",
    "approvedFor": [
     "diabetes mellitus"
@@ -601,8 +2114,8 @@
    "mechanisms": [
     "Insulin receptor agonist"
    ],
-   "rank": 72,
-   "score": 0.0363,
+   "rank": 94,
+   "score": 0.0686,
    "rawScore": 0.283773,
    "geneCount": 1,
    "paths": [
@@ -630,7 +2143,10 @@
        "id": "somatic_mutation",
        "score": 0.1945
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -645,8 +2161,8 @@
    "mechanisms": [
     "Insulin receptor agonist"
    ],
-   "rank": 73,
-   "score": 0.0363,
+   "rank": 99,
+   "score": 0.0686,
    "rawScore": 0.283773,
    "geneCount": 1,
    "paths": [
@@ -674,21 +2190,26 @@
        "id": "somatic_mutation",
        "score": 0.1945
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1201644",
-   "name": "Insulin Zinc Susp Recombinant Human",
+   "id": "CHEMBL1201629",
+   "name": "Insulin Purified Beef",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Insulin receptor agonist"
    ],
-   "rank": 75,
-   "score": 0.0363,
+   "rank": 103,
+   "score": 0.0686,
    "rawScore": 0.283773,
    "geneCount": 1,
    "paths": [
@@ -716,464 +2237,15 @@
        "id": "somatic_mutation",
        "score": 0.1945
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL802",
-   "name": "Minoxidil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hypotrichosis",
-    "hypertensive disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Sulfonylurea receptor 2, Kir6.2 opener"
-   ],
-   "rank": 78,
-   "score": 0.007,
-   "rawScore": 0.256495,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1159",
-   "name": "Pinacidil Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Sulfonylurea receptor 2, Kir6.2 opener"
-   ],
-   "rank": 79,
-   "score": 0.007,
-   "rawScore": 0.256495,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL557555",
-   "name": "Ciprofibrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hyperlipoproteinemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 80,
-   "score": 0.001,
-   "rawScore": 0.250906,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.6042,
-     "contribution": 0.250906,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4805
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2382
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL457",
-   "name": "Gemfibrozil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "coronary artery disorder",
-    "familial hyperlipidemia",
-    "Abdominal pain",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 82,
-   "score": 0.001,
-   "rawScore": 0.250906,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.6042,
-     "contribution": 0.250906,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4805
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2382
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL247951",
-   "name": "Pemafibrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "familial hyperlipidemia",
-    "cardiovascular disorder",
-    "hyperlipidemia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 85,
-   "score": 0.001,
-   "rawScore": 0.250906,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.6042,
-     "contribution": 0.250906,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4805
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2382
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL565",
-   "name": "Clofibrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "hyperlipoproteinemia type 3"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 86,
-   "score": 0.001,
-   "rawScore": 0.250906,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.6042,
-     "contribution": 0.250906,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4805
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2382
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL704",
-   "name": "Mesalamine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "proctitis",
-    "ulcerative colitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "rank": 87,
-   "score": 0.0,
-   "rawScore": 0.249955,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9998,
-     "contribution": 0.249955,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9525
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9191
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201346",
-   "name": "Balsalazide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inflammatory bowel disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist",
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor"
-   ],
-   "rank": 88,
-   "score": 0.0,
-   "rawScore": 0.249955,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9998,
-     "contribution": 0.249955,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9525
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9191
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL425",
-   "name": "Olsalazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "ulcerative colitis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist",
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor"
-   ],
-   "rank": 89,
-   "score": 0.0,
-   "rawScore": 0.249955,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9998,
-     "contribution": 0.249955,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9525
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9191
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5861
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }
  ],
  "knownRanked": [
-  {
-   "id": "CHEMBL1431",
-   "name": "Metformin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
-    "Mitochondrial glycerol-3-phosphate dehydrogenase inhibitor"
-   ],
-   "rank": 1,
-   "score": 1.0,
-   "rawScore": 1.181419,
-   "geneCount": 39,
-   "paths": [
-    {
-     "gene": "GPD2",
-     "geneId": "ENSG00000115159",
-     "geneName": "glycerol-3-phosphate dehydrogenase 2",
-     "assoc": 0.8461,
-     "contribution": 0.195421,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6174
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5073
-      },
-      {
-       "id": "literature",
-       "score": 0.1834
-      }
-     ]
-    },
-    {
-     "gene": "MT-ND1",
-     "geneId": "ENSG00000198888",
-     "geneName": "mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 1",
-     "assoc": 0.4562,
-     "contribution": 0.105362,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.2186
-      }
-     ]
-    },
-    {
-     "gene": "NDUFS4",
-     "geneId": "ENSG00000164258",
-     "geneName": "NADH:ubiquinone oxidoreductase subunit S4",
-     "assoc": 0.3856,
-     "contribution": 0.089062,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.3856
-      }
-     ]
-    }
-   ]
-  },
   {
    "id": "CHEMBL4297508",
    "name": "Dorzagliatin",
@@ -1185,9 +2257,9 @@
    "mechanisms": [
     "Hexokinase type IV activator"
    ],
-   "rank": 2,
-   "score": 0.8051,
-   "rawScore": 0.999857,
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 3.665004,
    "geneCount": 1,
    "paths": [
     {
@@ -1214,65 +2286,691 @@
        "id": "animal_model",
        "score": 0.7516
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NEUROD1",
+     "geneId": "ENSG00000162992",
+     "geneName": "neuronal differentiation 1",
+     "assoc": 0.9558,
+     "contribution": 0.888907,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7836
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6608
+      },
+      {
+       "id": "literature",
+       "score": 0.3981
+      }
+     ],
+     "hops": 3,
+     "via": "GCK",
+     "viaScore": 0.93
+    },
+    {
+     "gene": "SLC2A2",
+     "geneId": "ENSG00000163581",
+     "geneName": "solute carrier family 2 member 2",
+     "assoc": 0.9967,
+     "contribution": 0.725934,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8862
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7937
+      },
+      {
+       "id": "literature",
+       "score": 0.7262
+      },
+      {
+       "id": "animal_model",
+       "score": 0.359
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.1989
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0145
+      }
+     ],
+     "hops": 3,
+     "via": "GCK",
+     "viaScore": 0.961
     }
    ]
   },
   {
-   "id": "CHEMBL4297839",
-   "name": "Tirzepatide",
-   "drugType": "Protein",
+   "id": "CHEMBL1431",
+   "name": "Metformin",
+   "drugType": "Small molecule",
    "approvedFor": [
     "type 2 diabetes mellitus",
-    "hyperlipidemia",
-    "overweight body mass index status",
     "diabetes mellitus"
    ],
-   "indicationCount": 7,
+   "indicationCount": 2,
    "mechanisms": [
-    "Glucagon-like peptide 1 receptor agonist",
-    "Gastric inhibitory polypeptide receptor agonist"
+    "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
+    "Mitochondrial glycerol-3-phosphate dehydrogenase inhibitor"
    ],
-   "rank": 3,
-   "score": 0.7302,
-   "rawScore": 0.930092,
+   "rank": 2,
+   "score": 0.6344,
+   "rawScore": 2.337915,
+   "geneCount": 51,
+   "paths": [
+    {
+     "gene": "GPD2",
+     "geneId": "ENSG00000115159",
+     "geneName": "glycerol-3-phosphate dehydrogenase 2",
+     "assoc": 0.8461,
+     "contribution": 0.175537,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6174
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5073
+      },
+      {
+       "id": "literature",
+       "score": 0.1834
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MT-ND1",
+     "geneId": "ENSG00000198888",
+     "geneName": "mitochondrially encoded NADH:ubiquinone oxidoreductase core subunit 1",
+     "assoc": 0.4562,
+     "contribution": 0.094641,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.2186
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NDUFS4",
+     "geneId": "ENSG00000164258",
+     "geneName": "NADH:ubiquinone oxidoreductase subunit S4",
+     "assoc": 0.3856,
+     "contribution": 0.08,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3856
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL181",
+   "name": "Diazoxide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pancreatic insulinoma",
+    "hyperinsulinemic hypoglycemia",
+    "hyperinsulinism",
+    "Hypertension"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Potassium channel, inwardly rectifying, subfamily J, member 8 opener",
+    "Potassium channel, inwardly rectifying, subfamily J, member 11 opener"
+   ],
+   "rank": 4,
+   "score": 0.4454,
+   "rawScore": 1.651875,
    "geneCount": 2,
    "paths": [
     {
-     "gene": "GIPR",
-     "geneId": "ENSG00000010310",
-     "geneName": "gastric inhibitory polypeptide receptor",
-     "assoc": 0.7931,
-     "contribution": 0.601021,
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.9997,
+     "contribution": 0.487723,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9317
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8898
+      },
+      {
+       "id": "literature",
+       "score": 0.7675
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.619
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5446
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ8",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.366715,
      "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.5747
+       "score": 0.9388
       },
       {
        "id": "genetic_association",
-       "score": 0.5135
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "KCNJ8",
+     "viaScore": 0.991
     },
     {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9976,
-     "contribution": 0.329071,
-     "drugsOnGene": 8,
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9906
+       "score": 0.9388
       },
       {
        "id": "genetic_association",
-       "score": 0.7402
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298005",
+   "name": "Mitiglinide Calcium Dihydrate",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sulfonylurea receptor 1, Kir6.2 blocker"
+   ],
+   "rank": 6,
+   "score": 0.325,
+   "rawScore": 1.21466,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.9997,
+     "contribution": 0.280404,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9317
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8898
+      },
+      {
+       "id": "literature",
+       "score": 0.7675
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.619
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL783",
+   "name": "Nateglinide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus",
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Sulfonylurea receptor 1, Kir6.2 blocker"
+   ],
+   "rank": 7,
+   "score": 0.325,
+   "rawScore": 1.21466,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.9997,
+     "contribution": 0.280404,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9317
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8898
+      },
+      {
+       "id": "literature",
+       "score": 0.7675
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.619
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1272",
+   "name": "Repaglinide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus",
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Sulfonylurea receptor 1, Kir6.2 blocker"
+   ],
+   "rank": 8,
+   "score": 0.325,
+   "rawScore": 1.21466,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.9997,
+     "contribution": 0.280404,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9317
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8898
+      },
+      {
+       "id": "literature",
+       "score": 0.7675
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.619
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL817",
+   "name": "Tolazamide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Sulfonylurea receptor 1, Kir6.2 blocker"
+   ],
+   "rank": 9,
+   "score": 0.325,
+   "rawScore": 1.21466,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.9997,
+     "contribution": 0.280404,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9317
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8898
+      },
+      {
+       "id": "literature",
+       "score": 0.7675
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.619
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KCNJ11",
+     "geneId": "ENSG00000187486",
+     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
+     "assoc": 0.9998,
+     "contribution": 0.256495,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9388
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9297
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7133
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
     }
    ]
   },
@@ -1288,9 +2986,9 @@
    "mechanisms": [
     "Sulfonylurea receptor 1, Kir6.2 blocker"
    ],
-   "rank": 6,
-   "score": 0.3081,
-   "rawScore": 0.536899,
+   "rank": 10,
+   "score": 0.325,
+   "rawScore": 1.21466,
    "geneCount": 2,
    "paths": [
     {
@@ -1321,7 +3019,10 @@
        "id": "animal_model",
        "score": 0.5446
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "KCNJ11",
@@ -1347,81 +3048,35 @@
        "id": "somatic_mutation",
        "score": 0.7133
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL471498",
-   "name": "Mitiglinide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sulfonylurea receptor 1, Kir6.2 blocker"
-   ],
-   "rank": 7,
-   "score": 0.3081,
-   "rawScore": 0.536899,
-   "geneCount": 2,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.9997,
-     "contribution": 0.280404,
-     "drugsOnGene": 12,
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.9317
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8898
+       "score": 0.8992
       },
       {
        "id": "literature",
-       "score": 0.7675
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.619
+       "score": 0.7628
       },
       {
        "id": "animal_model",
-       "score": 0.5446
+       "score": 0.5041
       }
-     ]
-    },
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
     }
    ]
   },
@@ -1438,9 +3093,9 @@
     "Sulfonylurea receptor 1, Kir6.2 blocker",
     "Sulfonylurea receptor 1, Kir6.2 blocker"
    ],
-   "rank": 8,
-   "score": 0.3081,
-   "rawScore": 0.536899,
+   "rank": 11,
+   "score": 0.325,
+   "rawScore": 1.21466,
    "geneCount": 2,
    "paths": [
     {
@@ -1471,7 +3126,10 @@
        "id": "animal_model",
        "score": 0.5446
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "KCNJ11",
@@ -1497,175 +3155,53 @@
        "id": "somatic_mutation",
        "score": 0.7133
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8992
+      },
+      {
+       "id": "literature",
+       "score": 0.7628
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5041
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
     }
    ]
   },
   {
-   "id": "CHEMBL472",
-   "name": "Glyburide",
+   "id": "CHEMBL1481",
+   "name": "Glimepiride",
    "drugType": "Small molecule",
    "approvedFor": [
     "diabetes mellitus",
     "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Sulfonylurea receptor 1, Kir6.2 blocker"
-   ],
-   "rank": 9,
-   "score": 0.3081,
-   "rawScore": 0.536899,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.9997,
-     "contribution": 0.280404,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9317
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8898
-      },
-      {
-       "id": "literature",
-       "score": 0.7675
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.619
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5446
-      }
-     ]
-    },
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL783",
-   "name": "Nateglinide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus",
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Sulfonylurea receptor 1, Kir6.2 blocker"
-   ],
-   "rank": 10,
-   "score": 0.3081,
-   "rawScore": 0.536899,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.9997,
-     "contribution": 0.280404,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9317
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8898
-      },
-      {
-       "id": "literature",
-       "score": 0.7675
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.619
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5446
-      }
-     ]
-    },
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL817",
-   "name": "Tolazamide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "diabetes mellitus"
    ],
    "indicationCount": 2,
    "mechanisms": [
     "Sulfonylurea receptor 1, Kir6.2 blocker"
    ],
    "rank": 12,
-   "score": 0.3081,
-   "rawScore": 0.536899,
+   "score": 0.325,
+   "rawScore": 1.21466,
    "geneCount": 2,
    "paths": [
     {
@@ -1696,7 +3232,10 @@
        "id": "animal_model",
        "score": 0.5446
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "KCNJ11",
@@ -1722,81 +3261,35 @@
        "id": "somatic_mutation",
        "score": 0.7133
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298005",
-   "name": "Mitiglinide Calcium Dihydrate",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sulfonylurea receptor 1, Kir6.2 blocker"
-   ],
-   "rank": 13,
-   "score": 0.3081,
-   "rawScore": 0.536899,
-   "geneCount": 2,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.9997,
-     "contribution": 0.280404,
-     "drugsOnGene": 12,
+     "gene": "SLC30A8",
+     "geneId": "ENSG00000164756",
+     "geneName": "solute carrier family 30 member 8",
+     "assoc": 0.9881,
+     "contribution": 0.212938,
+     "drugsOnGene": 15,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.9317
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8898
+       "score": 0.8992
       },
       {
        "id": "literature",
-       "score": 0.7675
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.619
+       "score": 0.7628
       },
       {
        "id": "animal_model",
-       "score": 0.5446
+       "score": 0.5041
       }
-     ]
-    },
-    {
-     "gene": "KCNJ11",
-     "geneId": "ENSG00000187486",
-     "geneName": "potassium inwardly rectifying channel subfamily J member 11",
-     "assoc": 0.9998,
-     "contribution": 0.256495,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9388
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9297
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7133
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.84
     }
    ]
   }

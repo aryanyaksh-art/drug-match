@@ -7,8 +7,104 @@
  "genesScored": 46,
  "genesWithDrugs": 26,
  "knownDrugCount": 154,
- "candidatesConsidered": 68,
+ "candidatesConsidered": 78,
+ "pathsTwoHop": 88,
+ "pathsThreeHop": 67,
  "candidates": [
+  {
+   "id": "CHEMBL2108184",
+   "name": "Crofelemer",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Diarrhea"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Anoctamin-1 blocker",
+    "Cystic fibrosis transmembrane conductance regulator inhibitor"
+   ],
+   "rank": 5,
+   "score": 0.8968,
+   "rawScore": 1.339014,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 1.0,
+     "contribution": 0.488359,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9979
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9679
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.9286
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8616
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5642
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.6207
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
+    }
+   ]
+  },
   {
    "id": "CHEMBL1371",
    "name": "Chlorzoxazone",
@@ -18,8 +114,8 @@
    "mechanisms": [
     "Intermediate conductance calcium-activated potassium channel protein 4 opener"
    ],
-   "rank": 1,
-   "score": 1.0,
+   "rank": 8,
+   "score": 0.5794,
    "rawScore": 0.888148,
    "geneCount": 1,
    "paths": [
@@ -43,7 +139,117 @@
        "id": "animal_model",
        "score": 0.2548
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4303525",
+   "name": "Omaveloxolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Friedreich ataxia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Nuclear factor erythroid 2-related factor 2 activator"
+   ],
+   "rank": 9,
+   "score": 0.5769,
+   "rawScore": 0.88464,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMOX1",
+     "geneId": "ENSG00000100292",
+     "geneName": "heme oxygenase 1",
+     "assoc": 0.8945,
+     "contribution": 0.88464,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.6048
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2724
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.064
+      }
+     ],
+     "hops": 3,
+     "via": "NFE2L2",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594565",
+   "name": "Pabinafusp Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "mucopolysaccharidosis type 2"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Transferrin receptor binding agent"
+   ],
+   "rank": 10,
+   "score": 0.4601,
+   "rawScore": 0.718697,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HFE",
+     "geneId": "ENSG00000010704",
+     "geneName": "homeostatic iron regulator",
+     "assoc": 0.6263,
+     "contribution": 0.359349,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "literature",
+       "score": 0.1748
+      }
+     ],
+     "hops": 3,
+     "via": "TFRC",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "HFE",
+     "geneId": "ENSG00000010704",
+     "geneName": "homeostatic iron regulator",
+     "assoc": 0.6263,
+     "contribution": 0.359349,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "literature",
+       "score": 0.1748
+      }
+     ],
+     "hops": 3,
+     "via": "TFR2",
+     "viaScore": 0.999
     }
    ]
   },
@@ -61,17 +267,17 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
-   "rank": 2,
-   "score": 0.8305,
-   "rawScore": 0.750568,
-   "geneCount": 2,
+   "rank": 11,
+   "score": 0.4034,
+   "rawScore": 0.638196,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "TGFB1",
      "geneId": "ENSG00000105329",
      "geneName": "transforming growth factor beta 1",
      "assoc": 0.9904,
-     "contribution": 0.750568,
+     "contribution": 0.638196,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -86,335 +292,295 @@
        "id": "animal_model",
        "score": 0.4998
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL2108184",
-   "name": "Crofelemer",
+   "id": "CHEMBL2110572",
+   "name": "Technetium Succimer",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "Diarrhea"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Anoctamin-1 blocker",
-    "Cystic fibrosis transmembrane conductance regulator inhibitor"
+    "Alpha-2-macroglobulin binding agent"
    ],
-   "rank": 8,
-   "score": 0.5073,
-   "rawScore": 0.488359,
+   "rank": 12,
+   "score": 0.3286,
+   "rawScore": 0.531952,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 1.0,
-     "contribution": 0.488359,
-     "drugsOnGene": 6,
+     "gene": "SERPINA1",
+     "geneId": "ENSG00000197249",
+     "geneName": "serpin family A member 1",
+     "assoc": 0.7162,
+     "contribution": 0.531952,
+     "drugsOnGene": 1,
      "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9979
-      },
       {
        "id": "genetic_association",
-       "score": 0.9679
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.9286
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8616
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5642
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2040682",
-   "name": "Ciclesonide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Nasal congestion",
-    "perennial allergic rhinitis",
-    "allergic rhinitis",
-    "asthma"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 11,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
+       "score": 0.5471
       },
       {
        "id": "literature",
-       "score": 0.2861
+       "score": 0.3656
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0124
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "A2M",
+     "viaScore": 0.98
     }
    ]
   },
   {
-   "id": "CHEMBL1201109",
-   "name": "Desonide",
+   "id": "CHEMBL3989871",
+   "name": "Avacopan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "skin disorder",
-    "eye inflammation",
-    "atopic eczema"
+    "granulomatosis with polyangiitis",
+    "microscopic polyangiitis",
+    "anti-neutrophil cytoplasmic antibody-associated vasculitis"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Glucocorticoid receptor agonist"
+    "C5a anaphylatoxin chemotactic receptor antagonist"
+   ],
+   "rank": 13,
+   "score": 0.2789,
+   "rawScore": 0.46133,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC11A1",
+     "geneId": "ENSG00000018280",
+     "geneName": "solute carrier family 11 member 1",
+     "assoc": 0.5803,
+     "contribution": 0.46133,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5253
+      },
+      {
+       "id": "literature",
+       "score": 0.1159
+      }
+     ],
+     "hops": 3,
+     "via": "C5AR1",
+     "viaScore": 0.795
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL76688",
+   "name": "Sivelestat",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Leukocyte elastase inhibitor"
    ],
    "rank": 14,
-   "score": 0.0302,
-   "rawScore": 0.101171,
+   "score": 0.2434,
+   "rawScore": 0.41096,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
+     "gene": "SERPINA1",
+     "geneId": "ENSG00000197249",
+     "geneName": "serpin family A member 1",
+     "assoc": 0.7162,
+     "contribution": 0.41096,
+     "drugsOnGene": 2,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.3184
+       "id": "genetic_association",
+       "score": 0.5471
       },
       {
        "id": "literature",
-       "score": 0.2861
+       "score": 0.3656
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0124
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ELANE",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1473",
-   "name": "Fluticasone Propionate",
+   "id": "CHEMBL3545432",
+   "name": "Ixazomib Citrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "asthma",
-    "Nasal congestion",
-    "atopic eczema",
-    "allergic rhinitis"
+    "plasma cell myeloma",
+    "amyloidosis"
    ],
-   "indicationCount": 11,
+   "indicationCount": 2,
    "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 15,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL989",
-   "name": "Fluocinolone Acetonide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "infectious disease",
-    "eye inflammation",
-    "inflammation",
-    "uveitis"
-   ],
-   "indicationCount": 11,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 16,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200845",
-   "name": "Halcinonide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
+    "26S proteasome inhibitor"
    ],
    "rank": 17,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
+   "score": 0.0873,
+   "rawScore": 0.189218,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
+     "gene": "UBB",
+     "geneId": "ENSG00000170315",
+     "geneName": "ubiquitin B",
+     "assoc": 0.7599,
+     "contribution": 0.189218,
+     "drugsOnGene": 4,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
+       "id": "affected_pathway",
+       "score": 0.7599
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "PSMD4",
+     "viaScore": 0.996
     }
    ]
   },
   {
-   "id": "CHEMBL1200376",
-   "name": "Betamethasone Benzoate",
+   "id": "CHEMBL2141296",
+   "name": "Ixazomib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammation"
+    "plasma cell myeloma",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Glucocorticoid receptor agonist"
+    "26S proteasome inhibitor"
+   ],
+   "rank": 18,
+   "score": 0.0873,
+   "rawScore": 0.189218,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "UBB",
+     "geneId": "ENSG00000170315",
+     "geneName": "ubiquitin B",
+     "assoc": 0.7599,
+     "contribution": 0.189218,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      }
+     ],
+     "hops": 3,
+     "via": "PSMD4",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL325041",
+   "name": "Bortezomib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "mantle cell lymphoma",
+    "plasma cell myeloma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "26S proteasome inhibitor",
+    "26S proteasome inhibitor"
    ],
    "rank": 19,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
+   "score": 0.0873,
+   "rawScore": 0.189218,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
+     "gene": "UBB",
+     "geneId": "ENSG00000170315",
+     "geneName": "ubiquitin B",
+     "assoc": 0.7599,
+     "contribution": 0.189218,
+     "drugsOnGene": 4,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
+       "id": "affected_pathway",
+       "score": 0.7599
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "PSMD4",
+     "viaScore": 0.996
     }
    ]
   },
   {
-   "id": "CHEMBL1200774",
-   "name": "Fluprednisolone",
-   "drugType": "Small molecule",
+   "id": "CHEMBL451887",
+   "name": "Carfilzomib",
+   "drugType": "Protein",
    "approvedFor": [
-    "asthma"
+    "plasma cell myeloma",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Glucocorticoid receptor agonist"
+    "26S proteasome inhibitor"
    ],
    "rank": 20,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
+   "score": 0.0873,
+   "rawScore": 0.189218,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
+     "gene": "UBB",
+     "geneId": "ENSG00000170315",
+     "geneName": "ubiquitin B",
+     "assoc": 0.7599,
+     "contribution": 0.189218,
+     "drugsOnGene": 4,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
+       "id": "affected_pathway",
+       "score": 0.7599
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "PSMD4",
+     "viaScore": 0.996
     }
    ]
   },
   {
-   "id": "CHEMBL1201173",
-   "name": "Medrysone",
+   "id": "CHEMBL1200545",
+   "name": "Diflorasone Diacetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "eye inflammation"
+    "rosacea",
+    "skin disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
    "rank": 21,
-   "score": 0.0302,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -434,7 +600,52 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200865",
+   "name": "Loteprednol Etabonate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inflammation",
+    "eye inflammation",
+    "anterior uveitis",
+    "dry eye syndrome"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 22,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -453,7 +664,7 @@
     "Glucocorticoid receptor agonist"
    ],
    "rank": 23,
-   "score": 0.0302,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -473,242 +684,27 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1200865",
-   "name": "Loteprednol Etabonate",
+   "id": "CHEMBL1201891",
+   "name": "Deflazacort",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammation",
-    "eye inflammation",
-    "anterior uveitis",
-    "dry eye syndrome"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 24,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201302",
-   "name": "Dexamethasone Phosphoric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 25,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1152",
-   "name": "Prednisolone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inflammation",
-    "atopic conjunctivitis",
-    "multiple sclerosis",
-    "anemia"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 27,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1159650",
-   "name": "Clobetasol Propionate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder",
-    "psoriasis vulgaris",
-    "psoriasis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 28,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201207",
-   "name": "Betamethasone Phosphoric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 29,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201064",
-   "name": "Fluorometholone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 30,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200386",
-   "name": "Prednicarbate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inflammation",
-    "skin disorder"
+    "muscular dystrophy",
+    "Duchenne muscular dystrophy"
    ],
    "indicationCount": 2,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 31,
-   "score": 0.0302,
+   "rank": 24,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -728,7 +724,10 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -743,8 +742,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 32,
-   "score": 0.0302,
+   "rank": 26,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -764,118 +763,10 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1276308",
-   "name": "Mifepristone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Cushing syndrome"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Progesterone receptor antagonist",
-    "Glucocorticoid receptor antagonist"
-   ],
-   "rank": 33,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1497",
-   "name": "Betamethasone Valerate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 34,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200908",
-   "name": "Halobetasol Propionate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inflammation",
-    "psoriasis vulgaris",
-    "skin disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 35,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -890,8 +781,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 36,
-   "score": 0.0302,
+   "rank": 27,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -911,51 +802,16 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1683",
-   "name": "Hydrocortisone Butyrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder",
-    "seborrheic dermatitis",
-    "atopic eczema"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 37,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200732",
-   "name": "Amcinonide",
+   "id": "CHEMBL1200376",
+   "name": "Betamethasone Benzoate",
    "drugType": "Small molecule",
    "approvedFor": [
     "inflammation"
@@ -964,8 +820,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 38,
-   "score": 0.0302,
+   "rank": 28,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -985,158 +841,10 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1091",
-   "name": "Hydrocortisone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pruritus",
-    "skin disorder",
-    "inflammation"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 39,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201749",
-   "name": "Difluprednate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Ocular pain",
-    "anterior uveitis",
-    "inflammation",
-    "eye inflammation"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 40,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200989",
-   "name": "Alclometasone Dipropionate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder",
-    "eye inflammation"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 42,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200545",
-   "name": "Diflorasone Diacetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rosacea",
-    "skin disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 43,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1153,8 +861,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 44,
-   "score": 0.0302,
+   "rank": 29,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1174,7 +882,10 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1192,8 +903,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 45,
-   "score": 0.0302,
+   "rank": 30,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1213,174 +924,24 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1200600",
-   "name": "Fluorometholone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acne",
-    "hemorrhoid",
-    "inflammation",
-    "eye inflammation"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 46,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201148",
-   "name": "Meprednisone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic obstructive pulmonary disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 47,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1650",
-   "name": "Cortisone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "lateral epicondylitis",
-    "pulmonary tuberculosis",
-    "leukemia",
-    "frozen shoulder"
-   ],
-   "indicationCount": 43,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 48,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1676",
-   "name": "Fluticasone Furoate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "allergic rhinitis",
-    "bronchitis",
-    "pulmonary emphysema",
-    "asthma"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 49,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201265",
-   "name": "Methylprednisolone Hemisuccinate",
+   "id": "CHEMBL1530428",
+   "name": "Dexamethasone Acetate",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 50,
-   "score": 0.0302,
+   "rank": 31,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1400,7 +961,51 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200908",
+   "name": "Halobetasol Propionate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inflammation",
+    "psoriasis vulgaris",
+    "skin disorder"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 32,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1418,8 +1023,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 51,
-   "score": 0.0302,
+   "rank": 33,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1439,26 +1044,26 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1200384",
-   "name": "Betamethasone Dipropionate",
+   "id": "CHEMBL1201263",
+   "name": "Hydrocortamate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "psoriasis",
-    "tinea infection",
-    "psoriasis vulgaris",
-    "skin disorder"
+    "inflammation"
    ],
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 52,
-   "score": 0.0302,
+   "rank": 34,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1478,21 +1083,24 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1530428",
-   "name": "Dexamethasone Acetate",
+   "id": "CHEMBL977",
+   "name": "Hydrocortisone Hemisuccinate Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 53,
-   "score": 0.0302,
+   "rank": 36,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1512,12 +1120,652 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201265",
+   "name": "Methylprednisolone Hemisuccinate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 37,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200953",
+   "name": "Hydrocortisone Probutate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "skin disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 38,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200617",
+   "name": "Rimexolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Arthritis",
+    "eye inflammation"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 39,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200600",
+   "name": "Fluorometholone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acne",
+    "hemorrhoid",
+    "inflammation",
+    "eye inflammation"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 40,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL632",
+   "name": "Betamethasone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Airway obstruction",
+    "hemorrhoid",
+    "eye inflammation",
+    "inflammation"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 41,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201109",
+   "name": "Desonide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "skin disorder",
+    "eye inflammation",
+    "atopic eczema"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 42,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200845",
+   "name": "Halcinonide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "skin disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 43,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200386",
+   "name": "Prednicarbate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inflammation",
+    "skin disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 44,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1159650",
+   "name": "Clobetasol Propionate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "skin disorder",
+    "psoriasis vulgaris",
+    "psoriasis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 45,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2040682",
+   "name": "Ciclesonide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Nasal congestion",
+    "perennial allergic rhinitis",
+    "allergic rhinitis",
+    "asthma"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 46,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1370",
+   "name": "Budesonide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary emphysema",
+    "ulcerative colitis",
+    "allergic rhinitis",
+    "perennial allergic rhinitis"
+   ],
+   "indicationCount": 14,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 48,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL989",
+   "name": "Fluocinolone Acetonide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "infectious disease",
+    "eye inflammation",
+    "inflammation",
+    "uveitis"
+   ],
+   "indicationCount": 11,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 49,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200774",
+   "name": "Fluprednisolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "asthma"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 50,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201749",
+   "name": "Difluprednate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Ocular pain",
+    "anterior uveitis",
+    "inflammation",
+    "eye inflammation"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 51,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }
  ],
  "knownRanked": [
+  {
+   "id": "CHEMBL256997",
+   "name": "Ataluren",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Duchenne muscular dystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "80S Ribosome modulator"
+   ],
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 1.485587,
+   "geneCount": 74,
+   "paths": [
+    {
+     "gene": "RPS27A",
+     "geneId": "ENSG00000143947",
+     "geneName": "ribosomal protein S27a",
+     "assoc": 0.7599,
+     "contribution": 0.135854,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "UBB",
+     "geneId": "ENSG00000170315",
+     "geneName": "ubiquitin B",
+     "assoc": 0.7599,
+     "contribution": 0.102752,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      }
+     ],
+     "hops": 3,
+     "via": "RPS27A",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "UBA52",
+     "geneId": "ENSG00000221983",
+     "geneName": "ubiquitin A-52 residue ribosomal protein fusion product 1",
+     "assoc": 0.7599,
+     "contribution": 0.066279,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      }
+     ],
+     "hops": 3,
+     "via": "RPL27A",
+     "viaScore": 0.999
+    }
+   ]
+  },
   {
    "id": "CHEMBL4298128",
    "name": "Elexacaftor",
@@ -1529,9 +1777,9 @@
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
-   "rank": 3,
-   "score": 0.5073,
-   "rawScore": 0.488359,
+   "rank": 2,
+   "score": 0.8968,
+   "rawScore": 1.339014,
    "geneCount": 1,
    "paths": [
     {
@@ -1562,7 +1810,146 @@
        "id": "animal_model",
        "score": 0.5642
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.6207
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2103870",
+   "name": "Lumacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lung injury",
+    "cystic fibrosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator stabiliser"
+   ],
+   "rank": 3,
+   "score": 0.8968,
+   "rawScore": 1.339014,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 1.0,
+     "contribution": 0.488359,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9979
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9679
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.9286
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8616
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5642
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.6207
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
     }
    ]
   },
@@ -1578,8 +1965,8 @@
     "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "rank": 4,
-   "score": 0.5073,
-   "rawScore": 0.488359,
+   "score": 0.8968,
+   "rawScore": 1.339014,
    "geneCount": 1,
    "paths": [
     {
@@ -1610,7 +1997,52 @@
        "id": "animal_model",
        "score": 0.5642
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.6207
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
     }
    ]
   },
@@ -1628,58 +2060,9 @@
     "Cystic fibrosis transmembrane conductance regulator positive modulator",
     "Cystic fibrosis transmembrane conductance regulator activator"
    ],
-   "rank": 5,
-   "score": 0.5073,
-   "rawScore": 0.488359,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 1.0,
-     "contribution": 0.488359,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9979
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9679
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.9286
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8616
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5642
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103870",
-   "name": "Lumacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lung injury",
-    "cystic fibrosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator stabiliser"
-   ],
    "rank": 6,
-   "score": 0.5073,
-   "rawScore": 0.488359,
+   "score": 0.8968,
+   "rawScore": 1.339014,
    "geneCount": 1,
    "paths": [
     {
@@ -1710,7 +2093,52 @@
        "id": "animal_model",
        "score": 0.5642
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.6207
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
     }
    ]
   },
@@ -1727,8 +2155,8 @@
     "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "rank": 7,
-   "score": 0.5073,
-   "rawScore": 0.488359,
+   "score": 0.8968,
+   "rawScore": 1.339014,
    "geneCount": 1,
    "paths": [
     {
@@ -1759,67 +2187,98 @@
        "id": "animal_model",
        "score": 0.5642
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL256997",
-   "name": "Ataluren",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Duchenne muscular dystrophy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "80S Ribosome modulator"
-   ],
-   "rank": 9,
-   "score": 0.3157,
-   "rawScore": 0.332865,
-   "geneCount": 50,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "RPS27A",
-     "geneId": "ENSG00000143947",
-     "geneName": "ribosomal protein S27a",
-     "assoc": 0.7599,
-     "contribution": 0.158919,
-     "drugsOnGene": 1,
+     "gene": "RNF5",
+     "geneId": "ENSG00000204308",
+     "geneName": "ring finger protein 5",
+     "assoc": 0.9089,
+     "contribution": 0.434562,
+     "drugsOnGene": 6,
      "evidence": [
       {
        "id": "affected_pathway",
        "score": 0.7599
-      }
-     ]
-    },
-    {
-     "gene": "RPL38",
-     "geneId": "ENSG00000172809",
-     "geneName": "ribosomal protein L38",
-     "assoc": 0.2623,
-     "contribution": 0.054859,
-     "drugsOnGene": 1,
-     "evidence": [
+      },
       {
-       "id": "animal_model",
-       "score": 0.2623
+       "id": "literature",
+       "score": 0.6207
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.979
     },
     {
-     "gene": "RPL9",
-     "geneId": "ENSG00000163682",
-     "geneName": "ribosomal protein L9",
-     "assoc": 0.073,
-     "contribution": 0.015256,
-     "drugsOnGene": 1,
+     "gene": "SLC26A9",
+     "geneId": "ENSG00000174502",
+     "geneName": "solute carrier family 26 member 9",
+     "assoc": 0.9363,
+     "contribution": 0.416092,
+     "drugsOnGene": 6,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.073
+       "score": 0.8521
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5693
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "CFTR",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297879",
+   "name": ".Alpha.1-Proteinase Inhibitor Human",
+   "drugType": "Protein",
+   "approvedFor": [
+    "alpha 1-antitrypsin deficiency",
+    "hemorrhage",
+    "pulmonary emphysema",
+    "lung disorder"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Leukocyte elastase inhibitor"
+   ],
+   "rank": 15,
+   "score": 0.2434,
+   "rawScore": 0.41096,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SERPINA1",
+     "geneId": "ENSG00000197249",
+     "geneName": "serpin family A member 1",
+     "assoc": 0.7162,
+     "contribution": 0.41096,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "literature",
+       "score": 0.3656
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0124
+      }
+     ],
+     "hops": 3,
+     "via": "ELANE",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1837,8 +2296,8 @@
    "mechanisms": [
     "Interferon gamma receptor agonist"
    ],
-   "rank": 10,
-   "score": 0.3117,
+   "rank": 16,
+   "score": 0.1861,
    "rawScore": 0.329595,
    "geneCount": 2,
    "paths": [
@@ -1854,7 +2313,10 @@
        "id": "literature",
        "score": 0.2616
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "IFNGR2",
@@ -1868,85 +2330,10 @@
        "id": "literature",
        "score": 0.1733
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL389621",
-   "name": "Hydrocortisone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "bursitis",
-    "otitis externa",
-    "pneumonia",
-    "tenosynovitis"
-   ],
-   "indicationCount": 35,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 12,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL650",
-   "name": "Methylprednisolone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "ulcerative colitis",
-    "Crohn disease",
-    "posterior uveitis",
-    "psoriatic arthritis"
-   ],
-   "indicationCount": 17,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "rank": 13,
-   "score": 0.0302,
-   "rawScore": 0.101171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.5134,
-     "contribution": 0.101171,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3184
-      },
-      {
-       "id": "literature",
-       "score": 0.2861
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1964,8 +2351,8 @@
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "rank": 18,
-   "score": 0.0302,
+   "rank": 25,
+   "score": 0.0253,
    "rawScore": 0.101171,
    "geneCount": 1,
    "paths": [
@@ -1985,7 +2372,52 @@
        "id": "literature",
        "score": 0.2861
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL131",
+   "name": "Prednisolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "ulcerative colitis",
+    "myocarditis",
+    "sympathetic ophthalmia",
+    "erythema multiforme"
+   ],
+   "indicationCount": 57,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "rank": 35,
+   "score": 0.0253,
+   "rawScore": 0.101171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.5134,
+     "contribution": 0.101171,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3184
+      },
+      {
+       "id": "literature",
+       "score": 0.2861
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }

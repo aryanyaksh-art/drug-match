@@ -128,7 +128,19 @@ async function select(id) {
   }
 }
 
-function evidenceRows(paths) {
+function chain(drugName, p, diseaseName) {
+  const arrow = (t) => `<span class="arrow">${t} →</span>`;
+  const bits = [`<span class="node drug">${esc(drugName)}</span>`, arrow('targets')];
+  if (p && p.hops === 3) {
+    bits.push(`<span class="node gene">${esc(p.via)}</span>`,
+      arrow(`interacts ${p.viaScore}`));
+  }
+  bits.push(`<span class="node gene">${esc(p ? p.gene : '?')}</span>`,
+    arrow('associated with'), `<span class="node">${esc(diseaseName)}</span>`);
+  return `<div class="path">${bits.join('')}</div>`;
+}
+
+function evidenceRows(paths, drugName) {
   return paths.map((p) => {
     const ev = p.evidence.slice(0, 5).map((e) => `
       <div class="ev">
@@ -136,14 +148,13 @@ function evidenceRows(paths) {
         <span class="bar"><i style="width:${Math.round(e.score * 100)}%"></i></span>
         <span class="val">${e.score.toFixed(2)}</span>
       </div>`).join('');
+    const via = p.hops === 3
+      ? ` · reached through ${esc(p.via)}, which interacts with it at ${p.viaScore}`
+      : '';
     return `
-      <div class="path">
-        <span class="node gene">${esc(p.gene)}</span>
-        <span class="arrow">associated with →</span>
-        <span class="node">disease</span>
-      </div>
+      ${chain(drugName, p, currentName)}
       <p class="pathmeta">${esc(p.geneName || '')} · combined association ${p.assoc.toFixed(2)}
-        · ${p.drugsOnGene} approved drug${p.drugsOnGene === 1 ? '' : 's'} hit this gene</p>
+        · ${p.drugsOnGene} approved drug${p.drugsOnGene === 1 ? '' : 's'} hit the targeted gene${via}</p>
       <p class="evtitle">Evidence behind that association (clinical evidence excluded)</p>
       ${ev}`;
   }).join('<hr style="border:0;border-top:1px solid var(--line);margin:16px 0">');
@@ -171,16 +182,9 @@ function card(d, i) {
         </span>
       </button>
       <div class="cbody" id="body-${i}">
-        <div class="path">
-          <span class="node drug">${esc(d.name)}</span>
-          <span class="arrow">targets →</span>
-          <span class="node gene">${esc(d.paths[0] ? d.paths[0].gene : '?')}</span>
-          <span class="arrow">associated with →</span>
-          <span class="node">${esc(currentName)}</span>
-        </div>
         <p class="pathmeta">This drug hits ${d.geneCount} gene${d.geneCount === 1 ? '' : 's'} overall.
-          ${d.paths.length} of them ${d.paths.length === 1 ? 'is' : 'are'} linked to this disease.</p>
-        ${evidenceRows(d.paths)}
+          Showing its ${d.paths.length} strongest route${d.paths.length === 1 ? '' : 's'} into this disease.</p>
+        ${evidenceRows(d.paths, d.name)}
         ${moa}
       </div>
     </div>`;
@@ -201,7 +205,10 @@ function render(r) {
        ${validation.diseasesEvaluated}</strong> diseases the single highest-ranked candidate is a real
        treatment for that disease, and known treatments land in the top 10% of candidates
        <strong>${validation.enrichmentOverChanceTopTen}&times;</strong> as often as chance would give.
-       Median position ${pct(validation.medianPercentile)}, where random would be 50%.</div>` : '';
+       Median position ${pct(validation.medianPercentile)}, where random would be 50%.
+       ${validation.methods ? `<br><span class="vsub">Same candidates ranked by drug popularity
+       alone, ignoring the disease, put them at ${pct(validation.methods.popularity.medianPercentile)}
+       &mdash; so the biology is doing the work, not the arithmetic.</span>` : ''}</div>` : '';
 
   stage.innerHTML = `
     <div class="dhead">

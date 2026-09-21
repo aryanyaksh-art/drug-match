@@ -7,8 +7,114 @@
  "genesScored": 49,
  "genesWithDrugs": 33,
  "knownDrugCount": 247,
- "candidatesConsidered": 262,
+ "candidatesConsidered": 435,
+ "pathsTwoHop": 524,
+ "pathsThreeHop": 740,
  "candidates": [
+  {
+   "id": "CHEMBL2109171",
+   "name": "Dibotermin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "spinal fusion",
+    "bone disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-2A agonist",
+    "Bone morphogenetic protein receptor type-1A agonist",
+    "Activin receptor type-1 agonist"
+   ],
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 3.706376,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "BMPR2",
+     "geneId": "ENSG00000204217",
+     "geneName": "bone morphogenetic protein receptor type 2",
+     "assoc": 1.0,
+     "contribution": 0.370093,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9868
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9421
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8587
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6409
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ACVRL1",
+     "geneId": "ENSG00000139567",
+     "geneName": "activin A receptor like type 1",
+     "assoc": 0.9986,
+     "contribution": 0.278412,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8877
+      },
+      {
+       "id": "literature",
+       "score": 0.8725
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4276
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2A",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "GDF2",
+     "geneId": "ENSG00000263761",
+     "geneName": "growth differentiation factor 2",
+     "assoc": 0.9974,
+     "contribution": 0.255353,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9675
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7295
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7012
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2A",
+     "viaScore": 0.998
+    }
+   ]
+  },
   {
    "id": "CHEMBL2108594",
    "name": "Eptotermin Alfa",
@@ -24,17 +130,17 @@
     "Bone morphogenetic protein receptor type-1B agonist",
     "Bone morphogenetic protein receptor type-2 agonist"
    ],
-   "rank": 5,
-   "score": 0.764,
-   "rawScore": 0.757829,
-   "geneCount": 1,
+   "rank": 2,
+   "score": 0.925,
+   "rawScore": 3.431227,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "BMPR2",
      "geneId": "ENSG00000204217",
      "geneName": "bone morphogenetic protein receptor type 2",
      "assoc": 1.0,
-     "contribution": 0.757829,
+     "contribution": 0.435258,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -53,210 +159,570 @@
        "id": "animal_model",
        "score": 0.6409
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BMPR2",
+     "geneId": "ENSG00000204217",
+     "geneName": "bone morphogenetic protein receptor type 2",
+     "assoc": 1.0,
+     "contribution": 0.280197,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9868
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9421
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8587
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6409
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1A",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BMPR2",
+     "geneId": "ENSG00000204217",
+     "geneName": "bone morphogenetic protein receptor type 2",
+     "assoc": 1.0,
+     "contribution": 0.280197,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9868
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9421
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8587
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6409
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1B",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL2109171",
-   "name": "Dibotermin Alfa",
+   "id": "CHEMBL2028850",
+   "name": "Icatibant",
    "drugType": "Protein",
    "approvedFor": [
-    "spinal fusion",
-    "bone disorder"
+    "hereditary angioedema"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Activin receptor type-2A agonist",
-    "Bone morphogenetic protein receptor type-1A agonist",
-    "Activin receptor type-1 agonist"
+    "Bradykinin B2 receptor antagonist"
    ],
    "rank": 6,
-   "score": 0.764,
-   "rawScore": 0.757829,
+   "score": 0.4759,
+   "rawScore": 1.782928,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "BMPR2",
-     "geneId": "ENSG00000204217",
-     "geneName": "bone morphogenetic protein receptor type 2",
-     "assoc": 1.0,
-     "contribution": 0.757829,
-     "drugsOnGene": 2,
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.628234,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9868
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9421
+       "score": 0.9561
       },
       {
        "id": "genetic_literature",
-       "score": 0.8587
+       "score": 0.9067
       },
       {
        "id": "animal_model",
-       "score": 0.6409
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "BDKRB2",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.586771,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 3,
+     "via": "BDKRB2",
+     "viaScore": 0.917
+    },
+    {
+     "gene": "AGT",
+     "geneId": "ENSG00000135744",
+     "geneName": "angiotensinogen",
+     "assoc": 0.9998,
+     "contribution": 0.567922,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9903
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8891
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5449
+      }
+     ],
+     "hops": 3,
+     "via": "BDKRB2",
+     "viaScore": 0.989
     }
    ]
   },
   {
-   "id": "CHEMBL466659",
-   "name": "Pentaerythritol Tetranitrate",
+   "id": "CHEMBL3039545",
+   "name": "Luspatercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "anemia",
+    "myelodysplastic syndrome",
+    "Beta-thalassemia",
+    "anemia (phenotype)"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Transforming growth factor beta inhibitor"
+   ],
+   "rank": 13,
+   "score": 0.3123,
+   "rawScore": 1.182439,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ENG",
+     "geneId": "ENSG00000106991",
+     "geneName": "endoglin",
+     "assoc": 0.9974,
+     "contribution": 0.413332,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8808
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8117
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5158
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB1",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "ENG",
+     "geneId": "ENSG00000106991",
+     "geneName": "endoglin",
+     "assoc": 0.9974,
+     "contribution": 0.412089,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8808
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8117
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5158
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB3",
+     "viaScore": 0.995
+    },
+    {
+     "gene": "ACVRL1",
+     "geneId": "ENSG00000139567",
+     "geneName": "activin A receptor like type 1",
+     "assoc": 0.9986,
+     "contribution": 0.357018,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8877
+      },
+      {
+       "id": "literature",
+       "score": 0.8725
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4276
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB3",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL317094",
+   "name": "Imidapril",
    "drugType": "Small molecule",
    "approvedFor": [
-    "angina pectoris",
     "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Angiotensin-converting enzyme inhibitor"
+   ],
+   "rank": 15,
+   "score": 0.2967,
+   "rawScore": 1.125276,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.336133,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.212441,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9561
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
+      }
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.974
+    },
+    {
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.212288,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.962
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
+      }
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL515606",
+   "name": "Cilazapril",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "congestive heart failure"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Soluble guanylate cyclase activator"
+    "Angiotensin-converting enzyme inhibitor"
    ],
-   "rank": 13,
-   "score": 0.6046,
-   "rawScore": 0.603708,
-   "geneCount": 3,
+   "rank": 16,
+   "score": 0.2967,
+   "rawScore": 1.125276,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "GUCY1A1",
-     "geneId": "ENSG00000164116",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
-     "assoc": 0.8829,
-     "contribution": 0.236241,
-     "drugsOnGene": 9,
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.336133,
+     "drugsOnGene": 15,
      "evidence": [
       {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
        "id": "genetic_association",
-       "score": 0.6855
+       "score": 0.8183
       },
       {
        "id": "animal_model",
-       "score": 0.611
-      },
-      {
-       "id": "literature",
-       "score": 0.0426
+       "score": 0.484
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "GUCY1A2",
-     "geneId": "ENSG00000152402",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
-     "assoc": 0.7127,
-     "contribution": 0.190694,
-     "drugsOnGene": 9,
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.212441,
+     "drugsOnGene": 15,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6985
+       "id": "literature",
+       "score": 0.9561
       },
       {
-       "id": "literature",
-       "score": 0.0471
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.974
     },
     {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.6606,
-     "contribution": 0.176774,
-     "drugsOnGene": 9,
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.212288,
+     "drugsOnGene": 15,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6448
+       "id": "literature",
+       "score": 0.962
       },
       {
-       "id": "literature",
-       "score": 0.0446
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.987
     }
    ]
   },
   {
-   "id": "CHEMBL6622",
-   "name": "Isosorbide Dinitrate",
+   "id": "CHEMBL431",
+   "name": "Spirapril",
    "drugType": "Small molecule",
    "approvedFor": [
-    "angina pectoris",
-    "hemorrhoid",
     "cardiovascular disorder",
-    "coronary artery disorder"
+    "Hypertension"
    ],
-   "indicationCount": 6,
+   "indicationCount": 2,
    "mechanisms": [
-    "Soluble guanylate cyclase activator"
+    "Angiotensin-converting enzyme inhibitor"
    ],
-   "rank": 14,
-   "score": 0.6046,
-   "rawScore": 0.603708,
-   "geneCount": 3,
+   "rank": 26,
+   "score": 0.2967,
+   "rawScore": 1.125276,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "GUCY1A1",
-     "geneId": "ENSG00000164116",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
-     "assoc": 0.8829,
-     "contribution": 0.236241,
-     "drugsOnGene": 9,
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.336133,
+     "drugsOnGene": 15,
      "evidence": [
       {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
        "id": "genetic_association",
-       "score": 0.6855
+       "score": 0.8183
       },
       {
        "id": "animal_model",
-       "score": 0.611
-      },
-      {
-       "id": "literature",
-       "score": 0.0426
+       "score": 0.484
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "GUCY1A2",
-     "geneId": "ENSG00000152402",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
-     "assoc": 0.7127,
-     "contribution": 0.190694,
-     "drugsOnGene": 9,
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.212441,
+     "drugsOnGene": 15,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6985
+       "id": "literature",
+       "score": 0.9561
       },
       {
-       "id": "literature",
-       "score": 0.0471
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.974
     },
     {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.6606,
-     "contribution": 0.176774,
-     "drugsOnGene": 9,
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.212288,
+     "drugsOnGene": 15,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6448
+       "id": "literature",
+       "score": 0.962
       },
       {
-       "id": "literature",
-       "score": 0.0446
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.987
     }
    ]
   },
@@ -269,9 +735,9 @@
    "mechanisms": [
     "Soluble guanylate cyclase inhibitor"
    ],
-   "rank": 15,
-   "score": 0.6046,
-   "rawScore": 0.603708,
+   "rank": 29,
+   "score": 0.2825,
+   "rawScore": 1.073118,
    "geneCount": 3,
    "paths": [
     {
@@ -294,7 +760,10 @@
        "id": "literature",
        "score": 0.0426
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "GUCY1A2",
@@ -312,7 +781,10 @@
        "id": "literature",
        "score": 0.0471
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "GUCY1B1",
@@ -330,84 +802,10 @@
        "id": "literature",
        "score": 0.0446
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4066936",
-   "name": "Vericiguat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "heart failure",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Soluble guanylate cyclase activator"
-   ],
-   "rank": 16,
-   "score": 0.6046,
-   "rawScore": 0.603708,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GUCY1A1",
-     "geneId": "ENSG00000164116",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
-     "assoc": 0.8829,
-     "contribution": 0.236241,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6855
-      },
-      {
-       "id": "animal_model",
-       "score": 0.611
-      },
-      {
-       "id": "literature",
-       "score": 0.0426
-      }
-     ]
-    },
-    {
-     "gene": "GUCY1A2",
-     "geneId": "ENSG00000152402",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
-     "assoc": 0.7127,
-     "contribution": 0.190694,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6985
-      },
-      {
-       "id": "literature",
-       "score": 0.0471
-      }
-     ]
-    },
-    {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.6606,
-     "contribution": 0.176774,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6448
-      },
-      {
-       "id": "literature",
-       "score": 0.0446
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -425,9 +823,9 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 18,
-   "score": 0.6046,
-   "rawScore": 0.603708,
+   "rank": 32,
+   "score": 0.2825,
+   "rawScore": 1.073118,
    "geneCount": 3,
    "paths": [
     {
@@ -450,7 +848,10 @@
        "id": "literature",
        "score": 0.0426
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "GUCY1A2",
@@ -468,7 +869,10 @@
        "id": "literature",
        "score": 0.0471
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "GUCY1B1",
@@ -486,75 +890,1643 @@
        "id": "literature",
        "score": 0.0446
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1201262",
-   "name": "Dipivefrin",
+   "id": "CHEMBL466659",
+   "name": "Pentaerythritol Tetranitrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "glaucoma"
+    "angina pectoris",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Adrenergic receptor agonist"
+    "Soluble guanylate cyclase activator"
    ],
-   "rank": 25,
-   "score": 0.5033,
-   "rawScore": 0.50578,
-   "geneCount": 9,
+   "rank": 33,
+   "score": 0.2825,
+   "rawScore": 1.073118,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "ADRB3",
-     "geneId": "ENSG00000188778",
-     "geneName": "adrenoceptor beta 3",
-     "assoc": 0.6875,
-     "contribution": 0.099344,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6875
-      }
-     ]
-    },
-    {
-     "gene": "ADRB1",
-     "geneId": "ENSG00000043591",
-     "geneName": "adrenoceptor beta 1",
-     "assoc": 0.9531,
-     "contribution": 0.091415,
-     "drugsOnGene": 39,
+     "gene": "GUCY1A1",
+     "geneId": "ENSG00000164116",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
+     "assoc": 0.8829,
+     "contribution": 0.236241,
+     "drugsOnGene": 9,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.87
+       "score": 0.6855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.611
       },
       {
        "id": "literature",
-       "score": 0.6392
+       "score": 0.0426
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ADRA2B",
-     "geneId": "ENSG00000274286",
-     "geneName": "adrenoceptor alpha 2B",
-     "assoc": 0.6582,
-     "contribution": 0.068329,
-     "drugsOnGene": 32,
+     "gene": "GUCY1A2",
+     "geneId": "ENSG00000152402",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
+     "assoc": 0.7127,
+     "contribution": 0.190694,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6985
+      },
+      {
+       "id": "literature",
+       "score": 0.0471
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.6606,
+     "contribution": 0.176774,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6448
+      },
+      {
+       "id": "literature",
+       "score": 0.0446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4066936",
+   "name": "Vericiguat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "heart failure",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Soluble guanylate cyclase activator"
+   ],
+   "rank": 35,
+   "score": 0.2825,
+   "rawScore": 1.073118,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GUCY1A1",
+     "geneId": "ENSG00000164116",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
+     "assoc": 0.8829,
+     "contribution": 0.236241,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.611
+      },
+      {
+       "id": "literature",
+       "score": 0.0426
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1A2",
+     "geneId": "ENSG00000152402",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
+     "assoc": 0.7127,
+     "contribution": 0.190694,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6985
+      },
+      {
+       "id": "literature",
+       "score": 0.0471
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.6606,
+     "contribution": 0.176774,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6448
+      },
+      {
+       "id": "literature",
+       "score": 0.0446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL6622",
+   "name": "Isosorbide Dinitrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "angina pectoris",
+    "hemorrhoid",
+    "cardiovascular disorder",
+    "coronary artery disorder"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Soluble guanylate cyclase activator"
+   ],
+   "rank": 36,
+   "score": 0.2825,
+   "rawScore": 1.073118,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GUCY1A1",
+     "geneId": "ENSG00000164116",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
+     "assoc": 0.8829,
+     "contribution": 0.236241,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.611
+      },
+      {
+       "id": "literature",
+       "score": 0.0426
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1A2",
+     "geneId": "ENSG00000152402",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
+     "assoc": 0.7127,
+     "contribution": 0.190694,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6985
+      },
+      {
+       "id": "literature",
+       "score": 0.0471
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.6606,
+     "contribution": 0.176774,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6448
+      },
+      {
+       "id": "literature",
+       "score": 0.0446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL938",
+   "name": "Saralasin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Hypertension"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "rank": 39,
+   "score": 0.2429,
+   "rawScore": 0.927788,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.329851,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9561
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.205594,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 3,
+     "via": "AGTR1",
+     "viaScore": 0.974
+    },
+    {
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.203105,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.962
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
+      }
+     ],
+     "hops": 3,
+     "via": "AGTR1",
+     "viaScore": 0.969
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL432162",
+   "name": "Tasosartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "rank": 51,
+   "score": 0.2429,
+   "rawScore": 0.927788,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.329851,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9561
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.205594,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 3,
+     "via": "AGTR1",
+     "viaScore": 0.974
+    },
+    {
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.203105,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.962
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
+      }
+     ],
+     "hops": 3,
+     "via": "AGTR1",
+     "viaScore": 0.969
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4303525",
+   "name": "Omaveloxolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Friedreich ataxia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Nuclear factor erythroid 2-related factor 2 activator"
+   ],
+   "rank": 53,
+   "score": 0.2424,
+   "rawScore": 0.925736,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EIF2AK4",
+     "geneId": "ENSG00000128829",
+     "geneName": "eukaryotic translation initiation factor 2 alpha kinase 4",
+     "assoc": 0.9965,
+     "contribution": 0.925736,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8581
+      },
+      {
+       "id": "literature",
+       "score": 0.8485
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      }
+     ],
+     "hops": 3,
+     "via": "NFE2L2",
+     "viaScore": 0.929
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1078178",
+   "name": "Momelotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "myelofibrosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor"
+   ],
+   "rank": 55,
+   "score": 0.22,
+   "rawScore": 0.8436,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "BMPR2",
+     "geneId": "ENSG00000204217",
+     "geneName": "bone morphogenetic protein receptor type 2",
+     "assoc": 1.0,
+     "contribution": 0.238247,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9868
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9421
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8587
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6409
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "SMAD9",
+     "geneId": "ENSG00000120693",
+     "geneName": "SMAD family member 9",
+     "assoc": 0.9899,
+     "contribution": 0.20833,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8193
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8117
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5944
+      },
+      {
+       "id": "literature",
+       "score": 0.2719
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "ACVRL1",
+     "geneId": "ENSG00000139567",
+     "geneName": "activin A receptor like type 1",
+     "assoc": 0.9986,
+     "contribution": 0.205053,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8877
+      },
+      {
+       "id": "literature",
+       "score": 0.8725
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4276
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4299940",
+   "name": "Mitapivat",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Pyruvate kinase isozymes R/L activator",
+    "Pyruvate kinase isozymes R/L activator"
+   ],
+   "rank": 56,
+   "score": 0.2094,
+   "rawScore": 0.80483,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GUCY1A1",
+     "geneId": "ENSG00000164116",
+     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
+     "assoc": 0.8829,
+     "contribution": 0.459922,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.611
+      },
+      {
+       "id": "literature",
+       "score": 0.0426
+      }
+     ],
+     "hops": 3,
+     "via": "PKLR",
+     "viaScore": 0.907
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.6606,
+     "contribution": 0.344908,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6448
+      },
+      {
+       "id": "literature",
+       "score": 0.0446
+      }
+     ],
+     "hops": 3,
+     "via": "PKLR",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL109648",
+   "name": "Clazosentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Endothelin receptor ET-A antagonist"
+   ],
+   "rank": 57,
+   "score": 0.2093,
+   "rawScore": 0.804206,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.419997,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.888,
+     "contribution": 0.38421,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7794
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4924
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRA",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL9194",
+   "name": "Atrasentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "prostate cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Endothelin receptor ET-A antagonist"
+   ],
+   "rank": 58,
+   "score": 0.2093,
+   "rawScore": 0.804206,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.419997,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.888,
+     "contribution": 0.38421,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7794
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4924
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRA",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1072",
+   "name": "Bumetanide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "congestive heart failure",
+    "kidney disorder",
+    "cardiovascular disorder",
+    "nephrotic syndrome"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "rank": 62,
+   "score": 0.2014,
+   "rawScore": 0.775305,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.7538,
+     "contribution": 0.432955,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5916
+       "score": 0.5606
       },
       {
        "id": "literature",
-       "score": 0.1632
+       "score": 0.4397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "UMOD",
+     "geneId": "ENSG00000169344",
+     "geneName": "uromodulin",
+     "assoc": 0.9795,
+     "contribution": 0.34235,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8021
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7465
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5907
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.803
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1059",
+   "name": "Pregabalin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Seizure",
+    "spinal cord injury",
+    "chronic obstructive pulmonary disease",
+    "neuropathic pain"
+   ],
+   "indicationCount": 9,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "rank": 64,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL404849",
+   "name": "Suloctidil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "rank": 65,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1628502",
+   "name": "Gabapentin Enacarbil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neuralgia",
+    "restless legs syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "rank": 66,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL940",
+   "name": "Gabapentin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neuralgia",
+    "Focal impaired awareness seizure",
+    "Seizure",
+    "epilepsy"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "rank": 67,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL473159",
+   "name": "Phloroglucinol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "urinary system disorder",
+    "gastrointestinal disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "rank": 68,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1008",
+   "name": "Bepridil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "rank": 69,
+   "score": 0.1975,
+   "rawScore": 0.761092,
+   "geneCount": 19,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081287,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.081124,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.076982,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2035187",
+   "name": "Pacritinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myelofibrosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "rank": 70,
+   "score": 0.195,
+   "rawScore": 0.751902,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "BMPR2",
+     "geneId": "ENSG00000204217",
+     "geneName": "bone morphogenetic protein receptor type 2",
+     "assoc": 1.0,
+     "contribution": 0.21235,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9868
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9421
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8587
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6409
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "SMAD9",
+     "geneId": "ENSG00000120693",
+     "geneName": "SMAD family member 9",
+     "assoc": 0.9899,
+     "contribution": 0.185685,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8193
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8117
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5944
+      },
+      {
+       "id": "literature",
+       "score": 0.2719
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "ACVRL1",
+     "geneId": "ENSG00000139567",
+     "geneName": "activin A receptor like type 1",
+     "assoc": 0.9986,
+     "contribution": 0.182764,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8877
+      },
+      {
+       "id": "literature",
+       "score": 0.8725
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4276
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR1",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL363295",
+   "name": "Terodiline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Polyuria",
+    "Urinary incontinence"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Muscarinic acetylcholine receptor antagonist",
+    "Voltage-gated calcium channel blocker"
+   ],
+   "rank": 71,
+   "score": 0.179,
+   "rawScore": 0.693193,
+   "geneCount": 24,
+   "paths": [
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.074035,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.073887,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.893,
+     "contribution": 0.070114,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5405
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4697
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA2D1",
+     "viaScore": 0.998
     }
    ]
   },
@@ -573,9 +2545,9 @@
     "Adrenergic receptor agonist",
     "Adrenergic receptor agonist"
    ],
-   "rank": 26,
-   "score": 0.5033,
-   "rawScore": 0.50578,
+   "rank": 73,
+   "score": 0.1696,
+   "rawScore": 0.658701,
    "geneCount": 9,
    "paths": [
     {
@@ -590,7 +2562,10 @@
        "id": "literature",
        "score": 0.6875
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "ADRB1",
@@ -608,25 +2583,31 @@
        "id": "literature",
        "score": 0.6392
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ADRA2B",
-     "geneId": "ENSG00000274286",
-     "geneName": "adrenoceptor alpha 2B",
-     "assoc": 0.6582,
-     "contribution": 0.068329,
-     "drugsOnGene": 32,
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.078501,
+     "drugsOnGene": 51,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5916
+       "id": "genetic_association",
+       "score": 0.87
       },
       {
        "id": "literature",
-       "score": 0.1632
+       "score": 0.6392
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
     }
    ]
   },
@@ -639,9 +2620,9 @@
    "mechanisms": [
     "Adrenergic receptor agonist"
    ],
-   "rank": 27,
-   "score": 0.5033,
-   "rawScore": 0.50578,
+   "rank": 75,
+   "score": 0.1696,
+   "rawScore": 0.658701,
    "geneCount": 9,
    "paths": [
     {
@@ -656,7 +2637,10 @@
        "id": "literature",
        "score": 0.6875
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "ADRB1",
@@ -674,45 +2658,48 @@
        "id": "literature",
        "score": 0.6392
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ADRA2B",
-     "geneId": "ENSG00000274286",
-     "geneName": "adrenoceptor alpha 2B",
-     "assoc": 0.6582,
-     "contribution": 0.068329,
-     "drugsOnGene": 32,
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.078501,
+     "drugsOnGene": 51,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5916
+       "id": "genetic_association",
+       "score": 0.87
       },
       {
        "id": "literature",
-       "score": 0.1632
+       "score": 0.6392
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
     }
    ]
   },
   {
-   "id": "CHEMBL2103827",
-   "name": "Droxidopa",
+   "id": "CHEMBL1201262",
+   "name": "Dipivefrin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "primary orthostatic hypotension",
-    "orthostatic hypotension",
-    "multiple system atrophy"
+    "glaucoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Adrenergic receptor agonist"
    ],
-   "rank": 28,
-   "score": 0.5033,
-   "rawScore": 0.50578,
+   "rank": 76,
+   "score": 0.1696,
+   "rawScore": 0.658701,
    "geneCount": 9,
    "paths": [
     {
@@ -727,7 +2714,10 @@
        "id": "literature",
        "score": 0.6875
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "ADRB1",
@@ -745,25 +2735,31 @@
        "id": "literature",
        "score": 0.6392
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ADRA2B",
-     "geneId": "ENSG00000274286",
-     "geneName": "adrenoceptor alpha 2B",
-     "assoc": 0.6582,
-     "contribution": 0.068329,
-     "drugsOnGene": 32,
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.078501,
+     "drugsOnGene": 51,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5916
+       "id": "genetic_association",
+       "score": 0.87
       },
       {
        "id": "literature",
-       "score": 0.1632
+       "score": 0.6392
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
     }
    ]
   },
@@ -782,9 +2778,9 @@
     "Adrenergic receptor agonist",
     "Adrenergic receptor agonist"
    ],
-   "rank": 29,
-   "score": 0.5033,
-   "rawScore": 0.50578,
+   "rank": 77,
+   "score": 0.1696,
+   "rawScore": 0.658701,
    "geneCount": 9,
    "paths": [
     {
@@ -799,7 +2795,10 @@
        "id": "literature",
        "score": 0.6875
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "ADRB1",
@@ -817,25 +2816,346 @@
        "id": "literature",
        "score": 0.6392
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ADRA2B",
-     "geneId": "ENSG00000274286",
-     "geneName": "adrenoceptor alpha 2B",
-     "assoc": 0.6582,
-     "contribution": 0.068329,
-     "drugsOnGene": 32,
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.078501,
+     "drugsOnGene": 51,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5916
+       "id": "genetic_association",
+       "score": 0.87
       },
       {
        "id": "literature",
-       "score": 0.1632
+       "score": 0.6392
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2103827",
+   "name": "Droxidopa",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "primary orthostatic hypotension",
+    "orthostatic hypotension",
+    "multiple system atrophy"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Adrenergic receptor agonist"
+   ],
+   "rank": 79,
+   "score": 0.1696,
+   "rawScore": 0.658701,
+   "geneCount": 9,
+   "paths": [
+    {
+     "gene": "ADRB3",
+     "geneId": "ENSG00000188778",
+     "geneName": "adrenoceptor beta 3",
+     "assoc": 0.6875,
+     "contribution": 0.099344,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6875
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.091415,
+     "drugsOnGene": 39,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.078501,
+     "drugsOnGene": 51,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL839",
+   "name": "Carteolol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "glaucoma",
+    "cardiovascular disorder",
+    "ocular hypertension"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Adrenergic receptor beta antagonist"
+   ],
+   "rank": 81,
+   "score": 0.1571,
+   "rawScore": 0.612762,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ADRB3",
+     "geneId": "ENSG00000188778",
+     "geneName": "adrenoceptor beta 3",
+     "assoc": 0.6875,
+     "contribution": 0.154167,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6875
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.141862,
+     "drugsOnGene": 39,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.121821,
+     "drugsOnGene": 51,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL27193",
+   "name": "Dilevalol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Adrenergic receptor beta antagonist",
+    "Beta-2 adrenergic receptor agonist"
+   ],
+   "rank": 82,
+   "score": 0.1571,
+   "rawScore": 0.612762,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ADRB3",
+     "geneId": "ENSG00000188778",
+     "geneName": "adrenoceptor beta 3",
+     "assoc": 0.6875,
+     "contribution": 0.154167,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6875
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.141862,
+     "drugsOnGene": 39,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.121821,
+     "drugsOnGene": 51,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL434",
+   "name": "Isoproterenol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Heart block",
+    "cardiovascular disorder",
+    "Airway obstruction"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Adrenergic receptor beta agonist",
+    "Adrenergic receptor beta agonist"
+   ],
+   "rank": 83,
+   "score": 0.1571,
+   "rawScore": 0.612762,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ADRB3",
+     "geneId": "ENSG00000188778",
+     "geneName": "adrenoceptor beta 3",
+     "assoc": 0.6875,
+     "contribution": 0.154167,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6875
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.141862,
+     "drugsOnGene": 39,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.121821,
+     "drugsOnGene": 51,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
     }
    ]
   },
@@ -851,9 +3171,9 @@
     "Mineralocorticoid receptor antagonist",
     "Voltage-gated L-type calcium channel blocker"
    ],
-   "rank": 31,
-   "score": 0.4926,
-   "rawScore": 0.495484,
+   "rank": 85,
+   "score": 0.1559,
+   "rawScore": 0.608425,
    "geneCount": 5,
    "paths": [
     {
@@ -876,7 +3196,10 @@
        "id": "animal_model",
        "score": 0.4484
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "CACNA1D",
@@ -898,7 +3221,10 @@
        "id": "literature",
        "score": 0.1688
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "CACNA1C",
@@ -920,167 +3246,10 @@
        "id": "animal_model",
        "score": 0.4697
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1754",
-   "name": "Doxapram",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "respiratory system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Potassium channel subfamily K member 3 blocker",
-    "Potassium channel subfamily K member 9 blocker"
-   ],
-   "rank": 33,
-   "score": 0.4837,
-   "rawScore": 0.486825,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "KCNK3",
-     "geneId": "ENSG00000171303",
-     "geneName": "potassium two pore domain channel subfamily K member 3",
-     "assoc": 0.9969,
-     "contribution": 0.486825,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9047
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8824
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7196
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1072",
-   "name": "Bumetanide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "congestive heart failure",
-    "kidney disorder",
-    "cardiovascular disorder",
-    "nephrotic syndrome"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 37,
-   "score": 0.4279,
-   "rawScore": 0.432955,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.7538,
-     "contribution": 0.432955,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5606
-      },
-      {
-       "id": "literature",
-       "score": 0.4397
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL109648",
-   "name": "Clazosentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Endothelin receptor ET-A antagonist"
-   ],
-   "rank": 38,
-   "score": 0.4145,
-   "rawScore": 0.419997,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.9649,
-     "contribution": 0.419997,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7829
-      },
-      {
-       "id": "literature",
-       "score": 0.6553
-      },
-      {
-       "id": "animal_model",
-       "score": 0.531
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL9194",
-   "name": "Atrasentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "prostate cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Endothelin receptor ET-A antagonist"
-   ],
-   "rank": 39,
-   "score": 0.4145,
-   "rawScore": 0.419997,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.9649,
-     "contribution": 0.419997,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7829
-      },
-      {
-       "id": "literature",
-       "score": 0.6553
-      },
-      {
-       "id": "animal_model",
-       "score": 0.531
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1095,9 +3264,9 @@
     "Beta-1 adrenergic receptor antagonist",
     "Beta-2 adrenergic receptor antagonist"
    ],
-   "rank": 40,
-   "score": 0.407,
-   "rawScore": 0.412748,
+   "rank": 86,
+   "score": 0.1553,
+   "rawScore": 0.606202,
    "geneCount": 5,
    "paths": [
     {
@@ -1116,7 +3285,31 @@
        "id": "literature",
        "score": 0.6392
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRB1",
+     "geneId": "ENSG00000043591",
+     "geneName": "adrenoceptor beta 1",
+     "assoc": 0.9531,
+     "contribution": 0.099308,
+     "drugsOnGene": 51,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6392
+      }
+     ],
+     "hops": 3,
+     "via": "ADRB2",
+     "viaScore": 0.956
     },
     {
      "gene": "ADRA1A",
@@ -1130,468 +3323,79 @@
        "id": "literature",
        "score": 0.6591
       }
-     ]
-    },
-    {
-     "gene": "ADRA1D",
-     "geneId": "ENSG00000171873",
-     "geneName": "adrenoceptor alpha 1D",
-     "assoc": 0.6219,
-     "contribution": 0.077909,
-     "drugsOnGene": 36,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4214
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3465
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL27193",
-   "name": "Dilevalol",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Adrenergic receptor beta antagonist",
-    "Beta-2 adrenergic receptor agonist"
-   ],
-   "rank": 41,
-   "score": 0.3685,
-   "rawScore": 0.375451,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ADRB3",
-     "geneId": "ENSG00000188778",
-     "geneName": "adrenoceptor beta 3",
-     "assoc": 0.6875,
-     "contribution": 0.154167,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6875
-      }
-     ]
-    },
-    {
-     "gene": "ADRB1",
-     "geneId": "ENSG00000043591",
-     "geneName": "adrenoceptor beta 1",
-     "assoc": 0.9531,
-     "contribution": 0.141862,
-     "drugsOnGene": 39,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.87
-      },
-      {
-       "id": "literature",
-       "score": 0.6392
-      }
-     ]
-    },
-    {
-     "gene": "ADRB2",
-     "geneId": "ENSG00000169252",
-     "geneName": "adrenoceptor beta 2",
-     "assoc": 0.594,
-     "contribution": 0.079423,
-     "drugsOnGene": 51,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.594
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL839",
-   "name": "Carteolol",
+   "id": "CHEMBL1754",
+   "name": "Doxapram",
    "drugType": "Small molecule",
    "approvedFor": [
-    "glaucoma",
-    "cardiovascular disorder",
-    "ocular hypertension"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Adrenergic receptor beta antagonist"
-   ],
-   "rank": 42,
-   "score": 0.3685,
-   "rawScore": 0.375451,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ADRB3",
-     "geneId": "ENSG00000188778",
-     "geneName": "adrenoceptor beta 3",
-     "assoc": 0.6875,
-     "contribution": 0.154167,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6875
-      }
-     ]
-    },
-    {
-     "gene": "ADRB1",
-     "geneId": "ENSG00000043591",
-     "geneName": "adrenoceptor beta 1",
-     "assoc": 0.9531,
-     "contribution": 0.141862,
-     "drugsOnGene": 39,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.87
-      },
-      {
-       "id": "literature",
-       "score": 0.6392
-      }
-     ]
-    },
-    {
-     "gene": "ADRB2",
-     "geneId": "ENSG00000169252",
-     "geneName": "adrenoceptor beta 2",
-     "assoc": 0.594,
-     "contribution": 0.079423,
-     "drugsOnGene": 51,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.594
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL434",
-   "name": "Isoproterenol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Heart block",
-    "cardiovascular disorder",
-    "Airway obstruction"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Adrenergic receptor beta agonist",
-    "Adrenergic receptor beta agonist"
-   ],
-   "rank": 43,
-   "score": 0.3685,
-   "rawScore": 0.375451,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ADRB3",
-     "geneId": "ENSG00000188778",
-     "geneName": "adrenoceptor beta 3",
-     "assoc": 0.6875,
-     "contribution": 0.154167,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6875
-      }
-     ]
-    },
-    {
-     "gene": "ADRB1",
-     "geneId": "ENSG00000043591",
-     "geneName": "adrenoceptor beta 1",
-     "assoc": 0.9531,
-     "contribution": 0.141862,
-     "drugsOnGene": 39,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.87
-      },
-      {
-       "id": "literature",
-       "score": 0.6392
-      }
-     ]
-    },
-    {
-     "gene": "ADRB2",
-     "geneId": "ENSG00000169252",
-     "geneName": "adrenoceptor beta 2",
-     "assoc": 0.594,
-     "contribution": 0.079423,
-     "drugsOnGene": 51,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.594
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201010",
-   "name": "Fludrocortisone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic primary adrenal insufficiency",
-    "primary adrenal insufficiency",
-    "adrenogenital syndrome"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Mineralocorticoid receptor agonist"
-   ],
-   "rank": 45,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8442
-      },
-      {
-       "id": "literature",
-       "score": 0.7984
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1463345",
-   "name": "Canrenone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
+    "respiratory system disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Mineralocorticoid receptor antagonist"
+    "Potassium channel subfamily K member 3 blocker",
+    "Potassium channel subfamily K member 9 blocker"
    ],
-   "rank": 46,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
+   "rank": 87,
+   "score": 0.1545,
+   "rawScore": 0.603361,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
+     "gene": "KCNK3",
+     "geneId": "ENSG00000171303",
+     "geneName": "potassium two pore domain channel subfamily K member 3",
+     "assoc": 0.9969,
+     "contribution": 0.368944,
+     "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8442
-      },
-      {
        "id": "literature",
-       "score": 0.7984
+       "score": 0.9047
       },
       {
-       "id": "animal_model",
-       "score": 0.4484
+       "id": "genetic_association",
+       "score": 0.8824
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7196
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200592",
-   "name": "Desoxycorticosterone Pivalate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "primary adrenal insufficiency"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Mineralocorticoid receptor agonist"
-   ],
-   "rank": 47,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
+     "gene": "KCNK3",
+     "geneId": "ENSG00000171303",
+     "geneName": "potassium two pore domain channel subfamily K member 3",
+     "assoc": 0.9969,
+     "contribution": 0.234417,
+     "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8442
-      },
-      {
        "id": "literature",
-       "score": 0.7984
+       "score": 0.9047
       },
-      {
-       "id": "animal_model",
-       "score": 0.4484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2181927",
-   "name": "Finerenone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "heart failure",
-    "type 2 diabetes mellitus",
-    "chronic kidney disease",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Mineralocorticoid receptor antagonist"
-   ],
-   "rank": 48,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
-     "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.8442
+       "score": 0.8824
       },
       {
-       "id": "literature",
-       "score": 0.7984
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4484
+       "id": "genetic_literature",
+       "score": 0.7196
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1509",
-   "name": "Drospirenone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "endometriosis",
-    "acne",
-    "Dysmenorrhea",
-    "contraception"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Mineralocorticoid receptor antagonist",
-    "Progesterone receptor agonist"
-   ],
-   "rank": 51,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8442
-      },
-      {
-       "id": "literature",
-       "score": 0.7984
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1616951",
-   "name": "Canrenoate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Mineralocorticoid receptor antagonist"
-   ],
-   "rank": 52,
-   "score": 0.3444,
-   "rawScore": 0.352235,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C2",
-     "geneId": "ENSG00000151623",
-     "geneName": "nuclear receptor subfamily 3 group C member 2",
-     "assoc": 0.9827,
-     "contribution": 0.352235,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8442
-      },
-      {
-       "id": "literature",
-       "score": 0.7984
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4484
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "KCNK9",
+     "viaScore": 0.986
     }
    ]
   },
@@ -1604,9 +3408,9 @@
    "mechanisms": [
     "Mineralocorticoid receptor agonist"
    ],
-   "rank": 53,
-   "score": 0.3444,
-   "rawScore": 0.352235,
+   "rank": 88,
+   "score": 0.1447,
+   "rawScore": 0.567235,
    "geneCount": 1,
    "paths": [
     {
@@ -1629,781 +3433,35 @@
        "id": "animal_model",
        "score": 0.4484
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL517427",
-   "name": "Nilvadipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 55,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.215,
+     "drugsOnGene": 13,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.5608
+       "score": 0.962
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4835
       },
       {
        "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
+       "score": 0.2888
       }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL250270",
-   "name": "Lercanidipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 59,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103761",
-   "name": "Barnidipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 63,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2074972",
-   "name": "Benidipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 66,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1275868",
-   "name": "Azelnidipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 67,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL475534",
-   "name": "Nitrendipine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 70,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL43064",
-   "name": "Cinnarizine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Vertigo"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Histamine H1 receptor antagonist",
-    "Voltage-gated L-type calcium channel blocker"
-   ],
-   "rank": 71,
-   "score": 0.3312,
-   "rawScore": 0.339438,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "CACNA1D",
-     "geneId": "ENSG00000157388",
-     "geneName": "calcium voltage-gated channel subunit alpha1 D",
-     "assoc": 0.9284,
-     "contribution": 0.138655,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.849
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4292
-      },
-      {
-       "id": "literature",
-       "score": 0.1688
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.893,
-     "contribution": 0.133371,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5608
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5405
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4697
-      }
-     ]
-    },
-    {
-     "gene": "CACNA1S",
-     "geneId": "ENSG00000081248",
-     "geneName": "calcium voltage-gated channel subunit alpha1 S",
-     "assoc": 0.4514,
-     "contribution": 0.067412,
-     "drugsOnGene": 29,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4278
-      },
-      {
-       "id": "literature",
-       "score": 0.0412
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL431",
-   "name": "Spirapril",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Angiotensin-converting enzyme inhibitor"
-   ],
-   "rank": 73,
-   "score": 0.3278,
-   "rawScore": 0.336133,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE",
-     "geneId": "ENSG00000159640",
-     "geneName": "angiotensin I converting enzyme",
-     "assoc": 0.993,
-     "contribution": 0.336133,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9253
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8183
-      },
-      {
-       "id": "animal_model",
-       "score": 0.484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL317094",
-   "name": "Imidapril",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Angiotensin-converting enzyme inhibitor"
-   ],
-   "rank": 75,
-   "score": 0.3278,
-   "rawScore": 0.336133,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE",
-     "geneId": "ENSG00000159640",
-     "geneName": "angiotensin I converting enzyme",
-     "assoc": 0.993,
-     "contribution": 0.336133,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9253
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8183
-      },
-      {
-       "id": "animal_model",
-       "score": 0.484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL515606",
-   "name": "Cilazapril",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "congestive heart failure"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Angiotensin-converting enzyme inhibitor"
-   ],
-   "rank": 86,
-   "score": 0.3278,
-   "rawScore": 0.336133,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE",
-     "geneId": "ENSG00000159640",
-     "geneName": "angiotensin I converting enzyme",
-     "assoc": 0.993,
-     "contribution": 0.336133,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9253
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8183
-      },
-      {
-       "id": "animal_model",
-       "score": 0.484
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL938",
-   "name": "Saralasin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Hypertension"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "rank": 89,
-   "score": 0.3213,
-   "rawScore": 0.329851,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.9999,
-     "contribution": 0.329851,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9561
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9067
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8999
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8051
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL432162",
-   "name": "Tasosartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "rank": 90,
-   "score": 0.3213,
-   "rawScore": 0.329851,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.9999,
-     "contribution": 0.329851,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9561
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9067
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8999
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8051
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "NR3C2",
+     "viaScore": 0.944
     }
    ]
   }
@@ -2421,9 +3479,9 @@
    "mechanisms": [
     "Renin inhibitor"
    ],
-   "rank": 1,
-   "score": 1.0,
-   "rawScore": 0.986035,
+   "rank": 3,
+   "score": 0.9025,
+   "rawScore": 3.348422,
    "geneCount": 1,
    "paths": [
     {
@@ -2446,7 +3504,64 @@
        "id": "genetic_association",
        "score": 0.2888
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.631563,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 3,
+     "via": "REN",
+     "viaScore": 0.987
+    },
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.624368,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9561
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
+      }
+     ],
+     "hops": 3,
+     "via": "REN",
+     "viaScore": 0.969
     }
    ]
   },
@@ -2464,9 +3579,9 @@
    "mechanisms": [
     "Amiloride-sensitive sodium channel, ENaC blocker"
    ],
-   "rank": 2,
-   "score": 0.8882,
-   "rawScore": 0.877935,
+   "rank": 4,
+   "score": 0.5373,
+   "rawScore": 2.008276,
    "geneCount": 3,
    "paths": [
     {
@@ -2485,7 +3600,10 @@
        "id": "animal_model",
        "score": 0.2657
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "SCNN1B",
@@ -2503,25 +3621,31 @@
        "id": "literature",
        "score": 0.3409
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "SCNN1G",
-     "geneId": "ENSG00000166828",
-     "geneName": "sodium channel epithelial 1 subunit gamma",
-     "assoc": 0.4642,
-     "contribution": 0.226716,
+     "gene": "SCNN1A",
+     "geneId": "ENSG00000111319",
+     "geneName": "sodium channel epithelial 1 subunit alpha",
+     "assoc": 0.7633,
+     "contribution": 0.239964,
      "drugsOnGene": 2,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.4003
+       "id": "literature",
+       "score": 0.6776
       },
       {
-       "id": "literature",
-       "score": 0.1066
+       "id": "animal_model",
+       "score": 0.2657
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "SCNN1G",
+     "viaScore": 0.999
     }
    ]
   },
@@ -2537,9 +3661,9 @@
    "mechanisms": [
     "Amiloride-sensitive sodium channel, ENaC blocker"
    ],
-   "rank": 3,
-   "score": 0.8882,
-   "rawScore": 0.877935,
+   "rank": 5,
+   "score": 0.5373,
+   "rawScore": 2.008276,
    "geneCount": 3,
    "paths": [
     {
@@ -2558,7 +3682,10 @@
        "id": "animal_model",
        "score": 0.2657
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "SCNN1B",
@@ -2576,84 +3703,78 @@
        "id": "literature",
        "score": 0.3409
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "SCNN1G",
-     "geneId": "ENSG00000166828",
-     "geneName": "sodium channel epithelial 1 subunit gamma",
-     "assoc": 0.4642,
-     "contribution": 0.226716,
+     "gene": "SCNN1A",
+     "geneId": "ENSG00000111319",
+     "geneName": "sodium channel epithelial 1 subunit alpha",
+     "assoc": 0.7633,
+     "contribution": 0.239964,
      "drugsOnGene": 2,
      "evidence": [
       {
+       "id": "literature",
+       "score": 0.6776
+      },
+      {
        "id": "animal_model",
-       "score": 0.4003
-      },
-      {
-       "id": "literature",
-       "score": 0.1066
+       "score": 0.2657
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "SCNN1G",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1743073",
-   "name": "Sotatercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "hypertensive disorder",
-    "pulmonary hypertension"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Inhibin beta A chain inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.8059,
-   "rawScore": 0.798354,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "INHBA",
-     "geneId": "ENSG00000122641",
-     "geneName": "inhibin subunit beta A",
-     "assoc": 0.7984,
-     "contribution": 0.798354,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6959
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3369
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL282724",
-   "name": "Sitaxentan",
+   "id": "CHEMBL957",
+   "name": "Bosentan",
    "drugType": "Small molecule",
    "approvedFor": [
+    "congenital heart disease",
     "pulmonary arterial hypertension",
+    "systemic sclerosis",
     "hypertensive disorder"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist",
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "rank": 7,
-   "score": 0.675,
-   "rawScore": 0.671821,
+   "score": 0.3566,
+   "rawScore": 1.344826,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.381828,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRB",
      "geneId": "ENSG00000136160",
@@ -2670,7 +3791,10 @@
        "id": "genetic_association",
        "score": 0.4924
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "EDNRA",
@@ -2692,7 +3816,10 @@
        "id": "animal_model",
        "score": 0.531
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2711,10 +3838,35 @@
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "rank": 8,
-   "score": 0.675,
-   "rawScore": 0.671821,
+   "score": 0.3566,
+   "rawScore": 1.344826,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.381828,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRB",
      "geneId": "ENSG00000136160",
@@ -2731,7 +3883,10 @@
        "id": "genetic_association",
        "score": 0.4924
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "EDNRA",
@@ -2753,7 +3908,191 @@
        "id": "animal_model",
        "score": 0.531
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2165326",
+   "name": "Aprocitentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "rank": 9,
+   "score": 0.3566,
+   "rawScore": 1.344826,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.381828,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.888,
+     "contribution": 0.353523,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7794
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4924
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.318298,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL282724",
+   "name": "Sitaxentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary arterial hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist",
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "rank": 10,
+   "score": 0.3566,
+   "rawScore": 1.344826,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.381828,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.888,
+     "contribution": 0.353523,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7794
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4924
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.318298,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2770,131 +4109,36 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 9,
-   "score": 0.675,
-   "rawScore": 0.671821,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRB",
-     "geneId": "ENSG00000136160",
-     "geneName": "endothelin receptor type B",
-     "assoc": 0.888,
-     "contribution": 0.353523,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7794
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4924
-      }
-     ]
-    },
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.9649,
-     "contribution": 0.318298,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7829
-      },
-      {
-       "id": "literature",
-       "score": 0.6553
-      },
-      {
-       "id": "animal_model",
-       "score": 0.531
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL957",
-   "name": "Bosentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "congenital heart disease",
-    "pulmonary arterial hypertension",
-    "systemic sclerosis",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "rank": 10,
-   "score": 0.675,
-   "rawScore": 0.671821,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRB",
-     "geneId": "ENSG00000136160",
-     "geneName": "endothelin receptor type B",
-     "assoc": 0.888,
-     "contribution": 0.353523,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7794
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4924
-      }
-     ]
-    },
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.9649,
-     "contribution": 0.318298,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7829
-      },
-      {
-       "id": "literature",
-       "score": 0.6553
-      },
-      {
-       "id": "animal_model",
-       "score": 0.531
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2165326",
-   "name": "Aprocitentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
    "rank": 11,
-   "score": 0.675,
-   "rawScore": 0.671821,
+   "score": 0.3566,
+   "rawScore": 1.344826,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.381828,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
+      },
+      {
+       "id": "animal_model",
+       "score": 0.531
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRB",
      "geneId": "ENSG00000136160",
@@ -2911,7 +4155,10 @@
        "id": "genetic_association",
        "score": 0.4924
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "EDNRA",
@@ -2933,84 +4180,199 @@
        "id": "animal_model",
        "score": 0.531
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL2097081",
-   "name": "Nitroprusside",
+   "id": "CHEMBL539423",
+   "name": "Sparsentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
+    "IgA glomerulonephritis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Soluble guanylate cyclase activator"
+    "Endothelin receptor ET-A antagonist",
+    "Type-1 angiotensin II receptor antagonist"
    ],
    "rank": 12,
-   "score": 0.6046,
-   "rawScore": 0.603708,
-   "geneCount": 3,
+   "score": 0.3478,
+   "rawScore": 1.312606,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "GUCY1A1",
-     "geneId": "ENSG00000164116",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
-     "assoc": 0.8829,
-     "contribution": 0.236241,
-     "drugsOnGene": 9,
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.9649,
+     "contribution": 0.318298,
+     "drugsOnGene": 8,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.6855
+       "score": 0.7829
+      },
+      {
+       "id": "literature",
+       "score": 0.6553
       },
       {
        "id": "animal_model",
-       "score": 0.611
-      },
-      {
-       "id": "literature",
-       "score": 0.0426
+       "score": 0.531
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "GUCY1A2",
-     "geneId": "ENSG00000152402",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
-     "assoc": 0.7127,
-     "contribution": 0.190694,
-     "drugsOnGene": 9,
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.888,
+     "contribution": 0.291176,
+     "drugsOnGene": 8,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6985
+       "id": "literature",
+       "score": 0.7794
       },
       {
-       "id": "literature",
-       "score": 0.0471
+       "id": "genetic_association",
+       "score": 0.4924
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EDNRA",
+     "viaScore": 0.994
     },
     {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.6606,
-     "contribution": 0.176774,
-     "drugsOnGene": 9,
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.24998,
+     "drugsOnGene": 16,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.6448
+       "id": "literature",
+       "score": 0.9561
       },
       {
-       "id": "literature",
-       "score": 0.0446
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL577",
+   "name": "Enalaprilat Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Angiotensin-converting enzyme inhibitor"
+   ],
+   "rank": 14,
+   "score": 0.2967,
+   "rawScore": 1.125276,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE",
+     "geneId": "ENSG00000159640",
+     "geneName": "angiotensin I converting enzyme",
+     "assoc": 0.993,
+     "contribution": 0.336133,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9253
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8183
+      },
+      {
+       "id": "animal_model",
+       "score": 0.484
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.9999,
+     "contribution": 0.212441,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9561
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9067
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8999
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8051
+      }
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.974
+    },
+    {
+     "gene": "REN",
+     "geneId": "ENSG00000143839",
+     "geneName": "renin",
+     "assoc": 0.986,
+     "contribution": 0.212288,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.962
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4835
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2888
+      }
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.987
     }
    ]
   }

@@ -7,7 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 15,
  "knownDrugCount": 67,
- "candidatesConsidered": 111,
+ "candidatesConsidered": 150,
+ "pathsTwoHop": 130,
+ "pathsThreeHop": 224,
  "candidates": [
   {
    "id": "CHEMBL3894860",
@@ -24,8 +26,8 @@
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "rank": 2,
-   "score": 0.5647,
-   "rawScore": 0.852842,
+   "score": 0.7293,
+   "rawScore": 2.257218,
    "geneCount": 2,
    "paths": [
     {
@@ -52,7 +54,10 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "CDK6",
@@ -74,89 +79,330 @@
        "id": "rna_expression",
        "score": 0.0628
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CDK6",
+     "geneId": "ENSG00000105810",
+     "geneName": "cyclin dependent kinase 6",
+     "assoc": 0.9629,
+     "contribution": 0.418719,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6958
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0628
+      }
+     ],
+     "hops": 3,
+     "via": "CDK4",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL2110732",
-   "name": "Dacomitinib Anhydrous",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "GTPase KRas inhibitor"
    ],
    "rank": 5,
-   "score": 0.4863,
-   "rawScore": 0.76011,
-   "geneCount": 3,
+   "score": 0.6405,
+   "rawScore": 1.997838,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.9971,
-     "contribution": 0.369049,
-     "drugsOnGene": 4,
+     "gene": "KRAS",
+     "geneId": "ENSG00000133703",
+     "geneName": "KRas proto-oncogene, GTPase",
+     "assoc": 0.9994,
+     "contribution": 0.757388,
+     "drugsOnGene": 2,
      "evidence": [
       {
+       "id": "genetic_association",
+       "score": 0.8748
+      },
+      {
        "id": "literature",
-       "score": 0.9427
+       "score": 0.8286
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
       },
       {
        "id": "somatic_mutation",
-       "score": 0.7638
+       "score": 0.6973
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4227
       },
       {
        "id": "affected_pathway",
-       "score": 0.6079
+       "score": 0.3113
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NF1",
+     "geneId": "ENSG00000196712",
+     "geneName": "neurofibromin 1",
+     "assoc": 0.9977,
+     "contribution": 0.753071,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9595
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8471
       },
       {
        "id": "genetic_association",
-       "score": 0.4079
+       "score": 0.6114
       },
       {
        "id": "rna_expression",
-       "score": 0.0896
+       "score": 0.0321
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "KRAS",
+     "viaScore": 0.996
     },
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
      "assoc": 1.0,
-     "contribution": 0.207477,
-     "drugsOnGene": 17,
+     "contribution": 0.487379,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
+       "score": 0.9941
       },
       {
        "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.9466
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "KRAS",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "GTPase KRas inhibitor"
+   ],
+   "rank": 6,
+   "score": 0.6405,
+   "rawScore": 1.997838,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRAS",
+     "geneId": "ENSG00000133703",
+     "geneName": "KRas proto-oncogene, GTPase",
+     "assoc": 0.9994,
+     "contribution": 0.757388,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8748
+      },
+      {
+       "id": "literature",
+       "score": 0.8286
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.6973
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4227
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.3113
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NF1",
+     "geneId": "ENSG00000196712",
+     "geneName": "neurofibromin 1",
+     "assoc": 0.9977,
+     "contribution": 0.753071,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9595
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8471
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6114
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0321
+      }
+     ],
+     "hops": 3,
+     "via": "KRAS",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.487379,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "KRAS",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "rank": 7,
+   "score": 0.6168,
+   "rawScore": 1.928386,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.644389,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "EGFR",
      "geneId": "ENSG00000146648",
      "geneName": "epidermal growth factor receptor",
      "assoc": 0.9986,
-     "contribution": 0.183585,
-     "drugsOnGene": 23,
+     "contribution": 0.642825,
+     "drugsOnGene": 3,
      "evidence": [
       {
        "id": "literature",
@@ -178,7 +424,180 @@
        "id": "rna_expression",
        "score": 0.1372
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PTEN",
+     "geneId": "ENSG00000171862",
+     "geneName": "phosphatase and tensin homolog",
+     "assoc": 1.0,
+     "contribution": 0.641172,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9904
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.9191
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.897
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8631
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7937
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6386
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0335
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3218576",
+   "name": "Copanlisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "follicular lymphoma",
+    "non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-delta subunit inhibitor"
+   ],
+   "rank": 9,
+   "score": 0.5384,
+   "rawScore": 1.699459,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.488356,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.48717,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PTEN",
+     "geneId": "ENSG00000171862",
+     "geneName": "phosphatase and tensin homolog",
+     "assoc": 1.0,
+     "contribution": 0.485917,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9904
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.9191
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.897
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8631
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7937
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6386
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0335
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.995
     }
    ]
   },
@@ -196,9 +615,9 @@
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "rank": 7,
-   "score": 0.4863,
-   "rawScore": 0.76011,
+   "rank": 10,
+   "score": 0.4726,
+   "rawScore": 1.507053,
    "geneCount": 3,
    "paths": [
     {
@@ -229,7 +648,39 @@
        "id": "rna_expression",
        "score": 0.0896
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.238255,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
     },
     {
      "gene": "ERBB2",
@@ -255,37 +706,619 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "rank": 12,
+   "score": 0.4726,
+   "rawScore": 1.507053,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.369049,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.9986,
-     "contribution": 0.183585,
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.238255,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.207477,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL24828",
+   "name": "Vandetanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "medullary thyroid gland carcinoma",
+    "thyroid gland carcinoma",
+    "thyroid tumor"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Ephrin receptor inhibitor",
+    "Tyrosine-protein kinase BRK inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor"
+   ],
+   "rank": 13,
+   "score": 0.3287,
+   "rawScore": 1.086823,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.199288,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.144349,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.128659,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "rank": 15,
+   "score": 0.3189,
+   "rawScore": 1.058177,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.244009,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.243069,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.215998,
      "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9933
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5604
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.2942
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.1945
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL265502",
+   "name": "Suramin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acidic fibroblast growth factor inhibitor"
+   ],
+   "rank": 16,
+   "score": 0.2983,
+   "rawScore": 0.997946,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.9989,
+     "contribution": 0.997946,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9597
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7189
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.7095
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.6486
       },
       {
        "id": "rna_expression",
-       "score": 0.1372
+       "score": 0.0882
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "FGF1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL313972",
+   "name": "Masoprocol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "prostate cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Insulin-like growth factor I receptor inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "rank": 17,
+   "score": 0.2904,
+   "rawScore": 0.974947,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.487869,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 3,
+     "via": "IGF1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.244009,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.243069,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298025",
+   "name": "Zenocutuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "pancreatic neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "ErbB-2/ErbB-3 heterodimer inhibitor"
+   ],
+   "rank": 18,
+   "score": 0.231,
+   "rawScore": 0.801457,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.314379,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.244009,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.243069,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
     }
    ]
   },
@@ -302,8 +1335,8 @@
    "mechanisms": [
     "Serine/threonine-protein kinase AKT inhibitor"
    ],
-   "rank": 8,
-   "score": 0.4843,
+   "rank": 19,
+   "score": 0.2161,
    "rawScore": 0.757801,
    "geneCount": 2,
    "paths": [
@@ -331,113 +1364,100 @@
        "id": "genetic_association",
        "score": 0.618
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL2103839",
+   "name": "Ridaforolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
     "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "GTPase KRas inhibitor"
+    "Serine/threonine-protein kinase mTOR inhibitor"
    ],
-   "rank": 9,
-   "score": 0.484,
-   "rawScore": 0.757388,
+   "rank": 20,
+   "score": 0.2158,
+   "rawScore": 0.757044,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "KRAS",
-     "geneId": "ENSG00000133703",
-     "geneName": "KRas proto-oncogene, GTPase",
-     "assoc": 0.9994,
-     "contribution": 0.757388,
+     "gene": "AKT1",
+     "geneId": "ENSG00000142208",
+     "geneName": "AKT serine/threonine kinase 1",
+     "assoc": 0.9999,
+     "contribution": 0.757044,
      "drugsOnGene": 2,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8748
-      },
-      {
        "id": "literature",
-       "score": 0.8286
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
+       "score": 0.9923
       },
       {
        "id": "somatic_mutation",
-       "score": 0.6973
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4227
+       "score": 0.8946
       },
       {
        "id": "affected_pathway",
-       "score": 0.3113
+       "score": 0.7579
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.618
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "MTOR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
+   "drugType": "Unknown",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "anemia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "GTPase KRas inhibitor"
+    "Telomerase reverse transcriptase inhibitor"
    ],
-   "rank": 10,
-   "score": 0.484,
-   "rawScore": 0.757388,
+   "rank": 21,
+   "score": 0.2149,
+   "rawScore": 0.75435,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "KRAS",
-     "geneId": "ENSG00000133703",
-     "geneName": "KRas proto-oncogene, GTPase",
-     "assoc": 0.9994,
-     "contribution": 0.757388,
+     "gene": "TERT",
+     "geneId": "ENSG00000164362",
+     "geneName": "telomerase reverse transcriptase",
+     "assoc": 0.9954,
+     "contribution": 0.75435,
      "drugsOnGene": 2,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8748
-      },
-      {
        "id": "literature",
-       "score": 0.8286
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
+       "score": 0.9067
       },
       {
        "id": "somatic_mutation",
-       "score": 0.6973
+       "score": 0.8429
       },
       {
-       "id": "animal_model",
-       "score": 0.4227
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.3113
+       "id": "genetic_association",
+       "score": 0.6841
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -454,8 +1474,8 @@
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
-   "rank": 11,
-   "score": 0.4814,
+   "rank": 22,
+   "score": 0.2149,
    "rawScore": 0.75435,
    "geneCount": 1,
    "paths": [
@@ -479,298 +1499,69 @@
        "id": "genetic_association",
        "score": 0.6841
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "anemia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Telomerase reverse transcriptase inhibitor"
-   ],
-   "rank": 12,
-   "score": 0.4814,
-   "rawScore": 0.75435,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TERT",
-     "geneId": "ENSG00000164362",
-     "geneName": "telomerase reverse transcriptase",
-     "assoc": 0.9954,
-     "contribution": 0.75435,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9067
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8429
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6841
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL803",
-   "name": "Cytarabine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lymphoblastic leukemia",
-    "leptomeningeal metastasis",
-    "neoplasm",
-    "tumor of meninges"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor"
-   ],
-   "rank": 13,
-   "score": 0.4683,
-   "rawScore": 0.738908,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "POLD1",
-     "geneId": "ENSG00000062822",
-     "geneName": "DNA polymerase delta 1, catalytic subunit",
-     "assoc": 0.8808,
-     "contribution": 0.383395,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.682
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6252
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    },
-    {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.8168,
-     "contribution": 0.355513,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7002
-      },
-      {
-       "id": "literature",
-       "score": 0.3888
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3218576",
-   "name": "Copanlisib",
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
-    "follicular lymphoma",
-    "non-Hodgkin lymphoma"
+    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor",
-    "PI3-kinase p110-alpha subunit inhibitor",
-    "PI3-kinase p110-delta subunit inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 15,
-   "score": 0.3884,
-   "rawScore": 0.644389,
+   "rank": 23,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
      "assoc": 1.0,
-     "contribution": 0.644389,
-     "drugsOnGene": 3,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9941
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.9466
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.8597
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8254
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.0061
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor"
-   ],
-   "rank": 16,
-   "score": 0.3884,
-   "rawScore": 0.644389,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 1.0,
-     "contribution": 0.644389,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9941
+       "score": 0.9397
       },
       {
        "id": "somatic_mutation",
-       "score": 0.9466
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8597
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8254
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.0061
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL24828",
-   "name": "Vandetanib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "medullary thyroid gland carcinoma",
-    "thyroid gland carcinoma",
-    "thyroid tumor"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Ephrin receptor inhibitor",
-    "Tyrosine-protein kinase BRK inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor"
-   ],
-   "rank": 17,
-   "score": 0.3675,
-   "rawScore": 0.619636,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.9971,
-     "contribution": 0.300846,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9427
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7638
+       "score": 0.911
       },
       {
        "id": "affected_pathway",
        "score": 0.6079
       },
       {
-       "id": "genetic_association",
-       "score": 0.4079
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0896
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
-    },
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 1.0,
-     "contribution": 0.169133,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     },
     {
      "gene": "EGFR",
      "geneId": "ENSG00000146648",
      "geneName": "epidermal growth factor receptor",
      "assoc": 0.9986,
-     "contribution": 0.149657,
+     "contribution": 0.284895,
      "drugsOnGene": 23,
      "evidence": [
       {
@@ -793,1428 +1584,2757 @@
        "id": "rna_expression",
        "score": 0.1372
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "rank": 18,
-   "score": 0.2767,
-   "rawScore": 0.51217,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "POLD1",
-     "geneId": "ENSG00000062822",
-     "geneName": "DNA polymerase delta 1, catalytic subunit",
-     "assoc": 0.8808,
-     "contribution": 0.265749,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.682
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6252
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.8168,
-     "contribution": 0.246422,
-     "drugsOnGene": 4,
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
      "evidence": [
       {
-       "id": "somatic_mutation",
-       "score": 0.7002
+       "id": "literature",
+       "score": 0.9941
       },
       {
-       "id": "literature",
-       "score": 0.3888
+       "id": "somatic_mutation",
+       "score": 0.9466
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1750",
-   "name": "Clofarabine",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "acute lymphoblastic leukemia",
     "neoplasm",
-    "myelodysplastic syndrome"
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "rank": 19,
-   "score": 0.2767,
-   "rawScore": 0.51217,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "POLD1",
-     "geneId": "ENSG00000062822",
-     "geneName": "DNA polymerase delta 1, catalytic subunit",
-     "assoc": 0.8808,
-     "contribution": 0.265749,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.682
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6252
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    },
-    {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.8168,
-     "contribution": 0.246422,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7002
-      },
-      {
-       "id": "literature",
-       "score": 0.3888
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3647420",
-   "name": "Pyrotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "rank": 22,
-   "score": 0.2325,
-   "rawScore": 0.459919,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 1.0,
-     "contribution": 0.244009,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.9986,
-     "contribution": 0.21591,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9933
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5604
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.2942
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.1372
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108081",
-   "name": "Trafermin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Skin ulcer",
-    "periodontitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 2 agonist"
-   ],
-   "rank": 23,
-   "score": 0.1943,
-   "rawScore": 0.414806,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.9989,
-     "contribution": 0.414806,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9597
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7189
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7095
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6486
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0882
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201821",
-   "name": "Palifermin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "mucositis",
-    "oral mucositis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 2 agonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "rank": 24,
-   "score": 0.1943,
-   "rawScore": 0.414806,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.9989,
-     "contribution": 0.414806,
-     "drugsOnGene": 9,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9597
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.7189
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7095
+       "score": 0.9397
       },
       {
        "id": "somatic_mutation",
-       "score": 0.6486
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
       },
       {
        "id": "rna_expression",
-       "score": 0.0882
+       "score": 0.1372
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4298025",
-   "name": "Zenocutuzumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "pancreatic neoplasm"
+    "head and neck cancer"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "ErbB-2/ErbB-3 heterodimer inhibitor"
+    "Epidermal growth factor receptor erbB1 binding agent"
    ],
    "rank": 25,
-   "score": 0.1159,
-   "rawScore": 0.321971,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4650256",
-   "name": "Zanidatamab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4558324",
+   "name": "Lazertinib",
+   "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
-    "biliary tract neoplasm"
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 26,
+   "score": 0.2147,
+   "rawScore": 0.753569,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.98
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108359",
+   "name": "Nimotuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "rank": 27,
-   "score": 0.1159,
-   "rawScore": 0.321971,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2364649",
-   "name": "Margetuximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "breast cancer",
-    "neoplasm",
-    "HER2 positive breast carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.1159,
-   "rawScore": 0.321971,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
+       "score": 0.9941
       },
       {
        "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.9466
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4297844",
-   "name": "Trastuzumab Deruxtecan",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "HER2 positive breast carcinoma",
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 binding agent",
-    "DNA topoisomerase I inhibitor"
-   ],
-   "rank": 29,
-   "score": 0.1159,
-   "rawScore": 0.321971,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298178",
-   "name": "Trastuzumab Duocarmazine",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 binding agent"
-   ],
-   "rank": 32,
-   "score": 0.1159,
-   "rawScore": 0.321971,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1082407",
-   "name": "Enzalutamide",
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "prostate carcinoma",
-    "prostate neoplasm",
-    "metastatic prostate carcinoma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Androgen Receptor antagonist"
-   ],
-   "rank": 33,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1479",
-   "name": "Danazol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "endometriosis",
-    "breast fibrocystic disease",
-    "Menorrhagia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Androgen Receptor agonist",
-    "Progesterone receptor agonist"
-   ],
-   "rank": 34,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL806",
-   "name": "Flutamide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "prostate carcinoma",
-    "prostate cancer",
-    "carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Androgen Receptor antagonist"
-   ],
-   "rank": 35,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107067",
-   "name": "Testosterone Undecanoate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "hypogonadism",
-    "orchitis",
-    "Klinefelter syndrome"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 36,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1445",
-   "name": "Fluoxymesterone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hypogonadism",
-    "orchitis",
-    "neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 37,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1418176",
-   "name": "Methandrostenolone",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 38,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200623",
-   "name": "Ethylestrenol",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 39,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL254328",
-   "name": "Abiraterone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "prostate neoplasm",
-    "prostate cancer"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Androgen Receptor antagonist",
-    "Cytochrome P450 17A1 inhibitor",
-    "Steroid 5-alpha-reductase inhibitor"
-   ],
-   "rank": 40,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297185",
-   "name": "Darolutamide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "prostate cancer",
+    "lung cancer",
     "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Androgen Receptor antagonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 41,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 29,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL386630",
-   "name": "Testosterone",
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Klinefelter syndrome",
-    "orchitis",
-    "hypogonadotropic hypogonadism",
-    "hypogonadism"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 42,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200585",
-   "name": "Oxymetholone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "aplastic anemia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 43,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201101",
-   "name": "Testosterone Cypionate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "hypogonadism",
-    "orchitis"
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Androgen Receptor agonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 44,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 30,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3183409",
-   "name": "Apalutamide",
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 31,
+   "score": 0.2147,
+   "rawScore": 0.753569,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.98
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "prostate carcinoma",
-    "prostate neoplasm",
     "neoplasm",
-    "prostate cancer"
+    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "Androgen Receptor antagonist"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 45,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 32,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3590187",
-   "name": "Clascoterone",
+   "id": "CHEMBL3545308",
+   "name": "Rociletinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acne"
+    "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Androgen Receptor antagonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 46,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 33,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL2079587",
-   "name": "Stanozolol",
+   "id": "CHEMBL2087361",
+   "name": "Icotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hereditary angioedema"
+    "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Androgen Receptor agonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 47,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 35,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1200436",
-   "name": "Oxandrolone",
+   "id": "CHEMBL4650319",
+   "name": "Mobocertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "alcoholic hepatitis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 48,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1395",
-   "name": "Methyltestosterone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "orchitis",
-    "breast cancer",
-    "hypogonadism"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Androgen Receptor agonist"
-   ],
-   "rank": 49,
-   "score": 0.0891,
-   "rawScore": 0.290373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9947
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8655
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7524
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0318
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200335",
-   "name": "Testosterone Enanthate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "orchitis",
     "neoplasm",
-    "hypogonadotropic hypogonadism",
-    "hypogonadism"
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 36,
+   "score": 0.2147,
+   "rawScore": 0.753569,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.98
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743047",
+   "name": "Necitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal cancer",
+    "non-small cell squamous lung carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 4,
    "mechanisms": [
-    "Androgen Receptor agonist"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 50,
-   "score": 0.0891,
-   "rawScore": 0.290373,
+   "rank": 37,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "AR",
-     "geneId": "ENSG00000169083",
-     "geneName": "androgen receptor",
-     "assoc": 0.9998,
-     "contribution": 0.290373,
-     "drugsOnGene": 22,
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9947
+       "score": 0.98
       },
       {
-       "id": "affected_pathway",
-       "score": 0.8655
+       "id": "genetic_association",
+       "score": 0.9397
       },
       {
        "id": "somatic_mutation",
-       "score": 0.7524
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
       },
       {
        "id": "rna_expression",
-       "score": 0.0318
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL691",
+   "name": "Ethinyl Estradiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acne",
+    "endometriosis",
+    "Dysmenorrhea",
+    "neoplasm"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 38,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
       },
       {
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200430",
+   "name": "Estradiol Acetate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "menopause",
+    "Atrophy"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 39,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201477",
+   "name": "Polyestradiol Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "prostate cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 40,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL135",
+   "name": "Estradiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary ovarian failure",
+    "osteoporosis",
+    "contraception",
+    "menopause"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 41,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1018",
+   "name": "Dienestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Atrophic Vaginitis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 42,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201151",
+   "name": "Mestranol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "contraception"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 43,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL411",
+   "name": "Diethylstilbestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 44,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL494753",
+   "name": "Estrone Sulfuric Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 45,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297509",
+   "name": "Elacestrant",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer",
+    "breast neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Estrogen receptor alpha degrader",
+    "Estrogen receptor alpha degrader"
+   ],
+   "rank": 46,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1511",
+   "name": "Estradiol Valerate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Premature ovarian insufficiency",
+    "menopause",
+    "Menorrhagia",
+    "Atrophy"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 47,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200973",
+   "name": "Estradiol Cypionate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "rank": 48,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
     }
    ]
   }
@@ -2237,7 +4357,7 @@
    ],
    "rank": 1,
    "score": 1.0,
-   "rawScore": 1.367797,
+   "rawScore": 3.048024,
    "geneCount": 3,
    "paths": [
     {
@@ -2268,7 +4388,39 @@
        "id": "rna_expression",
        "score": 0.0147
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CDK4",
+     "geneId": "ENSG00000135446",
+     "geneName": "cyclin dependent kinase 4",
+     "assoc": 0.9964,
+     "contribution": 0.486109,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9836
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.6349
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.3982
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "CCND1",
+     "viaScore": 0.999
     },
     {
      "gene": "CDK4",
@@ -2294,29 +4446,10 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
-    },
-    {
-     "gene": "CDK6",
-     "geneId": "ENSG00000105810",
-     "geneName": "cyclin dependent kinase 6",
-     "assoc": 0.9629,
-     "contribution": 0.356386,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.87
-      },
-      {
-       "id": "literature",
-       "score": 0.6958
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0628
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2332,8 +4465,8 @@
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "rank": 3,
-   "score": 0.5647,
-   "rawScore": 0.852842,
+   "score": 0.7293,
+   "rawScore": 2.257218,
    "geneCount": 2,
    "paths": [
     {
@@ -2360,7 +4493,10 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "CDK6",
@@ -2382,7 +4518,35 @@
        "id": "rna_expression",
        "score": 0.0628
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CDK6",
+     "geneId": "ENSG00000105810",
+     "geneName": "cyclin dependent kinase 6",
+     "assoc": 0.9629,
+     "contribution": 0.418719,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.87
+      },
+      {
+       "id": "literature",
+       "score": 0.6958
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0628
+      }
+     ],
+     "hops": 3,
+     "via": "CDK4",
+     "viaScore": 0.999
     }
    ]
   },
@@ -2402,8 +4566,8 @@
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "rank": 4,
-   "score": 0.5647,
-   "rawScore": 0.852842,
+   "score": 0.7293,
+   "rawScore": 2.257218,
    "geneCount": 2,
    "paths": [
     {
@@ -2430,7 +4594,10 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
      "gene": "CDK6",
@@ -2452,113 +4619,35 @@
        "id": "rna_expression",
        "score": 0.0628
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
-   ],
-   "rank": 6,
-   "score": 0.4863,
-   "rawScore": 0.76011,
-   "geneCount": 3,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.9971,
-     "contribution": 0.369049,
+     "gene": "CDK6",
+     "geneId": "ENSG00000105810",
+     "geneName": "cyclin dependent kinase 6",
+     "assoc": 0.9629,
+     "contribution": 0.418719,
      "drugsOnGene": 4,
      "evidence": [
       {
-       "id": "literature",
-       "score": 0.9427
-      },
-      {
        "id": "somatic_mutation",
-       "score": 0.7638
+       "score": 0.87
       },
       {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4079
+       "id": "literature",
+       "score": 0.6958
       },
       {
        "id": "rna_expression",
-       "score": 0.0896
+       "score": 0.0628
       }
-     ]
-    },
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 1.0,
-     "contribution": 0.207477,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ]
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.9986,
-     "contribution": 0.183585,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9933
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5604
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.2942
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.1372
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "CDK4",
+     "viaScore": 0.999
     }
    ]
   },
@@ -2576,9 +4665,9 @@
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
-   "rank": 14,
-   "score": 0.3884,
-   "rawScore": 0.644389,
+   "rank": 8,
+   "score": 0.6168,
+   "rawScore": 1.928386,
    "geneCount": 1,
    "paths": [
     {
@@ -2609,71 +4698,195 @@
        "id": "genetic_literature",
        "score": 0.0061
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.642825,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PTEN",
+     "geneId": "ENSG00000171862",
+     "geneName": "phosphatase and tensin homolog",
+     "assoc": 1.0,
+     "contribution": 0.641172,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9904
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.9191
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.897
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8631
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7937
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6386
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0335
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.995
     }
    ]
   },
   {
-   "id": "CHEMBL888",
-   "name": "Gemcitabine",
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
-   "rank": 20,
-   "score": 0.2767,
-   "rawScore": 0.51217,
-   "geneCount": 5,
+   "rank": 11,
+   "score": 0.4726,
+   "rawScore": 1.507053,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "POLD1",
-     "geneId": "ENSG00000062822",
-     "geneName": "DNA polymerase delta 1, catalytic subunit",
-     "assoc": 0.8808,
-     "contribution": 0.265749,
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.369049,
      "drugsOnGene": 4,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.682
+       "score": 0.9427
       },
       {
        "id": "somatic_mutation",
-       "score": 0.6252
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.8168,
-     "contribution": 0.246422,
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.238255,
      "drugsOnGene": 4,
      "evidence": [
       {
-       "id": "somatic_mutation",
-       "score": 0.7002
+       "id": "literature",
+       "score": 0.9997
       },
       {
-       "id": "literature",
-       "score": 0.3888
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
       },
       {
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 1.0,
+     "contribution": 0.207477,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9997
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8678
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8292
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2690,9 +4903,9 @@
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "rank": 21,
-   "score": 0.2325,
-   "rawScore": 0.459919,
+   "rank": 14,
+   "score": 0.3189,
+   "rawScore": 1.058177,
    "geneCount": 2,
    "paths": [
     {
@@ -2719,14 +4932,137 @@
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.9971,
+     "contribution": 0.243069,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9427
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7638
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4079
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0896
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.215998,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.98
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201577",
+   "name": "Cetuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal adenocarcinoma",
+    "colorectal carcinoma",
+    "colorectal neoplasm",
+    "head and neck neoplasm"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 28,
+   "score": 0.2147,
+   "rawScore": 0.753569,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
+     "assoc": 1.0,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.98
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     },
     {
      "gene": "EGFR",
      "geneId": "ENSG00000146648",
      "geneName": "epidermal growth factor receptor",
      "assoc": 0.9986,
-     "contribution": 0.21591,
+     "contribution": 0.284895,
      "drugsOnGene": 23,
      "evidence": [
       {
@@ -2749,148 +5085,401 @@
        "id": "rna_expression",
        "score": 0.1372
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2007641",
-   "name": "Pertuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer",
-    "breast carcinoma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "rank": 26,
-   "score": 0.1159,
-   "rawScore": 0.321971,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
+       "score": 0.9941
       },
       {
        "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.9466
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3989868",
-   "name": "Tucatinib",
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "colorectal carcinoma",
-    "breast neoplasm",
-    "metastasis",
-    "breast carcinoma"
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 30,
-   "score": 0.1159,
-   "rawScore": 0.321971,
+   "rank": 34,
+   "score": 0.2147,
+   "rawScore": 0.753569,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "CDH1",
+     "geneId": "ENSG00000039068",
+     "geneName": "cadherin 1",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.285011,
+     "drugsOnGene": 23,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.98
       },
       {
        "id": "genetic_association",
-       "score": 0.0
+       "score": 0.9397
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.911
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.9986,
+     "contribution": 0.284895,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9933
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5604
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2942
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.1372
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 1.0,
+     "contribution": 0.183663,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9941
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.9466
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8597
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8254
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1201585",
-   "name": "Trastuzumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1358",
+   "name": "Fulvestrant",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "gastric neoplasm",
+    "breast neoplasm",
+    "breast cancer",
     "neoplasm",
-    "gastric adenocarcinoma",
-    "breast cancer"
+    "breast carcinoma"
    ],
-   "indicationCount": 8,
+   "indicationCount": 4,
    "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Estrogen receptor alpha antagonist",
+    "Estrogen receptor degrader"
    ],
-   "rank": 31,
-   "score": 0.1159,
-   "rawScore": 0.321971,
+   "rank": 51,
+   "score": 0.1871,
+   "rawScore": 0.672967,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
      "assoc": 1.0,
-     "contribution": 0.321971,
-     "drugsOnGene": 17,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9997
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8678
+       "score": 0.9994
       },
       {
        "id": "somatic_mutation",
-       "score": 0.8292
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
       },
       {
        "id": "genetic_association",
        "score": 0.0
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL83",
+   "name": "Tamoxifen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha modulator"
+   ],
+   "rank": 52,
+   "score": 0.1871,
+   "rawScore": 0.672967,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 1.0,
+     "contribution": 0.256537,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9994
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8496
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8492
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.999,
+     "contribution": 0.251661,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9838
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8413
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.5642
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "FOXA1",
+     "geneId": "ENSG00000129514",
+     "geneName": "forkhead box A1",
+     "assoc": 0.9987,
+     "contribution": 0.164769,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9775
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8979
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.4029
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
     }
    ]
   }

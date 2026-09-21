@@ -7,8 +7,57 @@
  "genesScored": 50,
  "genesWithDrugs": 8,
  "knownDrugCount": 15,
- "candidatesConsidered": 66,
+ "candidatesConsidered": 100,
+ "pathsTwoHop": 66,
+ "pathsThreeHop": 98,
  "candidates": [
+  {
+   "id": "CHEMBL4802262",
+   "name": "Atidarsagene Autotemcel",
+   "drugType": "Gene",
+   "approvedFor": [
+    "metachromatic leukodystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "ARSA exogenous gene"
+   ],
+   "rank": 3,
+   "score": 0.6001,
+   "rawScore": 0.866432,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PSAP",
+     "geneId": "ENSG00000197746",
+     "geneName": "prosaposin",
+     "assoc": 0.949,
+     "contribution": 0.866432,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.548
+      },
+      {
+       "id": "literature",
+       "score": 0.2659
+      }
+     ],
+     "hops": 3,
+     "via": "ARSA",
+     "viaScore": 0.913
+    }
+   ]
+  },
   {
    "id": "CHEMBL3039545",
    "name": "Luspatercept",
@@ -23,138 +72,44 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
-   "rank": 1,
-   "score": 1.0,
-   "rawScore": 0.436225,
-   "geneCount": 2,
+   "rank": 4,
+   "score": 0.4973,
+   "rawScore": 0.725879,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "TGFB2",
      "geneId": "ENSG00000092969",
      "geneName": "transforming growth factor beta 2",
      "assoc": 0.5756,
-     "contribution": 0.436225,
+     "contribution": 0.370914,
      "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
        "score": 0.5756
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 2,
-   "score": 0.6923,
-   "rawScore": 0.32779,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.7139,
-     "contribution": 0.32779,
-     "drugsOnGene": 7,
+     "gene": "TGFB2",
+     "geneId": "ENSG00000092969",
+     "geneName": "transforming growth factor beta 2",
+     "assoc": 0.5756,
+     "contribution": 0.354965,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5255
-      },
-      {
-       "id": "literature",
-       "score": 0.397
+       "score": 0.5756
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 3,
-   "score": 0.6923,
-   "rawScore": 0.32779,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.7139,
-     "contribution": 0.32779,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5255
-      },
-      {
-       "id": "literature",
-       "score": 0.397
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.6923,
-   "rawScore": 0.32779,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.7139,
-     "contribution": 0.32779,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5255
-      },
-      {
-       "id": "literature",
-       "score": 0.397
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "TGFB1",
+     "viaScore": 0.957
     }
    ]
   },
@@ -173,8 +128,8 @@
     "TNF-alpha inhibitor"
    ],
    "rank": 5,
-   "score": 0.6923,
-   "rawScore": 0.32779,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
@@ -193,27 +148,47 @@
        "id": "literature",
        "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
   {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "inflammation",
+    "rheumatoid arthritis",
+    "necrosis",
     "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 6,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
    "rank": 6,
-   "score": 0.6923,
-   "rawScore": 0.32779,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
@@ -232,7 +207,27 @@
        "id": "literature",
        "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
@@ -251,8 +246,8 @@
     "TNF-alpha inhibitor"
    ],
    "rank": 7,
-   "score": 0.6923,
-   "rawScore": 0.32779,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
@@ -271,7 +266,27 @@
        "id": "literature",
        "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
@@ -287,8 +302,8 @@
     "TNF-alpha inhibitor"
    ],
    "rank": 8,
-   "score": 0.6923,
-   "rawScore": 0.32779,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
@@ -307,846 +322,284 @@
        "id": "literature",
        "score": 0.397
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297684",
-   "name": "Abicipar Pegol",
-   "drugType": "Protein",
-   "approvedFor": [
-    "ocular vascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 9,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
+       "score": 0.6399
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
   {
-   "id": "CHEMBL2108313",
-   "name": "Conbercept",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Vascular endothelial growth factor B inhibitor",
-    "Vascular endothelial growth factor C inhibitor",
-    "Placenta growth factor inhibitor"
-   ],
-   "rank": 10,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201421",
-   "name": "Pegaptanib Sodium",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "macular degeneration",
-    "wet macular degeneration"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vascular endothelial growth factor A antagonist"
-   ],
-   "rank": 11,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL5314727",
-   "name": "Bevacizumab Gamma",
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
    "drugType": "Antibody",
    "approvedFor": [
-    "wet macular degeneration"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor A binding agent"
-   ],
-   "rank": 12,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201583",
-   "name": "Bevacizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colonic neoplasm",
-    "breast cancer",
-    "colorectal neoplasm",
-    "neoplasm"
-   ],
-   "indicationCount": 18,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 13,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1742982",
-   "name": "Aflibercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "diabetic macular edema",
-    "choroidal neovascularization",
-    "colorectal cancer",
-    "macular retinal edema"
-   ],
-   "indicationCount": 17,
-   "mechanisms": [
-    "Placenta growth factor inhibitor",
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 14,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201825",
-   "name": "Ranibizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "diabetic retinopathy",
-    "retinal vein occlusion",
-    "macular degeneration",
-    "choroidal neovascularization"
-   ],
-   "indicationCount": 11,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 15,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707357",
-   "name": "Brolucizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "wet macular degeneration",
-    "macular degeneration",
-    "ocular vascular disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 16,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297750",
-   "name": "Faricimab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "cystoid macular edema",
-    "ocular vascular disorder",
-    "macular retinal edema",
-    "diabetic macular edema"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Angiopoietin-2 inhibitor",
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 17,
-   "score": 0.4608,
-   "rawScore": 0.246197,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5929,
-     "contribution": 0.246197,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.1275
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL109648",
-   "name": "Clazosentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Endothelin receptor ET-A antagonist"
-   ],
-   "rank": 18,
-   "score": 0.46,
-   "rawScore": 0.245927,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.565,
-     "contribution": 0.245927,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.565
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL9194",
-   "name": "Atrasentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "prostate cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Endothelin receptor ET-A antagonist"
-   ],
-   "rank": 19,
-   "score": 0.46,
-   "rawScore": 0.245927,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.565,
-     "contribution": 0.245927,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.565
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1601669",
-   "name": "Alfacalcidol",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 20,
-   "score": 0.4243,
-   "rawScore": 0.23332,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4529
-      },
-      {
-       "id": "literature",
-       "score": 0.2435
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2356023",
-   "name": "Dihydrotachysterol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypocalcemia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 21,
-   "score": 0.4243,
-   "rawScore": 0.23332,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4529
-      },
-      {
-       "id": "literature",
-       "score": 0.2435
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1042",
-   "name": "Cholecalciferol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "vitamin D deficiency",
-    "anemia (phenotype)",
-    "Iron deficiency anemia",
-    "postmenopausal osteoporosis"
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
    ],
    "indicationCount": 6,
    "mechanisms": [
-    "Vitamin D receptor agonist"
+    "TNF-alpha inhibitor"
    ],
-   "rank": 23,
-   "score": 0.4243,
-   "rawScore": 0.23332,
+   "rank": 9,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.7139,
+     "contribution": 0.32779,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4529
+       "score": 0.5255
       },
       {
        "id": "literature",
-       "score": 0.2435
+       "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
   {
-   "id": "CHEMBL1200622",
-   "name": "Paricalcitol",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "secondary hyperparathyroidism",
-    "chronic kidney disease",
-    "hyperparathyroidism",
-    "parathyroid gland disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 4,
+   "indicationCount": 14,
    "mechanisms": [
-    "Vitamin D receptor agonist"
+    "TNF-alpha inhibitor"
    ],
-   "rank": 24,
-   "score": 0.4243,
-   "rawScore": 0.23332,
+   "rank": 10,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.7139,
+     "contribution": 0.32779,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4529
+       "score": 0.5255
       },
       {
        "id": "literature",
-       "score": 0.2435
+       "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
   {
-   "id": "CHEMBL1040",
-   "name": "Calcifediol Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 25,
-   "score": 0.4243,
-   "rawScore": 0.23332,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4529
-      },
-      {
-       "id": "literature",
-       "score": 0.2435
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200810",
-   "name": "Doxercalciferol",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "parathyroid gland disorder",
-    "chronic kidney disease",
-    "secondary hyperparathyroidism"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 26,
-   "score": 0.4243,
-   "rawScore": 0.23332,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4529
-      },
-      {
-       "id": "literature",
-       "score": 0.2435
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297608",
-   "name": "Eldecalcitol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "osteoporosis"
+    "immune system disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Vitamin D receptor agonist"
+    "TNF-alpha inhibitor"
    ],
-   "rank": 27,
-   "score": 0.4243,
-   "rawScore": 0.23332,
+   "rank": 11,
+   "score": 0.4104,
+   "rawScore": 0.606896,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.7139,
+     "contribution": 0.32779,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4529
+       "score": 0.5255
       },
       {
        "id": "literature",
-       "score": 0.2435
+       "score": 0.397
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADAM17",
+     "geneId": "ENSG00000151694",
+     "geneName": "ADAM metallopeptidase domain 17",
+     "assoc": 0.6399,
+     "contribution": 0.279106,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6399
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.95
     }
    ]
   },
   {
-   "id": "CHEMBL1200666",
-   "name": "Calcipotriene",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2219536",
+   "name": "Mipomersen",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "psoriasis vulgaris",
-    "psoriasis"
+    "familial hypercholesterolemia",
+    "cardiovascular disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Vitamin D receptor agonist"
+    "Apo-B 100 mRNA antisense inhibitor"
    ],
-   "rank": 28,
-   "score": 0.4243,
-   "rawScore": 0.23332,
+   "rank": 12,
+   "score": 0.3937,
+   "rawScore": 0.584066,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
+     "gene": "SCARB2",
+     "geneId": "ENSG00000138760",
+     "geneName": "scavenger receptor class B member 2",
+     "assoc": 0.8011,
+     "contribution": 0.584066,
+     "drugsOnGene": 1,
      "evidence": [
       {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
        "id": "animal_model",
-       "score": 0.4529
+       "score": 0.391
       },
       {
        "id": "literature",
-       "score": 0.2435
+       "score": 0.167
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.962
     }
    ]
   },
   {
-   "id": "CHEMBL1536",
-   "name": "Ergocalciferol",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3989977",
+   "name": "Emapalumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "hypophosphatemia",
-    "hypophosphatemic rickets",
-    "hypoparathyroidism"
+    "Primary hemophagocytic lymphohistiocytosis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Vitamin D receptor agonist"
+    "Interferon gamma inhibitor"
    ],
-   "rank": 29,
-   "score": 0.4243,
-   "rawScore": 0.23332,
+   "rank": 13,
+   "score": 0.3853,
+   "rawScore": 0.57264,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.5861,
-     "contribution": 0.23332,
-     "drugsOnGene": 10,
+     "gene": "FOXP3",
+     "geneId": "ENSG00000049768",
+     "geneName": "forkhead box P3",
+     "assoc": 0.5831,
+     "contribution": 0.57264,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4529
+       "score": 0.5525
       },
       {
        "id": "literature",
-       "score": 0.2435
+       "score": 0.0684
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL282724",
-   "name": "Sitaxentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist",
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "rank": 30,
-   "score": 0.2911,
-   "rawScore": 0.186378,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.565,
-     "contribution": 0.186378,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.565
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103873",
-   "name": "Macitentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hypertensive disorder",
-    "cardiovascular disorder",
-    "pulmonary hypertension",
-    "pulmonary arterial hypertension"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "rank": 31,
-   "score": 0.2911,
-   "rawScore": 0.186378,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.565,
-     "contribution": 0.186378,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.565
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1111",
-   "name": "Ambrisentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "pulmonary hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "rank": 32,
-   "score": 0.2911,
-   "rawScore": 0.186378,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.565,
-     "contribution": 0.186378,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.565
-      }
-     ]
+     ],
+     "hops": 3,
+     "via": "IFNG",
+     "viaScore": 0.982
     }
    ]
   },
@@ -1164,11 +617,28 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 33,
-   "score": 0.2911,
-   "rawScore": 0.186378,
+   "rank": 14,
+   "score": 0.2664,
+   "rawScore": 0.409956,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.223578,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRA",
      "geneId": "ENSG00000151617",
@@ -1181,27 +651,49 @@
        "id": "animal_model",
        "score": 0.565
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL539423",
-   "name": "Sparsentan",
+   "id": "CHEMBL2103873",
+   "name": "Macitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "IgA glomerulonephritis"
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "pulmonary hypertension",
+    "pulmonary arterial hypertension"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Endothelin receptor ET-A antagonist",
-    "Type-1 angiotensin II receptor antagonist"
+    "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 34,
-   "score": 0.2911,
-   "rawScore": 0.186378,
+   "rank": 15,
+   "score": 0.2664,
+   "rawScore": 0.409956,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.223578,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRA",
      "geneId": "ENSG00000151617",
@@ -1214,7 +706,10 @@
        "id": "animal_model",
        "score": 0.565
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1230,11 +725,28 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 35,
-   "score": 0.2911,
-   "rawScore": 0.186378,
+   "rank": 16,
+   "score": 0.2664,
+   "rawScore": 0.409956,
    "geneCount": 2,
    "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.223578,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
     {
      "gene": "EDNRA",
      "geneId": "ENSG00000151617",
@@ -1247,27 +759,135 @@
        "id": "animal_model",
        "score": 0.565
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL1201577",
-   "name": "Cetuximab",
-   "drugType": "Antibody",
+   "id": "CHEMBL282724",
+   "name": "Sitaxentan",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "colorectal adenocarcinoma",
-    "colorectal carcinoma",
-    "colorectal neoplasm",
-    "head and neck neoplasm"
+    "pulmonary arterial hypertension",
+    "hypertensive disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Endothelin receptor, ET-A/ET-B antagonist",
+    "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 36,
-   "score": 0.2149,
-   "rawScore": 0.159529,
+   "rank": 17,
+   "score": 0.2664,
+   "rawScore": 0.409956,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.223578,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.186378,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1111",
+   "name": "Ambrisentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary arterial hypertension",
+    "pulmonary hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "rank": 18,
+   "score": 0.2664,
+   "rawScore": 0.409956,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.223578,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.565,
+     "contribution": 0.186378,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.565
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "rank": 19,
+   "score": 0.2299,
+   "rawScore": 0.359955,
    "geneCount": 1,
    "paths": [
     {
@@ -1275,99 +895,398 @@
      "geneId": "ENSG00000146648",
      "geneName": "epidermal growth factor receptor",
      "assoc": 0.5592,
-     "contribution": 0.159529,
+     "contribution": 0.359955,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "rank": 20,
+   "score": 0.2299,
+   "rawScore": 0.359955,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.359955,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL24828",
+   "name": "Vandetanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "medullary thyroid gland carcinoma",
+    "thyroid gland carcinoma",
+    "thyroid tumor"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Ephrin receptor inhibitor",
+    "Tyrosine-protein kinase BRK inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor"
+   ],
+   "rank": 21,
+   "score": 0.2109,
+   "rawScore": 0.333998,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.08028,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB3",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.072131,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.055512,
      "drugsOnGene": 23,
      "evidence": [
       {
        "id": "animal_model",
        "score": 0.5592
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
+   "id": "CHEMBL1173655",
+   "name": "Afatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "rank": 22,
+   "score": 0.188,
+   "rawScore": 0.302728,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.133575,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.1028,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.066353,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+   ],
+   "rank": 23,
+   "score": 0.188,
+   "rawScore": 0.302728,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.133575,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.1028,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.066353,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "rank": 37,
-   "score": 0.2149,
-   "rawScore": 0.159529,
-   "geneCount": 1,
+   "rank": 24,
+   "score": 0.188,
+   "rawScore": 0.302728,
+   "geneCount": 3,
    "paths": [
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.133575,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.999
+    },
     {
      "gene": "EGFR",
      "geneId": "ENSG00000146648",
      "geneName": "epidermal growth factor receptor",
      "assoc": 0.5592,
-     "contribution": 0.159529,
+     "contribution": 0.1028,
      "drugsOnGene": 23,
      "evidence": [
       {
        "id": "animal_model",
        "score": 0.5592
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743047",
-   "name": "Necitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colorectal cancer",
-    "non-small cell squamous lung carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "rank": 38,
-   "score": 0.2149,
-   "rawScore": 0.159529,
-   "geneCount": 1,
-   "paths": [
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.5592,
-     "contribution": 0.159529,
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.066353,
      "drugsOnGene": 23,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5592
+       "score": 0.5606
       }
-     ]
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3545311",
-   "name": "Brigatinib",
+   "id": "CHEMBL3218576",
+   "name": "Copanlisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "anaplastic large cell lymphoma",
     "neoplasm",
-    "non-small cell lung carcinoma"
+    "follicular lymphoma",
+    "non-Hodgkin lymphoma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "ALK tyrosine kinase receptor inhibitor",
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-alpha subunit inhibitor",
+    "PI3-kinase p110-delta subunit inhibitor"
+   ],
+   "rank": 25,
+   "score": 0.1661,
+   "rawScore": 0.272795,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.272795,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 39,
-   "score": 0.2149,
-   "rawScore": 0.159529,
+   "rank": 26,
+   "score": 0.1586,
+   "rawScore": 0.262498,
    "geneCount": 1,
    "paths": [
     {
@@ -1382,7 +1301,27 @@
        "id": "animal_model",
        "score": 0.5592
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1400,9 +1339,9 @@
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 40,
-   "score": 0.2149,
-   "rawScore": 0.159529,
+   "rank": 27,
+   "score": 0.1586,
+   "rawScore": 0.262498,
    "geneCount": 1,
    "paths": [
     {
@@ -1417,7 +1356,609 @@
        "id": "animal_model",
        "score": 0.5592
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 binding agent"
+   ],
+   "rank": 28,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4558324",
+   "name": "Lazertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 29,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108359",
+   "name": "Nimotuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 30,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201577",
+   "name": "Cetuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal adenocarcinoma",
+    "colorectal carcinoma",
+    "colorectal neoplasm",
+    "head and neck neoplasm"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 31,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "lung cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 32,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 33,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 34,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 35,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545308",
+   "name": "Rociletinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 36,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 37,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2087361",
+   "name": "Icotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 38,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1434,9 +1975,9 @@
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "rank": 41,
-   "score": 0.2149,
-   "rawScore": 0.159529,
+   "rank": 39,
+   "score": 0.1586,
+   "rawScore": 0.262498,
    "geneCount": 1,
    "paths": [
     {
@@ -1451,12 +1992,351 @@
        "id": "animal_model",
        "score": 0.5592
       }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743047",
+   "name": "Necitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal cancer",
+    "non-small cell squamous lung carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "rank": 40,
+   "score": 0.1586,
+   "rawScore": 0.262498,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.5592,
+     "contribution": 0.159529,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5592
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HBEGF",
+     "geneId": "ENSG00000113070",
+     "geneName": "heparin binding EGF like growth factor",
+     "assoc": 0.5606,
+     "contribution": 0.102969,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5606
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201583",
+   "name": "Bevacizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colonic neoplasm",
+    "breast cancer",
+    "colorectal neoplasm",
+    "neoplasm"
+   ],
+   "indicationCount": 18,
+   "mechanisms": [
+    "Vascular endothelial growth factor A inhibitor"
+   ],
+   "rank": 41,
+   "score": 0.1467,
+   "rawScore": 0.246197,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5929,
+     "contribution": 0.246197,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5334
+      },
+      {
+       "id": "literature",
+       "score": 0.1275
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707357",
+   "name": "Brolucizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "wet macular degeneration",
+    "macular degeneration",
+    "ocular vascular disorder"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Vascular endothelial growth factor A inhibitor"
+   ],
+   "rank": 42,
+   "score": 0.1467,
+   "rawScore": 0.246197,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5929,
+     "contribution": 0.246197,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5334
+      },
+      {
+       "id": "literature",
+       "score": 0.1275
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }
  ],
  "knownRanked": [
+  {
+   "id": "CHEMBL1029",
+   "name": "Miglustat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Glycogen storage disease due to acid maltase deficiency",
+    "Niemann-Pick disease",
+    "Gaucher disease type 1",
+    "Niemann-Pick disease type C"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Ceramide glucosyltransferase inhibitor"
+   ],
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 1.4135,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GBA1",
+     "geneId": "ENSG00000177628",
+     "geneName": "glucosylceramidase beta 1",
+     "assoc": 0.9997,
+     "contribution": 0.751579,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9817
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8535
+      },
+      {
+       "id": "literature",
+       "score": 0.7838
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5026
+      }
+     ],
+     "hops": 3,
+     "via": "UGCG",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "SMPD1",
+     "geneId": "ENSG00000166311",
+     "geneName": "sphingomyelin phosphodiesterase 1",
+     "assoc": 0.6948,
+     "contribution": 0.510208,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5584
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1824
+      },
+      {
+       "id": "literature",
+       "score": 0.1546
+      }
+     ],
+     "hops": 3,
+     "via": "UGCG",
+     "viaScore": 0.969
+    },
+    {
+     "gene": "UGCG",
+     "geneId": "ENSG00000148154",
+     "geneName": "UDP-glucose ceramide glucosyltransferase",
+     "assoc": 0.2002,
+     "contribution": 0.151713,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2002
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110588",
+   "name": "Eliglustat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Gaucher disease"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Ceramide glucosyltransferase inhibitor"
+   ],
+   "rank": 2,
+   "score": 1.0,
+   "rawScore": 1.4135,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GBA1",
+     "geneId": "ENSG00000177628",
+     "geneName": "glucosylceramidase beta 1",
+     "assoc": 0.9997,
+     "contribution": 0.751579,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9817
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8535
+      },
+      {
+       "id": "literature",
+       "score": 0.7838
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5026
+      }
+     ],
+     "hops": 3,
+     "via": "UGCG",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "SMPD1",
+     "geneId": "ENSG00000166311",
+     "geneName": "sphingomyelin phosphodiesterase 1",
+     "assoc": 0.6948,
+     "contribution": 0.510208,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5584
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1824
+      },
+      {
+       "id": "literature",
+       "score": 0.1546
+      }
+     ],
+     "hops": 3,
+     "via": "UGCG",
+     "viaScore": 0.969
+    },
+    {
+     "gene": "UGCG",
+     "geneId": "ENSG00000148154",
+     "geneName": "UDP-glucose ceramide glucosyltransferase",
+     "assoc": 0.2002,
+     "contribution": 0.151713,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2002
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
   {
    "id": "CHEMBL846",
    "name": "Calcitriol",
@@ -1471,8 +2351,8 @@
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 22,
-   "score": 0.4243,
+   "rank": 56,
+   "score": 0.1373,
    "rawScore": 0.23332,
    "geneCount": 1,
    "paths": [
@@ -1492,74 +2372,10 @@
        "id": "literature",
        "score": 0.2435
       }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2110588",
-   "name": "Eliglustat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Gaucher disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Ceramide glucosyltransferase inhibitor"
-   ],
-   "rank": 52,
-   "score": 0.1927,
-   "rawScore": 0.151713,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "UGCG",
-     "geneId": "ENSG00000148154",
-     "geneName": "UDP-glucose ceramide glucosyltransferase",
-     "assoc": 0.2002,
-     "contribution": 0.151713,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2002
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1029",
-   "name": "Miglustat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Glycogen storage disease due to acid maltase deficiency",
-    "Niemann-Pick disease",
-    "Gaucher disease type 1",
-    "Niemann-Pick disease type C"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Ceramide glucosyltransferase inhibitor"
-   ],
-   "rank": 53,
-   "score": 0.1927,
-   "rawScore": 0.151713,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "UGCG",
-     "geneId": "ENSG00000148154",
-     "geneName": "UDP-glucose ceramide glucosyltransferase",
-     "assoc": 0.2002,
-     "contribution": 0.151713,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2002
-      }
-     ]
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }
