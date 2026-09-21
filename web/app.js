@@ -190,7 +190,11 @@ let currentName = '';
 
 function render(r) {
   currentName = r.name;
-  const thin = r.candidates.length < 5 || r.genesWithDrugs < 4;
+  // "Thin" means there is little for the method to work with: few druggable
+  // genes in absolute terms, a small candidate pool, or most of the disease's
+  // top genes having no approved drug against them at all.
+  const druggableShare = r.genesScored ? r.genesWithDrugs / r.genesScored : 0;
+  const thin = r.candidates.length < 8 || r.genesWithDrugs < 8 || druggableShare < 0.25;
   const v = validation
     ? `<div class="vbadge">Tested against ${validation.knownPairsEvaluated} drug&ndash;disease pairs that
        are already known to work: for <strong>${validation.diseasesWhereTopCandidateIsKnown} of
@@ -207,7 +211,7 @@ function render(r) {
     <p class="dmeta"><b>${r.associatedGeneCount.toLocaleString()}</b> associated genes ·
       top <b>${r.genesScored}</b> scored · <b>${r.genesWithDrugs}</b> of those have an approved drug ·
       <b>${r.candidatesConsidered}</b> candidates ranked ·
-      <b>${r.knownDrugCount}</b> known drugs held out</p>
+      <b>${r.knownDrugCount}</b> known drug${r.knownDrugCount === 1 ? '' : 's'} held out</p>
     ${v}
     ${thin ? `<div class="thin">Thin result. Only ${r.genesWithDrugs} of the top
       ${r.genesScored} genes linked to this disease are hit by any approved drug, so there is
