@@ -7,9 +7,9 @@
  "genesScored": 49,
  "genesWithDrugs": 26,
  "knownDrugCount": 250,
- "candidatesConsidered": 345,
+ "candidatesConsidered": 355,
  "pathsTwoHop": 358,
- "pathsThreeHop": 329,
+ "pathsThreeHop": 495,
  "candidates": [
   {
    "id": "CHEMBL3544994",
@@ -23,8 +23,11 @@
    "mechanisms": [
     "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
-   "score": 0.3902,
+   "score": 0.3621,
    "rawScore": 2.719473,
    "geneCount": 1,
    "paths": [
@@ -112,8 +115,11 @@
    "mechanisms": [
     "Apolipoprotein C-III mRNA antisense inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.3902,
+   "score": 0.3621,
    "rawScore": 2.719473,
    "geneCount": 1,
    "paths": [
@@ -191,21 +197,19 @@
    ]
   },
   {
-   "id": "CHEMBL5095052",
-   "name": "Inclisiran Sodium",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "Hypercholesterolemia",
-    "atherosclerosis",
-    "familial hypercholesterolemia",
-    "Abnormal circulating lipid concentration"
-   ],
-   "indicationCount": 4,
+   "id": "CHEMBL4594554",
+   "name": "Tafolecimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "PCSK9 mRNA rnai inhibitor"
+    "Subtilisin/kexin type 9 inhibitor"
    ],
-   "rank": 7,
-   "score": 0.1893,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.1756,
    "rawScore": 1.327447,
    "geneCount": 1,
    "paths": [
@@ -283,16 +287,24 @@
    ]
   },
   {
-   "id": "CHEMBL4594554",
-   "name": "Tafolecimab",
-   "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Subtilisin/kexin type 9 inhibitor"
+   "id": "CHEMBL5095052",
+   "name": "Inclisiran Sodium",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "Hypercholesterolemia",
+    "atherosclerosis",
+    "familial hypercholesterolemia",
+    "Abnormal circulating lipid concentration"
    ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "PCSK9 mRNA rnai inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 8,
-   "score": 0.1893,
+   "score": 0.1756,
    "rawScore": 1.327447,
    "geneCount": 1,
    "paths": [
@@ -383,8 +395,11 @@
    "mechanisms": [
     "Angiopoietin-related protein 3 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
-   "score": 0.1741,
+   "score": 0.1616,
    "rawScore": 1.222368,
    "geneCount": 1,
    "paths": [
@@ -437,6 +452,101 @@
    ]
   },
   {
+   "id": "CHEMBL2103825",
+   "name": "Cetilistat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inherited lipid metabolism disorder",
+    "Obesity",
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Gastric lipase inhibitor",
+    "Pancreatic lipase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.1457,
+   "rawScore": 1.10359,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "LIPC",
+     "geneId": "ENSG00000166035",
+     "geneName": "lipase C, hepatic type",
+     "assoc": 0.9922,
+     "contribution": 0.423242,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8926
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8657
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4593
+      }
+     ],
+     "hops": 3,
+     "via": "LIPF",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "LPL",
+     "geneId": "ENSG00000175445",
+     "geneName": "lipoprotein lipase",
+     "assoc": 0.9972,
+     "contribution": 0.358355,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9613
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8325
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5625
+      }
+     ],
+     "hops": 3,
+     "via": "LIPF",
+     "viaScore": 0.971
+    },
+    {
+     "gene": "LIPA",
+     "geneId": "ENSG00000107798",
+     "geneName": "lipase A, lysosomal acid type",
+     "assoc": 0.9592,
+     "contribution": 0.321992,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9019
+      },
+      {
+       "id": "literature",
+       "score": 0.5843
+      }
+     ],
+     "hops": 3,
+     "via": "PNLIP",
+     "viaScore": 0.907
+    }
+   ]
+  },
+  {
    "id": "CHEMBL53418",
    "name": "Danthron",
    "drugType": "Small molecule",
@@ -447,8 +557,16 @@
    "mechanisms": [
     "Retinoid X receptor alpha antagonist"
    ],
-   "rank": 10,
-   "score": 0.1416,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.1314,
    "rawScore": 0.99681,
    "geneCount": 1,
    "paths": [
@@ -518,8 +636,28 @@
    "mechanisms": [
     "Sclerostin inhibitor"
    ],
-   "rank": 12,
-   "score": 0.1401,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.13,
    "rawScore": 0.986724,
    "geneCount": 1,
    "paths": [
@@ -563,8 +701,16 @@
    "mechanisms": [
     "Soluble guanylate cyclase inhibitor"
    ],
-   "rank": 13,
-   "score": 0.1305,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 16,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [
@@ -641,8 +787,24 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 14,
-   "score": 0.1305,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 17,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [
@@ -708,6 +870,90 @@
    ]
   },
   {
+   "id": "CHEMBL2108313",
+   "name": "Conbercept",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Vascular endothelial growth factor B inhibitor",
+    "Vascular endothelial growth factor C inhibitor",
+    "Placenta growth factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.1135,
+   "rawScore": 0.863266,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FLT1",
+     "geneId": "ENSG00000102755",
+     "geneName": "fms related receptor tyrosine kinase 1",
+     "assoc": 0.9499,
+     "contribution": 0.31302,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9363
+      },
+      {
+       "id": "literature",
+       "score": 0.2123
+      }
+     ],
+     "hops": 3,
+     "via": "VEGFB",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FLT1",
+     "geneId": "ENSG00000102755",
+     "geneName": "fms related receptor tyrosine kinase 1",
+     "assoc": 0.9499,
+     "contribution": 0.31302,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9363
+      },
+      {
+       "id": "literature",
+       "score": 0.2123
+      }
+     ],
+     "hops": 3,
+     "via": "VEGFC",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FLT1",
+     "geneId": "ENSG00000102755",
+     "geneName": "fms related receptor tyrosine kinase 1",
+     "assoc": 0.9499,
+     "contribution": 0.237225,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9363
+      },
+      {
+       "id": "literature",
+       "score": 0.2123
+      }
+     ],
+     "hops": 3,
+     "via": "PGF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3833307",
    "name": "Satralizumab",
    "drugType": "Antibody",
@@ -719,8 +965,11 @@
    "mechanisms": [
     "IL6Ralpha/GP130 antagonist"
    ],
-   "rank": 22,
-   "score": 0.1166,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.1082,
    "rawScore": 0.82417,
    "geneCount": 2,
    "paths": [
@@ -769,77 +1018,6 @@
    ]
   },
   {
-   "id": "CHEMBL2103825",
-   "name": "Cetilistat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inherited lipid metabolism disorder",
-    "Obesity",
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Gastric lipase inhibitor",
-    "Pancreatic lipase inhibitor"
-   ],
-   "rank": 24,
-   "score": 0.1105,
-   "rawScore": 0.781598,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "LIPC",
-     "geneId": "ENSG00000166035",
-     "geneName": "lipase C, hepatic type",
-     "assoc": 0.9922,
-     "contribution": 0.423242,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8926
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8657
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4593
-      }
-     ],
-     "hops": 3,
-     "via": "LIPF",
-     "viaScore": 0.98
-    },
-    {
-     "gene": "LPL",
-     "geneId": "ENSG00000175445",
-     "geneName": "lipoprotein lipase",
-     "assoc": 0.9972,
-     "contribution": 0.358355,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9613
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8325
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5625
-      }
-     ],
-     "hops": 3,
-     "via": "LIPF",
-     "viaScore": 0.971
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201607",
    "name": "Natalizumab",
    "drugType": "Antibody",
@@ -854,8 +1032,16 @@
     "Integrin alpha-4/beta-1 inhibitor",
     "Integrin alpha-4/beta-7 inhibitor"
    ],
-   "rank": 25,
-   "score": 0.1067,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.099,
    "rawScore": 0.755481,
    "geneCount": 3,
    "paths": [
@@ -915,8 +1101,11 @@
    "mechanisms": [
     "Beta-nerve growth factor inhibitor"
    ],
-   "rank": 26,
-   "score": 0.1065,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.0988,
    "rawScore": 0.753752,
    "geneCount": 1,
    "paths": [
@@ -955,8 +1144,11 @@
     "Hepatocyte nuclear factor 4-alpha activator",
     "Serotonin 1a (5-HT1a) receptor antagonist"
    ],
-   "rank": 27,
-   "score": 0.1044,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.0969,
    "rawScore": 0.739567,
    "geneCount": 2,
    "paths": [
@@ -997,8 +1189,11 @@
     "Pyruvate kinase isozymes R/L activator",
     "Pyruvate kinase isozymes R/L activator"
    ],
-   "rank": 28,
-   "score": 0.1013,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.094,
    "rawScore": 0.717839,
    "geneCount": 1,
    "paths": [
@@ -1047,21 +1242,39 @@
    ]
   },
   {
-   "id": "CHEMBL1201753",
-   "name": "Pitavastatin",
+   "id": "CHEMBL1477",
+   "name": "Cerivastatin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypercholesterolemia",
+    "familial hyperlipidemia",
     "cardiovascular disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "HMG-CoA reductase inhibitor",
-    "HMG-CoA reductase inhibitor",
     "HMG-CoA reductase inhibitor"
    ],
-   "rank": 29,
-   "score": 0.0999,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Increased reporting rate of rhabdomyolysis with Baycol relative to other statins, especially when gemfibrozil is co-prescribed"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Severe muscle damage. Combination of cerivastatin and another cholesterol lowering drug, gemfibrozil, has caused severe damage to muscle in some patients. The damage can be in the form of rhabdomyolysis where there is breakdown of muscle cells and release of myoglobin which in turn can lead to kidney damage"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.0927,
    "rawScore": 0.707927,
    "geneCount": 1,
    "paths": [
@@ -1118,19 +1331,24 @@
    ]
   },
   {
-   "id": "CHEMBL1477",
-   "name": "Cerivastatin",
+   "id": "CHEMBL1201753",
+   "name": "Pitavastatin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "familial hyperlipidemia",
+    "Hypercholesterolemia",
     "cardiovascular disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
+    "HMG-CoA reductase inhibitor",
+    "HMG-CoA reductase inhibitor",
     "HMG-CoA reductase inhibitor"
    ],
-   "rank": 36,
-   "score": 0.0999,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.0927,
    "rawScore": 0.707927,
    "geneCount": 1,
    "paths": [
@@ -1195,8 +1413,11 @@
    "mechanisms": [
     "Alpha-2-macroglobulin binding agent"
    ],
-   "rank": 37,
-   "score": 0.0983,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.0912,
    "rawScore": 0.696985,
    "geneCount": 1,
    "paths": [
@@ -1237,8 +1458,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
-   "rank": 39,
-   "score": 0.0979,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.0908,
    "rawScore": 0.694126,
    "geneCount": 1,
    "paths": [
@@ -1283,21 +1507,20 @@
    ]
   },
   {
-   "id": "CHEMBL3301624",
-   "name": "Setmelanotide",
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
    "drugType": "Protein",
-   "approvedFor": [
-    "obesity disorder",
-    "Obesity",
-    "Bardet-Biedl syndrome"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 40,
-   "score": 0.097,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.09,
    "rawScore": 0.687973,
    "geneCount": 1,
    "paths": [
@@ -1325,17 +1548,24 @@
    ]
   },
   {
-   "id": "CHEMBL2070241",
-   "name": "Bremelanotide",
+   "id": "CHEMBL3301624",
+   "name": "Setmelanotide",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "obesity disorder",
+    "Obesity",
+    "Bardet-Biedl syndrome"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 41,
-   "score": 0.097,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.09,
    "rawScore": 0.687973,
    "geneCount": 1,
    "paths": [
@@ -1373,8 +1603,16 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 44,
-   "score": 0.0948,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 45,
+   "score": 0.0879,
    "rawScore": 0.672632,
    "geneCount": 1,
    "paths": [
@@ -1427,166 +1665,11 @@
    ]
   },
   {
-   "id": "CHEMBL1023",
-   "name": "Bexarotene",
+   "id": "CHEMBL1201346",
+   "name": "Balsalazide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "primary cutaneous T-cell non-Hodgkin lymphoma",
-    "neoplasm",
-    "T-cell non-Hodgkin lymphoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Retinoid X receptor agonist"
-   ],
-   "rank": 45,
-   "score": 0.0904,
-   "rawScore": 0.642338,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9865,
-     "contribution": 0.333616,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9027
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7482
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4511
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "ABCA1",
-     "geneId": "ENSG00000165029",
-     "geneName": "ATP binding cassette subfamily A member 1",
-     "assoc": 0.9957,
-     "contribution": 0.308722,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9486
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8382
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4773
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298138",
-   "name": "Repotrectinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cancer",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "NT-3 growth factor receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "CD74-ROS1 inhibitor"
-   ],
-   "rank": 46,
-   "score": 0.0852,
-   "rawScore": 0.606566,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "FN1",
-     "geneId": "ENSG00000115414",
-     "geneName": "fibronectin 1",
-     "assoc": 0.98,
-     "contribution": 0.331403,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.939
-      },
-      {
-       "id": "literature",
-       "score": 0.6722
-      }
-     ],
-     "hops": 3,
-     "via": "SDC4",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.9884,
-     "contribution": 0.141766,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9597
-      },
-      {
-       "id": "literature",
-       "score": 0.7118
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.905
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.9884,
-     "contribution": 0.133397,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9597
-      },
-      {
-       "id": "literature",
-       "score": 0.7118
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL425",
-   "name": "Olsalazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "ulcerative colitis"
+    "inflammatory bowel disease"
    ],
    "indicationCount": 1,
    "mechanisms": [
@@ -1594,9 +1677,12 @@
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
-   "rank": 47,
-   "score": 0.0837,
-   "rawScore": 0.596107,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 48,
+   "score": 0.084,
+   "rawScore": 0.643243,
    "geneCount": 4,
    "paths": [
     {
@@ -1678,9 +1764,12 @@
     "Cyclooxygenase inhibitor",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 48,
-   "score": 0.0837,
-   "rawScore": 0.596107,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 49,
+   "score": 0.084,
+   "rawScore": 0.643243,
    "geneCount": 4,
    "paths": [
     {
@@ -1749,11 +1838,11 @@
    ]
   },
   {
-   "id": "CHEMBL1201346",
-   "name": "Balsalazide",
+   "id": "CHEMBL425",
+   "name": "Olsalazine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammatory bowel disease"
+    "ulcerative colitis"
    ],
    "indicationCount": 1,
    "mechanisms": [
@@ -1761,9 +1850,12 @@
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
-   "rank": 49,
-   "score": 0.0837,
-   "rawScore": 0.596107,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 50,
+   "score": 0.084,
+   "rawScore": 0.643243,
    "geneCount": 4,
    "paths": [
     {
@@ -1828,6 +1920,84 @@
      "hops": 3,
      "via": "ALOX5",
      "viaScore": 0.973
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1023",
+   "name": "Bexarotene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Retinoid X receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 51,
+   "score": 0.0839,
+   "rawScore": 0.642338,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9865,
+     "contribution": 0.333616,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9027
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7482
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4511
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ABCA1",
+     "geneId": "ENSG00000165029",
+     "geneName": "ATP binding cassette subfamily A member 1",
+     "assoc": 0.9957,
+     "contribution": 0.308722,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9486
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8382
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4773
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.916
     }
    ]
   },
@@ -1843,8 +2013,16 @@
    "mechanisms": [
     "Microsomal triglyceride transfer protein inhibitor"
    ],
-   "rank": 51,
-   "score": 0.0804,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 53,
+   "score": 0.0746,
    "rawScore": 0.57333,
    "geneCount": 2,
    "paths": [
@@ -1886,8 +2064,11 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit inhibitor"
    ],
-   "rank": 52,
-   "score": 0.0797,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 54,
+   "score": 0.0739,
    "rawScore": 0.568272,
    "geneCount": 1,
    "paths": [
@@ -1926,8 +2107,16 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit antagonist"
    ],
-   "rank": 53,
-   "score": 0.0797,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 56,
+   "score": 0.0739,
    "rawScore": 0.568272,
    "geneCount": 1,
    "paths": [
@@ -1955,6 +2144,143 @@
    ]
   },
   {
+   "id": "CHEMBL187709",
+   "name": "Triparanol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Delta(24)-sterol reductase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "occular toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 57,
+   "score": 0.0739,
+   "rawScore": 0.568038,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LIPA",
+     "geneId": "ENSG00000107798",
+     "geneName": "lipase A, lysosomal acid type",
+     "assoc": 0.9592,
+     "contribution": 0.568038,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9019
+      },
+      {
+       "id": "literature",
+       "score": 0.5843
+      }
+     ],
+     "hops": 3,
+     "via": "DHCR24",
+     "viaScore": 0.919
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298138",
+   "name": "Repotrectinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cancer",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "NT-3 growth factor receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "CD74-ROS1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 58,
+   "score": 0.0734,
+   "rawScore": 0.563904,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "FN1",
+     "geneId": "ENSG00000115414",
+     "geneName": "fibronectin 1",
+     "assoc": 0.98,
+     "contribution": 0.308094,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.939
+      },
+      {
+       "id": "literature",
+       "score": 0.6722
+      }
+     ],
+     "hops": 3,
+     "via": "SDC4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.9884,
+     "contribution": 0.131795,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9597
+      },
+      {
+       "id": "literature",
+       "score": 0.7118
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.905
+    },
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.9884,
+     "contribution": 0.124015,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9597
+      },
+      {
+       "id": "literature",
+       "score": 0.7118
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.916
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3039545",
    "name": "Luspatercept",
    "drugType": "Protein",
@@ -1968,8 +2294,11 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
-   "rank": 55,
-   "score": 0.0786,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 59,
+   "score": 0.0729,
    "rawScore": 0.560653,
    "geneCount": 3,
    "paths": [
@@ -1997,6 +2326,481 @@
    ]
   },
   {
+   "id": "CHEMBL343448",
+   "name": "Romidepsin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma",
+    "mature T-cell and NK-cell non-Hodgkin lymphoma",
+    "primary cutaneous T-cell non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 60,
+   "score": 0.0712,
+   "rawScore": 0.547708,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.147241,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.145123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC7",
+     "viaScore": 0.959
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9195,
+     "contribution": 0.129628,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9154
+      },
+      {
+       "id": "literature",
+       "score": 0.0486
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL27759",
+   "name": "Entinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 61,
+   "score": 0.0712,
+   "rawScore": 0.547708,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.147241,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.145123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC7",
+     "viaScore": 0.959
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9195,
+     "contribution": 0.129628,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9154
+      },
+      {
+       "id": "literature",
+       "score": 0.0486
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Duchenne muscular dystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 62,
+   "score": 0.0712,
+   "rawScore": 0.547708,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.147241,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.145123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC7",
+     "viaScore": 0.959
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9195,
+     "contribution": 0.129628,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9154
+      },
+      {
+       "id": "literature",
+       "score": 0.0486
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL408513",
+   "name": "Belinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma",
+    "peripheral T-cell lymphoma, not otherwise specified"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 63,
+   "score": 0.0712,
+   "rawScore": 0.547708,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.147241,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.145123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC7",
+     "viaScore": 0.959
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9195,
+     "contribution": 0.129628,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9154
+      },
+      {
+       "id": "literature",
+       "score": 0.0486
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL483254",
+   "name": "Panobinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "plasma cell myeloma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 64,
+   "score": 0.0712,
+   "rawScore": 0.547708,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.147241,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "MEF2A",
+     "geneId": "ENSG00000068305",
+     "geneName": "myocyte enhancer factor 2A",
+     "assoc": 0.9919,
+     "contribution": 0.145123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8818
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8255
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC7",
+     "viaScore": 0.959
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9195,
+     "contribution": 0.129628,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9154
+      },
+      {
+       "id": "literature",
+       "score": 0.0486
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2028850",
    "name": "Icatibant",
    "drugType": "Protein",
@@ -2007,8 +2811,11 @@
    "mechanisms": [
     "Bradykinin B2 receptor antagonist"
    ],
-   "rank": 57,
-   "score": 0.0764,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 65,
+   "score": 0.0709,
    "rawScore": 0.545611,
    "geneCount": 1,
    "paths": [
@@ -2036,43 +2843,6 @@
    ]
   },
   {
-   "id": "CHEMBL76688",
-   "name": "Sivelestat",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Leukocyte elastase inhibitor"
-   ],
-   "rank": 59,
-   "score": 0.0754,
-   "rawScore": 0.538457,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SERPINA1",
-     "geneId": "ENSG00000197249",
-     "geneName": "serpin family A member 1",
-     "assoc": 0.9384,
-     "contribution": 0.538457,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9244
-      },
-      {
-       "id": "literature",
-       "score": 0.1854
-      }
-     ],
-     "hops": 3,
-     "via": "ELANE",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4297879",
    "name": ".Alpha.1-Proteinase Inhibitor Human",
    "drugType": "Protein",
@@ -2086,8 +2856,11 @@
    "mechanisms": [
     "Leukocyte elastase inhibitor"
    ],
-   "rank": 60,
-   "score": 0.0754,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 66,
+   "score": 0.07,
    "rawScore": 0.538457,
    "geneCount": 1,
    "paths": [
@@ -2111,403 +2884,6 @@
      "hops": 3,
      "via": "ELANE",
      "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297530",
-   "name": "Saroglitazar",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inherited lipid metabolism disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "rank": 61,
-   "score": 0.0712,
-   "rawScore": 0.50976,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9865,
-     "contribution": 0.325439,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9027
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7482
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4511
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ANGPTL4",
-     "geneId": "ENSG00000167772",
-     "geneName": "angiopoietin like 4",
-     "assoc": 0.991,
-     "contribution": 0.184321,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.91
-      },
-      {
-       "id": "literature",
-       "score": 0.8998
-      }
-     ],
-     "hops": 3,
-     "via": "PPARG",
-     "viaScore": 0.875
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1131",
-   "name": "Acitretin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "psoriasis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "rank": 62,
-   "score": 0.0679,
-   "rawScore": 0.486801,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9865,
-     "contribution": 0.252834,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9027
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7482
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4511
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "ABCA1",
-     "geneId": "ENSG00000165029",
-     "geneName": "ATP binding cassette subfamily A member 1",
-     "assoc": 0.9957,
-     "contribution": 0.233968,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9486
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8382
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4773
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL705",
-   "name": "Alitretinoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Eczematoid dermatitis",
-    "Kaposi's sarcoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "rank": 63,
-   "score": 0.0679,
-   "rawScore": 0.486801,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9865,
-     "contribution": 0.252834,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9027
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7482
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4511
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "ABCA1",
-     "geneId": "ENSG00000165029",
-     "geneName": "ATP binding cassette subfamily A member 1",
-     "assoc": 0.9957,
-     "contribution": 0.233968,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9486
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8382
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4773
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL464",
-   "name": "Etretinate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "keratosis",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "rank": 64,
-   "score": 0.0679,
-   "rawScore": 0.486801,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9865,
-     "contribution": 0.252834,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9027
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7482
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4511
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "ABCA1",
-     "geneId": "ENSG00000165029",
-     "geneName": "ATP binding cassette subfamily A member 1",
-     "assoc": 0.9957,
-     "contribution": 0.233968,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9486
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8382
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4773
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL249856",
-   "name": "Enoximone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "congestive heart failure"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Phosphodiesterase 3 inhibitor"
-   ],
-   "rank": 65,
-   "score": 0.0656,
-   "rawScore": 0.470449,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PDE3A",
-     "geneId": "ENSG00000172572",
-     "geneName": "phosphodiesterase 3A",
-     "assoc": 0.7837,
-     "contribution": 0.250625,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7715
-      },
-      {
-       "id": "literature",
-       "score": 0.0534
-      }
-     ],
-     "hops": 3,
-     "via": "PDE3B",
-     "viaScore": 0.919
-    },
-    {
-     "gene": "PDE3A",
-     "geneId": "ENSG00000172572",
-     "geneName": "phosphodiesterase 3A",
-     "assoc": 0.7837,
-     "contribution": 0.219824,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7715
-      },
-      {
-       "id": "literature",
-       "score": 0.0534
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL760",
-   "name": "Anagrelide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "Thrombocytosis",
-    "familial thrombocytosis",
-    "essential thrombocythemia"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Phosphodiesterase 3 inhibitor"
-   ],
-   "rank": 66,
-   "score": 0.0656,
-   "rawScore": 0.470449,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PDE3A",
-     "geneId": "ENSG00000172572",
-     "geneName": "phosphodiesterase 3A",
-     "assoc": 0.7837,
-     "contribution": 0.250625,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7715
-      },
-      {
-       "id": "literature",
-       "score": 0.0534
-      }
-     ],
-     "hops": 3,
-     "via": "PDE3B",
-     "viaScore": 0.919
-    },
-    {
-     "gene": "PDE3A",
-     "geneId": "ENSG00000172572",
-     "geneName": "phosphodiesterase 3A",
-     "assoc": 0.7837,
-     "contribution": 0.219824,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7715
-      },
-      {
-       "id": "literature",
-       "score": 0.0534
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
     }
    ]
   }
@@ -2525,9 +2901,17 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
-   "rawScore": 6.943191,
+   "rawScore": 7.48156,
    "geneCount": 1,
    "paths": [
     {
@@ -2608,6 +2992,101 @@
    ]
   },
   {
+   "id": "CHEMBL2364655",
+   "name": "Evolocumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "stroke disorder",
+    "familial hypercholesterolemia",
+    "coronary artery disorder",
+    "homozygous familial hypercholesterolemia"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Subtilisin/kexin type 9 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.1756,
+   "rawScore": 1.327447,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PCSK9",
+     "geneId": "ENSG00000169174",
+     "geneName": "proprotein convertase subtilisin/kexin type 9",
+     "assoc": 0.9979,
+     "contribution": 0.524228,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9641
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.911
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3585
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CELSR2",
+     "geneId": "ENSG00000143126",
+     "geneName": "cadherin EGF LAG seven-pass G-type receptor 2",
+     "assoc": 0.9674,
+     "contribution": 0.406045,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9379
+      },
+      {
+       "id": "literature",
+       "score": 0.4756
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.799
+    },
+    {
+     "gene": "LDLR",
+     "geneId": "ENSG00000130164",
+     "geneName": "low density lipoprotein receptor",
+     "assoc": 0.9987,
+     "contribution": 0.397174,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9744
+      },
+      {
+       "id": "literature",
+       "score": 0.8579
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6293
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3990033",
    "name": "Inclisiran",
    "drugType": "Oligonucleotide",
@@ -2619,8 +3098,11 @@
    "mechanisms": [
     "PCSK9 mRNA RNAi inhibitor"
    ],
-   "rank": 4,
-   "score": 0.1893,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.1756,
    "rawScore": 1.327447,
    "geneCount": 1,
    "paths": [
@@ -2711,8 +3193,11 @@
    "mechanisms": [
     "Subtilisin/kexin type 9 inhibitor"
    ],
-   "rank": 5,
-   "score": 0.1893,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.1756,
    "rawScore": 1.327447,
    "geneCount": 1,
    "paths": [
@@ -2790,94 +3275,96 @@
    ]
   },
   {
-   "id": "CHEMBL2364655",
-   "name": "Evolocumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL175247",
+   "name": "Orlistat",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "stroke disorder",
-    "familial hypercholesterolemia",
-    "coronary artery disorder",
-    "homozygous familial hypercholesterolemia"
+    "Obesity",
+    "obesity disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 2,
    "mechanisms": [
-    "Subtilisin/kexin type 9 inhibitor"
+    "Gastric lipase inhibitor",
+    "Pancreatic lipase inhibitor"
    ],
-   "rank": 6,
-   "score": 0.1893,
-   "rawScore": 1.327447,
-   "geneCount": 1,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.1457,
+   "rawScore": 1.10359,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "PCSK9",
-     "geneId": "ENSG00000169174",
-     "geneName": "proprotein convertase subtilisin/kexin type 9",
-     "assoc": 0.9979,
-     "contribution": 0.524228,
-     "drugsOnGene": 5,
+     "gene": "LIPC",
+     "geneId": "ENSG00000166035",
+     "geneName": "lipase C, hepatic type",
+     "assoc": 0.9922,
+     "contribution": 0.423242,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9641
+       "score": 0.8926
       },
       {
        "id": "genetic_association",
-       "score": 0.911
+       "score": 0.8657
       },
       {
        "id": "animal_model",
-       "score": 0.3585
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CELSR2",
-     "geneId": "ENSG00000143126",
-     "geneName": "cadherin EGF LAG seven-pass G-type receptor 2",
-     "assoc": 0.9674,
-     "contribution": 0.406045,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9379
-      },
-      {
-       "id": "literature",
-       "score": 0.4756
+       "score": 0.4593
       }
      ],
      "hops": 3,
-     "via": "PCSK9",
-     "viaScore": 0.799
+     "via": "LIPF",
+     "viaScore": 0.98
     },
     {
-     "gene": "LDLR",
-     "geneId": "ENSG00000130164",
-     "geneName": "low density lipoprotein receptor",
-     "assoc": 0.9987,
-     "contribution": 0.397174,
-     "drugsOnGene": 5,
+     "gene": "LPL",
+     "geneId": "ENSG00000175445",
+     "geneName": "lipoprotein lipase",
+     "assoc": 0.9972,
+     "contribution": 0.358355,
+     "drugsOnGene": 2,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.9744
+       "id": "literature",
+       "score": 0.9613
       },
       {
-       "id": "literature",
-       "score": 0.8579
+       "id": "genetic_association",
+       "score": 0.8325
       },
       {
        "id": "animal_model",
-       "score": 0.6293
+       "score": 0.5625
       }
      ],
      "hops": 3,
-     "via": "PCSK9",
-     "viaScore": 0.999
+     "via": "LIPF",
+     "viaScore": 0.971
+    },
+    {
+     "gene": "LIPA",
+     "geneId": "ENSG00000107798",
+     "geneName": "lipase A, lysosomal acid type",
+     "assoc": 0.9592,
+     "contribution": 0.321992,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9019
+      },
+      {
+       "id": "literature",
+       "score": 0.5843
+      }
+     ],
+     "hops": 3,
+     "via": "PNLIP",
+     "viaScore": 0.907
     }
    ]
   },
@@ -2893,8 +3380,20 @@
    "mechanisms": [
     "ATP-binding cassette sub-family A member 1 inhibitor"
    ],
-   "rank": 11,
-   "score": 0.1414,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "metabolic toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.1312,
    "rawScore": 0.995655,
    "geneCount": 1,
    "paths": [
@@ -2926,21 +3425,27 @@
    ]
   },
   {
-   "id": "CHEMBL1311",
-   "name": "Isosorbide Mononitrate",
+   "id": "CHEMBL4066936",
+   "name": "Vericiguat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "angina pectoris",
-    "coronary artery disorder",
-    "Hydrocephalus",
+    "heart failure",
     "cardiovascular disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 15,
-   "score": 0.1305,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [
@@ -3006,21 +3511,24 @@
    ]
   },
   {
-   "id": "CHEMBL1200689",
-   "name": "Nitric Oxide",
+   "id": "CHEMBL1311",
+   "name": "Isosorbide Mononitrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "respiratory failure",
-    "Hypertension",
-    "pulmonary hypertension",
-    "respiratory system disorder"
+    "angina pectoris",
+    "coronary artery disorder",
+    "Hydrocephalus",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 6,
+   "indicationCount": 4,
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 16,
-   "score": 0.1305,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [
@@ -3097,8 +3605,11 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 17,
-   "score": 0.1305,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [
@@ -3164,99 +3675,29 @@
    ]
   },
   {
-   "id": "CHEMBL2107834",
-   "name": "Riociguat",
+   "id": "CHEMBL730",
+   "name": "Nitroglycerin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertensive disorder",
-    "chronic thromboembolic pulmonary hypertension",
-    "pulmonary hypertension",
-    "pulmonary arterial hypertension"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Soluble guanylate cyclase positive allosteric modulator"
-   ],
-   "rank": 18,
-   "score": 0.1305,
-   "rawScore": 0.920204,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GUCY1A1",
-     "geneId": "ENSG00000164116",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 1",
-     "assoc": 0.8255,
-     "contribution": 0.220883,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8057
-      },
-      {
-       "id": "literature",
-       "score": 0.1019
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.5513,
-     "contribution": 0.147513,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5372
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GUCY1A2",
-     "geneId": "ENSG00000152402",
-     "geneName": "guanylate cyclase 1 soluble subunit alpha 2",
-     "assoc": 0.4981,
-     "contribution": 0.133284,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4981
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4066936",
-   "name": "Vericiguat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "heart failure",
+    "angina pectoris",
+    "diabetic foot",
+    "coronary artery disorder",
     "cardiovascular disorder"
    ],
-   "indicationCount": 2,
+   "indicationCount": 10,
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 19,
-   "score": 0.1305,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.1211,
    "rawScore": 0.920204,
    "geneCount": 3,
    "paths": [

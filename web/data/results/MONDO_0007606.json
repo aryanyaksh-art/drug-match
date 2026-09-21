@@ -9,7 +9,7 @@
  "knownDrugCount": 8,
  "candidatesConsidered": 128,
  "pathsTwoHop": 57,
- "pathsThreeHop": 262,
+ "pathsThreeHop": 270,
  "candidates": [
   {
    "id": "CHEMBL2109171",
@@ -25,9 +25,12 @@
     "Bone morphogenetic protein receptor type-1A agonist",
     "Activin receptor type-1 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
-   "rawScore": 4.636182,
+   "rawScore": 4.967677,
    "geneCount": 6,
    "paths": [
     {
@@ -126,9 +129,12 @@
     "Bone morphogenetic protein receptor type-1B agonist",
     "Bone morphogenetic protein receptor type-2 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
-   "score": 0.8159,
-   "rawScore": 3.78338,
+   "score": 0.84,
+   "rawScore": 4.173244,
    "geneCount": 4,
    "paths": [
     {
@@ -226,8 +232,11 @@
    "mechanisms": [
     "Fibroblast growth factor 23 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.2748,
+   "score": 0.2564,
    "rawScore": 1.276752,
    "geneCount": 1,
    "paths": [
@@ -296,8 +305,97 @@
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 4,
-   "score": 0.2242,
+   "score": 0.2093,
+   "rawScore": 1.042495,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IHH",
+     "geneId": "ENSG00000163501",
+     "geneName": "Indian hedgehog signaling molecule",
+     "assoc": 0.6013,
+     "contribution": 0.386298,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4557
+      },
+      {
+       "id": "literature",
+       "score": 0.2675
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "GLI3",
+     "geneId": "ENSG00000106571",
+     "geneName": "GLI family zinc finger 3",
+     "assoc": 0.5519,
+     "contribution": 0.346769,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "SHH",
+     "geneId": "ENSG00000164690",
+     "geneName": "sonic hedgehog signaling molecule",
+     "assoc": 0.4807,
+     "contribution": 0.309428,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4807
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.2093,
    "rawScore": 1.042495,
    "geneCount": 1,
    "paths": [
@@ -371,81 +469,20 @@
     "Smoothened homolog antagonist",
     "Smoothened homolog antagonist"
    ],
-   "rank": 5,
-   "score": 0.2242,
-   "rawScore": 1.042495,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "IHH",
-     "geneId": "ENSG00000163501",
-     "geneName": "Indian hedgehog signaling molecule",
-     "assoc": 0.6013,
-     "contribution": 0.386298,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4557
-      },
-      {
-       "id": "literature",
-       "score": 0.2675
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.997
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
     },
     {
-     "gene": "GLI3",
-     "geneId": "ENSG00000106571",
-     "geneName": "GLI family zinc finger 3",
-     "assoc": 0.5519,
-     "contribution": 0.346769,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5519
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.975
-    },
-    {
-     "gene": "SHH",
-     "geneId": "ENSG00000164690",
-     "geneName": "sonic hedgehog signaling molecule",
-     "assoc": 0.4807,
-     "contribution": 0.309428,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4807
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 6,
-   "score": 0.2242,
+   "score": 0.2093,
    "rawScore": 1.042495,
    "geneCount": 1,
    "paths": [
@@ -502,271 +539,6 @@
      ],
      "hops": 3,
      "via": "SMO",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "cholangiocarcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "rank": 7,
-   "score": 0.1873,
-   "rawScore": 0.871321,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.149779,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.128558,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KL",
-     "geneId": "ENSG00000133116",
-     "geneName": "klotho",
-     "assoc": 0.5116,
-     "contribution": 0.107886,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5116
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR4",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3701238",
-   "name": "Futibatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "biliary tract cancer",
-    "neoplasm",
-    "cancer",
-    "intrahepatic cholangiocarcinoma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "rank": 8,
-   "score": 0.1873,
-   "rawScore": 0.871321,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.149779,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.128558,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KL",
-     "geneId": "ENSG00000133116",
-     "geneName": "klotho",
-     "assoc": 0.5116,
-     "contribution": 0.107886,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5116
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR4",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3545376",
-   "name": "Erdafitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "cancer",
-    "urothelial carcinoma",
-    "urinary bladder carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "rank": 9,
-   "score": 0.1873,
-   "rawScore": 0.871321,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.149779,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.128558,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KL",
-     "geneId": "ENSG00000133116",
-     "geneName": "klotho",
-     "assoc": 0.5116,
-     "contribution": 0.107886,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5116
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR4",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL265502",
-   "name": "Suramin",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Acidic fibroblast growth factor inhibitor"
-   ],
-   "rank": 10,
-   "score": 0.1852,
-   "rawScore": 0.861698,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.453591,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 3,
-     "via": "FGF1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.408107,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 3,
-     "via": "FGF1",
      "viaScore": 0.999
     }
    ]
@@ -785,9 +557,12 @@
     "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK1 inhibitor"
    ],
-   "rank": 11,
-   "score": 0.1811,
-   "rawScore": 0.842931,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.1932,
+   "rawScore": 0.962868,
    "geneCount": 3,
    "paths": [
     {
@@ -864,104 +639,32 @@
    ]
   },
   {
-   "id": "CHEMBL2108709",
-   "name": "Collagenase Clostridium Histolyticum",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "sarcoidosis",
-    "Dupuytren Contracture",
-    "palmar fibromatosis",
-    "Penile Fibromatosis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Collagen hydrolytic enzyme"
-   ],
-   "rank": 12,
-   "score": 0.168,
-   "rawScore": 0.782177,
-   "geneCount": 21,
-   "paths": [
-    {
-     "gene": "COL2A1",
-     "geneId": "ENSG00000139219",
-     "geneName": "collagen type II alpha 1 chain",
-     "assoc": 0.5685,
-     "contribution": 0.127482,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5685
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL1A1",
-     "geneId": "ENSG00000108821",
-     "geneName": "collagen type I alpha 1 chain",
-     "assoc": 0.5529,
-     "contribution": 0.123979,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5529
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL2A1",
-     "geneId": "ENSG00000139219",
-     "geneName": "collagen type II alpha 1 chain",
-     "assoc": 0.5685,
-     "contribution": 0.071462,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5685
-      }
-     ],
-     "hops": 3,
-     "via": "COL11A1",
-     "viaScore": 0.976
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL502835",
-   "name": "Nintedanib",
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "idiopathic pulmonary fibrosis",
     "neoplasm",
-    "systemic sclerosis",
-    "interstitial lung disease"
+    "cholangiocarcinoma"
    ],
-   "indicationCount": 6,
+   "indicationCount": 2,
    "mechanisms": [
-    "Platelet-derived growth factor receptor inhibitor",
-    "Vascular endothelial growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
-   "rank": 13,
-   "score": 0.1659,
-   "rawScore": 0.772425,
-   "geneCount": 9,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.1748,
+   "rawScore": 0.871321,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "FGFR3",
      "geneId": "ENSG00000068078",
      "geneName": "fibroblast growth factor receptor 3",
      "assoc": 0.5991,
-     "contribution": 0.108287,
+     "contribution": 0.149779,
      "drugsOnGene": 8,
      "evidence": [
       {
@@ -978,7 +681,7 @@
      "geneId": "ENSG00000077782",
      "geneName": "fibroblast growth factor receptor 1",
      "assoc": 0.539,
-     "contribution": 0.092945,
+     "contribution": 0.128558,
      "drugsOnGene": 9,
      "evidence": [
       {
@@ -991,243 +694,224 @@
      "viaScore": null
     },
     {
-     "gene": "PDGFRA",
-     "geneId": "ENSG00000134853",
-     "geneName": "platelet derived growth factor receptor alpha",
-     "assoc": 0.5797,
-     "contribution": 0.089092,
-     "drugsOnGene": 12,
+     "gene": "KL",
+     "geneId": "ENSG00000133116",
+     "geneName": "klotho",
+     "assoc": 0.5116,
+     "contribution": 0.107886,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4364
-      },
+       "score": 0.5116
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545376",
+   "name": "Erdafitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cancer",
+    "urothelial carcinoma",
+    "urinary bladder carcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.1748,
+   "rawScore": 0.871321,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.149779,
+     "drugsOnGene": 8,
+     "evidence": [
       {
-       "id": "literature",
-       "score": 0.2543
+       "id": "animal_model",
+       "score": 0.5991
       }
      ],
      "hops": 2,
      "via": null,
      "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.128558,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KL",
+     "geneId": "ENSG00000133116",
+     "geneName": "klotho",
+     "assoc": 0.5116,
+     "contribution": 0.107886,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5116
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.992
     }
    ]
   },
   {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
-   "drugType": "Protein",
+   "id": "CHEMBL3701238",
+   "name": "Futibatinib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer",
+    "intrahepatic cholangiocarcinoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
+    "Fibroblast growth factor receptor inhibitor"
    ],
-   "rank": 14,
-   "score": 0.1645,
-   "rawScore": 0.765968,
-   "geneCount": 34,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.1748,
+   "rawScore": 0.871321,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "HSPG2",
-     "geneId": "ENSG00000142798",
-     "geneName": "heparan sulfate proteoglycan 2",
-     "assoc": 0.4975,
-     "contribution": 0.120907,
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.149779,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.128558,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KL",
+     "geneId": "ENSG00000133116",
+     "geneName": "klotho",
+     "assoc": 0.5116,
+     "contribution": 0.107886,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5116
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL265502",
+   "name": "Suramin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acidic fibroblast growth factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.1728,
+   "rawScore": 0.861698,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.453591,
      "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4975
-      }
-     ],
-     "hops": 3,
-     "via": "FN1",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "COL2A1",
-     "geneId": "ENSG00000139219",
-     "geneName": "collagen type II alpha 1 chain",
-     "assoc": 0.5685,
-     "contribution": 0.105134,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5685
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL1A1",
-     "geneId": "ENSG00000108821",
-     "geneName": "collagen type I alpha 1 chain",
-     "assoc": 0.5529,
-     "contribution": 0.102245,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5529
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3686884",
-   "name": "E-7090",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "biliary tract cancer",
-    "cancer"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor"
-   ],
-   "rank": 15,
-   "score": 0.1615,
-   "rawScore": 0.751743,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.168045,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
        "score": 0.5991
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "FGF1",
+     "viaScore": 0.999
     },
     {
      "gene": "FGFR1",
      "geneId": "ENSG00000077782",
      "geneName": "fibroblast growth factor receptor 1",
      "assoc": 0.539,
-     "contribution": 0.144236,
-     "drugsOnGene": 9,
+     "contribution": 0.408107,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
        "score": 0.539
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.119914,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
      "hops": 3,
-     "via": "FGFR2",
-     "viaScore": 0.987
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297522",
-   "name": "Pemigatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cholangiocarcinoma",
-    "biliary tract cancer",
-    "neoplasm",
-    "cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 3 inhibitor",
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
-   ],
-   "rank": 16,
-   "score": 0.1615,
-   "rawScore": 0.751743,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.168045,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.144236,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.119914,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR2",
-     "viaScore": 0.987
+     "via": "FGF1",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1245,9 +929,12 @@
     "Tyrosine-protein kinase JAK2 inhibitor",
     "Tyrosine-protein kinase receptor FLT3 inhibitor"
    ],
-   "rank": 17,
-   "score": 0.1614,
-   "rawScore": 0.751305,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.1721,
+   "rawScore": 0.858206,
    "geneCount": 4,
    "paths": [
     {
@@ -1324,30 +1011,35 @@
    ]
   },
   {
-   "id": "CHEMBL477772",
-   "name": "Pazopanib",
+   "id": "CHEMBL502835",
+   "name": "Nintedanib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "idiopathic pulmonary fibrosis",
     "neoplasm",
-    "renal cell carcinoma"
+    "systemic sclerosis",
+    "interstitial lung disease"
    ],
-   "indicationCount": 2,
+   "indicationCount": 6,
    "mechanisms": [
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor",
-    "Macrophage colony stimulating factor receptor inhibitor"
+    "Platelet-derived growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
    ],
-   "rank": 18,
-   "score": 0.1028,
-   "rawScore": 0.480038,
-   "geneCount": 10,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.1548,
+   "rawScore": 0.772425,
+   "geneCount": 9,
    "paths": [
     {
      "gene": "FGFR3",
      "geneId": "ENSG00000068078",
      "geneName": "fibroblast growth factor receptor 3",
      "assoc": 0.5991,
-     "contribution": 0.103819,
+     "contribution": 0.108287,
      "drugsOnGene": 8,
      "evidence": [
       {
@@ -1364,7 +1056,7 @@
      "geneId": "ENSG00000077782",
      "geneName": "fibroblast growth factor receptor 1",
      "assoc": 0.539,
-     "contribution": 0.089109,
+     "contribution": 0.092945,
      "drugsOnGene": 9,
      "evidence": [
       {
@@ -1381,7 +1073,393 @@
      "geneId": "ENSG00000134853",
      "geneName": "platelet derived growth factor receptor alpha",
      "assoc": 0.5797,
-     "contribution": 0.085416,
+     "contribution": 0.089092,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4364
+      },
+      {
+       "id": "literature",
+       "score": 0.2543
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3686884",
+   "name": "E-7090",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "biliary tract cancer",
+    "cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.1507,
+   "rawScore": 0.751743,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.168045,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.144236,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.119914,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297522",
+   "name": "Pemigatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cholangiocarcinoma",
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.1507,
+   "rawScore": 0.751743,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.168045,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.144236,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.119914,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095222",
+   "name": "Ocriplasmin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Abnormal retinal morphology",
+    "eye disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Laminin hydrolytic enzyme",
+    "Fibronectin proteolytic enzyme",
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.1468,
+   "rawScore": 0.732637,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "HSPG2",
+     "geneId": "ENSG00000142798",
+     "geneName": "heparan sulfate proteoglycan 2",
+     "assoc": 0.4975,
+     "contribution": 0.115646,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      }
+     ],
+     "hops": 3,
+     "via": "FN1",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.5685,
+     "contribution": 0.100559,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5685
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL1A1",
+     "geneId": "ENSG00000108821",
+     "geneName": "collagen type I alpha 1 chain",
+     "assoc": 0.5529,
+     "contribution": 0.097796,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5529
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108709",
+   "name": "Collagenase Clostridium Histolyticum",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "sarcoidosis",
+    "Dupuytren Contracture",
+    "palmar fibromatosis",
+    "Penile Fibromatosis"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.1462,
+   "rawScore": 0.729485,
+   "geneCount": 25,
+   "paths": [
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.5685,
+     "contribution": 0.118894,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5685
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL1A1",
+     "geneId": "ENSG00000108821",
+     "geneName": "collagen type I alpha 1 chain",
+     "assoc": 0.5529,
+     "contribution": 0.115627,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5529
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.5685,
+     "contribution": 0.066648,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5685
+      }
+     ],
+     "hops": 3,
+     "via": "COL11A1",
+     "viaScore": 0.976
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL477772",
+   "name": "Pazopanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Macrophage colony stimulating factor receptor inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 18,
+   "score": 0.0923,
+   "rawScore": 0.462082,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.099935,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.085776,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRA",
+     "geneId": "ENSG00000134853",
+     "geneName": "platelet derived growth factor receptor alpha",
+     "assoc": 0.5797,
+     "contribution": 0.082221,
      "drugsOnGene": 12,
      "evidence": [
       {
@@ -1412,8 +1490,11 @@
     "Stem cell growth factor receptor inhibitor",
     "Fibroblast growth factor receptor 3 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
-   "score": 0.0894,
+   "score": 0.0834,
    "rawScore": 0.417777,
    "geneCount": 4,
    "paths": [
@@ -1479,84 +1560,6 @@
    ]
   },
   {
-   "id": "CHEMBL1946170",
-   "name": "Regorafenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "metastatic colorectal cancer",
-    "neoplasm",
-    "colorectal cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Discoidin domain-containing receptor 2 inhibitor",
-    "Ephrin type-A receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
-   ],
-   "rank": 20,
-   "score": 0.0863,
-   "rawScore": 0.403404,
-   "geneCount": 13,
-   "paths": [
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.539,
-     "contribution": 0.080232,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDGFRA",
-     "geneId": "ENSG00000134853",
-     "geneName": "platelet derived growth factor receptor alpha",
-     "assoc": 0.5797,
-     "contribution": 0.076906,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4364
-      },
-      {
-       "id": "literature",
-       "score": 0.2543
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5991,
-     "contribution": 0.066702,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5991
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR2",
-     "viaScore": 0.987
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3301576",
    "name": "Pegpleranib Sodium",
    "drugType": "Unknown",
@@ -1567,8 +1570,11 @@
    "mechanisms": [
     "Platelet-derived growth factor subunit B inhibitor"
    ],
-   "rank": 21,
-   "score": 0.0797,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.0744,
    "rawScore": 0.373188,
    "geneCount": 1,
    "paths": [
@@ -1606,17 +1612,20 @@
    "mechanisms": [
     "80S Ribosome modulator"
    ],
-   "rank": 22,
-   "score": 0.0789,
-   "rawScore": 0.369518,
-   "geneCount": 74,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.0725,
+   "rawScore": 0.36369,
+   "geneCount": 77,
    "paths": [
     {
      "gene": "RPL38",
      "geneId": "ENSG00000172809",
      "geneName": "ribosomal protein L38",
      "assoc": 0.4909,
-     "contribution": 0.087753,
+     "contribution": 0.086369,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -1633,7 +1642,7 @@
      "geneId": "ENSG00000172809",
      "geneName": "ribosomal protein L38",
      "assoc": 0.4909,
-     "contribution": 0.040252,
+     "contribution": 0.039617,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -1650,7 +1659,7 @@
      "geneId": "ENSG00000172809",
      "geneName": "ribosomal protein L38",
      "assoc": 0.4909,
-     "contribution": 0.040252,
+     "contribution": 0.039617,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -1665,6 +1674,92 @@
    ]
   },
   {
+   "id": "CHEMBL1946170",
+   "name": "Regorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "colorectal neoplasm",
+    "metastatic colorectal cancer",
+    "neoplasm",
+    "colorectal cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Discoidin domain-containing receptor 2 inhibitor",
+    "Ephrin type-A receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.0706,
+   "rawScore": 0.354167,
+   "geneCount": 18,
+   "paths": [
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.539,
+     "contribution": 0.070439,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRA",
+     "geneId": "ENSG00000134853",
+     "geneName": "platelet derived growth factor receptor alpha",
+     "assoc": 0.5797,
+     "contribution": 0.067519,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4364
+      },
+      {
+       "id": "literature",
+       "score": 0.2543
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5991,
+     "contribution": 0.058561,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5991
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2104386",
    "name": "Carperitide",
    "drugType": "Protein",
@@ -1675,8 +1770,11 @@
    "mechanisms": [
     "Atrial natriuretic peptide receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
-   "score": 0.0741,
+   "score": 0.0691,
    "rawScore": 0.347056,
    "geneCount": 3,
    "paths": [
@@ -1712,8 +1810,16 @@
    "mechanisms": [
     "Heat-stable enterotoxin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 24,
-   "score": 0.07,
+   "score": 0.0653,
    "rawScore": 0.328165,
    "geneCount": 1,
    "paths": [
@@ -1748,8 +1854,16 @@
    "mechanisms": [
     "Heat-stable enterotoxin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 25,
-   "score": 0.07,
+   "score": 0.0653,
    "rawScore": 0.328165,
    "geneCount": 1,
    "paths": [
@@ -1773,19 +1887,22 @@
    ]
   },
   {
-   "id": "CHEMBL1201821",
-   "name": "Palifermin",
+   "id": "CHEMBL2108081",
+   "name": "Trafermin",
    "drugType": "Protein",
    "approvedFor": [
-    "mucositis",
-    "oral mucositis"
+    "Skin ulcer",
+    "periodontitis"
    ],
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 26,
-   "score": 0.0648,
+   "score": 0.0605,
    "rawScore": 0.303902,
    "geneCount": 1,
    "paths": [
@@ -1826,19 +1943,22 @@
    ]
   },
   {
-   "id": "CHEMBL2108081",
-   "name": "Trafermin",
+   "id": "CHEMBL1201821",
+   "name": "Palifermin",
    "drugType": "Protein",
    "approvedFor": [
-    "Skin ulcer",
-    "periodontitis"
+    "mucositis",
+    "oral mucositis"
    ],
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 27,
-   "score": 0.0648,
+   "score": 0.0605,
    "rawScore": 0.303902,
    "geneCount": 1,
    "paths": [
@@ -1890,8 +2010,11 @@
     "Fibroblast growth factor receptor 1 inhibitor",
     "Vascular endothelial growth factor receptor inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 28,
-   "score": 0.0585,
+   "score": 0.0546,
    "rawScore": 0.274774,
    "geneCount": 4,
    "paths": [
@@ -1959,8 +2082,11 @@
    "mechanisms": [
     "Platelet-derived growth factor receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 29,
-   "score": 0.0553,
+   "score": 0.0516,
    "rawScore": 0.260033,
    "geneCount": 2,
    "paths": [
@@ -2009,21 +2135,27 @@
    ]
   },
   {
-   "id": "CHEMBL1908360",
-   "name": "Everolimus",
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "pancreatic neoplasm",
-    "kidney angiomyolipoma",
-    "astrocytoma (excluding glioblastoma)",
-    "tuberous sclerosis"
+    "atopic eczema",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 13,
+   "indicationCount": 2,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 30,
-   "score": 0.0544,
+   "score": 0.0507,
    "rawScore": 0.255617,
    "geneCount": 1,
    "paths": [
@@ -2067,57 +2199,11 @@
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 31,
-   "score": 0.0544,
-   "rawScore": 0.255617,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACVR1",
-     "geneId": "ENSG00000115170",
-     "geneName": "activin A receptor type 1",
-     "assoc": 0.9984,
-     "contribution": 0.255617,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8956
-      },
-      {
-       "id": "literature",
-       "score": 0.8843
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.784
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3891
-      }
-     ],
-     "hops": 3,
-     "via": "FKBP1A",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201182",
-   "name": "Temsirolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "mantle cell lymphoma",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "rank": 32,
-   "score": 0.0544,
+   "score": 0.0507,
    "rawScore": 0.255617,
    "geneCount": 1,
    "paths": [
@@ -2166,8 +2252,80 @@
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 32,
+   "score": 0.0507,
+   "rawScore": 0.255617,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACVR1",
+     "geneId": "ENSG00000115170",
+     "geneName": "activin A receptor type 1",
+     "assoc": 0.9984,
+     "contribution": 0.255617,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8956
+      },
+      {
+       "id": "literature",
+       "score": 0.8843
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.784
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3891
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201182",
+   "name": "Temsirolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "mantle cell lymphoma",
+    "renal cell carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 33,
-   "score": 0.0544,
+   "score": 0.0507,
    "rawScore": 0.255617,
    "geneCount": 1,
    "paths": [
@@ -2214,8 +2372,24 @@
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 34,
-   "score": 0.0544,
+   "score": 0.0507,
    "rawScore": 0.255617,
    "geneCount": 1,
    "paths": [
@@ -2251,19 +2425,49 @@
    ]
   },
   {
-   "id": "CHEMBL1200686",
-   "name": "Pimecrolimus",
+   "id": "CHEMBL1908360",
+   "name": "Everolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "Eczematoid dermatitis"
+    "pancreatic neoplasm",
+    "kidney angiomyolipoma",
+    "astrocytoma (excluding glioblastoma)",
+    "tuberous sclerosis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 13,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 35,
-   "score": 0.0544,
+   "score": 0.0507,
    "rawScore": 0.255617,
    "geneCount": 1,
    "paths": [
@@ -2295,45 +2499,6 @@
      "hops": 3,
      "via": "FKBP1A",
      "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor"
-   ],
-   "rank": 36,
-   "score": 0.0506,
-   "rawScore": 0.238313,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDGFRA",
-     "geneId": "ENSG00000134853",
-     "geneName": "platelet derived growth factor receptor alpha",
-     "assoc": 0.5797,
-     "contribution": 0.238313,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4364
-      },
-      {
-       "id": "literature",
-       "score": 0.2543
-      }
-     ],
-     "hops": 3,
-     "via": "PIK3CA",
-     "viaScore": 0.99
     }
    ]
   },
@@ -2351,8 +2516,11 @@
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
-   "rank": 37,
-   "score": 0.0506,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.0472,
    "rawScore": 0.238313,
    "geneCount": 1,
    "paths": [
@@ -2380,149 +2548,44 @@
    ]
   },
   {
-   "id": "CHEMBL1213492",
-   "name": "Givinostat",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Duchenne muscular dystrophy"
+    "breast neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Histone deacetylase inhibitor"
+    "PI3-kinase p110-alpha subunit inhibitor"
    ],
-   "rank": 38,
-   "score": 0.0505,
-   "rawScore": 0.237971,
-   "geneCount": 11,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.0472,
+   "rawScore": 0.238313,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "RUNX2",
-     "geneId": "ENSG00000124813",
-     "geneName": "RUNX family transcription factor 2",
-     "assoc": 0.5419,
-     "contribution": 0.108762,
-     "drugsOnGene": 5,
+     "gene": "PDGFRA",
+     "geneId": "ENSG00000134853",
+     "geneName": "platelet derived growth factor receptor alpha",
+     "assoc": 0.5797,
+     "contribution": 0.238313,
+     "drugsOnGene": 3,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5334
+       "score": 0.4364
       },
       {
        "id": "literature",
-       "score": 0.0182
+       "score": 0.2543
       }
      ],
      "hops": 3,
-     "via": "HDAC4",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "ZBTB16",
-     "geneId": "ENSG00000109906",
-     "geneName": "zinc finger and BTB domain containing 16",
-     "assoc": 0.546,
-     "contribution": 0.06672,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.546
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC4",
-     "viaScore": 0.942
-    },
-    {
-     "gene": "ZBTB16",
-     "geneId": "ENSG00000109906",
-     "geneName": "zinc finger and BTB domain containing 16",
-     "assoc": 0.546,
-     "contribution": 0.062488,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.546
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.949
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL483254",
-   "name": "Panobinostat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "plasma cell myeloma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Histone deacetylase inhibitor"
-   ],
-   "rank": 39,
-   "score": 0.0505,
-   "rawScore": 0.237971,
-   "geneCount": 11,
-   "paths": [
-    {
-     "gene": "RUNX2",
-     "geneId": "ENSG00000124813",
-     "geneName": "RUNX family transcription factor 2",
-     "assoc": 0.5419,
-     "contribution": 0.108762,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5334
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC4",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "ZBTB16",
-     "geneId": "ENSG00000109906",
-     "geneName": "zinc finger and BTB domain containing 16",
-     "assoc": 0.546,
-     "contribution": 0.06672,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.546
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC4",
-     "viaScore": 0.942
-    },
-    {
-     "gene": "ZBTB16",
-     "geneId": "ENSG00000109906",
-     "geneName": "zinc finger and BTB domain containing 16",
-     "assoc": 0.546,
-     "contribution": 0.062488,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.546
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.949
+     "via": "PIK3CA",
+     "viaScore": 0.99
     }
    ]
   },
@@ -2540,8 +2603,163 @@
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.0472,
+   "rawScore": 0.237971,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "RUNX2",
+     "geneId": "ENSG00000124813",
+     "geneName": "RUNX family transcription factor 2",
+     "assoc": 0.5419,
+     "contribution": 0.108762,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5334
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "ZBTB16",
+     "geneId": "ENSG00000109906",
+     "geneName": "zinc finger and BTB domain containing 16",
+     "assoc": 0.546,
+     "contribution": 0.06672,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.546
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.942
+    },
+    {
+     "gene": "ZBTB16",
+     "geneId": "ENSG00000109906",
+     "geneName": "zinc finger and BTB domain containing 16",
+     "assoc": 0.546,
+     "contribution": 0.062488,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.546
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.949
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL27759",
+   "name": "Entinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.0472,
+   "rawScore": 0.237971,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "RUNX2",
+     "geneId": "ENSG00000124813",
+     "geneName": "RUNX family transcription factor 2",
+     "assoc": 0.5419,
+     "contribution": 0.108762,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5334
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "ZBTB16",
+     "geneId": "ENSG00000109906",
+     "geneName": "zinc finger and BTB domain containing 16",
+     "assoc": 0.546,
+     "contribution": 0.06672,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.546
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC4",
+     "viaScore": 0.942
+    },
+    {
+     "gene": "ZBTB16",
+     "geneId": "ENSG00000109906",
+     "geneName": "zinc finger and BTB domain containing 16",
+     "assoc": 0.546,
+     "contribution": 0.062488,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.546
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.949
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Duchenne muscular dystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 40,
-   "score": 0.0505,
+   "score": 0.0472,
    "rawScore": 0.237971,
    "geneCount": 11,
    "paths": [
@@ -2615,8 +2833,16 @@
    "mechanisms": [
     "Retinoic acid receptor gamma agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 48,
-   "score": 0.041,
+   "score": 0.0383,
    "rawScore": 0.193905,
    "geneCount": 1,
    "paths": [

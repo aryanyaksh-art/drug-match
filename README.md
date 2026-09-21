@@ -41,6 +41,14 @@ So a method that only looks at a disease's own genes finds nothing for exactly t
 
 Adding that hop moved nitisinone from rank 27 of 33 to **rank 2 of 119**.
 
+Measured across every disease rather than that one case, the hop helps, but modestly and unevenly — 142 diseases improve, 124 worsen. The benefit concentrates exactly where the reasoning said it should:
+
+| group | direct paths only | with the hop | change |
+|---|---|---|---|
+| rare | 33.8% | 28.4% | −5.4% |
+| common | 33.7% | 31.1% | −2.6% |
+| auto-selected | 39.0% | 38.3% | −0.7% |
+
 Longer paths are not penalised by an invented constant. They damp naturally, because the interaction score is always below 1 and the third node introduces another degree term.
 
 ### The leakage problem
@@ -55,26 +63,43 @@ This is also why no train/test split is needed: there are no fitted parameters t
 
 ## Does it work?
 
-Measured against **2,377 drug–disease pairs already known to work**, across 89 diseases. Three rankings are compared over the identical candidate pool:
+Measured against **4,089 drug–disease pairs already known to work**, across 307 diseases. Three rankings are compared over the identical candidate pool:
 
 | method | top 5% | top 10% | top 25% | median |
 |---|---|---|---|---|
-| **ours** | **12.3%** | **21.2%** | **42.3%** | **31.1%** |
-| no damping (w = 0) | 9.4% | 16.5% | 35.9% | 38.7% |
-| popularity, disease ignored | 2.9% | 5.3% | 16.7% | 60.3% |
+| **ours** | **10.9%** | **18.3%** | **39.4%** | **33.5%** |
+| no damping (w = 0) | 8.8% | 14.9% | 34.4% | 40.0% |
+| popularity, disease ignored | 3.3% | 6.6% | 18.2% | 59.6% |
 | random | 5.0% | 10.0% | 25.0% | 50.0% |
 
 The popularity row is the important one. Ranking drugs by how many genes they hit, ignoring the disease entirely, does **worse than random**. So the biology is doing the work, not the arithmetic.
 
-Also: for **35 of 89** diseases the single top-ranked candidate is already a real treatment, and for **60 of 89** a real treatment appears in the top five.
+Bootstrapping over diseases — not over pairs, which are correlated within a disease — puts the median at **33.9%, 95% CI [31.8%, 36.4%]**. The interval excludes random.
 
-**Rare diseases score better than common ones** — a 27.8% median against 31.1% overall — which is the point of the project.
+For **59 of 307** diseases the single top-ranked candidate is already a real treatment, and for **118 of 307** one appears in the top five.
 
-### What it gets wrong
+**Rare diseases are the best-served group**, at a 27.9% median against 33.5% overall. That is the point of the project, and it is not an accident — see the interaction hop below.
 
-Nine of 89 diseases still rank worse than random, Angelman syndrome worst among them. They are left in the set rather than trimmed; cherry-picking the disease list would be the easiest way to fake a better number and the easiest thing to get caught doing. The interface flags thin results and explains why.
+### Where it falls down
 
-Two diseases could not be evaluated at all, because no drug already known to treat them reached the candidate pool.
+Eighty-nine of 307 diseases rank worse than random. They are not evenly spread:
+
+| group | worse than random |
+|---|---|
+| rare, hand-curated | 7 of 68 |
+| common, hand-curated | 2 of 32 |
+| auto-selected | 80 of ~207 |
+
+The auto-selected set is where the method struggles, and it drags the headline down from the 31.1% we saw on the curated set alone. Many of those diseases are broad ontology terms — "deafness", "peritoneal fibrosis" — where the disease definition is too vague for gene association to mean much.
+
+That gap only became visible once we stopped choosing diseases ourselves, which is the argument for having stopped.
+
+Two further honest notes:
+
+- **Text mining carries more signal than any other evidence type.** That is uncomfortable, because papers co-mention a gene and a disease partly *because* a drug already links them, so literature evidence may quietly re-import what we excluded. Removing all literature-derived evidence moves the median to 36.4% — worse, but still clear of chance. The result does not rest on it.
+- **The negative control does not fully collapse.** Scoring each disease against a different disease's known drugs gives 44.2%, not a clean 50%, because many diseases share common treatments so some drugs rank well everywhere.
+
+Run `python pipeline/analysis.py` to reproduce all of this.
 
 ---
 
@@ -102,7 +127,9 @@ The web app reads **only** precomputed JSON. It never calls an API, so it works 
 ## Layout
 
 ```
-pipeline/diseases.py   the 100 diseases covered, with resolved MONDO ids
+pipeline/diseases.py   the curated 100 diseases, with resolved MONDO ids
+pipeline/select_diseases.py  picks 320 more by a rule fixed in advance
+pipeline/analysis.py   sensitivity, bootstrap, ablation, negative control
 pipeline/fetch.py      Open Targets GraphQL, batched with aliases
 pipeline/score.py      degree-weighted path scoring, 2-hop and 3-hop
 pipeline/validate.py   ranks known treatments, compares against two baselines
@@ -112,7 +139,9 @@ diagrams/              SVG diagrams for the presentation
 CITATIONS.md           sources, verified rather than recalled
 ```
 
-Sixty-eight of the hundred diseases are rare. The common ones are included for **validation density** — rare diseases have too few known approved drugs to measure ranking quality against on their own.
+The set is 420 diseases: 68 rare and 32 common that we chose, plus 320 selected programmatically. The common ones are included for **validation density** — rare diseases have too few known approved drugs to measure ranking quality against on their own.
+
+The 320 are chosen by `select_diseases.py`, which screens all 15,717 diseases under ten therapeutic areas against a rule written down before any result was seen: at least 50 associated genes and at least one known drug, ordered by ontology id. That ordering has nothing to do with quality, so the cut is not a hidden quality filter. The point is that nobody can ask whether we picked diseases we knew would work.
 
 ---
 

@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 16,
  "knownDrugCount": 137,
- "candidatesConsidered": 424,
+ "candidatesConsidered": 425,
  "pathsTwoHop": 230,
- "pathsThreeHop": 691,
+ "pathsThreeHop": 711,
  "candidates": [
   {
    "id": "CHEMBL2070241",
@@ -21,7 +21,10 @@
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 1,
    "score": 1.0,
    "rawScore": 3.764074,
    "geneCount": 1,
@@ -129,6 +132,9 @@
    "mechanisms": [
     "Glutamate receptor ionotropic AMPA antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 4,
    "score": 0.2767,
    "rawScore": 1.053022,
@@ -210,6 +216,9 @@
    "mechanisms": [
     "Alcohol dehydrogenase class I inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
    "score": 0.2455,
    "rawScore": 0.935953,
@@ -281,85 +290,6 @@
    ]
   },
   {
-   "id": "CHEMBL1909285",
-   "name": "Nitrefazole",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Alcohol dehydrogenase inhibitor"
-   ],
-   "rank": 7,
-   "score": 0.1994,
-   "rawScore": 0.762983,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "ADH1B",
-     "geneId": "ENSG00000196616",
-     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
-     "assoc": 0.8979,
-     "contribution": 0.35748,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7812
-      },
-      {
-       "id": "literature",
-       "score": 0.5335
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADH1B",
-     "geneId": "ENSG00000196616",
-     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
-     "assoc": 0.8979,
-     "contribution": 0.20306,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7812
-      },
-      {
-       "id": "literature",
-       "score": 0.5335
-      }
-     ],
-     "hops": 3,
-     "via": "ADH1A",
-     "viaScore": 0.989
-    },
-    {
-     "gene": "ADH1B",
-     "geneId": "ENSG00000196616",
-     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
-     "assoc": 0.8979,
-     "contribution": 0.202444,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7812
-      },
-      {
-       "id": "literature",
-       "score": 0.5335
-      }
-     ],
-     "hops": 3,
-     "via": "ADH1C",
-     "viaScore": 0.986
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2219536",
    "name": "Mipomersen",
    "drugType": "Oligonucleotide",
@@ -371,7 +301,15 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
-   "rank": 8,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 7,
    "score": 0.1971,
    "rawScore": 0.754292,
    "geneCount": 1,
@@ -404,6 +342,177 @@
    ]
   },
   {
+   "id": "CHEMBL1909285",
+   "name": "Nitrefazole",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Alcohol dehydrogenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.1851,
+   "rawScore": 0.70932,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "ADH1B",
+     "geneId": "ENSG00000196616",
+     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
+     "assoc": 0.8979,
+     "contribution": 0.332337,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7812
+      },
+      {
+       "id": "literature",
+       "score": 0.5335
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADH1B",
+     "geneId": "ENSG00000196616",
+     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
+     "assoc": 0.8979,
+     "contribution": 0.188778,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7812
+      },
+      {
+       "id": "literature",
+       "score": 0.5335
+      }
+     ],
+     "hops": 3,
+     "via": "ADH1A",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "ADH1B",
+     "geneId": "ENSG00000196616",
+     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
+     "assoc": 0.8979,
+     "contribution": 0.188205,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7812
+      },
+      {
+       "id": "literature",
+       "score": 0.5335
+      }
+     ],
+     "hops": 3,
+     "via": "ADH1C",
+     "viaScore": 0.986
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL408",
+   "name": "Troglitazone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor gamma agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.1657,
+   "rawScore": 0.636877,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.9981,
+     "contribution": 0.434433,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9084
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8033
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5651
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "UCP3",
+     "geneId": "ENSG00000175564",
+     "geneName": "uncoupling protein 3",
+     "assoc": 0.9325,
+     "contribution": 0.202444,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8018
+      },
+      {
+       "id": "literature",
+       "score": 0.5107
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.774
+    }
+   ]
+  },
+  {
    "id": "CHEMBL121",
    "name": "Rosiglitazone",
    "drugType": "Small molecule",
@@ -416,6 +525,18 @@
     "Peroxisome proliferator-activated receptor gamma agonist",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 10,
    "score": 0.1657,
    "rawScore": 0.636877,
@@ -478,177 +599,6 @@
    ]
   },
   {
-   "id": "CHEMBL408",
-   "name": "Troglitazone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "rank": 11,
-   "score": 0.1657,
-   "rawScore": 0.636877,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.9981,
-     "contribution": 0.434433,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9084
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8033
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5651
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "UCP3",
-     "geneId": "ENSG00000175564",
-     "geneName": "uncoupling protein 3",
-     "assoc": 0.9325,
-     "contribution": 0.202444,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8018
-      },
-      {
-       "id": "literature",
-       "score": 0.5107
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "PPARG",
-     "viaScore": 0.774
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL603469",
-   "name": "Lestaurtinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia by FAB classification"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Nerve growth factor receptor Trk-A inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "rank": 12,
-   "score": 0.1595,
-   "rawScore": 0.613653,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.228299,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.212242,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "LEPR",
-     "geneId": "ENSG00000116678",
-     "geneName": "leptin receptor",
-     "assoc": 1.0,
-     "contribution": 0.173111,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.9905
-      },
-      {
-       "id": "literature",
-       "score": 0.9729
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8283
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7295
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL264374",
    "name": "Bezafibrate",
    "drugType": "Small molecule",
@@ -660,7 +610,10 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor agonist"
    ],
-   "rank": 13,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
    "score": 0.1511,
    "rawScore": 0.581868,
    "geneCount": 3,
@@ -747,145 +700,6 @@
    ]
   },
   {
-   "id": "CHEMBL3889654",
-   "name": "Larotrectinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Neurotrophic tyrosine kinase receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor inhibitor"
-   ],
-   "rank": 14,
-   "score": 0.1509,
-   "rawScore": 0.581298,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.301243,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.280056,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297852",
-   "name": "Cenegermin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "eye disorder",
-    "keratitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Neurotrophic tyrosine kinase receptor agonist"
-   ],
-   "rank": 15,
-   "score": 0.1509,
-   "rawScore": 0.581298,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.301243,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.280056,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL441738",
    "name": "Afamelanotide",
    "drugType": "Protein",
@@ -898,7 +712,10 @@
     "Melanocortin receptor 1 agonist",
     "Melanocortin receptor 1 agonist"
    ],
-   "rank": 16,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
    "score": 0.1489,
    "rawScore": 0.573745,
    "geneCount": 1,
@@ -939,20 +756,23 @@
    ]
   },
   {
-   "id": "CHEMBL465",
-   "name": "Dronabinol",
+   "id": "CHEMBL190461",
+   "name": "Cannabidiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Nausea and vomiting",
-    "Anorexia",
-    "cancer",
-    "Nausea"
+    "epilepsy",
+    "Dravet syndrome",
+    "Lennox-Gastaut syndrome",
+    "hamartoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 6,
    "mechanisms": [
-    "Cannabinoid CB1 receptor agonist"
+    "Cannabinoid CB1 receptor negative allosteric modulator"
    ],
-   "rank": 17,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.1431,
    "rawScore": 0.552081,
    "geneCount": 1,
@@ -985,20 +805,23 @@
    ]
   },
   {
-   "id": "CHEMBL190461",
-   "name": "Cannabidiol",
+   "id": "CHEMBL465",
+   "name": "Dronabinol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy",
-    "Dravet syndrome",
-    "Lennox-Gastaut syndrome",
-    "hamartoma"
+    "Nausea and vomiting",
+    "Anorexia",
+    "cancer",
+    "Nausea"
    ],
-   "indicationCount": 6,
+   "indicationCount": 4,
    "mechanisms": [
-    "Cannabinoid CB1 receptor negative allosteric modulator"
+    "Cannabinoid CB1 receptor agonist"
    ],
-   "rank": 19,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
    "score": 0.1431,
    "rawScore": 0.552081,
    "geneCount": 1,
@@ -1041,7 +864,15 @@
    "mechanisms": [
     "Retinoid X receptor alpha antagonist"
    ],
-   "rank": 21,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 18,
    "score": 0.1356,
    "rawScore": 0.523765,
    "geneCount": 1,
@@ -1078,6 +909,253 @@
    ]
   },
   {
+   "id": "CHEMBL603469",
+   "name": "Lestaurtinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia by FAB classification"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Nerve growth factor receptor Trk-A inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.135,
+   "rawScore": 0.521778,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.194119,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.180466,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "LEPR",
+     "geneId": "ENSG00000116678",
+     "geneName": "leptin receptor",
+     "assoc": 1.0,
+     "contribution": 0.147193,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.9905
+      },
+      {
+       "id": "literature",
+       "score": 0.9729
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8283
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7295
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3889654",
+   "name": "Larotrectinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Neurotrophic tyrosine kinase receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.1277,
+   "rawScore": 0.494268,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.256142,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.238126,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297852",
+   "name": "Cenegermin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "eye disorder",
+    "keratitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Neurotrophic tyrosine kinase receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1277,
+   "rawScore": 0.494268,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.256142,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.238126,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297530",
    "name": "Saroglitazar",
    "drugType": "Small molecule",
@@ -1089,6 +1167,9 @@
     "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
    "score": 0.1246,
    "rawScore": 0.482663,
@@ -1151,124 +1232,6 @@
    ]
   },
   {
-   "id": "CHEMBL1983268",
-   "name": "Entrectinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "ALK tyrosine kinase receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor inhibitor",
-    "Proto-oncogene tyrosine-protein kinase ROS inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.1134,
-   "rawScore": 0.440542,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.228299,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.9995,
-     "contribution": 0.212242,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9844
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8813
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7061
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interleukin-6 inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.1133,
-   "rawScore": 0.440495,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LEPR",
-     "geneId": "ENSG00000116678",
-     "geneName": "leptin receptor",
-     "assoc": 1.0,
-     "contribution": 0.440495,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.9905
-      },
-      {
-       "id": "literature",
-       "score": 0.9729
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8283
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7295
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.902
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1743070",
    "name": "Siltuximab",
    "drugType": "Antibody",
@@ -1282,7 +1245,10 @@
    "mechanisms": [
     "Interleukin-6 antagonist"
    ],
-   "rank": 29,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
    "score": 0.1133,
    "rawScore": 0.440495,
    "geneCount": 1,
@@ -1329,7 +1295,10 @@
    "mechanisms": [
     "Interleukin-6 inhibitor"
    ],
-   "rank": 30,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
    "score": 0.1133,
    "rawScore": 0.440495,
    "geneCount": 1,
@@ -1366,18 +1335,77 @@
    ]
   },
   {
-   "id": "CHEMBL3039540",
-   "name": "Aducanumab",
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "immune system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interleukin-6 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.1133,
+   "rawScore": 0.440495,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LEPR",
+     "geneId": "ENSG00000116678",
+     "geneName": "leptin receptor",
+     "assoc": 1.0,
+     "contribution": 0.440495,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.9905
+      },
+      {
+       "id": "literature",
+       "score": 0.9729
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8283
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7295
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.902
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
     "Alzheimer disease",
     "dementia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein binding agent"
+    "Amyloid-beta A4 protein inhibitor"
    ],
-   "rank": 31,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
    "score": 0.1114,
    "rawScore": 0.433227,
    "geneCount": 1,
@@ -1422,7 +1450,10 @@
    "mechanisms": [
     "Amyloid-beta A4 protein disrupting agent"
    ],
-   "rank": 32,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
    "score": 0.1114,
    "rawScore": 0.433227,
    "geneCount": 1,
@@ -1463,6 +1494,61 @@
    "mechanisms": [
     "Amyloid-beta A4 protein stabiliser"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.1114,
+   "rawScore": 0.433227,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.9963,
+     "contribution": 0.433227,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9514
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8298
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5509
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3039540",
+   "name": "Aducanumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Amyloid-beta A4 protein binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 33,
    "score": 0.1114,
    "rawScore": 0.433227,
@@ -1496,47 +1582,54 @@
    ]
   },
   {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
+   "id": "CHEMBL2107841",
+   "name": "Albiglutide",
+   "drugType": "Protein",
    "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
+    "Glucagon-like peptide 1 receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 34,
    "score": 0.1114,
-   "rawScore": 0.433227,
+   "rawScore": 0.433127,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.9963,
-     "contribution": 0.433227,
-     "drugsOnGene": 4,
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9951,
+     "contribution": 0.433127,
+     "drugsOnGene": 8,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9514
+       "score": 0.9622
       },
       {
        "id": "genetic_association",
-       "score": 0.8298
+       "score": 0.7777
       },
       {
        "id": "animal_model",
-       "score": 0.5509
+       "score": 0.4118
       }
      ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1552,6 +1645,9 @@
    "mechanisms": [
     "Glucagon-like peptide 1 receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 35,
    "score": 0.1114,
    "rawScore": 0.433127,
@@ -1596,51 +1692,15 @@
    "mechanisms": [
     "Glucagon-like peptide 1 receptor agonist"
    ],
-   "rank": 40,
-   "score": 0.1114,
-   "rawScore": 0.433127,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9951,
-     "contribution": 0.433127,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9622
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7777
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4118
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL2107841",
-   "name": "Albiglutide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "diabetes mellitus"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glucagon-like peptide 1 receptor agonist"
-   ],
-   "rank": 41,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 40,
    "score": 0.1114,
    "rawScore": 0.433127,
    "geneCount": 1,
@@ -1686,7 +1746,15 @@
     "Muscarinic acetylcholine receptor M1 agonist",
     "Serotonin 2 (5-HT2) receptor antagonist"
    ],
-   "rank": 42,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 41,
    "score": 0.1088,
    "rawScore": 0.423315,
    "geneCount": 8,
@@ -1769,7 +1837,10 @@
    "mechanisms": [
     "Tyrosine 3-hydroxylase inhibitor"
    ],
-   "rank": 43,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
    "score": 0.1054,
    "rawScore": 0.41092,
    "geneCount": 1,
@@ -1798,21 +1869,23 @@
    ]
   },
   {
-   "id": "CHEMBL4298138",
-   "name": "Repotrectinib",
+   "id": "CHEMBL1983268",
+   "name": "Entrectinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cancer",
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "NT-3 growth factor receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "CD74-ROS1 inhibitor"
+    "ALK tyrosine kinase receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor inhibitor",
+    "Proto-oncogene tyrosine-protein kinase ROS inhibitor"
    ],
-   "rank": 44,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
    "score": 0.1033,
    "rawScore": 0.402924,
    "geneCount": 5,
@@ -1870,52 +1943,6 @@
    ]
   },
   {
-   "id": "CHEMBL75880",
-   "name": "Perhexiline",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "angina pectoris",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Carnitine O-palmitoyltransferase 1, muscle isoform inhibitor",
-    "Carnitine palmitoyltransferase 2 inhibitor",
-    "Serine/threonine-protein kinase mTOR inhibitor"
-   ],
-   "rank": 45,
-   "score": 0.0998,
-   "rawScore": 0.389818,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "UCP3",
-     "geneId": "ENSG00000175564",
-     "geneName": "uncoupling protein 3",
-     "assoc": 0.9325,
-     "contribution": 0.389818,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8018
-      },
-      {
-       "id": "literature",
-       "score": 0.5107
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "CPT1B",
-     "viaScore": 0.856
-    }
-   ]
-  },
-  {
    "id": "CHEMBL831",
    "name": "Loxapine",
    "drugType": "Small molecule",
@@ -1931,7 +1958,115 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 46,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 44,
+   "score": 0.0993,
+   "rawScore": 0.387996,
+   "geneCount": 5,
+   "paths": [
+    {
+     "gene": "HTR2C",
+     "geneId": "ENSG00000147246",
+     "geneName": "5-hydroxytryptamine receptor 2C",
+     "assoc": 0.6239,
+     "contribution": 0.090433,
+     "drugsOnGene": 25,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5167
+      },
+      {
+       "id": "literature",
+       "score": 0.2218
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.7531,
+     "contribution": 0.065812,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5705
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4251
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "CNR1",
+     "geneId": "ENSG00000118432",
+     "geneName": "cannabinoid receptor 1",
+     "assoc": 0.9612,
+     "contribution": 0.058883,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8904
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4919
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "DRD2",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL422",
+   "name": "Trifluoperazine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "psychotic disorder",
+    "schizophrenia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "D2-like dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist",
+    "Serotonin 2c (5-HT2c) receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 45,
    "score": 0.0993,
    "rawScore": 0.387996,
    "geneCount": 5,
@@ -2021,95 +2156,15 @@
     "Serotonin 2c (5-HT2c) receptor antagonist",
     "D2-like dopamine receptor antagonist"
    ],
-   "rank": 47,
-   "score": 0.0993,
-   "rawScore": 0.387996,
-   "geneCount": 5,
-   "paths": [
+   "warnings": [
     {
-     "gene": "HTR2C",
-     "geneId": "ENSG00000147246",
-     "geneName": "5-hydroxytryptamine receptor 2C",
-     "assoc": 0.6239,
-     "contribution": 0.090433,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5167
-      },
-      {
-       "id": "literature",
-       "score": 0.2218
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SLC6A3",
-     "geneId": "ENSG00000142319",
-     "geneName": "solute carrier family 6 member 3",
-     "assoc": 0.7531,
-     "contribution": 0.065812,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5705
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4251
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "CNR1",
-     "geneId": "ENSG00000118432",
-     "geneName": "cannabinoid receptor 1",
-     "assoc": 0.9612,
-     "contribution": 0.058883,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8904
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4919
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "DRD2",
-     "viaScore": 0.99
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL422",
-   "name": "Trifluoperazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "psychotic disorder",
-    "schizophrenia"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist",
-    "Serotonin 2c (5-HT2c) receptor antagonist"
-   ],
-   "rank": 48,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 46,
    "score": 0.0993,
    "rawScore": 0.387996,
    "geneCount": 5,
@@ -2197,7 +2252,27 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2c (5-HT2c) receptor antagonist"
    ],
-   "rank": 49,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 47,
    "score": 0.0993,
    "rawScore": 0.387996,
    "geneCount": 5,
@@ -2272,8 +2347,181 @@
    ]
   },
   {
-   "id": "CHEMBL2147777",
-   "name": "Teneligliptin",
+   "id": "CHEMBL612",
+   "name": "Dextroamphetamine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "drug dependence",
+    "narcolepsy",
+    "arteriosclerosis disorder",
+    "narcolepsy-cataplexy syndrome"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Synaptic vesicular amine transporter inhibitor",
+    "Synaptic vesicular amine transporter inhibitor",
+    "Dopamine transporter releasing agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 48,
+   "score": 0.0963,
+   "rawScore": 0.376474,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.7531,
+     "contribution": 0.152721,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5705
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4251
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.7531,
+     "contribution": 0.1172,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5705
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4251
+      }
+     ],
+     "hops": 3,
+     "via": "SLC18A2",
+     "viaScore": 0.966
+    },
+    {
+     "gene": "ADRA2A",
+     "geneId": "ENSG00000150594",
+     "geneName": "adrenoceptor alpha 2A",
+     "assoc": 0.4678,
+     "contribution": 0.078923,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3422
+      },
+      {
+       "id": "literature",
+       "score": 0.1909
+      }
+     ],
+     "hops": 3,
+     "via": "SLC6A3",
+     "viaScore": 0.832
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298138",
+   "name": "Repotrectinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cancer",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "NT-3 growth factor receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "CD74-ROS1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 50,
+   "score": 0.0958,
+   "rawScore": 0.374585,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.194119,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.9995,
+     "contribution": 0.180466,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9844
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8813
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7061
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1779710",
+   "name": "Evogliptin",
    "drugType": "Small molecule",
    "approvedFor": [
     "diabetes mellitus"
@@ -2282,50 +2530,10 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 51,
-   "score": 0.094,
-   "rawScore": 0.367978,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9951,
-     "contribution": 0.367978,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9622
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7777
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4118
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105762",
-   "name": "Omarigliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "rank": 52,
    "score": 0.094,
    "rawScore": 0.367978,
    "geneCount": 1,
@@ -2368,7 +2576,10 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
-   "rank": 53,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 52,
    "score": 0.094,
    "rawScore": 0.367978,
    "geneCount": 1,
@@ -2401,18 +2612,20 @@
    ]
   },
   {
-   "id": "CHEMBL376359",
-   "name": "Alogliptin",
+   "id": "CHEMBL2105762",
+   "name": "Omarigliptin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus",
     "type 2 diabetes mellitus"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
-   "rank": 54,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 53,
    "score": 0.094,
    "rawScore": 0.367978,
    "geneCount": 1,
@@ -2456,6 +2669,53 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 54,
+   "score": 0.094,
+   "rawScore": 0.367978,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9951,
+     "contribution": 0.367978,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9622
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7777
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4118
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1650443",
+   "name": "Trelagliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 55,
    "score": 0.094,
    "rawScore": 0.367978,
@@ -2504,7 +2764,10 @@
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 1,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 2,
    "score": 1.0,
    "rawScore": 3.764074,
    "geneCount": 1,
@@ -2611,6 +2874,22 @@
    "mechanisms": [
     "Leptin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 3,
    "score": 0.5291,
    "rawScore": 1.998978,
@@ -2691,6 +2970,14 @@
     "Glucagon-like peptide 1 receptor agonist",
     "Gastric inhibitory polypeptide receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 5,
    "score": 0.269,
    "rawScore": 1.023891,
@@ -2760,7 +3047,15 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 9,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
    "score": 0.1657,
    "rawScore": 0.636877,
    "geneCount": 1,
@@ -2835,7 +3130,10 @@
    "mechanisms": [
     "Cannabinoid CB1 receptor agonist"
    ],
-   "rank": 18,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
    "score": 0.1431,
    "rawScore": 0.552081,
    "geneCount": 1,
@@ -2879,7 +3177,15 @@
    "mechanisms": [
     "Cannabinoid CB1 receptor antagonist"
    ],
-   "rank": 20,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.1431,
    "rawScore": 0.552081,
    "geneCount": 1,
@@ -2927,7 +3233,10 @@
     "Glutamate receptor ionotropic kainate antagonist",
     "Sodium channel alpha subunit blocker"
    ],
-   "rank": 22,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
    "score": 0.1327,
    "rawScore": 0.513225,
    "geneCount": 37,
@@ -3009,7 +3318,15 @@
    "mechanisms": [
     "Aldehyde dehydrogenase inhibitor"
    ],
-   "rank": 23,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
    "score": 0.1327,
    "rawScore": 0.513157,
    "geneCount": 1,
@@ -3038,18 +3355,22 @@
    ]
   },
   {
-   "id": "CHEMBL175247",
-   "name": "Orlistat",
+   "id": "CHEMBL2103825",
+   "name": "Cetilistat",
    "drugType": "Small molecule",
    "approvedFor": [
+    "inherited lipid metabolism disorder",
     "Obesity",
-    "obesity disorder"
+    "type 2 diabetes mellitus"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
    "score": 0.1138,
    "rawScore": 0.442354,
@@ -3096,19 +3417,21 @@
    ]
   },
   {
-   "id": "CHEMBL2103825",
-   "name": "Cetilistat",
+   "id": "CHEMBL175247",
+   "name": "Orlistat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inherited lipid metabolism disorder",
     "Obesity",
-    "type 2 diabetes mellitus"
+    "obesity disorder"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 26,
    "score": 0.1138,
    "rawScore": 0.442354,

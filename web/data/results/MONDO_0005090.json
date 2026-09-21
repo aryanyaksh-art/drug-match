@@ -7,9 +7,9 @@
  "genesScored": 49,
  "genesWithDrugs": 31,
  "knownDrugCount": 347,
- "candidatesConsidered": 353,
+ "candidatesConsidered": 356,
  "pathsTwoHop": 539,
- "pathsThreeHop": 611,
+ "pathsThreeHop": 895,
  "candidates": [
   {
    "id": "CHEMBL1094",
@@ -24,9 +24,21 @@
    "mechanisms": [
     "Glutamate [NMDA] receptor antagonist"
    ],
-   "rank": 4,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 1,
    "score": 1.0,
-   "rawScore": 1.018651,
+   "rawScore": 1.046229,
    "geneCount": 7,
    "paths": [
     {
@@ -107,8 +119,16 @@
     "Norepinephrine transporter inhibitor",
     "Serotonin transporter inhibitor"
    ],
-   "rank": 6,
-   "score": 0.9899,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.9627,
    "rawScore": 1.008461,
    "geneCount": 7,
    "paths": [
@@ -192,9 +212,12 @@
     "Dopamine receptor agonist",
     "Serotonin 1b (5-HT1b) receptor agonist"
    ],
-   "rank": 10,
-   "score": 0.9339,
-   "rawScore": 0.95201,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.9304,
+   "rawScore": 0.975883,
    "geneCount": 13,
    "paths": [
     {
@@ -266,9 +289,25 @@
    "mechanisms": [
     "Serotonin (5-HT) receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Reasons of safety"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 11,
-   "score": 0.8278,
-   "rawScore": 0.845012,
+   "score": 0.8525,
+   "rawScore": 0.897053,
    "geneCount": 17,
    "paths": [
     {
@@ -344,9 +383,25 @@
    "mechanisms": [
     "Serotonin (5-HT) receptor antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 12,
-   "score": 0.8278,
-   "rawScore": 0.845012,
+   "score": 0.8525,
+   "rawScore": 0.897053,
    "geneCount": 17,
    "paths": [
     {
@@ -423,9 +478,12 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 18,
-   "score": 0.6869,
-   "rawScore": 0.702888,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.6695,
+   "rawScore": 0.712082,
    "geneCount": 4,
    "paths": [
     {
@@ -522,9 +580,12 @@
     "Histamine H1 receptor antagonist",
     "Sodium channel alpha subunit blocker"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 22,
-   "score": 0.6674,
-   "rawScore": 0.683224,
+   "score": 0.6593,
+   "rawScore": 0.701721,
    "geneCount": 19,
    "paths": [
     {
@@ -593,6 +654,98 @@
    ]
   },
   {
+   "id": "CHEMBL278819",
+   "name": "Minaprine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "depressive disorder",
+    "major depressive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Dopamine D1 and D2 receptor agonist",
+    "Muscarinic acetylcholine receptor M1 agonist",
+    "Serotonin 2 (5-HT2) receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.6131,
+   "rawScore": 0.654984,
+   "geneCount": 8,
+   "paths": [
+    {
+     "gene": "TMTC1",
+     "geneId": "ENSG00000133687",
+     "geneName": "transmembrane O-mannosyltransferase targeting cadherins 1",
+     "assoc": 0.8459,
+     "contribution": 0.147451,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8337
+      },
+      {
+       "id": "literature",
+       "score": 0.0732
+      }
+     ],
+     "hops": 3,
+     "via": "DRD1",
+     "viaScore": 0.92
+    },
+    {
+     "gene": "DRD1",
+     "geneId": "ENSG00000184845",
+     "geneName": "dopamine receptor D1",
+     "assoc": 0.5816,
+     "contribution": 0.110183,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5816
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9897,
+     "contribution": 0.078745,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9436
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5738
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5709
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297734",
    "name": "Crizanlizumab",
    "drugType": "Antibody",
@@ -603,8 +756,20 @@
    "mechanisms": [
     "P-selectin blocker"
    ],
-   "rank": 23,
-   "score": 0.6347,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "higher rate of severe and serious treatment-related side effects for Adakveo compared with placebo"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "benefit-risk balance of Adakveo is no longer considered favourable (No new safety concerns were identified. However, there were higher rates of grade \u22653 treatment related adverse events as well as of serious related adverse events for crizanlizumab compared to placebo.)"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.6083,
    "rawScore": 0.650193,
    "geneCount": 1,
    "paths": [
@@ -632,6 +797,196 @@
    ]
   },
   {
+   "id": "CHEMBL1201293",
+   "name": "Acamprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "alcohol dependence"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor antagonist",
+    "GABA-A receptor; anion channel positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.6082,
+   "rawScore": 0.650092,
+   "geneCount": 23,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.9615,
+     "contribution": 0.119404,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.888
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6563
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.072669,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8307
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8002
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.891
+    },
+    {
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.072369,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8307
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8002
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2A",
+     "viaScore": 0.936
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL589",
+   "name": "Ropinirole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "D2-like dopamine receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 27,
+   "score": 0.6071,
+   "rawScore": 0.648929,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.158328,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.153561,
+     "drugsOnGene": 25,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.7804,
+     "contribution": 0.151723,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5738
+      },
+      {
+       "id": "literature",
+       "score": 0.4848
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1303",
    "name": "Rotigotine",
    "drugType": "Small molecule",
@@ -643,8 +998,111 @@
    "mechanisms": [
     "D2-like dopamine receptor agonist"
    ],
-   "rank": 24,
-   "score": 0.6334,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.6071,
+   "rawScore": 0.648929,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.158328,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.153561,
+     "drugsOnGene": 25,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.7804,
+     "contribution": 0.151723,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5738
+      },
+      {
+       "id": "literature",
+       "score": 0.4848
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL493",
+   "name": "Bromocriptine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "D2-like dopamine receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.6071,
    "rawScore": 0.648929,
    "geneCount": 3,
    "paths": [
@@ -741,337 +1199,66 @@
    "mechanisms": [
     "D2-like dopamine receptor agonist"
    ],
-   "rank": 27,
-   "score": 0.6334,
-   "rawScore": 0.648929,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.158328,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.153561,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.7804,
-     "contribution": 0.151723,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5738
-      },
-      {
-       "id": "literature",
-       "score": 0.4848
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL493",
-   "name": "Bromocriptine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "D2-like dopamine receptor agonist"
-   ],
-   "rank": 28,
-   "score": 0.6334,
-   "rawScore": 0.648929,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.158328,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.153561,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.7804,
-     "contribution": 0.151723,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5738
-      },
-      {
-       "id": "literature",
-       "score": 0.4848
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL589",
-   "name": "Ropinirole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "D2-like dopamine receptor agonist"
-   ],
-   "rank": 29,
-   "score": 0.6334,
-   "rawScore": 0.648929,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.158328,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.153561,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.7804,
-     "contribution": 0.151723,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5738
-      },
-      {
-       "id": "literature",
-       "score": 0.4848
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL278819",
-   "name": "Minaprine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "depressive disorder",
-    "major depressive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Dopamine D1 and D2 receptor agonist",
-    "Muscarinic acetylcholine receptor M1 agonist",
-    "Serotonin 2 (5-HT2) receptor antagonist"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 30,
-   "score": 0.6325,
-   "rawScore": 0.648017,
-   "geneCount": 8,
+   "score": 0.6071,
+   "rawScore": 0.648929,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "TMTC1",
-     "geneId": "ENSG00000133687",
-     "geneName": "transmembrane O-mannosyltransferase targeting cadherins 1",
-     "assoc": 0.8459,
-     "contribution": 0.147451,
-     "drugsOnGene": 8,
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.158328,
+     "drugsOnGene": 20,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8337
+       "id": "animal_model",
+       "score": 0.5285
       },
       {
        "id": "literature",
-       "score": 0.0732
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
       }
      ],
      "hops": 3,
-     "via": "DRD1",
-     "viaScore": 0.92
+     "via": "DRD4",
+     "viaScore": 0.943
     },
     {
-     "gene": "DRD1",
-     "geneId": "ENSG00000184845",
-     "geneName": "dopamine receptor D1",
-     "assoc": 0.5816,
-     "contribution": 0.110183,
-     "drugsOnGene": 8,
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.153561,
+     "drugsOnGene": 25,
      "evidence": [
       {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
        "id": "literature",
-       "score": 0.5816
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
       }
      ],
      "hops": 2,
@@ -1079,629 +1266,25 @@
      "viaScore": null
     },
     {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9897,
-     "contribution": 0.078745,
-     "drugsOnGene": 70,
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.7804,
+     "contribution": 0.151723,
+     "drugsOnGene": 20,
      "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9436
-      },
       {
        "id": "animal_model",
        "score": 0.5738
       },
       {
-       "id": "genetic_association",
-       "score": 0.5709
+       "id": "literature",
+       "score": 0.4848
       }
      ],
      "hops": 2,
      "via": null,
      "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201293",
-   "name": "Acamprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "alcohol dependence"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor antagonist",
-    "GABA-A receptor; anion channel positive modulator"
-   ],
-   "rank": 31,
-   "score": 0.6176,
-   "rawScore": 0.632956,
-   "geneCount": 23,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.9615,
-     "contribution": 0.119404,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.888
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6563
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.072669,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.891
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.072369,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2A",
-     "viaScore": 0.936
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1059",
-   "name": "Pregabalin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Seizure",
-    "spinal cord injury",
-    "chronic obstructive pulmonary disease",
-    "neuropathic pain"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Voltage-gated calcium channel modulator"
-   ],
-   "rank": 32,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL940",
-   "name": "Gabapentin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neuralgia",
-    "Focal impaired awareness seizure",
-    "Seizure",
-    "epilepsy"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Voltage-gated calcium channel modulator"
-   ],
-   "rank": 33,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL404849",
-   "name": "Suloctidil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated calcium channel blocker"
-   ],
-   "rank": 34,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1628502",
-   "name": "Gabapentin Enacarbil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neuralgia",
-    "restless legs syndrome"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated calcium channel modulator"
-   ],
-   "rank": 35,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL473159",
-   "name": "Phloroglucinol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "urinary system disorder",
-    "gastrointestinal disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated calcium channel blocker"
-   ],
-   "rank": 36,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1008",
-   "name": "Bepridil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated calcium channel blocker"
-   ],
-   "rank": 37,
-   "score": 0.6108,
-   "rawScore": 0.626127,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.109089,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082557,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.082392,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
     }
    ]
   },
@@ -1717,8 +1300,11 @@
     "Serotonin 2b (5-HT2b) receptor partial agonist",
     "Dopamine D1 receptor antagonist"
    ],
-   "rank": 38,
-   "score": 0.6019,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.5757,
    "rawScore": 0.617197,
    "geneCount": 2,
    "paths": [
@@ -1780,93 +1366,6 @@
    ]
   },
   {
-   "id": "CHEMBL363295",
-   "name": "Terodiline",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Polyuria",
-    "Urinary incontinence"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Muscarinic acetylcholine receptor antagonist",
-    "Voltage-gated calcium channel blocker"
-   ],
-   "rank": 39,
-   "score": 0.5963,
-   "rawScore": 0.611465,
-   "geneCount": 24,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.099357,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.075192,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CACNA1C",
-     "geneId": "ENSG00000151067",
-     "geneName": "calcium voltage-gated channel subunit alpha1 C",
-     "assoc": 0.9069,
-     "contribution": 0.075042,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7665
-      },
-      {
-       "id": "literature",
-       "score": 0.6016
-      }
-     ],
-     "hops": 3,
-     "via": "CACNB3",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
    "id": "CHEMBL588",
    "name": "Fenoldopam",
    "drugType": "Small molecule",
@@ -1878,8 +1377,11 @@
    "mechanisms": [
     "Dopamine D1 receptor agonist"
    ],
-   "rank": 40,
-   "score": 0.5768,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.5507,
    "rawScore": 0.591888,
    "geneCount": 1,
    "paths": [
@@ -1934,8 +1436,20 @@
    "mechanisms": [
     "Dopamine D1 and D2 receptor antagonist"
    ],
-   "rank": 41,
-   "score": 0.5707,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "drug misuse"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.5445,
    "rawScore": 0.58567,
    "geneCount": 2,
    "paths": [
@@ -2016,382 +1530,11 @@
    "mechanisms": [
     "Voltage-gated T-type calcium channel blocker"
    ],
-   "rank": 42,
-   "score": 0.5494,
-   "rawScore": 0.564209,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.228262,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.169358,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1H",
-     "viaScore": 0.979
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.16659,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1G",
-     "viaScore": 0.963
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL695",
-   "name": "Trimethadione",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy",
-    "malignant pancreatic neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated T-type calcium channel blocker"
-   ],
-   "rank": 43,
-   "score": 0.5494,
-   "rawScore": 0.564209,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.228262,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.169358,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1H",
-     "viaScore": 0.979
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.16659,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1G",
-     "viaScore": 0.963
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1100",
-   "name": "Paramethadione",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy",
-    "fetal trimethadione syndrome"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Voltage-gated T-type calcium channel blocker"
-   ],
-   "rank": 44,
-   "score": 0.5494,
-   "rawScore": 0.564209,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.228262,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.169358,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1H",
-     "viaScore": 0.979
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.16659,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1G",
-     "viaScore": 0.963
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL696",
-   "name": "Ethosuximide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated T-type calcium channel blocker"
-   ],
-   "rank": 45,
-   "score": 0.5494,
-   "rawScore": 0.564209,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.228262,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.169358,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1H",
-     "viaScore": 0.979
-    },
-    {
-     "gene": "CACNA1I",
-     "geneId": "ENSG00000100346",
-     "geneName": "calcium voltage-gated channel subunit alpha1 I",
-     "assoc": 0.9882,
-     "contribution": 0.16659,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.8246
-      },
-      {
-       "id": "literature",
-       "score": 0.7426
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7395
-      }
-     ],
-     "hops": 3,
-     "via": "CACNA1G",
-     "viaScore": 0.963
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL797",
-   "name": "Phensuximide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated T-type calcium channel blocker"
-   ],
-   "rank": 46,
-   "score": 0.5494,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.5233,
    "rawScore": 0.564209,
    "geneCount": 3,
    "paths": [
@@ -2484,8 +1627,32 @@
    "mechanisms": [
     "Voltage-gated T-type calcium channel blocker"
    ],
-   "rank": 47,
-   "score": 0.5494,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "potential to induce cardiac arrhythmias (including torsades de pointes) especially when taken concomitantly with other medications"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Safety concerns in relation to potential for serious drug interactions.; Reports of life-threatening interactions of the drug: extremely low heart rates and a risk of muscle injury; Following reports of serious adverse effects caused by the interaction with other medicines"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "associated with potentially harmful interactions with other drugs. Mibefradil dihydrochloride reduced the activity of certain liver enzymes that are important in helping the body eliminate many other drugs. Inhibiting these enzymes can cause some of these drugs to accumulate to dangerous levels in the body"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.5233,
    "rawScore": 0.564209,
    "geneCount": 3,
    "paths": [
@@ -2567,6 +1734,1028 @@
    ]
   },
   {
+   "id": "CHEMBL695",
+   "name": "Trimethadione",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy",
+    "malignant pancreatic neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated T-type calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.5233,
+   "rawScore": 0.564209,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.228262,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.169358,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1H",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.16659,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1G",
+     "viaScore": 0.963
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL797",
+   "name": "Phensuximide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated T-type calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.5233,
+   "rawScore": 0.564209,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.228262,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.169358,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1H",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.16659,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1G",
+     "viaScore": 0.963
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL696",
+   "name": "Ethosuximide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated T-type calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.5233,
+   "rawScore": 0.564209,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.228262,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.169358,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1H",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.16659,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1G",
+     "viaScore": 0.963
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1100",
+   "name": "Paramethadione",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy",
+    "fetal trimethadione syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated T-type calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.5233,
+   "rawScore": 0.564209,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.228262,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.169358,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1H",
+     "viaScore": 0.979
+    },
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.16659,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 3,
+     "via": "CACNA1G",
+     "viaScore": 0.963
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL404849",
+   "name": "Suloctidil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1059",
+   "name": "Pregabalin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Seizure",
+    "spinal cord injury",
+    "chronic obstructive pulmonary disease",
+    "neuropathic pain"
+   ],
+   "indicationCount": 9,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1628502",
+   "name": "Gabapentin Enacarbil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neuralgia",
+    "restless legs syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL473159",
+   "name": "Phloroglucinol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "urinary system disorder",
+    "gastrointestinal disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 45,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1008",
+   "name": "Bepridil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Voltage-gated calcium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 46,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL940",
+   "name": "Gabapentin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neuralgia",
+    "Focal impaired awareness seizure",
+    "Seizure",
+    "epilepsy"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Voltage-gated calcium channel modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 47,
+   "score": 0.5115,
+   "rawScore": 0.552299,
+   "geneCount": 26,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.096226,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072823,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.072677,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL363295",
+   "name": "Terodiline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Polyuria",
+    "Urinary incontinence"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Muscarinic acetylcholine receptor antagonist",
+    "Voltage-gated calcium channel blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 48,
+   "score": 0.5112,
+   "rawScore": 0.551965,
+   "geneCount": 31,
+   "paths": [
+    {
+     "gene": "CACNA1I",
+     "geneId": "ENSG00000100346",
+     "geneName": "calcium voltage-gated channel subunit alpha1 I",
+     "assoc": 0.9882,
+     "contribution": 0.089689,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.8246
+      },
+      {
+       "id": "literature",
+       "score": 0.7426
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7395
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.067876,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CACNA1C",
+     "geneId": "ENSG00000151067",
+     "geneName": "calcium voltage-gated channel subunit alpha1 C",
+     "assoc": 0.9069,
+     "contribution": 0.06774,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7665
+      },
+      {
+       "id": "literature",
+       "score": 0.6016
+      }
+     ],
+     "hops": 3,
+     "via": "CACNB3",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
    "id": "CHEMBL439849",
    "name": "Vilazodone",
    "drugType": "Small molecule",
@@ -2578,8 +2767,16 @@
     "Serotonin transporter inhibitor",
     "Serotonin 1a (5-HT1a) receptor partial agonist"
    ],
-   "rank": 48,
-   "score": 0.5318,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 49,
+   "score": 0.5058,
    "rawScore": 0.546479,
    "geneCount": 2,
    "paths": [
@@ -2653,9 +2850,12 @@
     "Dopamine D3 receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 51,
-   "score": 0.4934,
-   "rawScore": 0.507722,
+   "score": 0.4765,
+   "rawScore": 0.516916,
    "geneCount": 4,
    "paths": [
     {
@@ -2732,77 +2932,6 @@
    ]
   },
   {
-   "id": "CHEMBL1065",
-   "name": "Methysergide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "migraine disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Serotonin 2c (5-HT2c) receptor antagonist",
-    "Serotonin 1a (5-HT1a) receptor partial agonist",
-    "Serotonin 2b (5-HT2b) receptor antagonist"
-   ],
-   "rank": 58,
-   "score": 0.4526,
-   "rawScore": 0.466604,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "HTR1A",
-     "geneId": "ENSG00000178394",
-     "geneName": "5-hydroxytryptamine receptor 1A",
-     "assoc": 0.6164,
-     "contribution": 0.142381,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6164
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "HTR1B",
-     "geneId": "ENSG00000135312",
-     "geneName": "5-hydroxytryptamine receptor 1B",
-     "assoc": 0.7402,
-     "contribution": 0.089757,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7402
-      }
-     ],
-     "hops": 3,
-     "via": "HTR1A",
-     "viaScore": 0.914
-    },
-    {
-     "gene": "HTR2A",
-     "geneId": "ENSG00000102468",
-     "geneName": "5-hydroxytryptamine receptor 2A",
-     "assoc": 0.5168,
-     "contribution": 0.084494,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5168
-      }
-     ],
-     "hops": 3,
-     "via": "HTR2B",
-     "viaScore": 0.962
-    }
-   ]
-  },
-  {
    "id": "CHEMBL621",
    "name": "Trazodone",
    "drugType": "Small molecule",
@@ -2816,9 +2945,17 @@
     "Serotonin 2c (5-HT2c) receptor antagonist",
     "Serotonin transporter inhibitor"
    ],
-   "rank": 59,
-   "score": 0.4493,
-   "rawScore": 0.463288,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 58,
+   "score": 0.4337,
+   "rawScore": 0.473603,
    "geneCount": 3,
    "paths": [
     {
@@ -2879,21 +3016,93 @@
    ]
   },
   {
-   "id": "CHEMBL1773",
-   "name": "Capecitabine",
+   "id": "CHEMBL1065",
+   "name": "Methysergide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastric neoplasm",
-    "colorectal neoplasm",
-    "colonic neoplasm",
-    "colorectal cancer"
+    "migraine disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Serotonin 2c (5-HT2c) receptor antagonist",
+    "Serotonin 1a (5-HT1a) receptor partial agonist",
+    "Serotonin 2b (5-HT2b) receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 59,
+   "score": 0.4268,
+   "rawScore": 0.466604,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "HTR1A",
+     "geneId": "ENSG00000178394",
+     "geneName": "5-hydroxytryptamine receptor 1A",
+     "assoc": 0.6164,
+     "contribution": 0.142381,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6164
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HTR1B",
+     "geneId": "ENSG00000135312",
+     "geneName": "5-hydroxytryptamine receptor 1B",
+     "assoc": 0.7402,
+     "contribution": 0.089757,
+     "drugsOnGene": 13,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7402
+      }
+     ],
+     "hops": 3,
+     "via": "HTR1A",
+     "viaScore": 0.914
+    },
+    {
+     "gene": "HTR2A",
+     "geneId": "ENSG00000102468",
+     "geneName": "5-hydroxytryptamine receptor 2A",
+     "assoc": 0.5168,
+     "contribution": 0.084494,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5168
+      }
+     ],
+     "hops": 3,
+     "via": "HTR2B",
+     "viaScore": 0.962
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1130",
+   "name": "Doxifluridine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 60,
-   "score": 0.4389,
+   "score": 0.4131,
    "rawScore": 0.452743,
    "geneCount": 1,
    "paths": [
@@ -2929,19 +3138,29 @@
    ]
   },
   {
-   "id": "CHEMBL225071",
-   "name": "Raltitrexed",
+   "id": "CHEMBL1773",
+   "name": "Capecitabine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "rectum adenocarcinoma"
+    "gastric neoplasm",
+    "colorectal neoplasm",
+    "colonic neoplasm",
+    "colorectal cancer"
    ],
-   "indicationCount": 2,
+   "indicationCount": 8,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 61,
-   "score": 0.4389,
+   "score": 0.4131,
    "rawScore": 0.452743,
    "geneCount": 1,
    "paths": [
@@ -2988,53 +3207,16 @@
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
-   "rank": 62,
-   "score": 0.4389,
-   "rawScore": 0.452743,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "MTHFR",
-     "geneId": "ENSG00000177000",
-     "geneName": "methylenetetrahydrofolate reductase",
-     "assoc": 0.995,
-     "contribution": 0.452743,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8349
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6618
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 3,
-     "via": "TYMS",
-     "viaScore": 0.991
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1130",
-   "name": "Doxifluridine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Thymidylate synthase inhibitor"
    ],
-   "rank": 63,
-   "score": 0.4389,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 62,
+   "score": 0.4131,
    "rawScore": 0.452743,
    "geneCount": 1,
    "paths": [
@@ -3083,8 +3265,62 @@
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 63,
+   "score": 0.4131,
+   "rawScore": 0.452743,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTHFR",
+     "geneId": "ENSG00000177000",
+     "geneName": "methylenetetrahydrofolate reductase",
+     "assoc": 0.995,
+     "contribution": 0.452743,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8349
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6618
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "TYMS",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL225071",
+   "name": "Raltitrexed",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "rectum adenocarcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Thymidylate synthase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 64,
-   "score": 0.4389,
+   "score": 0.4131,
    "rawScore": 0.452743,
    "geneCount": 1,
    "paths": [
@@ -3133,8 +3369,11 @@
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 65,
-   "score": 0.4389,
+   "score": 0.4131,
    "rawScore": 0.452743,
    "geneCount": 1,
    "paths": [
@@ -3172,6 +3411,88 @@
  ],
  "knownRanked": [
   {
+   "id": "CHEMBL742",
+   "name": "Ketamine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 2,
+   "score": 1.0,
+   "rawScore": 1.046229,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.9615,
+     "contribution": 0.192164,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.888
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6563
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.11695,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8307
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8002
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.891
+    },
+    {
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.116467,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8307
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8002
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2A",
+     "viaScore": 0.936
+    }
+   ]
+  },
+  {
    "id": "CHEMBL395091",
    "name": "Esketamine",
    "drugType": "Small molecule",
@@ -3184,170 +3505,12 @@
     "Glutamate [NMDA] receptor negative allosteric modulator",
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
-   "rank": 1,
-   "score": 1.0,
-   "rawScore": 1.018651,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.9615,
-     "contribution": 0.192164,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.888
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6563
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.11695,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.891
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.116467,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2A",
-     "viaScore": 0.936
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "rank": 2,
-   "score": 1.0,
-   "rawScore": 1.018651,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.9615,
-     "contribution": 0.192164,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.888
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6563
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.11695,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.891
-    },
-    {
-     "gene": "GRM3",
-     "geneId": "ENSG00000198822",
-     "geneName": "glutamate metabotropic receptor 3",
-     "assoc": 0.9662,
-     "contribution": 0.116467,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8307
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8002
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2A",
-     "viaScore": 0.936
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL660",
-   "name": "Amantadine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Matrix protein 2 inhibitor",
-    "Glutamate [NMDA] receptor antagonist"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
    "score": 1.0,
-   "rawScore": 1.018651,
+   "rawScore": 1.046229,
    "geneCount": 7,
    "paths": [
     {
@@ -3427,9 +3590,12 @@
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
-   "rank": 5,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
    "score": 1.0,
-   "rawScore": 1.018651,
+   "rawScore": 1.046229,
    "geneCount": 7,
    "paths": [
     {
@@ -3498,57 +3664,40 @@
    ]
   },
   {
-   "id": "CHEMBL1423",
-   "name": "Pimozide",
+   "id": "CHEMBL660",
+   "name": "Amantadine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "schizophrenia",
-    "psychotic disorder",
-    "Tourette syndrome",
-    "Tics"
+    "Parkinson disease"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist"
+    "Matrix protein 2 inhibitor",
+    "Glutamate [NMDA] receptor antagonist"
    ],
-   "rank": 7,
-   "score": 0.9837,
-   "rawScore": 1.002237,
-   "geneCount": 6,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 1.0,
+   "rawScore": 1.046229,
+   "geneCount": 7,
    "paths": [
     {
-     "gene": "TMTC1",
-     "geneId": "ENSG00000133687",
-     "geneName": "transmembrane O-mannosyltransferase targeting cadherins 1",
-     "assoc": 0.8459,
-     "contribution": 0.165433,
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.9615,
+     "contribution": 0.192164,
      "drugsOnGene": 8,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8337
+       "id": "literature",
+       "score": 0.888
       },
       {
-       "id": "literature",
-       "score": 0.0732
-      }
-     ],
-     "hops": 3,
-     "via": "DRD1",
-     "viaScore": 0.92
-    },
-    {
-     "gene": "DRD1",
-     "geneId": "ENSG00000184845",
-     "geneName": "dopamine receptor D1",
-     "assoc": 0.5816,
-     "contribution": 0.123621,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5816
+       "id": "genetic_association",
+       "score": 0.6563
       }
      ],
      "hops": 2,
@@ -3556,33 +3705,46 @@
      "viaScore": null
     },
     {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.11999,
-     "drugsOnGene": 20,
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.11695,
+     "drugsOnGene": 7,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
        "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
+       "score": 0.8307
       },
       {
        "id": "genetic_association",
-       "score": 0.1945
+       "score": 0.8002
       }
      ],
      "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
+     "via": "GRIN2B",
+     "viaScore": 0.891
+    },
+    {
+     "gene": "GRM3",
+     "geneId": "ENSG00000198822",
+     "geneName": "glutamate metabotropic receptor 3",
+     "assoc": 0.9662,
+     "contribution": 0.116467,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8307
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8002
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2A",
+     "viaScore": 0.936
     }
    ]
   },
@@ -3601,9 +3763,12 @@
     "Serotonin (5-HT) receptor antagonist",
     "Dopamine receptors; D2 & D3 antagonist"
    ],
-   "rank": 8,
-   "score": 0.952,
-   "rawScore": 0.970195,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.974,
+   "rawScore": 1.019972,
    "geneCount": 19,
    "paths": [
     {
@@ -3676,6 +3841,98 @@
    ]
   },
   {
+   "id": "CHEMBL1423",
+   "name": "Pimozide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "schizophrenia",
+    "psychotic disorder",
+    "Tourette syndrome",
+    "Tics"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.9642,
+   "rawScore": 1.010054,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "TMTC1",
+     "geneId": "ENSG00000133687",
+     "geneName": "transmembrane O-mannosyltransferase targeting cadherins 1",
+     "assoc": 0.8459,
+     "contribution": 0.165433,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8337
+      },
+      {
+       "id": "literature",
+       "score": 0.0732
+      }
+     ],
+     "hops": 3,
+     "via": "DRD1",
+     "viaScore": 0.92
+    },
+    {
+     "gene": "DRD1",
+     "geneId": "ENSG00000184845",
+     "geneName": "dopamine receptor D1",
+     "assoc": 0.5816,
+     "contribution": 0.123621,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5816
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.11999,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
    "id": "CHEMBL531",
    "name": "Pergolide",
    "drugType": "Small molecule",
@@ -3686,8 +3943,16 @@
    "mechanisms": [
     "Dopamine receptor agonist"
    ],
-   "rank": 9,
-   "score": 0.946,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.9189,
    "rawScore": 0.964194,
    "geneCount": 5,
    "paths": [
@@ -3776,9 +4041,129 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 13,
-   "score": 0.701,
-   "rawScore": 0.717119,
+   "score": 0.6828,
+   "rawScore": 0.725528,
+   "geneCount": 5,
+   "paths": [
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.129068,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8636,
+     "contribution": 0.125182,
+     "drugsOnGene": 25,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "literature",
+       "score": 0.4839
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.7804,
+     "contribution": 0.123684,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5738
+      },
+      {
+       "id": "literature",
+       "score": 0.4848
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL422",
+   "name": "Trifluoperazine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "psychotic disorder",
+    "schizophrenia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "D2-like dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist",
+    "Serotonin 2c (5-HT2c) receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.6828,
+   "rawScore": 0.725528,
    "geneCount": 5,
    "paths": [
     {
@@ -3878,109 +4263,17 @@
     "Serotonin 2c (5-HT2c) receptor antagonist",
     "D2-like dopamine receptor antagonist"
    ],
-   "rank": 14,
-   "score": 0.701,
-   "rawScore": 0.717119,
-   "geneCount": 5,
-   "paths": [
+   "warnings": [
     {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.129068,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8636,
-     "contribution": 0.125182,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "literature",
-       "score": 0.4839
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.7804,
-     "contribution": 0.123684,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5738
-      },
-      {
-       "id": "literature",
-       "score": 0.4848
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL422",
-   "name": "Trifluoperazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "psychotic disorder",
-    "schizophrenia"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist",
-    "Serotonin 2c (5-HT2c) receptor antagonist"
-   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 15,
-   "score": 0.701,
-   "rawScore": 0.717119,
+   "score": 0.6828,
+   "rawScore": 0.725528,
    "geneCount": 5,
    "paths": [
     {

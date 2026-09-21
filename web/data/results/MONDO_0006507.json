@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 7,
  "knownDrugCount": 3,
- "candidatesConsidered": 127,
+ "candidatesConsidered": 151,
  "pathsTwoHop": 81,
- "pathsThreeHop": 95,
+ "pathsThreeHop": 140,
  "candidates": [
   {
    "id": "CHEMBL4594565",
@@ -22,6 +22,9 @@
    "mechanisms": [
     "Transferrin receptor binding agent"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 7.693519,
@@ -127,6 +130,14 @@
    "mechanisms": [
     "Retinoid X receptor alpha antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 2,
    "score": 0.1062,
    "rawScore": 0.88011,
@@ -186,6 +197,415 @@
    ]
   },
   {
+   "id": "CHEMBL35",
+   "name": "Furosemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary edema",
+    "congestive heart failure",
+    "hypertensive disorder",
+    "Hypertension"
+   ],
+   "indicationCount": 9,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 3,
+   "score": 0.0943,
+   "rawScore": 0.789663,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.5729,
+     "contribution": 0.329035,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5595
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CLCNKB",
+     "geneId": "ENSG00000184908",
+     "geneName": "chloride voltage-gated channel Kb",
+     "assoc": 0.5696,
+     "contribution": 0.235768,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.951
+    },
+    {
+     "gene": "CLCNKA",
+     "geneId": "ENSG00000186510",
+     "geneName": "chloride voltage-gated channel Ka",
+     "assoc": 0.5696,
+     "contribution": 0.22486,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.907
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1148",
+   "name": "Torsemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myocardial infarction",
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "heart failure"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.0943,
+   "rawScore": 0.789663,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.5729,
+     "contribution": 0.329035,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5595
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CLCNKB",
+     "geneId": "ENSG00000184908",
+     "geneName": "chloride voltage-gated channel Kb",
+     "assoc": 0.5696,
+     "contribution": 0.235768,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.951
+    },
+    {
+     "gene": "CLCNKA",
+     "geneId": "ENSG00000186510",
+     "geneName": "chloride voltage-gated channel Ka",
+     "assoc": 0.5696,
+     "contribution": 0.22486,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.907
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL456",
+   "name": "Ethacrynic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "urinary system disorder",
+    "cardiovascular disorder",
+    "congestive heart failure",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor",
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.0943,
+   "rawScore": 0.789663,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.5729,
+     "contribution": 0.329035,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5595
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CLCNKB",
+     "geneId": "ENSG00000184908",
+     "geneName": "chloride voltage-gated channel Kb",
+     "assoc": 0.5696,
+     "contribution": 0.235768,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.951
+    },
+    {
+     "gene": "CLCNKA",
+     "geneId": "ENSG00000186510",
+     "geneName": "chloride voltage-gated channel Ka",
+     "assoc": 0.5696,
+     "contribution": 0.22486,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.907
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1072",
+   "name": "Bumetanide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "congestive heart failure",
+    "kidney disorder",
+    "cardiovascular disorder",
+    "nephrotic syndrome"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 6,
+   "score": 0.0943,
+   "rawScore": 0.789663,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.5729,
+     "contribution": 0.329035,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5595
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CLCNKB",
+     "geneId": "ENSG00000184908",
+     "geneName": "chloride voltage-gated channel Kb",
+     "assoc": 0.5696,
+     "contribution": 0.235768,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.951
+    },
+    {
+     "gene": "CLCNKA",
+     "geneId": "ENSG00000186510",
+     "geneName": "chloride voltage-gated channel Ka",
+     "assoc": 0.5696,
+     "contribution": 0.22486,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.907
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1551",
+   "name": "Ursodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "chronic hepatitis C virus infection",
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.094,
+   "rawScore": 0.78733,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.5703,
+     "contribution": 0.367493,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5703
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.6874,
+     "contribution": 0.214945,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6836
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.753
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.5542,
+     "contribution": 0.204891,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5542
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL240597",
    "name": "Chenodiol",
    "drugType": "Small molecule",
@@ -198,7 +618,15 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 3,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
    "score": 0.094,
    "rawScore": 0.78733,
    "geneCount": 1,
@@ -273,82 +701,19 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 4,
-   "score": 0.094,
-   "rawScore": 0.78733,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.5703,
-     "contribution": 0.367493,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5703
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": null
     },
     {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.6874,
-     "contribution": 0.214945,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6836
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.753
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.5542,
-     "contribution": 0.204891,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5542
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.999
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1551",
-   "name": "Ursodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic hepatitis C virus infection",
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis"
    ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
-   "rank": 5,
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 9,
    "score": 0.094,
    "rawScore": 0.78733,
    "geneCount": 1,
@@ -424,7 +789,10 @@
     "Bone morphogenetic protein receptor type-1A agonist",
     "Activin receptor type-1 agonist"
    ],
-   "rank": 6,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
    "score": 0.083,
    "rawScore": 0.703753,
    "geneCount": 6,
@@ -508,7 +876,27 @@
    "mechanisms": [
     "Sclerostin inhibitor"
    ],
-   "rank": 7,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
    "score": 0.0671,
    "rawScore": 0.582099,
    "geneCount": 1,
@@ -545,7 +933,23 @@
    "mechanisms": [
     "Leptin receptor agonist"
    ],
-   "rank": 8,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 12,
    "score": 0.0668,
    "rawScore": 0.580492,
    "geneCount": 1,
@@ -582,7 +986,15 @@
    "mechanisms": [
     "Retinoid X receptor agonist"
    ],
-   "rank": 9,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
    "score": 0.0651,
    "rawScore": 0.567138,
    "geneCount": 3,
@@ -654,7 +1066,10 @@
    "mechanisms": [
     "Claudin-18 binding agent"
    ],
-   "rank": 10,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.06,
    "rawScore": 0.528002,
    "geneCount": 1,
@@ -679,6 +1094,88 @@
    ]
   },
   {
+   "id": "CHEMBL464",
+   "name": "Etretinate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "keratosis",
+    "psoriasis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.0564,
+   "rawScore": 0.501107,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.5703,
+     "contribution": 0.146155,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5703
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.5542,
+     "contribution": 0.142162,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5542
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.5521,
+     "contribution": 0.141493,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5521
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1131",
    "name": "Acitretin",
    "drugType": "Small molecule",
@@ -690,7 +1187,19 @@
    "mechanisms": [
     "Retinoid receptor agonist"
    ],
-   "rank": 11,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 16,
    "score": 0.0564,
    "rawScore": 0.501107,
    "geneCount": 6,
@@ -761,77 +1270,10 @@
    "mechanisms": [
     "Retinoid receptor agonist"
    ],
-   "rank": 12,
-   "score": 0.0564,
-   "rawScore": 0.501107,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.5703,
-     "contribution": 0.146155,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5703
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.5542,
-     "contribution": 0.142162,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5542
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.5521,
-     "contribution": 0.141493,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5521
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL464",
-   "name": "Etretinate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "keratosis",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "rank": 13,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.0564,
    "rawScore": 0.501107,
    "geneCount": 6,
@@ -902,7 +1344,48 @@
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
-   "rank": 14,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.0512,
+   "rawScore": 0.461181,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CUL3",
+     "geneId": "ENSG00000036257",
+     "geneName": "cullin 3",
+     "assoc": 0.7164,
+     "contribution": 0.461181,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7164
+      }
+     ],
+     "hops": 3,
+     "via": "KEAP1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "multiple sclerosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Kelch-like ECH-associated protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
    "score": 0.0512,
    "rawScore": 0.461181,
    "geneCount": 1,
@@ -940,7 +1423,10 @@
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
-   "rank": 15,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
    "score": 0.0512,
    "rawScore": 0.461181,
    "geneCount": 1,
@@ -961,78 +1447,6 @@
      "hops": 3,
      "via": "KEAP1",
      "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "multiple sclerosis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Kelch-like ECH-associated protein 1 inhibitor"
-   ],
-   "rank": 16,
-   "score": 0.0512,
-   "rawScore": 0.461181,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CUL3",
-     "geneId": "ENSG00000036257",
-     "geneName": "cullin 3",
-     "assoc": 0.7164,
-     "contribution": 0.461181,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7164
-      }
-     ],
-     "hops": 3,
-     "via": "KEAP1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL221326",
-   "name": "Diquafosol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "eye disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Pyrimidinergic receptor P2Y6 agonist",
-    "Purinergic receptor P2Y1 agonist",
-    "Purinergic receptor P2Y2 agonist"
-   ],
-   "rank": 17,
-   "score": 0.0496,
-   "rawScore": 0.448807,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ENTPD1",
-     "geneId": "ENSG00000138185",
-     "geneName": "ectonucleoside triphosphate diphosphohydrolase 1",
-     "assoc": 0.6327,
-     "contribution": 0.448807,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6327
-      }
-     ],
-     "hops": 3,
-     "via": "P2RY2",
-     "viaScore": 0.936
     }
    ]
   },
@@ -1051,7 +1465,10 @@
     "Bone morphogenetic protein receptor type-1B agonist",
     "Bone morphogenetic protein receptor type-2 agonist"
    ],
-   "rank": 18,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
    "score": 0.0485,
    "rawScore": 0.440327,
    "geneCount": 4,
@@ -1122,6 +1539,84 @@
    ]
   },
   {
+   "id": "CHEMBL3990044",
+   "name": "Relatlimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "melanoma"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Lymphocyte activation gene 3 protein inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.0473,
+   "rawScore": 0.43169,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LGALS3",
+     "geneId": "ENSG00000131981",
+     "geneName": "galectin 3",
+     "assoc": 0.5754,
+     "contribution": 0.43169,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5754
+      }
+     ],
+     "hops": 3,
+     "via": "LAG3",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL221326",
+   "name": "Diquafosol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "eye disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Pyrimidinergic receptor P2Y6 agonist",
+    "Purinergic receptor P2Y1 agonist",
+    "Purinergic receptor P2Y2 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.0408,
+   "rawScore": 0.381613,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ENTPD1",
+     "geneId": "ENSG00000138185",
+     "geneName": "ectonucleoside triphosphate diphosphohydrolase 1",
+     "assoc": 0.6327,
+     "contribution": 0.381613,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6327
+      }
+     ],
+     "hops": 3,
+     "via": "P2RY2",
+     "viaScore": 0.936
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297530",
    "name": "Saroglitazar",
    "drugType": "Small molecule",
@@ -1133,7 +1628,10 @@
     "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
-   "rank": 19,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
    "score": 0.0404,
    "rawScore": 0.378692,
    "geneCount": 2,
@@ -1192,114 +1690,6 @@
    ]
   },
   {
-   "id": "CHEMBL981",
-   "name": "Fenofibric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "Hypercholesterolemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist",
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 20,
-   "score": 0.0381,
-   "rawScore": 0.361287,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.5521,
-     "contribution": 0.229256,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5521
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.5542,
-     "contribution": 0.132031,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5542
-      }
-     ],
-     "hops": 3,
-     "via": "PPARA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL565",
-   "name": "Clofibrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "hyperlipoproteinemia type 3"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "rank": 21,
-   "score": 0.0381,
-   "rawScore": 0.361287,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PPARA",
-     "geneId": "ENSG00000186951",
-     "geneName": "peroxisome proliferator activated receptor alpha",
-     "assoc": 0.5521,
-     "contribution": 0.229256,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5521
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.5542,
-     "contribution": 0.132031,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5542
-      }
-     ],
-     "hops": 3,
-     "via": "PPARA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL457",
    "name": "Gemfibrozil",
    "drugType": "Small molecule",
@@ -1313,7 +1703,10 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
-   "rank": 22,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
    "score": 0.0381,
    "rawScore": 0.361287,
    "geneCount": 1,
@@ -1368,7 +1761,143 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
-   "rank": 23,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.0381,
+   "rawScore": 0.361287,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.5521,
+     "contribution": 0.229256,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5521
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.5542,
+     "contribution": 0.132031,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5542
+      }
+     ],
+     "hops": 3,
+     "via": "PPARA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL565",
+   "name": "Clofibrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "hyperlipoproteinemia type 3"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "Increases the incidence of gallstones and cholecystitis, drug-induced cardiac arrhythmias, cardiomegaly, angina, claudication and thromboembolic phenomena. It also enhances the effects and toxicity of other acidic drugs and it is implicated in the incidence of various tumours"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Increased mortality associated with use"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.0381,
+   "rawScore": 0.361287,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPARA",
+     "geneId": "ENSG00000186951",
+     "geneName": "peroxisome proliferator activated receptor alpha",
+     "assoc": 0.5521,
+     "contribution": 0.229256,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5521
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.5542,
+     "contribution": 0.132031,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5542
+      }
+     ],
+     "hops": 3,
+     "via": "PPARA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL557555",
+   "name": "Ciprofibrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hyperlipoproteinemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
    "score": 0.0381,
    "rawScore": 0.361287,
    "geneCount": 1,
@@ -1422,7 +1951,10 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
-   "rank": 24,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
    "score": 0.0381,
    "rawScore": 0.361287,
    "geneCount": 1,
@@ -1464,18 +1996,23 @@
    ]
   },
   {
-   "id": "CHEMBL557555",
-   "name": "Ciprofibrate",
+   "id": "CHEMBL981",
+   "name": "Fenofibric Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperlipoproteinemia",
+    "type 2 diabetes mellitus",
+    "Hypercholesterolemia",
     "cardiovascular disorder"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
-   "rank": 25,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
    "score": 0.0381,
    "rawScore": 0.361287,
    "geneCount": 1,
@@ -1513,6 +2050,46 @@
      "hops": 3,
      "via": "PPARA",
      "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL404271",
+   "name": "Acarbose",
+   "drugType": "Oligosaccharide",
+   "approvedFor": [
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Maltase-glucoamylase inhibitor",
+    "Pancreatic alpha-amylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.0377,
+   "rawScore": 0.358243,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PYGL",
+     "geneId": "ENSG00000100504",
+     "geneName": "glycogen phosphorylase L",
+     "assoc": 0.5731,
+     "contribution": 0.358243,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5731
+      }
+     ],
+     "hops": 3,
+     "via": "MGAM",
+     "viaScore": 0.97
     }
    ]
   },
@@ -1528,7 +2105,10 @@
    "mechanisms": [
     "Bile acid transporter inhibitor"
    ],
-   "rank": 26,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
    "score": 0.0365,
    "rawScore": 0.349509,
    "geneCount": 1,
@@ -1557,175 +2137,6 @@
    ]
   },
   {
-   "id": "CHEMBL35",
-   "name": "Furosemide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary edema",
-    "congestive heart failure",
-    "hypertensive disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.0339,
-   "rawScore": 0.329035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.5729,
-     "contribution": 0.329035,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5595
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1148",
-   "name": "Torsemide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "myocardial infarction",
-    "hypertensive disorder",
-    "cardiovascular disorder",
-    "heart failure"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.0339,
-   "rawScore": 0.329035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.5729,
-     "contribution": 0.329035,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5595
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1072",
-   "name": "Bumetanide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "congestive heart failure",
-    "kidney disorder",
-    "cardiovascular disorder",
-    "nephrotic syndrome"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 29,
-   "score": 0.0339,
-   "rawScore": 0.329035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.5729,
-     "contribution": 0.329035,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5595
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL456",
-   "name": "Ethacrynic Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "urinary system disorder",
-    "cardiovascular disorder",
-    "congestive heart failure",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor",
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.0339,
-   "rawScore": 0.329035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.5729,
-     "contribution": 0.329035,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5595
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL897",
    "name": "Probenecid",
    "drugType": "Small molecule",
@@ -1738,7 +2149,10 @@
     "Solute carrier family 22 member 6 inhibitor",
     "Solute carrier family 22 member 8 inhibitor"
    ],
-   "rank": 31,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
    "score": 0.0335,
    "rawScore": 0.326339,
    "geneCount": 3,
@@ -1774,7 +2188,10 @@
    "mechanisms": [
     "Peroxisome proliferator-activated receptor agonist"
    ],
-   "rank": 32,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
    "score": 0.0329,
    "rawScore": 0.321996,
    "geneCount": 3,
@@ -1833,17 +2250,21 @@
    ]
   },
   {
-   "id": "CHEMBL4594471",
-   "name": "Efepoetin Alfa",
+   "id": "CHEMBL2109093",
+   "name": "Epoetin Delta",
    "drugType": "Protein",
    "approvedFor": [
+    "chronic kidney disease",
     "anemia (phenotype)"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 33,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
    "score": 0.0296,
    "rawScore": 0.296345,
    "geneCount": 1,
@@ -1880,20 +2301,22 @@
    ]
   },
   {
-   "id": "CHEMBL1201565",
-   "name": "Epoetin Alfa",
+   "id": "CHEMBL2108290",
+   "name": "Epoetin Theta",
    "drugType": "Protein",
    "approvedFor": [
-    "myelodysplastic syndrome",
-    "anemia (phenotype)",
-    "anemia",
-    "chronic kidney disease"
+    "cancer",
+    "chronic renal failure syndrome",
+    "anemia"
    ],
-   "indicationCount": 6,
+   "indicationCount": 3,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 34,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
    "score": 0.0296,
    "rawScore": 0.296345,
    "geneCount": 1,
@@ -1943,7 +2366,87 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 35,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 37,
+   "score": 0.0296,
+   "rawScore": 0.296345,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TFR2",
+     "geneId": "ENSG00000106327",
+     "geneName": "transferrin receptor 2",
+     "assoc": 0.9954,
+     "contribution": 0.296345,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8954
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8565
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5917
+      },
+      {
+       "id": "literature",
+       "score": 0.2559
+      }
+     ],
+     "hops": 3,
+     "via": "EPOR",
+     "viaScore": 0.946
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107866",
+   "name": "Peginesatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "anemia (phenotype)"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Erythropoietin receptor agonist",
+    "Erythropoietin receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 38,
    "score": 0.0296,
    "rawScore": 0.296345,
    "geneCount": 1,
@@ -1993,103 +2496,10 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 36,
-   "score": 0.0296,
-   "rawScore": 0.296345,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TFR2",
-     "geneId": "ENSG00000106327",
-     "geneName": "transferrin receptor 2",
-     "assoc": 0.9954,
-     "contribution": 0.296345,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8954
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8565
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5917
-      },
-      {
-       "id": "literature",
-       "score": 0.2559
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.946
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2109093",
-   "name": "Epoetin Delta",
-   "drugType": "Protein",
-   "approvedFor": [
-    "chronic kidney disease",
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Erythropoietin receptor agonist"
-   ],
-   "rank": 37,
-   "score": 0.0296,
-   "rawScore": 0.296345,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TFR2",
-     "geneId": "ENSG00000106327",
-     "geneName": "transferrin receptor 2",
-     "assoc": 0.9954,
-     "contribution": 0.296345,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8954
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8565
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5917
-      },
-      {
-       "id": "literature",
-       "score": 0.2559
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.946
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107866",
-   "name": "Peginesatide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Erythropoietin receptor agonist",
-    "Erythropoietin receptor agonist"
-   ],
-   "rank": 38,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
    "score": 0.0296,
    "rawScore": 0.296345,
    "geneCount": 1,
@@ -2139,55 +2549,9 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 39,
-   "score": 0.0296,
-   "rawScore": 0.296345,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TFR2",
-     "geneId": "ENSG00000106327",
-     "geneName": "transferrin receptor 2",
-     "assoc": 0.9954,
-     "contribution": 0.296345,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8954
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8565
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5917
-      },
-      {
-       "id": "literature",
-       "score": 0.2559
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.946
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108290",
-   "name": "Epoetin Theta",
-   "drugType": "Protein",
-   "approvedFor": [
-    "cancer",
-    "chronic renal failure syndrome",
-    "anemia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Erythropoietin receptor agonist"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 40,
    "score": 0.0296,
    "rawScore": 0.296345,

@@ -7,9 +7,9 @@
  "genesScored": 36,
  "genesWithDrugs": 16,
  "knownDrugCount": 42,
- "candidatesConsidered": 121,
+ "candidatesConsidered": 123,
  "pathsTwoHop": 78,
- "pathsThreeHop": 142,
+ "pathsThreeHop": 158,
  "candidates": [
   {
    "id": "CHEMBL18901",
@@ -22,6 +22,9 @@
    "mechanisms": [
     "Hemoglobin HbA negative modulator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 4.283812,
@@ -133,6 +136,26 @@
    "mechanisms": [
     "Hemoglobin HbA positive modulator"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "higher rate of vaso-occlusive crisis (severe pain caused by sickled red blood cells blocking blood flow and oxygen delivery to tissues) in patients with sickle cell disease receiving Oxbryta compared to placebo. There were also more deaths"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "unfavourable imbalance in the number of vaso-occlusive crises and fatal events"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "higher occurrence of vaso-occlusive crises (VOC) during treatment. Higher number of deaths"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 2,
    "score": 1.0,
    "rawScore": 4.283812,
@@ -242,8 +265,11 @@
    "mechanisms": [
     "Transferrin receptor binding agent"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.3682,
+   "score": 0.3681,
    "rawScore": 1.579035,
    "geneCount": 2,
    "paths": [
@@ -323,8 +349,16 @@
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 4,
-   "score": 0.344,
+   "score": 0.3439,
    "rawScore": 1.475426,
    "geneCount": 1,
    "paths": [
@@ -424,8 +458,11 @@
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 5,
-   "score": 0.344,
+   "score": 0.3439,
    "rawScore": 1.475426,
    "geneCount": 1,
    "paths": [
@@ -515,78 +552,186 @@
    ]
   },
   {
-   "id": "CHEMBL163",
-   "name": "Ritonavir",
+   "id": "CHEMBL1078178",
+   "name": "Momelotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "HIV-1 infection",
-    "hepatitis C virus infection",
-    "chronic hepatitis C virus infection",
-    "viral infectious disease"
+    "neoplasm",
+    "myelofibrosis"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "Cytochrome P450 3A inhibitor",
-    "Human immunodeficiency virus type 1 protease inhibitor"
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
-   "score": 0.1588,
-   "rawScore": 0.682535,
-   "geneCount": 1,
+   "score": 0.1455,
+   "rawScore": 0.626516,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "GSTM1",
-     "geneId": "ENSG00000134184",
-     "geneName": "glutathione S-transferase mu 1",
-     "assoc": 0.9401,
-     "contribution": 0.682535,
-     "drugsOnGene": 2,
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.163535,
+     "drugsOnGene": 10,
      "evidence": [
       {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
        "id": "literature",
-       "score": 0.9401
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.152073,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
       }
      ],
      "hops": 3,
-     "via": "CYP3A4",
-     "viaScore": 0.958
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.107184,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL2095208",
-   "name": "Cobicistat",
+   "id": "CHEMBL2105759",
+   "name": "Baricitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "HIV-1 infection",
-    "infection",
-    "HIV infectious disease"
+    "juvenile idiopathic arthritis",
+    "atopic eczema",
+    "juvenile dermatomyositis",
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
-    "Cytochrome P450 3A inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 8,
-   "score": 0.1588,
-   "rawScore": 0.682535,
-   "geneCount": 1,
+   "score": 0.1435,
+   "rawScore": 0.617895,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "GSTM1",
-     "geneId": "ENSG00000134184",
-     "geneName": "glutathione S-transferase mu 1",
-     "assoc": 0.9401,
-     "contribution": 0.682535,
-     "drugsOnGene": 2,
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.192331,
+     "drugsOnGene": 10,
      "evidence": [
       {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
        "id": "literature",
-       "score": 0.9401
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.17885,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
       }
      ],
      "hops": 3,
-     "via": "CYP3A4",
-     "viaScore": 0.958
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.126056,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
     }
    ]
   },
@@ -604,8 +749,11 @@
    "mechanisms": [
     "Interferon gamma receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.1289,
+   "score": 0.1287,
    "rawScore": 0.554396,
    "geneCount": 2,
    "paths": [
@@ -654,107 +802,31 @@
    ]
   },
   {
-   "id": "CHEMBL1078178",
-   "name": "Momelotinib",
+   "id": "CHEMBL1287853",
+   "name": "Fedratinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
-    "myelofibrosis"
+    "myelofibrosis",
+    "acquired polycythemia vera"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Activin receptor type-1 inhibitor",
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK1 inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
    ],
-   "rank": 11,
-   "score": 0.1207,
-   "rawScore": 0.519333,
-   "geneCount": 3,
-   "paths": [
+   "warnings": [
     {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.163535,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.152073,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.102593,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL2105759",
-   "name": "Baricitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "juvenile idiopathic arthritis",
-    "atopic eczema",
-    "juvenile dermatomyositis",
-    "rheumatoid arthritis"
    ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor"
-   ],
-   "rank": 13,
-   "score": 0.1143,
-   "rawScore": 0.491838,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
+   "score": 0.1153,
+   "rawScore": 0.497237,
    "geneCount": 2,
    "paths": [
     {
@@ -800,41 +872,41 @@
      "viaScore": 0.99
     },
     {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.120657,
-     "drugsOnGene": 8,
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.126056,
+     "drugsOnGene": 10,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
+       "score": 0.5519
       }
      ],
      "hops": 3,
-     "via": "JAK1",
+     "via": "JAK2",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4594471",
-   "name": "Efepoetin Alfa",
+   "id": "CHEMBL2109093",
+   "name": "Epoetin Delta",
    "drugType": "Protein",
    "approvedFor": [
+    "chronic kidney disease",
     "anemia (phenotype)"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 14,
-   "score": 0.111,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -879,21 +951,23 @@
    ]
   },
   {
-   "id": "CHEMBL1201565",
-   "name": "Epoetin Alfa",
+   "id": "CHEMBL2108290",
+   "name": "Epoetin Theta",
    "drugType": "Protein",
    "approvedFor": [
-    "myelodysplastic syndrome",
-    "anemia (phenotype)",
-    "anemia",
-    "chronic kidney disease"
+    "cancer",
+    "chronic renal failure syndrome",
+    "anemia"
    ],
-   "indicationCount": 6,
+   "indicationCount": 3,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 15,
-   "score": 0.111,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -951,8 +1025,97 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
+   "score": 0.1107,
+   "rawScore": 0.477544,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.24839,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "EPOR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.229153,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107866",
+   "name": "Peginesatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "anemia (phenotype)"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Erythropoietin receptor agonist",
+    "Erythropoietin receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 16,
-   "score": 0.111,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -1010,122 +1173,11 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 17,
-   "score": 0.111,
-   "rawScore": 0.477544,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.24839,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "EPOR",
-     "geneId": "ENSG00000187266",
-     "geneName": "erythropoietin receptor",
-     "assoc": 0.5519,
-     "contribution": 0.229153,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5519
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2109093",
-   "name": "Epoetin Delta",
-   "drugType": "Protein",
-   "approvedFor": [
-    "chronic kidney disease",
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Erythropoietin receptor agonist"
-   ],
-   "rank": 18,
-   "score": 0.111,
-   "rawScore": 0.477544,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.24839,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "EPOR",
-     "geneId": "ENSG00000187266",
-     "geneName": "erythropoietin receptor",
-     "assoc": 0.5519,
-     "contribution": 0.229153,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5519
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107866",
-   "name": "Peginesatide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Erythropoietin receptor agonist",
-    "Erythropoietin receptor agonist"
-   ],
-   "rank": 19,
-   "score": 0.111,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -1183,66 +1235,11 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 20,
-   "score": 0.111,
-   "rawScore": 0.477544,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.24839,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "EPOR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "EPOR",
-     "geneId": "ENSG00000187266",
-     "geneName": "erythropoietin receptor",
-     "assoc": 0.5519,
-     "contribution": 0.229153,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5519
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108290",
-   "name": "Epoetin Theta",
-   "drugType": "Protein",
-   "approvedFor": [
-    "cancer",
-    "chronic renal failure syndrome",
-    "anemia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Erythropoietin receptor agonist"
-   ],
-   "rank": 21,
-   "score": 0.111,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -1299,8 +1296,11 @@
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "rank": 22,
-   "score": 0.111,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.1107,
    "rawScore": 0.477544,
    "geneCount": 1,
    "paths": [
@@ -1345,36 +1345,162 @@
    ]
   },
   {
-   "id": "CHEMBL1201320",
-   "name": "Esomeprazole",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4594471",
+   "name": "Efepoetin Alfa",
+   "drugType": "Protein",
    "approvedFor": [
-    "cardiovascular disorder",
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
+    "anemia (phenotype)"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Potassium-transporting ATPase inhibitor",
-    "Potassium-transporting ATPase inhibitor",
-    "Potassium-transporting ATPase inhibitor"
+    "Erythropoietin receptor agonist"
    ],
-   "rank": 23,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.1107,
+   "rawScore": 0.477544,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.24839,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "EPOR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.229153,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201565",
+   "name": "Epoetin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "myelodysplastic syndrome",
+    "anemia (phenotype)",
+    "anemia",
+    "chronic kidney disease"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Erythropoietin receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.1107,
+   "rawScore": 0.477544,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.24839,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "EPOR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.229153,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.1086,
+   "rawScore": 0.468277,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
      "drugsOnGene": 10,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6936
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
       }
      ],
      "hops": 2,
@@ -1382,52 +1508,81 @@
      "viaScore": null
     },
     {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
      "drugsOnGene": 10,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6936
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
       }
      ],
      "hops": 3,
-     "via": "ATP4B",
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1502",
-   "name": "Pantoprazole",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "rank": 24,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1086,
+   "rawScore": 0.468277,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
      "drugsOnGene": 10,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6936
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
       }
      ],
      "hops": 2,
@@ -1435,21 +1590,493 @@
      "viaScore": null
     },
     {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
      "drugsOnGene": 10,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6936
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
       }
      ],
      "hops": 3,
-     "via": "ATP4B",
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
      "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 24,
+   "score": 0.1086,
+   "rawScore": 0.468277,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Janus Kinase (JAK) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 25,
+   "score": 0.1086,
+   "rawScore": 0.468277,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1789941",
+   "name": "Ruxolitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acquired polycythemia vera",
+    "essential thrombocythemia",
+    "myelofibrosis",
+    "chronic graft versus host disease"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.1086,
+   "rawScore": 0.468277,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2035187",
+   "name": "Pacritinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myelofibrosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1083,
+   "rawScore": 0.466974,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.6375,
+     "contribution": 0.145759,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5762
+      },
+      {
+       "id": "literature",
+       "score": 0.1446
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EPO",
+     "geneId": "ENSG00000130427",
+     "geneName": "erythropoietin",
+     "assoc": 0.7901,
+     "contribution": 0.135543,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6761
+      },
+      {
+       "id": "literature",
+       "score": 0.352
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "EPOR",
+     "geneId": "ENSG00000187266",
+     "geneName": "erythropoietin receptor",
+     "assoc": 0.5519,
+     "contribution": 0.095533,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5519
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095208",
+   "name": "Cobicistat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "infection",
+    "HIV infectious disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.1019,
+   "rawScore": 0.439822,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GSTM1",
+     "geneId": "ENSG00000134184",
+     "geneName": "glutathione S-transferase mu 1",
+     "assoc": 0.9401,
+     "contribution": 0.439822,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9401
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.958
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL163",
+   "name": "Ritonavir",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "hepatitis C virus infection",
+    "chronic hepatitis C virus infection",
+    "viral infectious disease"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor",
+    "Human immunodeficiency virus type 1 protease inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 29,
+   "score": 0.1019,
+   "rawScore": 0.439822,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GSTM1",
+     "geneId": "ENSG00000134184",
+     "geneName": "glutathione S-transferase mu 1",
+     "assoc": 0.9401,
+     "contribution": 0.439822,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9401
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.958
     }
    ]
   },
@@ -1468,276 +2095,11 @@
     "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor"
    ],
-   "rank": 25,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297583",
-   "name": "Tegoprazan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastroesophageal reflux disease",
-    "Peptic ulcer"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Potassium-transporting ATPase blocker"
-   ],
-   "rank": 26,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4594445",
-   "name": "Abeprazan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastroesophageal reflux disease",
-    "Peptic ulcer"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2079130",
-   "name": "Vonoprazan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Helicobacter pylori infectious disease",
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201863",
-   "name": "Dexlansoprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastroesophageal reflux disease",
-    "Peptic ulcer",
-    "dyspepsia",
-    "esophagitis"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "rank": 29,
-   "score": 0.0971,
-   "rawScore": 0.418302,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209255,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.6936,
-     "contribution": 0.209046,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6936
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2106370",
-   "name": "Ilaprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 30,
-   "score": 0.0971,
+   "score": 0.0969,
    "rawScore": 0.418302,
    "geneCount": 2,
    "paths": [
@@ -1790,8 +2152,67 @@
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 31,
-   "score": 0.0971,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2106370",
+   "name": "Ilaprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.0969,
    "rawScore": 0.418302,
    "geneCount": 2,
    "paths": [
@@ -1845,8 +2266,353 @@
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
-   "rank": 32,
-   "score": 0.0971,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201320",
+   "name": "Esomeprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor",
+    "Potassium-transporting ATPase inhibitor",
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297583",
+   "name": "Tegoprazan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2079130",
+   "name": "Vonoprazan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Helicobacter pylori infectious disease",
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594445",
+   "name": "Abeprazan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201863",
+   "name": "Dexlansoprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer",
+    "dyspepsia",
+    "esophagitis"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.0969,
+   "rawScore": 0.418302,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209255,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.6936,
+     "contribution": 0.209046,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6936
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1502",
+   "name": "Pantoprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.0969,
    "rawScore": 0.418302,
    "geneCount": 2,
    "paths": [
@@ -1898,8 +2664,11 @@
    "mechanisms": [
     "GTPase KRas inhibitor"
    ],
-   "rank": 33,
-   "score": 0.0919,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.0917,
    "rawScore": 0.396094,
    "geneCount": 1,
    "paths": [
@@ -1938,8 +2707,11 @@
    "mechanisms": [
     "GTPase KRas inhibitor"
    ],
-   "rank": 34,
-   "score": 0.0919,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.0917,
    "rawScore": 0.396094,
    "geneCount": 1,
    "paths": [
@@ -1967,569 +2739,6 @@
    ]
   },
   {
-   "id": "CHEMBL1789941",
-   "name": "Ruxolitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acquired polycythemia vera",
-    "essential thrombocythemia",
-    "myelofibrosis",
-    "chronic graft versus host disease"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor",
-    "Tyrosine-protein kinase JAK1 inhibitor"
-   ],
-   "rank": 35,
-   "score": 0.0865,
-   "rawScore": 0.372744,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.091441,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
-   ],
-   "rank": 36,
-   "score": 0.0865,
-   "rawScore": 0.372744,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.091441,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
-   ],
-   "rank": 37,
-   "score": 0.0865,
-   "rawScore": 0.372744,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.091441,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
-   ],
-   "rank": 38,
-   "score": 0.0865,
-   "rawScore": 0.372744,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.091441,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
-   "rank": 39,
-   "score": 0.0865,
-   "rawScore": 0.372744,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.091441,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2035187",
-   "name": "Pacritinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "myelofibrosis",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Activin receptor type-1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "rank": 40,
-   "score": 0.0862,
-   "rawScore": 0.371441,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.145759,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.135543,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.4249,
-     "contribution": 0.090138,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4249
-      }
-     ],
-     "hops": 3,
-     "via": "ACVR1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1287853",
-   "name": "Fedratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "myelofibrosis",
-    "acquired polycythemia vera"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "rank": 41,
-   "score": 0.0861,
-   "rawScore": 0.371181,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.6375,
-     "contribution": 0.192331,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5762
-      },
-      {
-       "id": "literature",
-       "score": 0.1446
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EPO",
-     "geneId": "ENSG00000130427",
-     "geneName": "erythropoietin",
-     "assoc": 0.7901,
-     "contribution": 0.17885,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6761
-      },
-      {
-       "id": "literature",
-       "score": 0.352
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.99
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2107857",
    "name": "Metreleptin",
    "drugType": "Protein",
@@ -2542,8 +2751,24 @@
    "mechanisms": [
     "Leptin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 42,
-   "score": 0.0849,
+   "score": 0.0846,
    "rawScore": 0.365765,
    "geneCount": 1,
    "paths": [
@@ -2584,8 +2809,28 @@
    "mechanisms": [
     "Sclerostin inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 43,
-   "score": 0.0804,
+   "score": 0.0801,
    "rawScore": 0.346559,
    "geneCount": 1,
    "paths": [
@@ -2628,8 +2873,11 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.1728,
+   "score": 0.1726,
    "rawScore": 0.742453,
    "geneCount": 3,
    "paths": [
@@ -2700,8 +2948,11 @@
     "Pyruvate kinase isozymes R/L activator",
     "Pyruvate kinase isozymes R/L activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
-   "score": 0.1371,
+   "score": 0.1368,
    "rawScore": 0.589307,
    "geneCount": 1,
    "paths": [
@@ -2738,8 +2989,16 @@
    "mechanisms": [
     "Tumor necrosis factor ligand superfamily member 11 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 12,
-   "score": 0.1146,
+   "score": 0.1144,
    "rawScore": 0.493298,
    "geneCount": 1,
    "paths": [
@@ -2778,8 +3037,24 @@
    "mechanisms": [
     "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
    ],
-   "rank": 49,
-   "score": 0.0659,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 48,
+   "score": 0.0656,
    "rawScore": 0.284376,
    "geneCount": 4,
    "paths": [
@@ -2833,8 +3108,24 @@
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
-   "rank": 55,
-   "score": 0.0486,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 56,
+   "score": 0.0484,
    "rawScore": 0.210695,
    "geneCount": 3,
    "paths": [
@@ -2905,8 +3196,28 @@
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 60,
-   "score": 0.0479,
+   "score": 0.0476,
    "rawScore": 0.207498,
    "geneCount": 1,
    "paths": [
@@ -2943,8 +3254,11 @@
    "mechanisms": [
     "B-cell lymphoma/leukemia 11A gene editing negative modulator"
    ],
-   "rank": 87,
-   "score": 0.0241,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 88,
+   "score": 0.0238,
    "rawScore": 0.105606,
    "geneCount": 1,
    "paths": [
@@ -2980,8 +3294,16 @@
    "mechanisms": [
     "Adenosine deaminase inhibitor"
    ],
-   "rank": 100,
-   "score": 0.007,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 102,
+   "score": 0.0067,
    "rawScore": 0.032251,
    "geneCount": 1,
    "paths": [
@@ -3016,8 +3338,11 @@
    "mechanisms": [
     "Phosphodiesterase 5A inhibitor"
    ],
-   "rank": 118,
-   "score": 0.0013,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 117,
+   "score": 0.001,
    "rawScore": 0.007939,
    "geneCount": 1,
    "paths": [

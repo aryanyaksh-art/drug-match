@@ -7,9 +7,9 @@
  "genesScored": 47,
  "genesWithDrugs": 26,
  "knownDrugCount": 19,
- "candidatesConsidered": 308,
+ "candidatesConsidered": 321,
  "pathsTwoHop": 106,
- "pathsThreeHop": 369,
+ "pathsThreeHop": 426,
  "candidates": [
   {
    "id": "CHEMBL4298211",
@@ -24,6 +24,14 @@
    "mechanisms": [
     "Complement C3 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 1.408903,
@@ -95,6 +103,9 @@
    "mechanisms": [
     "C5a anaphylatoxin chemotactic receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
    "score": 0.9588,
    "rawScore": 1.351471,
@@ -137,6 +148,83 @@
    ]
   },
   {
+   "id": "CHEMBL3833307",
+   "name": "Satralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "neuromyelitis optica"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "IL6Ralpha/GP130 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.8162,
+   "rawScore": 1.152401,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.6772,
+     "contribution": 0.294463,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5515
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2803
+      }
+     ],
+     "hops": 3,
+     "via": "IL6ST",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTF1",
+     "geneId": "ENSG00000150281",
+     "geneName": "cardiotrophin 1",
+     "assoc": 0.4256,
+     "contribution": 0.239527,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4256
+      }
+     ],
+     "hops": 3,
+     "via": "IL6ST",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "IL6R",
+     "geneId": "ENSG00000160712",
+     "geneName": "interleukin 6 receptor",
+     "assoc": 0.5394,
+     "contribution": 0.234774,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5394
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1743029",
    "name": "Ibalizumab",
    "drugType": "Antibody",
@@ -149,7 +237,10 @@
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
    ],
-   "rank": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
    "score": 0.6741,
    "rawScore": 0.954103,
    "geneCount": 1,
@@ -201,7 +292,10 @@
    "mechanisms": [
     "ARSA exogenous gene"
    ],
-   "rank": 5,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
    "score": 0.6528,
    "rawScore": 0.924411,
    "geneCount": 1,
@@ -255,80 +349,6 @@
    ]
   },
   {
-   "id": "CHEMBL3833307",
-   "name": "Satralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "neuromyelitis optica"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "IL6Ralpha/GP130 antagonist"
-   ],
-   "rank": 6,
-   "score": 0.6446,
-   "rawScore": 0.912874,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.6772,
-     "contribution": 0.294463,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5515
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2803
-      }
-     ],
-     "hops": 3,
-     "via": "IL6ST",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.5394,
-     "contribution": 0.234774,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5394
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.5394,
-     "contribution": 0.214512,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5394
-      }
-     ],
-     "hops": 3,
-     "via": "IL6ST",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2051955",
    "name": "Levosimendan",
    "drugType": "Small molecule",
@@ -341,6 +361,9 @@
     "Phosphodiesterase 3 inhibitor",
     "Troponin, cardiac muscle positive modulator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
    "score": 0.6186,
    "rawScore": 0.876609,
@@ -400,18 +423,19 @@
    ]
   },
   {
-   "id": "CHEMBL1580",
-   "name": "Pentostatin",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5315093",
+   "name": "Autologous Cd34+ Enriched Cell Fraction That Contains Cd34+ Cells Transduced With Retroviral Vector That Encodes For The Human Ada Cdna Sequence",
+   "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "hairy cell leukemia",
-    "neoplasm"
+    "severe combined immunodeficiency"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Adenosine deaminase inhibitor"
+    "ADA exogenous gene"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 8,
    "score": 0.618,
    "rawScore": 0.875737,
@@ -454,16 +478,26 @@
    ]
   },
   {
-   "id": "CHEMBL5315093",
-   "name": "Autologous Cd34+ Enriched Cell Fraction That Contains Cd34+ Cells Transduced With Retroviral Vector That Encodes For The Human Ada Cdna Sequence",
-   "drugType": "Unknown",
+   "id": "CHEMBL1580",
+   "name": "Pentostatin",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "severe combined immunodeficiency"
+    "anemia",
+    "hairy cell leukemia",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "ADA exogenous gene"
+    "Adenosine deaminase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 9,
    "score": 0.618,
    "rawScore": 0.875737,
@@ -506,173 +540,6 @@
    ]
   },
   {
-   "id": "CHEMBL476960",
-   "name": "Voglibose",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Alpha glucosidase inhibitor"
-   ],
-   "rank": 10,
-   "score": 0.6029,
-   "rawScore": 0.85478,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GLA",
-     "geneId": "ENSG00000102393",
-     "geneName": "galactosidase alpha",
-     "assoc": 0.9982,
-     "contribution": 0.359106,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9564
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8693
-      },
-      {
-       "id": "literature",
-       "score": 0.6886
-      }
-     ],
-     "hops": 3,
-     "via": "SI",
-     "viaScore": 0.972
-    },
-    {
-     "gene": "GLA",
-     "geneId": "ENSG00000102393",
-     "geneName": "galactosidase alpha",
-     "assoc": 0.9982,
-     "contribution": 0.264031,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9564
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8693
-      },
-      {
-       "id": "literature",
-       "score": 0.6886
-      }
-     ],
-     "hops": 3,
-     "via": "GAA",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "GLA",
-     "geneId": "ENSG00000102393",
-     "geneName": "galactosidase alpha",
-     "assoc": 0.9982,
-     "contribution": 0.231644,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9564
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8693
-      },
-      {
-       "id": "literature",
-       "score": 0.6886
-      }
-     ],
-     "hops": 3,
-     "via": "MGAM",
-     "viaScore": 0.973
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interleukin-6 inhibitor"
-   ],
-   "rank": 11,
-   "score": 0.5783,
-   "rawScore": 0.820353,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.6772,
-     "contribution": 0.436368,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5515
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2803
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.5015,
-     "contribution": 0.201589,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5015
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.968
-    },
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.5394,
-     "contribution": 0.182396,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5394
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1743070",
    "name": "Siltuximab",
    "drugType": "Antibody",
@@ -686,7 +553,10 @@
    "mechanisms": [
     "Interleukin-6 antagonist"
    ],
-   "rank": 12,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
    "score": 0.5783,
    "rawScore": 0.820353,
    "geneCount": 1,
@@ -759,7 +629,86 @@
    "mechanisms": [
     "Interleukin-6 inhibitor"
    ],
-   "rank": 13,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.5783,
+   "rawScore": 0.820353,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.6772,
+     "contribution": 0.436368,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5515
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2803
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.5015,
+     "contribution": 0.201589,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5015
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.968
+    },
+    {
+     "gene": "IL6R",
+     "geneId": "ENSG00000160712",
+     "geneName": "interleukin 6 receptor",
+     "assoc": 0.5394,
+     "contribution": 0.182396,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5394
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interleukin-6 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
    "score": 0.5783,
    "rawScore": 0.820353,
    "geneCount": 1,
@@ -834,7 +783,15 @@
    "mechanisms": [
     "C-C chemokine receptor type 5 antagonist"
    ],
-   "rank": 14,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
    "score": 0.5577,
    "rawScore": 0.791661,
    "geneCount": 1,
@@ -889,7 +846,15 @@
    "mechanisms": [
     "Tumor necrosis factor ligand superfamily member 11 inhibitor"
    ],
-   "rank": 15,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
    "score": 0.5552,
    "rawScore": 0.788126,
    "geneCount": 1,
@@ -914,19 +879,128 @@
    ]
   },
   {
-   "id": "CHEMBL1201833",
-   "name": "Golimumab",
+   "id": "CHEMBL476960",
+   "name": "Voglibose",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Alpha glucosidase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.5364,
+   "rawScore": 0.761867,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "GLA",
+     "geneId": "ENSG00000102393",
+     "geneName": "galactosidase alpha",
+     "assoc": 0.9982,
+     "contribution": 0.320071,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9564
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8693
+      },
+      {
+       "id": "literature",
+       "score": 0.6886
+      }
+     ],
+     "hops": 3,
+     "via": "SI",
+     "viaScore": 0.972
+    },
+    {
+     "gene": "GLA",
+     "geneId": "ENSG00000102393",
+     "geneName": "galactosidase alpha",
+     "assoc": 0.9982,
+     "contribution": 0.235332,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9564
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8693
+      },
+      {
+       "id": "literature",
+       "score": 0.6886
+      }
+     ],
+     "hops": 3,
+     "via": "GAA",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "GLA",
+     "geneId": "ENSG00000102393",
+     "geneName": "galactosidase alpha",
+     "assoc": 0.9982,
+     "contribution": 0.206464,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9564
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8693
+      },
+      {
+       "id": "literature",
+       "score": 0.6886
+      }
+     ],
+     "hops": 3,
+     "via": "MGAM",
+     "viaScore": 0.973
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "juvenile arthritis due to defect in LACC1",
-    "spondylitis",
-    "immune system disorder"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 16,
    "score": 0.5134,
    "rawScore": 0.729804,
@@ -986,161 +1060,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 17,
-   "score": 0.5134,
-   "rawScore": 0.729804,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.5793,
-     "contribution": 0.265976,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5793
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.4292,
-     "contribution": 0.196887,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4292
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.5015,
-     "contribution": 0.139188,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5015
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 18,
-   "score": 0.5134,
-   "rawScore": 0.729804,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.5793,
-     "contribution": 0.265976,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5793
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.4292,
-     "contribution": 0.196887,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4292
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.5015,
-     "contribution": 0.139188,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5015
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 19,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.5134,
    "rawScore": 0.729804,
    "geneCount": 1,
@@ -1212,7 +1145,15 @@
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 20,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 18,
    "score": 0.5134,
    "rawScore": 0.729804,
    "geneCount": 1,
@@ -1284,6 +1225,186 @@
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.5134,
+   "rawScore": 0.729804,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.5793,
+     "contribution": 0.265976,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5793
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.4292,
+     "contribution": 0.196887,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4292
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.5015,
+     "contribution": 0.139188,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5015
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.5134,
+   "rawScore": 0.729804,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.5793,
+     "contribution": 0.265976,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5793
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.4292,
+     "contribution": 0.196887,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4292
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.5015,
+     "contribution": 0.139188,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5015
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
+    "immune system disorder"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 21,
    "score": 0.5134,
    "rawScore": 0.729804,
@@ -1343,16 +1464,19 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 22,
    "score": 0.5134,
    "rawScore": 0.729804,
@@ -1421,6 +1545,9 @@
     "Nitric oxide synthase inhibitor",
     "Nitric oxide synthase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
    "score": 0.5119,
    "rawScore": 0.727769,
@@ -1482,6 +1609,14 @@
     "Complement factor B inhibitor",
     "Complement factor B inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 24,
    "score": 0.4964,
    "rawScore": 0.706092,
@@ -1515,6 +1650,9 @@
    "mechanisms": [
     "Intermediate conductance calcium-activated potassium channel protein 4 opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
    "score": 0.476,
    "rawScore": 0.677637,
@@ -1551,6 +1689,14 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 26,
    "score": 0.4267,
    "rawScore": 0.608867,
@@ -1594,6 +1740,9 @@
     "Transient receptor potential cation channel subfamily M member 8 opener",
     "Transient receptor potential cation channel subfamily A member 1 opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 27,
    "score": 0.4169,
    "rawScore": 0.595185,
@@ -1648,6 +1797,9 @@
     "Lysosomal alpha-glucosidase inhibitor",
     "Maltase-glucoamylase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 28,
    "score": 0.4082,
    "rawScore": 0.582953,
@@ -1719,6 +1871,26 @@
    "mechanisms": [
     "Sclerostin inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 29,
    "score": 0.3872,
    "rawScore": 0.553686,
@@ -1754,64 +1926,10 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 30,
-   "score": 0.3723,
-   "rawScore": 0.532948,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.5394,
-     "contribution": 0.309787,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5394
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.6772,
-     "contribution": 0.223161,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5515
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2803
-      }
-     ],
-     "hops": 3,
-     "via": "IL6R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108730",
-   "name": "Sarilumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interleukin-6 receptor alpha subunit antagonist"
-   ],
-   "rank": 31,
    "score": 0.3723,
    "rawScore": 0.532948,
    "geneCount": 1,
@@ -1870,6 +1988,83 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.3723,
+   "rawScore": 0.532948,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6R",
+     "geneId": "ENSG00000160712",
+     "geneName": "interleukin 6 receptor",
+     "assoc": 0.5394,
+     "contribution": 0.309787,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5394
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.6772,
+     "contribution": 0.223161,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5515
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2803
+      }
+     ],
+     "hops": 3,
+     "via": "IL6R",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108730",
+   "name": "Sarilumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interleukin-6 receptor alpha subunit antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 32,
    "score": 0.3723,
    "rawScore": 0.532948,
@@ -1916,116 +2111,6 @@
    ]
   },
   {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
-   ],
-   "rank": 33,
-   "score": 0.3698,
-   "rawScore": 0.529454,
-   "geneCount": 34,
-   "paths": [
-    {
-     "gene": "LAMB4",
-     "geneId": "ENSG00000091128",
-     "geneName": "laminin subunit beta 4",
-     "assoc": 0.6125,
-     "contribution": 0.149454,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6125
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A1",
-     "geneId": "ENSG00000187498",
-     "geneName": "collagen type IV alpha 1 chain",
-     "assoc": 0.4876,
-     "contribution": 0.090164,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4411
-      },
-      {
-       "id": "literature",
-       "score": 0.0831
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PLG",
-     "geneId": "ENSG00000122194",
-     "geneName": "plasminogen",
-     "assoc": 0.4516,
-     "contribution": 0.083254,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4516
-      }
-     ],
-     "hops": 3,
-     "via": "FN1",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL278623",
-   "name": "Macimorelin",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Ghrelin receptor agonist",
-    "Ghrelin receptor agonist"
-   ],
-   "rank": 34,
-   "score": 0.3646,
-   "rawScore": 0.522198,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GHRL",
-     "geneId": "ENSG00000157017",
-     "geneName": "ghrelin and obestatin prepropeptide",
-     "assoc": 0.8112,
-     "contribution": 0.522198,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8112
-      }
-     ],
-     "hops": 3,
-     "via": "GHSR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2110579",
    "name": "Anamorelin",
    "drugType": "Small molecule",
@@ -2034,7 +2119,10 @@
    "mechanisms": [
     "Ghrelin receptor agonist"
    ],
-   "rank": 35,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
    "score": 0.3646,
    "rawScore": 0.522198,
    "geneCount": 1,
@@ -2069,7 +2157,10 @@
    "mechanisms": [
     "Ghrelin receptor agonist"
    ],
-   "rank": 36,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
    "score": 0.3646,
    "rawScore": 0.522198,
    "geneCount": 1,
@@ -2094,6 +2185,122 @@
    ]
   },
   {
+   "id": "CHEMBL278623",
+   "name": "Macimorelin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Ghrelin receptor agonist",
+    "Ghrelin receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.3646,
+   "rawScore": 0.522198,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GHRL",
+     "geneId": "ENSG00000157017",
+     "geneName": "ghrelin and obestatin prepropeptide",
+     "assoc": 0.8112,
+     "contribution": 0.522198,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8112
+      }
+     ],
+     "hops": 3,
+     "via": "GHSR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095222",
+   "name": "Ocriplasmin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Abnormal retinal morphology",
+    "eye disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Laminin hydrolytic enzyme",
+    "Fibronectin proteolytic enzyme",
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.3533,
+   "rawScore": 0.506414,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "LAMB4",
+     "geneId": "ENSG00000091128",
+     "geneName": "laminin subunit beta 4",
+     "assoc": 0.6125,
+     "contribution": 0.142951,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6125
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL4A1",
+     "geneId": "ENSG00000187498",
+     "geneName": "collagen type IV alpha 1 chain",
+     "assoc": 0.4876,
+     "contribution": 0.086241,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4411
+      },
+      {
+       "id": "literature",
+       "score": 0.0831
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PLG",
+     "geneId": "ENSG00000122194",
+     "geneName": "plasminogen",
+     "assoc": 0.4516,
+     "contribution": 0.079631,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4516
+      }
+     ],
+     "hops": 3,
+     "via": "FN1",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
    "id": "CHEMBL218291",
    "name": "Forodesine",
    "drugType": "Small molecule",
@@ -2102,6 +2309,9 @@
    "mechanisms": [
     "Purine nucleoside phosphorylase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 37,
    "score": 0.3396,
    "rawScore": 0.487217,
@@ -2127,16 +2337,19 @@
    ]
   },
   {
-   "id": "CHEMBL4298086",
-   "name": "Pozelimab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4297889",
+   "name": "Avacincaptad Pegol Sodium",
+   "drugType": "Unknown",
    "approvedFor": [
-    "Protein-losing enteropathy"
+    "atrophic macular degeneration"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Complement C5 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 38,
    "score": 0.3212,
    "rawScore": 0.461668,
@@ -2179,20 +2392,89 @@
    ]
   },
   {
-   "id": "CHEMBL1201828",
-   "name": "Eculizumab",
+   "id": "CHEMBL4298086",
+   "name": "Pozelimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "hemolysis",
-    "age-related macular degeneration",
-    "neuromyelitis optica",
-    "atypical hemolytic-uremic syndrome"
+    "Protein-losing enteropathy"
    ],
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
     "Complement C5 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 39,
+   "score": 0.3212,
+   "rawScore": 0.461668,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.6682,
+     "contribution": 0.290858,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6682
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "C5AR1",
+     "geneId": "ENSG00000197405",
+     "geneName": "complement C5a receptor 1",
+     "assoc": 0.6839,
+     "contribution": 0.17081,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6839
+      }
+     ],
+     "hops": 3,
+     "via": "C5",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5315048",
+   "name": "Zilucoplan Sodium",
+   "drugType": "Protein",
+   "approvedFor": [
+    "myasthenia gravis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Complement C5 binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 40,
    "score": 0.3212,
    "rawScore": 0.461668,
    "geneCount": 1,
@@ -2245,56 +2527,14 @@
    "mechanisms": [
     "Complement C5 inhibitor"
    ],
-   "rank": 40,
-   "score": 0.3212,
-   "rawScore": 0.461668,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.6682,
-     "contribution": 0.290858,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6682
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "C5AR1",
-     "geneId": "ENSG00000197405",
-     "geneName": "complement C5a receptor 1",
-     "assoc": 0.6839,
-     "contribution": 0.17081,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6839
-      }
-     ],
-     "hops": 3,
-     "via": "C5",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL4298207",
-   "name": "Zilucoplan",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Complement C5 inhibitor"
    ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 41,
    "score": 0.3212,
    "rawScore": 0.461668,
@@ -2350,6 +2590,9 @@
     "Alpha-galactosidase A stabiliser",
     "Alpha-galactosidase A stabiliser"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
    "score": 0.9656,
    "rawScore": 1.360868,
@@ -2418,7 +2661,10 @@
     "Sodium/glucose cotransporter 2 inhibitor",
     "Sodium/glucose cotransporter 2 inhibitor"
    ],
-   "rank": 158,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 168,
    "score": 0.098,
    "rawScore": 0.150089,
    "geneCount": 1,

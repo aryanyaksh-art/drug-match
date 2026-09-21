@@ -7,9 +7,9 @@
  "genesScored": 37,
  "genesWithDrugs": 14,
  "knownDrugCount": 62,
- "candidatesConsidered": 298,
+ "candidatesConsidered": 301,
  "pathsTwoHop": 224,
- "pathsThreeHop": 218,
+ "pathsThreeHop": 227,
  "candidates": [
   {
    "id": "CHEMBL1909285",
@@ -20,17 +20,29 @@
    "mechanisms": [
     "Alcohol dehydrogenase inhibitor"
    ],
-   "rank": 2,
-   "score": 0.7848,
-   "rawScore": 1.772518,
-   "geneCount": 5,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.7295,
+   "rawScore": 1.647852,
+   "geneCount": 6,
    "paths": [
     {
      "gene": "ADH1B",
      "geneId": "ENSG00000196616",
      "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
      "assoc": 0.9735,
-     "contribution": 0.387557,
+     "contribution": 0.360299,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -51,7 +63,7 @@
      "geneId": "ENSG00000111275",
      "geneName": "aldehyde dehydrogenase 2 family member",
      "assoc": 0.9355,
-     "contribution": 0.220906,
+     "contribution": 0.205369,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -72,7 +84,7 @@
      "geneId": "ENSG00000196616",
      "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
      "assoc": 0.9735,
-     "contribution": 0.220145,
+     "contribution": 0.204661,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -101,6 +113,9 @@
    "mechanisms": [
     "Alcohol dehydrogenase class I inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
    "score": 0.724,
    "rawScore": 1.635425,
@@ -183,6 +198,14 @@
    "mechanisms": [
     "Aldehyde dehydrogenase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.6602,
    "rawScore": 1.491852,
@@ -243,6 +266,9 @@
    "mechanisms": [
     "Interleukin-1 alpha inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 12,
    "score": 0.4621,
    "rawScore": 1.045516,
@@ -299,6 +325,9 @@
    "mechanisms": [
     "Hexokinase type IV activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 13,
    "score": 0.4254,
    "rawScore": 0.962947,
@@ -328,6 +357,46 @@
    ]
   },
   {
+   "id": "CHEMBL218291",
+   "name": "Forodesine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Purine nucleoside phosphorylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.3596,
+   "rawScore": 0.814757,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "XDH",
+     "geneId": "ENSG00000158125",
+     "geneName": "xanthine dehydrogenase",
+     "assoc": 0.8172,
+     "contribution": 0.814757,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5992
+      },
+      {
+       "id": "literature",
+       "score": 0.5439
+      }
+     ],
+     "hops": 3,
+     "via": "PNP",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2219536",
    "name": "Mipomersen",
    "drugType": "Oligonucleotide",
@@ -339,7 +408,15 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
-   "rank": 14,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
    "score": 0.3445,
    "rawScore": 0.780624,
    "geneCount": 1,
@@ -381,7 +458,10 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
-   "rank": 15,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
    "score": 0.261,
    "rawScore": 0.592493,
    "geneCount": 3,
@@ -431,20 +511,19 @@
    ]
   },
   {
-   "id": "CHEMBL3301624",
-   "name": "Setmelanotide",
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
    "drugType": "Protein",
-   "approvedFor": [
-    "obesity disorder",
-    "Obesity",
-    "Bardet-Biedl syndrome"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 16,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.2579,
    "rawScore": 0.58551,
    "geneCount": 1,
@@ -473,16 +552,23 @@
    ]
   },
   {
-   "id": "CHEMBL2070241",
-   "name": "Bremelanotide",
+   "id": "CHEMBL3301624",
+   "name": "Setmelanotide",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "obesity disorder",
+    "Obesity",
+    "Bardet-Biedl syndrome"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
    ],
-   "rank": 17,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
    "score": 0.2579,
    "rawScore": 0.58551,
    "geneCount": 1,
@@ -523,7 +609,10 @@
    "mechanisms": [
     "Insulin-like growth factor I receptor agonist"
    ],
-   "rank": 18,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
    "score": 0.2507,
    "rawScore": 0.569454,
    "geneCount": 1,
@@ -563,7 +652,10 @@
    "mechanisms": [
     "Insulin-like growth factor I receptor antagonist"
    ],
-   "rank": 19,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
    "score": 0.2507,
    "rawScore": 0.569454,
    "geneCount": 1,
@@ -603,7 +695,15 @@
    "mechanisms": [
     "Sodium/hydrogen exchanger 3 inhibitor"
    ],
-   "rank": 20,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
    "score": 0.2336,
    "rawScore": 0.530856,
    "geneCount": 1,
@@ -642,7 +742,23 @@
     "Transient receptor potential cation channel subfamily V member 4 inhibitor",
     "Transient receptor potential cation channel subfamily A member 1 inhibitor"
    ],
-   "rank": 21,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "psychiatric toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 22,
    "score": 0.2304,
    "rawScore": 0.5237,
    "geneCount": 2,
@@ -684,6 +800,9 @@
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
    "score": 0.2278,
    "rawScore": 0.517877,
@@ -725,7 +844,15 @@
    "mechanisms": [
     "Xanthine dehydrogenase inhibitor"
    ],
-   "rank": 24,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 27,
    "score": 0.2063,
    "rawScore": 0.469363,
    "geneCount": 1,
@@ -767,7 +894,10 @@
     "Bone morphogenetic protein receptor type-1A agonist",
     "Activin receptor type-1 agonist"
    ],
-   "rank": 28,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
    "score": 0.2036,
    "rawScore": 0.463367,
    "geneCount": 6,
@@ -829,7 +959,10 @@
     "Insulin-like growth factor I receptor inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "rank": 29,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
    "score": 0.1895,
    "rawScore": 0.431565,
    "geneCount": 2,
@@ -858,87 +991,6 @@
    ]
   },
   {
-   "id": "CHEMBL1256841",
-   "name": "Nialamide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.1703,
-   "rawScore": 0.388308,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ADH1B",
-     "geneId": "ENSG00000196616",
-     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
-     "assoc": 0.9735,
-     "contribution": 0.14836,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9104
-      },
-      {
-       "id": "literature",
-       "score": 0.7043
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.946
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.9355,
-     "contribution": 0.121632,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7725
-      },
-      {
-       "id": "literature",
-       "score": 0.7165
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.975
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.9355,
-     "contribution": 0.118315,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7725
-      },
-      {
-       "id": "literature",
-       "score": 0.7165
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.982
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1909286",
    "name": "Phenoxypropazine",
    "drugType": "Small molecule",
@@ -947,6 +999,18 @@
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 31,
    "score": 0.1703,
    "rawScore": 0.388308,
@@ -1018,100 +1082,27 @@
    ]
   },
   {
-   "id": "CHEMBL1201168",
-   "name": "Isocarboxazid",
+   "id": "CHEMBL1909283",
+   "name": "Mebanazine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder",
-    "depressive disorder"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
-   "rank": 32,
-   "score": 0.1703,
-   "rawScore": 0.388308,
-   "geneCount": 2,
-   "paths": [
+   "warnings": [
     {
-     "gene": "ADH1B",
-     "geneId": "ENSG00000196616",
-     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
-     "assoc": 0.9735,
-     "contribution": 0.14836,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9104
-      },
-      {
-       "id": "literature",
-       "score": 0.7043
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.946
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
     },
     {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.9355,
-     "contribution": 0.121632,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7725
-      },
-      {
-       "id": "literature",
-       "score": 0.7165
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.975
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.9355,
-     "contribution": 0.118315,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7725
-      },
-      {
-       "id": "literature",
-       "score": 0.7165
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.982
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL673",
-   "name": "Pargyline",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "rank": 33,
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 32,
    "score": 0.1703,
    "rawScore": 0.388308,
    "geneCount": 2,
@@ -1193,6 +1184,108 @@
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 33,
+   "score": 0.1703,
+   "rawScore": 0.388308,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ADH1B",
+     "geneId": "ENSG00000196616",
+     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
+     "assoc": 0.9735,
+     "contribution": 0.14836,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9104
+      },
+      {
+       "id": "literature",
+       "score": 0.7043
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.946
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.9355,
+     "contribution": 0.121632,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7725
+      },
+      {
+       "id": "literature",
+       "score": 0.7165
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.9355,
+     "contribution": 0.118315,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7725
+      },
+      {
+       "id": "literature",
+       "score": 0.7165
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201168",
+   "name": "Isocarboxazid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "major depressive disorder",
+    "depressive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 34,
    "score": 0.1703,
    "rawScore": 0.388308,
@@ -1274,6 +1367,22 @@
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 35,
    "score": 0.1703,
    "rawScore": 0.388308,
@@ -1345,14 +1454,36 @@
    ]
   },
   {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
+   "id": "CHEMBL1256841",
+   "name": "Nialamide",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "major depressive disorder"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "lack substantial evidence of efficacy and safety"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 36,
    "score": 0.1703,
    "rawScore": 0.388308,
@@ -1434,7 +1565,95 @@
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 37,
+   "score": 0.1703,
+   "rawScore": 0.388308,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ADH1B",
+     "geneId": "ENSG00000196616",
+     "geneName": "alcohol dehydrogenase 1B (class I), beta polypeptide",
+     "assoc": 0.9735,
+     "contribution": 0.14836,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9104
+      },
+      {
+       "id": "literature",
+       "score": 0.7043
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.946
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.9355,
+     "contribution": 0.121632,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7725
+      },
+      {
+       "id": "literature",
+       "score": 0.7165
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.9355,
+     "contribution": 0.118315,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7725
+      },
+      {
+       "id": "literature",
+       "score": 0.7165
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL673",
+   "name": "Pargyline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
    "score": 0.1703,
    "rawScore": 0.388308,
    "geneCount": 2,
@@ -1518,7 +1737,10 @@
    "mechanisms": [
     "IL36 receptor antagonist"
    ],
-   "rank": 38,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
    "score": 0.1655,
    "rawScore": 0.377514,
    "geneCount": 2,
@@ -1543,89 +1765,6 @@
    ]
   },
   {
-   "id": "CHEMBL603469",
-   "name": "Lestaurtinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia by FAB classification"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Nerve growth factor receptor Trk-A inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "rank": 39,
-   "score": 0.1655,
-   "rawScore": 0.377414,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.136333,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.905
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.128285,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.916
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.112797,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "JAK2",
-     "viaScore": 0.988
-    }
-   ]
-  },
-  {
    "id": "CHEMBL98",
    "name": "Vorinostat",
    "drugType": "Small molecule",
@@ -1640,6 +1779,9 @@
     "Histone deacetylase 6 inhibitor",
     "Histone deacetylase 1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 40,
    "score": 0.1634,
    "rawScore": 0.372812,
@@ -1690,20 +1832,23 @@
    ]
   },
   {
-   "id": "CHEMBL1201129",
-   "name": "Decitabine",
+   "id": "CHEMBL1489",
+   "name": "Azacitidine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "myeloid leukemia",
-    "anemia",
     "neoplasm",
-    "chronic myelomonocytic leukemia"
+    "myelodysplastic syndrome with excess blasts",
+    "acute myeloid leukemia",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 6,
+   "indicationCount": 5,
    "mechanisms": [
     "DNA (cytosine-5)-methyltransferase 1 inhibitor",
     "DNA (cytosine-5)-methyltransferase 3A inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 41,
    "score": 0.1622,
    "rawScore": 0.369929,
@@ -1733,20 +1878,23 @@
    ]
   },
   {
-   "id": "CHEMBL1489",
-   "name": "Azacitidine",
+   "id": "CHEMBL1201129",
+   "name": "Decitabine",
    "drugType": "Small molecule",
    "approvedFor": [
+    "myeloid leukemia",
+    "anemia",
     "neoplasm",
-    "myelodysplastic syndrome with excess blasts",
-    "acute myeloid leukemia",
-    "myelodysplastic syndrome"
+    "chronic myelomonocytic leukemia"
    ],
-   "indicationCount": 5,
+   "indicationCount": 6,
    "mechanisms": [
     "DNA (cytosine-5)-methyltransferase 1 inhibitor",
     "DNA (cytosine-5)-methyltransferase 3A inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 42,
    "score": 0.1622,
    "rawScore": 0.369929,
@@ -1776,17 +1924,19 @@
    ]
   },
   {
-   "id": "CHEMBL86304",
-   "name": "Moclobemide",
+   "id": "CHEMBL18116",
+   "name": "Toloxatone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "depressive disorder",
     "major depressive disorder"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase A inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 43,
    "score": 0.1542,
    "rawScore": 0.351881,
@@ -1837,16 +1987,20 @@
    ]
   },
   {
-   "id": "CHEMBL18116",
-   "name": "Toloxatone",
+   "id": "CHEMBL86304",
+   "name": "Moclobemide",
    "drugType": "Small molecule",
    "approvedFor": [
+    "depressive disorder",
     "major depressive disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase A inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 44,
    "score": 0.1542,
    "rawScore": 0.351881,
@@ -1897,164 +2051,222 @@
    ]
   },
   {
-   "id": "CHEMBL3889654",
-   "name": "Larotrectinib",
+   "id": "CHEMBL421",
+   "name": "Sulfasalazine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cancer",
-    "neoplasm"
+    "rheumatoid arthritis",
+    "irritable bowel syndrome",
+    "ulcerative colitis",
+    "juvenile idiopathic arthritis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Neurotrophic tyrosine kinase receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor inhibitor"
+    "Arachidonate 5-lipoxygenase inhibitor",
+    "Cyclooxygenase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 45,
-   "score": 0.1529,
-   "rawScore": 0.349164,
-   "geneCount": 2,
+   "score": 0.151,
+   "rawScore": 0.344704,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.179892,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.905
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.169272,
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.190558,
      "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
        "id": "literature",
-       "score": 0.0243
+       "score": 0.8212
       }
      ],
      "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.916
+     "via": "ALOX5",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.103573,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8212
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.1516,
+     "contribution": 0.029813,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1516
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.97
     }
    ]
   },
   {
-   "id": "CHEMBL4297852",
-   "name": "Cenegermin",
-   "drugType": "Protein",
+   "id": "CHEMBL509",
+   "name": "Meclofenamic Acid",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "eye disorder",
-    "keratitis"
+    "ankylosing spondylitis",
+    "rheumatic disorder",
+    "Myalgia",
+    "Arthralgia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Neurotrophic tyrosine kinase receptor agonist"
+    "Arachidonate 5-lipoxygenase inhibitor",
+    "Cyclooxygenase inhibitor"
    ],
-   "rank": 46,
-   "score": 0.1529,
-   "rawScore": 0.349164,
-   "geneCount": 2,
-   "paths": [
+   "warnings": [
     {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.179892,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.905
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
     },
     {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.8693,
-     "contribution": 0.169272,
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 46,
+   "score": 0.151,
+   "rawScore": 0.344704,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.190558,
      "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8661
-      },
-      {
        "id": "literature",
-       "score": 0.0243
+       "score": 0.8212
       }
      ],
      "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.916
+     "via": "ALOX5",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.103573,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8212
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.1516,
+     "contribution": 0.029813,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1516
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.97
     }
    ]
   },
   {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL93",
+   "name": "Zileuton",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder"
+    "asthma"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Arachidonate 5-lipoxygenase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 47,
-   "score": 0.1442,
-   "rawScore": 0.329571,
+   "score": 0.1498,
+   "rawScore": 0.341981,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "IL1RN",
-     "geneId": "ENSG00000136689",
-     "geneName": "interleukin 1 receptor antagonist",
-     "assoc": 0.9627,
-     "contribution": 0.329571,
-     "drugsOnGene": 3,
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.295717,
+     "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8944
-      },
-      {
        "id": "literature",
-       "score": 0.6466
+       "score": 0.8212
       }
      ],
      "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.925
+     "via": "ALOX5",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.1516,
+     "contribution": 0.046265,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1516
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.97
     }
    ]
   },
@@ -2072,6 +2284,9 @@
    "mechanisms": [
     "Interleukin-6 antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 48,
    "score": 0.1442,
    "rawScore": 0.329571,
@@ -2111,6 +2326,9 @@
    "mechanisms": [
     "Interleukin-6 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 49,
    "score": 0.1442,
    "rawScore": 0.329571,
@@ -2140,173 +2358,160 @@
    ]
   },
   {
-   "id": "CHEMBL509",
-   "name": "Meclofenamic Acid",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "ankylosing spondylitis",
-    "rheumatic disorder",
-    "Myalgia",
-    "Arthralgia"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor"
-   ],
-   "rank": 50,
-   "score": 0.1377,
-   "rawScore": 0.314892,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8212,
-     "contribution": 0.190558,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8212
-      }
-     ],
-     "hops": 3,
-     "via": "ALOX5",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8212,
-     "contribution": 0.103573,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8212
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.1516,
-     "contribution": 0.020761,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1516
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL421",
-   "name": "Sulfasalazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "irritable bowel syndrome",
-    "ulcerative colitis",
-    "juvenile idiopathic arthritis"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor"
-   ],
-   "rank": 51,
-   "score": 0.1377,
-   "rawScore": 0.314892,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8212,
-     "contribution": 0.190558,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8212
-      }
-     ],
-     "hops": 3,
-     "via": "ALOX5",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8212,
-     "contribution": 0.103573,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8212
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.1516,
-     "contribution": 0.020761,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1516
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL93",
-   "name": "Zileuton",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "asthma"
+    "immune system disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor"
+    "Interleukin-6 inhibitor"
    ],
-   "rank": 52,
-   "score": 0.1292,
-   "rawScore": 0.295717,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 50,
+   "score": 0.1442,
+   "rawScore": 0.329571,
    "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL1RN",
+     "geneId": "ENSG00000136689",
+     "geneName": "interleukin 1 receptor antagonist",
+     "assoc": 0.9627,
+     "contribution": 0.329571,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8944
+      },
+      {
+       "id": "literature",
+       "score": 0.6466
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.925
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL603469",
+   "name": "Lestaurtinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia by FAB classification"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Nerve growth factor receptor Trk-A inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 51,
+   "score": 0.1404,
+   "rawScore": 0.320909,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.8693,
+     "contribution": 0.115921,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8661
+      },
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.905
+    },
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.8693,
+     "contribution": 0.109078,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8661
+      },
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.916
+    },
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.8693,
+     "contribution": 0.095909,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8661
+      },
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL425",
+   "name": "Olsalazine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "ulcerative colitis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor gamma agonist",
+    "Arachidonate 5-lipoxygenase inhibitor",
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 53,
+   "score": 0.1343,
+   "rawScore": 0.307236,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "PTGS2",
      "geneId": "ENSG00000073756",
      "geneName": "prostaglandin-endoperoxide synthase 2",
      "assoc": 0.8212,
-     "contribution": 0.295717,
+     "contribution": 0.169845,
      "drugsOnGene": 6,
      "evidence": [
       {
@@ -2317,6 +2522,40 @@
      "hops": 3,
      "via": "ALOX5",
      "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8212,
+     "contribution": 0.092315,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8212
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.1516,
+     "contribution": 0.026572,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1516
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.97
     }
    ]
   }
@@ -2335,6 +2574,9 @@
     "Solute carrier family 22 member 6 inhibitor",
     "Solute carrier family 22 member 8 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.257264,
@@ -2406,18 +2648,29 @@
    ]
   },
   {
-   "id": "CHEMBL4594446",
-   "name": "Dotinurad",
+   "id": "CHEMBL388590",
+   "name": "Benzbromarone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "rank": 3,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Unfavourable benefit-risk evaluation"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 2,
    "score": 0.7428,
    "rawScore": 1.677815,
    "geneCount": 1,
@@ -2488,17 +2741,21 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL4594446",
+   "name": "Dotinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "rank": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
    "score": 0.7428,
    "rawScore": 1.677815,
    "geneCount": 1,
@@ -2580,7 +2837,15 @@
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "rank": 5,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
    "score": 0.7428,
    "rawScore": 1.677815,
    "geneCount": 1,
@@ -2651,8 +2916,8 @@
    ]
   },
   {
-   "id": "CHEMBL388590",
-   "name": "Benzbromarone",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
     "gout"
@@ -2661,7 +2926,10 @@
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "rank": 6,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
    "score": 0.7428,
    "rawScore": 1.677815,
    "geneCount": 1,
@@ -2745,6 +3013,9 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 8,
    "score": 0.674,
    "rawScore": 1.522947,
@@ -2821,6 +3092,9 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
    "score": 0.674,
    "rawScore": 1.522947,
@@ -2896,6 +3170,9 @@
    "mechanisms": [
     "Interleukin-1 receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 11,
    "score": 0.4643,
    "rawScore": 1.050492,
@@ -2954,7 +3231,10 @@
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
    ],
-   "rank": 22,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
    "score": 0.2278,
    "rawScore": 0.517877,
    "geneCount": 2,
@@ -2983,20 +3263,25 @@
    ]
   },
   {
-   "id": "CHEMBL1467",
-   "name": "Allopurinol",
+   "id": "CHEMBL1164729",
+   "name": "Febuxostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "lymphoma",
-    "leukemia",
-    "cancer",
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
-    "Xanthine dehydrogenase inhibitor",
     "Xanthine dehydrogenase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 25,
    "score": 0.2063,
    "rawScore": 0.469363,

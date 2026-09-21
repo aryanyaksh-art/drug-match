@@ -9,23 +9,36 @@
  "knownDrugCount": 346,
  "candidatesConsidered": 437,
  "pathsTwoHop": 1686,
- "pathsThreeHop": 3720,
+ "pathsThreeHop": 4309,
  "candidates": [
   {
-   "id": "CHEMBL660",
-   "name": "Amantadine",
+   "id": "CHEMBL1094",
+   "name": "Felbamate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Parkinson disease"
+    "epilepsy",
+    "Seizure",
+    "anemia"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Matrix protein 2 inhibitor",
     "Glutamate [NMDA] receptor antagonist"
    ],
-   "rank": 3,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 1,
    "score": 1.0,
-   "rawScore": 1.840285,
+   "rawScore": 1.932798,
    "geneCount": 7,
    "paths": [
     {
@@ -86,21 +99,23 @@
    ]
   },
   {
-   "id": "CHEMBL1094",
-   "name": "Felbamate",
+   "id": "CHEMBL660",
+   "name": "Amantadine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy",
-    "Seizure",
-    "anemia"
+    "Parkinson disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
+    "Matrix protein 2 inhibitor",
     "Glutamate [NMDA] receptor antagonist"
    ],
-   "rank": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
    "score": 1.0,
-   "rawScore": 1.840285,
+   "rawScore": 1.932798,
    "geneCount": 7,
    "paths": [
     {
@@ -173,9 +188,12 @@
     "Histamine H1 receptor antagonist",
     "Sodium channel alpha subunit blocker"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
-   "score": 0.8015,
-   "rawScore": 1.477704,
+   "score": 0.7951,
+   "rawScore": 1.539753,
    "geneCount": 19,
    "paths": [
     {
@@ -245,8 +263,20 @@
     "Diamine oxidase activator",
     "Monoamine oxidase A activator"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 8,
-   "score": 0.5332,
+   "score": 0.5075,
    "rawScore": 0.987912,
    "geneCount": 2,
    "paths": [
@@ -314,8 +344,83 @@
    "mechanisms": [
     "Catechol O-methyltransferase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
-   "score": 0.4954,
+   "score": 0.4715,
+   "rawScore": 0.918721,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.303483,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.9544,
+     "contribution": 0.266299,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9544
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.4736,
+     "contribution": 0.174588,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4736
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL953",
+   "name": "Entacapone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Catechol O-methyltransferase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.4715,
    "rawScore": 0.918721,
    "geneCount": 1,
    "paths": [
@@ -384,77 +489,20 @@
    "mechanisms": [
     "Catechol O-methyltransferase inhibitor"
    ],
-   "rank": 10,
-   "score": 0.4954,
-   "rawScore": 0.918721,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.303483,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.996
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
     },
     {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.9544,
-     "contribution": 0.266299,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9544
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.4736,
-     "contribution": 0.174588,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4736
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.996
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL953",
-   "name": "Entacapone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Catechol O-methyltransferase inhibitor"
-   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 11,
-   "score": 0.4954,
+   "score": 0.4715,
    "rawScore": 0.918721,
    "geneCount": 1,
    "paths": [
@@ -527,9 +575,21 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 12,
-   "score": 0.4649,
-   "rawScore": 0.863144,
+   "score": 0.4466,
+   "rawScore": 0.87094,
    "geneCount": 5,
    "paths": [
     {
@@ -611,9 +671,17 @@
     "Serotonin 2a (5-HT2a) receptor antagonist",
     "Serotonin 2c (5-HT2c) receptor antagonist"
    ],
-   "rank": 14,
-   "score": 0.4649,
-   "rawScore": 0.863144,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
+   "score": 0.4466,
+   "rawScore": 0.87094,
    "geneCount": 5,
    "paths": [
     {
@@ -695,9 +763,29 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2c (5-HT2c) receptor antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 15,
-   "score": 0.4649,
-   "rawScore": 0.863144,
+   "score": 0.4466,
+   "rawScore": 0.87094,
    "geneCount": 5,
    "paths": [
     {
@@ -766,6 +854,190 @@
    ]
   },
   {
+   "id": "CHEMBL71",
+   "name": "Chlorpromazine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "conduct disorder",
+    "psychotic disorder",
+    "mental disorder",
+    "schizophrenia"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "D2-like dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist",
+    "D2-like dopamine receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 16,
+   "score": 0.4327,
+   "rawScore": 0.844424,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "HTR2A",
+     "geneId": "ENSG00000102468",
+     "geneName": "5-hydroxytryptamine receptor 2A",
+     "assoc": 0.9349,
+     "contribution": 0.120401,
+     "drugsOnGene": 42,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7374
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4525
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.097189,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.094749,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200986",
+   "name": "Haloperidol Decanoate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "schizophrenia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "D2-like dopamine receptor inverse agonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 17,
+   "score": 0.4327,
+   "rawScore": 0.844424,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "HTR2A",
+     "geneId": "ENSG00000102468",
+     "geneName": "5-hydroxytryptamine receptor 2A",
+     "assoc": 0.9349,
+     "contribution": 0.120401,
+     "drugsOnGene": 42,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7374
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4525
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.097189,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.094749,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1108",
    "name": "Droperidol",
    "drugType": "Small molecule",
@@ -779,9 +1051,21 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 17,
-   "score": 0.45,
-   "rawScore": 0.835899,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 18,
+   "score": 0.4327,
+   "rawScore": 0.844424,
    "geneCount": 4,
    "paths": [
     {
@@ -862,177 +1146,12 @@
     "D2-like dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 18,
-   "score": 0.45,
-   "rawScore": 0.835899,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "HTR2A",
-     "geneId": "ENSG00000102468",
-     "geneName": "5-hydroxytryptamine receptor 2A",
-     "assoc": 0.9349,
-     "contribution": 0.120401,
-     "drugsOnGene": 42,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7374
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4525
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.097189,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.094749,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL71",
-   "name": "Chlorpromazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "conduct disorder",
-    "psychotic disorder",
-    "mental disorder",
-    "schizophrenia"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist",
-    "D2-like dopamine receptor antagonist"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
-   "score": 0.45,
-   "rawScore": 0.835899,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "HTR2A",
-     "geneId": "ENSG00000102468",
-     "geneName": "5-hydroxytryptamine receptor 2A",
-     "assoc": 0.9349,
-     "contribution": 0.120401,
-     "drugsOnGene": 42,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7374
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4525
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.097189,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.094749,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200986",
-   "name": "Haloperidol Decanoate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "schizophrenia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "D2-like dopamine receptor inverse agonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist"
-   ],
-   "rank": 20,
-   "score": 0.45,
-   "rawScore": 0.835899,
+   "score": 0.4327,
+   "rawScore": 0.844424,
    "geneCount": 4,
    "paths": [
     {
@@ -1112,83 +1231,21 @@
    "mechanisms": [
     "Monoamine transporter inhibitor"
    ],
-   "rank": 25,
-   "score": 0.3983,
-   "rawScore": 0.741502,
-   "geneCount": 3,
-   "paths": [
+   "warnings": [
     {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.9544,
-     "contribution": 0.155723,
-     "drugsOnGene": 31,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9544
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
     },
     {
-     "gene": "SLC6A3",
-     "geneId": "ENSG00000142319",
-     "geneName": "solute carrier family 6 member 3",
-     "assoc": 0.659,
-     "contribution": 0.133633,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.659
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.120849,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 3,
-     "via": "SLC6A3",
-     "viaScore": 0.999
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1201201",
-   "name": "Methamphetamine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain",
-    "attention deficit-hyperactivity disorder"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine transporter inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.3983,
-   "rawScore": 0.741502,
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.3964,
+   "rawScore": 0.774779,
    "geneCount": 3,
    "paths": [
     {
@@ -1260,9 +1317,94 @@
    "mechanisms": [
     "Monoamine transporter inhibitor"
    ],
-   "rank": 29,
-   "score": 0.3983,
-   "rawScore": 0.741502,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.3964,
+   "rawScore": 0.774779,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.9544,
+     "contribution": 0.155723,
+     "drugsOnGene": 31,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9544
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.659,
+     "contribution": 0.133633,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.120849,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 3,
+     "via": "SLC6A3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201201",
+   "name": "Methamphetamine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Pain",
+    "attention deficit-hyperactivity disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine transporter inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 27,
+   "score": 0.3964,
+   "rawScore": 0.774779,
    "geneCount": 3,
    "paths": [
     {
@@ -1334,8 +1476,16 @@
    "mechanisms": [
     "Aldehyde dehydrogenase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 32,
-   "score": 0.3918,
+   "score": 0.3729,
    "rawScore": 0.72956,
    "geneCount": 1,
    "paths": [
@@ -1390,9 +1540,12 @@
     "Dopamine receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 33,
-   "score": 0.3815,
-   "rawScore": 0.710751,
+   "score": 0.3669,
+   "rawScore": 0.717999,
    "geneCount": 6,
    "paths": [
     {
@@ -1461,210 +1614,6 @@
    ]
   },
   {
-   "id": "CHEMBL1909286",
-   "name": "Phenoxypropazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "rank": 35,
-   "score": 0.3812,
-   "rawScore": 0.710203,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.25248,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.4736,
-     "contribution": 0.137549,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4736
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.13252,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL673",
-   "name": "Pargyline",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "rank": 37,
-   "score": 0.3812,
-   "rawScore": 0.710203,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.25248,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.4736,
-     "contribution": 0.137549,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4736
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.13252,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "rank": 40,
-   "score": 0.3812,
-   "rawScore": 0.710203,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.25248,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.4736,
-     "contribution": 0.137549,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4736
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAOA",
-     "geneId": "ENSG00000189221",
-     "geneName": "monoamine oxidase A",
-     "assoc": 0.9001,
-     "contribution": 0.13252,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9001
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2219425",
    "name": "Aripiprazole Lauroxil",
    "drugType": "Small molecule",
@@ -1677,9 +1626,17 @@
     "Dopamine D2 receptor partial agonist",
     "Serotonin 1a (5-HT1a) receptor partial agonist"
    ],
-   "rank": 43,
-   "score": 0.3765,
-   "rawScore": 0.701595,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
+   "score": 0.3633,
+   "rawScore": 0.711159,
    "geneCount": 3,
    "paths": [
     {
@@ -1748,6 +1705,237 @@
    ]
   },
   {
+   "id": "CHEMBL1909286",
+   "name": "Phenoxypropazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.3628,
+   "rawScore": 0.710203,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.25248,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.4736,
+     "contribution": 0.137549,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4736
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.13252,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1909283",
+   "name": "Mebanazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.3628,
+   "rawScore": 0.710203,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.25248,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.4736,
+     "contribution": 0.137549,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4736
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.13252,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL673",
+   "name": "Pargyline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.3628,
+   "rawScore": 0.710203,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.25248,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.4736,
+     "contribution": 0.137549,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4736
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAOA",
+     "geneId": "ENSG00000189221",
+     "geneName": "monoamine oxidase A",
+     "assoc": 0.9001,
+     "contribution": 0.13252,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9001
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2364968",
    "name": "Ergoloid",
    "drugType": "Unknown",
@@ -1758,9 +1946,12 @@
     "Dopamine receptor agonist",
     "Serotonin 1b (5-HT1b) receptor agonist"
    ],
-   "rank": 45,
-   "score": 0.3698,
-   "rawScore": 0.689409,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 46,
+   "score": 0.3546,
+   "rawScore": 0.6944,
    "geneCount": 13,
    "paths": [
     {
@@ -1821,301 +2012,6 @@
    ]
   },
   {
-   "id": "CHEMBL1303",
-   "name": "Rotigotine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease",
-    "restless legs syndrome"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "D2-like dopamine receptor agonist"
-   ],
-   "rank": 47,
-   "score": 0.3589,
-   "rawScore": 0.669615,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.109042,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.106304,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.5748,
-     "contribution": 0.105387,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5748
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1764",
-   "name": "Levomepromazine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "bipolar disorder",
-    "psychotic disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "D2-like dopamine receptor antagonist"
-   ],
-   "rank": 48,
-   "score": 0.3589,
-   "rawScore": 0.669615,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.109042,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.106304,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.5748,
-     "contribution": 0.105387,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5748
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL53",
-   "name": "Apomorphine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease",
-    "erectile dysfunction"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "D2-like dopamine receptor agonist"
-   ],
-   "rank": 50,
-   "score": 0.3589,
-   "rawScore": 0.669615,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.109042,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.106304,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.5748,
-     "contribution": 0.105387,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5748
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL493",
-   "name": "Bromocriptine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "D2-like dopamine receptor agonist"
-   ],
-   "rank": 51,
-   "score": 0.3589,
-   "rawScore": 0.669615,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.109042,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.106304,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.5748,
-     "contribution": 0.105387,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5748
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
    "id": "CHEMBL304902",
    "name": "Clothiapine",
    "drugType": "Small molecule",
@@ -2129,9 +2025,12 @@
     "Serotonin 2 (5-HT2) receptor antagonist",
     "Serotonin 3 (5-HT3) receptor antagonist"
    ],
-   "rank": 54,
-   "score": 0.3338,
-   "rawScore": 0.623775,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 47,
+   "score": 0.3502,
+   "rawScore": 0.686005,
    "geneCount": 9,
    "paths": [
     {
@@ -2204,6 +2103,313 @@
    ]
   },
   {
+   "id": "CHEMBL1303",
+   "name": "Rotigotine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease",
+    "restless legs syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "D2-like dopamine receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 51,
+   "score": 0.3416,
+   "rawScore": 0.669615,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.109042,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.106304,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.5748,
+     "contribution": 0.105387,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5748
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL493",
+   "name": "Bromocriptine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "D2-like dopamine receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 52,
+   "score": 0.3416,
+   "rawScore": 0.669615,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.109042,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.106304,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.5748,
+     "contribution": 0.105387,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5748
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL53",
+   "name": "Apomorphine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease",
+    "erectile dysfunction"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "D2-like dopamine receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 53,
+   "score": 0.3416,
+   "rawScore": 0.669615,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.109042,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.106304,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.5748,
+     "contribution": 0.105387,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5748
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1764",
+   "name": "Levomepromazine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "bipolar disorder",
+    "psychotic disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "D2-like dopamine receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 54,
+   "score": 0.3416,
+   "rawScore": 0.669615,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.109042,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.106304,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5468
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.5748,
+     "contribution": 0.105387,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5748
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
    "id": "CHEMBL908",
    "name": "Chlorprothixene",
    "drugType": "Small molecule",
@@ -2216,9 +2422,12 @@
     "Dopamine D3 receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 55,
-   "score": 0.3306,
-   "rawScore": 0.617816,
+   "score": 0.3191,
+   "rawScore": 0.626341,
    "geneCount": 4,
    "paths": [
     {
@@ -2287,29 +2496,134 @@
    ]
   },
   {
-   "id": "CHEMBL1065",
-   "name": "Methysergide",
+   "id": "CHEMBL612",
+   "name": "Dextroamphetamine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "migraine disorder"
+    "drug dependence",
+    "narcolepsy",
+    "arteriosclerosis disorder",
+    "narcolepsy-cataplexy syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 5,
    "mechanisms": [
-    "Serotonin 2c (5-HT2c) receptor antagonist",
-    "Serotonin 1a (5-HT1a) receptor partial agonist",
-    "Serotonin 2b (5-HT2b) receptor antagonist"
+    "Synaptic vesicular amine transporter inhibitor",
+    "Synaptic vesicular amine transporter inhibitor",
+    "Dopamine transporter releasing agent"
    ],
-   "rank": 58,
-   "score": 0.3089,
-   "rawScore": 0.578215,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 56,
+   "score": 0.3052,
+   "rawScore": 0.599725,
    "geneCount": 3,
+   "paths": [
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.659,
+     "contribution": 0.133633,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.120849,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 3,
+     "via": "SLC6A3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.659,
+     "contribution": 0.102551,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.659
+      }
+     ],
+     "hops": 3,
+     "via": "SLC18A2",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL248702",
+   "name": "Dexfenfluramine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Obesity",
+    "obesity disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Serotonin (5-HT) receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Reasons of safety"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 58,
+   "score": 0.3003,
+   "rawScore": 0.590389,
+   "geneCount": 17,
    "paths": [
     {
      "gene": "HTR1A",
      "geneId": "ENSG00000178394",
      "geneName": "5-hydroxytryptamine receptor 1A",
      "assoc": 0.7871,
-     "contribution": 0.181805,
+     "contribution": 0.090839,
      "drugsOnGene": 13,
      "evidence": [
       {
@@ -2326,7 +2640,7 @@
      "geneId": "ENSG00000102468",
      "geneName": "5-hydroxytryptamine receptor 2A",
      "assoc": 0.9349,
-     "contribution": 0.152833,
+     "contribution": 0.076364,
      "drugsOnGene": 7,
      "evidence": [
       {
@@ -2347,21 +2661,29 @@
      "viaScore": 0.962
     },
     {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.9544,
-     "contribution": 0.097984,
-     "drugsOnGene": 13,
+     "gene": "HTR2A",
+     "geneId": "ENSG00000102468",
+     "geneName": "5-hydroxytryptamine receptor 2A",
+     "assoc": 0.9349,
+     "contribution": 0.067496,
+     "drugsOnGene": 42,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9544
+       "score": 0.7374
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4525
       }
      ],
-     "hops": 3,
-     "via": "HTR1A",
-     "viaScore": 0.968
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2378,9 +2700,12 @@
     "Dopamine D3 receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 59,
-   "score": 0.3056,
-   "rawScore": 0.572183,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 60,
+   "score": 0.2958,
+   "rawScore": 0.581747,
    "geneCount": 3,
    "paths": [
     {
@@ -2460,9 +2785,12 @@
     "GABA-A receptor; anion channel positive allosteric modulator",
     "Sodium channel alpha subunit blocker"
    ],
-   "rank": 60,
-   "score": 0.3053,
-   "rawScore": 0.571681,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 63,
+   "score": 0.2945,
+   "rawScore": 0.579117,
    "geneCount": 26,
    "paths": [
     {
@@ -2536,9 +2864,12 @@
     "Sodium channel alpha subunit inhibitor",
     "GABA-A receptor; anion channel positive allosteric modulator"
    ],
-   "rank": 61,
-   "score": 0.3053,
-   "rawScore": 0.571681,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 64,
+   "score": 0.2945,
+   "rawScore": 0.579117,
    "geneCount": 26,
    "paths": [
     {
@@ -2599,37 +2930,37 @@
    ]
   },
   {
-   "id": "CHEMBL612",
-   "name": "Dextroamphetamine",
+   "id": "CHEMBL1065",
+   "name": "Methysergide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "drug dependence",
-    "narcolepsy",
-    "arteriosclerosis disorder",
-    "narcolepsy-cataplexy syndrome"
+    "migraine disorder"
    ],
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
-    "Synaptic vesicular amine transporter inhibitor",
-    "Synaptic vesicular amine transporter inhibitor",
-    "Dopamine transporter releasing agent"
+    "Serotonin 2c (5-HT2c) receptor antagonist",
+    "Serotonin 1a (5-HT1a) receptor partial agonist",
+    "Serotonin 2b (5-HT2b) receptor antagonist"
    ],
-   "rank": 63,
-   "score": 0.3024,
-   "rawScore": 0.566448,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 65,
+   "score": 0.294,
+   "rawScore": 0.578215,
    "geneCount": 3,
    "paths": [
     {
-     "gene": "SLC6A3",
-     "geneId": "ENSG00000142319",
-     "geneName": "solute carrier family 6 member 3",
-     "assoc": 0.659,
-     "contribution": 0.133633,
-     "drugsOnGene": 18,
+     "gene": "HTR1A",
+     "geneId": "ENSG00000178394",
+     "geneName": "5-hydroxytryptamine receptor 1A",
+     "assoc": 0.7871,
+     "contribution": 0.181805,
+     "drugsOnGene": 13,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.659
+       "score": 0.7871
       }
      ],
      "hops": 2,
@@ -2637,42 +2968,46 @@
      "viaScore": null
     },
     {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.120849,
-     "drugsOnGene": 18,
+     "gene": "HTR2A",
+     "geneId": "ENSG00000102468",
+     "geneName": "5-hydroxytryptamine receptor 2A",
+     "assoc": 0.9349,
+     "contribution": 0.152833,
+     "drugsOnGene": 7,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8151
+       "id": "literature",
+       "score": 0.7374
       },
       {
-       "id": "literature",
-       "score": 0.5983
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4525
       }
      ],
      "hops": 3,
-     "via": "SLC6A3",
-     "viaScore": 0.999
+     "via": "HTR2B",
+     "viaScore": 0.962
     },
     {
-     "gene": "SLC6A3",
-     "geneId": "ENSG00000142319",
-     "geneName": "solute carrier family 6 member 3",
-     "assoc": 0.659,
-     "contribution": 0.102551,
-     "drugsOnGene": 8,
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.9544,
+     "contribution": 0.097984,
+     "drugsOnGene": 13,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.659
+       "score": 0.9544
       }
      ],
      "hops": 3,
-     "via": "SLC18A2",
-     "viaScore": 0.966
+     "via": "HTR1A",
+     "viaScore": 0.968
     }
    ]
   },
@@ -2685,8 +3020,11 @@
    "mechanisms": [
     "Serotonin transporter inhibitor"
    ],
-   "rank": 64,
-   "score": 0.2958,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 70,
+   "score": 0.2815,
    "rawScore": 0.554231,
    "geneCount": 1,
    "paths": [
@@ -2760,8 +3098,16 @@
    "mechanisms": [
     "Serotonin transporter inhibitor"
    ],
-   "rank": 67,
-   "score": 0.2958,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 73,
+   "score": 0.2815,
    "rawScore": 0.554231,
    "geneCount": 1,
    "paths": [
@@ -2835,8 +3181,20 @@
    "mechanisms": [
     "Serotonin transporter substrate"
    ],
-   "rank": 71,
-   "score": 0.2958,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 74,
+   "score": 0.2815,
    "rawScore": 0.554231,
    "geneCount": 1,
    "paths": [
@@ -2902,79 +3260,6 @@
    ]
   },
   {
-   "id": "CHEMBL531",
-   "name": "Pergolide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dopamine receptor agonist"
-   ],
-   "rank": 74,
-   "score": 0.2912,
-   "rawScore": 0.545866,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.08889,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.086658,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.5748,
-     "contribution": 0.085911,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5748
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201328",
    "name": "Carphenazine",
    "drugType": "Small molecule",
@@ -2988,9 +3273,12 @@
     "Dopamine D2 receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 77,
-   "score": 0.2895,
-   "rawScore": 0.542785,
+   "score": 0.2805,
+   "rawScore": 0.552349,
    "geneCount": 3,
    "paths": [
     {
@@ -3069,21 +3357,20 @@
  ],
  "knownRanked": [
   {
-   "id": "CHEMBL395091",
-   "name": "Esketamine",
+   "id": "CHEMBL742",
+   "name": "Ketamine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "depressive disorder",
-    "major depressive disorder"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator",
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
-   "rank": 1,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 2,
    "score": 1.0,
-   "rawScore": 1.840285,
+   "rawScore": 1.932798,
    "geneCount": 7,
    "paths": [
     {
@@ -3144,17 +3431,24 @@
    ]
   },
   {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
+   "id": "CHEMBL395091",
+   "name": "Esketamine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "depressive disorder",
+    "major depressive disorder"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator",
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
-   "rank": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
    "score": 1.0,
-   "rawScore": 1.840285,
+   "rawScore": 1.932798,
    "geneCount": 7,
    "paths": [
     {
@@ -3226,9 +3520,12 @@
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
-   "rank": 5,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
    "score": 1.0,
-   "rawScore": 1.840285,
+   "rawScore": 1.932798,
    "geneCount": 7,
    "paths": [
     {
@@ -3300,9 +3597,12 @@
     "Glutamate [NMDA] receptor antagonist",
     "GABA-A receptor; anion channel positive modulator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.8417,
-   "rawScore": 1.551165,
+   "score": 0.8351,
+   "rawScore": 1.616459,
    "geneCount": 23,
    "paths": [
     {
@@ -3378,9 +3678,17 @@
     "Serotonin 2c (5-HT2c) receptor antagonist",
     "D2-like dopamine receptor antagonist"
    ],
-   "rank": 13,
-   "score": 0.4649,
-   "rawScore": 0.863144,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.4466,
+   "rawScore": 0.87094,
    "geneCount": 5,
    "paths": [
     {
@@ -3464,9 +3772,25 @@
     "D2-like dopamine receptor inverse agonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 16,
-   "score": 0.45,
-   "rawScore": 0.835899,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.4327,
+   "rawScore": 0.844424,
    "geneCount": 4,
    "paths": [
     {
@@ -3535,81 +3859,6 @@
    ]
   },
   {
-   "id": "CHEMBL1113",
-   "name": "Amoxapine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dopamine receptor antagonist",
-    "Norepinephrine transporter inhibitor",
-    "Serotonin transporter inhibitor"
-   ],
-   "rank": 21,
-   "score": 0.4217,
-   "rawScore": 0.784307,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.9544,
-     "contribution": 0.110959,
-     "drugsOnGene": 31,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9544
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9257,
-     "contribution": 0.077697,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8151
-      },
-      {
-       "id": "literature",
-       "score": 0.5983
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD4",
-     "geneId": "ENSG00000069696",
-     "geneName": "dopamine receptor D4",
-     "assoc": 0.5468,
-     "contribution": 0.075746,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5468
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3306803",
    "name": "Lumateperone",
    "drugType": "Small molecule",
@@ -3622,9 +3871,17 @@
     "Dopamine D2 receptor antagonist",
     "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
-   "rank": 22,
-   "score": 0.4188,
-   "rawScore": 0.778949,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.4036,
+   "rawScore": 0.788513,
    "geneCount": 3,
    "paths": [
     {
@@ -3693,45 +3950,37 @@
    ]
   },
   {
-   "id": "CHEMBL439849",
-   "name": "Vilazodone",
+   "id": "CHEMBL1113",
+   "name": "Amoxapine",
    "drugType": "Small molecule",
    "approvedFor": [
     "major depressive disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Serotonin transporter inhibitor",
-    "Serotonin 1a (5-HT1a) receptor partial agonist"
+    "Dopamine receptor antagonist",
+    "Norepinephrine transporter inhibitor",
+    "Serotonin transporter inhibitor"
    ],
-   "rank": 23,
-   "score": 0.4025,
-   "rawScore": 0.749083,
-   "geneCount": 2,
-   "paths": [
+   "warnings": [
     {
-     "gene": "HTR1A",
-     "geneId": "ENSG00000178394",
-     "geneName": "5-hydroxytryptamine receptor 1A",
-     "assoc": 0.7871,
-     "contribution": 0.213817,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7871
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.4014,
+   "rawScore": 0.784307,
+   "geneCount": 7,
+   "paths": [
     {
      "gene": "SLC6A4",
      "geneId": "ENSG00000108576",
      "geneName": "solute carrier family 6 member 4",
      "assoc": 0.9544,
-     "contribution": 0.183142,
+     "contribution": 0.110959,
      "drugsOnGene": 31,
      "evidence": [
       {
@@ -3744,41 +3993,76 @@
      "viaScore": null
     },
     {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.9544,
-     "contribution": 0.115237,
-     "drugsOnGene": 13,
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.077697,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD4",
+     "geneId": "ENSG00000069696",
+     "geneName": "dopamine receptor D4",
+     "assoc": 0.5468,
+     "contribution": 0.075746,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.9544
+       "score": 0.5468
       }
      ],
-     "hops": 3,
-     "via": "HTR1A",
-     "viaScore": 0.968
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
   {
-   "id": "CHEMBL621",
-   "name": "Trazodone",
+   "id": "CHEMBL273575",
+   "name": "Nomifensine",
    "drugType": "Small molecule",
    "approvedFor": [
     "major depressive disorder",
-    "depressive disorder"
+    "breast cancer"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Serotonin 2a (5-HT2a) receptor antagonist",
-    "Serotonin 2c (5-HT2c) receptor antagonist",
-    "Serotonin transporter inhibitor"
+    "Monoamine transporter inhibitor"
    ],
-   "rank": 24,
-   "score": 0.401,
-   "rawScore": 0.746349,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.3964,
+   "rawScore": 0.774779,
    "geneCount": 3,
    "paths": [
     {
@@ -3799,24 +4083,16 @@
      "viaScore": null
     },
     {
-     "gene": "HTR2A",
-     "geneId": "ENSG00000102468",
-     "geneName": "5-hydroxytryptamine receptor 2A",
-     "assoc": 0.9349,
-     "contribution": 0.135085,
-     "drugsOnGene": 42,
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.659,
+     "contribution": 0.133633,
+     "drugsOnGene": 18,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.7374
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4525
+       "score": 0.659
       }
      ],
      "hops": 2,
@@ -3824,29 +4100,101 @@
      "viaScore": null
     },
     {
-     "gene": "HTR2A",
-     "geneId": "ENSG00000102468",
-     "geneName": "5-hydroxytryptamine receptor 2A",
-     "assoc": 0.9349,
-     "contribution": 0.094619,
-     "drugsOnGene": 25,
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.120849,
+     "drugsOnGene": 18,
      "evidence": [
       {
-       "id": "literature",
-       "score": 0.7374
-      },
-      {
        "id": "genetic_association",
-       "score": 0.5471
+       "score": 0.8151
       },
       {
-       "id": "animal_model",
-       "score": 0.4525
+       "id": "literature",
+       "score": 0.5983
       }
      ],
      "hops": 3,
-     "via": "HTR2C",
-     "viaScore": 0.991
+     "via": "SLC6A3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301595",
+   "name": "Dasotraline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "attention deficit-hyperactivity disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Monoamine transporter inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.3964,
+   "rawScore": 0.774779,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.9544,
+     "contribution": 0.155723,
+     "drugsOnGene": 31,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9544
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC6A3",
+     "geneId": "ENSG00000142319",
+     "geneName": "solute carrier family 6 member 3",
+     "assoc": 0.659,
+     "contribution": 0.133633,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9257,
+     "contribution": 0.120849,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8151
+      },
+      {
+       "id": "literature",
+       "score": 0.5983
+      }
+     ],
+     "hops": 3,
+     "via": "SLC6A3",
+     "viaScore": 0.999
     }
    ]
   }

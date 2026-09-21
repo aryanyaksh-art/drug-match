@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 14,
  "knownDrugCount": 20,
- "candidatesConsidered": 261,
+ "candidatesConsidered": 303,
  "pathsTwoHop": 86,
- "pathsThreeHop": 306,
+ "pathsThreeHop": 414,
  "candidates": [
   {
    "id": "CHEMBL1592101",
@@ -22,8 +22,16 @@
    "mechanisms": [
     "Coagulation factor XII activator"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.6295,
+   "score": 0.6297,
    "rawScore": 1.547059,
    "geneCount": 1,
    "paths": [
@@ -121,8 +129,16 @@
     "Plasminogen inhibitor",
     "Plasma kallikrein inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "Increased mortality"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 4,
-   "score": 0.4621,
+   "score": 0.4623,
    "rawScore": 1.137041,
    "geneCount": 2,
    "paths": [
@@ -208,6 +224,81 @@
    ]
   },
   {
+   "id": "CHEMBL3039545",
+   "name": "Luspatercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "anemia",
+    "myelodysplastic syndrome",
+    "Beta-thalassemia",
+    "anemia (phenotype)"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Transforming growth factor beta inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.452,
+   "rawScore": 1.111738,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "TGFB3",
+     "geneId": "ENSG00000119699",
+     "geneName": "transforming growth factor beta 3",
+     "assoc": 0.6241,
+     "contribution": 0.402135,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6241
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TGFB3",
+     "geneId": "ENSG00000119699",
+     "geneName": "transforming growth factor beta 3",
+     "assoc": 0.6241,
+     "contribution": 0.39731,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6241
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB1",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "MSX1",
+     "geneId": "ENSG00000163132",
+     "geneName": "msh homeobox 1",
+     "assoc": 0.5811,
+     "contribution": 0.312293,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5811
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB3",
+     "viaScore": 0.834
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2095222",
    "name": "Ocriplasmin",
    "drugType": "Protein",
@@ -221,17 +312,20 @@
     "Fibronectin proteolytic enzyme",
     "Collagen hydrolytic enzyme"
    ],
-   "rank": 5,
-   "score": 0.408,
-   "rawScore": 1.004602,
-   "geneCount": 34,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.3904,
+   "rawScore": 0.960886,
+   "geneCount": 38,
    "paths": [
     {
      "gene": "PLG",
      "geneId": "ENSG00000122194",
      "geneName": "plasminogen",
      "assoc": 0.9917,
-     "contribution": 0.182836,
+     "contribution": 0.17488,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -260,7 +354,7 @@
      "geneId": "ENSG00000182871",
      "geneName": "collagen type XVIII alpha 1 chain",
      "assoc": 0.9375,
-     "contribution": 0.173361,
+     "contribution": 0.165817,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -277,7 +371,7 @@
      "geneId": "ENSG00000182871",
      "geneName": "collagen type XVIII alpha 1 chain",
      "assoc": 0.9375,
-     "contribution": 0.11877,
+     "contribution": 0.113602,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -304,8 +398,11 @@
    "mechanisms": [
     "Complement C1s inhibitor"
    ],
-   "rank": 6,
-   "score": 0.3752,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.3755,
    "rawScore": 0.924384,
    "geneCount": 1,
    "paths": [
@@ -362,61 +459,6 @@
    ]
   },
   {
-   "id": "CHEMBL3039545",
-   "name": "Luspatercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "anemia",
-    "myelodysplastic syndrome",
-    "Beta-thalassemia",
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Transforming growth factor beta inhibitor"
-   ],
-   "rank": 10,
-   "score": 0.3242,
-   "rawScore": 0.799445,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "TGFB3",
-     "geneId": "ENSG00000119699",
-     "geneName": "transforming growth factor beta 3",
-     "assoc": 0.6241,
-     "contribution": 0.402135,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6241
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TGFB3",
-     "geneId": "ENSG00000119699",
-     "geneName": "transforming growth factor beta 3",
-     "assoc": 0.6241,
-     "contribution": 0.39731,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6241
-      }
-     ],
-     "hops": 3,
-     "via": "TGFB1",
-     "viaScore": 0.988
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1046",
    "name": "Aminocaproic Acid",
    "drugType": "Small molecule",
@@ -429,8 +471,11 @@
     "Plasminogen inhibitor",
     "Tissue-type plasminogen activator inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 11,
-   "score": 0.3117,
+   "score": 0.312,
    "rawScore": 0.768916,
    "geneCount": 2,
    "paths": [
@@ -524,610 +569,23 @@
    ]
   },
   {
-   "id": "CHEMBL4594328",
-   "name": "Beremagene Geperpavec",
-   "drugType": "Gene",
-   "approvedFor": [
-    "injury",
-    "epidermolysis bullosa dystrophica",
-    "Skin ulcer"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Collagen alpha-1(VII) chain exogenous gene"
-   ],
-   "rank": 13,
-   "score": 0.2733,
-   "rawScore": 0.67479,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "COL7A1",
-     "geneId": "ENSG00000114270",
-     "geneName": "collagen type VII alpha 1 chain",
-     "assoc": 0.6748,
-     "contribution": 0.67479,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6748
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108147",
-   "name": "Streptokinase",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "pulmonary embolism",
-    "Recurrent thrombophlebitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Plasminogen activator"
-   ],
-   "rank": 14,
-   "score": 0.2714,
-   "rawScore": 0.670201,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PLG",
-     "geneId": "ENSG00000122194",
-     "geneName": "plasminogen",
-     "assoc": 0.9917,
-     "contribution": 0.455335,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8674
-      },
-      {
-       "id": "literature",
-       "score": 0.7058
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4556
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "F12",
-     "geneId": "ENSG00000131187",
-     "geneName": "coagulation factor XII",
-     "assoc": 0.993,
-     "contribution": 0.214865,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8189
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8059
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7599
-      },
-      {
-       "id": "literature",
-       "score": 0.1674
-      }
-     ],
-     "hops": 3,
-     "via": "PLG",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707226",
-   "name": "Defibrotide Sodium",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "spondylo-ocular syndrome",
-    "hepatic veno-occlusive disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Plasminogen activator"
-   ],
-   "rank": 15,
-   "score": 0.2714,
-   "rawScore": 0.670201,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PLG",
-     "geneId": "ENSG00000122194",
-     "geneName": "plasminogen",
-     "assoc": 0.9917,
-     "contribution": 0.455335,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8674
-      },
-      {
-       "id": "literature",
-       "score": 0.7058
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4556
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "F12",
-     "geneId": "ENSG00000131187",
-     "geneName": "coagulation factor XII",
-     "assoc": 0.993,
-     "contribution": 0.214865,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8189
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8059
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7599
-      },
-      {
-       "id": "literature",
-       "score": 0.1674
-      }
-     ],
-     "hops": 3,
-     "via": "PLG",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108250",
-   "name": "Anistreplase",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "acute coronary syndrome"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Plasminogen activator"
-   ],
-   "rank": 16,
-   "score": 0.2714,
-   "rawScore": 0.670201,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PLG",
-     "geneId": "ENSG00000122194",
-     "geneName": "plasminogen",
-     "assoc": 0.9917,
-     "contribution": 0.455335,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8674
-      },
-      {
-       "id": "literature",
-       "score": 0.7058
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4556
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "F12",
-     "geneId": "ENSG00000131187",
-     "geneName": "coagulation factor XII",
-     "assoc": 0.993,
-     "contribution": 0.214865,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8189
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8059
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7599
-      },
-      {
-       "id": "literature",
-       "score": 0.1674
-      }
-     ],
-     "hops": 3,
-     "via": "PLG",
-     "viaScore": 0.965
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2109171",
-   "name": "Dibotermin Alfa",
-   "drugType": "Protein",
-   "approvedFor": [
-    "spinal fusion",
-    "bone disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Activin receptor type-2A agonist",
-    "Bone morphogenetic protein receptor type-1A agonist",
-    "Activin receptor type-1 agonist"
-   ],
-   "rank": 18,
-   "score": 0.2654,
-   "rawScore": 0.655565,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.135254,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "ACVR2A",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.135118,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "ACVR2B",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.102503,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "BMPR2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1946170",
-   "name": "Regorafenib",
+   "id": "CHEMBL1289926",
+   "name": "Axitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "colorectal neoplasm",
-    "metastatic colorectal cancer",
     "neoplasm",
-    "colorectal cancer"
+    "renal cell carcinoma"
    ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Discoidin domain-containing receptor 2 inhibitor",
-    "Ephrin type-A receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
-   ],
-   "rank": 19,
-   "score": 0.2641,
-   "rawScore": 0.652295,
-   "geneCount": 13,
-   "paths": [
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.123321,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "TEK",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.5696,
-     "contribution": 0.084785,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5696
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.079229,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298195",
-   "name": "Narsoplimab",
-   "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Mannan-binding lectin serine protease 2 inhibitor"
-   ],
-   "rank": 20,
-   "score": 0.232,
-   "rawScore": 0.573772,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SERPING1",
-     "geneId": "ENSG00000149131",
-     "geneName": "serpin family G member 1",
-     "assoc": 1.0,
-     "contribution": 0.573772,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9943
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9644
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8706
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      }
-     ],
-     "hops": 3,
-     "via": "MASP2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL265502",
-   "name": "Suramin",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Acidic fibroblast growth factor inhibitor"
-   ],
-   "rank": 21,
-   "score": 0.2301,
-   "rawScore": 0.569058,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.5696,
-     "contribution": 0.569058,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5696
-      }
-     ],
-     "hops": 3,
-     "via": "FGF1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297750",
-   "name": "Faricimab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "cystoid macular edema",
-    "ocular vascular disorder",
-    "macular retinal edema",
-    "diabetic macular edema"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Angiopoietin-2 inhibitor",
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "rank": 22,
-   "score": 0.2278,
-   "rawScore": 0.563466,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.316838,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "ANGPT2",
-     "viaScore": 0.92
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.246628,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4303214",
-   "name": "Fruquintinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "neoplasm",
-    "colorectal cancer",
-    "cancer"
-   ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
-   "rank": 23,
-   "score": 0.2275,
-   "rawScore": 0.562769,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.3061,
+   "rawScore": 0.754456,
    "geneCount": 3,
    "paths": [
     {
@@ -1200,20 +658,25 @@
    ]
   },
   {
-   "id": "CHEMBL1289926",
-   "name": "Axitinib",
+   "id": "CHEMBL4303214",
+   "name": "Fruquintinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "colorectal neoplasm",
     "neoplasm",
-    "renal cell carcinoma"
+    "colorectal cancer",
+    "cancer"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
-   "rank": 24,
-   "score": 0.2275,
-   "rawScore": 0.562769,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.3061,
+   "rawScore": 0.754456,
    "geneCount": 3,
    "paths": [
     {
@@ -1299,9 +762,12 @@
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
-   "rank": 25,
-   "score": 0.2275,
-   "rawScore": 0.562769,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.3061,
+   "rawScore": 0.754456,
    "geneCount": 3,
    "paths": [
     {
@@ -1387,9 +853,12 @@
     "Vascular endothelial growth factor receptor inhibitor",
     "Stem cell growth factor receptor inhibitor"
    ],
-   "rank": 26,
-   "score": 0.2161,
-   "rawScore": 0.534853,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.3015,
+   "rawScore": 0.743234,
    "geneCount": 5,
    "paths": [
     {
@@ -1462,343 +931,6 @@
    ]
   },
   {
-   "id": "CHEMBL3186534",
-   "name": "Rivoceranib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor 2 inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.2131,
-   "rawScore": 0.527583,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.219601,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.162547,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.145435,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743062",
-   "name": "Ramucirumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "gastroesophageal junction adenocarcinoma",
-    "gastric neoplasm",
-    "non-small cell lung carcinoma",
-    "gastric adenocarcinoma"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor 2 inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.2131,
-   "rawScore": 0.527583,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.219601,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.162547,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.145435,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL502835",
-   "name": "Nintedanib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "idiopathic pulmonary fibrosis",
-    "neoplasm",
-    "systemic sclerosis",
-    "interstitial lung disease"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Platelet-derived growth factor receptor inhibitor",
-    "Vascular endothelial growth factor receptor inhibitor",
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "rank": 29,
-   "score": 0.2105,
-   "rawScore": 0.52101,
-   "geneCount": 9,
-   "paths": [
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.5696,
-     "contribution": 0.098219,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5696
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.091188,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.074849,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297190",
-   "name": "Surufatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.2025,
-   "rawScore": 0.501596,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.126128,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.103528,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.095052,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.984
-    }
-   ]
-  },
-  {
    "id": "CHEMBL491473",
    "name": "Cediranib",
    "drugType": "Small molecule",
@@ -1811,9 +943,12 @@
     "Platelet-derived growth factor receptor inhibitor",
     "Stem cell growth factor receptor inhibitor"
    ],
-   "rank": 31,
-   "score": 0.2008,
-   "rawScore": 0.497236,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.3012,
+   "rawScore": 0.742495,
    "geneCount": 6,
    "paths": [
     {
@@ -1886,32 +1021,40 @@
    ]
   },
   {
-   "id": "CHEMBL24828",
-   "name": "Vandetanib",
+   "id": "CHEMBL1946170",
+   "name": "Regorafenib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "colorectal neoplasm",
+    "metastatic colorectal cancer",
     "neoplasm",
-    "medullary thyroid gland carcinoma",
-    "thyroid gland carcinoma",
-    "thyroid tumor"
+    "colorectal cancer"
    ],
    "indicationCount": 4,
    "mechanisms": [
-    "Ephrin receptor inhibitor",
-    "Tyrosine-protein kinase BRK inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor"
+    "Discoidin domain-containing receptor 2 inhibitor",
+    "Ephrin type-A receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
    ],
-   "rank": 32,
-   "score": 0.1978,
-   "rawScore": 0.489937,
-   "geneCount": 14,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 18,
+   "score": 0.2964,
+   "rawScore": 0.730724,
+   "geneCount": 18,
    "paths": [
     {
      "gene": "ANGPT1",
      "geneId": "ENSG00000154188",
      "geneName": "angiopoietin 1",
      "assoc": 0.9305,
-     "contribution": 0.119719,
+     "contribution": 0.108269,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1936,140 +1079,100 @@
      "viaScore": 0.999
     },
     {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.076416,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.668,
-     "contribution": 0.06632,
-     "drugsOnGene": 23,
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.5696,
+     "contribution": 0.074436,
+     "drugsOnGene": 9,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.668
+       "score": 0.5696
       }
      ],
      "hops": 2,
      "via": null,
      "viaScore": null
+    },
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.069559,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.996
     }
    ]
   },
   {
-   "id": "CHEMBL2108594",
-   "name": "Eptotermin Alfa",
-   "drugType": "Protein",
-   "approvedFor": [
-    "spondylolisthesis",
-    "tibia fracture",
-    "bone disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Activin receptor type-1 agonist",
-    "Bone morphogenetic protein receptor type-1B agonist",
-    "Bone morphogenetic protein receptor type-2 agonist"
-   ],
-   "rank": 33,
-   "score": 0.1827,
-   "rawScore": 0.453017,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.120552,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "BMPR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.120552,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "BMPR1A",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BMP7",
-     "geneId": "ENSG00000101144",
-     "geneName": "bone morphogenetic protein 7",
-     "assoc": 0.5677,
-     "contribution": 0.120552,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5677
-      }
-     ],
-     "hops": 3,
-     "via": "BMPR1B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1336",
-   "name": "Sorafenib",
+   "id": "CHEMBL502835",
+   "name": "Nintedanib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "renal cell carcinoma",
+    "idiopathic pulmonary fibrosis",
     "neoplasm",
-    "hepatocellular carcinoma"
+    "systemic sclerosis",
+    "interstitial lung disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 6,
    "mechanisms": [
-    "Serine/threonine-protein kinase RAF inhibitor",
-    "Platelet-derived growth factor receptor beta inhibitor",
-    "Serine/threonine-protein kinase B-raf inhibitor"
+    "Platelet-derived growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
    ],
-   "rank": 34,
-   "score": 0.1787,
-   "rawScore": 0.443187,
-   "geneCount": 8,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.2959,
+   "rawScore": 0.72955,
+   "geneCount": 9,
    "paths": [
+    {
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.5696,
+     "contribution": 0.098219,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
     {
      "gene": "COL18A1",
      "geneId": "ENSG00000182871",
      "geneName": "collagen type XVIII alpha 1 chain",
      "assoc": 0.9375,
-     "contribution": 0.095587,
+     "contribution": 0.091188,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -2086,7 +1189,107 @@
      "geneId": "ENSG00000112715",
      "geneName": "vascular endothelial growth factor A",
      "assoc": 0.7837,
-     "contribution": 0.078459,
+     "contribution": 0.074849,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594328",
+   "name": "Beremagene Geperpavec",
+   "drugType": "Gene",
+   "approvedFor": [
+    "injury",
+    "epidermolysis bullosa dystrophica",
+    "Skin ulcer"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Collagen alpha-1(VII) chain exogenous gene"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.2736,
+   "rawScore": 0.67479,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "COL7A1",
+     "geneId": "ENSG00000114270",
+     "geneName": "collagen type VII alpha 1 chain",
+     "assoc": 0.6748,
+     "contribution": 0.67479,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6748
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297190",
+   "name": "Surufatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Vascular endothelial growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.2726,
+   "rawScore": 0.672448,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.126128,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.103528,
      "drugsOnGene": 12,
      "evidence": [
       {
@@ -2107,7 +1310,7 @@
      "geneId": "ENSG00000154188",
      "geneName": "angiopoietin 1",
      "assoc": 0.9305,
-     "contribution": 0.072036,
+     "contribution": 0.095052,
      "drugsOnGene": 12,
      "evidence": [
       {
@@ -2130,6 +1333,321 @@
      "hops": 3,
      "via": "FLT1",
      "viaScore": 0.984
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108250",
+   "name": "Anistreplase",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "Recurrent thrombophlebitis",
+    "acute coronary syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Plasminogen activator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.2717,
+   "rawScore": 0.670201,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PLG",
+     "geneId": "ENSG00000122194",
+     "geneName": "plasminogen",
+     "assoc": 0.9917,
+     "contribution": 0.455335,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8674
+      },
+      {
+       "id": "literature",
+       "score": 0.7058
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4556
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "F12",
+     "geneId": "ENSG00000131187",
+     "geneName": "coagulation factor XII",
+     "assoc": 0.993,
+     "contribution": 0.214865,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8189
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8059
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.1674
+      }
+     ],
+     "hops": 3,
+     "via": "PLG",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707226",
+   "name": "Defibrotide Sodium",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "spondylo-ocular syndrome",
+    "hepatic veno-occlusive disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Plasminogen activator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.2717,
+   "rawScore": 0.670201,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PLG",
+     "geneId": "ENSG00000122194",
+     "geneName": "plasminogen",
+     "assoc": 0.9917,
+     "contribution": 0.455335,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8674
+      },
+      {
+       "id": "literature",
+       "score": 0.7058
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4556
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "F12",
+     "geneId": "ENSG00000131187",
+     "geneName": "coagulation factor XII",
+     "assoc": 0.993,
+     "contribution": 0.214865,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8189
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8059
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.1674
+      }
+     ],
+     "hops": 3,
+     "via": "PLG",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108147",
+   "name": "Streptokinase",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "pulmonary embolism",
+    "Recurrent thrombophlebitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Plasminogen activator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.2717,
+   "rawScore": 0.670201,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PLG",
+     "geneId": "ENSG00000122194",
+     "geneName": "plasminogen",
+     "assoc": 0.9917,
+     "contribution": 0.455335,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8674
+      },
+      {
+       "id": "literature",
+       "score": 0.7058
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4556
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "F12",
+     "geneId": "ENSG00000131187",
+     "geneName": "coagulation factor XII",
+     "assoc": 0.993,
+     "contribution": 0.214865,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8189
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8059
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.1674
+      }
+     ],
+     "hops": 3,
+     "via": "PLG",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2109171",
+   "name": "Dibotermin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "spinal fusion",
+    "bone disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-2A agonist",
+    "Bone morphogenetic protein receptor type-1A agonist",
+    "Activin receptor type-1 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2657,
+   "rawScore": 0.655565,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.135254,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2A",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.135118,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2B",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.102503,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR2",
+     "viaScore": 0.999
     }
    ]
   },
@@ -2149,17 +1667,29 @@
     "Stem cell growth factor receptor inhibitor",
     "Vascular endothelial growth factor receptor 1 inhibitor"
    ],
-   "rank": 35,
-   "score": 0.1787,
-   "rawScore": 0.443187,
-   "geneCount": 8,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 27,
+   "score": 0.2558,
+   "rawScore": 0.63133,
+   "geneCount": 9,
    "paths": [
     {
      "gene": "COL18A1",
      "geneId": "ENSG00000182871",
      "geneName": "collagen type XVIII alpha 1 chain",
      "assoc": 0.9375,
-     "contribution": 0.095587,
+     "contribution": 0.091188,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -2176,7 +1706,7 @@
      "geneId": "ENSG00000112715",
      "geneName": "vascular endothelial growth factor A",
      "assoc": 0.7837,
-     "contribution": 0.078459,
+     "contribution": 0.074849,
      "drugsOnGene": 12,
      "evidence": [
       {
@@ -2197,7 +1727,7 @@
      "geneId": "ENSG00000154188",
      "geneName": "angiopoietin 1",
      "assoc": 0.9305,
-     "contribution": 0.072036,
+     "contribution": 0.068721,
      "drugsOnGene": 12,
      "evidence": [
       {
@@ -2224,264 +1754,33 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743062",
+   "name": "Ramucirumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "breast neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor"
-   ],
-   "rank": 36,
-   "score": 0.1733,
-   "rawScore": 0.430035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.668,
-     "contribution": 0.430035,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.668
-      }
-     ],
-     "hops": 3,
-     "via": "PIK3CA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor"
-   ],
-   "rank": 37,
-   "score": 0.1733,
-   "rawScore": 0.430035,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.668,
-     "contribution": 0.430035,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.668
-      }
-     ],
-     "hops": 3,
-     "via": "PIK3CA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108709",
-   "name": "Collagenase Clostridium Histolyticum",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "sarcoidosis",
-    "Dupuytren Contracture",
-    "palmar fibromatosis",
-    "Penile Fibromatosis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Collagen hydrolytic enzyme"
-   ],
-   "rank": 38,
-   "score": 0.1704,
-   "rawScore": 0.422882,
-   "geneCount": 21,
-   "paths": [
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.210211,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.144016,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "COL15A1",
-     "viaScore": 0.904
-    },
-    {
-     "gene": "COL7A1",
-     "geneId": "ENSG00000114270",
-     "geneName": "collagen type VII alpha 1 chain",
-     "assoc": 0.6748,
-     "contribution": 0.068655,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6748
-      }
-     ],
-     "hops": 3,
-     "via": "COL1A1",
-     "viaScore": 0.79
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL477772",
-   "name": "Pazopanib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor",
-    "Macrophage colony stimulating factor receptor inhibitor"
-   ],
-   "rank": 39,
-   "score": 0.1632,
-   "rawScore": 0.405343,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "COL18A1",
-     "geneId": "ENSG00000182871",
-     "geneName": "collagen type XVIII alpha 1 chain",
-     "assoc": 0.9375,
-     "contribution": 0.087425,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9375
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.7837,
-     "contribution": 0.07176,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.711
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2517
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.9305,
-     "contribution": 0.065885,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7087
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.304
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.2432
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.984
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105717",
-   "name": "Cabozantinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "medullary thyroid gland carcinoma",
-    "thyroid cancer",
-    "renal cell carcinoma",
-    "thyroid tumor"
+    "gastroesophageal junction adenocarcinoma",
+    "gastric neoplasm",
+    "non-small cell lung carcinoma",
+    "gastric adenocarcinoma"
    ],
    "indicationCount": 6,
    "mechanisms": [
-    "Hepatocyte growth factor receptor inhibitor",
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
-   "rank": 40,
-   "score": 0.161,
-   "rawScore": 0.399833,
-   "geneCount": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.2509,
+   "rawScore": 0.619201,
+   "geneCount": 1,
    "paths": [
     {
      "gene": "COL18A1",
      "geneId": "ENSG00000182871",
      "geneName": "collagen type XVIII alpha 1 chain",
      "assoc": 0.9375,
-     "contribution": 0.166427,
+     "contribution": 0.219601,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -2498,7 +1797,7 @@
      "geneId": "ENSG00000112715",
      "geneName": "vascular endothelial growth factor A",
      "assoc": 0.7837,
-     "contribution": 0.123188,
+     "contribution": 0.162547,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -2519,7 +1818,7 @@
      "geneId": "ENSG00000154188",
      "geneName": "angiopoietin 1",
      "assoc": 0.9305,
-     "contribution": 0.110219,
+     "contribution": 0.145435,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -2546,6 +1845,441 @@
    ]
   },
   {
+   "id": "CHEMBL3186534",
+   "name": "Rivoceranib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vascular endothelial growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.2509,
+   "rawScore": 0.619201,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.219601,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.162547,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.85
+    },
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.145435,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1336",
+   "name": "Sorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "neoplasm",
+    "hepatocellular carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Serine/threonine-protein kinase RAF inhibitor",
+    "Platelet-derived growth factor receptor beta inhibitor",
+    "Serine/threonine-protein kinase B-raf inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.2379,
+   "rawScore": 0.587512,
+   "geneCount": 9,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.091188,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.074849,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
+    },
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.068721,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.984
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL477772",
+   "name": "Pazopanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Macrophage colony stimulating factor receptor inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.236,
+   "rawScore": 0.582635,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.084155,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.069075,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
+    },
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.06342,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.984
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298195",
+   "name": "Narsoplimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Mannan-binding lectin serine protease 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.2323,
+   "rawScore": 0.573772,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SERPING1",
+     "geneId": "ENSG00000149131",
+     "geneName": "serpin family G member 1",
+     "assoc": 1.0,
+     "contribution": 0.573772,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9943
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9644
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8706
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      }
+     ],
+     "hops": 3,
+     "via": "MASP2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL265502",
+   "name": "Suramin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acidic fibroblast growth factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.2304,
+   "rawScore": 0.569058,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.5696,
+     "contribution": 0.569058,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5696
+      }
+     ],
+     "hops": 3,
+     "via": "FGF1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297750",
+   "name": "Faricimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "cystoid macular edema",
+    "ocular vascular disorder",
+    "macular retinal edema",
+    "diabetic macular edema"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Angiopoietin-2 inhibitor",
+    "Vascular endothelial growth factor A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.2281,
+   "rawScore": 0.563466,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.316838,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "ANGPT2",
+     "viaScore": 0.92
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.246628,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4303201",
    "name": "Catequentinib",
    "drugType": "Small molecule",
@@ -2556,9 +2290,12 @@
     "Stem cell growth factor receptor inhibitor",
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
-   "rank": 41,
-   "score": 0.1554,
-   "rawScore": 0.386209,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.2243,
+   "rawScore": 0.554042,
    "geneCount": 4,
    "paths": [
     {
@@ -2631,6 +2368,427 @@
    ]
   },
   {
+   "id": "CHEMBL24828",
+   "name": "Vandetanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "medullary thyroid gland carcinoma",
+    "thyroid gland carcinoma",
+    "thyroid tumor"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Ephrin receptor inhibitor",
+    "Tyrosine-protein kinase BRK inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
+   "score": 0.1934,
+   "rawScore": 0.478355,
+   "geneCount": 24,
+   "paths": [
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.096501,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "TEK",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.061596,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.668,
+     "contribution": 0.053458,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.668
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105717",
+   "name": "Cabozantinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "medullary thyroid gland carcinoma",
+    "thyroid cancer",
+    "renal cell carcinoma",
+    "thyroid tumor"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Hepatocyte growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 37,
+   "score": 0.1897,
+   "rawScore": 0.469267,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.166427,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.7837,
+     "contribution": 0.123188,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.711
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2517
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.85
+    },
+    {
+     "gene": "ANGPT1",
+     "geneId": "ENSG00000154188",
+     "geneName": "angiopoietin 1",
+     "assoc": 0.9305,
+     "contribution": 0.110219,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7087
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.304
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.2432
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.994
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108594",
+   "name": "Eptotermin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "spondylolisthesis",
+    "tibia fracture",
+    "bone disorder"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Activin receptor type-1 agonist",
+    "Bone morphogenetic protein receptor type-1B agonist",
+    "Bone morphogenetic protein receptor type-2 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.183,
+   "rawScore": 0.453017,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.120552,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.120552,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1A",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BMP7",
+     "geneId": "ENSG00000101144",
+     "geneName": "bone morphogenetic protein 7",
+     "assoc": 0.5677,
+     "contribution": 0.120552,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5677
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.1737,
+   "rawScore": 0.430035,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.668,
+     "contribution": 0.430035,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.668
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "PI3-kinase p110-alpha subunit inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.1737,
+   "rawScore": 0.430035,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.668,
+     "contribution": 0.430035,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.668
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108709",
+   "name": "Collagenase Clostridium Histolyticum",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "sarcoidosis",
+    "Dupuytren Contracture",
+    "palmar fibromatosis",
+    "Penile Fibromatosis"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.1591,
+   "rawScore": 0.394395,
+   "geneCount": 25,
+   "paths": [
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.19605,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL18A1",
+     "geneId": "ENSG00000182871",
+     "geneName": "collagen type XVIII alpha 1 chain",
+     "assoc": 0.9375,
+     "contribution": 0.134315,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9375
+      }
+     ],
+     "hops": 3,
+     "via": "COL15A1",
+     "viaScore": 0.904
+    },
+    {
+     "gene": "COL7A1",
+     "geneId": "ENSG00000114270",
+     "geneName": "collagen type VII alpha 1 chain",
+     "assoc": 0.6748,
+     "contribution": 0.06403,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6748
+      }
+     ],
+     "hops": 3,
+     "via": "COL1A1",
+     "viaScore": 0.79
+    }
+   ]
+  },
+  {
    "id": "CHEMBL473417",
    "name": "Vismodegib",
    "drugType": "Small molecule",
@@ -2642,8 +2800,59 @@
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 42,
-   "score": 0.1528,
+   "score": 0.1531,
+   "rawScore": 0.379735,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLI3",
+     "geneId": "ENSG00000106571",
+     "geneName": "GLI family zinc finger 3",
+     "assoc": 0.6044,
+     "contribution": 0.379735,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6044
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.975
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 43,
+   "score": 0.1531,
    "rawScore": 0.379735,
    "geneCount": 1,
    "paths": [
@@ -2679,43 +2888,20 @@
     "Smoothened homolog antagonist",
     "Smoothened homolog antagonist"
    ],
-   "rank": 43,
-   "score": 0.1528,
-   "rawScore": 0.379735,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "GLI3",
-     "geneId": "ENSG00000106571",
-     "geneName": "GLI family zinc finger 3",
-     "assoc": 0.6044,
-     "contribution": 0.379735,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6044
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.975
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 44,
-   "score": 0.1528,
+   "score": 0.1531,
    "rawScore": 0.379735,
    "geneCount": 1,
    "paths": [
@@ -2752,8 +2938,11 @@
     "Thrombin antagonist",
     "Plasminogen activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 45,
-   "score": 0.1415,
+   "score": 0.1418,
    "rawScore": 0.35206,
    "geneCount": 5,
    "paths": [
@@ -2830,8 +3019,11 @@
    "mechanisms": [
     "Tissue-type plasminogen activator exogenous protein"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 46,
-   "score": 0.1383,
+   "score": 0.1387,
    "rawScore": 0.34439,
    "geneCount": 1,
    "paths": [
@@ -2867,21 +3059,19 @@
    ]
   },
   {
-   "id": "CHEMBL2107885",
-   "name": "Reteplase",
+   "id": "CHEMBL2108072",
+   "name": "Pamiteplase",
    "drugType": "Enzyme",
-   "approvedFor": [
-    "myocardial infarction",
-    "heart failure",
-    "Recurrent thrombophlebitis",
-    "ST Elevation Myocardial Infarction"
-   ],
-   "indicationCount": 4,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Tissue-type plasminogen activator exogenous protein"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 47,
-   "score": 0.1383,
+   "score": 0.1387,
    "rawScore": 0.34439,
    "geneCount": 1,
    "paths": [
@@ -2931,6 +3121,9 @@
     "Complement C1s inhibitor",
     "Plasma kallikrein inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.454227,
@@ -3021,8 +3214,11 @@
    "mechanisms": [
     "Plasma protease C1 inhibitor exogenous protein"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
-   "score": 0.8651,
+   "score": 0.8652,
    "rawScore": 2.123934,
    "geneCount": 1,
    "paths": [
@@ -3108,103 +3304,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201837",
-   "name": "Ecallantide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "hereditary angioedema"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Plasma kallikrein inhibitor"
-   ],
-   "rank": 7,
-   "score": 0.3367,
-   "rawScore": 0.830134,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SERPING1",
-     "geneId": "ENSG00000149131",
-     "geneName": "serpin family G member 1",
-     "assoc": 1.0,
-     "contribution": 0.300501,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9943
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9644
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8706
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      }
-     ],
-     "hops": 3,
-     "via": "KLKB1",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "KNG1",
-     "geneId": "ENSG00000113889",
-     "geneName": "kininogen 1",
-     "assoc": 0.9184,
-     "contribution": 0.253188,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7177
-      },
-      {
-       "id": "literature",
-       "score": 0.7111
-      }
-     ],
-     "hops": 3,
-     "via": "KLKB1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "F12",
-     "geneId": "ENSG00000131187",
-     "geneName": "coagulation factor XII",
-     "assoc": 0.993,
-     "contribution": 0.247603,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8189
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8059
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.7599
-      },
-      {
-       "id": "literature",
-       "score": 0.1674
-      }
-     ],
-     "hops": 3,
-     "via": "KLKB1",
-     "viaScore": 0.972
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3545189",
    "name": "Lanadelumab",
    "drugType": "Antibody",
@@ -3215,8 +3314,11 @@
    "mechanisms": [
     "Plasma kallikrein inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 8,
-   "score": 0.3367,
+   "score": 0.337,
    "rawScore": 0.830134,
    "geneCount": 1,
    "paths": [
@@ -3312,8 +3414,116 @@
    "mechanisms": [
     "Plasma kallikrein inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
-   "score": 0.3367,
+   "score": 0.337,
+   "rawScore": 0.830134,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SERPING1",
+     "geneId": "ENSG00000149131",
+     "geneName": "serpin family G member 1",
+     "assoc": 1.0,
+     "contribution": 0.300501,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9943
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9644
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8706
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      }
+     ],
+     "hops": 3,
+     "via": "KLKB1",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "KNG1",
+     "geneId": "ENSG00000113889",
+     "geneName": "kininogen 1",
+     "assoc": 0.9184,
+     "contribution": 0.253188,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7177
+      },
+      {
+       "id": "literature",
+       "score": 0.7111
+      }
+     ],
+     "hops": 3,
+     "via": "KLKB1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "F12",
+     "geneId": "ENSG00000131187",
+     "geneName": "coagulation factor XII",
+     "assoc": 0.993,
+     "contribution": 0.247603,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8189
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8059
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.7599
+      },
+      {
+       "id": "literature",
+       "score": 0.1674
+      }
+     ],
+     "hops": 3,
+     "via": "KLKB1",
+     "viaScore": 0.972
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201837",
+   "name": "Ecallantide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "hereditary angioedema"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Plasma kallikrein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.337,
    "rawScore": 0.830134,
    "geneCount": 1,
    "paths": [
@@ -3409,8 +3619,11 @@
    "mechanisms": [
     "Bradykinin B2 receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 12,
-   "score": 0.3082,
+   "score": 0.3085,
    "rawScore": 0.760401,
    "geneCount": 1,
    "paths": [
@@ -3471,8 +3684,11 @@
    "mechanisms": [
     "Plasminogen inhibitor"
    ],
-   "rank": 17,
-   "score": 0.2714,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.2717,
    "rawScore": 0.670201,
    "geneCount": 1,
    "paths": [
@@ -3550,8 +3766,11 @@
    "mechanisms": [
     "Antithrombin-III activator"
    ],
-   "rank": 97,
-   "score": 0.0741,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 106,
+   "score": 0.0745,
    "rawScore": 0.187069,
    "geneCount": 1,
    "paths": [
@@ -3597,8 +3816,11 @@
    "mechanisms": [
     "Androgen Receptor agonist"
    ],
-   "rank": 249,
-   "score": 0.0013,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 285,
+   "score": 0.0017,
    "rawScore": 0.008828,
    "geneCount": 1,
    "paths": [

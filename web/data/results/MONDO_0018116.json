@@ -9,7 +9,7 @@
  "knownDrugCount": 1,
  "candidatesConsidered": 109,
  "pathsTwoHop": 64,
- "pathsThreeHop": 68,
+ "pathsThreeHop": 74,
  "candidates": [
   {
    "id": "CHEMBL1201573",
@@ -23,6 +23,14 @@
    "mechanisms": [
     "Interleukin 11 receptor alpha agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.770735,
@@ -133,6 +141,9 @@
     "Hepatocyte nuclear factor 4-alpha activator",
     "Serotonin 1a (5-HT1a) receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
    "score": 0.3168,
    "rawScore": 0.915864,
@@ -183,6 +194,81 @@
    ]
   },
   {
+   "id": "CHEMBL2095222",
+   "name": "Ocriplasmin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Abnormal retinal morphology",
+    "eye disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Laminin hydrolytic enzyme",
+    "Fibronectin proteolytic enzyme",
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
+   "score": 0.2506,
+   "rawScore": 0.736108,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "COL4A1",
+     "geneId": "ENSG00000187498",
+     "geneName": "collagen type IV alpha 1 chain",
+     "assoc": 0.629,
+     "contribution": 0.111258,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.629
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL4A2",
+     "geneId": "ENSG00000134871",
+     "geneName": "collagen type IV alpha 2 chain",
+     "assoc": 0.5682,
+     "contribution": 0.100495,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5682
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL4A1",
+     "geneId": "ENSG00000187498",
+     "geneName": "collagen type IV alpha 1 chain",
+     "assoc": 0.629,
+     "contribution": 0.0742,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.629
+      }
+     ],
+     "hops": 3,
+     "via": "LAMC1",
+     "viaScore": 0.88
+    }
+   ]
+  },
+  {
    "id": "CHEMBL110458",
    "name": "Migalastat",
    "drugType": "Small molecule",
@@ -194,7 +280,10 @@
     "Alpha-galactosidase A stabiliser",
     "Alpha-galactosidase A stabiliser"
    ],
-   "rank": 3,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
    "score": 0.2322,
    "rawScore": 0.686016,
    "geneCount": 1,
@@ -227,6 +316,81 @@
    ]
   },
   {
+   "id": "CHEMBL2108709",
+   "name": "Collagenase Clostridium Histolyticum",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "sarcoidosis",
+    "Dupuytren Contracture",
+    "palmar fibromatosis",
+    "Penile Fibromatosis"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.2288,
+   "rawScore": 0.676874,
+   "geneCount": 25,
+   "paths": [
+    {
+     "gene": "COL4A1",
+     "geneId": "ENSG00000187498",
+     "geneName": "collagen type IV alpha 1 chain",
+     "assoc": 0.629,
+     "contribution": 0.131544,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.629
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL4A2",
+     "geneId": "ENSG00000134871",
+     "geneName": "collagen type IV alpha 2 chain",
+     "assoc": 0.5682,
+     "contribution": 0.118817,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5682
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL4A2",
+     "geneId": "ENSG00000134871",
+     "geneName": "collagen type IV alpha 2 chain",
+     "assoc": 0.5682,
+     "contribution": 0.076489,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5682
+      }
+     ],
+     "hops": 3,
+     "via": "COL4A1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2109171",
    "name": "Dibotermin Alfa",
    "drugType": "Protein",
@@ -240,7 +404,10 @@
     "Bone morphogenetic protein receptor type-1A agonist",
     "Activin receptor type-1 agonist"
    ],
-   "rank": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
    "score": 0.2235,
    "rawScore": 0.6623,
    "geneCount": 6,
@@ -308,7 +475,10 @@
     "Pyruvate kinase isozymes R/L activator",
     "Pyruvate kinase isozymes R/L activator"
    ],
-   "rank": 5,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
    "score": 0.1971,
    "rawScore": 0.590819,
    "geneCount": 1,
@@ -333,78 +503,6 @@
    ]
   },
   {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
-   ],
-   "rank": 6,
-   "score": 0.1937,
-   "rawScore": 0.581379,
-   "geneCount": 34,
-   "paths": [
-    {
-     "gene": "COL4A1",
-     "geneId": "ENSG00000187498",
-     "geneName": "collagen type IV alpha 1 chain",
-     "assoc": 0.629,
-     "contribution": 0.11632,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.629
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A2",
-     "geneId": "ENSG00000134871",
-     "geneName": "collagen type IV alpha 2 chain",
-     "assoc": 0.5682,
-     "contribution": 0.105067,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5682
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A1",
-     "geneId": "ENSG00000187498",
-     "geneName": "collagen type IV alpha 1 chain",
-     "assoc": 0.629,
-     "contribution": 0.077576,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.629
-      }
-     ],
-     "hops": 3,
-     "via": "LAMC1",
-     "viaScore": 0.88
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4594333",
    "name": "Elivaldogene Autotemcel",
    "drugType": "Gene",
@@ -415,7 +513,15 @@
    "mechanisms": [
     "ABCD1 exogenous gene"
    ],
-   "rank": 7,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
    "score": 0.1926,
    "rawScore": 0.578641,
    "geneCount": 1,
@@ -452,7 +558,15 @@
    "mechanisms": [
     "C-C chemokine receptor type 5 antagonist"
    ],
-   "rank": 8,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
    "score": 0.1915,
    "rawScore": 0.575649,
    "geneCount": 1,
@@ -487,7 +601,15 @@
    "mechanisms": [
     "Aldose reductase inhibitor"
    ],
-   "rank": 9,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 10,
    "score": 0.1716,
    "rawScore": 0.521591,
    "geneCount": 1,
@@ -530,7 +652,10 @@
    "mechanisms": [
     "Aldose reductase inhibitor"
    ],
-   "rank": 10,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
    "score": 0.1716,
    "rawScore": 0.521591,
    "geneCount": 1,
@@ -563,78 +688,6 @@
    ]
   },
   {
-   "id": "CHEMBL2108709",
-   "name": "Collagenase Clostridium Histolyticum",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "sarcoidosis",
-    "Dupuytren Contracture",
-    "palmar fibromatosis",
-    "Penile Fibromatosis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Collagen hydrolytic enzyme"
-   ],
-   "rank": 11,
-   "score": 0.1628,
-   "rawScore": 0.497539,
-   "geneCount": 21,
-   "paths": [
-    {
-     "gene": "COL4A1",
-     "geneId": "ENSG00000187498",
-     "geneName": "collagen type IV alpha 1 chain",
-     "assoc": 0.629,
-     "contribution": 0.141045,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.629
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A2",
-     "geneId": "ENSG00000134871",
-     "geneName": "collagen type IV alpha 2 chain",
-     "assoc": 0.5682,
-     "contribution": 0.1274,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5682
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A1",
-     "geneId": "ENSG00000187498",
-     "geneName": "collagen type IV alpha 1 chain",
-     "assoc": 0.629,
-     "contribution": 0.080928,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.629
-      }
-     ],
-     "hops": 3,
-     "via": "COL4A2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3304485",
    "name": "Tenapanor",
    "drugType": "Small molecule",
@@ -646,6 +699,14 @@
    "mechanisms": [
     "Sodium/hydrogen exchanger 3 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 12,
    "score": 0.1496,
    "rawScore": 0.461655,
@@ -685,6 +746,9 @@
     "Bone morphogenetic protein receptor type-1B agonist",
     "Bone morphogenetic protein receptor type-2 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 13,
    "score": 0.1483,
    "rawScore": 0.458296,
@@ -754,6 +818,22 @@
     "Transient receptor potential cation channel subfamily V member 4 inhibitor",
     "Transient receptor potential cation channel subfamily A member 1 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "psychiatric toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 14,
    "score": 0.1325,
    "rawScore": 0.415314,
@@ -808,17 +888,20 @@
    "mechanisms": [
     "Serine/threonine-protein kinase AKT inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 15,
-   "score": 0.1298,
-   "rawScore": 0.408096,
-   "geneCount": 2,
+   "score": 0.1073,
+   "rawScore": 0.346997,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "PXDN",
      "geneId": "ENSG00000130508",
      "geneName": "peroxidasin",
      "assoc": 0.6147,
-     "contribution": 0.408096,
+     "contribution": 0.346997,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -845,6 +928,9 @@
     "Solute carrier family 22 member 6 inhibitor",
     "Solute carrier family 22 member 8 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 16,
    "score": 0.1052,
    "rawScore": 0.341353,
@@ -885,6 +971,9 @@
    "mechanisms": [
     "Bile acid transporter inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 17,
    "score": 0.1012,
    "rawScore": 0.330305,
@@ -923,6 +1012,9 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 18,
    "score": 0.0852,
    "rawScore": 0.287041,
@@ -961,6 +1053,9 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
    "score": 0.0852,
    "rawScore": 0.287041,
@@ -986,19 +1081,20 @@
    ]
   },
   {
-   "id": "CHEMBL4297588",
-   "name": "Odevixibat",
+   "id": "CHEMBL363392",
+   "name": "Maralixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "progressive familial intrahepatic cholestasis",
-    "Pruritus",
-    "Alagille syndrome"
+    "Pruritus"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 20,
    "score": 0.0648,
    "rawScore": 0.231461,
@@ -1024,17 +1120,22 @@
    ]
   },
   {
-   "id": "CHEMBL363392",
-   "name": "Maralixibat",
+   "id": "CHEMBL4297588",
+   "name": "Odevixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pruritus"
+    "progressive familial intrahepatic cholestasis",
+    "Pruritus",
+    "Alagille syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 21,
    "score": 0.0648,
    "rawScore": 0.231461,
@@ -1070,6 +1171,9 @@
    "mechanisms": [
     "Ileal bile acid transporter inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 22,
    "score": 0.0648,
    "rawScore": 0.231461,
@@ -1108,6 +1212,14 @@
    "mechanisms": [
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 23,
    "score": 0.0552,
    "rawScore": 0.205508,
@@ -1146,45 +1258,10 @@
    "mechanisms": [
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
-   "score": 0.0552,
-   "rawScore": 0.205508,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "UMOD",
-     "geneId": "ENSG00000169344",
-     "geneName": "uromodulin",
-     "assoc": 0.588,
-     "contribution": 0.205508,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.588
-      }
-     ],
-     "hops": 3,
-     "via": "SLC12A1",
-     "viaScore": 0.803
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1072",
-   "name": "Bumetanide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "congestive heart failure",
-    "kidney disorder",
-    "cardiovascular disorder",
-    "nephrotic syndrome"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
-   ],
-   "rank": 25,
    "score": 0.0552,
    "rawScore": 0.205508,
    "geneCount": 1,
@@ -1223,6 +1300,59 @@
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor",
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.0552,
+   "rawScore": 0.205508,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "UMOD",
+     "geneId": "ENSG00000169344",
+     "geneName": "uromodulin",
+     "assoc": 0.588,
+     "contribution": 0.205508,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.588
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.803
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1072",
+   "name": "Bumetanide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "congestive heart failure",
+    "kidney disorder",
+    "cardiovascular disorder",
+    "nephrotic syndrome"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 26,
    "score": 0.0552,
    "rawScore": 0.205508,
@@ -1248,6 +1378,46 @@
    ]
   },
   {
+   "id": "CHEMBL1551",
+   "name": "Ursodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "chronic hepatitis C virus infection",
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.0543,
+   "rawScore": 0.203135,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.6497,
+     "contribution": 0.203135,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6497
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.753
+    }
+   ]
+  },
+  {
    "id": "CHEMBL240597",
    "name": "Chenodiol",
    "drugType": "Small molecule",
@@ -1260,7 +1430,15 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 27,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
    "score": 0.0543,
    "rawScore": 0.203135,
    "geneCount": 1,
@@ -1297,43 +1475,18 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 28,
-   "score": 0.0543,
-   "rawScore": 0.203135,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.6497,
-     "contribution": 0.203135,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6497
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.753
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1551",
-   "name": "Ursodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic hepatitis C virus infection",
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis"
    ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 29,
    "score": 0.0543,
    "rawScore": 0.203135,
@@ -1370,6 +1523,9 @@
    "mechanisms": [
     "Vanilloid receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 30,
    "score": 0.0533,
    "rawScore": 0.200374,
@@ -1408,6 +1564,9 @@
    "mechanisms": [
     "Vanilloid receptor opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 31,
    "score": 0.0533,
    "rawScore": 0.200374,
@@ -1433,44 +1592,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201753",
-   "name": "Pitavastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypercholesterolemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor",
-    "HMG-CoA reductase inhibitor",
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 32,
-   "score": 0.0518,
-   "rawScore": 0.196304,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SREBF2",
-     "geneId": "ENSG00000198911",
-     "geneName": "sterol regulatory element binding transcription factor 2",
-     "assoc": 0.6041,
-     "contribution": 0.196304,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6041
-      }
-     ],
-     "hops": 3,
-     "via": "HMGCR",
-     "viaScore": 0.985
-    }
-   ]
-  },
-  {
    "id": "CHEMBL503",
    "name": "Lovastatin",
    "drugType": "Small molecule",
@@ -1484,152 +1605,10 @@
    "mechanisms": [
     "HMG-CoA reductase inhibitor"
    ],
-   "rank": 33,
-   "score": 0.0518,
-   "rawScore": 0.196304,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SREBF2",
-     "geneId": "ENSG00000198911",
-     "geneName": "sterol regulatory element binding transcription factor 2",
-     "assoc": 0.6041,
-     "contribution": 0.196304,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6041
-      }
-     ],
-     "hops": 3,
-     "via": "HMGCR",
-     "viaScore": 0.985
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1144",
-   "name": "Pravastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inherited lipid metabolism disorder",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 34,
-   "score": 0.0518,
-   "rawScore": 0.196304,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SREBF2",
-     "geneId": "ENSG00000198911",
-     "geneName": "sterol regulatory element binding transcription factor 2",
-     "assoc": 0.6041,
-     "contribution": 0.196304,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6041
-      }
-     ],
-     "hops": 3,
-     "via": "HMGCR",
-     "viaScore": 0.985
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2220442",
-   "name": "Fluvastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 35,
-   "score": 0.0518,
-   "rawScore": 0.196304,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SREBF2",
-     "geneId": "ENSG00000198911",
-     "geneName": "sterol regulatory element binding transcription factor 2",
-     "assoc": 0.6041,
-     "contribution": 0.196304,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6041
-      }
-     ],
-     "hops": 3,
-     "via": "HMGCR",
-     "viaScore": 0.985
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1496",
-   "name": "Rosuvastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "Hypercholesterolemia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 36,
-   "score": 0.0518,
-   "rawScore": 0.196304,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SREBF2",
-     "geneId": "ENSG00000198911",
-     "geneName": "sterol regulatory element binding transcription factor 2",
-     "assoc": 0.6041,
-     "contribution": 0.196304,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6041
-      }
-     ],
-     "hops": 3,
-     "via": "HMGCR",
-     "viaScore": 0.985
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1064",
-   "name": "Simvastatin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Abnormal circulating lipid concentration",
-    "stroke disorder",
-    "cardiovascular disorder",
-    "Hypercholesterolemia"
-   ],
-   "indicationCount": 10,
-   "mechanisms": [
-    "HMG-CoA reductase inhibitor"
-   ],
-   "rank": 37,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
    "score": 0.0518,
    "rawScore": 0.196304,
    "geneCount": 1,
@@ -1667,7 +1646,90 @@
    "mechanisms": [
     "HMG-CoA reductase inhibitor"
    ],
-   "rank": 38,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.0518,
+   "rawScore": 0.196304,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SREBF2",
+     "geneId": "ENSG00000198911",
+     "geneName": "sterol regulatory element binding transcription factor 2",
+     "assoc": 0.6041,
+     "contribution": 0.196304,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6041
+      }
+     ],
+     "hops": 3,
+     "via": "HMGCR",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1064",
+   "name": "Simvastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Abnormal circulating lipid concentration",
+    "stroke disorder",
+    "cardiovascular disorder",
+    "Hypercholesterolemia"
+   ],
+   "indicationCount": 10,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.0518,
+   "rawScore": 0.196304,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SREBF2",
+     "geneId": "ENSG00000198911",
+     "geneName": "sterol regulatory element binding transcription factor 2",
+     "assoc": 0.6041,
+     "contribution": 0.196304,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6041
+      }
+     ],
+     "hops": 3,
+     "via": "HMGCR",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1144",
+   "name": "Pravastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inherited lipid metabolism disorder",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
    "score": 0.0518,
    "rawScore": 0.196304,
    "geneCount": 1,
@@ -1703,6 +1765,144 @@
    "mechanisms": [
     "HMG-CoA reductase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Increased reporting rate of rhabdomyolysis with Baycol relative to other statins, especially when gemfibrozil is co-prescribed"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Severe muscle damage. Combination of cerivastatin and another cholesterol lowering drug, gemfibrozil, has caused severe damage to muscle in some patients. The damage can be in the form of rhabdomyolysis where there is breakdown of muscle cells and release of myoglobin which in turn can lead to kidney damage"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.0518,
+   "rawScore": 0.196304,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SREBF2",
+     "geneId": "ENSG00000198911",
+     "geneName": "sterol regulatory element binding transcription factor 2",
+     "assoc": 0.6041,
+     "contribution": 0.196304,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6041
+      }
+     ],
+     "hops": 3,
+     "via": "HMGCR",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201753",
+   "name": "Pitavastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypercholesterolemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor",
+    "HMG-CoA reductase inhibitor",
+    "HMG-CoA reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.0518,
+   "rawScore": 0.196304,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SREBF2",
+     "geneId": "ENSG00000198911",
+     "geneName": "sterol regulatory element binding transcription factor 2",
+     "assoc": 0.6041,
+     "contribution": 0.196304,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6041
+      }
+     ],
+     "hops": 3,
+     "via": "HMGCR",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1496",
+   "name": "Rosuvastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "Hypercholesterolemia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.0518,
+   "rawScore": 0.196304,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SREBF2",
+     "geneId": "ENSG00000198911",
+     "geneName": "sterol regulatory element binding transcription factor 2",
+     "assoc": 0.6041,
+     "contribution": 0.196304,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6041
+      }
+     ],
+     "hops": 3,
+     "via": "HMGCR",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2220442",
+   "name": "Fluvastatin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "HMG-CoA reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 39,
    "score": 0.0518,
    "rawScore": 0.196304,
@@ -1728,17 +1928,24 @@
    ]
   },
   {
-   "id": "CHEMBL595",
-   "name": "Pioglitazone",
+   "id": "CHEMBL408",
+   "name": "Troglitazone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 40,
    "score": 0.0485,
    "rawScore": 0.187336,

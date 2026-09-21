@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 27,
  "knownDrugCount": 118,
- "candidatesConsidered": 354,
+ "candidatesConsidered": 356,
  "pathsTwoHop": 356,
- "pathsThreeHop": 334,
+ "pathsThreeHop": 354,
  "candidates": [
   {
    "id": "CHEMBL2109171",
@@ -25,6 +25,9 @@
     "Bone morphogenetic protein receptor type-1A agonist",
     "Activin receptor type-1 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 3.703572,
@@ -130,6 +133,9 @@
     "Bone morphogenetic protein receptor type-1B agonist",
     "Bone morphogenetic protein receptor type-2 agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
    "score": 0.9257,
    "rawScore": 3.428795,
@@ -238,8 +244,11 @@
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.3171,
+   "score": 0.3172,
    "rawScore": 1.177745,
    "geneCount": 3,
    "paths": [
@@ -333,100 +342,6 @@
    ]
   },
   {
-   "id": "CHEMBL1421",
-   "name": "Dasatinib Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic myelogenous leukemia, BCR-ABL1 positive",
-    "acute lymphoblastic leukemia",
-    "blast phase chronic myelogenous leukemia, BCR-ABL1 positive",
-    "lymphoid leukemia"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Bcr/Abl fusion protein inhibitor",
-    "Bcr/Abl fusion protein inhibitor",
-    "Ephrin type-A receptor 2 inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.3091,
-   "rawScore": 1.148442,
-   "geneCount": 9,
-   "paths": [
-    {
-     "gene": "CAV1",
-     "geneId": "ENSG00000105974",
-     "geneName": "caveolin 1",
-     "assoc": 0.9871,
-     "contribution": 0.214672,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7936
-      },
-      {
-       "id": "animal_model",
-       "score": 0.617
-      },
-      {
-       "id": "literature",
-       "score": 0.5976
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.5946
-      }
-     ],
-     "hops": 3,
-     "via": "FYN",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "ABL1",
-     "geneId": "ENSG00000097007",
-     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
-     "assoc": 0.6518,
-     "contribution": 0.131657,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5049
-      },
-      {
-       "id": "literature",
-       "score": 0.2967
-      }
-     ],
-     "hops": 3,
-     "via": "BCR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.126394,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 3,
-     "via": "SRC",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2165326",
    "name": "Aprocitentan",
    "drugType": "Small molecule",
@@ -438,8 +353,16 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 7,
-   "score": 0.2803,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
+   "score": 0.2804,
    "rawScore": 1.041868,
    "geneCount": 2,
    "paths": [
@@ -505,6 +428,103 @@
    ]
   },
   {
+   "id": "CHEMBL1421",
+   "name": "Dasatinib Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "chronic myelogenous leukemia, BCR-ABL1 positive",
+    "acute lymphoblastic leukemia",
+    "blast phase chronic myelogenous leukemia, BCR-ABL1 positive",
+    "lymphoid leukemia"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Bcr/Abl fusion protein inhibitor",
+    "Bcr/Abl fusion protein inhibitor",
+    "Ephrin type-A receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.2616,
+   "rawScore": 0.972141,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "CAV1",
+     "geneId": "ENSG00000105974",
+     "geneName": "caveolin 1",
+     "assoc": 0.9871,
+     "contribution": 0.174999,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7936
+      },
+      {
+       "id": "animal_model",
+       "score": 0.617
+      },
+      {
+       "id": "literature",
+       "score": 0.5976
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.5946
+      }
+     ],
+     "hops": 3,
+     "via": "FYN",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "ABL1",
+     "geneId": "ENSG00000097007",
+     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+     "assoc": 0.6518,
+     "contribution": 0.107326,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5049
+      },
+      {
+       "id": "literature",
+       "score": 0.2967
+      }
+     ],
+     "hops": 3,
+     "via": "BCR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.103035,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4303525",
    "name": "Omaveloxolone",
    "drugType": "Small molecule",
@@ -515,8 +535,11 @@
    "mechanisms": [
     "Nuclear factor erythroid 2-related factor 2 activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.2491,
+   "score": 0.2492,
    "rawScore": 0.92627,
    "geneCount": 1,
    "paths": [
@@ -548,6 +571,101 @@
    ]
   },
   {
+   "id": "CHEMBL288441",
+   "name": "Bosutinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Bcr/Abl fusion protein inhibitor",
+    "Tyrosine-protein kinase HCK inhibitor",
+    "Tyrosine-protein kinase Lyn inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.2416,
+   "rawScore": 0.898193,
+   "geneCount": 5,
+   "paths": [
+    {
+     "gene": "ABL1",
+     "geneId": "ENSG00000097007",
+     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+     "assoc": 0.6518,
+     "contribution": 0.166553,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5049
+      },
+      {
+       "id": "literature",
+       "score": 0.2967
+      }
+     ],
+     "hops": 3,
+     "via": "BCR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.159895,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CAV1",
+     "geneId": "ENSG00000105974",
+     "geneName": "caveolin 1",
+     "assoc": 0.9871,
+     "contribution": 0.15629,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7936
+      },
+      {
+       "id": "animal_model",
+       "score": 0.617
+      },
+      {
+       "id": "literature",
+       "score": 0.5976
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.5946
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL571546",
    "name": "Tirbanibulin",
    "drugType": "Small molecule",
@@ -558,8 +676,11 @@
    "mechanisms": [
     "Tyrosine-protein kinase SRC inhibitor"
    ],
-   "rank": 11,
-   "score": 0.2394,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.2395,
    "rawScore": 0.890579,
    "geneCount": 1,
    "paths": [
@@ -647,8 +768,11 @@
    "mechanisms": [
     "Platelet-derived growth factor subunit B inhibitor"
    ],
-   "rank": 13,
-   "score": 0.2352,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.2353,
    "rawScore": 0.875078,
    "geneCount": 1,
    "paths": [
@@ -710,8 +834,11 @@
     "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK1 inhibitor"
    ],
-   "rank": 14,
-   "score": 0.2266,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2267,
    "rawScore": 0.843319,
    "geneCount": 3,
    "paths": [
@@ -805,98 +932,6 @@
    ]
   },
   {
-   "id": "CHEMBL288441",
-   "name": "Bosutinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Bcr/Abl fusion protein inhibitor",
-    "Tyrosine-protein kinase HCK inhibitor",
-    "Tyrosine-protein kinase Lyn inhibitor"
-   ],
-   "rank": 15,
-   "score": 0.2264,
-   "rawScore": 0.842421,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "ABL1",
-     "geneId": "ENSG00000097007",
-     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
-     "assoc": 0.6518,
-     "contribution": 0.166553,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5049
-      },
-      {
-       "id": "literature",
-       "score": 0.2967
-      }
-     ],
-     "hops": 3,
-     "via": "BCR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.159895,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 3,
-     "via": "SRC",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "CAV1",
-     "geneId": "ENSG00000105974",
-     "geneName": "caveolin 1",
-     "assoc": 0.9871,
-     "contribution": 0.15629,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7936
-      },
-      {
-       "id": "animal_model",
-       "score": 0.617
-      },
-      {
-       "id": "literature",
-       "score": 0.5976
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.5946
-      }
-     ],
-     "hops": 3,
-     "via": "SRC",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108313",
    "name": "Conbercept",
    "drugType": "Protein",
@@ -907,8 +942,11 @@
     "Vascular endothelial growth factor C inhibitor",
     "Placenta growth factor inhibitor"
    ],
-   "rank": 16,
-   "score": 0.2258,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.2259,
    "rawScore": 0.840289,
    "geneCount": 4,
    "paths": [
@@ -991,8 +1029,11 @@
     "Tyrosine-protein kinase JAK2 inhibitor",
     "Tyrosine-protein kinase receptor FLT3 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 18,
-   "score": 0.2019,
+   "score": 0.202,
    "rawScore": 0.751651,
    "geneCount": 4,
    "paths": [
@@ -1099,8 +1140,11 @@
    "mechanisms": [
     "Carbamoyl-phosphate synthase [ammonia], mitochondrial positive allosteric modulator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
-   "score": 0.1884,
+   "score": 0.1885,
    "rawScore": 0.701992,
    "geneCount": 1,
    "paths": [
@@ -1128,62 +1172,6 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "PI3-kinase p110-alpha subunit inhibitor"
-   ],
-   "rank": 20,
-   "score": 0.1728,
-   "rawScore": 0.644306,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.406453,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 3,
-     "via": "PIK3CA",
-     "viaScore": 0.986
-    },
-    {
-     "gene": "PDGFRA",
-     "geneId": "ENSG00000134853",
-     "geneName": "platelet derived growth factor receptor alpha",
-     "assoc": 0.5786,
-     "contribution": 0.237853,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3798
-      },
-      {
-       "id": "literature",
-       "score": 0.3205
-      }
-     ],
-     "hops": 3,
-     "via": "PIK3CA",
-     "viaScore": 0.99
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2396661",
    "name": "Alpelisib",
    "drugType": "Small molecule",
@@ -1197,8 +1185,11 @@
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
-   "rank": 21,
-   "score": 0.1728,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.1729,
    "rawScore": 0.644306,
    "geneCount": 1,
    "paths": [
@@ -1243,58 +1234,61 @@
    ]
   },
   {
-   "id": "CHEMBL109648",
-   "name": "Clazosentan",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "breast neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Endothelin receptor ET-A antagonist"
+    "PI3-kinase p110-alpha subunit inhibitor"
    ],
-   "rank": 23,
-   "score": 0.1671,
-   "rawScore": 0.623,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.1729,
+   "rawScore": 0.644306,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.7345,
-     "contribution": 0.319712,
-     "drugsOnGene": 8,
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.406453,
+     "drugsOnGene": 3,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.495
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4743
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EDNRB",
-     "geneId": "ENSG00000136160",
-     "geneName": "endothelin receptor type B",
-     "assoc": 0.701,
-     "contribution": 0.303288,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.701
+       "score": 0.8441
       }
      ],
      "hops": 3,
-     "via": "EDNRA",
-     "viaScore": 0.994
+     "via": "PIK3CA",
+     "viaScore": 0.986
+    },
+    {
+     "gene": "PDGFRA",
+     "geneId": "ENSG00000134853",
+     "geneName": "platelet derived growth factor receptor alpha",
+     "assoc": 0.5786,
+     "contribution": 0.237853,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3798
+      },
+      {
+       "id": "literature",
+       "score": 0.3205
+      }
+     ],
+     "hops": 3,
+     "via": "PIK3CA",
+     "viaScore": 0.99
     }
    ]
   },
@@ -1309,8 +1303,11 @@
    "mechanisms": [
     "Endothelin receptor ET-A antagonist"
    ],
-   "rank": 24,
-   "score": 0.1671,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1672,
    "rawScore": 0.623,
    "geneCount": 1,
    "paths": [
@@ -1355,465 +1352,39 @@
    ]
   },
   {
-   "id": "CHEMBL535",
-   "name": "Sunitinib",
+   "id": "CHEMBL109648",
+   "name": "Clazosentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "renal cell carcinoma",
-    "neuroendocrine neoplasm",
-    "neoplasm",
-    "gastrointestinal stromal tumor"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Macrophage colony stimulating factor receptor inhibitor",
-    "Stem cell growth factor receptor inhibitor",
-    "Vascular endothelial growth factor receptor 1 inhibitor"
-   ],
-   "rank": 25,
-   "score": 0.1642,
-   "rawScore": 0.612435,
-   "geneCount": 8,
-   "paths": [
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.129576,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.124372,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CSF1R",
-     "geneId": "ENSG00000182578",
-     "geneName": "colony stimulating factor 1 receptor",
-     "assoc": 0.4355,
-     "contribution": 0.108874,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4355
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1754",
-   "name": "Doxapram",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "respiratory system disorder"
+    "cardiovascular disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Potassium channel subfamily K member 3 blocker",
-    "Potassium channel subfamily K member 9 blocker"
+    "Endothelin receptor ET-A antagonist"
    ],
-   "rank": 26,
-   "score": 0.1617,
-   "rawScore": 0.60325,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "KCNK3",
-     "geneId": "ENSG00000171303",
-     "geneName": "potassium two pore domain channel subfamily K member 3",
-     "assoc": 0.9967,
-     "contribution": 0.368876,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9041
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8763
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7196
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KCNK3",
-     "geneId": "ENSG00000171303",
-     "geneName": "potassium two pore domain channel subfamily K member 3",
-     "assoc": 0.9967,
-     "contribution": 0.234374,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9041
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8763
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7196
-      }
-     ],
-     "hops": 3,
-     "via": "KCNK9",
-     "viaScore": 0.986
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL576982",
-   "name": "Quizartinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "acute myeloid leukemia by FAB classification"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Macrophage colony stimulating factor receptor inhibitor",
-    "Platelet-derived growth factor receptor inhibitor",
-    "Stem cell growth factor receptor inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.1562,
-   "rawScore": 0.582731,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.150096,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CSF1R",
-     "geneId": "ENSG00000182578",
-     "geneName": "colony stimulating factor 1 receptor",
-     "assoc": 0.4355,
-     "contribution": 0.131393,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4355
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDGFRB",
-     "geneId": "ENSG00000113721",
-     "geneName": "platelet derived growth factor receptor beta",
-     "assoc": 0.6639,
-     "contribution": 0.12135,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4545
-      },
-      {
-       "id": "literature",
-       "score": 0.3838
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "basal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
-   "rank": 28,
-   "score": 0.1526,
-   "rawScore": 0.569629,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.1672,
+   "rawScore": 0.623,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "SHH",
-     "geneId": "ENSG00000164690",
-     "geneName": "sonic hedgehog signaling molecule",
-     "assoc": 0.8849,
-     "contribution": 0.569629,
-     "drugsOnGene": 3,
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.7345,
+     "contribution": 0.319712,
+     "drugsOnGene": 8,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.6089
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.461
+       "score": 0.495
       },
       {
        "id": "animal_model",
-       "score": 0.4538
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2043437",
-   "name": "Glasdegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "juvenile myelomonocytic leukemia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Smoothened homolog antagonist",
-    "Smoothened homolog antagonist"
-   ],
-   "rank": 29,
-   "score": 0.1526,
-   "rawScore": 0.569629,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SHH",
-     "geneId": "ENSG00000164690",
-     "geneName": "sonic hedgehog signaling molecule",
-     "assoc": 0.8849,
-     "contribution": 0.569629,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6089
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.461
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4538
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.1526,
-   "rawScore": 0.569629,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SHH",
-     "geneId": "ENSG00000164690",
-     "geneName": "sonic hedgehog signaling molecule",
-     "assoc": 0.8849,
-     "contribution": 0.569629,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6089
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.461
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4538
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL181",
-   "name": "Diazoxide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pancreatic insulinoma",
-    "hyperinsulinemic hypoglycemia",
-    "hyperinsulinism",
-    "Hypertension"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Potassium channel, inwardly rectifying, subfamily J, member 8 opener",
-    "Potassium channel, inwardly rectifying, subfamily J, member 11 opener"
-   ],
-   "rank": 31,
-   "score": 0.1516,
-   "rawScore": 0.565664,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.8662,
-     "contribution": 0.422609,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5761
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3032
-      }
-     ],
-     "hops": 3,
-     "via": "KCNJ8",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "ABCC8",
-     "geneId": "ENSG00000006071",
-     "geneName": "ATP binding cassette subfamily C member 8",
-     "assoc": 0.8662,
-     "contribution": 0.143055,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5761
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.5471
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3032
-      }
-     ],
-     "hops": 3,
-     "via": "KCNJ11",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL491473",
-   "name": "Cediranib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor",
-    "Platelet-derived growth factor receptor inhibitor",
-    "Stem cell growth factor receptor inhibitor"
-   ],
-   "rank": 32,
-   "score": 0.1514,
-   "rawScore": 0.564972,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.145378,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
+       "score": 0.4743
       }
      ],
      "hops": 2,
@@ -1821,308 +1392,21 @@
      "viaScore": null
     },
     {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.139539,
-     "drugsOnGene": 15,
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.701,
+     "contribution": 0.303288,
+     "drugsOnGene": 8,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDGFRB",
-     "geneId": "ENSG00000113721",
-     "geneName": "platelet derived growth factor receptor beta",
-     "assoc": 0.6639,
-     "contribution": 0.112815,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4545
-      },
-      {
-       "id": "literature",
-       "score": 0.3838
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096979",
-   "name": "Benserazide",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "rank": 33,
-   "score": 0.151,
-   "rawScore": 0.563423,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.8895,
-     "contribution": 0.563423,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7613
-      },
-      {
-       "id": "literature",
-       "score": 0.537
+       "score": 0.701
       }
      ],
      "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298189",
-   "name": "Eladocagene Exuparvovec",
-   "drugType": "Gene",
-   "approvedFor": [
-    "inborn disorder of amino acid metabolism"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "DDC exogenous gene"
-   ],
-   "rank": 34,
-   "score": 0.151,
-   "rawScore": 0.563423,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.8895,
-     "contribution": 0.563423,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7613
-      },
-      {
-       "id": "literature",
-       "score": 0.537
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "rank": 35,
-   "score": 0.151,
-   "rawScore": 0.563423,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.8895,
-     "contribution": 0.563423,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7613
-      },
-      {
-       "id": "literature",
-       "score": 0.537
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL477772",
-   "name": "Pazopanib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor",
-    "Macrophage colony stimulating factor receptor inhibitor"
-   ],
-   "rank": 36,
-   "score": 0.1501,
-   "rawScore": 0.560139,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.118511,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.113752,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CSF1R",
-     "geneId": "ENSG00000182578",
-     "geneName": "colony stimulating factor 1 receptor",
-     "assoc": 0.4355,
-     "contribution": 0.099578,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4355
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4303201",
-   "name": "Catequentinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Platelet-derived growth factor receptor beta inhibitor",
-    "Stem cell growth factor receptor inhibitor",
-    "Vascular endothelial growth factor receptor 2 inhibitor"
-   ],
-   "rank": 38,
-   "score": 0.145,
-   "rawScore": 0.541461,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.170976,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.164109,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDGFRB",
-     "geneId": "ENSG00000113721",
-     "geneName": "platelet derived growth factor receptor beta",
-     "assoc": 0.6639,
-     "contribution": 0.132679,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4545
-      },
-      {
-       "id": "literature",
-       "score": 0.3838
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "via": "EDNRA",
+     "viaScore": 0.994
     }
    ]
   },
@@ -2140,9 +1424,29 @@
    "mechanisms": [
     "Bcr/Abl fusion protein inhibitor"
    ],
-   "rank": 39,
-   "score": 0.1447,
-   "rawScore": 0.540427,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.1666,
+   "rawScore": 0.620889,
    "geneCount": 2,
    "paths": [
     {
@@ -2219,9 +1523,12 @@
     "Bcr/Abl fusion protein inhibitor",
     "Tyrosine-protein kinase ABL inhibitor"
    ],
-   "rank": 41,
-   "score": 0.1447,
-   "rawScore": 0.540427,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1666,
+   "rawScore": 0.620889,
    "geneCount": 2,
    "paths": [
     {
@@ -2286,6 +1593,855 @@
    ]
   },
   {
+   "id": "CHEMBL1754",
+   "name": "Doxapram",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "respiratory system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Potassium channel subfamily K member 3 blocker",
+    "Potassium channel subfamily K member 9 blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.1618,
+   "rawScore": 0.60325,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "KCNK3",
+     "geneId": "ENSG00000171303",
+     "geneName": "potassium two pore domain channel subfamily K member 3",
+     "assoc": 0.9967,
+     "contribution": 0.368876,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9041
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8763
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KCNK3",
+     "geneId": "ENSG00000171303",
+     "geneName": "potassium two pore domain channel subfamily K member 3",
+     "assoc": 0.9967,
+     "contribution": 0.234374,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9041
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8763
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7196
+      }
+     ],
+     "hops": 3,
+     "via": "KCNK9",
+     "viaScore": 0.986
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL535",
+   "name": "Sunitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "neuroendocrine neoplasm",
+    "neoplasm",
+    "gastrointestinal stromal tumor"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Macrophage colony stimulating factor receptor inhibitor",
+    "Stem cell growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor 1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 29,
+   "score": 0.1567,
+   "rawScore": 0.58425,
+   "geneCount": 9,
+   "paths": [
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.123613,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.118648,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CSF1R",
+     "geneId": "ENSG00000182578",
+     "geneName": "colony stimulating factor 1 receptor",
+     "assoc": 0.4355,
+     "contribution": 0.103864,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4355
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "basal cell carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.1528,
+   "rawScore": 0.569629,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SHH",
+     "geneId": "ENSG00000164690",
+     "geneName": "sonic hedgehog signaling molecule",
+     "assoc": 0.8849,
+     "contribution": 0.569629,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6089
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.461
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4538
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.1528,
+   "rawScore": 0.569629,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SHH",
+     "geneId": "ENSG00000164690",
+     "geneName": "sonic hedgehog signaling molecule",
+     "assoc": 0.8849,
+     "contribution": 0.569629,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6089
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.461
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4538
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2043437",
+   "name": "Glasdegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "juvenile myelomonocytic leukemia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Smoothened homolog antagonist",
+    "Smoothened homolog antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 32,
+   "score": 0.1528,
+   "rawScore": 0.569629,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SHH",
+     "geneId": "ENSG00000164690",
+     "geneName": "sonic hedgehog signaling molecule",
+     "assoc": 0.8849,
+     "contribution": 0.569629,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6089
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.461
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4538
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL181",
+   "name": "Diazoxide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pancreatic insulinoma",
+    "hyperinsulinemic hypoglycemia",
+    "hyperinsulinism",
+    "Hypertension"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Potassium channel, inwardly rectifying, subfamily J, member 8 opener",
+    "Potassium channel, inwardly rectifying, subfamily J, member 11 opener"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.1517,
+   "rawScore": 0.565664,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.8662,
+     "contribution": 0.422609,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5761
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3032
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ8",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ABCC8",
+     "geneId": "ENSG00000006071",
+     "geneName": "ATP binding cassette subfamily C member 8",
+     "assoc": 0.8662,
+     "contribution": 0.143055,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5761
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.5471
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3032
+      }
+     ],
+     "hops": 3,
+     "via": "KCNJ11",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL491473",
+   "name": "Cediranib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vascular endothelial growth factor receptor inhibitor",
+    "Platelet-derived growth factor receptor inhibitor",
+    "Stem cell growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.1515,
+   "rawScore": 0.564972,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.145378,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.139539,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRB",
+     "geneId": "ENSG00000113721",
+     "geneName": "platelet derived growth factor receptor beta",
+     "assoc": 0.6639,
+     "contribution": 0.112815,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4545
+      },
+      {
+       "id": "literature",
+       "score": 0.3838
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298189",
+   "name": "Eladocagene Exuparvovec",
+   "drugType": "Gene",
+   "approvedFor": [
+    "inborn disorder of amino acid metabolism"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "DDC exogenous gene"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.1511,
+   "rawScore": 0.563423,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.8895,
+     "contribution": 0.563423,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7613
+      },
+      {
+       "id": "literature",
+       "score": 0.537
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201236",
+   "name": "Carbidopa Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "DOPA decarboxylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1511,
+   "rawScore": 0.563423,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.8895,
+     "contribution": 0.563423,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7613
+      },
+      {
+       "id": "literature",
+       "score": 0.537
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1096979",
+   "name": "Benserazide",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "DOPA decarboxylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1511,
+   "rawScore": 0.563423,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.8895,
+     "contribution": 0.563423,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7613
+      },
+      {
+       "id": "literature",
+       "score": 0.537
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL576982",
+   "name": "Quizartinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "acute myeloid leukemia by FAB classification"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Macrophage colony stimulating factor receptor inhibitor",
+    "Platelet-derived growth factor receptor inhibitor",
+    "Stem cell growth factor receptor inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.1452,
+   "rawScore": 0.541746,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.139539,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CSF1R",
+     "geneId": "ENSG00000182578",
+     "geneName": "colony stimulating factor 1 receptor",
+     "assoc": 0.4355,
+     "contribution": 0.122152,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4355
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRB",
+     "geneId": "ENSG00000113721",
+     "geneName": "platelet derived growth factor receptor beta",
+     "assoc": 0.6639,
+     "contribution": 0.112815,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4545
+      },
+      {
+       "id": "literature",
+       "score": 0.3838
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4303201",
+   "name": "Catequentinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Platelet-derived growth factor receptor beta inhibitor",
+    "Stem cell growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.1451,
+   "rawScore": 0.541461,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.170976,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.164109,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRB",
+     "geneId": "ENSG00000113721",
+     "geneName": "platelet derived growth factor receptor beta",
+     "assoc": 0.6639,
+     "contribution": 0.132679,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4545
+      },
+      {
+       "id": "literature",
+       "score": 0.3838
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL477772",
+   "name": "Pazopanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Macrophage colony stimulating factor receptor inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 41,
+   "score": 0.1445,
+   "rawScore": 0.539186,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.114078,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.109496,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CSF1R",
+     "geneId": "ENSG00000182578",
+     "geneName": "colony stimulating factor 1 receptor",
+     "assoc": 0.4355,
+     "contribution": 0.095853,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4355
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297508",
    "name": "Dorzagliatin",
    "drugType": "Small molecule",
@@ -2296,8 +2452,11 @@
    "mechanisms": [
     "Hexokinase type IV activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 42,
-   "score": 0.1419,
+   "score": 0.142,
    "rawScore": 0.529726,
    "geneCount": 1,
    "paths": [
@@ -2329,88 +2488,6 @@
    ]
   },
   {
-   "id": "CHEMBL1946170",
-   "name": "Regorafenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "metastatic colorectal cancer",
-    "neoplasm",
-    "colorectal cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Discoidin domain-containing receptor 2 inhibitor",
-    "Ephrin type-A receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
-   ],
-   "rank": 43,
-   "score": 0.137,
-   "rawScore": 0.511699,
-   "geneCount": 13,
-   "paths": [
-    {
-     "gene": "KDR",
-     "geneId": "ENSG00000128052",
-     "geneName": "kinase insert domain receptor",
-     "assoc": 0.9246,
-     "contribution": 0.106704,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8076
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8441,
-     "contribution": 0.102419,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8441
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ABL1",
-     "geneId": "ENSG00000097007",
-     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
-     "assoc": 0.6518,
-     "contribution": 0.097021,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5049
-      },
-      {
-       "id": "literature",
-       "score": 0.2967
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1289494",
    "name": "Tivozanib",
    "drugType": "Small molecule",
@@ -2424,8 +2501,11 @@
     "Vascular endothelial growth factor receptor inhibitor",
     "Stem cell growth factor receptor inhibitor"
    ],
-   "rank": 44,
-   "score": 0.1325,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.1326,
    "rawScore": 0.495225,
    "geneCount": 5,
    "paths": [
@@ -2503,8 +2583,11 @@
     "Stem cell growth factor receptor inhibitor",
     "Fibroblast growth factor receptor 3 inhibitor"
    ],
-   "rank": 45,
-   "score": 0.1321,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.1322,
    "rawScore": 0.493476,
    "geneCount": 4,
    "paths": [
@@ -2584,8 +2667,11 @@
     "PI3-kinase p110-alpha subunit inhibitor",
     "PI3-kinase p110-delta subunit inhibitor"
    ],
-   "rank": 46,
-   "score": 0.1307,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 45,
+   "score": 0.1308,
    "rawScore": 0.488293,
    "geneCount": 2,
    "paths": [
@@ -2630,6 +2716,96 @@
    ]
   },
   {
+   "id": "CHEMBL1946170",
+   "name": "Regorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "colorectal neoplasm",
+    "metastatic colorectal cancer",
+    "neoplasm",
+    "colorectal cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Discoidin domain-containing receptor 2 inhibitor",
+    "Ephrin type-A receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 46,
+   "score": 0.1292,
+   "rawScore": 0.482656,
+   "geneCount": 18,
+   "paths": [
+    {
+     "gene": "KDR",
+     "geneId": "ENSG00000128052",
+     "geneName": "kinase insert domain receptor",
+     "assoc": 0.9246,
+     "contribution": 0.093681,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8076
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8441,
+     "contribution": 0.089918,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ABL1",
+     "geneId": "ENSG00000097007",
+     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+     "assoc": 0.6518,
+     "contribution": 0.08518,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5049
+      },
+      {
+       "id": "literature",
+       "score": 0.2967
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4594350",
    "name": "Adagrasib",
    "drugType": "Small molecule",
@@ -2641,8 +2817,11 @@
    "mechanisms": [
     "GTPase KRas inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 47,
-   "score": 0.1266,
+   "score": 0.1267,
    "rawScore": 0.473172,
    "geneCount": 1,
    "paths": [
@@ -2677,8 +2856,11 @@
    "mechanisms": [
     "GTPase KRas inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 48,
-   "score": 0.1266,
+   "score": 0.1267,
    "rawScore": 0.473172,
    "geneCount": 1,
    "paths": [
@@ -2713,8 +2895,20 @@
     "Endothelin receptor ET-A antagonist",
     "Type-1 angiotensin II receptor antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 49,
-   "score": 0.1263,
+   "score": 0.1264,
    "rawScore": 0.472146,
    "geneCount": 2,
    "paths": [
@@ -2761,6 +2955,93 @@
  ],
  "knownRanked": [
   {
+   "id": "CHEMBL282724",
+   "name": "Sitaxentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary arterial hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist",
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.2804,
+   "rawScore": 1.041868,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.7345,
+     "contribution": 0.290658,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.495
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4743
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.701,
+     "contribution": 0.279064,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.701
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.7345,
+     "contribution": 0.242297,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.495
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4743
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL957",
    "name": "Bosentan",
    "drugType": "Small molecule",
@@ -2774,8 +3055,20 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 5,
-   "score": 0.2803,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 6,
+   "score": 0.2804,
    "rawScore": 1.041868,
    "geneCount": 2,
    "paths": [
@@ -2854,87 +3147,16 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 6,
-   "score": 0.2803,
-   "rawScore": 1.041868,
-   "geneCount": 2,
-   "paths": [
+   "warnings": [
     {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.7345,
-     "contribution": 0.290658,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.495
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4743
-      }
-     ],
-     "hops": 3,
-     "via": "EDNRB",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EDNRB",
-     "geneId": "ENSG00000136160",
-     "geneName": "endothelin receptor type B",
-     "assoc": 0.701,
-     "contribution": 0.279064,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.701
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.7345,
-     "contribution": 0.242297,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.495
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4743
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL282724",
-   "name": "Sitaxentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "hypertensive disorder"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist",
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "rank": 8,
-   "score": 0.2803,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 7,
+   "score": 0.2804,
    "rawScore": 1.041868,
    "geneCount": 2,
    "paths": [
@@ -3012,8 +3234,16 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 9,
-   "score": 0.2803,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.2804,
    "rawScore": 1.041868,
    "geneCount": 2,
    "paths": [
@@ -3090,8 +3320,11 @@
    "mechanisms": [
     "Phenylalanine-4-hydroxylase activator"
    ],
-   "rank": 12,
-   "score": 0.2391,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.2392,
    "rawScore": 0.889466,
    "geneCount": 1,
    "paths": [
@@ -3134,9 +3367,12 @@
     "Stem cell growth factor receptor inhibitor",
     "Platelet-derived growth factor receptor beta inhibitor"
    ],
-   "rank": 17,
-   "score": 0.2095,
-   "rawScore": 0.780052,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.2261,
+   "rawScore": 0.841031,
    "geneCount": 4,
    "paths": [
     {
@@ -3213,8 +3449,11 @@
    "mechanisms": [
     "Inhibin beta A chain inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 22,
-   "score": 0.1706,
+   "score": 0.1707,
    "rawScore": 0.636002,
    "geneCount": 1,
    "paths": [
@@ -3238,6 +3477,97 @@
    ]
   },
   {
+   "id": "CHEMBL255863",
+   "name": "Nilotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "chronic myelogenous leukemia, BCR-ABL1 positive"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Tyrosine-protein kinase ABL inhibitor",
+    "Bcr/Abl fusion protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 25,
+   "score": 0.1666,
+   "rawScore": 0.620889,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ABL1",
+     "geneId": "ENSG00000097007",
+     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+     "assoc": 0.6518,
+     "contribution": 0.240286,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5049
+      },
+      {
+       "id": "literature",
+       "score": 0.2967
+      }
+     ],
+     "hops": 3,
+     "via": "BCR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "ABL1",
+     "geneId": "ENSG00000097007",
+     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
+     "assoc": 0.6518,
+     "contribution": 0.205131,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5049
+      },
+      {
+       "id": "literature",
+       "score": 0.2967
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BCR",
+     "geneId": "ENSG00000186716",
+     "geneName": "BCR activator of RhoGEF and GTPase",
+     "assoc": 0.2567,
+     "contribution": 0.09501,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2567
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL256147",
    "name": "Tilarginine",
    "drugType": "Small molecule",
@@ -3247,8 +3577,11 @@
     "Nitric oxide synthase inhibitor",
     "Nitric oxide synthase inhibitor"
    ],
-   "rank": 37,
-   "score": 0.149,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.1491,
    "rawScore": 0.556091,
    "geneCount": 3,
    "paths": [
@@ -3322,85 +3655,6 @@
    ]
   },
   {
-   "id": "CHEMBL255863",
-   "name": "Nilotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "chronic myelogenous leukemia, BCR-ABL1 positive"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Tyrosine-protein kinase ABL inhibitor",
-    "Bcr/Abl fusion protein inhibitor"
-   ],
-   "rank": 40,
-   "score": 0.1447,
-   "rawScore": 0.540427,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ABL1",
-     "geneId": "ENSG00000097007",
-     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
-     "assoc": 0.6518,
-     "contribution": 0.240286,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5049
-      },
-      {
-       "id": "literature",
-       "score": 0.2967
-      }
-     ],
-     "hops": 3,
-     "via": "BCR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "ABL1",
-     "geneId": "ENSG00000097007",
-     "geneName": "ABL proto-oncogene 1, non-receptor tyrosine kinase",
-     "assoc": 0.6518,
-     "contribution": 0.205131,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5049
-      },
-      {
-       "id": "literature",
-       "score": 0.2967
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "BCR",
-     "geneId": "ENSG00000186716",
-     "geneName": "BCR activator of RhoGEF and GTPase",
-     "assoc": 0.2567,
-     "contribution": 0.09501,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2567
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1336",
    "name": "Sorafenib",
    "drugType": "Small molecule",
@@ -3415,17 +3669,20 @@
     "Platelet-derived growth factor receptor beta inhibitor",
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 53,
-   "score": 0.1096,
-   "rawScore": 0.41035,
-   "geneCount": 8,
+   "score": 0.1046,
+   "rawScore": 0.391466,
+   "geneCount": 9,
    "paths": [
     {
      "gene": "KDR",
      "geneId": "ENSG00000128052",
      "geneName": "kinase insert domain receptor",
      "assoc": 0.9246,
-     "contribution": 0.129576,
+     "contribution": 0.123613,
      "drugsOnGene": 17,
      "evidence": [
       {
@@ -3446,7 +3703,7 @@
      "geneId": "ENSG00000157404",
      "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
      "assoc": 0.8441,
-     "contribution": 0.124372,
+     "contribution": 0.118648,
      "drugsOnGene": 15,
      "evidence": [
       {
@@ -3463,7 +3720,7 @@
      "geneId": "ENSG00000113721",
      "geneName": "platelet derived growth factor receptor beta",
      "assoc": 0.6639,
-     "contribution": 0.100552,
+     "contribution": 0.095925,
      "drugsOnGene": 14,
      "evidence": [
       {

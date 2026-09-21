@@ -9,7 +9,7 @@
  "knownDrugCount": 5,
  "candidatesConsidered": 76,
  "pathsTwoHop": 12,
- "pathsThreeHop": 79,
+ "pathsThreeHop": 80,
  "candidates": [
   {
    "id": "CHEMBL256087",
@@ -26,6 +26,9 @@
     "Transient receptor potential cation channel subfamily M member 8 opener",
     "Transient receptor potential cation channel subfamily A member 1 opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 0.826074,
@@ -76,6 +79,78 @@
    ]
   },
   {
+   "id": "CHEMBL127516",
+   "name": "Butamben",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Transient receptor potential cation channel subfamily A member 1 inhibitor",
+    "Transient receptor potential cation channel subfamily V member 4 inhibitor",
+    "Transient receptor potential cation channel subfamily A member 1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "psychiatric toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 2,
+   "score": 0.9675,
+   "rawScore": 0.801163,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "AQP5",
+     "geneId": "ENSG00000161798",
+     "geneName": "aquaporin 5",
+     "assoc": 0.6751,
+     "contribution": 0.445633,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6751
+      }
+     ],
+     "hops": 3,
+     "via": "TRPV4",
+     "viaScore": 0.871
+    },
+    {
+     "gene": "TRPV1",
+     "geneId": "ENSG00000196689",
+     "geneName": "transient receptor potential cation channel subfamily V member 1",
+     "assoc": 0.8242,
+     "contribution": 0.35553,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7569
+      },
+      {
+       "id": "literature",
+       "score": 0.277
+      }
+     ],
+     "hops": 3,
+     "via": "TRPA1",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4594333",
    "name": "Elivaldogene Autotemcel",
    "drugType": "Gene",
@@ -86,7 +161,15 @@
    "mechanisms": [
     "ABCD1 exogenous gene"
    ],
-   "rank": 2,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 3,
    "score": 0.7839,
    "rawScore": 0.6604,
    "geneCount": 1,
@@ -123,7 +206,15 @@
    "mechanisms": [
     "C-C chemokine receptor type 5 antagonist"
    ],
-   "rank": 3,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
    "score": 0.7002,
    "rawScore": 0.596271,
    "geneCount": 1,
@@ -148,150 +239,6 @@
    ]
   },
   {
-   "id": "CHEMBL932",
-   "name": "Dipyridamole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "stroke disorder",
-    "Recurrent thrombophlebitis",
-    "coronary artery disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "3',5'-cyclic phosphodiesterase inhibitor",
-    "Equilibrative nucleoside transporter 1 inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.6934,
-   "rawScore": 0.591091,
-   "geneCount": 18,
-   "paths": [
-    {
-     "gene": "PDE6B",
-     "geneId": "ENSG00000133256",
-     "geneName": "phosphodiesterase 6B",
-     "assoc": 0.7328,
-     "contribution": 0.174769,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7328
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRPH2",
-     "geneId": "ENSG00000112619",
-     "geneName": "peripherin 2",
-     "assoc": 0.6673,
-     "contribution": 0.154203,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6673
-      }
-     ],
-     "hops": 3,
-     "via": "PDE6B",
-     "viaScore": 0.969
-    },
-    {
-     "gene": "PDE6B",
-     "geneId": "ENSG00000133256",
-     "geneName": "phosphodiesterase 6B",
-     "assoc": 0.7328,
-     "contribution": 0.132053,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7328
-      }
-     ],
-     "hops": 3,
-     "via": "PDE6G",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL628",
-   "name": "Pentoxifylline",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "intermittent vascular claudication"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Adenosine A2 receptor antagonist",
-    "3',5'-cyclic phosphodiesterase inhibitor"
-   ],
-   "rank": 5,
-   "score": 0.6769,
-   "rawScore": 0.578444,
-   "geneCount": 19,
-   "paths": [
-    {
-     "gene": "PDE6B",
-     "geneId": "ENSG00000133256",
-     "geneName": "phosphodiesterase 6B",
-     "assoc": 0.7328,
-     "contribution": 0.17103,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7328
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRPH2",
-     "geneId": "ENSG00000112619",
-     "geneName": "peripherin 2",
-     "assoc": 0.6673,
-     "contribution": 0.150904,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6673
-      }
-     ],
-     "hops": 3,
-     "via": "PDE6B",
-     "viaScore": 0.969
-    },
-    {
-     "gene": "PDE6B",
-     "geneId": "ENSG00000133256",
-     "geneName": "phosphodiesterase 6B",
-     "assoc": 0.7328,
-     "contribution": 0.129228,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7328
-      }
-     ],
-     "hops": 3,
-     "via": "PDE6G",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4279047",
    "name": "Vorasidenib",
    "drugType": "Small molecule",
@@ -306,7 +253,10 @@
     "IDH1/IDH2 inhibitor",
     "Isocitrate dehydrogenase [NADP], mitochondrial inhibitor"
    ],
-   "rank": 6,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
    "score": 0.658,
    "rawScore": 0.56389,
    "geneCount": 2,
@@ -359,7 +309,10 @@
    "mechanisms": [
     "Vanilloid receptor agonist"
    ],
-   "rank": 7,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
    "score": 0.6152,
    "rawScore": 0.531117,
    "geneCount": 1,
@@ -401,7 +354,10 @@
    "mechanisms": [
     "Vanilloid receptor opener"
    ],
-   "rank": 8,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
    "score": 0.6152,
    "rawScore": 0.531117,
    "geneCount": 1,
@@ -430,39 +386,152 @@
    ]
   },
   {
-   "id": "CHEMBL2325741",
-   "name": "Capivasertib",
+   "id": "CHEMBL932",
+   "name": "Dipyridamole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer"
+    "stroke disorder",
+    "Recurrent thrombophlebitis",
+    "coronary artery disorder",
+    "Hypertension"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
-    "Serine/threonine-protein kinase AKT inhibitor"
+    "3',5'-cyclic phosphodiesterase inhibitor",
+    "Equilibrative nucleoside transporter 1 inhibitor"
    ],
-   "rank": 9,
-   "score": 0.5049,
-   "rawScore": 0.446544,
-   "geneCount": 2,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.6096,
+   "rawScore": 0.52684,
+   "geneCount": 24,
    "paths": [
     {
-     "gene": "PXDN",
-     "geneId": "ENSG00000130508",
-     "geneName": "peroxidasin",
-     "assoc": 0.6726,
-     "contribution": 0.446544,
-     "drugsOnGene": 1,
+     "gene": "PDE6B",
+     "geneId": "ENSG00000133256",
+     "geneName": "phosphodiesterase 6B",
+     "assoc": 0.7328,
+     "contribution": 0.155772,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6726
+       "score": 0.7328
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PRPH2",
+     "geneId": "ENSG00000112619",
+     "geneName": "peripherin 2",
+     "assoc": 0.6673,
+     "contribution": 0.137441,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6673
       }
      ],
      "hops": 3,
-     "via": "AKT1",
-     "viaScore": 0.876
+     "via": "PDE6B",
+     "viaScore": 0.969
+    },
+    {
+     "gene": "PDE6B",
+     "geneId": "ENSG00000133256",
+     "geneName": "phosphodiesterase 6B",
+     "assoc": 0.7328,
+     "contribution": 0.117699,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7328
+      }
+     ],
+     "hops": 3,
+     "via": "PDE6G",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL628",
+   "name": "Pentoxifylline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "intermittent vascular claudication"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Adenosine A2 receptor antagonist",
+    "3',5'-cyclic phosphodiesterase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.5985,
+   "rawScore": 0.518307,
+   "geneCount": 25,
+   "paths": [
+    {
+     "gene": "PDE6B",
+     "geneId": "ENSG00000133256",
+     "geneName": "phosphodiesterase 6B",
+     "assoc": 0.7328,
+     "contribution": 0.153249,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7328
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PRPH2",
+     "geneId": "ENSG00000112619",
+     "geneName": "peripherin 2",
+     "assoc": 0.6673,
+     "contribution": 0.135215,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6673
+      }
+     ],
+     "hops": 3,
+     "via": "PDE6B",
+     "viaScore": 0.969
+    },
+    {
+     "gene": "PDE6B",
+     "geneId": "ENSG00000133256",
+     "geneName": "phosphodiesterase 6B",
+     "assoc": 0.7328,
+     "contribution": 0.115793,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7328
+      }
+     ],
+     "hops": 3,
+     "via": "PDE6G",
+     "viaScore": 0.997
     }
    ]
   },
@@ -481,6 +550,14 @@
     "Glucagon-like peptide 1 receptor agonist",
     "Gastric inhibitory polypeptide receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.4834,
    "rawScore": 0.430057,
@@ -531,6 +608,14 @@
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP], mitochondrial inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.4494,
    "rawScore": 0.403994,
@@ -556,41 +641,42 @@
    ]
   },
   {
-   "id": "CHEMBL127516",
-   "name": "Butamben",
+   "id": "CHEMBL2325741",
+   "name": "Capivasertib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Transient receptor potential cation channel subfamily A member 1 inhibitor",
-    "Transient receptor potential cation channel subfamily V member 4 inhibitor",
-    "Transient receptor potential cation channel subfamily A member 1 inhibitor"
+   "approvedFor": [
+    "neoplasm",
+    "breast neoplasm",
+    "breast cancer"
    ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Serine/threonine-protein kinase AKT inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 12,
-   "score": 0.3861,
-   "rawScore": 0.35553,
-   "geneCount": 2,
+   "score": 0.4176,
+   "rawScore": 0.379689,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "TRPV1",
-     "geneId": "ENSG00000196689",
-     "geneName": "transient receptor potential cation channel subfamily V member 1",
-     "assoc": 0.8242,
-     "contribution": 0.35553,
-     "drugsOnGene": 2,
+     "gene": "PXDN",
+     "geneId": "ENSG00000130508",
+     "geneName": "peroxidasin",
+     "assoc": 0.6726,
+     "contribution": 0.379689,
+     "drugsOnGene": 1,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.7569
-      },
-      {
-       "id": "literature",
-       "score": 0.277
+       "id": "animal_model",
+       "score": 0.6726
       }
      ],
      "hops": 3,
-     "via": "TRPA1",
-     "viaScore": 0.991
+     "via": "AKT1",
+     "viaScore": 0.876
     }
    ]
   },
@@ -606,6 +692,18 @@
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 13,
    "score": 0.3659,
    "rawScore": 0.340064,
@@ -643,6 +741,14 @@
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 14,
    "score": 0.3659,
    "rawScore": 0.340064,
@@ -683,6 +789,26 @@
     "Anandamide amidohydrolase inhibitor",
     "Vanilloid receptor opener"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 15,
    "score": 0.3203,
    "rawScore": 0.305046,
@@ -722,6 +848,9 @@
    "mechanisms": [
     "Growth hormone receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 16,
    "score": 0.3035,
    "rawScore": 0.292204,
@@ -747,17 +876,18 @@
    ]
   },
   {
-   "id": "CHEMBL3707290",
-   "name": "Somapacitan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pituitary dwarfism"
-   ],
-   "indicationCount": 1,
+   "id": "CHEMBL1201620",
+   "name": "Somatrem",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Growth hormone receptor agonist"
    ],
-   "rank": 18,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.3035,
    "rawScore": 0.292204,
    "geneCount": 1,
@@ -792,7 +922,10 @@
    "mechanisms": [
     "Growth hormone receptor agonist"
    ],
-   "rank": 19,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
    "score": 0.3035,
    "rawScore": 0.292204,
    "geneCount": 1,
@@ -817,14 +950,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201620",
-   "name": "Somatrem",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL3707290",
+   "name": "Somapacitan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pituitary dwarfism"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Growth hormone receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 20,
    "score": 0.3035,
    "rawScore": 0.292204,
@@ -861,6 +999,9 @@
    "mechanisms": [
     "Growth hormone receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 21,
    "score": 0.3035,
    "rawScore": 0.292204,
@@ -886,19 +1027,22 @@
    ]
   },
   {
-   "id": "CHEMBL2146883",
-   "name": "Cobimetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neurofibromatosis type 1",
     "neoplasm",
-    "melanoma"
+    "plexiform neurofibroma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 22,
    "score": 0.2929,
    "rawScore": 0.28409,
@@ -924,19 +1068,22 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
+   "id": "CHEMBL2146883",
+   "name": "Cobimetinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neurofibromatosis type 1",
     "neoplasm",
-    "plexiform neurofibroma"
+    "melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
    "score": 0.2929,
    "rawScore": 0.28409,
@@ -975,45 +1122,10 @@
     "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
-   "score": 0.2929,
-   "rawScore": 0.28409,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.7215,
-     "contribution": 0.28409,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7215
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "neurofibromatosis type 1",
-    "plexiform neurofibroma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
-   ],
-   "rank": 25,
    "score": 0.2929,
    "rawScore": 0.28409,
    "geneCount": 2,
@@ -1053,6 +1165,50 @@
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.2929,
+   "rawScore": 0.28409,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.7215,
+     "contribution": 0.28409,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7215
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "neurofibromatosis type 1",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 26,
    "score": 0.2929,
    "rawScore": 0.28409,
@@ -1078,19 +1234,19 @@
    ]
   },
   {
-   "id": "CHEMBL1422",
-   "name": "Sitagliptin",
+   "id": "CHEMBL1779710",
+   "name": "Evogliptin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor",
-    "Dipeptidyl peptidase IV inhibitor",
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 27,
    "score": 0.2644,
    "rawScore": 0.262246,
@@ -1116,16 +1272,19 @@
    ]
   },
   {
-   "id": "CHEMBL2147777",
-   "name": "Teneligliptin",
+   "id": "CHEMBL1929396",
+   "name": "Anagliptin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus"
+    "type 2 diabetes mellitus"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 28,
    "score": 0.2644,
    "rawScore": 0.262246,
@@ -1161,78 +1320,10 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 29,
-   "score": 0.2644,
-   "rawScore": 0.262246,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE2",
-     "geneId": "ENSG00000130234",
-     "geneName": "angiotensin converting enzyme 2",
-     "assoc": 0.685,
-     "contribution": 0.262246,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.685
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1929396",
-   "name": "Anagliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "rank": 30,
-   "score": 0.2644,
-   "rawScore": 0.262246,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE2",
-     "geneId": "ENSG00000130234",
-     "geneName": "angiotensin converting enzyme 2",
-     "assoc": 0.685,
-     "contribution": 0.262246,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.685
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL376359",
-   "name": "Alogliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus",
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "rank": 31,
    "score": 0.2644,
    "rawScore": 0.262246,
    "geneCount": 1,
@@ -1268,6 +1359,84 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.2644,
+   "rawScore": 0.262246,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE2",
+     "geneId": "ENSG00000130234",
+     "geneName": "angiotensin converting enzyme 2",
+     "assoc": 0.685,
+     "contribution": 0.262246,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.685
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1650443",
+   "name": "Trelagliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.2644,
+   "rawScore": 0.262246,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE2",
+     "geneId": "ENSG00000130234",
+     "geneName": "angiotensin converting enzyme 2",
+     "assoc": 0.685,
+     "contribution": 0.262246,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.685
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL376359",
+   "name": "Alogliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus",
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 32,
    "score": 0.2644,
    "rawScore": 0.262246,
@@ -1303,7 +1472,87 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 33,
+   "score": 0.2644,
+   "rawScore": 0.262246,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE2",
+     "geneId": "ENSG00000130234",
+     "geneName": "angiotensin converting enzyme 2",
+     "assoc": 0.685,
+     "contribution": 0.262246,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.685
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1422",
+   "name": "Sitagliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor",
+    "Dipeptidyl peptidase IV inhibitor",
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.2644,
+   "rawScore": 0.262246,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACE2",
+     "geneId": "ENSG00000130234",
+     "geneName": "angiotensin converting enzyme 2",
+     "assoc": 0.685,
+     "contribution": 0.262246,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.685
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL385517",
+   "name": "Saxagliptin Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
    "score": 0.2644,
    "rawScore": 0.262246,
    "geneCount": 1,
@@ -1339,74 +1588,9 @@
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
-   "rank": 34,
-   "score": 0.2644,
-   "rawScore": 0.262246,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE2",
-     "geneId": "ENSG00000130234",
-     "geneName": "angiotensin converting enzyme 2",
-     "assoc": 0.685,
-     "contribution": 0.262246,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.685
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1650443",
-   "name": "Trelagliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "rank": 35,
-   "score": 0.2644,
-   "rawScore": 0.262246,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACE2",
-     "geneId": "ENSG00000130234",
-     "geneName": "angiotensin converting enzyme 2",
-     "assoc": 0.685,
-     "contribution": 0.262246,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.685
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1779710",
-   "name": "Evogliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 36,
    "score": 0.2644,
    "rawScore": 0.262246,
@@ -1432,14 +1616,19 @@
    ]
   },
   {
-   "id": "CHEMBL385517",
-   "name": "Saxagliptin Anhydrous",
+   "id": "CHEMBL2147777",
+   "name": "Teneligliptin",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 37,
    "score": 0.2644,
    "rawScore": 0.262246,
@@ -1478,17 +1667,20 @@
    "mechanisms": [
     "Collagen hydrolytic enzyme"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 38,
-   "score": 0.2034,
-   "rawScore": 0.215504,
-   "geneCount": 21,
+   "score": 0.1845,
+   "rawScore": 0.200987,
+   "geneCount": 25,
    "paths": [
     {
      "gene": "COL8A2",
      "geneId": "ENSG00000171812",
      "geneName": "collagen type VIII alpha 2 chain",
      "assoc": 0.7495,
-     "contribution": 0.112082,
+     "contribution": 0.104532,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1505,7 +1697,7 @@
      "geneId": "ENSG00000171812",
      "geneName": "collagen type VIII alpha 2 chain",
      "assoc": 0.7495,
-     "contribution": 0.103422,
+     "contribution": 0.096455,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1534,6 +1726,26 @@
     "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK2 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 39,
    "score": 0.1576,
    "rawScore": 0.180343,
@@ -1573,6 +1785,14 @@
     "Tyrosine-protein kinase JAK2 inhibitor",
     "Tyrosine-protein kinase receptor FLT3 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 40,
    "score": 0.1576,
    "rawScore": 0.180343,
@@ -1598,57 +1818,41 @@
    ]
   },
   {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
+   "id": "CHEMBL2108185",
+   "name": "Corifollitropin Alfa",
    "drugType": "Protein",
    "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
+    "Infertility",
+    "positive regulation of ovulation"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
+    "Follicle stimulating hormone receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 41,
-   "score": 0.1542,
-   "rawScore": 0.177726,
-   "geneCount": 34,
+   "score": 0.153,
+   "rawScore": 0.176802,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "COL8A2",
-     "geneId": "ENSG00000171812",
-     "geneName": "collagen type VIII alpha 2 chain",
-     "assoc": 0.7495,
-     "contribution": 0.092434,
-     "drugsOnGene": 2,
+     "gene": "ADCYAP1",
+     "geneId": "ENSG00000141433",
+     "geneName": "adenylate cyclase activating polypeptide 1",
+     "assoc": 0.7217,
+     "contribution": 0.176802,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.7495
+       "score": 0.7217
       }
      ],
      "hops": 3,
-     "via": "COL4A5",
-     "viaScore": 0.88
-    },
-    {
-     "gene": "COL8A2",
-     "geneId": "ENSG00000171812",
-     "geneName": "collagen type VIII alpha 2 chain",
-     "assoc": 0.7495,
-     "contribution": 0.085292,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7495
-      }
-     ],
-     "hops": 3,
-     "via": "COL5A1",
-     "viaScore": 0.812
+     "via": "FSHR",
+     "viaScore": 0.929
     }
    ]
   }
@@ -1668,7 +1872,10 @@
    "mechanisms": [
     "Growth hormone receptor agonist"
    ],
-   "rank": 17,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
    "score": 0.3035,
    "rawScore": 0.292204,
    "geneCount": 1,

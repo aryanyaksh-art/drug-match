@@ -7,9 +7,9 @@
  "genesScored": 47,
  "genesWithDrugs": 33,
  "knownDrugCount": 422,
- "candidatesConsidered": 404,
+ "candidatesConsidered": 425,
  "pathsTwoHop": 526,
- "pathsThreeHop": 388,
+ "pathsThreeHop": 560,
  "candidates": [
   {
    "id": "CHEMBL3833307",
@@ -23,8 +23,11 @@
    "mechanisms": [
     "IL6Ralpha/GP130 antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.6254,
+   "score": 0.6255,
    "rawScore": 1.481694,
    "geneCount": 2,
    "paths": [
@@ -94,18 +97,24 @@
    ]
   },
   {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
-   "score": 0.5571,
+   "score": 0.5573,
    "rawScore": 1.320365,
    "geneCount": 1,
    "paths": [
@@ -183,21 +192,21 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
-   "rank": 8,
-   "score": 0.5571,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.5573,
    "rawScore": 1.320365,
    "geneCount": 1,
    "paths": [
@@ -288,8 +297,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 14,
-   "score": 0.4977,
+   "score": 0.4978,
    "rawScore": 1.179879,
    "geneCount": 1,
    "paths": [
@@ -372,8 +384,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 15,
-   "score": 0.4977,
+   "score": 0.4978,
    "rawScore": 1.179879,
    "geneCount": 1,
    "paths": [
@@ -454,8 +469,28 @@
    "mechanisms": [
     "Tyrosine-protein kinase JAK1 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 17,
-   "score": 0.4017,
+   "score": 0.4019,
    "rawScore": 0.953148,
    "geneCount": 1,
    "paths": [
@@ -539,69 +574,11 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 18,
-   "score": 0.3706,
-   "rawScore": 0.879779,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.9605,
-     "contribution": 0.55167,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8824
-      },
-      {
-       "id": "literature",
-       "score": 0.6642
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.9956,
-     "contribution": 0.328109,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9693
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8579
-      }
-     ],
-     "hops": 3,
-     "via": "IL6R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108730",
-   "name": "Sarilumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interleukin-6 receptor alpha subunit antagonist"
-   ],
-   "rank": 19,
-   "score": 0.3706,
+   "score": 0.3708,
    "rawScore": 0.879779,
    "geneCount": 1,
    "paths": [
@@ -663,8 +640,20 @@
    "mechanisms": [
     "Interleukin-6 receptor alpha subunit inhibitor"
    ],
-   "rank": 20,
-   "score": 0.3706,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.3708,
    "rawScore": 0.879779,
    "geneCount": 1,
    "paths": [
@@ -713,6 +702,177 @@
    ]
   },
   {
+   "id": "CHEMBL2108730",
+   "name": "Sarilumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interleukin-6 receptor alpha subunit antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.3708,
+   "rawScore": 0.879779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6R",
+     "geneId": "ENSG00000160712",
+     "geneName": "interleukin 6 receptor",
+     "assoc": 0.9605,
+     "contribution": 0.55167,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8824
+      },
+      {
+       "id": "literature",
+       "score": 0.6642
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.9956,
+     "contribution": 0.328109,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9693
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8579
+      }
+     ],
+     "hops": 3,
+     "via": "IL6R",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.3623,
+   "rawScore": 0.859655,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "IL4R",
+     "geneId": "ENSG00000077238",
+     "geneName": "interleukin 4 receptor",
+     "assoc": 0.9873,
+     "contribution": 0.157138,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9378
+      },
+      {
+       "id": "literature",
+       "score": 0.6574
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4027
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL7R",
+     "geneId": "ENSG00000168685",
+     "geneName": "interleukin 7 receptor",
+     "assoc": 0.9743,
+     "contribution": 0.155077,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "literature",
+       "score": 0.3591
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.9956,
+     "contribution": 0.142389,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9693
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8579
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
    "id": "CHEMBL221959",
    "name": "Tofacitinib",
    "drugType": "Small molecule",
@@ -723,8 +883,24 @@
    "mechanisms": [
     "Janus Kinase (JAK) inhibitor"
    ],
-   "rank": 22,
-   "score": 0.3621,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 23,
+   "score": 0.3623,
    "rawScore": 0.859655,
    "geneCount": 4,
    "paths": [
@@ -810,98 +986,11 @@
     "Tyrosine-protein kinase JAK2 inhibitor",
     "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "rank": 24,
-   "score": 0.3621,
-   "rawScore": 0.859655,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "IL4R",
-     "geneId": "ENSG00000077238",
-     "geneName": "interleukin 4 receptor",
-     "assoc": 0.9873,
-     "contribution": 0.157138,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9378
-      },
-      {
-       "id": "literature",
-       "score": 0.6574
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4027
-      }
-     ],
-     "hops": 3,
-     "via": "JAK3",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "IL7R",
-     "geneId": "ENSG00000168685",
-     "geneName": "interleukin 7 receptor",
-     "assoc": 0.9743,
-     "contribution": 0.155077,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9599
-      },
-      {
-       "id": "literature",
-       "score": 0.3591
-      }
-     ],
-     "hops": 3,
-     "via": "JAK3",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.9956,
-     "contribution": 0.142389,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9693
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8579
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
-   "score": 0.3621,
+   "score": 0.3623,
    "rawScore": 0.859655,
    "geneCount": 4,
    "paths": [
@@ -988,8 +1077,11 @@
    "mechanisms": [
     "IL36 receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 26,
-   "score": 0.3489,
+   "score": 0.3491,
    "rawScore": 0.828494,
    "geneCount": 2,
    "paths": [
@@ -1052,8 +1144,28 @@
     "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK2 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 28,
-   "score": 0.304,
+   "score": 0.3042,
    "rawScore": 0.722351,
    "geneCount": 2,
    "paths": [
@@ -1138,8 +1250,16 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 29,
-   "score": 0.2921,
+   "score": 0.2923,
    "rawScore": 0.694248,
    "geneCount": 1,
    "paths": [
@@ -1167,105 +1287,26 @@
    ]
   },
   {
-   "id": "CHEMBL6068330",
-   "name": "Nogapendekin Alfa Inbakicept",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Interleukin-15 receptor agonist"
-   ],
-   "rank": 30,
-   "score": 0.2837,
-   "rawScore": 0.674345,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TSLP",
-     "geneId": "ENSG00000145777",
-     "geneName": "thymic stromal lymphopoietin",
-     "assoc": 0.9966,
-     "contribution": 0.226274,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9717
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8815
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "IL4R",
-     "geneId": "ENSG00000077238",
-     "geneName": "interleukin 4 receptor",
-     "assoc": 0.9873,
-     "contribution": 0.225515,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9378
-      },
-      {
-       "id": "literature",
-       "score": 0.6574
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4027
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL7R",
-     "geneId": "ENSG00000168685",
-     "geneName": "interleukin 7 receptor",
-     "assoc": 0.9743,
-     "contribution": 0.222556,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9599
-      },
-      {
-       "id": "literature",
-       "score": 0.3591
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL477",
-   "name": "Adenosine",
+   "id": "CHEMBL113",
+   "name": "Caffeine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "paroxysmal tachycardia",
-    "Wolff-Parkinson-White syndrome",
-    "Paroxysmal supraventricular tachycardia"
+    "orthostatic hypotension",
+    "Headache",
+    "attention deficit-hyperactivity disorder",
+    "Pain"
    ],
-   "indicationCount": 4,
+   "indicationCount": 7,
    "mechanisms": [
-    "Adenosine receptor agonist"
+    "Adenosine receptor antagonist",
+    "Adenosine receptor antagonist"
    ],
-   "rank": 31,
-   "score": 0.2767,
-   "rawScore": 0.657987,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.2881,
+   "rawScore": 0.684151,
    "geneCount": 4,
    "paths": [
     {
@@ -1334,23 +1375,25 @@
    ]
   },
   {
-   "id": "CHEMBL113",
-   "name": "Caffeine",
+   "id": "CHEMBL477",
+   "name": "Adenosine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "orthostatic hypotension",
-    "Headache",
-    "attention deficit-hyperactivity disorder",
-    "Pain"
+    "cardiovascular disorder",
+    "paroxysmal tachycardia",
+    "Wolff-Parkinson-White syndrome",
+    "Paroxysmal supraventricular tachycardia"
    ],
-   "indicationCount": 7,
+   "indicationCount": 4,
    "mechanisms": [
-    "Adenosine receptor antagonist",
-    "Adenosine receptor antagonist"
+    "Adenosine receptor agonist"
    ],
-   "rank": 32,
-   "score": 0.2767,
-   "rawScore": 0.657987,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.2881,
+   "rawScore": 0.684151,
    "geneCount": 4,
    "paths": [
     {
@@ -1432,8 +1475,11 @@
     "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK1 inhibitor"
    ],
-   "rank": 33,
-   "score": 0.2582,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.2585,
    "rawScore": 0.614203,
    "geneCount": 3,
    "paths": [
@@ -1507,44 +1553,182 @@
    ]
   },
   {
-   "id": "CHEMBL1201670",
-   "name": "Sargramostim",
-   "drugType": "Protein",
+   "id": "CHEMBL1201439",
+   "name": "Basiliximab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "bone marrow transplantation",
-    "autoimmune pulmonary alveolar proteinosis",
-    "acute myeloid leukemia"
+    "kidney transplant",
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
-    "Granulocyte-macrophage colony-stimulating factor receptor agonist"
+    "Interleukin-2 receptor inhibitor"
    ],
-   "rank": 34,
-   "score": 0.2515,
-   "rawScore": 0.598295,
-   "geneCount": 1,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 33,
+   "score": 0.2412,
+   "rawScore": 0.573384,
+   "geneCount": 3,
    "paths": [
     {
-     "gene": "IL5",
-     "geneId": "ENSG00000113525",
-     "geneName": "interleukin 5",
-     "assoc": 0.9313,
-     "contribution": 0.598295,
-     "drugsOnGene": 1,
+     "gene": "TSLP",
+     "geneId": "ENSG00000145777",
+     "geneName": "thymic stromal lymphopoietin",
+     "assoc": 0.9966,
+     "contribution": 0.192397,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.7826
+       "score": 0.9717
       },
       {
        "id": "genetic_association",
-       "score": 0.6838
+       "score": 0.8815
       }
      ],
      "hops": 3,
-     "via": "CSF2RB",
-     "viaScore": 0.997
+     "via": "IL2RG",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "IL4R",
+     "geneId": "ENSG00000077238",
+     "geneName": "interleukin 4 receptor",
+     "assoc": 0.9873,
+     "contribution": 0.191752,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9378
+      },
+      {
+       "id": "literature",
+       "score": 0.6574
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4027
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL7R",
+     "geneId": "ENSG00000168685",
+     "geneName": "interleukin 7 receptor",
+     "assoc": 0.9743,
+     "contribution": 0.189236,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "literature",
+       "score": 0.3591
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL6068330",
+   "name": "Nogapendekin Alfa Inbakicept",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Interleukin-15 receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.2412,
+   "rawScore": 0.573384,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "TSLP",
+     "geneId": "ENSG00000145777",
+     "geneName": "thymic stromal lymphopoietin",
+     "assoc": 0.9966,
+     "contribution": 0.192397,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9717
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8815
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "IL4R",
+     "geneId": "ENSG00000077238",
+     "geneName": "interleukin 4 receptor",
+     "assoc": 0.9873,
+     "contribution": 0.191752,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9378
+      },
+      {
+       "id": "literature",
+       "score": 0.6574
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4027
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL7R",
+     "geneId": "ENSG00000168685",
+     "geneName": "interleukin 7 receptor",
+     "assoc": 0.9743,
+     "contribution": 0.189236,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "literature",
+       "score": 0.3591
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1561,183 +1745,16 @@
    "mechanisms": [
     "Interleukin-2 receptor agonist"
    ],
-   "rank": 35,
-   "score": 0.2409,
-   "rawScore": 0.573384,
-   "geneCount": 3,
-   "paths": [
+   "warnings": [
     {
-     "gene": "TSLP",
-     "geneId": "ENSG00000145777",
-     "geneName": "thymic stromal lymphopoietin",
-     "assoc": 0.9966,
-     "contribution": 0.192397,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9717
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8815
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "IL4R",
-     "geneId": "ENSG00000077238",
-     "geneName": "interleukin 4 receptor",
-     "assoc": 0.9873,
-     "contribution": 0.191752,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9378
-      },
-      {
-       "id": "literature",
-       "score": 0.6574
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4027
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL7R",
-     "geneId": "ENSG00000168685",
-     "geneName": "interleukin 7 receptor",
-     "assoc": 0.9743,
-     "contribution": 0.189236,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9599
-      },
-      {
-       "id": "literature",
-       "score": 0.3591
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1201550",
-   "name": "Denileukin Diftitox",
-   "drugType": "Protein",
-   "approvedFor": [
-    "mature T-cell and NK-cell non-Hodgkin lymphoma",
-    "childhood leukemia",
-    "primary cutaneous T-cell non-Hodgkin lymphoma",
-    "neoplasm"
    ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Interleukin-2 receptor binding agent",
-    "Elongation factor 2 inhibitor"
-   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 36,
-   "score": 0.2409,
-   "rawScore": 0.573384,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "TSLP",
-     "geneId": "ENSG00000145777",
-     "geneName": "thymic stromal lymphopoietin",
-     "assoc": 0.9966,
-     "contribution": 0.192397,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9717
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8815
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "IL4R",
-     "geneId": "ENSG00000077238",
-     "geneName": "interleukin 4 receptor",
-     "assoc": 0.9873,
-     "contribution": 0.191752,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9378
-      },
-      {
-       "id": "literature",
-       "score": 0.6574
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4027
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL7R",
-     "geneId": "ENSG00000168685",
-     "geneName": "interleukin 7 receptor",
-     "assoc": 0.9743,
-     "contribution": 0.189236,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9599
-      },
-      {
-       "id": "literature",
-       "score": 0.3591
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201439",
-   "name": "Basiliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interleukin-2 receptor inhibitor"
-   ],
-   "rank": 37,
-   "score": 0.2409,
+   "score": 0.2412,
    "rawScore": 0.573384,
    "geneCount": 3,
    "paths": [
@@ -1825,8 +1842,16 @@
     "Integrin alpha-4/beta-1 inhibitor",
     "Integrin alpha-4/beta-7 inhibitor"
    ],
-   "rank": 39,
-   "score": 0.2373,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 37,
+   "score": 0.2376,
    "rawScore": 0.564819,
    "geneCount": 3,
    "paths": [
@@ -1864,8 +1889,11 @@
    "mechanisms": [
     "Interferon gamma inhibitor"
    ],
-   "rank": 40,
-   "score": 0.2317,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.232,
    "rawScore": 0.551604,
    "geneCount": 1,
    "paths": [
@@ -1901,160 +1929,98 @@
    ]
   },
   {
-   "id": "CHEMBL3039540",
-   "name": "Aducanumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201550",
+   "name": "Denileukin Diftitox",
+   "drugType": "Protein",
    "approvedFor": [
-    "Alzheimer disease",
-    "dementia"
+    "mature T-cell and NK-cell non-Hodgkin lymphoma",
+    "childhood leukemia",
+    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Amyloid-beta A4 protein binding agent"
+    "Interleukin-2 receptor binding agent",
+    "Elongation factor 2 inhibitor"
    ],
-   "rank": 41,
-   "score": 0.167,
-   "rawScore": 0.398741,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.917,
-     "contribution": 0.398741,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8748
-      },
-      {
-       "id": "literature",
-       "score": 0.3369
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
    ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
-   ],
-   "rank": 42,
-   "score": 0.167,
-   "rawScore": 0.398741,
-   "geneCount": 1,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.2148,
+   "rawScore": 0.511058,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.917,
-     "contribution": 0.398741,
-     "drugsOnGene": 4,
+     "gene": "TSLP",
+     "geneId": "ENSG00000145777",
+     "geneName": "thymic stromal lymphopoietin",
+     "assoc": 0.9966,
+     "contribution": 0.171483,
+     "drugsOnGene": 5,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.8748
+       "id": "literature",
+       "score": 0.9717
       },
       {
-       "id": "literature",
-       "score": 0.3369
+       "id": "genetic_association",
+       "score": 0.8815
       }
      ],
      "hops": 3,
-     "via": "APP",
+     "via": "IL2RG",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "IL4R",
+     "geneId": "ENSG00000077238",
+     "geneName": "interleukin 4 receptor",
+     "assoc": 0.9873,
+     "contribution": 0.170908,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9378
+      },
+      {
+       "id": "literature",
+       "score": 0.6574
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4027
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
      "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
-   ],
-   "rank": 43,
-   "score": 0.167,
-   "rawScore": 0.398741,
-   "geneCount": 1,
-   "paths": [
+    },
     {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.917,
-     "contribution": 0.398741,
-     "drugsOnGene": 4,
+     "gene": "IL7R",
+     "geneId": "ENSG00000168685",
+     "geneName": "interleukin 7 receptor",
+     "assoc": 0.9743,
+     "contribution": 0.168666,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.8748
+       "score": 0.9599
       },
       {
        "id": "literature",
-       "score": 0.3369
+       "score": 0.3591
       }
      ],
      "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
-   ],
-   "rank": 44,
-   "score": 0.167,
-   "rawScore": 0.398741,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.917,
-     "contribution": 0.398741,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8748
-      },
-      {
-       "id": "literature",
-       "score": 0.3369
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
+     "via": "IL2RG",
      "viaScore": 0.999
     }
    ]
@@ -2073,9 +2039,12 @@
     "Thrombin antagonist",
     "Plasminogen activator"
    ],
-   "rank": 45,
-   "score": 0.1636,
-   "rawScore": 0.390825,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.1741,
+   "rawScore": 0.414755,
    "geneCount": 5,
    "paths": [
     {
@@ -2144,83 +2113,228 @@
    ]
   },
   {
-   "id": "CHEMBL932",
-   "name": "Dipyridamole",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "stroke disorder",
-    "Recurrent thrombophlebitis",
-    "coronary artery disorder",
-    "Hypertension"
+    "Cognitive impairment",
+    "Alzheimer disease",
+    "dementia"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
-    "3',5'-cyclic phosphodiesterase inhibitor",
-    "Equilibrative nucleoside transporter 1 inhibitor"
+    "Amyloid-beta A4 protein inhibitor"
    ],
-   "rank": 49,
-   "score": 0.1524,
-   "rawScore": 0.36417,
-   "geneCount": 18,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 41,
+   "score": 0.1673,
+   "rawScore": 0.398741,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "ADORA1",
-     "geneId": "ENSG00000163485",
-     "geneName": "adenosine A1 receptor",
-     "assoc": 0.8208,
-     "contribution": 0.146479,
-     "drugsOnGene": 1,
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.917,
+     "contribution": 0.398741,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.785
+       "score": 0.8748
       },
       {
        "id": "literature",
-       "score": 0.1666
+       "score": 0.3369
       }
      ],
      "hops": 3,
-     "via": "SLC29A1",
-     "viaScore": 0.88
-    },
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein disrupting agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.1673,
+   "rawScore": 0.398741,
+   "geneCount": 1,
+   "paths": [
     {
-     "gene": "PDE4A",
-     "geneId": "ENSG00000065989",
-     "geneName": "phosphodiesterase 4A",
-     "assoc": 0.6938,
-     "contribution": 0.08081,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6938
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDE4D",
-     "geneId": "ENSG00000113448",
-     "geneName": "phosphodiesterase 4D",
-     "assoc": 0.6522,
-     "contribution": 0.075966,
-     "drugsOnGene": 12,
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.917,
+     "contribution": 0.398741,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.5181
+       "score": 0.8748
       },
       {
        "id": "literature",
-       "score": 0.2784
+       "score": 0.3369
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Amyloid-beta A4 protein stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.1673,
+   "rawScore": 0.398741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.917,
+     "contribution": 0.398741,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8748
+      },
+      {
+       "id": "literature",
+       "score": 0.3369
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3039540",
+   "name": "Aducanumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Amyloid-beta A4 protein binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 44,
+   "score": 0.1673,
+   "rawScore": 0.398741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.917,
+     "contribution": 0.398741,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8748
+      },
+      {
+       "id": "literature",
+       "score": 0.3369
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201670",
+   "name": "Sargramostim",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "bone marrow transplantation",
+    "autoimmune pulmonary alveolar proteinosis",
+    "acute myeloid leukemia"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Granulocyte-macrophage colony-stimulating factor receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 45,
+   "score": 0.1617,
+   "rawScore": 0.385538,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "IL5",
+     "geneId": "ENSG00000113525",
+     "geneName": "interleukin 5",
+     "assoc": 0.9313,
+     "contribution": 0.385538,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7826
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6838
+      }
+     ],
+     "hops": 3,
+     "via": "CSF2RB",
+     "viaScore": 0.997
     }
    ]
   },
@@ -2238,86 +2352,11 @@
    "mechanisms": [
     "Phosphodiesterase 4 inhibitor"
    ],
-   "rank": 53,
-   "score": 0.1393,
-   "rawScore": 0.333436,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PDE4A",
-     "geneId": "ENSG00000065989",
-     "geneName": "phosphodiesterase 4A",
-     "assoc": 0.6938,
-     "contribution": 0.147485,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6938
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDE4D",
-     "geneId": "ENSG00000113448",
-     "geneName": "phosphodiesterase 4D",
-     "assoc": 0.6522,
-     "contribution": 0.138645,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5181
-      },
-      {
-       "id": "literature",
-       "score": 0.2784
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDE4B",
-     "geneId": "ENSG00000184588",
-     "geneName": "phosphodiesterase 4B",
-     "assoc": 0.2104,
-     "contribution": 0.044721,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.202
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0105
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL551978",
-   "name": "Drotaverine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastrointestinal disease",
-    "irritable bowel syndrome"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Phosphodiesterase 4 inhibitor"
-   ],
-   "rank": 54,
-   "score": 0.1393,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 50,
+   "score": 0.1396,
    "rawScore": 0.333436,
    "geneCount": 4,
    "paths": [
@@ -2394,8 +2433,92 @@
    "mechanisms": [
     "Phosphodiesterase 4 inhibitor"
    ],
-   "rank": 55,
-   "score": 0.1393,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 51,
+   "score": 0.1396,
+   "rawScore": 0.333436,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "PDE4A",
+     "geneId": "ENSG00000065989",
+     "geneName": "phosphodiesterase 4A",
+     "assoc": 0.6938,
+     "contribution": 0.147485,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6938
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDE4D",
+     "geneId": "ENSG00000113448",
+     "geneName": "phosphodiesterase 4D",
+     "assoc": 0.6522,
+     "contribution": 0.138645,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5181
+      },
+      {
+       "id": "literature",
+       "score": 0.2784
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDE4B",
+     "geneId": "ENSG00000184588",
+     "geneName": "phosphodiesterase 4B",
+     "assoc": 0.2104,
+     "contribution": 0.044721,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.202
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0105
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL551978",
+   "name": "Drotaverine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastrointestinal disease",
+    "irritable bowel syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Phosphodiesterase 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 53,
+   "score": 0.1396,
    "rawScore": 0.333436,
    "geneCount": 4,
    "paths": [
@@ -2471,8 +2594,11 @@
    "mechanisms": [
     "Phosphodiesterase 4 inhibitor"
    ],
-   "rank": 56,
-   "score": 0.1393,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 54,
+   "score": 0.1396,
    "rawScore": 0.333436,
    "geneCount": 4,
    "paths": [
@@ -2538,83 +2664,44 @@
    ]
   },
   {
-   "id": "CHEMBL1493",
-   "name": "Flavoxate",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5315093",
+   "name": "Autologous Cd34+ Enriched Cell Fraction That Contains Cd34+ Cells Transduced With Retroviral Vector That Encodes For The Human Ada Cdna Sequence",
+   "drugType": "Unknown",
    "approvedFor": [
-    "Urinary incontinence",
-    "Polyuria",
-    "dysuria"
+    "severe combined immunodeficiency"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Phosphodiesterase 4 inhibitor",
-    "Phosphodiesterase 7 inhibitor",
-    "Phosphodiesterase 8 inhibitor"
+    "ADA exogenous gene"
    ],
-   "rank": 57,
-   "score": 0.1393,
-   "rawScore": 0.333436,
-   "geneCount": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 55,
+   "score": 0.1395,
+   "rawScore": 0.333111,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "PDE4A",
-     "geneId": "ENSG00000065989",
-     "geneName": "phosphodiesterase 4A",
-     "assoc": 0.6938,
-     "contribution": 0.147485,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6938
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDE4D",
-     "geneId": "ENSG00000113448",
-     "geneName": "phosphodiesterase 4D",
-     "assoc": 0.6522,
-     "contribution": 0.138645,
-     "drugsOnGene": 12,
+     "gene": "ADORA1",
+     "geneId": "ENSG00000163485",
+     "geneName": "adenosine A1 receptor",
+     "assoc": 0.8208,
+     "contribution": 0.333111,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.5181
+       "score": 0.785
       },
       {
        "id": "literature",
-       "score": 0.2784
+       "score": 0.1666
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDE4B",
-     "geneId": "ENSG00000184588",
-     "geneName": "phosphodiesterase 4B",
-     "assoc": 0.2104,
-     "contribution": 0.044721,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.202
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0105
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "ADA",
+     "viaScore": 0.831
     }
    ]
   },
@@ -2631,8 +2718,16 @@
    "mechanisms": [
     "Adenosine deaminase inhibitor"
    ],
-   "rank": 58,
-   "score": 0.1392,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 56,
+   "score": 0.1395,
    "rawScore": 0.333111,
    "geneCount": 1,
    "paths": [
@@ -2660,28 +2755,35 @@
    ]
   },
   {
-   "id": "CHEMBL5315093",
-   "name": "Autologous Cd34+ Enriched Cell Fraction That Contains Cd34+ Cells Transduced With Retroviral Vector That Encodes For The Human Ada Cdna Sequence",
-   "drugType": "Unknown",
+   "id": "CHEMBL932",
+   "name": "Dipyridamole",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "severe combined immunodeficiency"
+    "stroke disorder",
+    "Recurrent thrombophlebitis",
+    "coronary artery disorder",
+    "Hypertension"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "ADA exogenous gene"
+    "3',5'-cyclic phosphodiesterase inhibitor",
+    "Equilibrative nucleoside transporter 1 inhibitor"
    ],
-   "rank": 59,
-   "score": 0.1392,
-   "rawScore": 0.333111,
-   "geneCount": 1,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 57,
+   "score": 0.1359,
+   "rawScore": 0.324585,
+   "geneCount": 24,
    "paths": [
     {
      "gene": "ADORA1",
      "geneId": "ENSG00000163485",
      "geneName": "adenosine A1 receptor",
      "assoc": 0.8208,
-     "contribution": 0.333111,
-     "drugsOnGene": 2,
+     "contribution": 0.130557,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "genetic_association",
@@ -2693,8 +2795,46 @@
       }
      ],
      "hops": 3,
-     "via": "ADA",
-     "viaScore": 0.831
+     "via": "SLC29A1",
+     "viaScore": 0.88
+    },
+    {
+     "gene": "PDE4A",
+     "geneId": "ENSG00000065989",
+     "geneName": "phosphodiesterase 4A",
+     "assoc": 0.6938,
+     "contribution": 0.072026,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6938
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDE4D",
+     "geneId": "ENSG00000113448",
+     "geneName": "phosphodiesterase 4D",
+     "assoc": 0.6522,
+     "contribution": 0.067708,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5181
+      },
+      {
+       "id": "literature",
+       "score": 0.2784
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -2710,8 +2850,11 @@
     "Phosphodiesterase 4 inhibitor",
     "Phosphodiesterase 3A inhibitor"
    ],
-   "rank": 60,
-   "score": 0.133,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 58,
+   "score": 0.1333,
    "rawScore": 0.318418,
    "geneCount": 5,
    "paths": [
@@ -2791,8 +2934,16 @@
     "Tubulin inhibitor",
     "Tumor necrosis factor receptor superfamily member 8 binding agent"
    ],
-   "rank": 61,
-   "score": 0.1315,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 59,
+   "score": 0.1318,
    "rawScore": 0.314899,
    "geneCount": 16,
    "paths": [
@@ -2818,6 +2969,51 @@
      "viaScore": null
     }
    ]
+  },
+  {
+   "id": "CHEMBL2035187",
+   "name": "Pacritinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myelofibrosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 60,
+   "score": 0.1169,
+   "rawScore": 0.279659,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "IL1RL1",
+     "geneId": "ENSG00000115602",
+     "geneName": "interleukin 1 receptor like 1",
+     "assoc": 0.9945,
+     "contribution": 0.279659,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9378
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9122
+      }
+     ],
+     "hops": 3,
+     "via": "IRAK1",
+     "viaScore": 0.932
+    }
+   ]
   }
  ],
  "knownRanked": [
@@ -2833,6 +3029,9 @@
    "mechanisms": [
     "Interleukin-13 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.36658,
@@ -2927,6 +3126,9 @@
    "mechanisms": [
     "Interleukin-13 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 2,
    "score": 1.0,
    "rawScore": 2.36658,
@@ -3023,6 +3225,9 @@
    "mechanisms": [
     "Interleukin-4 receptor subunit alpha antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
    "score": 0.8973,
    "rawScore": 2.123918,
@@ -3118,8 +3323,11 @@
    "mechanisms": [
     "Interleukin-1 receptor antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 4,
-   "score": 0.6866,
+   "score": 0.6867,
    "rawScore": 1.626316,
    "geneCount": 1,
    "paths": [
@@ -3201,8 +3409,11 @@
    "mechanisms": [
     "Thymic stromal lymphopoietin inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 5,
-   "score": 0.6567,
+   "score": 0.6569,
    "rawScore": 1.555679,
    "geneCount": 1,
    "paths": [
@@ -3261,8 +3472,11 @@
    "mechanisms": [
     "Interleukin-6 inhibitor"
    ],
-   "rank": 9,
-   "score": 0.5571,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.5573,
    "rawScore": 1.320365,
    "geneCount": 1,
    "paths": [
@@ -3340,19 +3554,24 @@
    ]
   },
   {
-   "id": "CHEMBL2107884",
-   "name": "Reslizumab",
+   "id": "CHEMBL2108429",
+   "name": "Mepolizumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "hypereosinophilic syndrome",
+    "chronic rhinosinusitis",
     "Airway obstruction",
     "asthma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.5537,
+   "score": 0.5539,
    "rawScore": 1.312298,
    "geneCount": 1,
    "paths": [
@@ -3442,8 +3661,11 @@
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 11,
-   "score": 0.5537,
+   "score": 0.5539,
    "rawScore": 1.312298,
    "geneCount": 1,
    "paths": [
@@ -3521,21 +3743,27 @@
    ]
   },
   {
-   "id": "CHEMBL2108429",
-   "name": "Mepolizumab",
+   "id": "CHEMBL2107884",
+   "name": "Reslizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "hypereosinophilic syndrome",
-    "chronic rhinosinusitis",
     "Airway obstruction",
     "asthma"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 12,
-   "score": 0.5537,
+   "score": 0.5539,
    "rawScore": 1.312298,
    "geneCount": 1,
    "paths": [
@@ -3624,8 +3852,11 @@
    "mechanisms": [
     "Interleukin-5 receptor subunit alpha inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 13,
-   "score": 0.5045,
+   "score": 0.5047,
    "rawScore": 1.196149,
    "geneCount": 1,
    "paths": [

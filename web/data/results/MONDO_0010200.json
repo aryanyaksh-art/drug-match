@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 14,
  "knownDrugCount": 15,
- "candidatesConsidered": 311,
+ "candidatesConsidered": 338,
  "pathsTwoHop": 63,
- "pathsThreeHop": 325,
+ "pathsThreeHop": 422,
  "candidates": [
   {
    "id": "CHEMBL2219536",
@@ -23,6 +23,14 @@
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 1.147495,
@@ -85,8 +93,24 @@
    "mechanisms": [
     "Leptin receptor agonist"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 2,
-   "score": 0.9251,
+   "score": 0.9252,
    "rawScore": 1.064024,
    "geneCount": 1,
    "paths": [
@@ -135,158 +159,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201833",
-   "name": "Golimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "juvenile arthritis due to defect in LACC1",
-    "spondylitis",
-    "immune system disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 3,
-   "score": 0.7147,
-   "rawScore": 0.829694,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6074,
-     "contribution": 0.278882,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6074
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.5562,
-     "contribution": 0.254611,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.392
-      },
-      {
-       "id": "literature",
-       "score": 0.2701
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.6646,
-     "contribution": 0.174909,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6646
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "rank": 4,
-   "score": 0.7147,
-   "rawScore": 0.829694,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6074,
-     "contribution": 0.278882,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6074
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.5562,
-     "contribution": 0.254611,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.392
-      },
-      {
-       "id": "literature",
-       "score": 0.2701
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.6646,
-     "contribution": 0.174909,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6646
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201581",
    "name": "Infliximab",
    "drugType": "Antibody",
@@ -300,8 +172,20 @@
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 5,
-   "score": 0.7147,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 3,
+   "score": 0.7154,
    "rawScore": 0.829694,
    "geneCount": 1,
    "paths": [
@@ -363,18 +247,21 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 6,
-   "score": 0.7147,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.7154,
    "rawScore": 0.829694,
    "geneCount": 1,
    "paths": [
@@ -449,8 +336,16 @@
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 7,
-   "score": 0.7147,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.7154,
    "rawScore": 0.829694,
    "geneCount": 1,
    "paths": [
@@ -525,8 +420,20 @@
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "rank": 8,
-   "score": 0.7147,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 6,
+   "score": 0.7154,
    "rawScore": 0.829694,
    "geneCount": 1,
    "paths": [
@@ -588,18 +495,197 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 7,
+   "score": 0.7154,
+   "rawScore": 0.829694,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6074,
+     "contribution": 0.278882,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6074
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.5562,
+     "contribution": 0.254611,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.392
+      },
+      {
+       "id": "literature",
+       "score": 0.2701
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.6646,
+     "contribution": 0.174909,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6646
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
     "immune system disorder"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.7154,
+   "rawScore": 0.829694,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6074,
+     "contribution": 0.278882,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6074
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.5562,
+     "contribution": 0.254611,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.392
+      },
+      {
+       "id": "literature",
+       "score": 0.2701
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.6646,
+     "contribution": 0.174909,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6646
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 9,
-   "score": 0.7147,
+   "score": 0.7154,
    "rawScore": 0.829694,
    "geneCount": 1,
    "paths": [
@@ -673,8 +759,11 @@
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.6516,
+   "score": 0.6524,
    "rawScore": 0.7594,
    "geneCount": 1,
    "paths": [
@@ -729,8 +818,11 @@
     "Transient receptor potential cation channel subfamily M member 8 opener",
     "Transient receptor potential cation channel subfamily A member 1 opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 11,
-   "score": 0.621,
+   "score": 0.6219,
    "rawScore": 0.725327,
    "geneCount": 2,
    "paths": [
@@ -783,8 +875,11 @@
    "mechanisms": [
     "Aryl hydrocarbon receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 12,
-   "score": 0.6106,
+   "score": 0.6115,
    "rawScore": 0.713793,
    "geneCount": 1,
    "paths": [
@@ -822,8 +917,11 @@
    "mechanisms": [
     "Interleukin-1 alpha inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 13,
-   "score": 0.5964,
+   "score": 0.5974,
    "rawScore": 0.697979,
    "geneCount": 1,
    "paths": [
@@ -864,62 +962,6 @@
    ]
   },
   {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interleukin-6 inhibitor"
-   ],
-   "rank": 14,
-   "score": 0.5739,
-   "rawScore": 0.672858,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD163",
-     "geneId": "ENSG00000177575",
-     "geneName": "CD163 molecule",
-     "assoc": 0.7493,
-     "contribution": 0.465493,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7493
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.964
-    },
-    {
-     "gene": "LEPR",
-     "geneId": "ENSG00000116678",
-     "geneName": "leptin receptor",
-     "assoc": 0.4708,
-     "contribution": 0.207366,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4609
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.902
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1743070",
    "name": "Siltuximab",
    "drugType": "Antibody",
@@ -933,8 +975,11 @@
    "mechanisms": [
     "Interleukin-6 antagonist"
    ],
-   "rank": 15,
-   "score": 0.5739,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.5749,
    "rawScore": 0.672858,
    "geneCount": 1,
    "paths": [
@@ -989,8 +1034,11 @@
    "mechanisms": [
     "Interleukin-6 inhibitor"
    ],
-   "rank": 16,
-   "score": 0.5739,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.5749,
    "rawScore": 0.672858,
    "geneCount": 1,
    "paths": [
@@ -1035,19 +1083,87 @@
    ]
   },
   {
-   "id": "CHEMBL3039540",
-   "name": "Aducanumab",
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "immune system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interleukin-6 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.5749,
+   "rawScore": 0.672858,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD163",
+     "geneId": "ENSG00000177575",
+     "geneName": "CD163 molecule",
+     "assoc": 0.7493,
+     "contribution": 0.465493,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7493
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "LEPR",
+     "geneId": "ENSG00000116678",
+     "geneName": "leptin receptor",
+     "assoc": 0.4708,
+     "contribution": 0.207366,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4609
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.902
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
     "Alzheimer disease",
     "dementia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein binding agent"
+    "Amyloid-beta A4 protein inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 17,
-   "score": 0.5534,
+   "score": 0.5545,
    "rawScore": 0.650064,
    "geneCount": 1,
    "paths": [
@@ -1108,8 +1224,11 @@
    "mechanisms": [
     "Amyloid-beta A4 protein disrupting agent"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 18,
-   "score": 0.5534,
+   "score": 0.5545,
    "rawScore": 0.650064,
    "geneCount": 1,
    "paths": [
@@ -1166,8 +1285,11 @@
    "mechanisms": [
     "Amyloid-beta A4 protein stabiliser"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
-   "score": 0.5534,
+   "score": 0.5545,
    "rawScore": 0.650064,
    "geneCount": 1,
    "paths": [
@@ -1216,20 +1338,27 @@
    ]
   },
   {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
+   "id": "CHEMBL3039540",
+   "name": "Aducanumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "Cognitive impairment",
     "Alzheimer disease",
     "dementia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
+    "Amyloid-beta A4 protein binding agent"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 20,
-   "score": 0.5534,
+   "score": 0.5545,
    "rawScore": 0.650064,
    "geneCount": 1,
    "paths": [
@@ -1274,6 +1403,71 @@
      "hops": 3,
      "via": "APP",
      "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1551",
+   "name": "Ursodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "chronic hepatitis C virus infection",
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.5372,
+   "rawScore": 0.630843,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.7182,
+     "contribution": 0.462799,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6078
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2815
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.5374,
+     "contribution": 0.168044,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4002
+      },
+      {
+       "id": "literature",
+       "score": 0.2288
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.753
     }
    ]
   },
@@ -1290,8 +1484,16 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 21,
-   "score": 0.5362,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.5372,
    "rawScore": 0.630843,
    "geneCount": 1,
    "paths": [
@@ -1352,70 +1554,20 @@
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "rank": 22,
-   "score": 0.5362,
-   "rawScore": 0.630843,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.7182,
-     "contribution": 0.462799,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6078
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2815
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": null
     },
     {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.5374,
-     "contribution": 0.168044,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4002
-      },
-      {
-       "id": "literature",
-       "score": 0.2288
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.753
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1551",
-   "name": "Ursodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic hepatitis C virus infection",
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis"
    ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 23,
-   "score": 0.5362,
+   "score": 0.5372,
    "rawScore": 0.630843,
    "geneCount": 1,
    "paths": [
@@ -1476,17 +1628,20 @@
     "Neurotrophic tyrosine kinase receptor inhibitor",
     "Neurotrophic tyrosine kinase receptor inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
-   "score": 0.4749,
-   "rawScore": 0.562578,
-   "geneCount": 2,
+   "score": 0.4834,
+   "rawScore": 0.570775,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "BDNF",
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.197754,
+     "contribution": 0.168147,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1503,7 +1658,7 @@
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.183845,
+     "contribution": 0.156321,
      "drugsOnGene": 6,
      "evidence": [
       {
@@ -1520,7 +1675,7 @@
      "geneId": "ENSG00000148053",
      "geneName": "neurotrophic receptor tyrosine kinase 2",
      "assoc": 0.4546,
-     "contribution": 0.180978,
+     "contribution": 0.153883,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1546,17 +1701,20 @@
    "mechanisms": [
     "Neurotrophic tyrosine kinase receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
-   "score": 0.4749,
-   "rawScore": 0.562578,
-   "geneCount": 2,
+   "score": 0.4834,
+   "rawScore": 0.570775,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "BDNF",
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.197754,
+     "contribution": 0.168147,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1573,7 +1731,7 @@
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.183845,
+     "contribution": 0.156321,
      "drugsOnGene": 6,
      "evidence": [
       {
@@ -1590,7 +1748,7 @@
      "geneId": "ENSG00000148053",
      "geneName": "neurotrophic receptor tyrosine kinase 2",
      "assoc": 0.4546,
-     "contribution": 0.180978,
+     "contribution": 0.153883,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1605,6 +1763,80 @@
    ]
   },
   {
+   "id": "CHEMBL4297774",
+   "name": "Amivantamab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Hepatocyte growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.4518,
+   "rawScore": 0.535454,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.4959,
+     "contribution": 0.197424,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4959
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HGF",
+     "geneId": "ENSG00000019991",
+     "geneName": "hepatocyte growth factor",
+     "assoc": 0.5608,
+     "contribution": 0.117156,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      }
+     ],
+     "hops": 3,
+     "via": "MET",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.4959,
+     "contribution": 0.080937,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4959
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3833346",
    "name": "Tofersen",
    "drugType": "Oligonucleotide",
@@ -1615,8 +1847,11 @@
    "mechanisms": [
     "SOD1 mRNA antisense inhibitor"
    ],
-   "rank": 26,
-   "score": 0.438,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.4393,
    "rawScore": 0.521482,
    "geneCount": 1,
    "paths": [
@@ -1644,77 +1879,6 @@
    ]
   },
   {
-   "id": "CHEMBL603469",
-   "name": "Lestaurtinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia by FAB classification"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Nerve growth factor receptor Trk-A inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "rank": 27,
-   "score": 0.4258,
-   "rawScore": 0.507847,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.6561,
-     "contribution": 0.14987,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6561
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.6561,
-     "contribution": 0.139329,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6561
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "NTRK2",
-     "geneId": "ENSG00000148053",
-     "geneName": "neurotrophic receptor tyrosine kinase 2",
-     "assoc": 0.4546,
-     "contribution": 0.137156,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4546
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201834",
    "name": "Canakinumab",
    "drugType": "Antibody",
@@ -1728,8 +1892,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 28,
-   "score": 0.422,
+   "score": 0.4233,
    "rawScore": 0.503653,
    "geneCount": 1,
    "paths": [
@@ -1766,8 +1933,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 29,
-   "score": 0.422,
+   "score": 0.4233,
    "rawScore": 0.503653,
    "geneCount": 1,
    "paths": [
@@ -1791,6 +1961,80 @@
    ]
   },
   {
+   "id": "CHEMBL603469",
+   "name": "Lestaurtinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia by FAB classification"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Nerve growth factor receptor Trk-A inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.4217,
+   "rawScore": 0.501858,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.6561,
+     "contribution": 0.127431,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6561
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.6561,
+     "contribution": 0.118469,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6561
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "NTRK2",
+     "geneId": "ENSG00000148053",
+     "geneName": "neurotrophic receptor tyrosine kinase 2",
+     "assoc": 0.4546,
+     "contribution": 0.116621,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4546
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL313971",
    "name": "Zucapsaicin",
    "drugType": "Small molecule",
@@ -1802,8 +2046,11 @@
    "mechanisms": [
     "Vanilloid receptor agonist"
    ],
-   "rank": 30,
-   "score": 0.3885,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.3899,
    "rawScore": 0.466342,
    "geneCount": 1,
    "paths": [
@@ -1840,8 +2087,11 @@
    "mechanisms": [
     "Vanilloid receptor opener"
    ],
-   "rank": 31,
-   "score": 0.3885,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.3899,
    "rawScore": 0.466342,
    "geneCount": 1,
    "paths": [
@@ -1865,6 +2115,120 @@
    ]
   },
   {
+   "id": "CHEMBL1983268",
+   "name": "Entrectinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "ALK tyrosine kinase receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor inhibitor",
+    "Proto-oncogene tyrosine-protein kinase ROS inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.389,
+   "rawScore": 0.465292,
+   "geneCount": 5,
+   "paths": [
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.6561,
+     "contribution": 0.137072,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6561
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BDNF",
+     "geneId": "ENSG00000176697",
+     "geneName": "brain derived neurotrophic factor",
+     "assoc": 0.6561,
+     "contribution": 0.127431,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6561
+      }
+     ],
+     "hops": 3,
+     "via": "NTRK1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "NTRK2",
+     "geneId": "ENSG00000148053",
+     "geneName": "neurotrophic receptor tyrosine kinase 2",
+     "assoc": 0.4546,
+     "contribution": 0.125444,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4546
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108567",
+   "name": "Tanezumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Pain",
+    "Fever"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Beta-nerve growth factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.379,
+   "rawScore": 0.454143,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NTRK2",
+     "geneId": "ENSG00000148053",
+     "geneName": "neurotrophic receptor tyrosine kinase 2",
+     "assoc": 0.4546,
+     "contribution": 0.454143,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4546
+      }
+     ],
+     "hops": 3,
+     "via": "NGF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3414621",
    "name": "Tazemetostat",
    "drugType": "Small molecule",
@@ -1876,8 +2240,11 @@
    "mechanisms": [
     "Histone-lysine N-methyltransferase EZH2 inhibitor"
    ],
-   "rank": 32,
-   "score": 0.3747,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.3761,
    "rawScore": 0.450933,
    "geneCount": 1,
    "paths": [
@@ -1901,30 +2268,34 @@
    ]
   },
   {
-   "id": "CHEMBL1983268",
-   "name": "Entrectinib",
+   "id": "CHEMBL4298138",
+   "name": "Repotrectinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "cancer",
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "ALK tyrosine kinase receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor inhibitor",
-    "Proto-oncogene tyrosine-protein kinase ROS inhibitor"
+    "NT-3 growth factor receptor inhibitor",
+    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
+    "CD74-ROS1 inhibitor"
    ],
-   "rank": 33,
-   "score": 0.3526,
-   "rawScore": 0.426354,
-   "geneCount": 4,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.3597,
+   "rawScore": 0.432566,
+   "geneCount": 6,
    "paths": [
     {
      "gene": "BDNF",
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.14987,
+     "contribution": 0.127431,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1941,7 +2312,7 @@
      "geneId": "ENSG00000176697",
      "geneName": "brain derived neurotrophic factor",
      "assoc": 0.6561,
-     "contribution": 0.139329,
+     "contribution": 0.118469,
      "drugsOnGene": 6,
      "evidence": [
       {
@@ -1958,7 +2329,7 @@
      "geneId": "ENSG00000148053",
      "geneName": "neurotrophic receptor tyrosine kinase 2",
      "assoc": 0.4546,
-     "contribution": 0.137156,
+     "contribution": 0.116621,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1984,8 +2355,11 @@
    "mechanisms": [
     "T-cell surface antigen CD2 inhibitor"
    ],
-   "rank": 34,
-   "score": 0.3516,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.3531,
    "rawScore": 0.425257,
    "geneCount": 1,
    "paths": [
@@ -2021,8 +2395,16 @@
     "Amylin receptor AMY3; CALCR/RAMP3 agonist",
     "Amylin receptor AMY1, CALCR/RAMP1 agonist"
    ],
-   "rank": 35,
-   "score": 0.3485,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 38,
+   "score": 0.3501,
    "rawScore": 0.421842,
    "geneCount": 4,
    "paths": [
@@ -2080,235 +2462,94 @@
    ]
   },
   {
-   "id": "CHEMBL4298138",
-   "name": "Repotrectinib",
+   "id": "CHEMBL3402762",
+   "name": "Tepotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cancer",
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Hepatocyte growth factor receptor inhibitor",
+    "Hepatocyte growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.344,
+   "rawScore": 0.415092,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.4959,
+     "contribution": 0.260503,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4959
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HGF",
+     "geneId": "ENSG00000019991",
+     "geneName": "hepatocyte growth factor",
+     "assoc": 0.5608,
+     "contribution": 0.154589,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5608
+      }
+     ],
+     "hops": 3,
+     "via": "MET",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3188267",
+   "name": "Capmatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "NT-3 growth factor receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "CD74-ROS1 inhibitor"
+    "Hepatocyte growth factor receptor inhibitor",
+    "Hepatocyte growth factor receptor inhibitor"
    ],
-   "rank": 36,
-   "score": 0.3199,
-   "rawScore": 0.389948,
-   "geneCount": 5,
-   "paths": [
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.6561,
-     "contribution": 0.137072,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6561
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BDNF",
-     "geneId": "ENSG00000176697",
-     "geneName": "brain derived neurotrophic factor",
-     "assoc": 0.6561,
-     "contribution": 0.127431,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6561
-      }
-     ],
-     "hops": 3,
-     "via": "NTRK1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "NTRK2",
-     "geneId": "ENSG00000148053",
-     "geneName": "neurotrophic receptor tyrosine kinase 2",
-     "assoc": 0.4546,
-     "contribution": 0.125444,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4546
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201570",
-   "name": "Anakinra",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "CINCA syndrome"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-1 receptor antagonist"
-   ],
-   "rank": 37,
-   "score": 0.3122,
-   "rawScore": 0.381316,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.6646,
-     "contribution": 0.381316,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6646
-      }
-     ],
-     "hops": 3,
-     "via": "IL1R1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL53418",
-   "name": "Danthron",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Constipation"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Retinoid X receptor alpha antagonist"
-   ],
-   "rank": 38,
-   "score": 0.3082,
-   "rawScore": 0.376893,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.7182,
-     "contribution": 0.376893,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6078
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2815
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833320",
-   "name": "Eptinezumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "migraine disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Calcitonin gene-related peptide inhibitor"
-   ],
-   "rank": 39,
-   "score": 0.3079,
-   "rawScore": 0.376527,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "CALCA",
-     "geneId": "ENSG00000110680",
-     "geneName": "calcitonin related polypeptide alpha",
-     "assoc": 0.5102,
-     "contribution": 0.24917,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5102
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CALCA",
-     "geneId": "ENSG00000110680",
-     "geneName": "calcitonin related polypeptide alpha",
-     "assoc": 0.5102,
-     "contribution": 0.127357,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5102
-      }
-     ],
-     "hops": 3,
-     "via": "CALCB",
-     "viaScore": 0.973
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707328",
-   "name": "Galcanezumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "migraine disorder",
-    "Increased circulating prolactin concentration",
-    "hyperprolactinemia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Calcitonin gene-related peptide inhibitor"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 40,
-   "score": 0.3079,
-   "rawScore": 0.376527,
-   "geneCount": 2,
+   "score": 0.344,
+   "rawScore": 0.415092,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "CALCA",
-     "geneId": "ENSG00000110680",
-     "geneName": "calcitonin related polypeptide alpha",
-     "assoc": 0.5102,
-     "contribution": 0.24917,
-     "drugsOnGene": 3,
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.4959,
+     "contribution": 0.260503,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.5102
+       "score": 0.4959
       }
      ],
      "hops": 2,
@@ -2316,21 +2557,21 @@
      "viaScore": null
     },
     {
-     "gene": "CALCA",
-     "geneId": "ENSG00000110680",
-     "geneName": "calcitonin related polypeptide alpha",
-     "assoc": 0.5102,
-     "contribution": 0.127357,
-     "drugsOnGene": 3,
+     "gene": "HGF",
+     "geneId": "ENSG00000019991",
+     "geneName": "hepatocyte growth factor",
+     "assoc": 0.5608,
+     "contribution": 0.154589,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.5102
+       "score": 0.5608
       }
      ],
      "hops": 3,
-     "via": "CALCB",
-     "viaScore": 0.973
+     "via": "MET",
+     "viaScore": 0.999
     }
    ]
   }

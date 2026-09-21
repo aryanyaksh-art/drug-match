@@ -9,7 +9,7 @@
  "knownDrugCount": 162,
  "candidatesConsidered": 267,
  "pathsTwoHop": 244,
- "pathsThreeHop": 145,
+ "pathsThreeHop": 156,
  "candidates": [
   {
    "id": "CHEMBL18901",
@@ -22,6 +22,9 @@
    "mechanisms": [
     "Hemoglobin HbA negative modulator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 1.264843,
@@ -115,8 +118,11 @@
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.4975,
+   "score": 0.4974,
    "rawScore": 0.630145,
    "geneCount": 1,
    "paths": [
@@ -190,8 +196,11 @@
    "mechanisms": [
     "Intermediate conductance calcium-activated potassium channel protein 4 opener"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
-   "score": 0.4505,
+   "score": 0.4504,
    "rawScore": 0.57085,
    "geneCount": 1,
    "paths": [
@@ -230,8 +239,20 @@
    "mechanisms": [
     "Serine/threonine protein phosphatase 2B catalytic subunit, alpha isoform inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 9,
-   "score": 0.3153,
+   "score": 0.3151,
    "rawScore": 0.400006,
    "geneCount": 1,
    "paths": [
@@ -265,8 +286,16 @@
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 12,
-   "score": 0.2738,
+   "score": 0.2736,
    "rawScore": 0.347647,
    "geneCount": 3,
    "paths": [
@@ -335,8 +364,11 @@
     "Ribonucleoside-diphosphate reductase RR1 inhibitor",
     "Thioredoxin reductase 1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 13,
-   "score": 0.2439,
+   "score": 0.2437,
    "rawScore": 0.309858,
    "geneCount": 4,
    "paths": [
@@ -405,8 +437,11 @@
    "mechanisms": [
     "Integrin alpha-IIb/beta-3 inhibitor"
    ],
-   "rank": 14,
-   "score": 0.2396,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2394,
    "rawScore": 0.304366,
    "geneCount": 2,
    "paths": [
@@ -460,8 +495,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 17,
-   "score": 0.2057,
+   "score": 0.2055,
    "rawScore": 0.261588,
    "geneCount": 1,
    "paths": [
@@ -499,8 +537,11 @@
    "mechanisms": [
     "ADA exogenous gene"
    ],
-   "rank": 19,
-   "score": 0.1861,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1859,
    "rawScore": 0.23688,
    "geneCount": 1,
    "paths": [
@@ -536,8 +577,11 @@
    "mechanisms": [
     "Purine nucleoside phosphorylase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 20,
-   "score": 0.1858,
+   "score": 0.1855,
    "rawScore": 0.236406,
    "geneCount": 1,
    "paths": [
@@ -576,61 +620,11 @@
    "mechanisms": [
     "von Willebrand factor exogenous protein"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 21,
-   "score": 0.1785,
-   "rawScore": 0.227217,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ITGB3",
-     "geneId": "ENSG00000259207",
-     "geneName": "integrin subunit beta 3",
-     "assoc": 0.4087,
-     "contribution": 0.138084,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4087
-      }
-     ],
-     "hops": 3,
-     "via": "VWF",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "SELP",
-     "geneId": "ENSG00000174175",
-     "geneName": "selectin P",
-     "assoc": 0.1827,
-     "contribution": 0.089133,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1827
-      }
-     ],
-     "hops": 3,
-     "via": "VWF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2109624",
-   "name": "Caplacizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "thrombotic thrombocytopenic purpura",
-    "Recurrent thrombophlebitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "von Willebrand factor inhibitor"
-   ],
-   "rank": 22,
-   "score": 0.1785,
+   "score": 0.1783,
    "rawScore": 0.227217,
    "geneCount": 1,
    "paths": [
@@ -683,8 +677,11 @@
    "mechanisms": [
     "von Willebrand factor exogenous protein"
    ],
-   "rank": 23,
-   "score": 0.1785,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.1783,
    "rawScore": 0.227217,
    "geneCount": 1,
    "paths": [
@@ -725,21 +722,88 @@
    ]
   },
   {
-   "id": "CHEMBL1750",
-   "name": "Clofarabine",
+   "id": "CHEMBL2109624",
+   "name": "Caplacizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "thrombotic thrombocytopenic purpura",
+    "Recurrent thrombophlebitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "von Willebrand factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1783,
+   "rawScore": 0.227217,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ITGB3",
+     "geneId": "ENSG00000259207",
+     "geneName": "integrin subunit beta 3",
+     "assoc": 0.4087,
+     "contribution": 0.138084,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "VWF",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "SELP",
+     "geneId": "ENSG00000174175",
+     "geneName": "selectin P",
+     "assoc": 0.1827,
+     "contribution": 0.089133,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1827
+      }
+     ],
+     "hops": 3,
+     "via": "VWF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1096882",
+   "name": "Fludarabine Phosphate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute lymphoblastic leukemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 24,
-   "score": 0.1472,
+   "score": 0.147,
    "rawScore": 0.187731,
    "geneCount": 14,
    "paths": [
@@ -809,8 +873,11 @@
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
-   "score": 0.1472,
+   "score": 0.147,
    "rawScore": 0.187731,
    "geneCount": 14,
    "paths": [
@@ -868,20 +935,24 @@
    ]
   },
   {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
+   "id": "CHEMBL1750",
+   "name": "Clofarabine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
+    "acute lymphoblastic leukemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 26,
-   "score": 0.1472,
+   "score": 0.147,
    "rawScore": 0.187731,
    "geneCount": 14,
    "paths": [
@@ -939,22 +1010,25 @@
    ]
   },
   {
-   "id": "CHEMBL509",
-   "name": "Meclofenamic Acid",
+   "id": "CHEMBL421",
+   "name": "Sulfasalazine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "ankylosing spondylitis",
-    "rheumatic disorder",
-    "Myalgia",
-    "Arthralgia"
+    "rheumatoid arthritis",
+    "irritable bowel syndrome",
+    "ulcerative colitis",
+    "juvenile idiopathic arthritis"
    ],
    "indicationCount": 4,
    "mechanisms": [
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 29,
-   "score": 0.1312,
+   "score": 0.131,
    "rawScore": 0.167489,
    "geneCount": 3,
    "paths": [
@@ -1003,22 +1077,38 @@
    ]
   },
   {
-   "id": "CHEMBL421",
-   "name": "Sulfasalazine",
+   "id": "CHEMBL509",
+   "name": "Meclofenamic Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "irritable bowel syndrome",
-    "ulcerative colitis",
-    "juvenile idiopathic arthritis"
+    "ankylosing spondylitis",
+    "rheumatic disorder",
+    "Myalgia",
+    "Arthralgia"
    ],
    "indicationCount": 4,
    "mechanisms": [
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 30,
-   "score": 0.1312,
+   "score": 0.131,
    "rawScore": 0.167489,
    "geneCount": 3,
    "paths": [
@@ -1075,8 +1165,89 @@
    "mechanisms": [
     "Soluble guanylate cyclase inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.1293,
+   "rawScore": 0.165374,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.2759,
+     "contribution": 0.07382,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.2759
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.2759,
+     "contribution": 0.042356,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.2759
+      }
+     ],
+     "hops": 3,
+     "via": "GUCY1A1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GUCY1B1",
+     "geneId": "ENSG00000061918",
+     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
+     "assoc": 0.2759,
+     "contribution": 0.042271,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.2759
+      }
+     ],
+     "hops": 3,
+     "via": "GUCY1A2",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL466659",
+   "name": "Pentaerythritol Tetranitrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "angina pectoris",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Soluble guanylate cyclase activator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 32,
-   "score": 0.1295,
+   "score": 0.1293,
    "rawScore": 0.165374,
    "geneCount": 3,
    "paths": [
@@ -1147,78 +1318,11 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
-   "rank": 33,
-   "score": 0.1295,
-   "rawScore": 0.165374,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.2759,
-     "contribution": 0.07382,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.2759
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.2759,
-     "contribution": 0.042356,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.2759
-      }
-     ],
-     "hops": 3,
-     "via": "GUCY1A1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GUCY1B1",
-     "geneId": "ENSG00000061918",
-     "geneName": "guanylate cyclase 1 soluble subunit beta 1",
-     "assoc": 0.2759,
-     "contribution": 0.042271,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.2759
-      }
-     ],
-     "hops": 3,
-     "via": "GUCY1A2",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL466659",
-   "name": "Pentaerythritol Tetranitrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "angina pectoris",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Soluble guanylate cyclase activator"
-   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 35,
-   "score": 0.1295,
+   "score": 0.1293,
    "rawScore": 0.165374,
    "geneCount": 3,
    "paths": [
@@ -1287,8 +1391,16 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 37,
-   "score": 0.1295,
+   "score": 0.1293,
    "rawScore": 0.165374,
    "geneCount": 3,
    "paths": [
@@ -1359,8 +1471,11 @@
    "mechanisms": [
     "Soluble guanylate cyclase activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 38,
-   "score": 0.1295,
+   "score": 0.1293,
    "rawScore": 0.165374,
    "geneCount": 3,
    "paths": [
@@ -1429,8 +1544,16 @@
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 42,
-   "score": 0.121,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 40,
+   "score": 0.1208,
    "rawScore": 0.154667,
    "geneCount": 2,
    "paths": [
@@ -1500,8 +1623,16 @@
     "Endothelin receptor, ET-A/ET-B antagonist",
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
-   "rank": 43,
-   "score": 0.121,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.1208,
    "rawScore": 0.154667,
    "geneCount": 2,
    "paths": [
@@ -1572,8 +1703,11 @@
     "Cyclooxygenase inhibitor",
     "Peroxisome proliferator-activated receptor gamma agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 45,
-   "score": 0.1168,
+   "score": 0.1166,
    "rawScore": 0.149284,
    "geneCount": 4,
    "paths": [
@@ -1634,8 +1768,11 @@
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 46,
-   "score": 0.1168,
+   "score": 0.1166,
    "rawScore": 0.149284,
    "geneCount": 4,
    "paths": [
@@ -1696,8 +1833,11 @@
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 47,
-   "score": 0.1168,
+   "score": 0.1166,
    "rawScore": 0.149284,
    "geneCount": 4,
    "paths": [
@@ -1756,8 +1896,16 @@
    "mechanisms": [
     "Retinoid X receptor alpha antagonist"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 48,
-   "score": 0.1107,
+   "score": 0.1105,
    "rawScore": 0.141638,
    "geneCount": 1,
    "paths": [
@@ -1797,8 +1945,16 @@
    "mechanisms": [
     "Complement C3 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 50,
-   "score": 0.1072,
+   "score": 0.107,
    "rawScore": 0.137213,
    "geneCount": 1,
    "paths": [
@@ -1822,46 +1978,6 @@
    ]
   },
   {
-   "id": "CHEMBL1200666",
-   "name": "Calcipotriene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "psoriasis vulgaris",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 51,
-   "score": 0.1062,
-   "rawScore": 0.135875,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.3413,
-     "contribution": 0.135875,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.2732
-      },
-      {
-       "id": "literature",
-       "score": 0.0937
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL846",
    "name": "Calcitriol",
    "drugType": "Small molecule",
@@ -1875,8 +1991,11 @@
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 53,
-   "score": 0.1062,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 51,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -1904,18 +2023,22 @@
    ]
   },
   {
-   "id": "CHEMBL4297608",
-   "name": "Eldecalcitol",
+   "id": "CHEMBL1200666",
+   "name": "Calcipotriene",
    "drugType": "Small molecule",
    "approvedFor": [
-    "osteoporosis"
+    "psoriasis vulgaris",
+    "psoriasis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 54,
-   "score": 0.1062,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 52,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -1951,45 +2074,11 @@
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 55,
-   "score": 0.1062,
-   "rawScore": 0.135875,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.3413,
-     "contribution": 0.135875,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.2732
-      },
-      {
-       "id": "literature",
-       "score": 0.0937
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1601669",
-   "name": "Alfacalcidol",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "rank": 57,
-   "score": 0.1062,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 54,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -2029,8 +2118,11 @@
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 58,
-   "score": 0.1062,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 55,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -2058,18 +2150,61 @@
    ]
   },
   {
-   "id": "CHEMBL2356023",
-   "name": "Dihydrotachysterol",
+   "id": "CHEMBL1601669",
+   "name": "Alfacalcidol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 56,
+   "score": 0.1059,
+   "rawScore": 0.135875,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.3413,
+     "contribution": 0.135875,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.2732
+      },
+      {
+       "id": "literature",
+       "score": 0.0937
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297608",
+   "name": "Eldecalcitol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypocalcemia"
+    "osteoporosis"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
-   "rank": 59,
-   "score": 0.1062,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 58,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -2110,8 +2245,53 @@
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 59,
+   "score": 0.1059,
+   "rawScore": 0.135875,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.3413,
+     "contribution": 0.135875,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.2732
+      },
+      {
+       "id": "literature",
+       "score": 0.0937
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2356023",
+   "name": "Dihydrotachysterol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypocalcemia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 60,
-   "score": 0.1062,
+   "score": 0.1059,
    "rawScore": 0.135875,
    "geneCount": 1,
    "paths": [
@@ -2149,8 +2329,11 @@
    "mechanisms": [
     "Tyrosine-protein kinase SRC inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 61,
-   "score": 0.096,
+   "score": 0.0958,
    "rawScore": 0.123075,
    "geneCount": 1,
    "paths": [
@@ -2174,39 +2357,57 @@
    ]
   },
   {
-   "id": "CHEMBL2325741",
-   "name": "Capivasertib",
+   "id": "CHEMBL9194",
+   "name": "Atrasentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer"
+    "prostate cancer"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Serine/threonine-protein kinase AKT inhibitor"
+    "Endothelin receptor ET-A antagonist"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 62,
-   "score": 0.0808,
-   "rawScore": 0.103846,
-   "geneCount": 2,
+   "score": 0.0716,
+   "rawScore": 0.092557,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "NOS2",
-     "geneId": "ENSG00000007171",
-     "geneName": "nitric oxide synthase 2",
-     "assoc": 0.1404,
-     "contribution": 0.103846,
-     "drugsOnGene": 1,
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.1341,
+     "contribution": 0.058363,
+     "drugsOnGene": 8,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1404
+       "score": 0.1341
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EDNRB",
+     "geneId": "ENSG00000136160",
+     "geneName": "endothelin receptor type B",
+     "assoc": 0.079,
+     "contribution": 0.034194,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.079
       }
      ],
      "hops": 3,
-     "via": "AKT1",
-     "viaScore": 0.976
+     "via": "EDNRA",
+     "viaScore": 0.994
     }
    ]
   }
@@ -2225,6 +2426,26 @@
    "mechanisms": [
     "Hemoglobin HbA positive modulator"
    ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "higher rate of vaso-occlusive crisis (severe pain caused by sickled red blood cells blocking blood flow and oxygen delivery to tissues) in patients with sickle cell disease receiving Oxbryta compared to placebo. There were also more deaths"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "unfavourable imbalance in the number of vaso-occlusive crises and fatal events"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "higher occurrence of vaso-occlusive crises (VOC) during treatment. Higher number of deaths"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 2,
    "score": 1.0,
    "rawScore": 1.264843,
@@ -2317,8 +2538,11 @@
     "Nitric oxide synthase inhibitor",
     "Nitric oxide synthase inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 3,
-   "score": 0.5706,
+   "score": 0.5705,
    "rawScore": 0.722549,
    "geneCount": 3,
    "paths": [
@@ -2389,8 +2613,11 @@
     "Pyruvate kinase isozymes R/L activator",
     "Pyruvate kinase isozymes R/L activator"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 4,
-   "score": 0.5155,
+   "score": 0.5154,
    "rawScore": 0.65287,
    "geneCount": 1,
    "paths": [
@@ -2462,8 +2689,16 @@
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 5,
-   "score": 0.4975,
+   "score": 0.4974,
    "rawScore": 0.630145,
    "geneCount": 1,
    "paths": [
@@ -2542,8 +2777,32 @@
    "mechanisms": [
     "Cyclophilin A modulator"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 8,
-   "score": 0.3201,
+   "score": 0.3199,
    "rawScore": 0.406098,
    "geneCount": 1,
    "paths": [
@@ -2580,8 +2839,11 @@
     "Integrin alpha-IIb/beta-3 inhibitor",
     "Integrin alpha-V/beta-3 inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.3129,
+   "score": 0.3127,
    "rawScore": 0.39702,
    "geneCount": 3,
    "paths": [
@@ -2652,8 +2914,24 @@
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 11,
-   "score": 0.2738,
+   "score": 0.2736,
    "rawScore": 0.347647,
    "geneCount": 3,
    "paths": [
@@ -2724,8 +3002,11 @@
    "mechanisms": [
     "Integrin alpha-IIb/beta-3 inhibitor"
    ],
-   "rank": 15,
-   "score": 0.2396,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.2394,
    "rawScore": 0.304366,
    "geneCount": 2,
    "paths": [
@@ -2779,8 +3060,11 @@
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 16,
-   "score": 0.2057,
+   "score": 0.2055,
    "rawScore": 0.261588,
    "geneCount": 1,
    "paths": [
@@ -2820,8 +3104,16 @@
    "mechanisms": [
     "Adenosine deaminase inhibitor"
    ],
-   "rank": 18,
-   "score": 0.1861,
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.1859,
    "rawScore": 0.23688,
    "geneCount": 1,
    "paths": [
