@@ -49,6 +49,7 @@ async function boot() {
     } catch (_) { /* analysis is optional */ }
     renderChips();
     renderFootMeta(payload);
+    renderHeroStats(payload);
     stage.innerHTML = '<p class="empty">Search a disease above, or pick one of the examples.</p>';
   } catch (err) {
     stage.innerHTML = '<p class="empty">Could not load the disease index. If you opened this file directly, '
@@ -80,6 +81,21 @@ function renderFootMeta(payload) {
     `excluded evidence: ${payload.excludedDatatypes.join(', ')}`]);
   if (validation) bits.push(`${validation.knownPairsEvaluated} known drug-disease pairs used for validation`);
   $('#footmeta').textContent = bits.join(' · ');
+}
+
+function renderHeroStats(payload) {
+  // Real numbers standing in for the marketing stats a hero section usually
+  // carries -- pulled from the same data the rest of the page reads, so
+  // this can never drift out of sync with what the site actually measures.
+  const total = payload.diseasesInCache || index.length;
+  const hc = document.getElementById('heroCount');
+  if (hc) hc.textContent = `${total.toLocaleString()} diseases scored`;
+  const set = (id, text) => { const el = document.getElementById(id); if (el && text != null) el.textContent = text; };
+  set('statDiseases', total.toLocaleString());
+  if (validation) {
+    set('statPairs', validation.knownPairsEvaluated.toLocaleString());
+    if (validation.rareOnly) set('statRare', pct(validation.rareOnly.medianPercentile));
+  }
 }
 
 function renderAnalysis(a) {

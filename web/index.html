@@ -5,28 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Off The Shelf — drug repurposing candidates</title>
 <meta name="description" content="Finds already-approved drugs that could treat diseases with no good treatment, and shows the biology behind each suggestion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <h1>Off The Shelf</h1>
-    <p class="tagline">Type a disease. Get existing approved drugs that might treat it, each with the biology that explains why.</p>
+<header class="hero">
+  <div class="wrap wide navrow">
+    <span class="brand">Off the shelf</span>
+    <span class="herocount" id="heroCount">2,549 diseases scored</span>
+  </div>
+
+  <div class="wrap wide herogrid">
+    <div class="herotext">
+      <h1>Old drugs.<br>Diseases nobody's<br>tried them on.</h1>
+      <p class="tagline">Type a disease. Get ranked, already-approved drugs, each with the exact biological path connecting it to that disease.</p>
+
+      <div class="searchrow">
+        <label class="srch" for="q">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="q" type="text" placeholder="Search a disease, e.g. alkaptonuria" autocomplete="off" aria-label="Search a disease">
+        </label>
+        <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+      </div>
+
+      <div id="chips" class="chips"></div>
+    </div>
+
+    <div class="heroimg">
+      <img src="assets/dna-hero.jpg" alt="3D render of a DNA double helix">
+      <div class="callout c1">
+        <span class="lead"></span>
+        <span class="cnum" id="statDiseases">—</span>
+        <span class="clabel">diseases scored</span>
+      </div>
+      <div class="callout c2">
+        <span class="lead"></span>
+        <span class="cnum" id="statPairs">—</span>
+        <span class="clabel">known pairs tested</span>
+      </div>
+      <div class="callout c3">
+        <span class="lead"></span>
+        <span class="cnum" id="statRare">—</span>
+        <span class="clabel">rare-disease median</span>
+      </div>
+    </div>
   </div>
 </header>
 
+<div class="dark">
 <main class="wrap">
-
-  <div class="searchrow">
-    <label class="srch" for="q">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-      <input id="q" type="text" placeholder="Search a disease" autocomplete="off" aria-label="Search a disease">
-    </label>
-    <ul id="suggest" class="suggest" role="listbox" hidden></ul>
-  </div>
-
-  <div id="chips" class="chips"></div>
 
   <section id="stage" class="stage">
     <p class="loading">Loading disease index…</p>
@@ -57,6 +87,7 @@
     <p class="meta" id="footmeta"></p>
   </div>
 </footer>
+</div>
 
 <script src="app.js"></script>
 </body>
