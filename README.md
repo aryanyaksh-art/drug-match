@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="web/assets/dna-hero.jpg" alt="Textured 3D render of a DNA double helix" width="100%">
+</p>
+
 # Off The Shelf
+
+**[Live site: off-the-shelf-phi.vercel.app](https://off-the-shelf-phi.vercel.app)** · [How it works](#how-the-ranking-works) · [Does it work?](#does-it-work) · [License: MIT](LICENSE)
 
 Finds already-approved drugs that could treat diseases with no good treatment, and shows the biology behind each suggestion.
 
@@ -12,7 +18,7 @@ Built for the TFSS HOSA club, Biotechnology prompt.
 
 Making a new drug takes over a decade. Meanwhile roughly two thousand drugs are already approved and already proven safe in people. For some disease with no treatment, one of them might already work and nobody has checked.
 
-You cannot test every drug against every disease, so you need a way to guess which pairs deserve a scientist's time. Drugs work by hitting genes; diseases are linked to genes; so a drug that hits a gene linked to a disease is worth a look.
+You cannot test every drug against every disease, so you need a way to guess which pairs deserve a scientist's time. Drugs work by hitting genes. Diseases are linked to genes. A drug that hits a gene linked to a disease is worth a look.
 
 ## How the ranking works
 
@@ -31,17 +37,17 @@ score(drug, disease) = Σ   assoc(gene, disease)
                             deg(drug)^0.4 · deg(gene)^0.4
 ```
 
-A gene that hundreds of drugs hit, or a drug that hits hundreds of genes, carries almost no information because everything connects through it. So each path is damped by the connectivity of the nodes it crosses. `w = 0.4` is the damping exponent published in Project Rephetio. Nothing is trained — it is a fixed formula, not a fitted model.
+A gene that hundreds of drugs hit, or a drug that hits hundreds of genes, carries almost no information because everything connects through it. So each path is damped by the connectivity of the nodes it crosses. `w = 0.4` is the damping exponent published in Project Rephetio. Nothing is trained. It is a fixed formula, not a fitted model.
 
 ### Why the third hop exists
 
 The gene that causes a rare disease usually has no drug against it. That is a large part of why the disease has no treatment. Alkaptonuria is caused by a broken HGD gene, and HGD has zero approved drugs. Rett syndrome's MECP2 has zero.
 
-So a method that only looks at a disease's own genes finds nothing for exactly the diseases this project is about. Allowing one protein-interaction step fixes that: HGD interacts at 0.999 with HPD, and HPD's drug is nitisinone — the real approved treatment for alkaptonuria, which works by inhibiting HPD one step upstream of the broken enzyme.
+So a method that only looks at a disease's own genes finds nothing for exactly the diseases this project is about. Allowing one protein-interaction step fixes that: HGD interacts at 0.999 with HPD, and HPD's drug is nitisinone, the real approved treatment for alkaptonuria, which works by inhibiting HPD one step upstream of the broken enzyme.
 
 Adding that hop moved nitisinone from rank 27 of 33 to **rank 2 of 119**.
 
-Measured across every disease rather than that one case, the hop helps, and more clearly at this scale — 650 diseases improve, 456 worsen. The benefit still concentrates where the reasoning said it should:
+Measured across every disease rather than that one case, the hop helps, and more clearly at this scale: 650 diseases improve, 456 worsen. The benefit still concentrates where the reasoning said it should:
 
 | group | direct paths only | with the hop | change |
 |---|---|---|---|
@@ -49,7 +55,7 @@ Measured across every disease rather than that one case, the hop helps, and more
 | common | 33.3% | 30.5% | −2.9% |
 | auto-selected | 39.4% | 38.1% | −1.3% |
 
-Rare diseases still gain roughly twice what common ones do, holding steady across every scale we've tested — 68 curated rare diseases, then 100, then thousands of auto-selected ones added around them.
+Rare diseases still gain roughly twice what common ones do, holding steady across every scale we've tested: 68 curated rare diseases, then 100, then thousands of auto-selected ones added around them.
 
 Longer paths are not penalised by an invented constant. They damp naturally, because the interaction score is always below 1 and the third node introduces another degree term.
 
@@ -65,7 +71,7 @@ This is also why no train/test split is needed: there are no fitted parameters t
 
 ## Does it work?
 
-Measured against **16,197 drug–disease pairs already known to work**, across 1,682 diseases (of 2,549 total — the rest had no known drug reach the candidate pool). Three rankings are compared over the identical candidate pool:
+Measured against **16,197 drug–disease pairs already known to work**, across 1,682 diseases (of 2,549 total; the rest had no known drug reach the candidate pool). Three rankings are compared over the identical candidate pool:
 
 | method | top 5% | top 10% | top 25% | median |
 |---|---|---|---|---|
@@ -74,13 +80,13 @@ Measured against **16,197 drug–disease pairs already known to work**, across 1
 | popularity, disease ignored | 4.0% | 8.4% | 20.8% | 58.0% |
 | random | 5.0% | 10.0% | 25.0% | 50.0% |
 
-Popularity — ranking drugs by how many genes they hit, ignoring the disease entirely — still does **worse than random** at 4.5x the scale. So the biology is doing the work, not the arithmetic.
+Popularity, ranking drugs by how many genes they hit while ignoring the disease entirely, still does **worse than random** at 4.5x the scale. So the biology is doing the work, not the arithmetic.
 
 Bootstrapping over diseases puts the median at **37.1%, 95% CI [35.6%, 38.3%]**. The interval excludes random.
 
 For **196 of 1,682** diseases the single top-ranked candidate is already a real treatment, and for **527 of 1,682** one appears in the top five.
 
-**Rare diseases remain the best-served group**, at a 27.0% median against 37.1% overall — the gap has held steady across every sample size we've tried.
+**Rare diseases remain the best-served group**, at a 27.0% median against 37.1% overall. The gap has held steady across every sample size we've tried.
 
 ### The headline keeps getting worse as the sample grows, on purpose
 
@@ -91,7 +97,7 @@ For **196 of 1,682** diseases the single top-ranked candidate is already a real 
 | 1,887 (100 curated + 1,787 auto-selected) | 36.8% |
 | 2,549 (100 curated + 2,449 auto-selected, 18 areas, no cap) | **37.1%** |
 
-Every disease added past the curated 100 was added by a rule fixed in advance, not by us. The rule cannot tell whether a disease is easy or hard for the method — it only checks that enough data exists to test on. So the honest trend is that our curated set was flattering the result, and the number moves toward the truth as more of that flattery is diluted out. We are showing the whole trend rather than only the final number.
+Every disease added past the curated 100 was added by a rule fixed in advance, not by us. The rule cannot tell whether a disease is easy or hard for the method. It only checks that enough data exists to test on. So the honest trend is that our curated set was flattering the result, and the number moves toward the truth as more of that flattery is diluted out. We are showing the whole trend rather than only the final number.
 
 What does **not** move as the sample grows: popularity stays worse than random, damping still helps over no damping, rare diseases stay the best-served group, and alkaptonuria and Huntington remain the same two demos.
 
@@ -103,12 +109,12 @@ What does **not** move as the sample grows: popularity stays worse than random, 
 | common, hand-curated | 2 of 32 (6%) |
 | auto-selected | 546 of 1,593 (34%) |
 
-We tested *why* the auto-selected set does worse. The first guess was that broad ontology terms are categories rather than diseases — "cancer" is not a thing you treat — and that breadth would explain the failures. **That guess was wrong.** Bucketing every disease by how many genes are associated with it, the sparsest quartile does worst (40.1% at ~50-390 genes) and the richest quartile does best (35.3% at 2,500+ genes). The trend has held, and sharpened slightly, at every scale we've tested (a 4.8-point gap now, vs 2.8 at 420 diseases) — it runs the opposite direction from the breadth guess. The limiting factor is how much is known about a disease, not how broadly it is named — and that also explains why our curated set looked good in the first place: Duchenne has 2,533 associated genes, alkaptonuria 441. We had unknowingly picked well-studied diseases.
+We tested *why* the auto-selected set does worse. The first guess was that broad ontology terms are categories rather than diseases. "Cancer" is not a thing you treat, and we thought that breadth would explain the failures. **That guess was wrong.** Bucketing every disease by how many genes are associated with it, the sparsest quartile does worst (40.1% at ~50-390 genes) and the richest quartile does best (35.3% at 2,500+ genes). The trend has held, and sharpened slightly, at every scale we've tested (a 4.8-point gap now, vs 2.8 at 420 diseases). It runs the opposite direction from the breadth guess. The limiting factor is how much is known about a disease, not how broadly it is named. That also explains why our curated set looked good in the first place: Duchenne has 2,533 associated genes, alkaptonuria 441. We had unknowingly picked well-studied diseases.
 
 Two further honest notes, updated at this scale:
 
-- **The literature-leak concern kept shrinking as the sample grew, and is now essentially gone.** At 100 diseases removing all literature-derived evidence cost 4.7 points; at 1,887 it cost 0.7; at 2,549 it costs 0.2. The datatype that now matters most is `genetic_association`, not text mining. We are reporting the shift rather than picking whichever run supports the cleaner story — the honest read is that the original worry was mostly small-sample noise.
-- **The negative control keeps tightening toward a clean 50% as the sample grows** — 42.5% at 100 diseases, 44.2% at 420, 46.3% at 1,887, 46.2% at 2,549 — consistent with the small-sample gap being partly noise from diseases sharing common treatments in a smaller pool.
+- **The literature-leak concern kept shrinking as the sample grew, and is now essentially gone.** At 100 diseases removing all literature-derived evidence cost 4.7 points; at 1,887 it cost 0.7; at 2,549 it costs 0.2. At this scale, `animal_model` is the single datatype whose removal hurts the score most, though the effect is tiny (0.6 points). Removing `genetic_association` actually improves the median slightly (2.2 points), which is a real, mildly surprising finding worth sitting with rather than a mistake we are correcting. No datatype dominates the ranking anymore. We are reporting the shift rather than picking whichever run supports the cleaner story. The honest read is that the original worry was mostly small-sample noise.
+- **The negative control keeps tightening toward a clean 50% as the sample grows**, 42.5% at 100 diseases, 44.2% at 420, 46.3% at 1,887, 46.2% at 2,549. That is consistent with the small-sample gap being partly noise from diseases sharing common treatments in a smaller pool.
 
 Run `python pipeline/analysis.py` to reproduce all of this.
 
@@ -176,7 +182,7 @@ Then serve the site:
 cd web && python -m http.server
 ```
 
-`fetch.py` is resumable — it skips anything already cached, so a failed run can just be re-run. A cold run takes about ten minutes.
+`fetch.py` is resumable. It skips anything already cached, so a failed run can just be re-run. A cold run takes about ten minutes.
 
 The web app reads **only** precomputed JSON. It never calls an API, so it works with the wifi off. That is deliberate: a demo should not be able to fail because of a venue's network.
 
@@ -200,11 +206,11 @@ diagrams/              SVG diagrams for the presentation
 CITATIONS.md           sources, verified rather than recalled
 ```
 
-The set is 2,549 diseases: 68 rare and 32 common that we chose, plus 2,449 selected programmatically — every disease under 18 therapeutic areas meeting the rule, with no cap. The common ones are included for **validation density** — rare diseases have too few known approved drugs to measure ranking quality against on their own.
+The set is 2,549 diseases: 68 rare and 32 common that we chose, plus 2,449 selected programmatically, every disease under 18 therapeutic areas meeting the rule, with no cap. The common ones are included for **validation density**: rare diseases have too few known approved drugs to measure ranking quality against on their own.
 
-The 2,449 are chosen by `select_diseases.py`, which screens all 17,940 diseases under 18 therapeutic areas against a rule written down before any result was seen: at least 50 associated genes and at least one known drug. There is no cap — every disease meeting the rule is included, so there is no cut that could be mistaken for a quality filter. The point is that nobody can ask whether we picked diseases we knew would work, because we did not pick them at all.
+The 2,449 are chosen by `select_diseases.py`, which screens all 17,940 diseases under 18 therapeutic areas against a rule written down before any result was seen: at least 50 associated genes and at least one known drug. There is no cap. Every disease meeting the rule is included, so there is no cut that could be mistaken for a quality filter. The point is that nobody can ask whether we picked diseases we knew would work, because we did not pick them at all.
 
-The area list started at 10 and grew to 18 (adding skin, eye, endocrine, urinary, reproductive, hematologic and ear disorders) once we went looking for more coverage. That pass also caught a real bug: one area id had been mislabeled "immune system disease" while actually pointing at respiratory system disorder, so immune system disease was never really screened as its own category until it was fixed. Separately, three other ids that worked in an earlier run started returning nothing at all — Open Targets appears to periodically merge or deprecate ontology terms, so an id that resolves today is not guaranteed to keep resolving. Re-resolved to their current equivalents rather than silently dropping those areas.
+The area list started at 10 and grew to 18 (adding skin, eye, endocrine, urinary, reproductive, hematologic and ear disorders) once we went looking for more coverage. That pass also caught a real bug: one area id had been mislabeled "immune system disease" while actually pointing at respiratory system disorder, so immune system disease was never really screened as its own category until it was fixed. Separately, three other ids that worked in an earlier run started returning nothing at all. Open Targets appears to periodically merge or deprecate ontology terms, so an id that resolves today is not guaranteed to keep resolving. Re-resolved to their current equivalents rather than silently dropping those areas.
 
 The website ships a bounded subset of the auto-selected diseases (data is ~65KB per disease; shipping all 2,449 would mean a multi-hundred-megabyte deployment for no benefit to someone searching it). Validation and every analysis figure use the full 2,549. The site footer states both numbers so nobody mistakes what is browsable for what was measured.
 
