@@ -16,6 +16,7 @@
    "name": "Suramin",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Acidic fibroblast growth factor inhibitor"
@@ -106,13 +107,14 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -211,13 +213,14 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -316,6 +319,118 @@
    ]
   },
   {
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
+   "score": 0.5874,
+   "rawScore": 1.84699,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.9993,
+     "contribution": 0.643938,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9369
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.825
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.814
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6559
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ABCB11",
+     "geneId": "ENSG00000073734",
+     "geneName": "ATP binding cassette subfamily B member 11",
+     "assoc": 0.9998,
+     "contribution": 0.470686,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9556
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9173
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6835
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.5693
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "SLC10A2",
+     "geneId": "ENSG00000125255",
+     "geneName": "solute carrier family 10 member 2",
+     "assoc": 0.7128,
+     "contribution": 0.419799,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.2675
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.914
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1551",
    "name": "Ursodiol",
    "drugType": "Small molecule",
@@ -324,6 +439,7 @@
     "primary biliary cholangitis",
     "biliary liver cirrhosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
@@ -331,7 +447,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
+   "rank": 5,
    "score": 0.5874,
    "rawScore": 1.84699,
    "geneCount": 1,
@@ -430,6 +546,7 @@
     "biliary liver cirrhosis",
     "cholangitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
@@ -445,117 +562,6 @@
     }
    ],
    "withdrawn": true,
-   "blackBox": true,
-   "rank": 5,
-   "score": 0.5874,
-   "rawScore": 1.84699,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.9993,
-     "contribution": 0.643938,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9369
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.825
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.814
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6559
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ABCB11",
-     "geneId": "ENSG00000073734",
-     "geneName": "ATP binding cassette subfamily B member 11",
-     "assoc": 0.9998,
-     "contribution": 0.470686,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9556
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9173
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6835
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.5693
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.964
-    },
-    {
-     "gene": "SLC10A2",
-     "geneId": "ENSG00000125255",
-     "geneName": "solute carrier family 10 member 2",
-     "assoc": 0.7128,
-     "contribution": 0.419799,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.2675
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.914
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": false,
    "blackBox": true,
    "rank": 6,
    "score": 0.5874,
@@ -655,6 +661,7 @@
     "viral infectious disease",
     "hepatitis D virus infection"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Bile acid transporter inhibitor"
@@ -745,6 +752,7 @@
     "cancer",
     "intrahepatic cholangiocarcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Fibroblast growth factor receptor inhibitor"
@@ -753,6 +761,113 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
+   "score": 0.3262,
+   "rawScore": 1.060477,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGFR4",
+     "geneId": "ENSG00000160867",
+     "geneName": "fibroblast growth factor receptor 4",
+     "assoc": 0.887,
+     "contribution": 0.292587,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7021
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.6206
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.9974,
+     "contribution": 0.237875,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9679
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.6505
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.409
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.7895,
+     "contribution": 0.19737,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3198
+      },
+      {
+       "id": "literature",
+       "score": 0.2804
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cholangiocarcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
    "score": 0.3262,
    "rawScore": 1.060477,
    "geneCount": 4,
@@ -852,114 +967,9 @@
     "urothelial carcinoma",
     "urinary bladder carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 9,
-   "score": 0.3262,
-   "rawScore": 1.060477,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGFR4",
-     "geneId": "ENSG00000160867",
-     "geneName": "fibroblast growth factor receptor 4",
-     "assoc": 0.887,
-     "contribution": 0.292587,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7021
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6206
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.9974,
-     "contribution": 0.237875,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9679
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.6505
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.409
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.7895,
-     "contribution": 0.19737,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3198
-      },
-      {
-       "id": "literature",
-       "score": 0.2804
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "cholangiocarcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
@@ -1065,6 +1075,7 @@
     "systemic sclerosis",
     "interstitial lung disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Platelet-derived growth factor receptor inhibitor",
@@ -1172,6 +1183,7 @@
     "biliary tract cancer",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 inhibitor",
@@ -1277,6 +1289,7 @@
     "neoplasm",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Fibroblast growth factor receptor 3 inhibitor",
@@ -1382,6 +1395,7 @@
     "neoplasm",
     "colorectal cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Discoidin domain-containing receptor 2 inhibitor",
@@ -1497,6 +1511,7 @@
    "approvedFor": [
     "Pruritus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
@@ -1567,14 +1582,18 @@
    ]
   },
   {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
+   "id": "CHEMBL4297588",
+   "name": "Odevixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Constipation"
+    "progressive familial intrahepatic cholestasis",
+    "Pruritus",
+    "Alagille syndrome"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
+    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -1642,17 +1661,15 @@
    ]
   },
   {
-   "id": "CHEMBL4297588",
-   "name": "Odevixibat",
+   "id": "CHEMBL3039515",
+   "name": "Elobixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "progressive familial intrahepatic cholestasis",
-    "Pruritus",
-    "Alagille syndrome"
+    "Constipation"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
-    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -1720,29 +1737,33 @@
    ]
   },
   {
-   "id": "CHEMBL43452",
-   "name": "Pomalidomide",
+   "id": "CHEMBL468",
+   "name": "Thalidomide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
     "plasma cell myeloma",
-    "systemic sclerosis"
+    "immune system disorder"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
      "detail": "teratogenicity"
     },
     {
      "type": "Black Box Warning",
-     "detail": "vascular toxicity"
+     "detail": "teratogenicity"
     }
    ],
-   "withdrawn": false,
+   "withdrawn": true,
    "blackBox": true,
    "rank": 18,
    "score": 0.2323,
@@ -1844,6 +1865,7 @@
     "plasma cell myeloma",
     "immune system disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "CRL4(CRBN) E3 ubiquitin ligase modulator",
@@ -1964,32 +1986,30 @@
    ]
   },
   {
-   "id": "CHEMBL468",
-   "name": "Thalidomide",
+   "id": "CHEMBL43452",
+   "name": "Pomalidomide",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
     "plasma cell myeloma",
-    "immune system disorder"
+    "systemic sclerosis"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Withdrawn",
      "detail": "teratogenicity"
     },
     {
      "type": "Black Box Warning",
-     "detail": "teratogenicity"
+     "detail": "vascular toxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
    "rank": 20,
    "score": 0.2323,
@@ -2091,6 +2111,7 @@
     "breast neoplasm",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Cyclin-dependent kinase 4/cyclin D1 inhibitor",
@@ -2174,6 +2195,7 @@
    "name": "Conbercept",
    "drugType": "Protein",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Vascular endothelial growth factor B inhibitor",
@@ -2274,6 +2296,7 @@
     "follicular lymphoma",
     "non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor",
@@ -2347,6 +2370,7 @@
    "approvedFor": [
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "AMP-activated protein kinase, AMPK activator"
@@ -2420,15 +2444,18 @@
    ]
   },
   {
-   "id": "CHEMBL2110732",
-   "name": "Dacomitinib Anhydrous",
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2523,6 +2550,7 @@
     "neoplasm",
     "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Receptor protein-tyrosine kinase erbB-4 inhibitor",
@@ -2615,17 +2643,16 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2713,13 +2740,14 @@
    ]
   },
   {
-   "id": "CHEMBL2108081",
-   "name": "Trafermin",
+   "id": "CHEMBL1201821",
+   "name": "Palifermin",
    "drugType": "Protein",
    "approvedFor": [
-    "Skin ulcer",
-    "periodontitis"
+    "mucositis",
+    "oral mucositis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
@@ -2793,13 +2821,14 @@
    ]
   },
   {
-   "id": "CHEMBL1201821",
-   "name": "Palifermin",
+   "id": "CHEMBL2108081",
+   "name": "Trafermin",
    "drugType": "Protein",
    "approvedFor": [
-    "mucositis",
-    "oral mucositis"
+    "Skin ulcer",
+    "periodontitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
@@ -2881,6 +2910,7 @@
     "cholangiocarcinoma",
     "acute myeloid leukemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
@@ -2937,6 +2967,7 @@
     "acute myeloid leukemia",
     "acute myeloid leukemia by FAB classification"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
@@ -2999,6 +3030,7 @@
     "breast carcinoma",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -3045,6 +3077,7 @@
    "approvedFor": [
     "breast neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -3093,6 +3126,7 @@
     "neoplasm",
     "hepatocellular carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase RAF inhibitor",
@@ -3202,6 +3236,7 @@
     "bone disorder",
     "hypophosphatemic rickets"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Fibroblast growth factor 23 inhibitor"
@@ -3247,6 +3282,7 @@
     "immune system disorder",
     "psoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
@@ -3287,15 +3323,14 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -3335,13 +3370,16 @@
    ]
   },
   {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -3390,6 +3428,7 @@
     "neoplasm",
     "tumor of meninges"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor"
@@ -3500,6 +3539,7 @@
     "low grade glioma",
     "glioma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "RAF serine/threonine protein kinase inhibitor"

@@ -20,6 +20,7 @@
     "Seizure",
     "anemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Glutamate [NMDA] receptor antagonist"
@@ -36,7 +37,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 3,
+   "rank": 5,
    "score": 0.6995,
    "rawScore": 2.662292,
    "geneCount": 7,
@@ -117,6 +118,7 @@
    "approvedFor": [
     "alcohol dependence"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Glutamate [NMDA] receptor antagonist",
@@ -200,28 +202,113 @@
    ]
   },
   {
-   "id": "CHEMBL1256841",
-   "name": "Nialamide",
+   "id": "CHEMBL3989843",
+   "name": "Tranylcypromine",
    "drugType": "Small molecule",
    "approvedFor": [
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
-     "type": "Withdrawn",
-     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.3261,
+   "rawScore": 1.247172,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.9115,
+     "contribution": 0.264724,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9115
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BCHE",
+     "geneId": "ENSG00000114200",
+     "geneName": "butyrylcholinesterase",
+     "assoc": 0.8311,
+     "contribution": 0.195275,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8311
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.809
+    },
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.9529,
+     "contribution": 0.190851,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8087
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7513
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0094
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1909286",
+   "name": "Phenoxypropazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
     {
      "type": "Withdrawn",
      "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -230,7 +317,95 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
+   "score": 0.3261,
+   "rawScore": 1.247172,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.9115,
+     "contribution": 0.264724,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9115
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BCHE",
+     "geneId": "ENSG00000114200",
+     "geneName": "butyrylcholinesterase",
+     "assoc": 0.8311,
+     "contribution": 0.195275,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8311
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.809
+    },
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.9529,
+     "contribution": 0.190851,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8087
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7513
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0094
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1909283",
+   "name": "Mebanazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.3261,
    "rawScore": 1.247172,
    "geneCount": 2,
@@ -304,194 +479,12 @@
     "depressive disorder",
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "psychiatric toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 13,
-   "score": 0.3261,
-   "rawScore": 1.247172,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.9115,
-     "contribution": 0.264724,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9115
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "BCHE",
-     "geneId": "ENSG00000114200",
-     "geneName": "butyrylcholinesterase",
-     "assoc": 0.8311,
-     "contribution": 0.195275,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8311
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.809
-    },
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.9529,
-     "contribution": 0.190851,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8087
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7513
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0094
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.91
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201168",
-   "name": "Isocarboxazid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder",
-    "depressive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
-   "rank": 14,
-   "score": 0.3261,
-   "rawScore": 1.247172,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.9115,
-     "contribution": 0.264724,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9115
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "BCHE",
-     "geneId": "ENSG00000114200",
-     "geneName": "butyrylcholinesterase",
-     "assoc": 0.8311,
-     "contribution": 0.195275,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8311
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.809
-    },
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.9529,
-     "contribution": 0.190851,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8087
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7513
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0094
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.91
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3989843",
-   "name": "Tranylcypromine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "psychiatric toxicity"
@@ -566,99 +559,29 @@
    ]
   },
   {
-   "id": "CHEMBL673",
-   "name": "Pargyline",
+   "id": "CHEMBL1256841",
+   "name": "Nialamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
+    "major depressive disorder"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.3261,
-   "rawScore": 1.247172,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAOB",
-     "geneId": "ENSG00000069535",
-     "geneName": "monoamine oxidase B",
-     "assoc": 0.9115,
-     "contribution": 0.264724,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9115
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "BCHE",
-     "geneId": "ENSG00000114200",
-     "geneName": "butyrylcholinesterase",
-     "assoc": 0.8311,
-     "contribution": 0.195275,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8311
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.809
-    },
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.9529,
-     "contribution": 0.190851,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8087
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7513
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0094
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.91
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909286",
-   "name": "Phenoxypropazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
      "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+    },
+    {
+     "type": "Withdrawn",
      "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -667,7 +590,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 17,
+   "rank": 16,
    "score": 0.3261,
    "rawScore": 1.247172,
    "geneCount": 2,
@@ -740,6 +663,7 @@
    "approvedFor": [
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
@@ -747,6 +671,97 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 17,
+   "score": 0.3261,
+   "rawScore": 1.247172,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAOB",
+     "geneId": "ENSG00000069535",
+     "geneName": "monoamine oxidase B",
+     "assoc": 0.9115,
+     "contribution": 0.264724,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9115
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BCHE",
+     "geneId": "ENSG00000114200",
+     "geneName": "butyrylcholinesterase",
+     "assoc": 0.8311,
+     "contribution": 0.195275,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8311
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.809
+    },
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.9529,
+     "contribution": 0.190851,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8087
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7513
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0094
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.91
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201168",
+   "name": "Isocarboxazid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "major depressive disorder",
+    "depressive disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 18,
    "score": 0.3261,
    "rawScore": 1.247172,
@@ -814,25 +829,20 @@
    ]
   },
   {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
+   "id": "CHEMBL673",
+   "name": "Pargyline",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Hepatotoxicity; Drug Interaction"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 19,
    "score": 0.3261,
@@ -909,6 +919,7 @@
     "pheochromocytoma",
     "adrenal gland pheochromocytoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Tyrosine 3-hydroxylase inhibitor"
@@ -984,6 +995,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Apoptosis regulator Bcl-W inhibitor",
@@ -1069,6 +1081,7 @@
    "approvedFor": [
     "metachromatic leukodystrophy"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "ARSA exogenous gene"
@@ -1122,6 +1135,7 @@
     "mastocytosis",
     "mast cell leukemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Tyrosine-protein kinase receptor FLT3 inhibitor",
@@ -1233,6 +1247,7 @@
     "depressive disorder",
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Dopamine D1 and D2 receptor agonist",
@@ -1328,6 +1343,7 @@
    "approvedFor": [
     "amyotrophic lateral sclerosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "SOD1 mRNA antisense inhibitor"
@@ -1381,6 +1397,7 @@
     "Gaucher disease type 1",
     "Niemann-Pick disease type C"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
@@ -1427,6 +1444,7 @@
    "approvedFor": [
     "Gaucher disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
@@ -1471,6 +1489,7 @@
    "name": "Regadenoson Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Adenosine A2a receptor agonist"
@@ -1478,7 +1497,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 35,
    "score": 0.182,
    "rawScore": 0.701082,
    "geneCount": 1,
@@ -1528,6 +1547,7 @@
    "name": "Proxibarbal",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Diamine oxidase activator",
@@ -1612,10 +1632,89 @@
    ]
   },
   {
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein disrupting agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.1788,
+   "rawScore": 0.688797,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.9529,
+     "contribution": 0.388631,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8087
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7513
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.0094
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.937
+    },
+    {
+     "gene": "MAPT",
+     "geneId": "ENSG00000186868",
+     "geneName": "microtubule associated protein tau",
+     "assoc": 0.9999,
+     "contribution": 0.300166,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9909
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8275
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.825
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5784
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
    "id": "CHEMBL149082",
    "name": "Tramiprosate",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Amyloid-beta A4 protein stabiliser"
@@ -1685,83 +1784,6 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.1788,
-   "rawScore": 0.688797,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.9529,
-     "contribution": 0.388631,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8087
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7513
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.0094
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.937
-    },
-    {
-     "gene": "MAPT",
-     "geneId": "ENSG00000186868",
-     "geneName": "microtubule associated protein tau",
-     "assoc": 0.9999,
-     "contribution": 0.300166,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9909
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8275
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.825
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5784
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.995
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3039540",
    "name": "Aducanumab",
    "drugType": "Antibody",
@@ -1769,6 +1791,7 @@
     "Alzheimer disease",
     "dementia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Amyloid-beta A4 protein binding agent"
@@ -1781,7 +1804,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 41,
+   "rank": 40,
    "score": 0.1788,
    "rawScore": 0.688797,
    "geneCount": 1,
@@ -1850,6 +1873,7 @@
     "obesity disorder",
     "Obesity"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Cannabinoid CB1 receptor antagonist"
@@ -1917,6 +1941,7 @@
     "Tourette syndrome",
     "Tics"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Dopamine receptor antagonist",
@@ -1992,22 +2017,20 @@
    ]
   },
   {
-   "id": "CHEMBL2105345",
-   "name": "Propanidid",
+   "id": "CHEMBL95",
+   "name": "Tacrine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "dementia",
+    "Alzheimer disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
-    "Acetylcholinesterase inhibitor",
-    "Butyrylcholinesterase inhibitor"
+    "Cholinesterases; ACHE & BCHE inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "immune system toxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 49,
    "score": 0.1616,
@@ -2059,19 +2082,23 @@
    ]
   },
   {
-   "id": "CHEMBL95",
-   "name": "Tacrine",
+   "id": "CHEMBL2105345",
+   "name": "Propanidid",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "dementia",
-    "Alzheimer disease"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
-    "Cholinesterases; ACHE & BCHE inhibitor"
+    "Acetylcholinesterase inhibitor",
+    "Butyrylcholinesterase inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 50,
    "score": 0.1616,
@@ -2129,6 +2156,7 @@
    "approvedFor": [
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Dopamine receptor antagonist",
@@ -2217,6 +2245,7 @@
     "bipolar disorder",
     "psychotic disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "D2-like dopamine receptor antagonist"
@@ -2224,7 +2253,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 56,
+   "rank": 54,
    "score": 0.144,
    "rawScore": 0.556856,
    "geneCount": 3,
@@ -2296,6 +2325,7 @@
     "Wolff-Parkinson-White syndrome",
     "Paroxysmal supraventricular tachycardia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Adenosine receptor agonist"
@@ -2303,7 +2333,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 59,
+   "rank": 58,
    "score": 0.1428,
    "rawScore": 0.552313,
    "geneCount": 4,
@@ -2373,6 +2403,7 @@
     "Agitation",
     "psychotic disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
@@ -2450,6 +2481,7 @@
    "approvedFor": [
     "schizophrenia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "D2-like dopamine receptor inverse agonist",
@@ -2526,6 +2558,95 @@
    ]
   },
   {
+   "id": "CHEMBL1108",
+   "name": "Droperidol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Nausea",
+    "Nausea and vomiting",
+    "psychotic disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "D2-like dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 62,
+   "score": 0.138,
+   "rawScore": 0.534302,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8061,
+     "contribution": 0.131716,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8061
+      }
+     ],
+     "hops": 3,
+     "via": "DRD4",
+     "viaScore": 0.943
+    },
+    {
+     "gene": "DRD3",
+     "geneId": "ENSG00000151577",
+     "geneName": "dopamine receptor D3",
+     "assoc": 0.8061,
+     "contribution": 0.127751,
+     "drugsOnGene": 25,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8061
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DRD2",
+     "geneId": "ENSG00000149295",
+     "geneName": "dopamine receptor D2",
+     "assoc": 0.9421,
+     "contribution": 0.098905,
+     "drugsOnGene": 70,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9077
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3725
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL54",
    "name": "Haloperidol",
    "drugType": "Small molecule",
@@ -2535,6 +2656,7 @@
     "schizophrenia",
     "psychotic disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Serotonin 2a (5-HT2a) receptor antagonist",
@@ -2557,7 +2679,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 62,
+   "rank": 63,
    "score": 0.138,
    "rawScore": 0.534302,
    "geneCount": 4,
@@ -2629,6 +2751,7 @@
     "mental disorder",
     "schizophrenia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
@@ -2642,94 +2765,6 @@
     }
    ],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 63,
-   "score": 0.138,
-   "rawScore": 0.534302,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8061,
-     "contribution": 0.131716,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8061
-      }
-     ],
-     "hops": 3,
-     "via": "DRD4",
-     "viaScore": 0.943
-    },
-    {
-     "gene": "DRD3",
-     "geneId": "ENSG00000151577",
-     "geneName": "dopamine receptor D3",
-     "assoc": 0.8061,
-     "contribution": 0.127751,
-     "drugsOnGene": 25,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8061
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "DRD2",
-     "geneId": "ENSG00000149295",
-     "geneName": "dopamine receptor D2",
-     "assoc": 0.9421,
-     "contribution": 0.098905,
-     "drugsOnGene": 70,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9077
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3725
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1108",
-   "name": "Droperidol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Nausea",
-    "Nausea and vomiting",
-    "psychotic disorder"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": true,
    "blackBox": true,
    "rank": 64,
    "score": 0.138,
@@ -2801,6 +2836,7 @@
     "psychotic disorder",
     "schizophrenia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
@@ -2899,6 +2935,7 @@
     "bipolar disorder",
     "depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
@@ -2976,29 +3013,24 @@
    ]
   },
   {
-   "id": "CHEMBL831",
-   "name": "Loxapine",
+   "id": "CHEMBL422",
+   "name": "Trifluoperazine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Agitation",
-    "bipolar I disorder",
     "psychotic disorder",
     "schizophrenia"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
-    "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist"
+    "Serotonin 2a (5-HT2a) receptor antagonist",
+    "Serotonin 2c (5-HT2c) receptor antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
      "detail": null
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
     }
    ],
    "withdrawn": false,
@@ -3066,23 +3098,30 @@
    ]
   },
   {
-   "id": "CHEMBL422",
-   "name": "Trifluoperazine",
+   "id": "CHEMBL831",
+   "name": "Loxapine",
    "drugType": "Small molecule",
    "approvedFor": [
+    "Agitation",
+    "bipolar I disorder",
     "psychotic disorder",
     "schizophrenia"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "D2-like dopamine receptor antagonist",
-    "Serotonin 2a (5-HT2a) receptor antagonist",
-    "Serotonin 2c (5-HT2c) receptor antagonist"
+    "D2-like dopamine receptor antagonist",
+    "Serotonin 2a (5-HT2a) receptor antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
      "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
     }
    ],
    "withdrawn": false,
@@ -3157,6 +3196,7 @@
     "alcohol dependence",
     "parasitic infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Aldehyde dehydrogenase inhibitor"
@@ -3203,6 +3243,7 @@
     "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
@@ -3314,6 +3355,7 @@
     "Alzheimer disease",
     "dementia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator"
@@ -3396,99 +3438,11 @@
    ]
   },
   {
-   "id": "CHEMBL660",
-   "name": "Amantadine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Matrix protein 2 inhibitor",
-    "Glutamate [NMDA] receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 4,
-   "score": 0.6995,
-   "rawScore": 2.662292,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2B",
-     "geneId": "ENSG00000273079",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2B",
-     "assoc": 0.8988,
-     "contribution": 0.189484,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8378
-      },
-      {
-       "id": "animal_model",
-       "score": 0.376
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN1",
-     "geneId": "ENSG00000176884",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 1",
-     "assoc": 0.8396,
-     "contribution": 0.177008,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "affected_pathway",
-       "score": 0.5816
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4424
-      },
-      {
-       "id": "literature",
-       "score": 0.3125
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8654,
-     "contribution": 0.17295,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7961
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3396
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL742",
    "name": "Ketamine",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator"
@@ -3496,7 +3450,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 5,
+   "rank": 3,
    "score": 0.6995,
    "rawScore": 2.662292,
    "geneCount": 7,
@@ -3578,10 +3532,101 @@
     "depressive disorder",
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator",
     "Glutamate [NMDA] receptor negative allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.6995,
+   "rawScore": 2.662292,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2B",
+     "geneId": "ENSG00000273079",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2B",
+     "assoc": 0.8988,
+     "contribution": 0.189484,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8378
+      },
+      {
+       "id": "animal_model",
+       "score": 0.376
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN1",
+     "geneId": "ENSG00000176884",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 1",
+     "assoc": 0.8396,
+     "contribution": 0.177008,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.5816
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4424
+      },
+      {
+       "id": "literature",
+       "score": 0.3125
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8654,
+     "contribution": 0.17295,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7961
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3396
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL660",
+   "name": "Amantadine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Parkinson disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Matrix protein 2 inhibitor",
+    "Glutamate [NMDA] receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3667,6 +3712,7 @@
    "approvedFor": [
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Glutamate [NMDA] receptor antagonist",
@@ -3758,6 +3804,7 @@
     "Hepatic failure",
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Catechol O-methyltransferase inhibitor"
@@ -3847,6 +3894,7 @@
    "approvedFor": [
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Catechol O-methyltransferase inhibitor"
@@ -3927,6 +3975,7 @@
    "approvedFor": [
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Catechol O-methyltransferase inhibitor"
@@ -4008,6 +4057,7 @@
     "major depressive disorder",
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase B inhibitor",

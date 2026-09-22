@@ -12,23 +12,35 @@
  "pathsThreeHop": 301,
  "candidates": [
   {
-   "id": "CHEMBL1201823",
-   "name": "Abatacept",
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "juvenile idiopathic arthritis"
+    "kidney transplant",
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 0.45767,
@@ -88,34 +100,24 @@
    ]
   },
   {
-   "id": "CHEMBL1742990",
-   "name": "Belatacept",
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 2,
    "score": 1.0,
    "rawScore": 0.45767,
@@ -175,15 +177,17 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -249,16 +253,16 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -324,16 +328,17 @@
    ]
   },
   {
-   "id": "CHEMBL3301587",
-   "name": "Durvalumab",
+   "id": "CHEMBL3707227",
+   "name": "Atezolizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "hepatocellular carcinoma",
-    "small cell lung carcinoma",
-    "neoplasm",
-    "urothelial carcinoma"
+    "lung cancer",
+    "non-small cell lung carcinoma",
+    "transitional cell carcinoma",
+    "breast cancer"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
@@ -341,6 +346,150 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
+   "score": 0.6458,
+   "rawScore": 0.297866,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.144604,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.085974,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.067287,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297729",
+   "name": "Cosibelimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck squamous cell carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.6458,
+   "rawScore": 0.297866,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.144604,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.085974,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.067287,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297828",
+   "name": "Adebrelimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
    "score": 0.6458,
    "rawScore": 0.297866,
    "geneCount": 1,
@@ -408,6 +557,7 @@
     "neoplasm",
     "urothelial carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 other"
@@ -415,7 +565,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 8,
    "score": 0.6458,
    "rawScore": 0.297866,
    "geneCount": 1,
@@ -474,90 +624,24 @@
    ]
   },
   {
-   "id": "CHEMBL4297729",
-   "name": "Cosibelimab",
+   "id": "CHEMBL3301587",
+   "name": "Durvalumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "head and neck squamous cell carcinoma"
+    "hepatocellular carcinoma",
+    "small cell lung carcinoma",
+    "neoplasm",
+    "urothelial carcinoma"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
-   "score": 0.6458,
-   "rawScore": 0.297866,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.144604,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.085974,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.067287,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297828",
-   "name": "Adebrelimab",
-   "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.6458,
    "rawScore": 0.297866,
    "geneCount": 1,
@@ -623,84 +707,10 @@
     "neoplasm",
     "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 9,
-   "score": 0.6458,
-   "rawScore": 0.297866,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.144604,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.085974,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.067287,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707227",
-   "name": "Atezolizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "lung cancer",
-    "non-small cell lung carcinoma",
-    "transitional cell carcinoma",
-    "breast cancer"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -764,13 +774,14 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -803,13 +814,14 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -850,6 +862,7 @@
     "radiologic finding",
     "colorectal neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Carcinoembryonic antigen-related cell adhesion molecule 5 binding agent"
@@ -891,6 +904,7 @@
     "breast carcinoma",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -929,6 +943,7 @@
    "approvedFor": [
     "breast neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -961,18 +976,19 @@
    ]
   },
   {
-   "id": "CHEMBL4594550",
-   "name": "Serplulimab",
+   "id": "CHEMBL4297840",
+   "name": "Tislelizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "small cell lung carcinoma",
+    "esophageal cancer",
+    "Hodgkins lymphoma",
     "neoplasm",
-    "esophageal squamous cell carcinoma",
-    "non-small cell lung carcinoma"
+    "gastric neoplasm"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1036,17 +1052,14 @@
    ]
   },
   {
-   "id": "CHEMBL4298124",
-   "name": "Dostarlimab",
+   "id": "CHEMBL4297571",
+   "name": "Penpulimab",
    "drugType": "Antibody",
-   "approvedFor": [
-    "endometrial cancer",
-    "neoplasm",
-    "endometrial neoplasm"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1114,6 +1127,7 @@
    "name": "Camrelizumab",
    "drugType": "Antibody",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
@@ -1180,13 +1194,17 @@
    ]
   },
   {
-   "id": "CHEMBL4297829",
-   "name": "Sintilimab",
+   "id": "CHEMBL4298037",
+   "name": "Retifanlimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "Hodgkins lymphoma"
+    "neoplasm",
+    "squamous cell carcinoma",
+    "Merkel cell skin cancer",
+    "neuroendocrine carcinoma"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -1261,6 +1279,7 @@
     "neoplasm",
     "esophageal squamous cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
@@ -1269,301 +1288,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 20,
-   "score": 0.5067,
-   "rawScore": 0.235116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.117579,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.065107,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.05243,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3137343",
-   "name": "Pembrolizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "Hodgkins lymphoma",
-    "melanoma",
-    "transitional cell carcinoma"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.5067,
-   "rawScore": 0.235116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.117579,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.065107,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.05243,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297571",
-   "name": "Penpulimab",
-   "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.5067,
-   "rawScore": 0.235116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.117579,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.065107,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.05243,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297840",
-   "name": "Tislelizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "esophageal cancer",
-    "Hodgkins lymphoma",
-    "neoplasm",
-    "gastric neoplasm"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.5067,
-   "rawScore": 0.235116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.3068,
-     "contribution": 0.117579,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3068
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2961,
-     "contribution": 0.065107,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2961
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.2401,
-     "contribution": 0.05243,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2401
-      }
-     ],
-     "hops": 3,
-     "via": "PDCD1",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298037",
-   "name": "Retifanlimab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "squamous cell carcinoma",
-    "Merkel cell skin cancer",
-    "neuroendocrine carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
    "score": 0.5067,
    "rawScore": 0.235116,
    "geneCount": 1,
@@ -1631,6 +1355,7 @@
     "neoplasm",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
@@ -1638,7 +1363,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 21,
    "score": 0.5067,
    "rawScore": 0.235116,
    "geneCount": 1,
@@ -1706,9 +1431,310 @@
     "metastatic melanoma",
     "head and neck squamous cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 14,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.5067,
+   "rawScore": 0.235116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.117579,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.065107,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.05243,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297829",
+   "name": "Sintilimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Hodgkins lymphoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Programmed cell death protein 1 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.5067,
+   "rawScore": 0.235116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.117579,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.065107,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.05243,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3137343",
+   "name": "Pembrolizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "Hodgkins lymphoma",
+    "melanoma",
+    "transitional cell carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 9,
+   "mechanisms": [
+    "Programmed cell death protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.5067,
+   "rawScore": 0.235116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.117579,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.065107,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.05243,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298124",
+   "name": "Dostarlimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "endometrial cancer",
+    "neoplasm",
+    "endometrial neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Programmed cell death protein 1 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.5067,
+   "rawScore": 0.235116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.3068,
+     "contribution": 0.117579,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3068
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2961,
+     "contribution": 0.065107,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2961
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.2401,
+     "contribution": 0.05243,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2401
+      }
+     ],
+     "hops": 3,
+     "via": "PDCD1",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594550",
+   "name": "Serplulimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "small cell lung carcinoma",
+    "neoplasm",
+    "esophageal squamous cell carcinoma",
+    "non-small cell lung carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1780,6 +1806,7 @@
     "HIV-1 infection",
     "viral infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
@@ -1837,6 +1864,7 @@
     "follicular lymphoma",
     "non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor",
@@ -1877,6 +1905,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Hepatitis A virus cellular receptor 2 inhibitor"
@@ -1915,6 +1944,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Serine/threonine-protein kinase mTOR inhibitor"
@@ -1964,17 +1994,18 @@
    ]
   },
   {
-   "id": "CHEMBL4204794",
-   "name": "Avapritinib",
+   "id": "CHEMBL4216467",
+   "name": "Ripretinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
     "gastrointestinal stromal tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Platelet-derived growth factor receptor alpha inhibitor",
-    "Stem cell growth factor receptor inhibitor"
+    "Stem cell growth factor receptor inhibitor",
+    "Platelet-derived growth factor receptor alpha inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2038,17 +2069,18 @@
    ]
   },
   {
-   "id": "CHEMBL4216467",
-   "name": "Ripretinib",
+   "id": "CHEMBL4204794",
+   "name": "Avapritinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
     "gastrointestinal stromal tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Stem cell growth factor receptor inhibitor",
-    "Platelet-derived growth factor receptor alpha inhibitor"
+    "Platelet-derived growth factor receptor alpha inhibitor",
+    "Stem cell growth factor receptor inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2119,6 +2151,7 @@
     "neoplasm",
     "tenosynovial giant cell tumor, diffuse type"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Macrophage colony stimulating factor receptor inhibitor",
@@ -2198,6 +2231,7 @@
    "approvedFor": [
     "Primary hemophagocytic lymphohistiocytosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interferon gamma inhibitor"
@@ -2236,6 +2270,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Smoothened homolog inhibitor"
@@ -2273,21 +2308,27 @@
    ]
   },
   {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
+   "id": "CHEMBL2043437",
+   "name": "Glasdegib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
-    "basal cell carcinoma"
+    "juvenile myelomonocytic leukemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Smoothened homolog inhibitor"
+    "Smoothened homolog antagonist",
+    "Smoothened homolog antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
     }
    ],
    "withdrawn": false,
@@ -2317,26 +2358,22 @@
    ]
   },
   {
-   "id": "CHEMBL2043437",
-   "name": "Glasdegib",
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
-    "juvenile myelomonocytic leukemia"
+    "basal cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Smoothened homolog antagonist",
-    "Smoothened homolog antagonist"
+    "Smoothened homolog inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": null
     }
    ],
    "withdrawn": false,
@@ -2372,6 +2409,7 @@
    "approvedFor": [
     "skin aging"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
@@ -2404,14 +2442,12 @@
    ]
   },
   {
-   "id": "CHEMBL2108035",
-   "name": "Incobotulinumtoxina",
+   "id": "CHEMBL1201574",
+   "name": "Onabotulinumtoxina",
    "drugType": "Unknown",
-   "approvedFor": [
-    "cervical cancer",
-    "Spasticity"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
    ],
@@ -2454,6 +2490,7 @@
    "approvedFor": [
     "skin aging"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Synaptosomal nerve-associated protein 25 (SNAP-25) hydrolytic enzyme"

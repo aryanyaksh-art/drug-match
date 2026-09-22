@@ -16,6 +16,7 @@
    "name": "Suramin",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Acidic fibroblast growth factor inhibitor"
@@ -86,6 +87,7 @@
    "name": "Conbercept",
    "drugType": "Protein",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Vascular endothelial growth factor B inhibitor",
@@ -154,23 +156,35 @@
    ]
   },
   {
-   "id": "CHEMBL1201823",
-   "name": "Abatacept",
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "juvenile idiopathic arthritis"
+    "kidney transplant",
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 3,
    "score": 0.428,
    "rawScore": 0.599714,
@@ -213,34 +227,24 @@
    ]
   },
   {
-   "id": "CHEMBL1742990",
-   "name": "Belatacept",
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 4,
    "score": 0.428,
    "rawScore": 0.599714,
@@ -290,6 +294,7 @@
     "plasma cell myeloma",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "26S proteasome inhibitor"
@@ -363,6 +368,81 @@
     "plasma cell myeloma",
     "amyloidosis"
    ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "26S proteasome inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.42,
+   "rawScore": 0.588609,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "PSMD6",
+     "geneId": "ENSG00000163636",
+     "geneName": "proteasome 26S subunit, non-ATPase 6",
+     "assoc": 0.614,
+     "contribution": 0.082307,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.614
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADRM1",
+     "geneId": "ENSG00000130706",
+     "geneName": "ADRM1 26S proteasome ubiquitin receptor",
+     "assoc": 0.3319,
+     "contribution": 0.044494,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3319
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PSMD6",
+     "geneId": "ENSG00000163636",
+     "geneName": "proteasome 26S subunit, non-ATPase 6",
+     "assoc": 0.614,
+     "contribution": 0.03579,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.614
+      }
+     ],
+     "hops": 3,
+     "via": "PSMA3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2141296",
+   "name": "Ixazomib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "26S proteasome inhibitor"
@@ -429,86 +509,14 @@
    ]
   },
   {
-   "id": "CHEMBL2141296",
-   "name": "Ixazomib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "26S proteasome inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 8,
-   "score": 0.42,
-   "rawScore": 0.588609,
-   "geneCount": 38,
-   "paths": [
-    {
-     "gene": "PSMD6",
-     "geneId": "ENSG00000163636",
-     "geneName": "proteasome 26S subunit, non-ATPase 6",
-     "assoc": 0.614,
-     "contribution": 0.082307,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.614
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADRM1",
-     "geneId": "ENSG00000130706",
-     "geneName": "ADRM1 26S proteasome ubiquitin receptor",
-     "assoc": 0.3319,
-     "contribution": 0.044494,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3319
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PSMD6",
-     "geneId": "ENSG00000163636",
-     "geneName": "proteasome 26S subunit, non-ATPase 6",
-     "assoc": 0.614,
-     "contribution": 0.03579,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.614
-      }
-     ],
-     "hops": 3,
-     "via": "PSMA3",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -541,13 +549,14 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -580,13 +589,14 @@
    ]
   },
   {
-   "id": "CHEMBL2108081",
-   "name": "Trafermin",
+   "id": "CHEMBL1201821",
+   "name": "Palifermin",
    "drugType": "Protein",
    "approvedFor": [
-    "Skin ulcer",
-    "periodontitis"
+    "mucositis",
+    "oral mucositis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
@@ -636,13 +646,14 @@
    ]
   },
   {
-   "id": "CHEMBL1201821",
-   "name": "Palifermin",
+   "id": "CHEMBL2108081",
+   "name": "Trafermin",
    "drugType": "Protein",
    "approvedFor": [
-    "mucositis",
-    "oral mucositis"
+    "Skin ulcer",
+    "periodontitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 agonist"
@@ -701,6 +712,7 @@
     "breast carcinoma",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -739,6 +751,7 @@
    "approvedFor": [
     "breast neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -780,6 +793,7 @@
     "systemic sclerosis",
     "interstitial lung disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Platelet-derived growth factor receptor inhibitor",
@@ -855,6 +869,7 @@
     "biliary tract cancer",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 2 inhibitor",
@@ -932,6 +947,7 @@
     "urothelial carcinoma",
     "urinary bladder carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Fibroblast growth factor receptor inhibitor"
@@ -939,7 +955,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.2979,
    "rawScore": 0.419564,
    "geneCount": 4,
@@ -1005,6 +1021,7 @@
     "neoplasm",
     "renal cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Platelet-derived growth factor receptor beta inhibitor",
@@ -1073,31 +1090,21 @@
    ]
   },
   {
-   "id": "CHEMBL467",
-   "name": "Hydroxyurea",
+   "id": "CHEMBL1200983",
+   "name": "Gallium Nitrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "squamous cell carcinoma",
-    "melanoma",
-    "sickle cell disease",
-    "neoplasm"
+    "Hypercalcemia"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
@@ -1161,20 +1168,32 @@
    ]
   },
   {
-   "id": "CHEMBL1200983",
-   "name": "Gallium Nitrate",
+   "id": "CHEMBL467",
+   "name": "Hydroxyurea",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypercalcemia"
+    "squamous cell carcinoma",
+    "melanoma",
+    "sickle cell disease",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -1246,6 +1265,7 @@
     "follicular lymphoma",
     "non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor",
@@ -1280,50 +1300,11 @@
    ]
   },
   {
-   "id": "CHEMBL4298124",
-   "name": "Dostarlimab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "endometrial cancer",
-    "neoplasm",
-    "endometrial neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 30,
-   "score": 0.2473,
-   "rawScore": 0.34939,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.9117,
-     "contribution": 0.34939,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9117
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4297571",
    "name": "Penpulimab",
    "drugType": "Antibody",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
@@ -1331,7 +1312,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
+   "rank": 30,
    "score": 0.2473,
    "rawScore": 0.34939,
    "geneCount": 1,
@@ -1365,6 +1346,7 @@
     "Merkel cell skin cancer",
     "neuroendocrine carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
@@ -1372,7 +1354,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 32,
    "score": 0.2473,
    "rawScore": 0.34939,
    "geneCount": 1,
@@ -1406,9 +1388,51 @@
     "neoplasm",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.2473,
+   "rawScore": 0.34939,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.9117,
+     "contribution": 0.34939,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9117
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298124",
+   "name": "Dostarlimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "endometrial cancer",
+    "neoplasm",
+    "endometrial neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1444,6 +1468,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor",
@@ -1519,6 +1544,7 @@
     "neoplasm",
     "renal cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor 1 inhibitor",
@@ -1601,6 +1627,7 @@
     "colorectal cancer",
     "macular retinal edema"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 17,
    "mechanisms": [
     "Placenta growth factor inhibitor",
@@ -1674,6 +1701,7 @@
    "approvedFor": [
     "brain cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor",
@@ -1750,6 +1778,7 @@
     "neoplasm",
     "gastrointestinal stromal tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Macrophage colony stimulating factor receptor inhibitor",
@@ -1833,6 +1862,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Platelet-derived growth factor receptor inhibitor",
@@ -1884,18 +1914,16 @@
    ]
   },
   {
-   "id": "CHEMBL3833373",
-   "name": "Avelumab",
+   "id": "CHEMBL4297729",
+   "name": "Cosibelimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neuroendocrine neoplasm",
-    "Merkel cell skin cancer",
-    "neoplasm",
-    "urothelial carcinoma"
+    "head and neck squamous cell carcinoma"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
-    "Programmed cell death 1 ligand 1 other"
+    "Programmed cell death 1 ligand 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1925,20 +1953,24 @@
    ]
   },
   {
-   "id": "CHEMBL4297729",
-   "name": "Cosibelimab",
+   "id": "CHEMBL3833373",
+   "name": "Avelumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "head and neck squamous cell carcinoma"
+    "neuroendocrine neoplasm",
+    "Merkel cell skin cancer",
+    "neoplasm",
+    "urothelial carcinoma"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
+    "Programmed cell death 1 ligand 1 other"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 51,
+   "rank": 52,
    "score": 0.1795,
    "rawScore": 0.255475,
    "geneCount": 1,
@@ -1963,17 +1995,18 @@
    ]
   },
   {
-   "id": "CHEMBL4204794",
-   "name": "Avapritinib",
+   "id": "CHEMBL4216467",
+   "name": "Ripretinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
     "gastrointestinal stromal tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Platelet-derived growth factor receptor alpha inhibitor",
-    "Stem cell growth factor receptor inhibitor"
+    "Stem cell growth factor receptor inhibitor",
+    "Platelet-derived growth factor receptor alpha inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2003,17 +2036,18 @@
    ]
   },
   {
-   "id": "CHEMBL4216467",
-   "name": "Ripretinib",
+   "id": "CHEMBL4204794",
+   "name": "Avapritinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
     "gastrointestinal stromal tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Stem cell growth factor receptor inhibitor",
-    "Platelet-derived growth factor receptor alpha inhibitor"
+    "Platelet-derived growth factor receptor alpha inhibitor",
+    "Stem cell growth factor receptor inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2050,6 +2084,7 @@
     "neoplasm",
     "renal cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
@@ -2057,7 +2092,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 58,
+   "rank": 59,
    "score": 0.1686,
    "rawScore": 0.240495,
    "geneCount": 3,
@@ -2125,6 +2160,7 @@
     "colorectal cancer",
     "cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
@@ -2197,6 +2233,7 @@
    "approvedFor": [
     "actinic keratosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Tyrosine-protein kinase SRC inhibitor"
@@ -2236,6 +2273,7 @@
     "neoplasm",
     "tenosynovial giant cell tumor, diffuse type"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Macrophage colony stimulating factor receptor inhibitor",
@@ -2284,6 +2322,7 @@
     "renal cell carcinoma",
     "thyroid tumor"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Hepatocyte growth factor receptor inhibitor",
@@ -2356,30 +2395,23 @@
    ]
   },
   {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
+   "id": "CHEMBL1750",
+   "name": "Clofarabine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
+    "acute lymphoblastic leukemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 64,
    "score": 0.1429,
    "rawScore": 0.204884,
@@ -2448,6 +2480,7 @@
     "mantle cell lymphoma",
     "plasma cell myeloma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "26S proteasome inhibitor",
@@ -2456,7 +2489,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 8,
    "score": 0.42,
    "rawScore": 0.588609,
    "geneCount": 38,
@@ -2524,6 +2557,7 @@
     "neoplasm",
     "cancer"
    ],
+   "possiblyAlreadyApproved": "cholangiocarcinoma",
    "indicationCount": 4,
    "mechanisms": [
     "Fibroblast growth factor receptor 3 inhibitor",
@@ -2601,6 +2635,7 @@
     "cancer",
     "intrahepatic cholangiocarcinoma"
    ],
+   "possiblyAlreadyApproved": "intrahepatic cholangiocarcinoma",
    "indicationCount": 5,
    "mechanisms": [
     "Fibroblast growth factor receptor inhibitor"
@@ -2674,6 +2709,7 @@
     "neoplasm",
     "cholangiocarcinoma"
    ],
+   "possiblyAlreadyApproved": "cholangiocarcinoma",
    "indicationCount": 2,
    "mechanisms": [
     "Fibroblast growth factor receptor inhibitor",
@@ -2682,7 +2718,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 19,
    "score": 0.2979,
    "rawScore": 0.419564,
    "geneCount": 4,
@@ -2741,15 +2777,17 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -2781,16 +2819,16 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -2831,6 +2869,7 @@
     "neoplasm",
     "colorectal cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Discoidin domain-containing receptor 2 inhibitor",
@@ -2908,6 +2947,7 @@
    "name": "Catequentinib",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Platelet-derived growth factor receptor beta inhibitor",
@@ -2976,18 +3016,19 @@
    ]
   },
   {
-   "id": "CHEMBL4594550",
-   "name": "Serplulimab",
+   "id": "CHEMBL4297840",
+   "name": "Tislelizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "small cell lung carcinoma",
+    "esophageal cancer",
+    "Hodgkins lymphoma",
     "neoplasm",
-    "esophageal squamous cell carcinoma",
-    "non-small cell lung carcinoma"
+    "gastric neoplasm"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3021,6 +3062,7 @@
    "name": "Camrelizumab",
    "drugType": "Antibody",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"

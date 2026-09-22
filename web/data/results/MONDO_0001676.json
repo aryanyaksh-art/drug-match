@@ -18,6 +18,7 @@
    "approvedFor": [
     "mucopolysaccharidosis type 2"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Transferrin receptor binding agent"
@@ -88,6 +89,94 @@
    ]
   },
   {
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 2,
+   "score": 0.9566,
+   "rawScore": 0.895458,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.5431,
+     "contribution": 0.34998,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4922
+      },
+      {
+       "id": "literature",
+       "score": 0.1003
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GPBAR1",
+     "geneId": "ENSG00000179921",
+     "geneName": "G protein-coupled bile acid receptor 1",
+     "assoc": 0.5426,
+     "contribution": 0.346522,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5426
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.6363,
+     "contribution": 0.198956,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6225
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.753
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1551",
    "name": "Ursodiol",
    "drugType": "Small molecule",
@@ -96,6 +185,7 @@
     "primary biliary cholangitis",
     "biliary liver cirrhosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
@@ -103,7 +193,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
+   "rank": 3,
    "score": 0.9566,
    "rawScore": 0.895458,
    "geneCount": 1,
@@ -178,6 +268,7 @@
     "biliary liver cirrhosis",
     "cholangitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
@@ -193,93 +284,6 @@
     }
    ],
    "withdrawn": true,
-   "blackBox": true,
-   "rank": 3,
-   "score": 0.9566,
-   "rawScore": 0.895458,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.5431,
-     "contribution": 0.34998,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4922
-      },
-      {
-       "id": "literature",
-       "score": 0.1003
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GPBAR1",
-     "geneId": "ENSG00000179921",
-     "geneName": "G protein-coupled bile acid receptor 1",
-     "assoc": 0.5426,
-     "contribution": 0.346522,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5426
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.991
-    },
-    {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.6363,
-     "contribution": 0.198956,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6225
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.753
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": false,
    "blackBox": true,
    "rank": 4,
    "score": 0.9566,
@@ -355,6 +359,7 @@
     "viral infectious disease",
     "hepatitis D virus infection"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Bile acid transporter inhibitor"
@@ -421,6 +426,7 @@
     "mastocytosis",
     "mast cell leukemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Tyrosine-protein kinase receptor FLT3 inhibitor",
@@ -496,6 +502,7 @@
     "Abnormal retinal morphology",
     "eye disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Laminin hydrolytic enzyme",
@@ -572,6 +579,7 @@
     "homocystinuria",
     "inborn errors of metabolism"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Betaine-homocysteine S-methyltransferase substrate"
@@ -621,28 +629,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201575",
-   "name": "Efalizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL2048028",
+   "name": "Lifitegrast",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "psoriasis vulgaris",
-    "psoriasis"
+    "eye disorder",
+    "dry eye syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) inhibitor"
+    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Serious side effects"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 9,
    "score": 0.523,
@@ -686,19 +686,29 @@
    ]
   },
   {
-   "id": "CHEMBL2048028",
-   "name": "Lifitegrast",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201575",
+   "name": "Efalizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "eye disorder",
-    "dry eye syndrome"
+    "psoriasis vulgaris",
+    "psoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+    "Integrin alpha-L/beta-2 (LFA-1) inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Serious side effects"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 10,
    "score": 0.523,
@@ -748,6 +758,7 @@
    "approvedFor": [
     "tyrosinemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "4-hydroxyphenylpyruvate dioxygenase inhibitor"
@@ -784,6 +795,7 @@
    "name": "Butamben",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Transient receptor potential cation channel subfamily A member 1 inhibitor",
@@ -838,6 +850,7 @@
     "familial hypercholesterolemia",
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Apo-B 100 mRNA antisense inhibitor"
@@ -875,19 +888,26 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL2105720",
+   "name": "Lesinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 14,
    "score": 0.3532,
    "rawScore": 0.367011,
@@ -923,6 +943,7 @@
    "approvedFor": [
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
@@ -968,25 +989,20 @@
    ]
   },
   {
-   "id": "CHEMBL2105720",
-   "name": "Lesinurad",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 16,
    "score": 0.3532,
    "rawScore": 0.367011,
@@ -1023,6 +1039,7 @@
     "hyperuricemia",
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
@@ -1065,6 +1082,7 @@
    "approvedFor": [
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 11 inhibitor",
@@ -1099,14 +1117,16 @@
    ]
   },
   {
-   "id": "CHEMBL2106370",
-   "name": "Ilaprazole",
+   "id": "CHEMBL2079130",
+   "name": "Vonoprazan",
    "drugType": "Small molecule",
    "approvedFor": [
+    "Helicobacter pylori infectious disease",
     "Peptic ulcer",
     "gastroesophageal reflux disease"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1155,79 +1175,25 @@
    ]
   },
   {
-   "id": "CHEMBL1502",
-   "name": "Pantoprazole",
+   "id": "CHEMBL1503",
+   "name": "Omeprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
+    "duodenal ulcer",
+    "osteoarthritis",
+    "arthritic joint disease",
+    "infection"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 13,
    "mechanisms": [
+    "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 20,
-   "score": 0.3262,
-   "rawScore": 0.343424,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171798,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171626,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL480",
-   "name": "Lansoprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Peptic ulcer",
-    "cerebral infarction",
-    "thrombotic disease",
-    "gastric ulcer"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
    "score": 0.3262,
    "rawScore": 0.343424,
    "geneCount": 2,
@@ -1277,7 +1243,67 @@
     "Peptic ulcer",
     "bacterial infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.3262,
+   "rawScore": 0.343424,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171798,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171626,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201863",
+   "name": "Dexlansoprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer",
+    "dyspepsia",
+    "esophagitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1326,18 +1352,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201320",
-   "name": "Esomeprazole",
+   "id": "CHEMBL1502",
+   "name": "Pantoprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
     "Peptic ulcer",
     "gastroesophageal reflux disease"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
-    "Potassium-transporting ATPase inhibitor",
-    "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor"
    ],
    "warnings": [],
@@ -1392,6 +1416,7 @@
     "gastroesophageal reflux disease",
     "Peptic ulcer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Potassium-transporting ATPase blocker"
@@ -1441,13 +1466,14 @@
    ]
   },
   {
-   "id": "CHEMBL4594445",
-   "name": "Abeprazan",
+   "id": "CHEMBL2106370",
+   "name": "Ilaprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastroesophageal reflux disease",
-    "Peptic ulcer"
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
@@ -1497,15 +1523,17 @@
    ]
   },
   {
-   "id": "CHEMBL2079130",
-   "name": "Vonoprazan",
+   "id": "CHEMBL480",
+   "name": "Lansoprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Helicobacter pylori infectious disease",
     "Peptic ulcer",
-    "gastroesophageal reflux disease"
+    "cerebral infarction",
+    "thrombotic disease",
+    "gastric ulcer"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 12,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1554,16 +1582,15 @@
    ]
   },
   {
-   "id": "CHEMBL1201863",
-   "name": "Dexlansoprazole",
+   "id": "CHEMBL4594445",
+   "name": "Abeprazan",
    "drugType": "Small molecule",
    "approvedFor": [
     "gastroesophageal reflux disease",
-    "Peptic ulcer",
-    "dyspepsia",
-    "esophagitis"
+    "Peptic ulcer"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1612,17 +1639,18 @@
    ]
   },
   {
-   "id": "CHEMBL1503",
-   "name": "Omeprazole",
+   "id": "CHEMBL1201320",
+   "name": "Esomeprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "duodenal ulcer",
-    "osteoarthritis",
-    "arthritic joint disease",
-    "infection"
+    "cardiovascular disorder",
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
    ],
-   "indicationCount": 13,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
+    "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1675,6 +1703,7 @@
    "name": "Odulimomab",
    "drugType": "Antibody",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Leukocyte adhesion glycoprotein LFA-1 alpha inhibitor"
@@ -1707,13 +1736,14 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -1746,13 +1776,14 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "GTPase KRas inhibitor"
@@ -1789,6 +1820,7 @@
    "name": "Mepazine",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Mucosa-associated lymphoid tissue lymphoma translocation protein 1 inhibitor"
@@ -1850,6 +1882,7 @@
    "name": "Triparanol",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Delta(24)-sterol reductase inhibitor"
@@ -1897,6 +1930,7 @@
    "approvedFor": [
     "Constipation"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Retinoid X receptor alpha antagonist"
@@ -1947,6 +1981,7 @@
     "palmar fibromatosis",
     "Penile Fibromatosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "Collagen hydrolytic enzyme"
@@ -2020,6 +2055,7 @@
     "diabetes mellitus",
     "familial hyperlipidemia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Acyl coenzyme A:cholesterol acyltransferase 1 inhibitor"
@@ -2070,6 +2106,7 @@
     "breast carcinoma",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -2108,6 +2145,7 @@
    "approvedFor": [
     "breast neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
@@ -2146,6 +2184,7 @@
    "approvedFor": [
     "Pruritus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
@@ -2183,14 +2222,18 @@
    ]
   },
   {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
+   "id": "CHEMBL4297588",
+   "name": "Odevixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Constipation"
+    "progressive familial intrahepatic cholestasis",
+    "Pruritus",
+    "Alagille syndrome"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
+    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -2234,6 +2277,7 @@
     "cutaneous porphyria",
     "erythropoietic protoporphyria"
    ],
+   "possiblyAlreadyApproved": "erythropoietic protoporphyria",
    "indicationCount": 2,
    "mechanisms": [
     "Melanocortin receptor 1 agonist",

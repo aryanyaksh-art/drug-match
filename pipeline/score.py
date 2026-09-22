@@ -11,10 +11,46 @@ the answer into the prediction and make validation meaningless.
 """
 import json
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from diseases import ALL, NAMES, RARITY
+
+_STOPWORDS = {"disease", "syndrome", "type", "of", "the", "and"}
+
+
+def _norm(text):
+    return re.sub(r"[^a-z0-9 ]", "", text.lower()).strip()
+
+
+def _words(text):
+    return set(_norm(text).split()) - _STOPWORDS
+
+
+def already_approved_claim(drug_meta, disease_name):
+    """Cross-check pipeline/audit_novelty.py found a real case of: a candidate
+    is labelled "novel" only because the disease-side link in Open Targets
+    points to a stale duplicate ChEMBL entry for the same drug, while the
+    drug's OWN record already lists this disease as approved. We cannot fix
+    the upstream duplicate, but we can flag the disagreement rather than
+    silently ship a wrong "novel" label the way the ALD case did.
+
+    This is intentionally a flag, not a filter: the match is fuzzy (word
+    overlap against a hand-picked stopword list) and is known to also catch
+    generic-category overlap that is not a real bug, e.g. a drug tagged
+    approved for "arthritis" broadly against a candidate list for
+    osteoarthritis specifically. Returning the matched claim lets the UI say
+    what the disagreement actually is, rather than asserting a verdict."""
+    disease_words = _words(disease_name)
+    if len(disease_words) < 2:
+        return None
+    disease_n = _norm(disease_name)
+    for claim in drug_meta.get("approvedFor", []):
+        claim_n, claim_words = _norm(claim), _words(claim)
+        if disease_n in claim_n or claim_n in disease_n or disease_words <= claim_words:
+            return claim
+    return None
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 RAW = os.path.join(ROOT, "data", "raw")
@@ -179,6 +215,8 @@ def score_disease(efo, disease_node, genes, drugs, drugs_of_gene, genes_of_drug,
     ranked = sorted(totals.items(), key=lambda kv: -kv[1])
     rank_of = {pid: i + 1 for i, (pid, _) in enumerate(ranked)}
 
+    disease_name = NAMES.get(efo, disease_node.get("name", ""))
+
     def build(pid, total):
         meta = drugs.get(pid) or {}
         paths = sorted(contributions[pid], key=lambda p: -p[0])[:MAX_PATHS_SHOWN]
@@ -187,6 +225,7 @@ def score_disease(efo, disease_node, genes, drugs, drugs_of_gene, genes_of_drug,
             "name": (meta.get("name") or pid).title(),
             "drugType": meta.get("drugType"),
             "approvedFor": meta.get("approvedFor", []),
+            "possiblyAlreadyApproved": already_approved_claim(meta, disease_name),
             "indicationCount": meta.get("indicationCount", 0),
             "mechanisms": meta.get("mechanisms", []),
             "warnings": meta.get("warnings", []),

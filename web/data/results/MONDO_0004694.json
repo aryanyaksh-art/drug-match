@@ -16,6 +16,7 @@
    "name": "Tilarginine",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Nitric oxide synthase inhibitor",
@@ -89,6 +90,7 @@
    "approvedFor": [
     "Friedreich ataxia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Nuclear factor erythroid 2-related factor 2 activator"
@@ -129,6 +131,7 @@
     "HIV-1 infection",
     "viral infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
@@ -204,6 +207,7 @@
     "pulmonary emphysema",
     "lung disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Leukocyte elastase inhibitor"
@@ -240,6 +244,7 @@
    "name": "Sivelestat",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Leukocyte elastase inhibitor"
@@ -272,19 +277,32 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 6,
    "score": 0.6875,
    "rawScore": 0.140858,
@@ -327,142 +345,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "immune system disorder"
    ],
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 7,
-   "score": 0.6875,
-   "rawScore": 0.140858,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.2142,
-     "contribution": 0.098332,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2142
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0927,
-     "contribution": 0.042526,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0927
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 8,
-   "score": 0.6875,
-   "rawScore": 0.140858,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.2142,
-     "contribution": 0.098332,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2142
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0927,
-     "contribution": 0.042526,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0927
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
@@ -470,141 +359,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
-   "score": 0.6875,
-   "rawScore": 0.140858,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.2142,
-     "contribution": 0.098332,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2142
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0927,
-     "contribution": 0.042526,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0927
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201833",
-   "name": "Golimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "juvenile arthritis due to defect in LACC1",
-    "spondylitis",
-    "immune system disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 10,
-   "score": 0.6875,
-   "rawScore": 0.140858,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.2142,
-     "contribution": 0.098332,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2142
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0927,
-     "contribution": 0.042526,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0927
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 11,
+   "rank": 7,
    "score": 0.6875,
    "rawScore": 0.140858,
    "geneCount": 1,
@@ -655,7 +410,264 @@
     "ankylosing spondylitis",
     "psoriasis vulgaris"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.6875,
+   "rawScore": 0.140858,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.2142,
+     "contribution": 0.098332,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2142
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0927,
+     "contribution": 0.042526,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0927
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.6875,
+   "rawScore": 0.140858,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.2142,
+     "contribution": 0.098332,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2142
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0927,
+     "contribution": 0.042526,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0927
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.6875,
+   "rawScore": 0.140858,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.2142,
+     "contribution": 0.098332,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2142
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0927,
+     "contribution": 0.042526,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0927
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.6875,
+   "rawScore": 0.140858,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.2142,
+     "contribution": 0.098332,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2142
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0927,
+     "contribution": 0.042526,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0927
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
@@ -721,6 +733,7 @@
     "breast neoplasm",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase AKT inhibitor"
@@ -777,6 +790,7 @@
     "hemorrhagic disease",
     "hemorrhage"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Plasminogen inhibitor",
@@ -853,6 +867,7 @@
     "Beta-thalassemia",
     "anemia (phenotype)"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
@@ -919,16 +934,16 @@
    ]
   },
   {
-   "id": "CHEMBL2103873",
-   "name": "Macitentan",
+   "id": "CHEMBL1111",
+   "name": "Ambrisentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertensive disorder",
-    "cardiovascular disorder",
+    "pulmonary arterial hypertension",
     "pulmonary hypertension",
-    "pulmonary arterial hypertension"
+    "hypertensive disorder"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
@@ -982,24 +997,21 @@
    ]
   },
   {
-   "id": "CHEMBL957",
-   "name": "Bosentan",
+   "id": "CHEMBL2103873",
+   "name": "Macitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "congenital heart disease",
-    "pulmonary arterial hypertension",
-    "systemic sclerosis",
-    "hypertensive disorder"
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "pulmonary hypertension",
+    "pulmonary arterial hypertension"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
@@ -1056,6 +1068,7 @@
     "Hypertension",
     "hypertensive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
@@ -1110,19 +1123,25 @@
    ]
   },
   {
-   "id": "CHEMBL1111",
-   "name": "Ambrisentan",
+   "id": "CHEMBL957",
+   "name": "Bosentan",
    "drugType": "Small molecule",
    "approvedFor": [
+    "congenital heart disease",
     "pulmonary arterial hypertension",
-    "pulmonary hypertension",
+    "systemic sclerosis",
     "hypertensive disorder"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
@@ -1179,6 +1198,7 @@
     "pulmonary arterial hypertension",
     "hypertensive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist",
@@ -1241,6 +1261,7 @@
     "spinal fusion",
     "bone disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Activin receptor type-2A agonist",
@@ -1317,6 +1338,7 @@
     "viral infectious disease",
     "HIV infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "C-C chemokine receptor type 5 antagonist"
@@ -1375,6 +1397,7 @@
    "name": "Conbercept",
    "drugType": "Protein",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Vascular endothelial growth factor B inhibitor",
@@ -1452,6 +1475,7 @@
     "colorectal cancer",
     "macular retinal edema"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 17,
    "mechanisms": [
     "Placenta growth factor inhibitor",
@@ -1519,16 +1543,12 @@
    ]
   },
   {
-   "id": "CHEMBL2107885",
-   "name": "Reteplase",
+   "id": "CHEMBL2108375",
+   "name": "Duteplase",
    "drugType": "Enzyme",
-   "approvedFor": [
-    "myocardial infarction",
-    "heart failure",
-    "Recurrent thrombophlebitis",
-    "ST Elevation Myocardial Infarction"
-   ],
-   "indicationCount": 4,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "Tissue-type plasminogen activator exogenous protein"
    ],
@@ -1536,290 +1556,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 25,
-   "score": 0.437,
-   "rawScore": 0.091803,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ANXA2",
-     "geneId": "ENSG00000182718",
-     "geneName": "annexin A2",
-     "assoc": 0.1208,
-     "contribution": 0.041911,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1208
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "PLAT",
-     "geneId": "ENSG00000104368",
-     "geneName": "plasminogen activator, tissue type",
-     "assoc": 0.0608,
-     "contribution": 0.027914,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SERPINE1",
-     "geneId": "ENSG00000106366",
-     "geneName": "serpin family E member 1",
-     "assoc": 0.0834,
-     "contribution": 0.021978,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108791",
-   "name": "Tenecteplase",
-   "drugType": "Enzyme",
-   "approvedFor": [
-    "acute myocardial infarction",
-    "Recurrent thrombophlebitis",
-    "myocardial infarction"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Tissue-type plasminogen activator exogenous protein"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.437,
-   "rawScore": 0.091803,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ANXA2",
-     "geneId": "ENSG00000182718",
-     "geneName": "annexin A2",
-     "assoc": 0.1208,
-     "contribution": 0.041911,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1208
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "PLAT",
-     "geneId": "ENSG00000104368",
-     "geneName": "plasminogen activator, tissue type",
-     "assoc": 0.0608,
-     "contribution": 0.027914,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SERPINE1",
-     "geneId": "ENSG00000106366",
-     "geneName": "serpin family E member 1",
-     "assoc": 0.0834,
-     "contribution": 0.021978,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108072",
-   "name": "Pamiteplase",
-   "drugType": "Enzyme",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Tissue-type plasminogen activator exogenous protein"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.437,
-   "rawScore": 0.091803,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ANXA2",
-     "geneId": "ENSG00000182718",
-     "geneName": "annexin A2",
-     "assoc": 0.1208,
-     "contribution": 0.041911,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1208
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "PLAT",
-     "geneId": "ENSG00000104368",
-     "geneName": "plasminogen activator, tissue type",
-     "assoc": 0.0608,
-     "contribution": 0.027914,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SERPINE1",
-     "geneId": "ENSG00000106366",
-     "geneName": "serpin family E member 1",
-     "assoc": 0.0834,
-     "contribution": 0.021978,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108375",
-   "name": "Duteplase",
-   "drugType": "Enzyme",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Tissue-type plasminogen activator exogenous protein"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.437,
-   "rawScore": 0.091803,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ANXA2",
-     "geneId": "ENSG00000182718",
-     "geneName": "annexin A2",
-     "assoc": 0.1208,
-     "contribution": 0.041911,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1208
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "PLAT",
-     "geneId": "ENSG00000104368",
-     "geneName": "plasminogen activator, tissue type",
-     "assoc": 0.0608,
-     "contribution": 0.027914,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SERPINE1",
-     "geneId": "ENSG00000106366",
-     "geneName": "serpin family E member 1",
-     "assoc": 0.0834,
-     "contribution": 0.021978,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "PLAT",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108426",
-   "name": "Monteplase",
-   "drugType": "Enzyme",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Tissue-type plasminogen activator exogenous protein"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
    "score": 0.437,
    "rawScore": 0.091803,
    "geneCount": 1,
@@ -1887,7 +1623,301 @@
     "pulmonary embolism",
     "congestive heart failure"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
+   "mechanisms": [
+    "Tissue-type plasminogen activator exogenous protein"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.437,
+   "rawScore": 0.091803,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ANXA2",
+     "geneId": "ENSG00000182718",
+     "geneName": "annexin A2",
+     "assoc": 0.1208,
+     "contribution": 0.041911,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1208
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "PLAT",
+     "geneId": "ENSG00000104368",
+     "geneName": "plasminogen activator, tissue type",
+     "assoc": 0.0608,
+     "contribution": 0.027914,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SERPINE1",
+     "geneId": "ENSG00000106366",
+     "geneName": "serpin family E member 1",
+     "assoc": 0.0834,
+     "contribution": 0.021978,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108791",
+   "name": "Tenecteplase",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "acute myocardial infarction",
+    "Recurrent thrombophlebitis",
+    "myocardial infarction"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Tissue-type plasminogen activator exogenous protein"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.437,
+   "rawScore": 0.091803,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ANXA2",
+     "geneId": "ENSG00000182718",
+     "geneName": "annexin A2",
+     "assoc": 0.1208,
+     "contribution": 0.041911,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1208
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "PLAT",
+     "geneId": "ENSG00000104368",
+     "geneName": "plasminogen activator, tissue type",
+     "assoc": 0.0608,
+     "contribution": 0.027914,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SERPINE1",
+     "geneId": "ENSG00000106366",
+     "geneName": "serpin family E member 1",
+     "assoc": 0.0834,
+     "contribution": 0.021978,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107885",
+   "name": "Reteplase",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "myocardial infarction",
+    "heart failure",
+    "Recurrent thrombophlebitis",
+    "ST Elevation Myocardial Infarction"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Tissue-type plasminogen activator exogenous protein"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.437,
+   "rawScore": 0.091803,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ANXA2",
+     "geneId": "ENSG00000182718",
+     "geneName": "annexin A2",
+     "assoc": 0.1208,
+     "contribution": 0.041911,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1208
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "PLAT",
+     "geneId": "ENSG00000104368",
+     "geneName": "plasminogen activator, tissue type",
+     "assoc": 0.0608,
+     "contribution": 0.027914,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SERPINE1",
+     "geneId": "ENSG00000106366",
+     "geneName": "serpin family E member 1",
+     "assoc": 0.0834,
+     "contribution": 0.021978,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108072",
+   "name": "Pamiteplase",
+   "drugType": "Enzyme",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Tissue-type plasminogen activator exogenous protein"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.437,
+   "rawScore": 0.091803,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ANXA2",
+     "geneId": "ENSG00000182718",
+     "geneName": "annexin A2",
+     "assoc": 0.1208,
+     "contribution": 0.041911,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1208
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "PLAT",
+     "geneId": "ENSG00000104368",
+     "geneName": "plasminogen activator, tissue type",
+     "assoc": 0.0608,
+     "contribution": 0.027914,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SERPINE1",
+     "geneId": "ENSG00000106366",
+     "geneName": "serpin family E member 1",
+     "assoc": 0.0834,
+     "contribution": 0.021978,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "PLAT",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108426",
+   "name": "Monteplase",
+   "drugType": "Enzyme",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "Tissue-type plasminogen activator exogenous protein"
    ],
@@ -1953,13 +1983,14 @@
    ]
   },
   {
-   "id": "CHEMBL3707226",
-   "name": "Defibrotide Sodium",
-   "drugType": "Oligonucleotide",
+   "id": "CHEMBL2108250",
+   "name": "Anistreplase",
+   "drugType": "Enzyme",
    "approvedFor": [
-    "spondylo-ocular syndrome",
-    "hepatic veno-occlusive disease"
+    "Recurrent thrombophlebitis",
+    "acute coronary syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Plasminogen activator"
@@ -2026,16 +2057,18 @@
    ]
   },
   {
-   "id": "CHEMBL2108147",
-   "name": "Streptokinase",
-   "drugType": "Enzyme",
+   "id": "CHEMBL877",
+   "name": "Tranexamic Acid",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "pulmonary embolism",
-    "Recurrent thrombophlebitis"
+    "Menorrhagia",
+    "hemorrhage",
+    "hemophilia A"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
-    "Plasminogen activator"
+    "Plasminogen inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2099,13 +2132,14 @@
    ]
   },
   {
-   "id": "CHEMBL2108250",
-   "name": "Anistreplase",
-   "drugType": "Enzyme",
+   "id": "CHEMBL3707226",
+   "name": "Defibrotide Sodium",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "acute coronary syndrome"
+    "spondylo-ocular syndrome",
+    "hepatic veno-occlusive disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Plasminogen activator"
@@ -2172,17 +2206,17 @@
    ]
   },
   {
-   "id": "CHEMBL877",
-   "name": "Tranexamic Acid",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2108147",
+   "name": "Streptokinase",
+   "drugType": "Enzyme",
    "approvedFor": [
-    "Menorrhagia",
-    "hemorrhage",
-    "hemophilia A"
+    "pulmonary embolism",
+    "Recurrent thrombophlebitis"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
-    "Plasminogen inhibitor"
+    "Plasminogen activator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2254,6 +2288,7 @@
     "tibia fracture",
     "bone disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Activin receptor type-1 agonist",
@@ -2329,6 +2364,7 @@
     "Pain",
     "Fever"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Beta-nerve growth factor inhibitor"
@@ -2367,6 +2403,7 @@
    "approvedFor": [
     "prostate cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Endothelin receptor ET-A antagonist"
@@ -2405,6 +2442,7 @@
    "approvedFor": [
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Endothelin receptor ET-A antagonist"
@@ -2444,6 +2482,7 @@
     "neoplasm",
     "inborn error of immunity"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "C-X-C chemokine receptor type 4 antagonist"
@@ -2502,6 +2541,7 @@
     "lymphoma",
     "non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "C-X-C chemokine receptor type 4 partial agonist"

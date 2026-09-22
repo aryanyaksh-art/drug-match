@@ -18,6 +18,7 @@
    "approvedFor": [
     "Friedreich ataxia"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Nuclear factor erythroid 2-related factor 2 activator"
@@ -92,6 +93,7 @@
     "infection",
     "HIV infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Cytochrome P450 3A inhibitor"
@@ -167,6 +169,7 @@
     "chronic hepatitis C virus infection",
     "viral infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Cytochrome P450 3A inhibitor",
@@ -247,6 +250,7 @@
     "viral infectious disease",
     "HIV infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "C-C chemokine receptor type 5 antagonist"
@@ -310,6 +314,7 @@
     "Familial cold urticaria",
     "Muckle-Wells syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
@@ -385,6 +390,7 @@
     "juvenile idiopathic arthritis",
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
@@ -459,6 +465,7 @@
     "HIV-1 infection",
     "viral infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
@@ -498,6 +505,7 @@
     "neoplasm",
     "inborn error of immunity"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "C-X-C chemokine receptor type 4 antagonist"
@@ -573,6 +581,7 @@
     "lymphoma",
     "non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "C-X-C chemokine receptor type 4 partial agonist"
@@ -646,6 +655,7 @@
     "plasma cell myeloma",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "C-X-C chemokine receptor type 4 antagonist"
@@ -712,19 +722,32 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.7153,
    "rawScore": 0.163171,
@@ -784,176 +807,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "immune system disorder"
    ],
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 12,
-   "score": 0.7153,
-   "rawScore": 0.163171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0846,
-     "contribution": 0.038827,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0846
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.1459,
-     "contribution": 0.0384,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1459
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0746,
-     "contribution": 0.034231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0746
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 13,
-   "score": 0.7153,
-   "rawScore": 0.163171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0846,
-     "contribution": 0.038827,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0846
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.1459,
-     "contribution": 0.0384,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1459
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0746,
-     "contribution": 0.034231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0746
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
@@ -961,175 +821,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
-   "score": 0.7153,
-   "rawScore": 0.163171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0846,
-     "contribution": 0.038827,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0846
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.1459,
-     "contribution": 0.0384,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1459
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0746,
-     "contribution": 0.034231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0746
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201833",
-   "name": "Golimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "juvenile arthritis due to defect in LACC1",
-    "spondylitis",
-    "immune system disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 15,
-   "score": 0.7153,
-   "rawScore": 0.163171,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0846,
-     "contribution": 0.038827,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0846
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.1459,
-     "contribution": 0.0384,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1459
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0746,
-     "contribution": 0.034231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0746
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 16,
+   "rank": 12,
    "score": 0.7153,
    "rawScore": 0.163171,
    "geneCount": 1,
@@ -1197,7 +889,332 @@
     "ankylosing spondylitis",
     "psoriasis vulgaris"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
+   "score": 0.7153,
+   "rawScore": 0.163171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0846,
+     "contribution": 0.038827,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0846
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.1459,
+     "contribution": 0.0384,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1459
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0746,
+     "contribution": 0.034231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0746
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.7153,
+   "rawScore": 0.163171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0846,
+     "contribution": 0.038827,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0846
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.1459,
+     "contribution": 0.0384,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1459
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0746,
+     "contribution": 0.034231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0746
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
+   "score": 0.7153,
+   "rawScore": 0.163171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0846,
+     "contribution": 0.038827,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0846
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.1459,
+     "contribution": 0.0384,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1459
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0746,
+     "contribution": 0.034231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0746
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.7153,
+   "rawScore": 0.163171,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0846,
+     "contribution": 0.038827,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0846
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.1459,
+     "contribution": 0.0384,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1459
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0746,
+     "contribution": 0.034231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0746
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
@@ -1280,6 +1297,7 @@
     "immune system disorder",
     "CINCA syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Interleukin-1 receptor antagonist"
@@ -1337,6 +1355,7 @@
     "breast neoplasm",
     "breast cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase AKT inhibitor"
@@ -1409,6 +1428,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Serine/threonine-protein kinase mTOR inhibitor"
@@ -1458,23 +1478,35 @@
    ]
   },
   {
-   "id": "CHEMBL1201823",
-   "name": "Abatacept",
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "juvenile idiopathic arthritis"
+    "kidney transplant",
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 21,
    "score": 0.3907,
    "rawScore": 0.091551,
@@ -1517,34 +1549,24 @@
    ]
   },
   {
-   "id": "CHEMBL1742990",
-   "name": "Belatacept",
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 22,
    "score": 0.3907,
    "rawScore": 0.091551,
@@ -1593,6 +1615,7 @@
    "approvedFor": [
     "Primary hemophagocytic lymphohistiocytosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interferon gamma inhibitor"
@@ -1648,6 +1671,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interleukin-1 alpha inhibitor"
@@ -1686,6 +1710,7 @@
    "approvedFor": [
     "immune system disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interleukin-6 inhibitor"
@@ -1761,6 +1786,7 @@
     "anemia",
     "idiopathic multicentric Castleman disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Interleukin-6 antagonist"
@@ -1833,6 +1859,7 @@
    "approvedFor": [
     "immune system disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interleukin-6 inhibitor"
@@ -1899,19 +1926,26 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL2105720",
+   "name": "Lesinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 28,
    "score": 0.2921,
    "rawScore": 0.069788,
@@ -1943,6 +1977,7 @@
    "approvedFor": [
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
@@ -1984,25 +2019,20 @@
    ]
   },
   {
-   "id": "CHEMBL2105720",
-   "name": "Lesinurad",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 30,
    "score": 0.2921,
    "rawScore": 0.069788,
@@ -2035,6 +2065,7 @@
     "hyperuricemia",
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
@@ -2074,6 +2105,7 @@
     "angina pectoris",
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Carnitine O-palmitoyltransferase 1, muscle isoform inhibitor",
@@ -2143,6 +2175,7 @@
     "pustular psoriasis",
     "psoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "IL36 receptor antagonist"
@@ -2183,6 +2216,7 @@
     "familial partial lipodystrophy",
     "liver disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Leptin receptor agonist"
@@ -2237,6 +2271,7 @@
     "psoriasis",
     "parapsoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Interleukin 17A inhibitor",
@@ -2296,6 +2331,7 @@
     "immune system disorder",
     "psoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
@@ -2328,15 +2364,14 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -2368,13 +2403,16 @@
    ]
   },
   {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -2412,6 +2450,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Hepatitis A virus cellular receptor 2 inhibitor"
@@ -2444,24 +2483,22 @@
    ]
   },
   {
-   "id": "CHEMBL1467",
-   "name": "Allopurinol",
+   "id": "CHEMBL1164729",
+   "name": "Febuxostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "lymphoma",
-    "leukemia",
-    "cancer",
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 4,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
-    "Xanthine dehydrogenase inhibitor",
     "Xanthine dehydrogenase inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "cardiotoxicity"
     }
    ],
    "withdrawn": false,

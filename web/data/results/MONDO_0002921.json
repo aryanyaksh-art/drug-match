@@ -19,6 +19,7 @@
     "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Mitochondrial complex I (NADH dehydrogenase) inhibitor",
@@ -142,6 +143,7 @@
     "cardiovascular disorder",
     "congestive heart failure"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Phosphodiesterase 3 inhibitor",
@@ -252,6 +254,7 @@
     "colorectal neoplasm",
     "colorectal cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Thymidine phosphorylase inhibitor"
@@ -321,31 +324,21 @@
    ]
   },
   {
-   "id": "CHEMBL467",
-   "name": "Hydroxyurea",
+   "id": "CHEMBL1200983",
+   "name": "Gallium Nitrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "squamous cell carcinoma",
-    "melanoma",
-    "sickle cell disease",
-    "neoplasm"
+    "Hypercalcemia"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
@@ -441,20 +434,32 @@
    ]
   },
   {
-   "id": "CHEMBL1200983",
-   "name": "Gallium Nitrate",
+   "id": "CHEMBL467",
+   "name": "Hydroxyurea",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypercalcemia"
+    "squamous cell carcinoma",
+    "melanoma",
+    "sickle cell disease",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -550,6 +555,114 @@
    ]
   },
   {
+   "id": "CHEMBL1750",
+   "name": "Clofarabine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lymphoblastic leukemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "DNA polymerase (alpha/delta/epsilon) inhibitor",
+    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.2418,
+   "rawScore": 1.39837,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "RRM2B",
+     "geneId": "ENSG00000048392",
+     "geneName": "ribonucleotide reductase regulatory TP53 inducible subunit M2B",
+     "assoc": 0.9979,
+     "contribution": 0.169586,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9361
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9248
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4689
+      },
+      {
+       "id": "literature",
+       "score": 0.1892
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TWNK",
+     "geneId": "ENSG00000107815",
+     "geneName": "twinkle mtDNA helicase",
+     "assoc": 0.9941,
+     "contribution": 0.148658,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9372
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8868
+      },
+      {
+       "id": "literature",
+       "score": 0.1661
+      }
+     ],
+     "hops": 3,
+     "via": "RRM2B",
+     "viaScore": 0.88
+    },
+    {
+     "gene": "RRM2B",
+     "geneId": "ENSG00000048392",
+     "geneName": "ribonucleotide reductase regulatory TP53 inducible subunit M2B",
+     "assoc": 0.9979,
+     "contribution": 0.128394,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9361
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9248
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4689
+      },
+      {
+       "id": "literature",
+       "score": 0.1892
+      }
+     ],
+     "hops": 3,
+     "via": "RRM1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1096882",
    "name": "Fludarabine Phosphate",
    "drugType": "Small molecule",
@@ -557,6 +670,7 @@
     "B-cell chronic lymphocytic leukemia",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
@@ -574,7 +688,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
+   "rank": 7,
    "score": 0.2418,
    "rawScore": 1.39837,
    "geneCount": 14,
@@ -672,114 +786,8 @@
     "neoplasm",
     "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 7,
-   "score": 0.2418,
-   "rawScore": 1.39837,
-   "geneCount": 14,
-   "paths": [
-    {
-     "gene": "RRM2B",
-     "geneId": "ENSG00000048392",
-     "geneName": "ribonucleotide reductase regulatory TP53 inducible subunit M2B",
-     "assoc": 0.9979,
-     "contribution": 0.169586,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9361
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9248
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4689
-      },
-      {
-       "id": "literature",
-       "score": 0.1892
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TWNK",
-     "geneId": "ENSG00000107815",
-     "geneName": "twinkle mtDNA helicase",
-     "assoc": 0.9941,
-     "contribution": 0.148658,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9372
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8868
-      },
-      {
-       "id": "literature",
-       "score": 0.1661
-      }
-     ],
-     "hops": 3,
-     "via": "RRM2B",
-     "viaScore": 0.88
-    },
-    {
-     "gene": "RRM2B",
-     "geneId": "ENSG00000048392",
-     "geneName": "ribonucleotide reductase regulatory TP53 inducible subunit M2B",
-     "assoc": 0.9979,
-     "contribution": 0.128394,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9361
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9248
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4689
-      },
-      {
-       "id": "literature",
-       "score": 0.1892
-      }
-     ],
-     "hops": 3,
-     "via": "RRM1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1750",
-   "name": "Clofarabine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lymphoblastic leukemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
-   ],
-   "indicationCount": 3,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
@@ -884,6 +892,7 @@
    "approvedFor": [
     "brain cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ribonucleoside-diphosphate reductase RR1 inhibitor",
@@ -990,6 +999,7 @@
     "myeloid leukemia",
     "myelodysplastic syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Cytidine deaminase inhibitor"
@@ -1065,6 +1075,7 @@
    "approvedFor": [
     "Fever"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Ryanodine receptor 3 antagonist",
@@ -1119,6 +1130,7 @@
    "name": "Forodesine",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Purine nucleoside phosphorylase inhibitor"
@@ -1172,6 +1184,7 @@
     "neoplasm",
     "tumor of meninges"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor"
@@ -1296,6 +1309,7 @@
     "head and neck cancer",
     "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Dihydropyrimidine dehydrogenase inhibitor"
@@ -1342,6 +1356,7 @@
    "approvedFor": [
     "psoriasis vulgaris"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Uridine 5'-monophosphate synthase inhibitor"
@@ -1397,6 +1412,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Bcl-2 mRNA antisense inhibitor"
@@ -1448,6 +1464,7 @@
     "B-cell chronic lymphocytic leukemia",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Apoptosis regulator Bcl-2 inhibitor"
@@ -1501,6 +1518,7 @@
     "astrocytoma (excluding glioblastoma)",
     "tuberous sclerosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 13,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
@@ -1570,33 +1588,18 @@
    ]
   },
   {
-   "id": "CHEMBL269732",
-   "name": "Tacrolimus Anhydrous",
+   "id": "CHEMBL219410",
+   "name": "Zotarolimus",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "graft versus host disease",
-    "conjunctivitis"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 19,
    "score": 0.0573,
    "rawScore": 0.369554,
@@ -1634,17 +1637,40 @@
    ]
   },
   {
-   "id": "CHEMBL219410",
-   "name": "Zotarolimus",
+   "id": "CHEMBL413",
+   "name": "Sirolimus",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "plasma cell myeloma",
+    "kidney transplant",
+    "Gorham-Stout disease",
+    "vascular malformation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 21,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 20,
    "score": 0.0573,
    "rawScore": 0.369554,
@@ -1682,18 +1708,27 @@
    ]
   },
   {
-   "id": "CHEMBL1200686",
-   "name": "Pimecrolimus",
+   "id": "CHEMBL269732",
+   "name": "Tacrolimus Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "Eczematoid dermatitis"
+    "graft versus host disease",
+    "conjunctivitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -1746,6 +1781,7 @@
     "mantle cell lymphoma",
     "renal cell carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
@@ -1790,32 +1826,19 @@
    ]
   },
   {
-   "id": "CHEMBL413",
-   "name": "Sirolimus",
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "plasma cell myeloma",
-    "kidney transplant",
-    "Gorham-Stout disease",
-    "vascular malformation"
+    "atopic eczema",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 21,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -1866,6 +1889,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Apoptosis regulator Bcl-W inhibitor",
@@ -1919,6 +1943,7 @@
     "hypertrophic cardiomyopathy",
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Cardiac myosin inhibitor"
@@ -1974,6 +1999,7 @@
    "approvedFor": [
     "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Cardiac myosin activator"
@@ -2018,22 +2044,28 @@
    ]
   },
   {
-   "id": "CHEMBL185",
-   "name": "Fluorouracil",
+   "id": "CHEMBL1773",
+   "name": "Capecitabine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "keratosis",
-    "malignant colon neoplasm",
-    "actinic keratosis",
-    "head and neck cancer"
+    "gastric neoplasm",
+    "colorectal neoplasm",
+    "colonic neoplasm",
+    "colorectal cancer"
    ],
-   "indicationCount": 9,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 27,
    "score": 0.0433,
    "rawScore": 0.29099,
@@ -2078,6 +2110,7 @@
     "neoplasm",
     "rectum adenocarcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
@@ -2122,27 +2155,23 @@
    ]
   },
   {
-   "id": "CHEMBL1773",
-   "name": "Capecitabine",
+   "id": "CHEMBL185",
+   "name": "Fluorouracil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastric neoplasm",
-    "colorectal neoplasm",
-    "colonic neoplasm",
-    "colorectal cancer"
+    "keratosis",
+    "malignant colon neoplasm",
+    "actinic keratosis",
+    "head and neck cancer"
    ],
-   "indicationCount": 8,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 9,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 29,
    "score": 0.0433,
    "rawScore": 0.29099,
@@ -2187,6 +2216,7 @@
     "neoplasm",
     "colorectal cancer"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
@@ -2240,6 +2270,7 @@
    "name": "Doxifluridine",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
@@ -2293,6 +2324,7 @@
     "gastric neoplasm",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Thymidylate synthase inhibitor"
@@ -2344,6 +2376,7 @@
     "cancer",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Neurotrophic tyrosine kinase receptor inhibitor",
@@ -2396,6 +2429,7 @@
     "eye disorder",
     "keratitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Neurotrophic tyrosine kinase receptor agonist"
@@ -2449,6 +2483,7 @@
     "neoplasm",
     "non-small cell lung carcinoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Dihydrofolate reductase inhibitor",
@@ -2502,6 +2537,7 @@
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "ALK tyrosine kinase receptor inhibitor",
@@ -2556,6 +2592,7 @@
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "NT-3 growth factor receptor inhibitor",
@@ -2608,6 +2645,7 @@
    "approvedFor": [
     "acute myeloid leukemia by FAB classification"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Nerve growth factor receptor Trk-A inhibitor",
@@ -2654,12 +2692,13 @@
    ]
   },
   {
-   "id": "CHEMBL2074972",
-   "name": "Benidipine",
+   "id": "CHEMBL1275868",
+   "name": "Azelnidipine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "Hypertension"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Voltage-gated L-type calcium channel blocker"
@@ -2704,13 +2743,14 @@
    ]
   },
   {
-   "id": "CHEMBL475534",
-   "name": "Nitrendipine",
+   "id": "CHEMBL452076",
+   "name": "Cilnidipine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "Hypertension"
+    "Hypertension",
+    "cardiovascular disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Voltage-gated L-type calcium channel blocker"

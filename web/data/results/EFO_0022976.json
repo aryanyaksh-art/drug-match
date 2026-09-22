@@ -18,6 +18,7 @@
    "approvedFor": [
     "Duchenne muscular dystrophy"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "80S Ribosome modulator"
@@ -92,13 +93,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -164,15 +168,14 @@
    ]
   },
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -247,6 +250,7 @@
     "neoplasm",
     "tumor of meninges"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor"
@@ -333,6 +337,7 @@
     "B-cell chronic lymphocytic leukemia",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
@@ -409,14 +414,16 @@
    ]
   },
   {
-   "id": "CHEMBL888",
-   "name": "Gemcitabine",
+   "id": "CHEMBL1750",
+   "name": "Clofarabine",
    "drugType": "Small molecule",
    "approvedFor": [
+    "acute lymphoblastic leukemia",
     "neoplasm",
-    "non-small cell lung carcinoma"
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
@@ -483,15 +490,15 @@
    ]
   },
   {
-   "id": "CHEMBL1750",
-   "name": "Clofarabine",
+   "id": "CHEMBL888",
+   "name": "Gemcitabine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute lymphoblastic leukemia",
     "neoplasm",
-    "myelodysplastic syndrome"
+    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "DNA polymerase (alpha/delta/epsilon) inhibitor",
     "Ribonucleoside-diphosphate reductase RR1 inhibitor"
@@ -565,6 +572,7 @@
     "alcohol dependence",
     "parasitic infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Aldehyde dehydrogenase inhibitor"
@@ -623,6 +631,7 @@
    "name": "Nitrefazole",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Alcohol dehydrogenase inhibitor"
@@ -698,28 +707,105 @@
    ]
   },
   {
-   "id": "CHEMBL1256841",
-   "name": "Nialamide",
+   "id": "CHEMBL3989843",
+   "name": "Tranylcypromine",
    "drugType": "Small molecule",
    "approvedFor": [
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
-     "type": "Withdrawn",
-     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.0222,
+   "rawScore": 0.113497,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.037309,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.923
+    },
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.035993,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.922
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.1567,
+     "contribution": 0.020375,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1567
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.975
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1909286",
+   "name": "Phenoxypropazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
     {
      "type": "Withdrawn",
      "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -728,7 +814,87 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
+   "score": 0.0222,
+   "rawScore": 0.113497,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.037309,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.923
+    },
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.035993,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.922
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.1567,
+     "contribution": 0.020375,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1567
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.975
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1909283",
+   "name": "Mebanazine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Hepatotoxicity; Drug Interaction"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 12,
    "score": 0.0222,
    "rawScore": 0.113497,
    "geneCount": 2,
@@ -794,178 +960,12 @@
     "depressive disorder",
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "psychiatric toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 11,
-   "score": 0.0222,
-   "rawScore": 0.113497,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.037309,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.923
-    },
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.035993,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.922
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.1567,
-     "contribution": 0.020375,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1567
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.975
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201168",
-   "name": "Isocarboxazid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder",
-    "depressive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
-   "rank": 12,
-   "score": 0.0222,
-   "rawScore": 0.113497,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.037309,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.923
-    },
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.035993,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.922
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.1567,
-     "contribution": 0.020375,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1567
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.975
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3989843",
-   "name": "Tranylcypromine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "psychiatric toxicity"
@@ -1032,91 +1032,29 @@
    ]
   },
   {
-   "id": "CHEMBL673",
-   "name": "Pargyline",
+   "id": "CHEMBL1256841",
+   "name": "Nialamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
+    "major depressive disorder"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 14,
-   "score": 0.0222,
-   "rawScore": 0.113497,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.037309,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.923
-    },
-    {
-     "gene": "ADH5",
-     "geneId": "ENSG00000197894",
-     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
-     "assoc": 0.216,
-     "contribution": 0.035993,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.216
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.922
-    },
-    {
-     "gene": "ALDH2",
-     "geneId": "ENSG00000111275",
-     "geneName": "aldehyde dehydrogenase 2 family member",
-     "assoc": 0.1567,
-     "contribution": 0.020375,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1567
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.975
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909286",
-   "name": "Phenoxypropazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
      "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+    },
+    {
+     "type": "Withdrawn",
      "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -1125,7 +1063,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 15,
+   "rank": 14,
    "score": 0.0222,
    "rawScore": 0.113497,
    "geneCount": 2,
@@ -1190,6 +1128,7 @@
    "approvedFor": [
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
@@ -1197,6 +1136,89 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 15,
+   "score": 0.0222,
+   "rawScore": 0.113497,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.037309,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.923
+    },
+    {
+     "gene": "ADH5",
+     "geneId": "ENSG00000197894",
+     "geneName": "alcohol dehydrogenase 5 (class III), chi polypeptide",
+     "assoc": 0.216,
+     "contribution": 0.035993,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.216
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.922
+    },
+    {
+     "gene": "ALDH2",
+     "geneId": "ENSG00000111275",
+     "geneName": "aldehyde dehydrogenase 2 family member",
+     "assoc": 0.1567,
+     "contribution": 0.020375,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1567
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.975
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201168",
+   "name": "Isocarboxazid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "major depressive disorder",
+    "depressive disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 16,
    "score": 0.0222,
    "rawScore": 0.113497,
@@ -1256,25 +1278,20 @@
    ]
   },
   {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
+   "id": "CHEMBL673",
+   "name": "Pargyline",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Hepatotoxicity; Drug Interaction"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 17,
    "score": 0.0222,
@@ -1341,6 +1358,7 @@
    "approvedFor": [
     "poisoning"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Alcohol dehydrogenase class I inhibitor"
@@ -1414,6 +1432,7 @@
     "major depressive disorder",
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase B inhibitor",
@@ -1475,6 +1494,7 @@
    "approvedFor": [
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase B inhibitor",
@@ -1531,6 +1551,7 @@
    "approvedFor": [
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase B inhibitor",
@@ -1581,14 +1602,14 @@
    ]
   },
   {
-   "id": "CHEMBL86304",
-   "name": "Moclobemide",
+   "id": "CHEMBL18116",
+   "name": "Toloxatone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "depressive disorder",
     "major depressive disorder"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase A inhibitor"
    ],
@@ -1637,13 +1658,15 @@
    ]
   },
   {
-   "id": "CHEMBL18116",
-   "name": "Toloxatone",
+   "id": "CHEMBL86304",
+   "name": "Moclobemide",
    "drugType": "Small molecule",
    "approvedFor": [
+    "depressive disorder",
     "major depressive disorder"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Monoamine oxidase A inhibitor"
    ],
@@ -1700,6 +1723,7 @@
     "neoplasm",
     "primary cutaneous T-cell non-Hodgkin lymphoma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Histone deacetylase 2 inhibitor",
@@ -1772,6 +1796,7 @@
    "name": "Proxibarbal",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Diamine oxidase activator",
@@ -1831,16 +1856,16 @@
    ]
   },
   {
-   "id": "CHEMBL343448",
-   "name": "Romidepsin",
-   "drugType": "Protein",
+   "id": "CHEMBL408513",
+   "name": "Belinostat",
+   "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
     "T-cell non-Hodgkin lymphoma",
-    "mature T-cell and NK-cell non-Hodgkin lymphoma",
-    "primary cutaneous T-cell non-Hodgkin lymphoma"
+    "peripheral T-cell lymphoma, not otherwise specified"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
@@ -1906,15 +1931,14 @@
    ]
   },
   {
-   "id": "CHEMBL408513",
-   "name": "Belinostat",
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "T-cell non-Hodgkin lymphoma",
-    "peripheral T-cell lymphoma, not otherwise specified"
+    "Duchenne muscular dystrophy"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
@@ -1980,29 +2004,23 @@
    ]
   },
   {
-   "id": "CHEMBL483254",
-   "name": "Panobinostat",
-   "drugType": "Small molecule",
+   "id": "CHEMBL343448",
+   "name": "Romidepsin",
+   "drugType": "Protein",
    "approvedFor": [
     "neoplasm",
-    "plasma cell myeloma"
+    "T-cell non-Hodgkin lymphoma",
+    "mature T-cell and NK-cell non-Hodgkin lymphoma",
+    "primary cutaneous T-cell non-Hodgkin lymphoma"
    ],
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 28,
    "score": 0.0089,
    "rawScore": 0.046095,
@@ -2062,19 +2080,30 @@
    ]
   },
   {
-   "id": "CHEMBL1213492",
-   "name": "Givinostat",
+   "id": "CHEMBL483254",
+   "name": "Panobinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Duchenne muscular dystrophy"
+    "neoplasm",
+    "plasma cell myeloma"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 29,
    "score": 0.0089,
    "rawScore": 0.046095,
@@ -2140,6 +2169,7 @@
    "approvedFor": [
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Histone deacetylase inhibitor"
@@ -2213,6 +2243,7 @@
     "depressive disorder",
     "major depressive disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Dopamine D1 and D2 receptor agonist",
@@ -2275,6 +2306,7 @@
    "approvedFor": [
     "diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Hexokinase type IV activator"
@@ -2316,6 +2348,7 @@
     "Eczematoid dermatitis",
     "prurigo"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Interleukin-31 receptor subunit alpha inhibitor"
@@ -2357,6 +2390,7 @@
     "pulmonary emphysema",
     "lung disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Leukocyte elastase inhibitor"
@@ -2393,6 +2427,7 @@
    "name": "Sivelestat",
    "drugType": "Small molecule",
    "approvedFor": [],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 0,
    "mechanisms": [
     "Leukocyte elastase inhibitor"
@@ -2432,6 +2467,7 @@
     "immune system disorder",
     "neuromyelitis optica"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "IL6Ralpha/GP130 antagonist"
@@ -2472,6 +2508,7 @@
     "tibia fracture",
     "bone disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Activin receptor type-1 agonist",
@@ -2529,6 +2566,7 @@
    "approvedFor": [
     "immune system disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interleukin-6 inhibitor"
@@ -2570,6 +2608,7 @@
     "anemia",
     "idiopathic multicentric Castleman disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Interleukin-6 antagonist"
@@ -2608,6 +2647,7 @@
    "approvedFor": [
     "immune system disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interleukin-6 inhibitor"

@@ -224,6 +224,13 @@ function card(d, i) {
          ? 'This drug has been withdrawn in at least one market. It is shown because the biology connects, not because it is a sensible candidate.'
          : 'Relevant to any repurposing decision, and not something this ranking accounts for.'}</div>`
     : '';
+  const noveltyFlag = d.possiblyAlreadyApproved
+    ? `<div class="safety"><strong>This may already be an approved treatment for this disease.</strong>
+       Its own record separately lists "${esc(d.possiblyAlreadyApproved)}" as an approved indication,
+       which overlaps this disease's name. Our known-drug list did not catch it -- see
+       <a href="https://github.com/aryanyaksh-art/off-the-shelf#is-novel-always-actually-novel-one-confirmed-case-says-no" target="_blank" rel="noopener">why, and one confirmed example</a>.
+       Treat the "novel" label here with caution.</div>`
+    : '';
   return `
     <div class="card">
       <button class="chead" aria-expanded="false" data-card="${i}">
@@ -232,7 +239,9 @@ function card(d, i) {
           <span class="dname">${esc(d.name)}</span>
           <span class="dfor">${esc(approved)}${
             d.withdrawn ? ' <span class="flag warn">withdrawn</span>'
-            : d.blackBox ? ' <span class="flag">black box</span>' : ''}</span>
+            : d.blackBox ? ' <span class="flag">black box</span>' : ''}${
+            d.possiblyAlreadyApproved ? ' <span class="flag warn">check: maybe not novel</span>' : ''
+          }</span>
         </span>
         <span class="score">
           <span class="bar"><i style="width:${Math.round(d.score * 100)}%"></i></span>
@@ -246,6 +255,7 @@ function card(d, i) {
         ${evidenceRows(d.paths, d.name)}
         ${moa}
         ${safety}
+        ${noveltyFlag}
       </div>
     </div>`;
 }

@@ -18,6 +18,7 @@
    "approvedFor": [
     "amyotrophic lateral sclerosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "SOD1 mRNA antisense inhibitor"
@@ -81,6 +82,7 @@
    "approvedFor": [
     "Primary hemophagocytic lymphohistiocytosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Interferon gamma inhibitor"
@@ -157,6 +159,7 @@
    "approvedFor": [
     "metachromatic leukodystrophy"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "ARSA exogenous gene"
@@ -215,6 +218,7 @@
     "rhinitis",
     "urticaria"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Ig epsilon chain C region inhibitor"
@@ -274,6 +278,7 @@
    "approvedFor": [
     "Fabry disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Alpha-galactosidase A stabiliser",
@@ -328,19 +333,32 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 7,
    "score": 0.4138,
    "rawScore": 0.606481,
@@ -408,192 +426,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "immune system disorder"
    ],
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 8,
-   "score": 0.4138,
-   "rawScore": 0.606481,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6921,
-     "contribution": 0.317775,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3569
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.6595,
-     "contribution": 0.172517,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5339
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2694
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.5561,
-     "contribution": 0.116189,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5561
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
-   "score": 0.4138,
-   "rawScore": 0.606481,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6921,
-     "contribution": 0.317775,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3569
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.6595,
-     "contribution": 0.172517,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5339
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2694
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.5561,
-     "contribution": 0.116189,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5561
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
@@ -601,191 +440,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
-   "score": 0.4138,
-   "rawScore": 0.606481,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6921,
-     "contribution": 0.317775,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3569
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.6595,
-     "contribution": 0.172517,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5339
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2694
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.5561,
-     "contribution": 0.116189,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5561
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201833",
-   "name": "Golimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "juvenile arthritis due to defect in LACC1",
-    "spondylitis",
-    "immune system disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 11,
-   "score": 0.4138,
-   "rawScore": 0.606481,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.6921,
-     "contribution": 0.317775,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3569
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.6595,
-     "contribution": 0.172517,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5339
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2694
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.5561,
-     "contribution": 0.116189,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5561
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 12,
+   "rank": 8,
    "score": 0.4138,
    "rawScore": 0.606481,
    "geneCount": 1,
@@ -861,7 +516,364 @@
     "ankylosing spondylitis",
     "psoriasis vulgaris"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.4138,
+   "rawScore": 0.606481,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6921,
+     "contribution": 0.317775,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3569
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.6595,
+     "contribution": 0.172517,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5339
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2694
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.5561,
+     "contribution": 0.116189,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5561
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.4138,
+   "rawScore": 0.606481,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6921,
+     "contribution": 0.317775,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3569
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.6595,
+     "contribution": 0.172517,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5339
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2694
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.5561,
+     "contribution": 0.116189,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5561
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
+   "score": 0.4138,
+   "rawScore": 0.606481,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6921,
+     "contribution": 0.317775,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3569
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.6595,
+     "contribution": 0.172517,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5339
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2694
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.5561,
+     "contribution": 0.116189,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5561
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.4138,
+   "rawScore": 0.606481,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.6921,
+     "contribution": 0.317775,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3569
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.6595,
+     "contribution": 0.172517,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5339
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2694
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.5561,
+     "contribution": 0.116189,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5561
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
@@ -951,6 +963,7 @@
     "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Alpha glucosidase inhibitor"
@@ -1038,6 +1051,7 @@
     "immune system disorder",
     "psoriasis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
@@ -1070,15 +1084,14 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -1110,13 +1123,16 @@
    ]
   },
   {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -1157,6 +1173,7 @@
     "Familial cold urticaria",
     "Muckle-Wells syndrome"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
@@ -1219,6 +1236,7 @@
     "juvenile idiopathic arthritis",
     "gout"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
@@ -1279,6 +1297,7 @@
     "diabetes mellitus",
     "type 2 diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Lysosomal alpha-glucosidase inhibitor",
@@ -1346,6 +1365,7 @@
     "Beta-thalassemia",
     "anemia (phenotype)"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Transforming growth factor beta inhibitor"
@@ -1387,6 +1407,7 @@
     "breast neoplasm",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Cyclin-dependent kinase 4/cyclin D1 inhibitor",
@@ -1446,6 +1467,7 @@
     "juvenile dermatomyositis",
     "rheumatoid arthritis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
     "Tyrosine-protein kinase JAK1 inhibitor",
@@ -1539,6 +1561,7 @@
     "myeloid leukemia",
     "acute myeloid leukemia by FAB classification"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Myeloid cell surface antigen CD33 binding agent"
@@ -1588,6 +1611,7 @@
     "Torticollis",
     "Parkinson disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Vesicle-associated membrane protein 2 inhibitor"
@@ -1631,6 +1655,7 @@
    "approvedFor": [
     "acute myeloid leukemia by FAB classification"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Nerve growth factor receptor Trk-A inhibitor",
@@ -1706,6 +1731,7 @@
     "neoplasm",
     "myelofibrosis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Activin receptor type-1 inhibitor",
@@ -1781,6 +1807,7 @@
     "non-small cell lung carcinoma",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "NPM/ALK (Nucleophosmin/ALK tyrosine kinase receptor) inhibitor",
@@ -1822,6 +1849,7 @@
     "acute promyelocytic leukemia",
     "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Thioredoxin reductase 1 inhibitor"
@@ -1870,6 +1898,7 @@
     "rheumatic disorder",
     "Arthritis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Thioredoxin reductase 1 inhibitor"
@@ -1902,13 +1931,14 @@
    ]
   },
   {
-   "id": "CHEMBL1743007",
-   "name": "Daratumumab",
+   "id": "CHEMBL3545131",
+   "name": "Isatuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "plasma cell myeloma"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Lymphocyte differentiation antigen CD38 inhibitor"
@@ -1941,13 +1971,14 @@
    ]
   },
   {
-   "id": "CHEMBL3545131",
-   "name": "Isatuximab",
+   "id": "CHEMBL1743007",
+   "name": "Daratumumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "plasma cell myeloma"
+    "plasma cell myeloma",
+    "neoplasm"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Lymphocyte differentiation antigen CD38 inhibitor"
@@ -1989,6 +2020,7 @@
     "rheumatoid arthritis",
     "ankylosing spondylitis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "Tyrosine-protein kinase JAK1 inhibitor",
@@ -2066,21 +2098,33 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 3,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 35,
    "score": 0.1801,
    "rawScore": 0.281757,
@@ -2146,6 +2190,7 @@
    "approvedFor": [
     "rheumatoid arthritis"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Tyrosine-protein kinase JAK2 inhibitor",
@@ -2223,6 +2268,7 @@
     "myelofibrosis",
     "chronic graft versus host disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 8,
    "mechanisms": [
     "Tyrosine-protein kinase JAK1 inhibitor",
@@ -2300,32 +2346,22 @@
    ]
   },
   {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 1,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
    "mechanisms": [
     "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 38,
    "score": 0.1801,
    "rawScore": 0.281757,
@@ -2393,6 +2429,7 @@
     "myelofibrosis",
     "acquired polycythemia vera"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Tyrosine-protein kinase JAK2 inhibitor",
@@ -2472,6 +2509,7 @@
    "approvedFor": [
     "nicotine dependence"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Neuronal acetylcholine receptor; alpha4/beta2 agonist",
@@ -2480,7 +2518,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 40,
+   "rank": 41,
    "score": 0.1671,
    "rawScore": 0.263753,
    "geneCount": 2,
@@ -2545,6 +2583,7 @@
    "approvedFor": [
     "nicotine dependence"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Neuronal acetylcholine receptor; alpha4/beta2 partial agonist"
@@ -2552,7 +2591,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
+   "rank": 42,
    "score": 0.1671,
    "rawScore": 0.263753,
    "geneCount": 2,
@@ -2619,6 +2658,7 @@
     "HIV-1 infection",
     "viral infectious disease"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "T-cell surface antigen CD4 inhibitor"
@@ -2659,6 +2699,7 @@
    "approvedFor": [
     "Friedreich ataxia"
    ],
+   "possiblyAlreadyApproved": "Friedreich ataxia",
    "indicationCount": 1,
    "mechanisms": [
     "Nuclear factor erythroid 2-related factor 2 activator"
@@ -2700,6 +2741,7 @@
     "osteopetrosis",
     "inflammation"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 7,
    "mechanisms": [
     "Interferon gamma receptor agonist"
@@ -2773,6 +2815,7 @@
     "eye disorder",
     "nicotine dependence"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Neuronal acetylcholine receptor; alpha4/beta2 agonist",
@@ -2781,7 +2824,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 42,
+   "rank": 40,
    "score": 0.1671,
    "rawScore": 0.263753,
    "geneCount": 2,
@@ -2849,6 +2892,7 @@
     "benign essential blepharospasm",
     "migraine disorder"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 5,
    "mechanisms": [
     "Synaptosomal nerve-associated protein 25 (SNAP-25) hydrolytic enzyme"
@@ -2865,7 +2909,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 84,
+   "rank": 81,
    "score": 0.0973,
    "rawScore": 0.166637,
    "geneCount": 1,
@@ -2897,6 +2941,7 @@
     "type 2 diabetes mellitus",
     "diabetes mellitus"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor gamma agonist"
@@ -2909,7 +2954,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 91,
+   "rank": 92,
    "score": 0.0863,
    "rawScore": 0.151365,
    "geneCount": 1,
@@ -2934,23 +2979,41 @@
    ]
   },
   {
-   "id": "CHEMBL1201565",
-   "name": "Epoetin Alfa",
+   "id": "CHEMBL1201566",
+   "name": "Darbepoetin Alfa",
    "drugType": "Protein",
    "approvedFor": [
-    "myelodysplastic syndrome",
-    "anemia (phenotype)",
+    "chronic kidney disease",
+    "cancer",
     "anemia",
-    "chronic kidney disease"
+    "anemia (phenotype)"
    ],
-   "indicationCount": 6,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 184,
+   "blackBox": true,
+   "rank": 186,
    "score": 0.007,
    "rawScore": 0.041232,
    "geneCount": 1,
@@ -2983,6 +3046,7 @@
     "blood transfusion",
     "anemia (phenotype)"
    ],
+   "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Erythropoietin receptor agonist"
@@ -3015,40 +3079,24 @@
    ]
   },
   {
-   "id": "CHEMBL1201566",
-   "name": "Darbepoetin Alfa",
+   "id": "CHEMBL1201565",
+   "name": "Epoetin Alfa",
    "drugType": "Protein",
    "approvedFor": [
-    "chronic kidney disease",
-    "cancer",
+    "myelodysplastic syndrome",
+    "anemia (phenotype)",
     "anemia",
-    "anemia (phenotype)"
+    "chronic kidney disease"
    ],
-   "indicationCount": 5,
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
    "mechanisms": [
     "Erythropoietin receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 191,
+   "blackBox": false,
+   "rank": 189,
    "score": 0.007,
    "rawScore": 0.041232,
    "geneCount": 1,
