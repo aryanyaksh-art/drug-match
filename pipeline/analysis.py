@@ -22,6 +22,9 @@ the cached data, without touching the network.
      control       drugs. If the method is real, performance must collapse
                    toward random. If it does not, something is leaking.
 
+  7. Sparsity      Which diseases does it fail on, and why? The answer was
+                   not the one expected -- see the note above that check.
+
   5. Conservative  Text mining turns out to carry the most signal, which is
      floor         uncomfortable, because papers co-mention a gene and a
                    disease partly BECAUSE a drug already links them. So we
@@ -249,6 +252,45 @@ def main():
         "diseasesUnchanged": same,
         "byRarity": by_rarity,
     }
+
+    # ---- 7. what actually explains the failures ---------------------------
+    # The guess was that broad ontology terms were the problem -- that "cancer"
+    # is a category rather than a thing you treat, and that such terms would
+    # drag the average down. The data says the opposite: diseases with the
+    # FEWEST associated genes do worst, and performance improves steadily as
+    # evidence accumulates. The limiting factor is how much is known about a
+    # disease, not how precisely it is named.
+    #
+    # Kept in the honest direction rather than rewritten to look prescient.
+    print()
+    print("7. performance against how much gene evidence exists")
+    sized = []
+    for efo, node in nodes:
+        pcts = percentiles_for(node, drugs_of_gene, genes_of_drug, interactions)
+        if pcts:
+            sized.append((node["associatedTargets"]["count"],
+                          statistics.median(pcts), len(pcts)))
+    sized.sort()
+    buckets, width = [], max(1, len(sized) // 4)
+    print("   %-22s %8s %10s %8s" % ("associated genes", "diseases", "median", "pairs"))
+    for q in range(4):
+        chunk = sized[q * width:(q + 1) * width] if q < 3 else sized[3 * width:]
+        if not chunk:
+            continue
+        med = statistics.median([m for _g, m, _n in chunk])
+        label = "%d - %d" % (chunk[0][0], chunk[-1][0])
+        buckets.append({"range": label, "diseases": len(chunk),
+                        "median": round(med, 4),
+                        "pairs": sum(n for _g, _m, n in chunk)})
+        print("   %-22s %8d %9.1f%% %8d"
+              % (label, len(chunk), 100 * med, sum(n for _g, _m, n in chunk)))
+    if len(buckets) >= 2:
+        trend = buckets[-1]["median"] - buckets[0]["median"]
+        print("   least to most evidence: %+.1f%% -- %s"
+              % (100 * trend,
+                 "sparse diseases do worse; evidence is the limiting factor"
+                 if trend < -0.02 else "evidence volume does not explain much"))
+    report["breadth"] = buckets
 
     with open(os.path.join(ROOT, "web", "data", "analysis.json"), "w",
               encoding="utf-8") as fh:
