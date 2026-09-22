@@ -26,6 +26,14 @@ GENES_PER_DISEASE = 50
 MAX_CANDIDATES = 40
 MAX_PATHS_SHOWN = 3
 
+# The website and the measurement have different scopes, on purpose.
+# Validation and analysis read the raw cache and cover every disease we have.
+# The site ships one JSON file per disease at roughly 65KB, so shipping
+# thousands would mean a deployment hundreds of megabytes large for no benefit
+# to a person using it. Curated diseases always ship; the programmatically
+# selected ones ship up to this limit, in ontology-id order.
+SHIP_GENERATED_MAX = 500
+
 
 def load(kind, required=True):
     path = os.path.join(RAW, kind + ".json")
@@ -237,10 +245,16 @@ def main():
 
     os.makedirs(RESULTS, exist_ok=True)
     index = []
-    for efo, _name, _rarity in ALL:
+    shipped_generated = 0
+    scored_total = 0
+    for efo, _name, rarity in ALL:
         node = diseases.get(efo)
         if not node:
             continue
+        if rarity == "other":
+            if shipped_generated >= SHIP_GENERATED_MAX:
+                continue
+            shipped_generated += 1
         result = score_disease(efo, node, genes, drugs, drugs_of_gene,
                                genes_of_drug, interactions)
         if not result:
@@ -262,8 +276,11 @@ def main():
     with open(os.path.join(ROOT, "web", "data", "index.json"), "w", encoding="utf-8") as fh:
         json.dump({"diseases": index, "dampingExponent": W,
                    "excludedDatatypes": sorted(LEAKY_DATATYPES),
-                   "interactionHop": bool(interactions)}, fh, indent=1)
-    print("wrote %d disease result files" % len(index))
+                   "interactionHop": bool(interactions),
+                   "diseasesBrowsable": len(index),
+                   "diseasesInCache": len(diseases)}, fh, indent=1)
+    print("wrote %d disease result files (%d diseases in cache; validation "
+          "and analysis use all of them)" % (len(index), len(diseases)))
 
 
 if __name__ == "__main__":

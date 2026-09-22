@@ -15,13 +15,15 @@ The gene threshold is so there is something to reason over. The drug threshold
 is so the disease can appear in validation at all -- a disease with no known
 treatment cannot tell us whether our ranking is any good.
 
-Ordering is by ontology id, which has nothing to do with how well a disease
-scores, so the cut at MAX_DISEASES is not a quality filter in disguise.
+Every disease meeting the rule is included. There is no cap and no ranking
+step, so there is no cut that could act as a quality filter in disguise.
+Ordering is by ontology id purely for reproducibility.
 
 Run this only when you want to regenerate the list:
 
     python pipeline/select_diseases.py > pipeline/generated_diseases.py
 """
+import json
 import os
 import sys
 
@@ -44,7 +46,7 @@ THERAPEUTIC_AREAS = [
 
 MIN_TARGETS = 50
 MIN_KNOWN_DRUGS = 1
-MAX_DISEASES = 320
+MAX_DISEASES = None   # None means take everything meeting the rule
 COUNT_BATCH = 25
 
 
@@ -60,8 +62,17 @@ def descendants():
 
 
 def counts_for(ids):
+    """Screen candidates, caching as we go. Screening the whole ontology is a
+    ten minute round trip, and nothing about it changes between runs, so it is
+    written to disk and reused."""
+    cache_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                              "..", "data", "raw", "screen.json")
     out = {}
-    ids = sorted(ids)
+    if os.path.exists(cache_path):
+        with open(cache_path, encoding="utf-8") as fh:
+            out = json.load(fh)
+        print("  %d candidates already screened" % len(out), file=sys.stderr)
+    ids = sorted(set(ids) - set(out))
     for start in range(0, len(ids), COUNT_BATCH):
         chunk = ids[start:start + COUNT_BATCH]
         parts = []
@@ -84,6 +95,10 @@ def counts_for(ids):
             }
         if start % (COUNT_BATCH * 20) == 0:
             print("  screened %d/%d" % (start, len(ids)), file=sys.stderr)
+            with open(cache_path, "w", encoding="utf-8") as fh:
+                json.dump(out, fh)
+    with open(cache_path, "w", encoding="utf-8") as fh:
+        json.dump(out, fh)
     return out
 
 
@@ -97,15 +112,18 @@ def main():
     kept = [(efo, s) for efo, s in stats.items()
             if s["targets"] >= MIN_TARGETS and s["drugs"] >= MIN_KNOWN_DRUGS]
     kept.sort(key=lambda kv: kv[0])          # by id: unrelated to quality
-    kept = kept[:MAX_DISEASES]
+    passed = len(kept)
+    if MAX_DISEASES:
+        kept = kept[:MAX_DISEASES]
 
-    print("%d passed the filter, keeping %d" % (len(stats), len(kept)), file=sys.stderr)
+    print("screened %d, %d passed the rule, keeping %d"
+          % (len(stats), passed, len(kept)), file=sys.stderr)
 
     print('"""Diseases selected programmatically by pipeline/select_diseases.py.')
     print()
-    print("Rule: at least %d associated genes and at least %d known drug,"
+    print("Rule: at least %d associated genes and at least %d known drug."
           % (MIN_TARGETS, MIN_KNOWN_DRUGS))
-    print("ordered by ontology id and cut at %d. Not hand-picked." % MAX_DISEASES)
+    print("Every disease meeting it is included. Not hand-picked, not capped.")
     print('"""')
     print()
     print("GENERATED = [")

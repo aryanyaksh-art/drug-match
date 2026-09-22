@@ -68,9 +68,16 @@ function renderChips() {
 }
 
 function renderFootMeta(payload) {
-  const bits = [`${index.length} diseases indexed`,
-    `damping exponent w = ${payload.dampingExponent}`,
-    `excluded evidence: ${payload.excludedDatatypes.join(', ')}`];
+  // The browsable set and the measured set differ, and saying so matters:
+  // quoting a validation figure from thousands of diseases beside a search box
+  // covering hundreds would be quietly misleading.
+  const bits = [`${index.length} diseases browsable here`];
+  if (payload.diseasesInCache && payload.diseasesInCache > index.length) {
+    bits.push(`${payload.diseasesInCache} scored and measured`);
+  }
+  bits.push(...
+  [`damping exponent w = ${payload.dampingExponent}`,
+    `excluded evidence: ${payload.excludedDatatypes.join(', ')}`]);
   if (validation) bits.push(`${validation.knownPairsEvaluated} known drug-disease pairs used for validation`);
   $('#footmeta').textContent = bits.join(' · ');
 }
