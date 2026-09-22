@@ -138,6 +138,28 @@ Run `python pipeline/mechanism_direction.py` to reproduce this.
 
 ---
 
+## Has the field already tried our top candidates?
+
+For the single top-ranked novel candidate on each of the 100 curated diseases, we checked ClinicalTrials.gov directly (the public v2 API, no key needed) for a trial matching that exact drug and disease.
+
+**16 of 100 already have a registered trial.** Two are worth naming specifically: **tofersen for Charcot-Marie-Tooth disease** (recruiting) and **tovorafenib for Noonan syndrome** (active) -- the second is mechanistically sound on its face, since Noonan syndrome is a RAS/MAPK pathway disorder and tovorafenib acts on that same pathway. Neither outcome should be oversold: a trial existing does not mean the drug works, and it does not mean our method predicted something novel -- only that the idea has already occurred to someone else too, which is a real form of external agreement worth having.
+
+Run `python pipeline/trial_check.py` to reproduce this; results are in `web/data/trial_check.json`.
+
+## Is "novel" always actually novel? One confirmed case says no.
+
+Our candidates are drugs *not* in a disease's own known-drug list from Open Targets. That list, and a drug's own `approvedFor` field, come from different edges in the same database and do not always agree.
+
+**One fully verified case:** for X-linked adrenoleukodystrophy, our engine surfaced **elivaldogene autotemcel** (marketed as Skysona, FDA-approved for ALD in 2022) as a "novel" candidate. It is not novel -- it is the real approved treatment. The bug is upstream: Open Targets correctly marks that exact ChEMBL record (`CHEMBL4594333`) as `APPROVAL` with ALD in its own `approvedFor` list, but the disease-side link for ALD instead points to a *different* ChEMBL entry, `CHEMBL3990046`, an old development-code synonym ("elivaldogene tavalentivec") still sitting at `PHASE_3`. Two database records for the same real-world drug, never resolved to each other -- our pipeline trusted the wrong edge.
+
+A broader automated sweep, matching every curated disease's novel candidates against each drug's own `approvedFor` field, flags **28 of 3,933 entries (0.7%)**. We are not claiming all 28 are the same class of bug as the ALD case -- some are generic-category overlap in ChEMBL's own tagging (a drug tagged approved for "arthritis" broadly, flagged against a candidate list for osteoarthritis specifically), which is a real ambiguity in the source data, not necessarily an error. We did not hand-verify all 28 the way we verified ALD. Reported as a lower bound on a real problem, not a confirmed bug count.
+
+We are naming this rather than quietly filtering it out, because a project that claims perfect novelty-detection and gets caught on one example looks far worse than one that found and disclosed the limitation itself.
+
+Run `python pipeline/audit_novelty.py` to reproduce this; results are in `web/data/novelty_audit.json`.
+
+---
+
 ## Running it
 
 ```bash
@@ -166,6 +188,8 @@ pipeline/diseases.py   the curated 100 diseases, with resolved MONDO ids
 pipeline/select_diseases.py  picks 320 more by a rule fixed in advance
 pipeline/analysis.py   sensitivity, bootstrap, ablation, negative control
 pipeline/mechanism_direction.py  genetic-concordance check (independent of the main score)
+pipeline/trial_check.py  cross-checks top candidates against ClinicalTrials.gov
+pipeline/audit_novelty.py  audits whether "novel" candidates really are
 pipeline/fetch.py      Open Targets GraphQL, batched with aliases
 pipeline/score.py      degree-weighted path scoring, 2-hop and 3-hop
 pipeline/validate.py   ranks known treatments, compares against two baselines
