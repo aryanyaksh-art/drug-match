@@ -182,7 +182,7 @@ Then serve the site:
 cd web && python -m http.server
 ```
 
-`fetch.py` is resumable. It skips anything already cached, so a failed run can just be re-run. A cold run takes about ten minutes.
+`fetch.py` is resumable. It skips anything already cached, so a failed run can just be re-run. A cold run takes about ten minutes. See [pipeline/README.md](pipeline/README.md) for the full run order, including the diagnostic scripts this quickstart skips.
 
 The web app reads **only** precomputed JSON. It never calls an API, so it works with the wifi off. That is deliberate: a demo should not be able to fail because of a venue's network.
 
@@ -202,8 +202,8 @@ pipeline/score.py      degree-weighted path scoring, 2-hop and 3-hop
 pipeline/validate.py   ranks known treatments, compares against two baselines
 data/raw/              cached API responses (not deployed)
 web/                   the site, self-contained and deployable as-is
-diagrams/              SVG diagrams for the presentation
-CITATIONS.md           sources, verified rather than recalled
+docs/diagrams/         SVG diagrams for the presentation
+docs/CITATIONS.md      sources, verified rather than recalled
 ```
 
 The set is 2,549 diseases: 68 rare and 32 common that we chose, plus 2,449 selected programmatically, every disease under 18 therapeutic areas meeting the rule, with no cap. The common ones are included for **validation density**: rare diseases have too few known approved drugs to measure ranking quality against on their own.
@@ -224,7 +224,7 @@ The website ships a bounded subset of the auto-selected diseases (data is ~65KB 
 
 This is a simplified reimplementation of published ideas, not new research.
 
-See [CITATIONS.md](CITATIONS.md) for sources behind every factual claim.
+See [docs/CITATIONS.md](docs/CITATIONS.md) for sources behind every factual claim.
 
 ---
 
