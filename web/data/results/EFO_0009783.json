@@ -9,7 +9,7 @@
  "knownDrugCount": 2,
  "candidatesConsidered": 181,
  "pathsTwoHop": 26,
- "pathsThreeHop": 272,
+ "pathsThreeHop": 275,
  "candidates": [
   {
    "id": "CHEMBL2219536",
@@ -95,17 +95,16 @@
    ]
   },
   {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
+   "id": "CHEMBL4650438",
+   "name": "Olezarsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
+    "familial chylomicronemia syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
+    "Apolipoprotein C-III mRNA antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -169,16 +168,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650438",
-   "name": "Olezarsen",
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "familial chylomicronemia syndrome"
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Apolipoprotein C-III mRNA antisense inhibitor"
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -242,6 +242,160 @@
    ]
   },
   {
+   "id": "CHEMBL4250860",
+   "name": "Danicopan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hemolysis",
+    "paroxysmal nocturnal hemoglobinuria"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Complement factor D inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.2173,
+   "rawScore": 0.815834,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFD",
+     "geneId": "ENSG00000197766",
+     "geneName": "complement factor D",
+     "assoc": 0.4073,
+     "contribution": 0.407314,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4073
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADIPOQ",
+     "geneId": "ENSG00000181092",
+     "geneName": "adiponectin, C1Q and collagen domain containing",
+     "assoc": 0.3467,
+     "contribution": 0.259559,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3467
+      }
+     ],
+     "hops": 3,
+     "via": "CFD",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "CFP",
+     "geneId": "ENSG00000126759",
+     "geneName": "complement factor properdin",
+     "assoc": 0.2736,
+     "contribution": 0.148962,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2736
+      }
+     ],
+     "hops": 3,
+     "via": "CFD",
+     "viaScore": 0.845
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298211",
+   "name": "Pegcetacoplan",
+   "drugType": "Protein",
+   "approvedFor": [
+    "paroxysmal nocturnal hemoglobinuria",
+    "eye disorder",
+    "complement 3 glomerulopathy"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Complement C3 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.1948,
+   "rawScore": 0.732773,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFD",
+     "geneId": "ENSG00000197766",
+     "geneName": "complement factor D",
+     "assoc": 0.4073,
+     "contribution": 0.308069,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4073
+      }
+     ],
+     "hops": 3,
+     "via": "C3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.3917,
+     "contribution": 0.248594,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3917
+      }
+     ],
+     "hops": 3,
+     "via": "C3",
+     "viaScore": 0.985
+    },
+    {
+     "gene": "CFP",
+     "geneId": "ENSG00000126759",
+     "geneName": "complement factor properdin",
+     "assoc": 0.2736,
+     "contribution": 0.17611,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2736
+      }
+     ],
+     "hops": 3,
+     "via": "C3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL189963",
    "name": "Palbociclib",
    "drugType": "Small molecule",
@@ -260,7 +414,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
+   "rank": 6,
    "score": 0.1858,
    "rawScore": 0.699821,
    "geneCount": 3,
@@ -331,63 +485,6 @@
    ]
   },
   {
-   "id": "CHEMBL4250860",
-   "name": "Danicopan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hemolysis",
-    "paroxysmal nocturnal hemoglobinuria"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Complement factor D inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
-   "score": 0.1769,
-   "rawScore": 0.666873,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFD",
-     "geneId": "ENSG00000197766",
-     "geneName": "complement factor D",
-     "assoc": 0.4073,
-     "contribution": 0.407314,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4073
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADIPOQ",
-     "geneId": "ENSG00000181092",
-     "geneName": "adiponectin, C1Q and collagen domain containing",
-     "assoc": 0.3467,
-     "contribution": 0.259559,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3467
-      }
-     ],
-     "hops": 3,
-     "via": "CFD",
-     "viaScore": 0.988
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108034",
    "name": "Iboctadekin",
    "drugType": "Protein",
@@ -400,7 +497,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
    "score": 0.1746,
    "rawScore": 0.65836,
    "geneCount": 2,
@@ -473,7 +570,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 8,
    "score": 0.1607,
    "rawScore": 0.606918,
    "geneCount": 1,
@@ -511,69 +608,6 @@
      "hops": 3,
      "via": "IL1A",
      "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298211",
-   "name": "Pegcetacoplan",
-   "drugType": "Protein",
-   "approvedFor": [
-    "paroxysmal nocturnal hemoglobinuria",
-    "eye disorder",
-    "complement 3 glomerulopathy"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Complement C3 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 8,
-   "score": 0.1471,
-   "rawScore": 0.556663,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFD",
-     "geneId": "ENSG00000197766",
-     "geneName": "complement factor D",
-     "assoc": 0.4073,
-     "contribution": 0.308069,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4073
-      }
-     ],
-     "hops": 3,
-     "via": "C3",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.3917,
-     "contribution": 0.248594,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3917
-      }
-     ],
-     "hops": 3,
-     "via": "C3",
-     "viaScore": 0.985
     }
    ]
   },
@@ -730,6 +764,68 @@
    ]
   },
   {
+   "id": "CHEMBL4594448",
+   "name": "Iptacopan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "paroxysmal nocturnal hemoglobinuria"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Complement factor B inhibitor",
+    "Complement factor B inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
+   "score": 0.127,
+   "rawScore": 0.482636,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFD",
+     "geneId": "ENSG00000197766",
+     "geneName": "complement factor D",
+     "assoc": 0.4073,
+     "contribution": 0.30776,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4073
+      }
+     ],
+     "hops": 3,
+     "via": "CFB",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CFP",
+     "geneId": "ENSG00000126759",
+     "geneName": "complement factor properdin",
+     "assoc": 0.2736,
+     "contribution": 0.174876,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2736
+      }
+     ],
+     "hops": 3,
+     "via": "CFB",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
    "id": "CHEMBL354541",
    "name": "Lomitapide",
    "drugType": "Small molecule",
@@ -750,7 +846,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 11,
+   "rank": 12,
    "score": 0.1173,
    "rawScore": 0.446838,
    "geneCount": 2,
@@ -770,94 +866,6 @@
      ],
      "hops": 3,
      "via": "MTTP",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3894860",
-   "name": "Trilaciclib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "myelosuppression",
-    "small cell lung carcinoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 12,
-   "score": 0.1166,
-   "rawScore": 0.444147,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "CDKN2B",
-     "geneId": "ENSG00000147883",
-     "geneName": "cyclin dependent kinase inhibitor 2B",
-     "assoc": 0.6286,
-     "contribution": 0.176136,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6072
-      },
-      {
-       "id": "literature",
-       "score": 0.0545
-      }
-     ],
-     "hops": 3,
-     "via": "CDK6",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CDKN2B",
-     "geneId": "ENSG00000147883",
-     "geneName": "cyclin dependent kinase inhibitor 2B",
-     "assoc": 0.6286,
-     "contribution": 0.176136,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6072
-      },
-      {
-       "id": "literature",
-       "score": 0.0545
-      }
-     ],
-     "hops": 3,
-     "via": "CDK4",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CDKN2A",
-     "geneId": "ENSG00000147889",
-     "geneName": "cyclin dependent kinase inhibitor 2A",
-     "assoc": 0.1839,
-     "contribution": 0.045937,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1138
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0791
-      }
-     ],
-     "hops": 3,
-     "via": "CDK6",
      "viaScore": 0.999
     }
    ]
@@ -952,15 +960,18 @@
    ]
   },
   {
-   "id": "CHEMBL3545110",
-   "name": "Ribociclib",
+   "id": "CHEMBL3894860",
+   "name": "Trilaciclib",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "myelosuppression",
+    "small cell lung carcinoma"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
    "mechanisms": [
     "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor",
+    "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "warnings": [],
@@ -1037,80 +1048,104 @@
    ]
   },
   {
-   "id": "CHEMBL2109540",
-   "name": "Alirocumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "familial hypercholesterolemia",
-    "atherosclerosis",
-    "Abnormal circulating lipid concentration",
-    "coronary artery disorder"
-   ],
-   "possiblyAlreadyApproved": "atherosclerosis",
-   "indicationCount": 6,
+   "id": "CHEMBL3545110",
+   "name": "Ribociclib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
-    "Subtilisin/kexin type 9 inhibitor"
+    "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 15,
-   "score": 0.1103,
-   "rawScore": 0.421146,
-   "geneCount": 1,
+   "score": 0.1166,
+   "rawScore": 0.444147,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "LDLR",
-     "geneId": "ENSG00000130164",
-     "geneName": "low density lipoprotein receptor",
-     "assoc": 0.7069,
-     "contribution": 0.281123,
-     "drugsOnGene": 5,
+     "gene": "CDKN2B",
+     "geneId": "ENSG00000147883",
+     "geneName": "cyclin dependent kinase inhibitor 2B",
+     "assoc": 0.6286,
+     "contribution": 0.176136,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.6702
+       "score": 0.6072
       },
       {
        "id": "literature",
-       "score": 0.1111
+       "score": 0.0545
       }
      ],
      "hops": 3,
-     "via": "PCSK9",
+     "via": "CDK6",
      "viaScore": 0.999
     },
     {
-     "gene": "VLDLR",
-     "geneId": "ENSG00000147852",
-     "geneName": "very low density lipoprotein receptor",
-     "assoc": 0.274,
-     "contribution": 0.140023,
-     "drugsOnGene": 5,
+     "gene": "CDKN2B",
+     "geneId": "ENSG00000147883",
+     "geneName": "cyclin dependent kinase inhibitor 2B",
+     "assoc": 0.6286,
+     "contribution": 0.176136,
+     "drugsOnGene": 4,
      "evidence": [
       {
+       "id": "genetic_association",
+       "score": 0.6072
+      },
+      {
        "id": "literature",
-       "score": 0.274
+       "score": 0.0545
       }
      ],
      "hops": 3,
-     "via": "PCSK9",
-     "viaScore": 0.973
+     "via": "CDK4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CDKN2A",
+     "geneId": "ENSG00000147889",
+     "geneName": "cyclin dependent kinase inhibitor 2A",
+     "assoc": 0.1839,
+     "contribution": 0.045937,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1138
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0791
+      }
+     ],
+     "hops": 3,
+     "via": "CDK6",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3990033",
-   "name": "Inclisiran",
+   "id": "CHEMBL5095052",
+   "name": "Inclisiran Sodium",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "cardiovascular disorder",
-    "familial hypercholesterolemia"
+    "Hypercholesterolemia",
+    "atherosclerosis",
+    "familial hypercholesterolemia",
+    "Abnormal circulating lipid concentration"
    ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "possiblyAlreadyApproved": "atherosclerosis",
+   "indicationCount": 4,
    "mechanisms": [
-    "PCSK9 mRNA RNAi inhibitor"
+    "PCSK9 mRNA rnai inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1161,19 +1196,14 @@
    ]
   },
   {
-   "id": "CHEMBL5095052",
-   "name": "Inclisiran Sodium",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "Hypercholesterolemia",
-    "atherosclerosis",
-    "familial hypercholesterolemia",
-    "Abnormal circulating lipid concentration"
-   ],
-   "possiblyAlreadyApproved": "atherosclerosis",
-   "indicationCount": 4,
+   "id": "CHEMBL4594554",
+   "name": "Tafolecimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
-    "PCSK9 mRNA rnai inhibitor"
+    "Subtilisin/kexin type 9 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1287,19 +1317,85 @@
    ]
   },
   {
-   "id": "CHEMBL4594554",
-   "name": "Tafolecimab",
-   "drugType": "Antibody",
-   "approvedFor": [],
+   "id": "CHEMBL3990033",
+   "name": "Inclisiran",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "familial hypercholesterolemia"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
+   "mechanisms": [
+    "PCSK9 mRNA RNAi inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.1103,
+   "rawScore": 0.421146,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LDLR",
+     "geneId": "ENSG00000130164",
+     "geneName": "low density lipoprotein receptor",
+     "assoc": 0.7069,
+     "contribution": 0.281123,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6702
+      },
+      {
+       "id": "literature",
+       "score": 0.1111
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "VLDLR",
+     "geneId": "ENSG00000147852",
+     "geneName": "very low density lipoprotein receptor",
+     "assoc": 0.274,
+     "contribution": 0.140023,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.274
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.973
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2109540",
+   "name": "Alirocumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "familial hypercholesterolemia",
+    "atherosclerosis",
+    "Abnormal circulating lipid concentration",
+    "coronary artery disorder"
+   ],
+   "possiblyAlreadyApproved": "atherosclerosis",
+   "indicationCount": 6,
    "mechanisms": [
     "Subtilisin/kexin type 9 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.1103,
    "rawScore": 0.421146,
    "geneCount": 1,
@@ -1369,7 +1465,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.1079,
    "rawScore": 0.412048,
    "geneCount": 1,
@@ -1411,7 +1507,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 22,
    "score": 0.0991,
    "rawScore": 0.379584,
    "geneCount": 1,
@@ -1472,7 +1568,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 22,
+   "rank": 23,
    "score": 0.0969,
    "rawScore": 0.371605,
    "geneCount": 4,
@@ -1532,7 +1628,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 24,
    "score": 0.0932,
    "rawScore": 0.358084,
    "geneCount": 2,
@@ -1596,7 +1692,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 24,
+   "rank": 25,
    "score": 0.0903,
    "rawScore": 0.347079,
    "geneCount": 1,
@@ -1621,6 +1717,80 @@
    ]
   },
   {
+   "id": "CHEMBL1201505",
+   "name": "Fibrinolysin, Human",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Recurrent thrombophlebitis",
+    "wound healing"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibrinogen inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.0893,
+   "rawScore": 0.343551,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "HABP2",
+     "geneId": "ENSG00000148702",
+     "geneName": "hyaluronan binding protein 2",
+     "assoc": 0.3287,
+     "contribution": 0.077132,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3287
+      }
+     ],
+     "hops": 3,
+     "via": "FGB",
+     "viaScore": 0.877
+    },
+    {
+     "gene": "HABP2",
+     "geneId": "ENSG00000148702",
+     "geneName": "hyaluronan binding protein 2",
+     "assoc": 0.3287,
+     "contribution": 0.075461,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3287
+      }
+     ],
+     "hops": 3,
+     "via": "FGG",
+     "viaScore": 0.858
+    },
+    {
+     "gene": "HABP2",
+     "geneId": "ENSG00000148702",
+     "geneName": "hyaluronan binding protein 2",
+     "assoc": 0.3287,
+     "contribution": 0.074581,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3287
+      }
+     ],
+     "hops": 3,
+     "via": "FGA",
+     "viaScore": 0.848
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2109072",
    "name": "Fibrinogen, Human",
    "drugType": "Unknown",
@@ -1637,7 +1807,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 27,
    "score": 0.0893,
    "rawScore": 0.343551,
    "geneCount": 3,
@@ -1710,81 +1880,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
-   "score": 0.0893,
-   "rawScore": 0.343551,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "HABP2",
-     "geneId": "ENSG00000148702",
-     "geneName": "hyaluronan binding protein 2",
-     "assoc": 0.3287,
-     "contribution": 0.077132,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3287
-      }
-     ],
-     "hops": 3,
-     "via": "FGB",
-     "viaScore": 0.877
-    },
-    {
-     "gene": "HABP2",
-     "geneId": "ENSG00000148702",
-     "geneName": "hyaluronan binding protein 2",
-     "assoc": 0.3287,
-     "contribution": 0.075461,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3287
-      }
-     ],
-     "hops": 3,
-     "via": "FGG",
-     "viaScore": 0.858
-    },
-    {
-     "gene": "HABP2",
-     "geneId": "ENSG00000148702",
-     "geneName": "hyaluronan binding protein 2",
-     "assoc": 0.3287,
-     "contribution": 0.074581,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3287
-      }
-     ],
-     "hops": 3,
-     "via": "FGA",
-     "viaScore": 0.848
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201505",
-   "name": "Fibrinolysin, Human",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "wound healing"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibrinogen inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
+   "rank": 28,
    "score": 0.0893,
    "rawScore": 0.343551,
    "geneCount": 3,
@@ -1857,7 +1953,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 29,
    "score": 0.084,
    "rawScore": 0.324004,
    "geneCount": 1,
@@ -1916,7 +2012,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 29,
+   "rank": 30,
    "score": 0.0823,
    "rawScore": 0.317871,
    "geneCount": 2,
@@ -1937,51 +2033,6 @@
      "hops": 2,
      "via": null,
      "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4594448",
-   "name": "Iptacopan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "paroxysmal nocturnal hemoglobinuria"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Complement factor B inhibitor",
-    "Complement factor B inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
-   "score": 0.0796,
-   "rawScore": 0.30776,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFD",
-     "geneId": "ENSG00000197766",
-     "geneName": "complement factor D",
-     "assoc": 0.4073,
-     "contribution": 0.30776,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4073
-      }
-     ],
-     "hops": 3,
-     "via": "CFB",
-     "viaScore": 0.997
     }
    ]
   },
@@ -2157,17 +2208,14 @@
    ]
   },
   {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "breast neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -2199,14 +2247,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm"
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -2322,6 +2373,43 @@
    ]
   },
   {
+   "id": "CHEMBL4298102",
+   "name": "Vunakizumab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Interleukin 17A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.0604,
+   "rawScore": 0.236958,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL17A",
+     "geneId": "ENSG00000112115",
+     "geneName": "interleukin 17A",
+     "assoc": 0.4126,
+     "contribution": 0.236958,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4126
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1743068",
    "name": "Secukinumab",
    "drugType": "Antibody",
@@ -2339,7 +2427,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 39,
    "score": 0.0604,
    "rawScore": 0.236958,
    "geneCount": 1,
@@ -2375,43 +2463,6 @@
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 6,
-   "mechanisms": [
-    "Interleukin 17A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.0604,
-   "rawScore": 0.236958,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL17A",
-     "geneId": "ENSG00000112115",
-     "geneName": "interleukin 17A",
-     "assoc": 0.4126,
-     "contribution": 0.236958,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4126
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298102",
-   "name": "Vunakizumab",
-   "drugType": "Antibody",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
    "mechanisms": [
     "Interleukin 17A inhibitor"
    ],

@@ -319,27 +319,22 @@
    ]
   },
   {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
+   "id": "CHEMBL1551",
+   "name": "Ursodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
+    "chronic hepatitis C virus infection",
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 4,
    "score": 0.5874,
    "rawScore": 1.84699,
@@ -431,22 +426,27 @@
    ]
   },
   {
-   "id": "CHEMBL1551",
-   "name": "Ursodiol",
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "chronic hepatitis C virus infection",
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis"
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 5,
    "score": 0.5874,
    "rawScore": 1.84699,
@@ -743,18 +743,17 @@
    ]
   },
   {
-   "id": "CHEMBL3701238",
-   "name": "Futibatinib",
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "biliary tract cancer",
     "neoplasm",
-    "cancer",
-    "intrahepatic cholangiocarcinoma"
+    "cholangiocarcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
@@ -851,17 +850,18 @@
    ]
   },
   {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
+   "id": "CHEMBL3701238",
+   "name": "Futibatinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "biliary tract cancer",
     "neoplasm",
-    "cholangiocarcinoma"
+    "cancer",
+    "intrahepatic cholangiocarcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
@@ -1505,6 +1505,82 @@
    ]
   },
   {
+   "id": "CHEMBL3039515",
+   "name": "Elobixibat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Constipation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Ileal bile acid transporter inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2448,
+   "rawScore": 0.81545,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC10A2",
+     "geneId": "ENSG00000125255",
+     "geneName": "solute carrier family 10 member 2",
+     "assoc": 0.7128,
+     "contribution": 0.459299,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.2675
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.9996,
+     "contribution": 0.356151,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9155
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8689
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8288
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.518
+      }
+     ],
+     "hops": 3,
+     "via": "SLC10A2",
+     "viaScore": 0.858
+    }
+   ]
+  },
+  {
    "id": "CHEMBL363392",
    "name": "Maralixibat",
    "drugType": "Small molecule",
@@ -1520,7 +1596,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 16,
    "score": 0.2448,
    "rawScore": 0.81545,
    "geneCount": 1,
@@ -1594,82 +1670,6 @@
    "indicationCount": 3,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
-    "Ileal bile acid transporter inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.2448,
-   "rawScore": 0.81545,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SLC10A2",
-     "geneId": "ENSG00000125255",
-     "geneName": "solute carrier family 10 member 2",
-     "assoc": 0.7128,
-     "contribution": 0.459299,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.2675
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.9996,
-     "contribution": 0.356151,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9155
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8689
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8288
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.518
-      }
-     ],
-     "hops": 3,
-     "via": "SLC10A2",
-     "viaScore": 0.858
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Constipation"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -2444,105 +2444,6 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1939,
-   "rawScore": 0.662264,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.7676,
-     "contribution": 0.284083,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7174
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.033
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.7676,
-     "contribution": 0.159095,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7174
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.033
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.9663,
-     "contribution": 0.114367,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8447
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.71
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.2523
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1173655",
    "name": "Afatinib",
    "drugType": "Small molecule",
@@ -2560,7 +2461,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 25,
    "score": 0.1939,
    "rawScore": 0.662264,
    "geneCount": 3,
@@ -2653,6 +2554,105 @@
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.1939,
+   "rawScore": 0.662264,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.7676,
+     "contribution": 0.284083,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7174
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.033
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.7676,
+     "contribution": 0.159095,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7174
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.033
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 0.9663,
+     "contribution": 0.114367,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8447
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.71
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.2523
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2902,20 +2902,23 @@
    ]
   },
   {
-   "id": "CHEMBL3989958",
-   "name": "Ivosidenib",
+   "id": "CHEMBL4297610",
+   "name": "Olutasidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia by FAB classification",
-    "cholangiocarcinoma",
-    "acute myeloid leukemia"
+    "acute myeloid leukemia",
+    "acute myeloid leukemia by FAB classification"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -2960,23 +2963,20 @@
    ]
   },
   {
-   "id": "CHEMBL4297610",
-   "name": "Olutasidenib",
+   "id": "CHEMBL3989958",
+   "name": "Ivosidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia",
-    "acute myeloid leukemia by FAB classification"
+    "acute myeloid leukemia by FAB classification",
+    "cholangiocarcinoma",
+    "acute myeloid leukemia"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -3021,17 +3021,14 @@
    ]
   },
   {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "breast neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -3071,14 +3068,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm"
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -3323,14 +3323,16 @@
    ]
   },
   {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -3370,16 +3372,14 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],

@@ -33,7 +33,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 1,
+   "rank": 2,
    "score": 1.0,
    "rawScore": 2.212938,
    "geneCount": 1,
@@ -354,16 +354,15 @@
    ]
   },
   {
-   "id": "CHEMBL363392",
-   "name": "Maralixibat",
+   "id": "CHEMBL3039515",
+   "name": "Elobixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pruritus"
+    "Constipation"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
-    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -460,21 +459,22 @@
    ]
   },
   {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
+   "id": "CHEMBL363392",
+   "name": "Maralixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Constipation"
+    "Pruritus"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
+    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 6,
    "score": 0.5361,
    "rawScore": 1.207582,
    "geneCount": 1,
@@ -686,22 +686,29 @@
    ]
   },
   {
-   "id": "CHEMBL2095208",
-   "name": "Cobicistat",
+   "id": "CHEMBL163",
+   "name": "Ritonavir",
    "drugType": "Small molecule",
    "approvedFor": [
     "HIV-1 infection",
-    "infection",
-    "HIV infectious disease"
+    "hepatitis C virus infection",
+    "chronic hepatitis C virus infection",
+    "viral infectious disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
-    "Cytochrome P450 3A inhibitor"
+    "Cytochrome P450 3A inhibitor",
+    "Human immunodeficiency virus type 1 protease inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.3654,
    "rawScore": 0.837423,
@@ -773,29 +780,22 @@
    ]
   },
   {
-   "id": "CHEMBL163",
-   "name": "Ritonavir",
+   "id": "CHEMBL2095208",
+   "name": "Cobicistat",
    "drugType": "Small molecule",
    "approvedFor": [
     "HIV-1 infection",
-    "hepatitis C virus infection",
-    "chronic hepatitis C virus infection",
-    "viral infectious disease"
+    "infection",
+    "HIV infectious disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 3,
    "mechanisms": [
-    "Cytochrome P450 3A inhibitor",
-    "Human immunodeficiency virus type 1 protease inhibitor"
+    "Cytochrome P450 3A inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 11,
    "score": 0.3654,
    "rawScore": 0.837423,
@@ -1297,6 +1297,54 @@
    ]
   },
   {
+   "id": "CHEMBL3544914",
+   "name": "Tezacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lung injury",
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.1861,
+   "rawScore": 0.448925,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.9193,
+     "contribution": 0.448925,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5945
+      },
+      {
+       "id": "literature",
+       "score": 0.1705
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL5314934",
    "name": "Vanzacaftor",
    "drugType": "Small molecule",
@@ -1311,7 +1359,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.1861,
    "rawScore": 0.448925,
    "geneCount": 1,
@@ -1361,102 +1409,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.1861,
-   "rawScore": 0.448925,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.9193,
-     "contribution": 0.448925,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5945
-      },
-      {
-       "id": "literature",
-       "score": 0.1705
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298128",
-   "name": "Elexacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 22,
-   "score": 0.1861,
-   "rawScore": 0.448925,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.9193,
-     "contribution": 0.448925,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5945
-      },
-      {
-       "id": "literature",
-       "score": 0.1705
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544914",
-   "name": "Tezacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lung injury",
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
    "score": 0.1861,
    "rawScore": 0.448925,
    "geneCount": 1,
@@ -1500,6 +1453,53 @@
    "indicationCount": 2,
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1861,
+   "rawScore": 0.448925,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.9193,
+     "contribution": 0.448925,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5945
+      },
+      {
+       "id": "literature",
+       "score": 0.1705
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298128",
+   "name": "Elexacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2016,16 +2016,15 @@
    ]
   },
   {
-   "id": "CHEMBL2103825",
-   "name": "Cetilistat",
+   "id": "CHEMBL175247",
+   "name": "Orlistat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inherited lipid metabolism disorder",
     "Obesity",
-    "type 2 diabetes mellitus"
+    "obesity disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -2066,15 +2065,16 @@
    ]
   },
   {
-   "id": "CHEMBL175247",
-   "name": "Orlistat",
+   "id": "CHEMBL2103825",
+   "name": "Cetilistat",
    "drugType": "Small molecule",
    "approvedFor": [
+    "inherited lipid metabolism disorder",
     "Obesity",
-    "obesity disorder"
+    "type 2 diabetes mellitus"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -2161,51 +2161,6 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
-   "score": 0.1056,
-   "rawScore": 0.274498,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "WWOX",
-     "geneId": "ENSG00000186153",
-     "geneName": "WW domain containing oxidoreductase",
-     "assoc": 0.7469,
-     "contribution": 0.274498,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5285
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4632
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB4",
-     "viaScore": 0.993
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1173655",
    "name": "Afatinib",
    "drugType": "Small molecule",
@@ -2223,7 +2178,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 35,
    "score": 0.1056,
    "rawScore": 0.274498,
    "geneCount": 3,
@@ -2262,6 +2217,51 @@
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1056,
+   "rawScore": 0.274498,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "WWOX",
+     "geneId": "ENSG00000186153",
+     "geneName": "WW domain containing oxidoreductase",
+     "assoc": 0.7469,
+     "contribution": 0.274498,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5285
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4632
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2602,7 +2602,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
+   "rank": 1,
    "score": 1.0,
    "rawScore": 2.212938,
    "geneCount": 1,
@@ -2710,7 +2710,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
    "score": 0.5361,
    "rawScore": 1.207582,
    "geneCount": 1,

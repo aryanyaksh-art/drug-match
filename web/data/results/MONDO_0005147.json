@@ -12,8 +12,8 @@
  "pathsThreeHop": 407,
  "candidates": [
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
@@ -21,13 +21,24 @@
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 1.535138,
@@ -103,137 +114,23 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 2,
-   "score": 1.0,
-   "rawScore": 1.535138,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9747,
-     "contribution": 0.27338,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8575
-      },
-      {
-       "id": "literature",
-       "score": 0.8221
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL2RA",
-     "geneId": "ENSG00000134460",
-     "geneName": "interleukin 2 receptor subunit alpha",
-     "assoc": 0.9925,
-     "contribution": 0.178665,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9352
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7034
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      }
-     ],
-     "hops": 3,
-     "via": "JAK3",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9747,
-     "contribution": 0.156701,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8575
-      },
-      {
-       "id": "literature",
-       "score": 0.8221
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 3,
+   "blackBox": false,
+   "rank": 2,
    "score": 1.0,
    "rawScore": 1.535138,
    "geneCount": 4,
@@ -336,6 +233,97 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 3,
+   "score": 1.0,
+   "rawScore": 1.535138,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9747,
+     "contribution": 0.27338,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8575
+      },
+      {
+       "id": "literature",
+       "score": 0.8221
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL2RA",
+     "geneId": "ENSG00000134460",
+     "geneName": "interleukin 2 receptor subunit alpha",
+     "assoc": 0.9925,
+     "contribution": 0.178665,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9352
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7034
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9747,
+     "contribution": 0.156701,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8575
+      },
+      {
+       "id": "literature",
+       "score": 0.8221
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 4,
    "score": 1.0,
    "rawScore": 1.535138,
@@ -411,22 +399,34 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 5,
    "score": 1.0,
    "rawScore": 1.535138,
@@ -585,7 +585,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 7,
    "score": 0.6751,
    "rawScore": 1.037505,
    "geneCount": 1,
@@ -706,89 +706,8 @@
    ]
   },
   {
-   "id": "CHEMBL2147777",
-   "name": "Teneligliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": "diabetes mellitus",
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 13,
-   "score": 0.5796,
-   "rawScore": 0.89111,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9475,
-     "contribution": 0.350389,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8562
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6348
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.965
-    },
-    {
-     "gene": "DPP4",
-     "geneId": "ENSG00000197635",
-     "geneName": "dipeptidyl peptidase 4",
-     "assoc": 0.8659,
-     "contribution": 0.331836,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8659
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SLC5A2",
-     "geneId": "ENSG00000140675",
-     "geneName": "solute carrier family 5 member 2",
-     "assoc": 0.9306,
-     "contribution": 0.208885,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3883
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.909
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105762",
-   "name": "Omarigliptin",
+   "id": "CHEMBL1929396",
+   "name": "Anagliptin",
    "drugType": "Small molecule",
    "approvedFor": [
     "type 2 diabetes mellitus"
@@ -801,7 +720,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 13,
    "score": 0.5796,
    "rawScore": 0.89111,
    "geneCount": 1,
@@ -880,7 +799,250 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 14,
+   "score": 0.5796,
+   "rawScore": 0.89111,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9475,
+     "contribution": 0.350389,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8562
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6348
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.965
+    },
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.8659,
+     "contribution": 0.331836,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC5A2",
+     "geneId": "ENSG00000140675",
+     "geneName": "solute carrier family 5 member 2",
+     "assoc": 0.9306,
+     "contribution": 0.208885,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3883
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707235",
+   "name": "Gemigliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": "diabetes mellitus",
+   "indicationCount": 1,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.5796,
+   "rawScore": 0.89111,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9475,
+     "contribution": 0.350389,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8562
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6348
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.965
+    },
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.8659,
+     "contribution": 0.331836,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC5A2",
+     "geneId": "ENSG00000140675",
+     "geneName": "solute carrier family 5 member 2",
+     "assoc": 0.9306,
+     "contribution": 0.208885,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3883
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1779710",
+   "name": "Evogliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": "diabetes mellitus",
+   "indicationCount": 1,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 16,
+   "score": 0.5796,
+   "rawScore": 0.89111,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9475,
+     "contribution": 0.350389,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8562
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6348
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.965
+    },
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.8659,
+     "contribution": 0.331836,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC5A2",
+     "geneId": "ENSG00000140675",
+     "geneName": "solute carrier family 5 member 2",
+     "assoc": 0.9306,
+     "contribution": 0.208885,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3883
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2147777",
+   "name": "Teneligliptin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": "diabetes mellitus",
+   "indicationCount": 1,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
    "score": 0.5796,
    "rawScore": 0.89111,
    "geneCount": 1,
@@ -962,87 +1124,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
-   "score": 0.5796,
-   "rawScore": 0.89111,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9475,
-     "contribution": 0.350389,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8562
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6348
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.965
-    },
-    {
-     "gene": "DPP4",
-     "geneId": "ENSG00000197635",
-     "geneName": "dipeptidyl peptidase 4",
-     "assoc": 0.8659,
-     "contribution": 0.331836,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8659
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SLC5A2",
-     "geneId": "ENSG00000140675",
-     "geneName": "solute carrier family 5 member 2",
-     "assoc": 0.9306,
-     "contribution": 0.208885,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3883
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.909
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1929396",
-   "name": "Anagliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 20,
    "score": 0.5796,
    "rawScore": 0.89111,
@@ -1110,13 +1191,13 @@
    ]
   },
   {
-   "id": "CHEMBL1779710",
-   "name": "Evogliptin",
+   "id": "CHEMBL2105762",
+   "name": "Omarigliptin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus"
+    "type 2 diabetes mellitus"
    ],
-   "possiblyAlreadyApproved": "diabetes mellitus",
+   "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Dipeptidyl peptidase IV inhibitor"
@@ -1125,87 +1206,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 22,
-   "score": 0.5796,
-   "rawScore": 0.89111,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9475,
-     "contribution": 0.350389,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8562
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6348
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.965
-    },
-    {
-     "gene": "DPP4",
-     "geneId": "ENSG00000197635",
-     "geneName": "dipeptidyl peptidase 4",
-     "assoc": 0.8659,
-     "contribution": 0.331836,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8659
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SLC5A2",
-     "geneId": "ENSG00000140675",
-     "geneName": "solute carrier family 5 member 2",
-     "assoc": 0.9306,
-     "contribution": 0.208885,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3883
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.909
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707235",
-   "name": "Gemigliptin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": "diabetes mellitus",
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
    "score": 0.5796,
    "rawScore": 0.89111,
    "geneCount": 1,
@@ -1465,16 +1465,17 @@
    ]
   },
   {
-   "id": "CHEMBL2108324",
-   "name": "Oblimersen",
-   "drugType": "Oligonucleotide",
+   "id": "CHEMBL3137309",
+   "name": "Venetoclax",
+   "drugType": "Small molecule",
    "approvedFor": [
+    "B-cell chronic lymphocytic leukemia",
     "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Bcl-2 mRNA antisense inhibitor"
+    "Apoptosis regulator Bcl-2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1529,17 +1530,16 @@
    ]
   },
   {
-   "id": "CHEMBL3137309",
-   "name": "Venetoclax",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2108324",
+   "name": "Oblimersen",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
     "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Apoptosis regulator Bcl-2 inhibitor"
+    "Bcl-2 mRNA antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2339,12 +2339,14 @@
    ]
   },
   {
-   "id": "CHEMBL1201540",
-   "name": "Insulin Susp Isophane Recombinant Human",
+   "id": "CHEMBL2108966",
+   "name": "Insulin, Neutral",
    "drugType": "Protein",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": "diabetes mellitus",
+   "indicationCount": 1,
    "mechanisms": [
     "Insulin receptor agonist"
    ],
@@ -2409,152 +2411,8 @@
    ]
   },
   {
-   "id": "CHEMBL2108974",
-   "name": "Insulin Human Zinc",
-   "drugType": "Protein",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": "diabetes mellitus",
-   "indicationCount": 1,
-   "mechanisms": [
-    "Insulin receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 59,
-   "score": 0.3291,
-   "rawScore": 0.507483,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "INSR",
-     "geneId": "ENSG00000171105",
-     "geneName": "insulin receptor",
-     "assoc": 0.8555,
-     "contribution": 0.269234,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7657
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3835
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "INS",
-     "geneId": "ENSG00000254647",
-     "geneName": "insulin",
-     "assoc": 1.0,
-     "contribution": 0.238249,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9969
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.753
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6948
-      }
-     ],
-     "hops": 3,
-     "via": "INSR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201630",
-   "name": "Insulin Purified Pork",
-   "drugType": "Protein",
-   "approvedFor": [
-    "diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": "diabetes mellitus",
-   "indicationCount": 1,
-   "mechanisms": [
-    "Insulin receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 60,
-   "score": 0.3291,
-   "rawScore": 0.507483,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "INSR",
-     "geneId": "ENSG00000171105",
-     "geneName": "insulin receptor",
-     "assoc": 0.8555,
-     "contribution": 0.269234,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7657
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3835
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "INS",
-     "geneId": "ENSG00000254647",
-     "geneName": "insulin",
-     "assoc": 1.0,
-     "contribution": 0.238249,
-     "drugsOnGene": 18,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9969
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.753
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6948
-      }
-     ],
-     "hops": 3,
-     "via": "INSR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201644",
-   "name": "Insulin Zinc Susp Recombinant Human",
+   "id": "CHEMBL1201540",
+   "name": "Insulin Susp Isophane Recombinant Human",
    "drugType": "Protein",
    "approvedFor": [],
    "possiblyAlreadyApproved": null,
@@ -2565,7 +2423,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 63,
+   "rank": 57,
    "score": 0.3291,
    "rawScore": 0.507483,
    "geneCount": 1,
@@ -2637,7 +2495,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 65,
+   "rank": 59,
    "score": 0.3291,
    "rawScore": 0.507483,
    "geneCount": 1,
@@ -2695,8 +2553,8 @@
    ]
   },
   {
-   "id": "CHEMBL2108966",
-   "name": "Insulin, Neutral",
+   "id": "CHEMBL2108974",
+   "name": "Insulin Human Zinc",
    "drugType": "Protein",
    "approvedFor": [
     "diabetes mellitus"
@@ -2709,7 +2567,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 71,
+   "rank": 61,
    "score": 0.3291,
    "rawScore": 0.507483,
    "geneCount": 1,
@@ -2767,16 +2625,157 @@
    ]
   },
   {
-   "id": "CHEMBL2103825",
-   "name": "Cetilistat",
+   "id": "CHEMBL1201630",
+   "name": "Insulin Purified Pork",
+   "drugType": "Protein",
+   "approvedFor": [
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": "diabetes mellitus",
+   "indicationCount": 1,
+   "mechanisms": [
+    "Insulin receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 67,
+   "score": 0.3291,
+   "rawScore": 0.507483,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "INSR",
+     "geneId": "ENSG00000171105",
+     "geneName": "insulin receptor",
+     "assoc": 0.8555,
+     "contribution": 0.269234,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7657
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3835
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "INS",
+     "geneId": "ENSG00000254647",
+     "geneName": "insulin",
+     "assoc": 1.0,
+     "contribution": 0.238249,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9969
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.753
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6948
+      }
+     ],
+     "hops": 3,
+     "via": "INSR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201644",
+   "name": "Insulin Zinc Susp Recombinant Human",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Insulin receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 73,
+   "score": 0.3291,
+   "rawScore": 0.507483,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "INSR",
+     "geneId": "ENSG00000171105",
+     "geneName": "insulin receptor",
+     "assoc": 0.8555,
+     "contribution": 0.269234,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7657
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3835
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "INS",
+     "geneId": "ENSG00000254647",
+     "geneName": "insulin",
+     "assoc": 1.0,
+     "contribution": 0.238249,
+     "drugsOnGene": 18,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9969
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.753
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6948
+      }
+     ],
+     "hops": 3,
+     "via": "INSR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL175247",
+   "name": "Orlistat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inherited lipid metabolism disorder",
     "Obesity",
-    "type 2 diabetes mellitus"
+    "obesity disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -2813,15 +2812,16 @@
    ]
   },
   {
-   "id": "CHEMBL175247",
-   "name": "Orlistat",
+   "id": "CHEMBL2103825",
+   "name": "Cetilistat",
    "drugType": "Small molecule",
    "approvedFor": [
+    "inherited lipid metabolism disorder",
     "Obesity",
-    "obesity disorder"
+    "type 2 diabetes mellitus"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -2917,7 +2917,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 8,
    "score": 0.6751,
    "rawScore": 1.037505,
    "geneCount": 1,
@@ -3291,85 +3291,6 @@
    ]
   },
   {
-   "id": "CHEMBL385517",
-   "name": "Saxagliptin Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Dipeptidyl peptidase IV inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 14,
-   "score": 0.5796,
-   "rawScore": 0.89111,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLP1R",
-     "geneId": "ENSG00000112164",
-     "geneName": "glucagon like peptide 1 receptor",
-     "assoc": 0.9475,
-     "contribution": 0.350389,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8562
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6348
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.965
-    },
-    {
-     "gene": "DPP4",
-     "geneId": "ENSG00000197635",
-     "geneName": "dipeptidyl peptidase 4",
-     "assoc": 0.8659,
-     "contribution": 0.331836,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8659
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SLC5A2",
-     "geneId": "ENSG00000140675",
-     "geneName": "solute carrier family 5 member 2",
-     "assoc": 0.9306,
-     "contribution": 0.208885,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8865
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3883
-      }
-     ],
-     "hops": 3,
-     "via": "DPP4",
-     "viaScore": 0.909
-    }
-   ]
-  },
-  {
    "id": "CHEMBL237500",
    "name": "Linagliptin",
    "drugType": "Small molecule",
@@ -3536,6 +3457,85 @@
    ]
   },
   {
+   "id": "CHEMBL385517",
+   "name": "Saxagliptin Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Dipeptidyl peptidase IV inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.5796,
+   "rawScore": 0.89111,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLP1R",
+     "geneId": "ENSG00000112164",
+     "geneName": "glucagon like peptide 1 receptor",
+     "assoc": 0.9475,
+     "contribution": 0.350389,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8562
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6348
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.965
+    },
+    {
+     "gene": "DPP4",
+     "geneId": "ENSG00000197635",
+     "geneName": "dipeptidyl peptidase 4",
+     "assoc": 0.8659,
+     "contribution": 0.331836,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8659
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SLC5A2",
+     "geneId": "ENSG00000140675",
+     "geneName": "solute carrier family 5 member 2",
+     "assoc": 0.9306,
+     "contribution": 0.208885,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8865
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3883
+      }
+     ],
+     "hops": 3,
+     "via": "DPP4",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
    "id": "CHEMBL142703",
    "name": "Vildagliptin",
    "drugType": "Small molecule",
@@ -3551,7 +3551,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 23,
    "score": 0.5796,
    "rawScore": 0.89111,
    "geneCount": 1,

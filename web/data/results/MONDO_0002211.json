@@ -12,35 +12,24 @@
  "pathsThreeHop": 322,
  "candidates": [
   {
-   "id": "CHEMBL1742990",
-   "name": "Belatacept",
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.730338,
@@ -136,24 +125,35 @@
    ]
   },
   {
-   "id": "CHEMBL1201823",
-   "name": "Abatacept",
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "juvenile idiopathic arthritis"
+    "kidney transplant",
+    "immune system disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 2,
    "score": 1.0,
    "rawScore": 2.730338,
@@ -576,6 +576,116 @@
    ]
   },
   {
+   "id": "CHEMBL5095440",
+   "name": "Obecabtagene Autoleucel",
+   "drugType": "Gene",
+   "approvedFor": [
+    "B-cell acute lymphoblastic leukemia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "B-lymphocyte antigen CD19 binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 6,
+   "score": 0.6338,
+   "rawScore": 1.7533,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD19",
+     "geneId": "ENSG00000177455",
+     "geneName": "CD19 molecule",
+     "assoc": 0.9989,
+     "contribution": 0.414778,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8553
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8398
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7936
+      },
+      {
+       "id": "literature",
+       "score": 0.7657
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD81",
+     "geneId": "ENSG00000110651",
+     "geneName": "CD81 molecule",
+     "assoc": 0.8469,
+     "contribution": 0.351308,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7481
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2858
+      },
+      {
+       "id": "literature",
+       "score": 0.1488
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CR2",
+     "geneId": "ENSG00000117322",
+     "geneName": "complement C3d receptor 2",
+     "assoc": 0.9971,
+     "contribution": 0.266527,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8739
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7475
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7097
+      },
+      {
+       "id": "literature",
+       "score": 0.682
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297778",
    "name": "Loncastuximab Tesirine",
    "drugType": "Antibody drug conjugate",
@@ -593,7 +703,222 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
+   "score": 0.6338,
+   "rawScore": 1.7533,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD19",
+     "geneId": "ENSG00000177455",
+     "geneName": "CD19 molecule",
+     "assoc": 0.9989,
+     "contribution": 0.414778,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8553
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8398
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7936
+      },
+      {
+       "id": "literature",
+       "score": 0.7657
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD81",
+     "geneId": "ENSG00000110651",
+     "geneName": "CD81 molecule",
+     "assoc": 0.8469,
+     "contribution": 0.351308,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7481
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2858
+      },
+      {
+       "id": "literature",
+       "score": 0.1488
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CR2",
+     "geneId": "ENSG00000117322",
+     "geneName": "complement C3d receptor 2",
+     "assoc": 0.9971,
+     "contribution": 0.266527,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8739
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7475
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7097
+      },
+      {
+       "id": "literature",
+       "score": 0.682
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301574",
+   "name": "Tisagenlecleucel",
+   "drugType": "Cell",
+   "approvedFor": [
+    "diffuse large B-cell lymphoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "B-lymphocyte antigen CD19 binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.6338,
+   "rawScore": 1.7533,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD19",
+     "geneId": "ENSG00000177455",
+     "geneName": "CD19 molecule",
+     "assoc": 0.9989,
+     "contribution": 0.414778,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8553
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8398
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7936
+      },
+      {
+       "id": "literature",
+       "score": 0.7657
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CD81",
+     "geneId": "ENSG00000110651",
+     "geneName": "CD81 molecule",
+     "assoc": 0.8469,
+     "contribution": 0.351308,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7481
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2858
+      },
+      {
+       "id": "literature",
+       "score": 0.1488
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CR2",
+     "geneId": "ENSG00000117322",
+     "geneName": "complement C3d receptor 2",
+     "assoc": 0.9971,
+     "contribution": 0.266527,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8739
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7475
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7097
+      },
+      {
+       "id": "literature",
+       "score": 0.682
+      }
+     ],
+     "hops": 3,
+     "via": "CD19",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2109334",
+   "name": "Inebilizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neuromyelitis optica"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "B-lymphocyte antigen CD19 binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
    "score": 0.6338,
    "rawScore": 1.7533,
    "geneCount": 1,
@@ -703,223 +1028,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 7,
-   "score": 0.6338,
-   "rawScore": 1.7533,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD19",
-     "geneId": "ENSG00000177455",
-     "geneName": "CD19 molecule",
-     "assoc": 0.9989,
-     "contribution": 0.414778,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8553
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8398
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7936
-      },
-      {
-       "id": "literature",
-       "score": 0.7657
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD81",
-     "geneId": "ENSG00000110651",
-     "geneName": "CD81 molecule",
-     "assoc": 0.8469,
-     "contribution": 0.351308,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7481
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2858
-      },
-      {
-       "id": "literature",
-       "score": 0.1488
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CR2",
-     "geneId": "ENSG00000117322",
-     "geneName": "complement C3d receptor 2",
-     "assoc": 0.9971,
-     "contribution": 0.266527,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8739
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7475
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7097
-      },
-      {
-       "id": "literature",
-       "score": 0.682
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2109334",
-   "name": "Inebilizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neuromyelitis optica"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "B-lymphocyte antigen CD19 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 8,
-   "score": 0.6338,
-   "rawScore": 1.7533,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD19",
-     "geneId": "ENSG00000177455",
-     "geneName": "CD19 molecule",
-     "assoc": 0.9989,
-     "contribution": 0.414778,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8553
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8398
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7936
-      },
-      {
-       "id": "literature",
-       "score": 0.7657
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD81",
-     "geneId": "ENSG00000110651",
-     "geneName": "CD81 molecule",
-     "assoc": 0.8469,
-     "contribution": 0.351308,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7481
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2858
-      },
-      {
-       "id": "literature",
-       "score": 0.1488
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CR2",
-     "geneId": "ENSG00000117322",
-     "geneName": "complement C3d receptor 2",
-     "assoc": 0.9971,
-     "contribution": 0.266527,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8739
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7475
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7097
-      },
-      {
-       "id": "literature",
-       "score": 0.682
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3989989",
-   "name": "Axicabtagene Ciloleucel",
-   "drugType": "Gene",
-   "approvedFor": [
-    "diffuse large B-cell lymphoma",
-    "follicular lymphoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "B-lymphocyte antigen CD19 binding agent"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
+   "rank": 10,
    "score": 0.6338,
    "rawScore": 1.7533,
    "geneCount": 1,
@@ -1026,7 +1135,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.6338,
    "rawScore": 1.7533,
    "geneCount": 1,
@@ -1133,116 +1242,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
-   "score": 0.6338,
-   "rawScore": 1.7533,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD19",
-     "geneId": "ENSG00000177455",
-     "geneName": "CD19 molecule",
-     "assoc": 0.9989,
-     "contribution": 0.414778,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8553
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8398
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7936
-      },
-      {
-       "id": "literature",
-       "score": 0.7657
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CD81",
-     "geneId": "ENSG00000110651",
-     "geneName": "CD81 molecule",
-     "assoc": 0.8469,
-     "contribution": 0.351308,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7481
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2858
-      },
-      {
-       "id": "literature",
-       "score": 0.1488
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CR2",
-     "geneId": "ENSG00000117322",
-     "geneName": "complement C3d receptor 2",
-     "assoc": 0.9971,
-     "contribution": 0.266527,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8739
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7475
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7097
-      },
-      {
-       "id": "literature",
-       "score": 0.682
-      }
-     ],
-     "hops": 3,
-     "via": "CD19",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL5095440",
-   "name": "Obecabtagene Autoleucel",
-   "drugType": "Gene",
-   "approvedFor": [
-    "B-cell acute lymphoblastic leukemia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "B-lymphocyte antigen CD19 binding agent"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 12,
    "score": 0.6338,
    "rawScore": 1.7533,
@@ -1334,21 +1333,22 @@
    ]
   },
   {
-   "id": "CHEMBL3301574",
-   "name": "Tisagenlecleucel",
-   "drugType": "Cell",
+   "id": "CHEMBL3989989",
+   "name": "Axicabtagene Ciloleucel",
+   "drugType": "Gene",
    "approvedFor": [
-    "diffuse large B-cell lymphoma"
+    "diffuse large B-cell lymphoma",
+    "follicular lymphoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "B-lymphocyte antigen CD19 binding agent"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "infectious disease"
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -2002,34 +2002,22 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 19,
    "score": 0.4794,
    "rawScore": 1.341322,
@@ -2239,22 +2227,34 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL1789941",
+   "name": "Ruxolitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "acquired polycythemia vera",
+    "essential thrombocythemia",
+    "myelofibrosis",
+    "chronic graft versus host disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 8,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 21,
    "score": 0.4794,
    "rawScore": 1.341322,
@@ -2346,34 +2346,22 @@
    ]
   },
   {
-   "id": "CHEMBL1789941",
-   "name": "Ruxolitinib",
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acquired polycythemia vera",
-    "essential thrombocythemia",
-    "myelofibrosis",
-    "chronic graft versus host disease"
+    "rheumatoid arthritis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor",
-    "Tyrosine-protein kinase JAK1 inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 22,
    "score": 0.4794,
    "rawScore": 1.341322,
@@ -2465,22 +2453,34 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 23,
    "score": 0.4794,
    "rawScore": 1.341322,
@@ -3256,6 +3256,98 @@
    ]
   },
   {
+   "id": "CHEMBL1237022",
+   "name": "Tocilizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "rheumatoid arthritis",
+    "COVID-19",
+    "temporal arteritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Interleukin-6 receptor alpha subunit inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.3032,
+   "rawScore": 0.871243,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6R",
+     "geneId": "ENSG00000160712",
+     "geneName": "interleukin 6 receptor",
+     "assoc": 0.8954,
+     "contribution": 0.51426,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6633
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.4876
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3381
+      },
+      {
+       "id": "literature",
+       "score": 0.0839
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL6ST",
+     "geneId": "ENSG00000134352",
+     "geneName": "interleukin 6 cytokine family signal transducer",
+     "assoc": 0.9655,
+     "contribution": 0.356982,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7355
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6048
+      },
+      {
+       "id": "literature",
+       "score": 0.1584
+      }
+     ],
+     "hops": 3,
+     "via": "IL6R",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108730",
    "name": "Sarilumab",
    "drugType": "Antibody",
@@ -3276,7 +3368,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 30,
+   "rank": 31,
    "score": 0.3032,
    "rawScore": 0.871243,
    "geneCount": 1,
@@ -3356,98 +3448,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
-   "score": 0.3032,
-   "rawScore": 0.871243,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL6R",
-     "geneId": "ENSG00000160712",
-     "geneName": "interleukin 6 receptor",
-     "assoc": 0.8954,
-     "contribution": 0.51426,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6633
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.4876
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3381
-      },
-      {
-       "id": "literature",
-       "score": 0.0839
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL6ST",
-     "geneId": "ENSG00000134352",
-     "geneName": "interleukin 6 cytokine family signal transducer",
-     "assoc": 0.9655,
-     "contribution": 0.356982,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7355
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6048
-      },
-      {
-       "id": "literature",
-       "score": 0.1584
-      }
-     ],
-     "hops": 3,
-     "via": "IL6R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1237022",
-   "name": "Tocilizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "rheumatoid arthritis",
-    "COVID-19",
-    "temporal arteritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Interleukin-6 receptor alpha subunit inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 32,
    "score": 0.3032,
    "rawScore": 0.871243,
@@ -3514,17 +3514,14 @@
    ]
   },
   {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "breast neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -3597,14 +3594,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm"
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -4054,20 +4054,40 @@
    ]
   },
   {
-   "id": "CHEMBL4297615",
-   "name": "Parsaclisib",
+   "id": "CHEMBL2216870",
+   "name": "Idelalisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "non-Hodgkin lymphoma",
+    "neoplasm",
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm of mature B-cells"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-delta subunit inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 38,
    "score": 0.2638,
    "rawScore": 0.766206,
@@ -4216,40 +4236,20 @@
    ]
   },
   {
-   "id": "CHEMBL2216870",
-   "name": "Idelalisib",
+   "id": "CHEMBL4297615",
+   "name": "Parsaclisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-Hodgkin lymphoma",
-    "neoplasm",
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm of mature B-cells"
+    "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-delta subunit inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 40,
    "score": 0.2638,
    "rawScore": 0.766206,
@@ -4340,61 +4340,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 82,
-   "score": 0.0991,
-   "rawScore": 0.326898,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "MS4A1",
-     "geneId": "ENSG00000156738",
-     "geneName": "membrane spanning 4-domains A1",
-     "assoc": 0.853,
-     "contribution": 0.326898,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.5588
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4628
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2853
-      },
-      {
-       "id": "literature",
-       "score": 0.1324
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108041",
-   "name": "Ocrelizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "diffuse large B-cell lymphoma",
-    "chronic progressive multiple sclerosis",
-    "relapsing-remitting multiple sclerosis",
-    "multiple sclerosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
-   "mechanisms": [
-    "B-lymphocyte antigen CD20 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 85,
+   "rank": 80,
    "score": 0.0991,
    "rawScore": 0.326898,
    "geneCount": 1,
@@ -4453,6 +4399,60 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 81,
+   "score": 0.0991,
+   "rawScore": 0.326898,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MS4A1",
+     "geneId": "ENSG00000156738",
+     "geneName": "membrane spanning 4-domains A1",
+     "assoc": 0.853,
+     "contribution": 0.326898,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.5588
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4628
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2853
+      },
+      {
+       "id": "literature",
+       "score": 0.1324
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108041",
+   "name": "Ocrelizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "diffuse large B-cell lymphoma",
+    "chronic progressive multiple sclerosis",
+    "relapsing-remitting multiple sclerosis",
+    "multiple sclerosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "B-lymphocyte antigen CD20 binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 86,
    "score": 0.0991,
    "rawScore": 0.326898,

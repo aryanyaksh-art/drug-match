@@ -9,7 +9,7 @@
  "knownDrugCount": 7,
  "candidatesConsidered": 264,
  "pathsTwoHop": 94,
- "pathsThreeHop": 338,
+ "pathsThreeHop": 345,
  "candidates": [
   {
    "id": "CHEMBL189963",
@@ -345,55 +345,6 @@
    ]
   },
   {
-   "id": "CHEMBL5314379",
-   "name": "Voclosporin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "lupus nephritis",
-    "immune system disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Serine/threonine protein phosphatase 2B catalytic subunit, alpha isoform inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 5,
-   "score": 0.6396,
-   "rawScore": 0.428163,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFATC1",
-     "geneId": "ENSG00000131196",
-     "geneName": "nuclear factor of activated T cells 1",
-     "assoc": 0.4286,
-     "contribution": 0.428163,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4286
-      }
-     ],
-     "hops": 3,
-     "via": "PPP3CA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201581",
    "name": "Infliximab",
    "drugType": "Antibody",
@@ -420,9 +371,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
-   "score": 0.6034,
-   "rawScore": 0.404288,
+   "rank": 5,
+   "score": 0.671,
+   "rawScore": 0.448905,
    "geneCount": 1,
    "paths": [
     {
@@ -468,21 +419,21 @@
      "viaScore": 0.997
     },
     {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
      "drugsOnGene": 7,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1285
+       "score": 0.0973
       }
      ],
      "hops": 3,
      "via": "TNF",
-     "viaScore": 0.991
+     "viaScore": 0.999
     }
    ]
   },
@@ -501,9 +452,9 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
-   "score": 0.6034,
-   "rawScore": 0.404288,
+   "rank": 6,
+   "score": 0.671,
+   "rawScore": 0.448905,
    "geneCount": 1,
    "paths": [
     {
@@ -549,21 +500,102 @@
      "viaScore": 0.997
     },
     {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
      "drugsOnGene": 7,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1285
+       "score": 0.0973
       }
      ],
      "hops": 3,
      "via": "TNF",
-     "viaScore": 0.991
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.671,
+   "rawScore": 0.448905,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFAIP3",
+     "geneId": "ENSG00000118503",
+     "geneName": "TNF alpha induced protein 3",
+     "assoc": 0.4758,
+     "contribution": 0.218245,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.4559
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.3478,
+     "contribution": 0.159199,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0629
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
     }
    ]
   },
@@ -595,8 +627,8 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 8,
-   "score": 0.6034,
-   "rawScore": 0.404288,
+   "score": 0.671,
+   "rawScore": 0.448905,
    "geneCount": 1,
    "paths": [
     {
@@ -642,284 +674,21 @@
      "viaScore": 0.997
     },
     {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
      "drugsOnGene": 7,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1285
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
-   "score": 0.6034,
-   "rawScore": 0.404288,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFAIP3",
-     "geneId": "ENSG00000118503",
-     "geneName": "TNF alpha induced protein 3",
-     "assoc": 0.4758,
-     "contribution": 0.218245,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
+       "score": 0.0973
       }
      ],
      "hops": 3,
      "via": "TNF",
      "viaScore": 0.999
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.3478,
-     "contribution": 0.159199,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0629
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1285
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 10,
-   "score": 0.6034,
-   "rawScore": 0.404288,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFAIP3",
-     "geneId": "ENSG00000118503",
-     "geneName": "TNF alpha induced protein 3",
-     "assoc": 0.4758,
-     "contribution": 0.218245,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.3478,
-     "contribution": 0.159199,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0629
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1285
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 11,
-   "score": 0.6034,
-   "rawScore": 0.404288,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFAIP3",
-     "geneId": "ENSG00000118503",
-     "geneName": "TNF alpha induced protein 3",
-     "assoc": 0.4758,
-     "contribution": 0.218245,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.3478,
-     "contribution": 0.159199,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0629
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1285
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
     }
    ]
   },
@@ -950,9 +719,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 12,
-   "score": 0.6034,
-   "rawScore": 0.404288,
+   "rank": 9,
+   "score": 0.671,
+   "rawScore": 0.448905,
    "geneCount": 1,
    "paths": [
     {
@@ -998,36 +767,268 @@
      "viaScore": 0.997
     },
     {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1285,
-     "contribution": 0.026844,
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
      "drugsOnGene": 7,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1285
+       "score": 0.0973
       }
      ],
      "hops": 3,
      "via": "TNF",
-     "viaScore": 0.991
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3894860",
-   "name": "Trilaciclib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
    "approvedFor": [
-    "myelosuppression",
-    "small cell lung carcinoma"
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.671,
+   "rawScore": 0.448905,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFAIP3",
+     "geneId": "ENSG00000118503",
+     "geneName": "TNF alpha induced protein 3",
+     "assoc": 0.4758,
+     "contribution": 0.218245,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.4559
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.3478,
+     "contribution": 0.159199,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0629
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
+   "score": 0.671,
+   "rawScore": 0.448905,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFAIP3",
+     "geneId": "ENSG00000118503",
+     "geneName": "TNF alpha induced protein 3",
+     "assoc": 0.4758,
+     "contribution": 0.218245,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.4559
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.3478,
+     "contribution": 0.159199,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0629
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNFRSF1B",
+     "geneId": "ENSG00000028137",
+     "geneName": "TNF receptor superfamily member 1B",
+     "assoc": 0.0973,
+     "contribution": 0.044617,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5314379",
+   "name": "Voclosporin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "lupus nephritis",
+    "immune system disorder"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
    "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
+    "Serine/threonine protein phosphatase 2B catalytic subunit, alpha isoform inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.6396,
+   "rawScore": 0.428163,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFATC1",
+     "geneId": "ENSG00000131196",
+     "geneName": "nuclear factor of activated T cells 1",
+     "assoc": 0.4286,
+     "contribution": 0.428163,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4286
+      }
+     ],
+     "hops": 3,
+     "via": "PPP3CA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301610",
+   "name": "Abemaciclib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast neoplasm",
+    "breast carcinoma",
+    "breast cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
@@ -1101,18 +1102,17 @@
    ]
   },
   {
-   "id": "CHEMBL3301610",
-   "name": "Abemaciclib",
+   "id": "CHEMBL3894860",
+   "name": "Trilaciclib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "myelosuppression",
+    "small cell lung carcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
+    "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
@@ -1304,35 +1304,24 @@
    ]
   },
   {
-   "id": "CHEMBL1742990",
-   "name": "Belatacept",
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "kidney transplant",
-    "immune system disorder"
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 17,
    "score": 0.57,
    "rawScore": 0.38226,
@@ -1392,24 +1381,35 @@
    ]
   },
   {
-   "id": "CHEMBL1201823",
-   "name": "Abatacept",
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
    "drugType": "Protein",
    "approvedFor": [
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "juvenile idiopathic arthritis"
+    "kidney transplant",
+    "immune system disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "T-lymphocyte activation antigen CD80 inhibitor",
     "T-lymphocyte activation antigen CD86 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 18,
    "score": 0.57,
    "rawScore": 0.38226,
@@ -1667,151 +1667,6 @@
    ]
   },
   {
-   "id": "CHEMBL807",
-   "name": "Memantine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.3668,
-   "rawScore": 0.248243,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.06075,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.031264,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.031264,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
-   "score": 0.3668,
-   "rawScore": 0.248243,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.06075,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.031264,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.304,
-     "contribution": 0.031264,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL395091",
    "name": "Esketamine",
    "drugType": "Small molecule",
@@ -1828,7 +1683,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 23,
    "score": 0.3668,
    "rawScore": 0.248243,
    "geneCount": 7,
@@ -1912,7 +1767,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 26,
+   "rank": 24,
    "score": 0.3668,
    "rawScore": 0.248243,
    "geneCount": 7,
@@ -1982,6 +1837,151 @@
    "mechanisms": [
     "Matrix protein 2 inhibitor",
     "Glutamate [NMDA] receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.3668,
+   "rawScore": 0.248243,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.06075,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.031264,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.031264,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL807",
+   "name": "Memantine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.3668,
+   "rawScore": 0.248243,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.06075,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.031264,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.304,
+     "contribution": 0.031264,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL742",
+   "name": "Ketamine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2168,25 +2168,20 @@
    ]
   },
   {
-   "id": "CHEMBL4650269",
-   "name": "Lovotibeglogene Autotemcel",
+   "id": "CHEMBL4594311",
+   "name": "Betibeglogene Autotemcel",
    "drugType": "Gene",
    "approvedFor": [
-    "sickle cell disease"
+    "Beta-thalassemia"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 30,
    "score": 0.3237,
    "rawScore": 0.219833,
@@ -2212,20 +2207,25 @@
    ]
   },
   {
-   "id": "CHEMBL4594311",
-   "name": "Betibeglogene Autotemcel",
+   "id": "CHEMBL4650269",
+   "name": "Lovotibeglogene Autotemcel",
    "drugType": "Gene",
    "approvedFor": [
-    "Beta-thalassemia"
+    "sickle cell disease"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Hemoglobin beta chain exogenous gene"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 31,
    "score": 0.3237,
    "rawScore": 0.219833,
@@ -2326,80 +2326,6 @@
    ]
   },
   {
-   "id": "CHEMBL518924",
-   "name": "Mavorixafor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "inborn error of immunity"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.3119,
-   "rawScore": 0.212039,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CXCL13",
-     "geneId": "ENSG00000156234",
-     "geneName": "C-X-C motif chemokine ligand 13",
-     "assoc": 0.138,
-     "contribution": 0.088768,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.138
-      }
-     ],
-     "hops": 3,
-     "via": "CXCR4",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "CXCR4",
-     "geneId": "ENSG00000121966",
-     "geneName": "C-X-C motif chemokine receptor 4",
-     "assoc": 0.1096,
-     "contribution": 0.070596,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1096
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ACKR3",
-     "geneId": "ENSG00000144476",
-     "geneName": "atypical chemokine receptor 3",
-     "assoc": 0.0821,
-     "contribution": 0.052674,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0821
-      }
-     ],
-     "hops": 3,
-     "via": "CXCR4",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
    "id": "CHEMBL18442",
    "name": "Plerixafor",
    "drugType": "Small molecule",
@@ -2417,7 +2343,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 33,
    "score": 0.3119,
    "rawScore": 0.212039,
    "geneCount": 1,
@@ -2482,6 +2408,80 @@
    "approvedFor": [
     "plasma cell myeloma",
     "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.3119,
+   "rawScore": 0.212039,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CXCL13",
+     "geneId": "ENSG00000156234",
+     "geneName": "C-X-C motif chemokine ligand 13",
+     "assoc": 0.138,
+     "contribution": 0.088768,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.138
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CXCR4",
+     "geneId": "ENSG00000121966",
+     "geneName": "C-X-C motif chemokine receptor 4",
+     "assoc": 0.1096,
+     "contribution": 0.070596,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1096
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ACKR3",
+     "geneId": "ENSG00000144476",
+     "geneName": "atypical chemokine receptor 3",
+     "assoc": 0.0821,
+     "contribution": 0.052674,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0821
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL518924",
+   "name": "Mavorixafor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "inborn error of immunity"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,

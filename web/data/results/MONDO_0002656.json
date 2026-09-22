@@ -97,18 +97,16 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -272,16 +270,18 @@
    ]
   },
   {
-   "id": "CHEMBL2110732",
-   "name": "Dacomitinib Anhydrous",
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 1,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -796,19 +796,31 @@
    ]
   },
   {
-   "id": "CHEMBL3647420",
-   "name": "Pyrotinib",
+   "id": "CHEMBL554",
+   "name": "Lapatinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.4878,
    "rawScore": 0.767274,
@@ -880,31 +892,19 @@
    ]
   },
   {
-   "id": "CHEMBL554",
-   "name": "Lapatinib",
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast cancer"
-   ],
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 12,
    "score": 0.4878,
    "rawScore": 0.767274,
@@ -1227,175 +1227,6 @@
    ]
   },
   {
-   "id": "CHEMBL807",
-   "name": "Memantine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.4464,
-   "rawScore": 0.708291,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.173334,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.089204,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.089204,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.4464,
-   "rawScore": 0.708291,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.173334,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.089204,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 0.8673,
-     "contribution": 0.089204,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.856
-      },
-      {
-       "id": "literature",
-       "score": 0.0786
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL395091",
    "name": "Esketamine",
    "drugType": "Small molecule",
@@ -1412,7 +1243,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 16,
    "score": 0.4464,
    "rawScore": 0.708291,
    "geneCount": 7,
@@ -1508,7 +1339,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 19,
+   "rank": 17,
    "score": 0.4464,
    "rawScore": 0.708291,
    "geneCount": 7,
@@ -1590,6 +1421,175 @@
    "mechanisms": [
     "Matrix protein 2 inhibitor",
     "Glutamate [NMDA] receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.4464,
+   "rawScore": 0.708291,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.173334,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.089204,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.089204,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL807",
+   "name": "Memantine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.4464,
+   "rawScore": 0.708291,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.173334,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.089204,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 0.8673,
+     "contribution": 0.089204,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.856
+      },
+      {
+       "id": "literature",
+       "score": 0.0786
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL742",
+   "name": "Ketamine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1805,122 +1805,23 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 24,
-   "score": 0.4169,
-   "rawScore": 0.666437,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK3",
-     "geneId": "ENSG00000105639",
-     "geneName": "Janus kinase 3",
-     "assoc": 0.8573,
-     "contribution": 0.240473,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8512
-      },
-      {
-       "id": "literature",
-       "score": 0.041
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "JAK3",
-     "geneId": "ENSG00000105639",
-     "geneName": "Janus kinase 3",
-     "assoc": 0.8573,
-     "contribution": 0.162272,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8512
-      },
-      {
-       "id": "literature",
-       "score": 0.041
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "STAT3",
-     "geneId": "ENSG00000168610",
-     "geneName": "signal transducer and activator of transcription 3",
-     "assoc": 0.9601,
-     "contribution": 0.137726,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8296
-      },
-      {
-       "id": "literature",
-       "score": 0.7661
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 25,
    "score": 0.4169,
    "rawScore": 0.666437,
    "geneCount": 4,
@@ -2018,7 +1919,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 26,
+   "rank": 25,
    "score": 0.4169,
    "rawScore": 0.666437,
    "geneCount": 4,
@@ -2117,6 +2018,93 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 26,
+   "score": 0.4169,
+   "rawScore": 0.666437,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK3",
+     "geneId": "ENSG00000105639",
+     "geneName": "Janus kinase 3",
+     "assoc": 0.8573,
+     "contribution": 0.240473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8512
+      },
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "JAK3",
+     "geneId": "ENSG00000105639",
+     "geneName": "Janus kinase 3",
+     "assoc": 0.8573,
+     "contribution": 0.162272,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8512
+      },
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "STAT3",
+     "geneId": "ENSG00000168610",
+     "geneName": "signal transducer and activator of transcription 3",
+     "assoc": 0.9601,
+     "contribution": 0.137726,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8296
+      },
+      {
+       "id": "literature",
+       "score": 0.7661
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 27,
    "score": 0.4169,
    "rawScore": 0.666437,
@@ -2188,22 +2176,34 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 28,
    "score": 0.4169,
    "rawScore": 0.666437,
@@ -2363,58 +2363,6 @@
    ]
   },
   {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 31,
-   "score": 0.3983,
-   "rawScore": 0.639881,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PTCH1",
-     "geneId": "ENSG00000185920",
-     "geneName": "patched 1",
-     "assoc": 0.994,
-     "contribution": 0.639881,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9185
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.87
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4332
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2043437",
    "name": "Glasdegib",
    "drugType": "Small molecule",
@@ -2440,7 +2388,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
+   "rank": 31,
    "score": 0.3983,
    "rawScore": 0.639881,
    "geneCount": 1,
@@ -2482,6 +2430,58 @@
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 32,
+   "score": 0.3983,
+   "rawScore": 0.639881,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTCH1",
+     "geneId": "ENSG00000185920",
+     "geneName": "patched 1",
+     "assoc": 0.994,
+     "contribution": 0.639881,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9185
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.87
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4332
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -2615,16 +2615,17 @@
    ]
   },
   {
-   "id": "CHEMBL2364649",
-   "name": "Margetuximab",
+   "id": "CHEMBL2007641",
+   "name": "Pertuzumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "breast cancer",
     "neoplasm",
-    "HER2 positive breast carcinoma"
+    "breast neoplasm",
+    "breast cancer",
+    "breast carcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
@@ -2636,18 +2637,6 @@
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
     }
    ],
    "withdrawn": false,
@@ -2769,147 +2758,6 @@
    ]
   },
   {
-   "id": "CHEMBL2007641",
-   "name": "Pertuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer",
-    "breast carcinoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 37,
-   "score": 0.364,
-   "rawScore": 0.591158,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 0.9493,
-     "contribution": 0.305664,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8217
-      },
-      {
-       "id": "literature",
-       "score": 0.7159
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.8876,
-     "contribution": 0.285494,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8742
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4650256",
-   "name": "Zanidatamab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "biliary tract neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.364,
-   "rawScore": 0.591158,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ERBB2",
-     "geneId": "ENSG00000141736",
-     "geneName": "erb-b2 receptor tyrosine kinase 2",
-     "assoc": 0.9493,
-     "contribution": 0.305664,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8217
-      },
-      {
-       "id": "literature",
-       "score": 0.7159
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.8876,
-     "contribution": 0.285494,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8742
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4298178",
    "name": "Trastuzumab Duocarmazine",
    "drugType": "Antibody drug conjugate",
@@ -2924,7 +2772,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 37,
    "score": 0.364,
    "rawScore": 0.591158,
    "geneCount": 1,
@@ -3016,6 +2864,158 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 38,
+   "score": 0.364,
+   "rawScore": 0.591158,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 0.9493,
+     "contribution": 0.305664,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8217
+      },
+      {
+       "id": "literature",
+       "score": 0.7159
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.8876,
+     "contribution": 0.285494,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650256",
+   "name": "Zanidatamab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "biliary tract neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.364,
+   "rawScore": 0.591158,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ERBB2",
+     "geneId": "ENSG00000141736",
+     "geneName": "erb-b2 receptor tyrosine kinase 2",
+     "assoc": 0.9493,
+     "contribution": 0.305664,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8217
+      },
+      {
+       "id": "literature",
+       "score": 0.7159
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.8876,
+     "contribution": 0.285494,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2364649",
+   "name": "Margetuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "breast cancer",
+    "neoplasm",
+    "HER2 positive breast carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 40,
    "score": 0.364,
    "rawScore": 0.591158,
@@ -3083,7 +3083,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 64,
+   "rank": 63,
    "score": 0.2802,
    "rawScore": 0.472026,
    "geneCount": 3,

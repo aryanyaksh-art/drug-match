@@ -1,0 +1,3456 @@
+{
+ "id": "MONDO_0001220",
+ "name": "hypoparathyroidism",
+ "rarity": "other",
+ "description": "Hypoparathyroidism is an endocrine disorder in which the parathyroid glands in the neck do not produce enough parathyroid hormone (PTH). Common signs and symptoms include abdominal pain, brittle nails, cataracts, dry hair and skin, muscle cramps, tetany, pain in the face, legs, and feet, seizures, tingling sensation, and weakened tooth enamel (in children). It may be caused by injury to the parath",
+ "associatedGeneCount": 2428,
+ "genesScored": 41,
+ "genesWithDrugs": 13,
+ "knownDrugCount": 17,
+ "candidatesConsidered": 278,
+ "pathsTwoHop": 111,
+ "pathsThreeHop": 307,
+ "candidates": [
+  {
+   "id": "CHEMBL3707326",
+   "name": "Burosumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "osteomalacia",
+    "X-linked dominant hypophosphatemic rickets",
+    "bone disorder",
+    "hypophosphatemic rickets"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Fibroblast growth factor 23 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 2.008165,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.722158,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PHEX",
+     "geneId": "ENSG00000102174",
+     "geneName": "phosphate regulating endopeptidase X-linked",
+     "assoc": 0.6703,
+     "contribution": 0.657595,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6703
+      }
+     ],
+     "hops": 3,
+     "via": "FGF23",
+     "viaScore": 0.981
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.628412,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "FGF23",
+     "viaScore": 0.976
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545184",
+   "name": "Etelcalcetide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "secondary hyperparathyroidism",
+    "parathyroid gland disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Calcium sensing receptor agonist",
+    "Calcium sensing receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 2,
+   "score": 0.9975,
+   "rawScore": 2.00324,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CASR",
+     "geneId": "ENSG00000036828",
+     "geneName": "calcium sensing receptor",
+     "assoc": 0.9999,
+     "contribution": 0.6443,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9485
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9093
+      },
+      {
+       "id": "literature",
+       "score": 0.855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7843
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GCM2",
+     "geneId": "ENSG00000124827",
+     "geneName": "GCM transcription factor 2",
+     "assoc": 0.9955,
+     "contribution": 0.606227,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8701
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.814
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7175
+      },
+      {
+       "id": "literature",
+       "score": 0.3443
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.945
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.394572,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.951
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201284",
+   "name": "Cinacalcet",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hyperparathyroidism",
+    "Hypercalcemia",
+    "secondary hyperparathyroidism",
+    "tumor of parathyroid gland"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Calcium sensing receptor positive allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
+   "score": 0.9975,
+   "rawScore": 2.00324,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CASR",
+     "geneId": "ENSG00000036828",
+     "geneName": "calcium sensing receptor",
+     "assoc": 0.9999,
+     "contribution": 0.6443,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9485
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9093
+      },
+      {
+       "id": "literature",
+       "score": 0.855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7843
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GCM2",
+     "geneId": "ENSG00000124827",
+     "geneName": "GCM transcription factor 2",
+     "assoc": 0.9955,
+     "contribution": 0.606227,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8701
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.814
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7175
+      },
+      {
+       "id": "literature",
+       "score": 0.3443
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.945
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.394572,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.951
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297621",
+   "name": "Evocalcet",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "parathyroid gland disorder",
+    "secondary hyperparathyroidism"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Calcium sensing receptor positive allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
+   "score": 0.9975,
+   "rawScore": 2.00324,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CASR",
+     "geneId": "ENSG00000036828",
+     "geneName": "calcium sensing receptor",
+     "assoc": 0.9999,
+     "contribution": 0.6443,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9485
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9093
+      },
+      {
+       "id": "literature",
+       "score": 0.855
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7843
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GCM2",
+     "geneId": "ENSG00000124827",
+     "geneName": "GCM transcription factor 2",
+     "assoc": 0.9955,
+     "contribution": 0.606227,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8701
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.814
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7175
+      },
+      {
+       "id": "literature",
+       "score": 0.3443
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.945
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.394572,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "CASR",
+     "viaScore": 0.951
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301581",
+   "name": "Abaloparatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "osteoporosis",
+    "postmenopausal osteoporosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 6,
+   "score": 0.5034,
+   "rawScore": 1.017373,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTH1R",
+     "geneId": "ENSG00000160801",
+     "geneName": "parathyroid hormone 1 receptor",
+     "assoc": 0.8068,
+     "contribution": 0.423793,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5843
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.337888,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.255692,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201549",
+   "name": "Teriparatide Acetate",
+   "drugType": "Protein",
+   "approvedFor": [
+    "bone fracture",
+    "osteoporosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.5034,
+   "rawScore": 1.017373,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTH1R",
+     "geneId": "ENSG00000160801",
+     "geneName": "parathyroid hormone 1 receptor",
+     "assoc": 0.8068,
+     "contribution": 0.423793,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5843
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.337888,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.255692,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2109171",
+   "name": "Dibotermin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "spinal fusion",
+    "bone disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-2A agonist",
+    "Bone morphogenetic protein receptor type-1A agonist",
+    "Activin receptor type-1 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.3489,
+   "rawScore": 0.709149,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.164968,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2A",
+     "viaScore": 0.986
+    },
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.164801,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "ACVR2B",
+     "viaScore": 0.985
+    },
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.126671,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1489",
+   "name": "Azacitidine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "myelodysplastic syndrome with excess blasts",
+    "acute myeloid leukemia",
+    "myelodysplastic syndrome"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "DNA (cytosine-5)-methyltransferase 1 inhibitor",
+    "DNA (cytosine-5)-methyltransferase 3A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.338,
+   "rawScore": 0.687371,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "DNMT3A",
+     "geneId": "ENSG00000119772",
+     "geneName": "DNA methyltransferase 3 alpha",
+     "assoc": 0.6811,
+     "contribution": 0.391196,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4329
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DNMT3A",
+     "geneId": "ENSG00000119772",
+     "geneName": "DNA methyltransferase 3 alpha",
+     "assoc": 0.6811,
+     "contribution": 0.296175,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4329
+      }
+     ],
+     "hops": 3,
+     "via": "DNMT1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201129",
+   "name": "Decitabine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myeloid leukemia",
+    "anemia",
+    "neoplasm",
+    "chronic myelomonocytic leukemia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "DNA (cytosine-5)-methyltransferase 1 inhibitor",
+    "DNA (cytosine-5)-methyltransferase 3A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.338,
+   "rawScore": 0.687371,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "DNMT3A",
+     "geneId": "ENSG00000119772",
+     "geneName": "DNA methyltransferase 3 alpha",
+     "assoc": 0.6811,
+     "contribution": 0.391196,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4329
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "DNMT3A",
+     "geneId": "ENSG00000119772",
+     "geneName": "DNA methyltransferase 3 alpha",
+     "assoc": 0.6811,
+     "contribution": 0.296175,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4329
+      }
+     ],
+     "hops": 3,
+     "via": "DNMT1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108709",
+   "name": "Collagenase Clostridium Histolyticum",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "sarcoidosis",
+    "Dupuytren Contracture",
+    "palmar fibromatosis",
+    "Penile Fibromatosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.2789,
+   "rawScore": 0.569413,
+   "geneCount": 25,
+   "paths": [
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.135787,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.076117,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 3,
+     "via": "COL11A1",
+     "viaScore": 0.976
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.075259,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 3,
+     "via": "COL11A2",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3414621",
+   "name": "Tazemetostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "follicular lymphoma",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Histone-lysine N-methyltransferase EZH2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.2519,
+   "rawScore": 0.51567,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DNMT3A",
+     "geneId": "ENSG00000119772",
+     "geneName": "DNA methyltransferase 3 alpha",
+     "assoc": 0.6811,
+     "contribution": 0.51567,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4329
+      }
+     ],
+     "hops": 3,
+     "via": "EZH2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL291657",
+   "name": "Crinecerfont",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "congenital adrenal hyperplasia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Corticotropin releasing factor receptor 1 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2374,
+   "rawScore": 0.486749,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.486749,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "CRHR1",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095222",
+   "name": "Ocriplasmin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Abnormal retinal morphology",
+    "eye disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Laminin hydrolytic enzyme",
+    "Fibronectin proteolytic enzyme",
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.2349,
+   "rawScore": 0.481604,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.114847,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.064379,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 3,
+     "via": "COL11A1",
+     "viaScore": 0.976
+    },
+    {
+     "gene": "COL2A1",
+     "geneId": "ENSG00000139219",
+     "geneName": "collagen type II alpha 1 chain",
+     "assoc": 0.6493,
+     "contribution": 0.063654,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6493
+      }
+     ],
+     "hops": 3,
+     "via": "COL11A2",
+     "viaScore": 0.965
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108594",
+   "name": "Eptotermin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "spondylolisthesis",
+    "tibia fracture",
+    "bone disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Activin receptor type-1 agonist",
+    "Bone morphogenetic protein receptor type-1B agonist",
+    "Bone morphogenetic protein receptor type-2 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.2171,
+   "rawScore": 0.44618,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.148975,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.148826,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR1A",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "GDF5",
+     "geneId": "ENSG00000125965",
+     "geneName": "growth differentiation factor 5",
+     "assoc": 0.7015,
+     "contribution": 0.148379,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7015
+      }
+     ],
+     "hops": 3,
+     "via": "BMPR2",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cholangiocarcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.2111,
+   "rawScore": 0.434116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.136139,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.995
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.101619,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.098822,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3701238",
+   "name": "Futibatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer",
+    "intrahepatic cholangiocarcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.2111,
+   "rawScore": 0.434116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.136139,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.995
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.101619,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.098822,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545376",
+   "name": "Erdafitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cancer",
+    "urothelial carcinoma",
+    "urinary bladder carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.2111,
+   "rawScore": 0.434116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.136139,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.995
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.101619,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.098822,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5314379",
+   "name": "Voclosporin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "lupus nephritis",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Serine/threonine protein phosphatase 2B catalytic subunit, alpha isoform inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.2049,
+   "rawScore": 0.421814,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPIA",
+     "geneId": "ENSG00000196262",
+     "geneName": "peptidylprolyl isomerase A",
+     "assoc": 0.4282,
+     "contribution": 0.421814,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4282
+      }
+     ],
+     "hops": 3,
+     "via": "PPP3CA",
+     "viaScore": 0.985
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107333",
+   "name": "Dimethyl Fumarate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "relapsing-remitting multiple sclerosis",
+    "multiple sclerosis",
+    "immune system disorder",
+    "psoriasis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Kelch-like ECH-associated protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1982,
+   "rawScore": 0.408473,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CUL3",
+     "geneId": "ENSG00000036257",
+     "geneName": "cullin 3",
+     "assoc": 0.6345,
+     "contribution": 0.408473,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6345
+      }
+     ],
+     "hops": 3,
+     "via": "KEAP1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
+    "multiple sclerosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Kelch-like ECH-associated protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.1982,
+   "rawScore": 0.408473,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CUL3",
+     "geneId": "ENSG00000036257",
+     "geneName": "cullin 3",
+     "assoc": 0.6345,
+     "contribution": 0.408473,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6345
+      }
+     ],
+     "hops": 3,
+     "via": "KEAP1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "multiple sclerosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Kelch-like ECH-associated protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.1982,
+   "rawScore": 0.408473,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CUL3",
+     "geneId": "ENSG00000036257",
+     "geneName": "cullin 3",
+     "assoc": 0.6345,
+     "contribution": 0.408473,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6345
+      }
+     ],
+     "hops": 3,
+     "via": "KEAP1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1072",
+   "name": "Bumetanide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "congestive heart failure",
+    "kidney disorder",
+    "cardiovascular disorder",
+    "nephrotic syndrome"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.1805,
+   "rawScore": 0.373193,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.6498,
+     "contribution": 0.373193,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6247
+      },
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL456",
+   "name": "Ethacrynic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "urinary system disorder",
+    "cardiovascular disorder",
+    "congestive heart failure",
+    "hypertensive disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor",
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1805,
+   "rawScore": 0.373193,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.6498,
+     "contribution": 0.373193,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6247
+      },
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL35",
+   "name": "Furosemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary edema",
+    "congestive heart failure",
+    "hypertensive disorder",
+    "Hypertension"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 9,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
+   "score": 0.1805,
+   "rawScore": 0.373193,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.6498,
+     "contribution": 0.373193,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6247
+      },
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1148",
+   "name": "Torsemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myocardial infarction",
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "heart failure"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.1805,
+   "rawScore": 0.373193,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.6498,
+     "contribution": 0.373193,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6247
+      },
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201533",
+   "name": "Thyrotropin Alfa",
+   "drugType": "Protein",
+   "approvedFor": [
+    "thyroid gland carcinoma",
+    "thyroid cancer",
+    "thyroid tumor"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Thyroid stimulating hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.1784,
+   "rawScore": 0.368887,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.368887,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "TSHR",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201532",
+   "name": "Thyrotropin",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "hypothyroidism"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Thyroid stimulating hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.1784,
+   "rawScore": 0.368887,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.368887,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "TSHR",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3686884",
+   "name": "E-7090",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "biliary tract cancer",
+    "cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.161,
+   "rawScore": 0.334316,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.114012,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.110874,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.109431,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.986
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297522",
+   "name": "Pemigatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cholangiocarcinoma",
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.161,
+   "rawScore": 0.334316,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.114012,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.110874,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.109431,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.986
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL502835",
+   "name": "Nintedanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "idiopathic pulmonary fibrosis",
+    "neoplasm",
+    "systemic sclerosis",
+    "interstitial lung disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "Platelet-derived growth factor receptor inhibitor",
+    "Vascular endothelial growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.1508,
+   "rawScore": 0.313857,
+   "geneCount": 9,
+   "paths": [
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.098426,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.995
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.073469,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "FGF23",
+     "geneId": "ENSG00000118972",
+     "geneName": "fibroblast growth factor 23",
+     "assoc": 0.7222,
+     "contribution": 0.071446,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5338
+      },
+      {
+       "id": "literature",
+       "score": 0.4041
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL53418",
+   "name": "Danthron",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Constipation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Retinoid X receptor alpha antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.1233,
+   "rawScore": 0.259065,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.6243,
+     "contribution": 0.259065,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.561
+      },
+      {
+       "id": "literature",
+       "score": 0.1441
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.79
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL411",
+   "name": "Diethylstilbestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2355051",
+   "name": "Clomiphene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "female infertility"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297509",
+   "name": "Elacestrant",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer",
+    "breast neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Estrogen receptor alpha degrader",
+    "Estrogen receptor alpha degrader"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1511",
+   "name": "Estradiol Valerate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Premature ovarian insufficiency",
+    "menopause",
+    "Menorrhagia",
+    "Atrophy"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200973",
+   "name": "Estradiol Cypionate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 40,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL494753",
+   "name": "Estrone Sulfuric Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 41,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1358",
+   "name": "Fulvestrant",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "breast cancer",
+    "neoplasm",
+    "breast carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Estrogen receptor alpha antagonist",
+    "Estrogen receptor degrader"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200430",
+   "name": "Estradiol Acetate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "menopause",
+    "Atrophy"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 43,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1018",
+   "name": "Dienestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Atrophic Vaginitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.1191,
+   "rawScore": 0.250648,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.9949,
+     "contribution": 0.250648,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8766
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8738
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4519
+      },
+      {
+       "id": "literature",
+       "score": 0.4087
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    }
+   ]
+  }
+ ],
+ "knownRanked": [
+  {
+   "id": "CHEMBL2108078",
+   "name": "Parathyroid Hormone",
+   "drugType": "Protein",
+   "approvedFor": [
+    "postmenopausal osteoporosis",
+    "Hypocalcemia",
+    "hypoparathyroidism"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.5034,
+   "rawScore": 1.017373,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTH1R",
+     "geneId": "ENSG00000160801",
+     "geneName": "parathyroid hormone 1 receptor",
+     "assoc": 0.8068,
+     "contribution": 0.423793,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5843
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.337888,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.255692,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095475",
+   "name": "Palopegteriparatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "hypoparathyroidism"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.5034,
+   "rawScore": 1.017373,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTH1R",
+     "geneId": "ENSG00000160801",
+     "geneName": "parathyroid hormone 1 receptor",
+     "assoc": 0.8068,
+     "contribution": 0.423793,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5843
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.337888,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.255692,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL525610",
+   "name": "Teriparatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "osteogenesis imperfecta",
+    "bone fracture",
+    "postmenopausal osteoporosis",
+    "osteoporosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.5034,
+   "rawScore": 1.017373,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTH1R",
+     "geneId": "ENSG00000160801",
+     "geneName": "parathyroid hormone 1 receptor",
+     "assoc": 0.8068,
+     "contribution": 0.423793,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5843
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      },
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.9992,
+     "contribution": 0.337888,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9175
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8723
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8376
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5201
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.9997,
+     "contribution": 0.255692,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.9649
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5804
+      },
+      {
+       "id": "literature",
+       "score": 0.4947
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL160",
+   "name": "Cyclosporine",
+   "drugType": "Protein",
+   "approvedFor": [
+    "conjunctivitis",
+    "keratitis",
+    "eye disorder",
+    "Keratoconjunctivitis sicca"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 12,
+   "mechanisms": [
+    "Cyclophilin A modulator"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.2081,
+   "rawScore": 0.428238,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PPIA",
+     "geneId": "ENSG00000196262",
+     "geneName": "peptidylprolyl isomerase A",
+     "assoc": 0.4282,
+     "contribution": 0.428238,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4282
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1536",
+   "name": "Ergocalciferol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hypophosphatemia",
+    "hypophosphatemic rickets",
+    "hypoparathyroidism"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 53,
+   "score": 0.118,
+   "rawScore": 0.248525,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.6243,
+     "contribution": 0.248525,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.561
+      },
+      {
+       "id": "literature",
+       "score": 0.1441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL846",
+   "name": "Calcitriol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypocalcemia",
+    "psoriasis",
+    "hypoparathyroidism",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 56,
+   "score": 0.118,
+   "rawScore": 0.248525,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.6243,
+     "contribution": 0.248525,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.561
+      },
+      {
+       "id": "literature",
+       "score": 0.1441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1601669",
+   "name": "Alfacalcidol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 60,
+   "score": 0.118,
+   "rawScore": 0.248525,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.6243,
+     "contribution": 0.248525,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.561
+      },
+      {
+       "id": "literature",
+       "score": 0.1441
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201605",
+   "name": "Daclizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "multiple sclerosis",
+    "relapsing-remitting multiple sclerosis",
+    "immune system disorder",
+    "kidney transplant"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Interleukin-2 receptor inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 200,
+   "score": 0.0397,
+   "rawScore": 0.092268,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "JAK1",
+     "geneId": "ENSG00000162434",
+     "geneName": "Janus kinase 1",
+     "assoc": 0.4751,
+     "contribution": 0.092268,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4751
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL131",
+   "name": "Prednisolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "ulcerative colitis",
+    "myocarditis",
+    "sympathetic ophthalmia",
+    "erythema multiforme"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 57,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 208,
+   "score": 0.0327,
+   "rawScore": 0.078363,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.3976,
+     "contribution": 0.078363,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3976
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL650",
+   "name": "Methylprednisolone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "ulcerative colitis",
+    "Crohn disease",
+    "posterior uveitis",
+    "psoriatic arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 17,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 231,
+   "score": 0.0327,
+   "rawScore": 0.078363,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.3976,
+     "contribution": 0.078363,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3976
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  }
+ ]
+}

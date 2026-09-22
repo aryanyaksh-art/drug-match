@@ -7,9 +7,9 @@
  "genesScored": 48,
  "genesWithDrugs": 15,
  "knownDrugCount": 2,
- "candidatesConsidered": 267,
+ "candidatesConsidered": 281,
  "pathsTwoHop": 142,
- "pathsThreeHop": 262,
+ "pathsThreeHop": 277,
  "candidates": [
   {
    "id": "CHEMBL2107874",
@@ -151,8 +151,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 3,
-   "score": 0.3855,
-   "rawScore": 1.469928,
+   "score": 0.5641,
+   "rawScore": 2.148655,
    "geneCount": 1,
    "paths": [
     {
@@ -183,6 +183,27 @@
      "hops": 3,
      "via": "FGF23",
      "viaScore": 0.936
+    },
+    {
+     "gene": "GALNT3",
+     "geneId": "ENSG00000115339",
+     "geneName": "polypeptide N-acetylgalactosaminyltransferase 3",
+     "assoc": 0.6877,
+     "contribution": 0.678727,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.524
+      },
+      {
+       "id": "literature",
+       "score": 0.3439
+      }
+     ],
+     "hops": 3,
+     "via": "FGF23",
+     "viaScore": 0.987
     },
     {
      "gene": "SLC34A3",
@@ -622,18 +643,17 @@
    ]
   },
   {
-   "id": "CHEMBL1201716",
-   "name": "Mecasermin",
-   "drugType": "Protein",
+   "id": "CHEMBL1743079",
+   "name": "Teprotumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "Growth delay",
-    "Laron syndrome",
-    "hypothyroidism"
+    "Graves ophthalmopathy",
+    "Graves disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Insulin-like growth factor I receptor agonist"
+    "Insulin-like growth factor I receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -671,17 +691,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743079",
-   "name": "Teprotumumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201716",
+   "name": "Mecasermin",
+   "drugType": "Protein",
    "approvedFor": [
-    "Graves ophthalmopathy",
-    "Graves disease"
+    "Growth delay",
+    "Laron syndrome",
+    "hypothyroidism"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Insulin-like growth factor I receptor antagonist"
+    "Insulin-like growth factor I receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -978,18 +999,43 @@
    ]
   },
   {
-   "id": "CHEMBL193482",
-   "name": "Estriol",
+   "id": "CHEMBL81",
+   "name": "Raloxifene",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "postmenopausal osteoporosis",
+    "osteoporosis"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
    "mechanisms": [
+    "Estrogen receptor beta modulator",
     "Estrogen receptor modulator"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 14,
    "score": 0.1336,
    "rawScore": 0.512856,
@@ -1061,187 +1107,17 @@
    ]
   },
   {
-   "id": "CHEMBL46740",
-   "name": "Bazedoxifene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "postmenopausal osteoporosis",
-    "osteopetrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 15,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200598",
-   "name": "Diethylstilbestrol Diphosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201466",
-   "name": "Estrogens, Conjugated Synthetic A",
+   "id": "CHEMBL1201468",
+   "name": "Estrogens, Esterified",
    "drugType": "Unknown",
    "approvedFor": [
     "Atrophy",
-    "osteoporosis",
-    "menopause"
+    "hypogonadism",
+    "breast cancer",
+    "primary ovarian failure"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
     "Estrogen receptor agonist"
    ],
@@ -1253,7 +1129,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 17,
+   "rank": 15,
    "score": 0.1336,
    "rawScore": 0.512856,
    "geneCount": 2,
@@ -1344,7 +1220,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 18,
+   "rank": 16,
    "score": 0.1336,
    "rawScore": 0.512856,
    "geneCount": 2,
@@ -1415,19 +1291,22 @@
    ]
   },
   {
-   "id": "CHEMBL1230314",
-   "name": "Estetrol Anhydrous",
+   "id": "CHEMBL328190",
+   "name": "Lasofoxifene",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "osteoporosis"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 1,
    "mechanisms": [
-    "Estrogen receptor agonist"
+    "Estrogen receptor modulator",
+    "Estrogen receptor modulator"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 17,
    "score": 0.1336,
    "rawScore": 0.512856,
    "geneCount": 2,
@@ -1520,7 +1399,360 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 18,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL141305",
+   "name": "Cyclofenil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Infertility"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL46740",
+   "name": "Bazedoxifene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "postmenopausal osteoporosis",
+    "osteopetrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 20,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201466",
+   "name": "Estrogens, Conjugated Synthetic A",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Atrophy",
+    "osteoporosis",
+    "menopause"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201165",
+   "name": "Quinestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
    "score": 0.1336,
    "rawScore": 0.512856,
    "geneCount": 2,
@@ -1605,7 +1837,266 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 23,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201467",
+   "name": "Synthetic Conjugated Estrogens, B",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Atrophy",
+    "menopause"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 24,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL193482",
+   "name": "Estriol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.1336,
+   "rawScore": 0.512856,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.190247,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.129193,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.115561,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200598",
+   "name": "Diethylstilbestrol Diphosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
    "score": 0.1336,
    "rawScore": 0.512856,
    "geneCount": 2,
@@ -1710,466 +2201,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 22,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL141305",
-   "name": "Cyclofenil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Infertility"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL81",
-   "name": "Raloxifene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "postmenopausal osteoporosis",
-    "osteoporosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor beta modulator",
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 24,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL328190",
-   "name": "Lasofoxifene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "osteoporosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor modulator",
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201467",
-   "name": "Synthetic Conjugated Estrogens, B",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "Atrophy",
-    "menopause"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 26,
-   "score": 0.1336,
-   "rawScore": 0.512856,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.190247,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.129193,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.115561,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201165",
-   "name": "Quinestrol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast cancer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 27,
    "score": 0.1336,
    "rawScore": 0.512856,
@@ -2241,28 +2272,18 @@
    ]
   },
   {
-   "id": "CHEMBL1201468",
-   "name": "Estrogens, Esterified",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "Atrophy",
-    "hypogonadism",
-    "breast cancer",
-    "primary ovarian failure"
-   ],
+   "id": "CHEMBL1230314",
+   "name": "Estetrol Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 0,
    "mechanisms": [
     "Estrogen receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 28,
    "score": 0.1336,
    "rawScore": 0.512856,
@@ -2334,35 +2355,20 @@
    ]
   },
   {
-   "id": "CHEMBL1200973",
-   "name": "Estradiol Cypionate",
+   "id": "CHEMBL411",
+   "name": "Diethylstilbestrol",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 1,
    "mechanisms": [
     "Estrogen receptor alpha agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 29,
    "score": 0.1319,
    "rawScore": 0.506247,
@@ -2434,44 +2440,20 @@
    ]
   },
   {
-   "id": "CHEMBL135",
-   "name": "Estradiol",
+   "id": "CHEMBL2355051",
+   "name": "Clomiphene",
    "drugType": "Small molecule",
    "approvedFor": [
-    "primary ovarian failure",
-    "osteoporosis",
-    "contraception",
-    "menopause"
+    "female infertility"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 12,
+   "indicationCount": 1,
    "mechanisms": [
-    "Estrogen receptor alpha agonist"
+    "Estrogen receptor alpha modulator"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 30,
    "score": 0.1319,
    "rawScore": 0.506247,
@@ -2631,17 +2613,19 @@
    ]
   },
   {
-   "id": "CHEMBL83",
-   "name": "Tamoxifen",
+   "id": "CHEMBL1511",
+   "name": "Estradiol Valerate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast cancer",
-    "neoplasm"
+    "Premature ovarian insufficiency",
+    "menopause",
+    "Menorrhagia",
+    "Atrophy"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 6,
    "mechanisms": [
-    "Estrogen receptor alpha modulator"
+    "Estrogen receptor alpha agonist"
    ],
    "warnings": [
     {
@@ -2650,19 +2634,19 @@
     },
     {
      "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
      "detail": "neurotoxicity"
     },
     {
      "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
      "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
     }
    ],
    "withdrawn": false,
@@ -2738,8 +2722,8 @@
    ]
   },
   {
-   "id": "CHEMBL1405",
-   "name": "Estrone",
+   "id": "CHEMBL1200973",
+   "name": "Estradiol Cypionate",
    "drugType": "Small molecule",
    "approvedFor": [],
    "possiblyAlreadyApproved": null,
@@ -2747,9 +2731,26 @@
    "mechanisms": [
     "Estrogen receptor alpha agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 33,
    "score": 0.1319,
    "rawScore": 0.506247,
@@ -2821,21 +2822,125 @@
    ]
   },
   {
-   "id": "CHEMBL1201151",
-   "name": "Mestranol",
+   "id": "CHEMBL494753",
+   "name": "Estrone Sulfuric Acid",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "contraception"
-   ],
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 0,
    "mechanisms": [
     "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 34,
+   "score": 0.1319,
+   "rawScore": 0.506247,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.251032,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.152484,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.102731,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1358",
+   "name": "Fulvestrant",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "breast cancer",
+    "neoplasm",
+    "breast carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Estrogen receptor alpha antagonist",
+    "Estrogen receptor degrader"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 35,
    "score": 0.1319,
    "rawScore": 0.506247,
    "geneCount": 1,
@@ -2938,291 +3043,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
-   "score": 0.1319,
-   "rawScore": 0.506247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.251032,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.152484,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.102731,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201477",
-   "name": "Polyestradiol Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "prostate cancer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 36,
-   "score": 0.1319,
-   "rawScore": 0.506247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.251032,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.152484,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.102731,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1358",
-   "name": "Fulvestrant",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm",
-    "breast cancer",
-    "neoplasm",
-    "breast carcinoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
-   "mechanisms": [
-    "Estrogen receptor alpha antagonist",
-    "Estrogen receptor degrader"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.1319,
-   "rawScore": 0.506247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.251032,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.152484,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.102731,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1511",
-   "name": "Estradiol Valerate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Premature ovarian insufficiency",
-    "menopause",
-    "Menorrhagia",
-    "Atrophy"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 38,
    "score": 0.1319,
    "rawScore": 0.506247,
    "geneCount": 1,
@@ -3312,107 +3133,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 39,
-   "score": 0.1319,
-   "rawScore": 0.506247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9785,
-     "contribution": 0.251032,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8379
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6532
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CCDC170",
-     "geneId": "ENSG00000120262",
-     "geneName": "coiled-coil domain containing 170",
-     "assoc": 0.7572,
-     "contribution": 0.152484,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6867
-      },
-      {
-       "id": "literature",
-       "score": 0.2251
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.785
-    },
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.5295,
-     "contribution": 0.102731,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5295
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL494753",
-   "name": "Estrone Sulfuric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 40,
+   "rank": 37,
    "score": 0.1319,
    "rawScore": 0.506247,
    "geneCount": 1,
@@ -3500,6 +3221,308 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 38,
+   "score": 0.1319,
+   "rawScore": 0.506247,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.251032,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.152484,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.102731,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201477",
+   "name": "Polyestradiol Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "prostate cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.1319,
+   "rawScore": 0.506247,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.251032,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.152484,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.102731,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL83",
+   "name": "Tamoxifen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha modulator"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 40,
+   "score": 0.1319,
+   "rawScore": 0.506247,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9785,
+     "contribution": 0.251032,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8379
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6532
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CCDC170",
+     "geneId": "ENSG00000120262",
+     "geneName": "coiled-coil domain containing 170",
+     "assoc": 0.7572,
+     "contribution": 0.152484,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6867
+      },
+      {
+       "id": "literature",
+       "score": 0.2251
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.785
+    },
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.5295,
+     "contribution": 0.102731,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5295
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL135",
+   "name": "Estradiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary ovarian failure",
+    "osteoporosis",
+    "contraception",
+    "menopause"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 12,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 41,
    "score": 0.1319,
    "rawScore": 0.506247,

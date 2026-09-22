@@ -235,18 +235,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201346",
-   "name": "Balsalazide",
+   "id": "CHEMBL704",
+   "name": "Mesalamine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammatory bowel disease"
+    "proctitis",
+    "ulcerative colitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist",
     "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor"
+    "Cyclooxygenase inhibitor",
+    "Peroxisome proliferator-activated receptor gamma agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -310,11 +311,11 @@
    ]
   },
   {
-   "id": "CHEMBL425",
-   "name": "Olsalazine",
+   "id": "CHEMBL1201346",
+   "name": "Balsalazide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "ulcerative colitis"
+    "inflammatory bowel disease"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
@@ -385,19 +386,18 @@
    ]
   },
   {
-   "id": "CHEMBL704",
-   "name": "Mesalamine",
+   "id": "CHEMBL425",
+   "name": "Olsalazine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "proctitis",
     "ulcerative colitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
+    "Peroxisome proliferator-activated receptor gamma agonist",
     "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor",
-    "Peroxisome proliferator-activated receptor gamma agonist"
+    "Cyclooxygenase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1126,32 +1126,313 @@
    ]
   },
   {
-   "id": "CHEMBL1228",
-   "name": "Oxyphenbutazone Anhydrous",
+   "id": "CHEMBL1020",
+   "name": "Tolmetin",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "Myalgia",
+    "rheumatoid arthritis",
+    "Arthralgia",
+    "rheumatic disorder"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 4,
    "mechanisms": [
     "Cyclooxygenase inhibitor"
    ],
    "warnings": [
     {
-     "type": "Withdrawn",
-     "detail": "hematological toxicity"
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     },
     {
-     "type": "Withdrawn",
-     "detail": "dermatological toxicity"
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
     },
     {
-     "type": "Withdrawn",
-     "detail": "severe adverse reactions."
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
     }
    ],
-   "withdrawn": true,
-   "blackBox": false,
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 19,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL189171",
+   "name": "Acemetacin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatic disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL139",
+   "name": "Diclofenac",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "osteoarthritis",
+    "keratosis",
+    "Myalgia",
+    "inflammation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor",
+    "Cyclooxygenase inhibitor",
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL686",
+   "name": "Mefenamic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatic disorder",
+    "Dysmenorrhea"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL571",
+   "name": "Ketoprofen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Arthralgia",
+    "rheumatic disorder",
+    "osteoarthritis",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 23,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -1210,218 +1491,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL527",
-   "name": "Piroxicam",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatic disorder",
-    "rheumatoid arthritis",
-    "Pain",
-    "Arthralgia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 22,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL956",
-   "name": "Suprofen",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatic disorder",
-    "Miosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "nephrotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1297",
-   "name": "Fenoprofen",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatic disorder",
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 24,
    "score": 0.4412,
    "rawScore": 0.05873,
@@ -1464,21 +1533,36 @@
    ]
   },
   {
-   "id": "CHEMBL175",
-   "name": "Dexibuprofen",
+   "id": "CHEMBL898",
+   "name": "Diflunisal",
    "drugType": "Small molecule",
    "approvedFor": [
-    "ankylosing spondylitis",
-    "rheumatic disorder"
+    "Fever",
+    "familial amyloid neuropathy",
+    "osteoarthritis",
+    "Pain"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
     "Cyclooxygenase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 25,
    "score": 0.4412,
    "rawScore": 0.05873,
@@ -1521,136 +1605,18 @@
    ]
   },
   {
-   "id": "CHEMBL19299",
-   "name": "Loxoprofen",
+   "id": "CHEMBL15770",
+   "name": "Sulindac",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Myalgia",
-    "inflammation",
-    "Arthralgia",
+    "osteoarthritis",
+    "spondylitis",
+    "rheumatoid arthritis",
     "rheumatic disorder"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 4,
    "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL75435",
-   "name": "Dexketoprofen",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Arthralgia",
-    "rheumatic disorder",
-    "Myalgia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL154",
-   "name": "Naproxen",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain",
-    "gout",
-    "arthritic joint disease",
-    "Back pain"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 23,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
    "warnings": [
@@ -1660,77 +1626,16 @@
     },
     {
      "type": "Black Box Warning",
-     "detail": "neurotoxicity"
+     "detail": "cardiotoxicity"
     },
     {
      "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
+     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL53292",
-   "name": "Isoxicam",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "osteoarthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "dermatological toxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 29,
+   "rank": 26,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -1808,7 +1713,148 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 30,
+   "rank": 27,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL19299",
+   "name": "Loxoprofen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Myalgia",
+    "inflammation",
+    "Arthralgia",
+    "rheumatic disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL469",
+   "name": "Ketorolac",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatic disorder",
+    "eye inflammation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "nephrotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "high frequency and seriousness of adverse drug reactions"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 29,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -1885,349 +1931,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 31,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL571",
-   "name": "Ketoprofen",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Arthralgia",
-    "rheumatic disorder",
-    "osteoarthritis",
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 32,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1020",
-   "name": "Tolmetin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Myalgia",
-    "rheumatoid arthritis",
-    "Arthralgia",
-    "rheumatic disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 33,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL686",
-   "name": "Mefenamic Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatic disorder",
-    "Dysmenorrhea"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL898",
-   "name": "Diflunisal",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Fever",
-    "familial amyloid neuropathy",
-    "osteoarthritis",
-    "Pain"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 35,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL189171",
-   "name": "Acemetacin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatic disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
+   "rank": 30,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2300,7 +2004,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 37,
+   "rank": 31,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2342,70 +2046,11 @@
    ]
   },
   {
-   "id": "CHEMBL13376",
-   "name": "Clometacin",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1565476",
-   "name": "Apazone",
+   "id": "CHEMBL1569487",
+   "name": "Lornoxicam",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammation",
+    "migraine disorder",
     "rheumatic disorder"
    ],
    "possiblyAlreadyApproved": null,
@@ -2416,7 +2061,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 32,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2458,12 +2103,158 @@
    ]
   },
   {
-   "id": "CHEMBL15870",
-   "name": "Indoprofen",
+   "id": "CHEMBL1297",
+   "name": "Fenoprofen",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatic disorder",
-    "gout"
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 33,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL527",
+   "name": "Piroxicam",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatic disorder",
+    "rheumatoid arthritis",
+    "Pain",
+    "Arthralgia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 34,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL956",
+   "name": "Suprofen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatic disorder",
+    "Miosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
@@ -2473,16 +2264,92 @@
    "warnings": [
     {
      "type": "Withdrawn",
-     "detail": "gastrointestinal toxicity"
+     "detail": "musculoskeletal toxicity"
     },
     {
      "type": "Withdrawn",
-     "detail": "carcinogenicity"
+     "detail": "nephrotoxicity"
     }
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 40,
+   "rank": 35,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL101",
+   "name": "Phenylbutazone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Arthralgia",
+    "Myalgia",
+    "rheumatic disorder",
+    "Chronic pain"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "drug misuse"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "severe adverse reactions"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 36,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2541,66 +2408,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
-   "score": 0.4412,
-   "rawScore": 0.05873,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2091,
-     "contribution": 0.031022,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2091
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.172,
-     "contribution": 0.027708,
-     "drugsOnGene": 48,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL341812",
-   "name": "Ibufenac",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Cyclooxygenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 42,
+   "rank": 37,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2657,6 +2465,264 @@
    ],
    "warnings": [],
    "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL563",
+   "name": "Flurbiprofen",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Myalgia",
+    "eye inflammation",
+    "Miosis",
+    "Arthralgia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor",
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL53292",
+   "name": "Isoxicam",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "osteoarthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297232",
+   "name": "Diclofenac Etalhyaluronate Sodium",
+   "drugType": "Unknown",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.4412,
+   "rawScore": 0.05873,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2091,
+     "contribution": 0.031022,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2091
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.172,
+     "contribution": 0.027708,
+     "drugsOnGene": 48,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL461522",
+   "name": "Metamizole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Fever",
+    "Pain"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Adverse reaction"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 43,
    "score": 0.4412,
@@ -2878,7 +2944,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 42,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2936,7 +3002,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 50,
+   "rank": 44,
    "score": 0.4412,
    "rawScore": 0.05873,
    "geneCount": 2,
@@ -2978,6 +3044,80 @@
    ]
   },
   {
+   "id": "CHEMBL1502",
+   "name": "Pantoprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 64,
+   "score": 0.3589,
+   "rawScore": 0.047902,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HRH2",
+     "geneId": "ENSG00000113749",
+     "geneName": "histamine receptor H2",
+     "assoc": 0.0546,
+     "contribution": 0.014494,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0546
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4A",
+     "viaScore": 0.88
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.0304,
+     "contribution": 0.009171,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4B",
+     "geneId": "ENSG00000186009",
+     "geneName": "ATPase H+/K+ transporting subunit beta",
+     "assoc": 0.0304,
+     "contribution": 0.009171,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2079130",
    "name": "Vonoprazan",
    "drugType": "Small molecule",
@@ -2994,7 +3134,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 64,
+   "rank": 65,
    "score": 0.3589,
    "rawScore": 0.047902,
    "geneCount": 2,
@@ -3071,7 +3211,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 65,
+   "rank": 67,
    "score": 0.3589,
    "rawScore": 0.047902,
    "geneCount": 2,
@@ -3146,7 +3286,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 66,
+   "rank": 69,
    "score": 0.3589,
    "rawScore": 0.047902,
    "geneCount": 2,
@@ -3222,7 +3362,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 67,
+   "rank": 70,
    "score": 0.3589,
    "rawScore": 0.047902,
    "geneCount": 2,
@@ -3281,92 +3421,19 @@
    ]
   },
   {
-   "id": "CHEMBL1502",
-   "name": "Pantoprazole",
+   "id": "CHEMBL1201320",
+   "name": "Esomeprazole",
    "drugType": "Small molecule",
    "approvedFor": [
+    "cardiovascular disorder",
     "Peptic ulcer",
     "gastroesophageal reflux disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 68,
-   "score": 0.3589,
-   "rawScore": 0.047902,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "HRH2",
-     "geneId": "ENSG00000113749",
-     "geneName": "histamine receptor H2",
-     "assoc": 0.0546,
-     "contribution": 0.014494,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0546
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4A",
-     "viaScore": 0.88
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.0304,
-     "contribution": 0.009171,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4B",
-     "geneId": "ENSG00000186009",
-     "geneName": "ATPase H+/K+ transporting subunit beta",
-     "assoc": 0.0304,
-     "contribution": 0.009171,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL480",
-   "name": "Lansoprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Peptic ulcer",
-    "cerebral infarction",
-    "thrombotic disease",
-    "gastric ulcer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 12,
-   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor",
+    "Potassium-transporting ATPase inhibitor",
     "Potassium-transporting ATPase inhibitor"
    ],
    "warnings": [],

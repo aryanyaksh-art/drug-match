@@ -298,27 +298,22 @@
    ]
   },
   {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
+   "id": "CHEMBL1551",
+   "name": "Ursodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
+    "chronic hepatitis C virus infection",
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 7,
    "score": 0.6489,
    "rawScore": 0.563428,
@@ -361,22 +356,27 @@
    ]
   },
   {
-   "id": "CHEMBL1551",
-   "name": "Ursodiol",
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "chronic hepatitis C virus infection",
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis"
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
     "Bile acid receptor FXR agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 8,
    "score": 0.6489,
    "rawScore": 0.563428,
@@ -814,12 +814,12 @@
    ]
   },
   {
-   "id": "CHEMBL2108250",
-   "name": "Anistreplase",
-   "drugType": "Enzyme",
+   "id": "CHEMBL3707226",
+   "name": "Defibrotide Sodium",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "acute coronary syndrome"
+    "spondylo-ocular syndrome",
+    "hepatic veno-occlusive disease"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
@@ -830,6 +830,67 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 16,
+   "score": 0.5159,
+   "rawScore": 0.455063,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PLAU",
+     "geneId": "ENSG00000122861",
+     "geneName": "plasminogen activator, urokinase",
+     "assoc": 0.5026,
+     "contribution": 0.228216,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5026
+      }
+     ],
+     "hops": 3,
+     "via": "PLG",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "PLG",
+     "geneId": "ENSG00000122194",
+     "geneName": "plasminogen",
+     "assoc": 0.4941,
+     "contribution": 0.226847,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4847
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108147",
+   "name": "Streptokinase",
+   "drugType": "Enzyme",
+   "approvedFor": [
+    "pulmonary embolism",
+    "Recurrent thrombophlebitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Plasminogen activator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.5159,
    "rawScore": 0.455063,
    "geneCount": 1,
@@ -891,67 +952,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
-   "score": 0.5159,
-   "rawScore": 0.455063,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PLAU",
-     "geneId": "ENSG00000122861",
-     "geneName": "plasminogen activator, urokinase",
-     "assoc": 0.5026,
-     "contribution": 0.228216,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5026
-      }
-     ],
-     "hops": 3,
-     "via": "PLG",
-     "viaScore": 0.989
-    },
-    {
-     "gene": "PLG",
-     "geneId": "ENSG00000122194",
-     "geneName": "plasminogen",
-     "assoc": 0.4941,
-     "contribution": 0.226847,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4847
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707226",
-   "name": "Defibrotide Sodium",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "spondylo-ocular syndrome",
-    "hepatic veno-occlusive disease"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Plasminogen activator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 18,
    "score": 0.5159,
    "rawScore": 0.455063,
@@ -998,12 +998,12 @@
    ]
   },
   {
-   "id": "CHEMBL2108147",
-   "name": "Streptokinase",
+   "id": "CHEMBL2108250",
+   "name": "Anistreplase",
    "drugType": "Enzyme",
    "approvedFor": [
-    "pulmonary embolism",
-    "Recurrent thrombophlebitis"
+    "Recurrent thrombophlebitis",
+    "acute coronary syndrome"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
@@ -1059,14 +1059,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201532",
-   "name": "Thyrotropin",
-   "drugType": "Unknown",
+   "id": "CHEMBL1201533",
+   "name": "Thyrotropin Alfa",
+   "drugType": "Protein",
    "approvedFor": [
-    "hypothyroidism"
+    "thyroid gland carcinoma",
+    "thyroid cancer",
+    "thyroid tumor"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -1098,16 +1100,14 @@
    ]
   },
   {
-   "id": "CHEMBL1201533",
-   "name": "Thyrotropin Alfa",
-   "drugType": "Protein",
+   "id": "CHEMBL1201532",
+   "name": "Thyrotropin",
+   "drugType": "Unknown",
    "approvedFor": [
-    "thyroid gland carcinoma",
-    "thyroid cancer",
-    "thyroid tumor"
+    "hypothyroidism"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -1139,17 +1139,14 @@
    ]
   },
   {
-   "id": "CHEMBL1029",
-   "name": "Miglustat",
+   "id": "CHEMBL2110588",
+   "name": "Eliglustat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Glycogen storage disease due to acid maltase deficiency",
-    "Niemann-Pick disease",
-    "Gaucher disease type 1",
-    "Niemann-Pick disease type C"
+    "Gaucher disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
    ],
@@ -1181,14 +1178,17 @@
    ]
   },
   {
-   "id": "CHEMBL2110588",
-   "name": "Eliglustat",
+   "id": "CHEMBL1029",
+   "name": "Miglustat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Gaucher disease"
+    "Glycogen storage disease due to acid maltase deficiency",
+    "Niemann-Pick disease",
+    "Gaucher disease type 1",
+    "Niemann-Pick disease type C"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 5,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
    ],
@@ -1489,6 +1489,50 @@
    ]
   },
   {
+   "id": "CHEMBL3544914",
+   "name": "Tezacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lung injury",
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.3128,
+   "rawScore": 0.289563,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.5929,
+     "contribution": 0.289563,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5627
+      },
+      {
+       "id": "literature",
+       "score": 0.0692
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL5314934",
    "name": "Vanzacaftor",
    "drugType": "Small molecule",
@@ -1503,7 +1547,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 31,
    "score": 0.3128,
    "rawScore": 0.289563,
    "geneCount": 1,
@@ -1549,94 +1593,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
-   "score": 0.3128,
-   "rawScore": 0.289563,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.5929,
-     "contribution": 0.289563,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5627
-      },
-      {
-       "id": "literature",
-       "score": 0.0692
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298128",
-   "name": "Elexacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 32,
-   "score": 0.3128,
-   "rawScore": 0.289563,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.5929,
-     "contribution": 0.289563,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5627
-      },
-      {
-       "id": "literature",
-       "score": 0.0692
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544914",
-   "name": "Tezacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lung injury",
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
    "score": 0.3128,
    "rawScore": 0.289563,
    "geneCount": 1,
@@ -1676,6 +1633,49 @@
    "indicationCount": 2,
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.3128,
+   "rawScore": 0.289563,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.5929,
+     "contribution": 0.289563,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5627
+      },
+      {
+       "id": "literature",
+       "score": 0.0692
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298128",
+   "name": "Elexacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1753,6 +1753,45 @@
    ]
   },
   {
+   "id": "CHEMBL3039515",
+   "name": "Elobixibat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Constipation"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Ileal bile acid transporter inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.2574,
+   "rawScore": 0.244424,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ABCB4",
+     "geneId": "ENSG00000005471",
+     "geneName": "ATP binding cassette subfamily B member 4",
+     "assoc": 0.686,
+     "contribution": 0.244424,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.686
+      }
+     ],
+     "hops": 3,
+     "via": "SLC10A2",
+     "viaScore": 0.858
+    }
+   ]
+  },
+  {
    "id": "CHEMBL363392",
    "name": "Maralixibat",
    "drugType": "Small molecule",
@@ -1768,7 +1807,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 37,
    "score": 0.2574,
    "rawScore": 0.244424,
    "geneCount": 1,
@@ -1805,45 +1844,6 @@
    "indicationCount": 3,
    "mechanisms": [
     "Ileal bile acid transporter inhibitor",
-    "Ileal bile acid transporter inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.2574,
-   "rawScore": 0.244424,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.686,
-     "contribution": 0.244424,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.686
-      }
-     ],
-     "hops": 3,
-     "via": "SLC10A2",
-     "viaScore": 0.858
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Constipation"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],

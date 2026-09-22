@@ -12,17 +12,14 @@
  "pathsThreeHop": 228,
  "candidates": [
   {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "breast neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -100,14 +97,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm"
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -716,17 +716,16 @@
    ]
   },
   {
-   "id": "CHEMBL3301612",
-   "name": "Encorafenib",
+   "id": "CHEMBL1229517",
+   "name": "Vemurafenib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neoplasm",
     "metastatic melanoma",
-    "colorectal neoplasm",
-    "melanoma",
-    "neoplasm"
+    "melanoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
@@ -804,16 +803,17 @@
    ]
   },
   {
-   "id": "CHEMBL1229517",
-   "name": "Vemurafenib",
+   "id": "CHEMBL3301612",
+   "name": "Encorafenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "metastatic melanoma",
-    "melanoma"
+    "colorectal neoplasm",
+    "melanoma",
+    "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
@@ -1026,19 +1026,110 @@
    ]
   },
   {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
+   "id": "CHEMBL4558324",
+   "name": "Lazertinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
    "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 13,
+   "score": 0.3965,
+   "rawScore": 0.33399,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.4531,
+     "contribution": 0.129276,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.2143
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 0.6645,
+     "contribution": 0.122042,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5319
+      },
+      {
+       "id": "literature",
+       "score": 0.2832
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "NRAS",
+     "geneId": "ENSG00000213281",
+     "geneName": "NRAS proto-oncogene, GTPase",
+     "assoc": 0.3167,
+     "contribution": 0.047031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1124,7 +1215,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1195,23 +1286,104 @@
    ]
   },
   {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "cancer",
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": "cancer",
-   "indicationCount": 3,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 16,
+   "score": 0.3965,
+   "rawScore": 0.33399,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.4531,
+     "contribution": 0.129276,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.2143
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 0.6645,
+     "contribution": 0.122042,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5319
+      },
+      {
+       "id": "literature",
+       "score": 0.2832
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "NRAS",
+     "geneId": "ENSG00000213281",
+     "geneName": "NRAS proto-oncogene, GTPase",
+     "assoc": 0.3167,
+     "contribution": 0.047031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545308",
+   "name": "Rociletinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1304,93 +1476,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 16,
-   "score": 0.3965,
-   "rawScore": 0.33399,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.4531,
-     "contribution": 0.129276,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.2143
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6645,
-     "contribution": 0.122042,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.2832
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "NRAS",
-     "geneId": "ENSG00000213281",
-     "geneName": "NRAS proto-oncogene, GTPase",
-     "assoc": 0.3167,
-     "contribution": 0.047031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1558,28 +1644,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201577",
-   "name": "Cetuximab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
-    "colorectal adenocarcinoma",
-    "colorectal carcinoma",
-    "colorectal neoplasm",
-    "head and neck neoplasm"
+    "head and neck cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Epidermal growth factor receptor erbB1 binding agent"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 20,
    "score": 0.3965,
    "rawScore": 0.33399,
@@ -1651,106 +1729,22 @@
    ]
   },
   {
-   "id": "CHEMBL4298088",
-   "name": "Cetuximab Sarotalocan",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.3965,
-   "rawScore": 0.33399,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.4531,
-     "contribution": 0.129276,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.2143
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6645,
-     "contribution": 0.122042,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.2832
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "NRAS",
-     "geneId": "ENSG00000213281",
-     "geneName": "NRAS proto-oncogene, GTPase",
-     "assoc": 0.3167,
-     "contribution": 0.047031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3545308",
-   "name": "Rociletinib",
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 21,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1846,7 +1840,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 23,
+   "rank": 22,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -1931,6 +1925,93 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 23,
+   "score": 0.3965,
+   "rawScore": 0.33399,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.4531,
+     "contribution": 0.129276,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.2143
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PIK3CA",
+     "geneId": "ENSG00000121879",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
+     "assoc": 0.6645,
+     "contribution": 0.122042,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5319
+      },
+      {
+       "id": "literature",
+       "score": 0.2832
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "NRAS",
+     "geneId": "ENSG00000213281",
+     "geneName": "NRAS proto-oncogene, GTPase",
+     "assoc": 0.3167,
+     "contribution": 0.047031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": "cancer",
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
    "score": 0.3965,
    "rawScore": 0.33399,
@@ -2002,110 +2083,29 @@
    ]
   },
   {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201577",
+   "name": "Cetuximab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "colorectal adenocarcinoma",
+    "colorectal carcinoma",
+    "colorectal neoplasm",
+    "head and neck neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 8,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.3965,
-   "rawScore": 0.33399,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.4531,
-     "contribution": 0.129276,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.2143
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6645,
-     "contribution": 0.122042,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.2832
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "NRAS",
-     "geneId": "ENSG00000213281",
-     "geneName": "NRAS proto-oncogene, GTPase",
-     "assoc": 0.3167,
-     "contribution": 0.047031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL4558324",
-   "name": "Lazertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
    ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
+   "blackBox": true,
+   "rank": 25,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -2192,7 +2192,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 26,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -2522,19 +2522,18 @@
    ]
   },
   {
-   "id": "CHEMBL1173655",
-   "name": "Afatinib",
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2606,18 +2605,19 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
+   "id": "CHEMBL1173655",
+   "name": "Afatinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3194,23 +3194,49 @@
    ]
   },
   {
-   "id": "CHEMBL1201746",
-   "name": "Pralatrexate",
+   "id": "CHEMBL34259",
+   "name": "Methotrexate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "mature T-cell and NK-cell non-Hodgkin lymphoma",
-    "peripheral T-cell lymphoma, not otherwise specified",
-    "breast cancer",
-    "neoplasm"
+    "psoriatic arthritis",
+    "acute lymphoblastic leukemia",
+    "juvenile idiopathic arthritis",
+    "non-Hodgkin lymphoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 15,
    "mechanisms": [
+    "Dihydrofolate reductase inhibitor",
     "Dihydrofolate reductase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 41,
    "score": 0.2762,
    "rawScore": 0.233509,
@@ -3252,7 +3278,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 27,
    "score": 0.3965,
    "rawScore": 0.33399,
    "geneCount": 1,
@@ -3382,65 +3408,6 @@
    ]
   },
   {
-   "id": "CHEMBL3707227",
-   "name": "Atezolizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "lung cancer",
-    "non-small cell lung carcinoma",
-    "transitional cell carcinoma",
-    "breast cancer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 8,
-   "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 58,
-   "score": 0.2095,
-   "rawScore": 0.177718,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.2652,
-     "contribution": 0.129507,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2652
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.1721,
-     "contribution": 0.048211,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1721
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3833373",
    "name": "Avelumab",
    "drugType": "Antibody",
@@ -3500,6 +3467,65 @@
    ]
   },
   {
+   "id": "CHEMBL3707227",
+   "name": "Atezolizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "lung cancer",
+    "non-small cell lung carcinoma",
+    "transitional cell carcinoma",
+    "breast cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 63,
+   "score": 0.2095,
+   "rawScore": 0.177718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.2652,
+     "contribution": 0.129507,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2652
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.1721,
+     "contribution": 0.048211,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1721
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297843",
    "name": "Toripalimab",
    "drugType": "Antibody",
@@ -3517,7 +3543,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 77,
+   "rank": 76,
    "score": 0.1454,
    "rawScore": 0.124243,
    "geneCount": 1,
@@ -3576,7 +3602,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 79,
+   "rank": 77,
    "score": 0.1454,
    "rawScore": 0.124243,
    "geneCount": 1,

@@ -243,16 +243,15 @@
    ]
   },
   {
-   "id": "CHEMBL2103825",
-   "name": "Cetilistat",
+   "id": "CHEMBL175247",
+   "name": "Orlistat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inherited lipid metabolism disorder",
     "Obesity",
-    "type 2 diabetes mellitus"
+    "obesity disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -306,15 +305,16 @@
    ]
   },
   {
-   "id": "CHEMBL175247",
-   "name": "Orlistat",
+   "id": "CHEMBL2103825",
+   "name": "Cetilistat",
    "drugType": "Small molecule",
    "approvedFor": [
+    "inherited lipid metabolism disorder",
     "Obesity",
-    "obesity disorder"
+    "type 2 diabetes mellitus"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Gastric lipase inhibitor",
     "Pancreatic lipase inhibitor"
@@ -426,17 +426,16 @@
    ]
   },
   {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
+   "id": "CHEMBL4650438",
+   "name": "Olezarsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
+    "familial chylomicronemia syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
+    "Apolipoprotein C-III mRNA antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -483,16 +482,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650438",
-   "name": "Olezarsen",
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "familial chylomicronemia syndrome"
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Apolipoprotein C-III mRNA antisense inhibitor"
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -638,6 +638,73 @@
    ]
   },
   {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.1185,
+   "rawScore": 0.306769,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.6252,
+     "contribution": 0.271852,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5726
+      },
+      {
+       "id": "literature",
+       "score": 0.123
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APP",
+     "geneId": "ENSG00000142192",
+     "geneName": "amyloid beta precursor protein",
+     "assoc": 0.0608,
+     "contribution": 0.034916,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297245",
    "name": "Donanemab",
    "drugType": "Antibody",
@@ -654,7 +721,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.1185,
    "rawScore": 0.306769,
    "geneCount": 1,
@@ -712,7 +779,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.1185,
    "rawScore": 0.306769,
    "geneCount": 1,
@@ -774,73 +841,6 @@
     {
      "type": "Black Box Warning",
      "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 14,
-   "score": 0.1185,
-   "rawScore": 0.306769,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.6252,
-     "contribution": 0.271852,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5726
-      },
-      {
-       "id": "literature",
-       "score": 0.123
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "APP",
-     "geneId": "ENSG00000142192",
-     "geneName": "amyloid beta precursor protein",
-     "assoc": 0.0608,
-     "contribution": 0.034916,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -953,7 +953,117 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 17,
+   "score": 0.1103,
+   "rawScore": 0.286741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C9",
+     "geneId": "ENSG00000113600",
+     "geneName": "complement C9",
+     "assoc": 0.5819,
+     "contribution": 0.253019,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5819
+      }
+     ],
+     "hops": 3,
+     "via": "C5",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.0775,
+     "contribution": 0.033723,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0775
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298207",
+   "name": "Zilucoplan",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1103,
+   "rawScore": 0.286741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C9",
+     "geneId": "ENSG00000113600",
+     "geneName": "complement C9",
+     "assoc": 0.5819,
+     "contribution": 0.253019,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5819
+      }
+     ],
+     "hops": 3,
+     "via": "C5",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.0775,
+     "contribution": 0.033723,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0775
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594316",
+   "name": "Crovalimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "paroxysmal nocturnal hemoglobinuria"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
    "score": 0.1103,
    "rawScore": 0.286741,
    "geneCount": 1,
@@ -1015,116 +1125,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 20,
-   "score": 0.1103,
-   "rawScore": 0.286741,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C9",
-     "geneId": "ENSG00000113600",
-     "geneName": "complement C9",
-     "assoc": 0.5819,
-     "contribution": 0.253019,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5819
-      }
-     ],
-     "hops": 3,
-     "via": "C5",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.0775,
-     "contribution": 0.033723,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0775
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4594316",
-   "name": "Crovalimab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "paroxysmal nocturnal hemoglobinuria"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.1103,
-   "rawScore": 0.286741,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C9",
-     "geneId": "ENSG00000113600",
-     "geneName": "complement C9",
-     "assoc": 0.5819,
-     "contribution": 0.253019,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5819
-      }
-     ],
-     "hops": 3,
-     "via": "C5",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.0775,
-     "contribution": 0.033723,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0775
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298207",
-   "name": "Zilucoplan",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 22,
    "score": 0.1103,
    "rawScore": 0.286741,
@@ -1318,6 +1318,45 @@
    ]
   },
   {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1038,
+   "rawScore": 0.27099,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.592,
+     "contribution": 0.27099,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.592
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201572",
    "name": "Etanercept",
    "drugType": "Protein",
@@ -1344,144 +1383,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 27,
-   "score": 0.1038,
-   "rawScore": 0.27099,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF10A",
-     "geneId": "ENSG00000104689",
-     "geneName": "TNF receptor superfamily member 10a",
-     "assoc": 0.592,
-     "contribution": 0.27099,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.592
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 14,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 28,
-   "score": 0.1038,
-   "rawScore": 0.27099,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF10A",
-     "geneId": "ENSG00000104689",
-     "geneName": "TNF receptor superfamily member 10a",
-     "assoc": 0.592,
-     "contribution": 0.27099,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.592
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 29,
-   "score": 0.1038,
-   "rawScore": 0.27099,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF10A",
-     "geneId": "ENSG00000104689",
-     "geneName": "TNF receptor superfamily member 10a",
-     "assoc": 0.592,
-     "contribution": 0.27099,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.592
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 30,
    "score": 0.1038,
    "rawScore": 0.27099,
    "geneCount": 1,
@@ -1528,6 +1430,104 @@
     {
      "type": "Black Box Warning",
      "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 29,
+   "score": 0.1038,
+   "rawScore": 0.27099,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.592,
+     "contribution": 0.27099,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.592
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.1038,
+   "rawScore": 0.27099,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.592,
+     "contribution": 0.27099,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.592
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -1739,17 +1739,15 @@
    ]
   },
   {
-   "id": "CHEMBL1174",
-   "name": "Eptifibatide",
-   "drugType": "Protein",
+   "id": "CHEMBL916",
+   "name": "Tirofiban",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "myocardial infarction",
     "Recurrent thrombophlebitis",
-    "acute coronary syndrome",
-    "intermediate coronary syndrome"
+    "acute coronary syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Integrin alpha-IIb/beta-3 inhibitor"
    ],
@@ -1806,15 +1804,17 @@
    ]
   },
   {
-   "id": "CHEMBL916",
-   "name": "Tirofiban",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1174",
+   "name": "Eptifibatide",
+   "drugType": "Protein",
    "approvedFor": [
+    "myocardial infarction",
     "Recurrent thrombophlebitis",
-    "acute coronary syndrome"
+    "acute coronary syndrome",
+    "intermediate coronary syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Integrin alpha-IIb/beta-3 inhibitor"
    ],
@@ -2198,44 +2198,22 @@
    ]
   },
   {
-   "id": "CHEMBL1908360",
-   "name": "Everolimus",
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "pancreatic neoplasm",
-    "kidney angiomyolipoma",
-    "astrocytoma (excluding glioblastoma)",
-    "tuberous sclerosis"
+    "atopic eczema",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 13,
+   "indicationCount": 2,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "nephrotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
      "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
@@ -2265,12 +2243,16 @@
    ]
   },
   {
-   "id": "CHEMBL219410",
-   "name": "Zotarolimus",
+   "id": "CHEMBL1201182",
+   "name": "Temsirolimus",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm",
+    "mantle cell lymphoma",
+    "renal cell carcinoma"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 3,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
@@ -2449,62 +2431,6 @@
    ]
   },
   {
-   "id": "CHEMBL4297889",
-   "name": "Avacincaptad Pegol Sodium",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "atrophic macular degeneration"
-   ],
-   "possiblyAlreadyApproved": "atrophic macular degeneration",
-   "indicationCount": 1,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.1103,
-   "rawScore": 0.286741,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C9",
-     "geneId": "ENSG00000113600",
-     "geneName": "complement C9",
-     "assoc": 0.5819,
-     "contribution": 0.253019,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5819
-      }
-     ],
-     "hops": 3,
-     "via": "C5",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.0775,
-     "contribution": 0.033723,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0775
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4298086",
    "name": "Pozelimab",
    "drugType": "Antibody",
@@ -2528,7 +2454,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 18,
+   "rank": 19,
    "score": 0.1103,
    "rawScore": 0.286741,
    "geneCount": 1,
@@ -2596,6 +2522,62 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 21,
+   "score": 0.1103,
+   "rawScore": 0.286741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C9",
+     "geneId": "ENSG00000113600",
+     "geneName": "complement C9",
+     "assoc": 0.5819,
+     "contribution": 0.253019,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5819
+      }
+     ],
+     "hops": 3,
+     "via": "C5",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.0775,
+     "contribution": 0.033723,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0775
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297889",
+   "name": "Avacincaptad Pegol Sodium",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "atrophic macular degeneration"
+   ],
+   "possiblyAlreadyApproved": "atrophic macular degeneration",
+   "indicationCount": 1,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
    "score": 0.1103,
    "rawScore": 0.286741,
@@ -2714,7 +2696,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 52,
+   "rank": 54,
    "score": 0.0369,
    "rawScore": 0.108456,
    "geneCount": 1,

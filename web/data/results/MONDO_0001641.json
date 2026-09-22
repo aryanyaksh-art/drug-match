@@ -729,23 +729,32 @@
    ]
   },
   {
-   "id": "CHEMBL1148",
-   "name": "Torsemide",
+   "id": "CHEMBL1072",
+   "name": "Bumetanide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "myocardial infarction",
-    "hypertensive disorder",
+    "congestive heart failure",
+    "kidney disorder",
     "cardiovascular disorder",
-    "heart failure"
+    "nephrotic syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
+   "indicationCount": 4,
    "mechanisms": [
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 12,
    "score": 0.6044,
    "rawScore": 0.396497,
@@ -912,32 +921,23 @@
    ]
   },
   {
-   "id": "CHEMBL1072",
-   "name": "Bumetanide",
+   "id": "CHEMBL1148",
+   "name": "Torsemide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "congestive heart failure",
-    "kidney disorder",
+    "myocardial infarction",
+    "hypertensive disorder",
     "cardiovascular disorder",
-    "nephrotic syndrome"
+    "heart failure"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 6,
    "mechanisms": [
     "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "nephrotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 15,
    "score": 0.6044,
    "rawScore": 0.396497,
@@ -1350,6 +1350,80 @@
    ]
   },
   {
+   "id": "CHEMBL1201505",
+   "name": "Fibrinolysin, Human",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Recurrent thrombophlebitis",
+    "wound healing"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibrinogen inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.5002,
+   "rawScore": 0.329435,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGA",
+     "geneId": "ENSG00000171560",
+     "geneName": "fibrinogen alpha chain",
+     "assoc": 0.3871,
+     "contribution": 0.160734,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3871
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGA",
+     "geneId": "ENSG00000171560",
+     "geneName": "fibrinogen alpha chain",
+     "assoc": 0.3871,
+     "contribution": 0.08435,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3871
+      }
+     ],
+     "hops": 3,
+     "via": "FGG",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FGA",
+     "geneId": "ENSG00000171560",
+     "geneName": "fibrinogen alpha chain",
+     "assoc": 0.3871,
+     "contribution": 0.08435,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3871
+      }
+     ],
+     "hops": 3,
+     "via": "FGB",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2109072",
    "name": "Fibrinogen, Human",
    "drugType": "Unknown",
@@ -1366,7 +1440,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 23,
    "score": 0.5002,
    "rawScore": 0.329435,
    "geneCount": 3,
@@ -1435,80 +1509,6 @@
    "indicationCount": 1,
    "mechanisms": [
     "Fibrinogen hydrolytic enzyme"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.5002,
-   "rawScore": 0.329435,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "FGA",
-     "geneId": "ENSG00000171560",
-     "geneName": "fibrinogen alpha chain",
-     "assoc": 0.3871,
-     "contribution": 0.160734,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3871
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGA",
-     "geneId": "ENSG00000171560",
-     "geneName": "fibrinogen alpha chain",
-     "assoc": 0.3871,
-     "contribution": 0.08435,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3871
-      }
-     ],
-     "hops": 3,
-     "via": "FGG",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FGA",
-     "geneId": "ENSG00000171560",
-     "geneName": "fibrinogen alpha chain",
-     "assoc": 0.3871,
-     "contribution": 0.08435,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3871
-      }
-     ],
-     "hops": 3,
-     "via": "FGB",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201505",
-   "name": "Fibrinolysin, Human",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "wound healing"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibrinogen inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1729,90 +1729,6 @@
    ]
   },
   {
-   "id": "CHEMBL1289601",
-   "name": "Lenvatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "renal cell carcinoma",
-    "thyroid tumor",
-    "differentiated thyroid carcinoma",
-    "thyroid cancer"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.4734,
-   "rawScore": 0.312211,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5572,
-     "contribution": 0.082579,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3766
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2897
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5572,
-     "contribution": 0.074467,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3766
-      },
-      {
-       "id": "animal_model",
-       "score": 0.2897
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
-    },
-    {
-     "gene": "PGF",
-     "geneId": "ENSG00000119630",
-     "geneName": "placental growth factor",
-     "assoc": 0.47,
-     "contribution": 0.054685,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.47
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1289926",
    "name": "Axitinib",
    "drugType": "Small molecule",
@@ -1828,7 +1744,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 28,
    "score": 0.4734,
    "rawScore": 0.312211,
    "geneCount": 3,
@@ -1906,6 +1822,90 @@
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 4,
+   "mechanisms": [
+    "Vascular endothelial growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.4734,
+   "rawScore": 0.312211,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5572,
+     "contribution": 0.082579,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3766
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2897
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5572,
+     "contribution": 0.074467,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3766
+      },
+      {
+       "id": "animal_model",
+       "score": 0.2897
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.85
+    },
+    {
+     "gene": "PGF",
+     "geneId": "ENSG00000119630",
+     "geneName": "placental growth factor",
+     "assoc": 0.47,
+     "contribution": 0.054685,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.47
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1289601",
+   "name": "Lenvatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "thyroid tumor",
+    "differentiated thyroid carcinoma",
+    "thyroid cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
@@ -2242,17 +2242,18 @@
    ]
   },
   {
-   "id": "CHEMBL3894860",
-   "name": "Trilaciclib",
+   "id": "CHEMBL3301610",
+   "name": "Abemaciclib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "myelosuppression",
-    "small cell lung carcinoma"
+    "neoplasm",
+    "breast neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
@@ -2309,18 +2310,17 @@
    ]
   },
   {
-   "id": "CHEMBL3301610",
-   "name": "Abemaciclib",
+   "id": "CHEMBL3894860",
+   "name": "Trilaciclib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "myelosuppression",
+    "small cell lung carcinoma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
+    "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],

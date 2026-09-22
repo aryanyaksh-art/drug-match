@@ -97,7 +97,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
+   "rank": 2,
    "score": 0.7855,
    "rawScore": 1.043302,
    "geneCount": 1,
@@ -754,6 +754,56 @@
    ]
   },
   {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
+   "score": 0.1969,
+   "rawScore": 0.281751,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.6479,
+     "contribution": 0.281751,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5976
+      },
+      {
+       "id": "literature",
+       "score": 0.1251
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297245",
    "name": "Donanemab",
    "drugType": "Antibody",
@@ -770,7 +820,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.1969,
    "rawScore": 0.281751,
    "geneCount": 1,
@@ -811,7 +861,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.1969,
    "rawScore": 0.281751,
    "geneCount": 1,
@@ -856,56 +906,6 @@
     {
      "type": "Black Box Warning",
      "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 15,
-   "score": 0.1969,
-   "rawScore": 0.281751,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.6479,
-     "contribution": 0.281751,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5976
-      },
-      {
-       "id": "literature",
-       "score": 0.1251
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -1012,17 +1012,17 @@
    ]
   },
   {
-   "id": "CHEMBL1059",
-   "name": "Pregabalin",
+   "id": "CHEMBL940",
+   "name": "Gabapentin",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neuralgia",
+    "Focal impaired awareness seizure",
     "Seizure",
-    "spinal cord injury",
-    "chronic obstructive pulmonary disease",
-    "neuropathic pain"
+    "epilepsy"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Voltage-gated calcium channel modulator"
    ],
@@ -1088,15 +1088,17 @@
    ]
   },
   {
-   "id": "CHEMBL1628502",
-   "name": "Gabapentin Enacarbil",
+   "id": "CHEMBL1059",
+   "name": "Pregabalin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neuralgia",
-    "restless legs syndrome"
+    "Seizure",
+    "spinal cord injury",
+    "chronic obstructive pulmonary disease",
+    "neuropathic pain"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 9,
    "mechanisms": [
     "Voltage-gated calcium channel modulator"
    ],
@@ -1162,22 +1164,24 @@
    ]
   },
   {
-   "id": "CHEMBL940",
-   "name": "Gabapentin",
+   "id": "CHEMBL404849",
+   "name": "Suloctidil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neuralgia",
-    "Focal impaired awareness seizure",
-    "Seizure",
-    "epilepsy"
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
-    "Voltage-gated calcium channel modulator"
+    "Voltage-gated calcium channel blocker"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 20,
    "score": 0.1846,
@@ -1312,24 +1316,20 @@
    ]
   },
   {
-   "id": "CHEMBL404849",
-   "name": "Suloctidil",
+   "id": "CHEMBL1628502",
+   "name": "Gabapentin Enacarbil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "neuralgia",
+    "restless legs syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Voltage-gated calcium channel blocker"
+    "Voltage-gated calcium channel modulator"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 22,
    "score": 0.1846,
@@ -1650,19 +1650,19 @@
    ]
   },
   {
-   "id": "CHEMBL2109540",
-   "name": "Alirocumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL5095052",
+   "name": "Inclisiran Sodium",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "familial hypercholesterolemia",
+    "Hypercholesterolemia",
     "atherosclerosis",
-    "Abnormal circulating lipid concentration",
-    "coronary artery disorder"
+    "familial hypercholesterolemia",
+    "Abnormal circulating lipid concentration"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
+   "indicationCount": 4,
    "mechanisms": [
-    "Subtilisin/kexin type 9 inhibitor"
+    "PCSK9 mRNA rnai inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1696,68 +1696,19 @@
    ]
   },
   {
-   "id": "CHEMBL3990033",
-   "name": "Inclisiran",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "familial hypercholesterolemia"
-   ],
+   "id": "CHEMBL4594554",
+   "name": "Tafolecimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 0,
    "mechanisms": [
-    "PCSK9 mRNA RNAi inhibitor"
+    "Subtilisin/kexin type 9 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 29,
-   "score": 0.1486,
-   "rawScore": 0.219256,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LDLR",
-     "geneId": "ENSG00000130164",
-     "geneName": "low density lipoprotein receptor",
-     "assoc": 0.5513,
-     "contribution": 0.219256,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5354
-      },
-      {
-       "id": "literature",
-       "score": 0.0343
-      }
-     ],
-     "hops": 3,
-     "via": "PCSK9",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL5095052",
-   "name": "Inclisiran Sodium",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "Hypercholesterolemia",
-    "atherosclerosis",
-    "familial hypercholesterolemia",
-    "Abnormal circulating lipid concentration"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
-   "mechanisms": [
-    "PCSK9 mRNA rnai inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 30,
    "score": 0.1486,
    "rawScore": 0.219256,
    "geneCount": 1,
@@ -1803,6 +1754,50 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 30,
+   "score": 0.1486,
+   "rawScore": 0.219256,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LDLR",
+     "geneId": "ENSG00000130164",
+     "geneName": "low density lipoprotein receptor",
+     "assoc": 0.5513,
+     "contribution": 0.219256,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5354
+      },
+      {
+       "id": "literature",
+       "score": 0.0343
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3990033",
+   "name": "Inclisiran",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "familial hypercholesterolemia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "PCSK9 mRNA RNAi inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 31,
    "score": 0.1486,
    "rawScore": 0.219256,
@@ -1832,12 +1827,17 @@
    ]
   },
   {
-   "id": "CHEMBL4594554",
-   "name": "Tafolecimab",
+   "id": "CHEMBL2109540",
+   "name": "Alirocumab",
    "drugType": "Antibody",
-   "approvedFor": [],
+   "approvedFor": [
+    "familial hypercholesterolemia",
+    "atherosclerosis",
+    "Abnormal circulating lipid concentration",
+    "coronary artery disorder"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 6,
    "mechanisms": [
     "Subtilisin/kexin type 9 inhibitor"
    ],
@@ -1873,64 +1873,24 @@
    ]
   },
   {
-   "id": "CHEMBL5314727",
-   "name": "Bevacizumab Gamma",
+   "id": "CHEMBL1201583",
+   "name": "Bevacizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "wet macular degeneration"
+    "colonic neoplasm",
+    "breast cancer",
+    "colorectal neoplasm",
+    "neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor A binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.146,
-   "rawScore": 0.215895,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5199,
-     "contribution": 0.215895,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5125
-      },
-      {
-       "id": "literature",
-       "score": 0.0152
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297684",
-   "name": "Abicipar Pegol",
-   "drugType": "Protein",
-   "approvedFor": [
-    "ocular vascular disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 18,
    "mechanisms": [
     "Vascular endothelial growth factor A inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 33,
    "score": 0.146,
    "rawScore": 0.215895,
    "geneCount": 1,
@@ -1975,7 +1935,137 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 34,
+   "score": 0.146,
+   "rawScore": 0.215895,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5199,
+     "contribution": 0.215895,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5125
+      },
+      {
+       "id": "literature",
+       "score": 0.0152
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201421",
+   "name": "Pegaptanib Sodium",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "macular degeneration",
+    "wet macular degeneration"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Vascular endothelial growth factor A antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 35,
+   "score": 0.146,
+   "rawScore": 0.215895,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5199,
+     "contribution": 0.215895,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5125
+      },
+      {
+       "id": "literature",
+       "score": 0.0152
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5314727",
+   "name": "Bevacizumab Gamma",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "wet macular degeneration"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vascular endothelial growth factor A binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.146,
+   "rawScore": 0.215895,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.5199,
+     "contribution": 0.215895,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5125
+      },
+      {
+       "id": "literature",
+       "score": 0.0152
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297684",
+   "name": "Abicipar Pegol",
+   "drugType": "Protein",
+   "approvedFor": [
+    "ocular vascular disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vascular endothelial growth factor A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
    "score": 0.146,
    "rawScore": 0.215895,
    "geneCount": 1,
@@ -2017,96 +2107,6 @@
    "indicationCount": 11,
    "mechanisms": [
     "Vascular endothelial growth factor A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
-   "score": 0.146,
-   "rawScore": 0.215895,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5199,
-     "contribution": 0.215895,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5125
-      },
-      {
-       "id": "literature",
-       "score": 0.0152
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201583",
-   "name": "Bevacizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colonic neoplasm",
-    "breast cancer",
-    "colorectal neoplasm",
-    "neoplasm"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 18,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.146,
-   "rawScore": 0.215895,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.5199,
-     "contribution": 0.215895,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5125
-      },
-      {
-       "id": "literature",
-       "score": 0.0152
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201421",
-   "name": "Pegaptanib Sodium",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "macular degeneration",
-    "wet macular degeneration"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vascular endothelial growth factor A antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2183,17 +2183,17 @@
    ]
   },
   {
-   "id": "CHEMBL1201129",
-   "name": "Decitabine",
+   "id": "CHEMBL1489",
+   "name": "Azacitidine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "myeloid leukemia",
-    "anemia",
     "neoplasm",
-    "chronic myelomonocytic leukemia"
+    "myelodysplastic syndrome with excess blasts",
+    "acute myeloid leukemia",
+    "myelodysplastic syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 6,
+   "indicationCount": 5,
    "mechanisms": [
     "DNA (cytosine-5)-methyltransferase 1 inhibitor",
     "DNA (cytosine-5)-methyltransferase 3A inhibitor"
@@ -2226,17 +2226,17 @@
    ]
   },
   {
-   "id": "CHEMBL1489",
-   "name": "Azacitidine",
+   "id": "CHEMBL1201129",
+   "name": "Decitabine",
    "drugType": "Small molecule",
    "approvedFor": [
+    "myeloid leukemia",
+    "anemia",
     "neoplasm",
-    "myelodysplastic syndrome with excess blasts",
-    "acute myeloid leukemia",
-    "myelodysplastic syndrome"
+    "chronic myelomonocytic leukemia"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 6,
    "mechanisms": [
     "DNA (cytosine-5)-methyltransferase 1 inhibitor",
     "DNA (cytosine-5)-methyltransferase 3A inhibitor"
@@ -2288,7 +2288,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
+   "rank": 3,
    "score": 0.7855,
    "rawScore": 1.043302,
    "geneCount": 1,

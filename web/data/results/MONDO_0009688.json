@@ -53,11 +53,11 @@
    ]
   },
   {
-   "id": "CHEMBL284348",
-   "name": "Dalfampridine",
+   "id": "CHEMBL113461",
+   "name": "Tedisamil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "multiple sclerosis"
+    "cardiac arrhythmia"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
@@ -126,11 +126,11 @@
    ]
   },
   {
-   "id": "CHEMBL113461",
-   "name": "Tedisamil",
+   "id": "CHEMBL284348",
+   "name": "Dalfampridine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiac arrhythmia"
+    "multiple sclerosis"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
@@ -140,7 +140,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
+   "rank": 5,
    "score": 0.7151,
    "rawScore": 0.56277,
    "geneCount": 40,
@@ -493,45 +493,6 @@
    ]
   },
   {
-   "id": "CHEMBL4297889",
-   "name": "Avacincaptad Pegol Sodium",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "atrophic macular degeneration"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 10,
-   "score": 0.4107,
-   "rawScore": 0.337189,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.7747,
-     "contribution": 0.337189,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7747
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2109636",
    "name": "Vilobelimab",
    "drugType": "Antibody",
@@ -546,7 +507,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 10,
    "score": 0.4107,
    "rawScore": 0.337189,
    "geneCount": 1,
@@ -585,7 +546,46 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 13,
+   "score": 0.4107,
+   "rawScore": 0.337189,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.7747,
+     "contribution": 0.337189,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7747
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297889",
+   "name": "Avacincaptad Pegol Sodium",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "atrophic macular degeneration"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
    "score": 0.4107,
    "rawScore": 0.337189,
    "geneCount": 1,
@@ -870,6 +870,56 @@
    ]
   },
   {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.3087,
+   "rawScore": 0.261612,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.6414,
+     "contribution": 0.261612,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4702
+      },
+      {
+       "id": "literature",
+       "score": 0.3232
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.937
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297245",
    "name": "Donanemab",
    "drugType": "Antibody",
@@ -886,7 +936,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 27,
    "score": 0.3087,
    "rawScore": 0.261612,
    "geneCount": 1,
@@ -927,7 +977,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 28,
    "score": 0.3087,
    "rawScore": 0.261612,
    "geneCount": 1,
@@ -972,56 +1022,6 @@
     {
      "type": "Black Box Warning",
      "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 28,
-   "score": 0.3087,
-   "rawScore": 0.261612,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.6414,
-     "contribution": 0.261612,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4702
-      },
-      {
-       "id": "literature",
-       "score": 0.3232
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.937
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -1175,17 +1175,14 @@
    ]
   },
   {
-   "id": "CHEMBL2396661",
-   "name": "Alpelisib",
+   "id": "CHEMBL4650215",
+   "name": "Inavolisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm",
-    "neoplasm",
-    "breast carcinoma",
-    "breast cancer"
+    "breast neoplasm"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -1221,14 +1218,17 @@
    ]
   },
   {
-   "id": "CHEMBL4650215",
-   "name": "Inavolisib",
+   "id": "CHEMBL2396661",
+   "name": "Alpelisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast neoplasm"
+    "breast neoplasm",
+    "neoplasm",
+    "breast carcinoma",
+    "breast cancer"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "PI3-kinase p110-alpha subunit inhibitor"
    ],
@@ -1323,90 +1323,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201349",
-   "name": "Hexafluorenium",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Acetylcholinesterase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.2168,
-   "rawScore": 0.193528,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.6414,
-     "contribution": 0.193528,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4702
-      },
-      {
-       "id": "literature",
-       "score": 0.3232
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201229",
-   "name": "Demecarium",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "glaucoma"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Acetylcholinesterase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 41,
-   "score": 0.2168,
-   "rawScore": 0.193528,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.6414,
-     "contribution": 0.193528,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4702
-      },
-      {
-       "id": "literature",
-       "score": 0.3232
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2107723",
    "name": "Acotiamide",
    "drugType": "Small molecule",
@@ -1421,7 +1337,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 43,
+   "rank": 35,
    "score": 0.2168,
    "rawScore": 0.193528,
    "geneCount": 1,
@@ -1450,8 +1366,8 @@
    ]
   },
   {
-   "id": "CHEMBL1025",
-   "name": "Isoflurophate",
+   "id": "CHEMBL1201341",
+   "name": "Echothiophate",
    "drugType": "Small molecule",
    "approvedFor": [
     "glaucoma"
@@ -1459,53 +1375,13 @@
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
+    "Acetylcholinesterase inhibitor",
     "Acetylcholinesterase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 44,
-   "score": 0.2168,
-   "rawScore": 0.193528,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.6414,
-     "contribution": 0.193528,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4702
-      },
-      {
-       "id": "literature",
-       "score": 0.3232
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL5095056",
-   "name": "Benzgalantamine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Acetylcholinesterase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 45,
+   "rank": 36,
    "score": 0.2168,
    "rawScore": 0.193528,
    "geneCount": 1,
@@ -1548,7 +1424,175 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 46,
+   "rank": 37,
+   "score": 0.2168,
+   "rawScore": 0.193528,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.6414,
+     "contribution": 0.193528,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4702
+      },
+      {
+       "id": "literature",
+       "score": 0.3232
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201229",
+   "name": "Demecarium",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "glaucoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Acetylcholinesterase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.2168,
+   "rawScore": 0.193528,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.6414,
+     "contribution": 0.193528,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4702
+      },
+      {
+       "id": "literature",
+       "score": 0.3232
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095056",
+   "name": "Benzgalantamine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acetylcholinesterase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.2168,
+   "rawScore": 0.193528,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.6414,
+     "contribution": 0.193528,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4702
+      },
+      {
+       "id": "literature",
+       "score": 0.3232
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL395280",
+   "name": "Huperzine A",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Alzheimer disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Acetylcholinesterase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.2168,
+   "rawScore": 0.193528,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACHE",
+     "geneId": "ENSG00000087085",
+     "geneName": "acetylcholinesterase (Yt blood group)",
+     "assoc": 0.6414,
+     "contribution": 0.193528,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4702
+      },
+      {
+       "id": "literature",
+       "score": 0.3232
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201349",
+   "name": "Hexafluorenium",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acetylcholinesterase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 45,
    "score": 0.2168,
    "rawScore": 0.193528,
    "geneCount": 1,
@@ -1592,49 +1636,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 47,
-   "score": 0.2168,
-   "rawScore": 0.193528,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACHE",
-     "geneId": "ENSG00000087085",
-     "geneName": "acetylcholinesterase (Yt blood group)",
-     "assoc": 0.6414,
-     "contribution": 0.193528,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4702
-      },
-      {
-       "id": "literature",
-       "score": 0.3232
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL395280",
-   "name": "Huperzine A",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Alzheimer disease"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Acetylcholinesterase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 48,
    "score": 0.2168,
    "rawScore": 0.193528,
@@ -1664,8 +1665,8 @@
    ]
   },
   {
-   "id": "CHEMBL1201341",
-   "name": "Echothiophate",
+   "id": "CHEMBL1025",
+   "name": "Isoflurophate",
    "drugType": "Small molecule",
    "approvedFor": [
     "glaucoma"
@@ -1673,7 +1674,6 @@
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
-    "Acetylcholinesterase inhibitor",
     "Acetylcholinesterase inhibitor"
    ],
    "warnings": [],
@@ -1756,6 +1756,56 @@
    ]
   },
   {
+   "id": "CHEMBL255863",
+   "name": "Nilotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "chronic myelogenous leukemia, BCR-ABL1 positive"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Tyrosine-protein kinase ABL inhibitor",
+    "Bcr/Abl fusion protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 51,
+   "score": 0.209,
+   "rawScore": 0.187737,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EPHB1",
+     "geneId": "ENSG00000154928",
+     "geneName": "EPH receptor B1",
+     "assoc": 0.6346,
+     "contribution": 0.187737,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6346
+      }
+     ],
+     "hops": 3,
+     "via": "ABL1",
+     "viaScore": 0.94
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4208229",
    "name": "Asciminib",
    "drugType": "Small molecule",
@@ -1772,7 +1822,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 51,
+   "rank": 52,
    "score": 0.209,
    "rawScore": 0.187737,
    "geneCount": 2,
@@ -1823,56 +1873,6 @@
     {
      "type": "Black Box Warning",
      "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 52,
-   "score": 0.209,
-   "rawScore": 0.187737,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EPHB1",
-     "geneId": "ENSG00000154928",
-     "geneName": "EPH receptor B1",
-     "assoc": 0.6346,
-     "contribution": 0.187737,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6346
-      }
-     ],
-     "hops": 3,
-     "via": "ABL1",
-     "viaScore": 0.94
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL255863",
-   "name": "Nilotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "chronic myelogenous leukemia, BCR-ABL1 positive"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Tyrosine-protein kinase ABL inhibitor",
-    "Bcr/Abl fusion protein inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "musculoskeletal toxicity"
     },
     {
      "type": "Black Box Warning",
@@ -2044,19 +2044,13 @@
  ],
  "knownRanked": [
   {
-   "id": "CHEMBL354077",
-   "name": "Amifampridine",
+   "id": "CHEMBL821",
+   "name": "Guanidine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neurodegenerative disease",
-    "nervous system disorder",
-    "myasthenia gravis",
-    "autoimmune disease"
-   ],
-   "possiblyAlreadyApproved": "myasthenia gravis",
-   "indicationCount": 15,
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
    "mechanisms": [
-    "Voltage-gated potassium channel blocker",
     "Voltage-gated potassium channel blocker"
    ],
    "warnings": [],
@@ -2121,19 +2115,25 @@
    ]
   },
   {
-   "id": "CHEMBL821",
-   "name": "Guanidine",
+   "id": "CHEMBL354077",
+   "name": "Amifampridine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "approvedFor": [
+    "neurodegenerative disease",
+    "nervous system disorder",
+    "myasthenia gravis",
+    "autoimmune disease"
+   ],
+   "possiblyAlreadyApproved": "myasthenia gravis",
+   "indicationCount": 15,
    "mechanisms": [
+    "Voltage-gated potassium channel blocker",
     "Voltage-gated potassium channel blocker"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 5,
+   "rank": 4,
    "score": 0.7151,
    "rawScore": 0.56277,
    "geneCount": 40,
@@ -2192,6 +2192,43 @@
    ]
   },
   {
+   "id": "CHEMBL4298207",
+   "name": "Zilucoplan",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.4107,
+   "rawScore": 0.337189,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.7747,
+     "contribution": 0.337189,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7747
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4298086",
    "name": "Pozelimab",
    "drugType": "Antibody",
@@ -2215,7 +2252,58 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 11,
+   "rank": 12,
+   "score": 0.4107,
+   "rawScore": 0.337189,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "C5",
+     "geneId": "ENSG00000106804",
+     "geneName": "complement C5",
+     "assoc": 0.7747,
+     "contribution": 0.337189,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7747
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201828",
+   "name": "Eculizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "hemolysis",
+    "age-related macular degeneration",
+    "neuromyelitis optica",
+    "atypical hemolytic-uremic syndrome"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Complement C5 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
    "score": 0.4107,
    "rawScore": 0.337189,
    "geneCount": 1,
@@ -2260,43 +2348,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 13,
-   "score": 0.4107,
-   "rawScore": 0.337189,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.7747,
-     "contribution": 0.337189,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7747
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298207",
-   "name": "Zilucoplan",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 15,
    "score": 0.4107,
    "rawScore": 0.337189,
@@ -2366,57 +2417,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201828",
-   "name": "Eculizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "hemolysis",
-    "age-related macular degeneration",
-    "neuromyelitis optica",
-    "atypical hemolytic-uremic syndrome"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
-   "mechanisms": [
-    "Complement C5 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 17,
-   "score": 0.4107,
-   "rawScore": 0.337189,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "C5",
-     "geneId": "ENSG00000106804",
-     "geneName": "complement C5",
-     "assoc": 0.7747,
-     "contribution": 0.337189,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7747
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4297551",
    "name": "Efgartigimod Alfa",
    "drugType": "Protein",
@@ -2457,8 +2457,8 @@
    ]
   },
   {
-   "id": "CHEMBL4297820",
-   "name": "Rozanolixizumab",
+   "id": "CHEMBL4594310",
+   "name": "Nipocalimab",
    "drugType": "Antibody",
    "approvedFor": [
     "myasthenia gravis"
@@ -2466,7 +2466,7 @@
    "possiblyAlreadyApproved": "myasthenia gravis",
    "indicationCount": 1,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 inhibitor"
+    "IgG receptor FcRn large subunit p51 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2496,8 +2496,8 @@
    ]
   },
   {
-   "id": "CHEMBL4594310",
-   "name": "Nipocalimab",
+   "id": "CHEMBL4297820",
+   "name": "Rozanolixizumab",
    "drugType": "Antibody",
    "approvedFor": [
     "myasthenia gravis"
@@ -2505,7 +2505,7 @@
    "possiblyAlreadyApproved": "myasthenia gravis",
    "indicationCount": 1,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 antagonist"
+    "IgG receptor FcRn large subunit p51 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,

@@ -1,0 +1,2773 @@
+{
+ "id": "EFO_0004599",
+ "name": "acute graft vs. host disease",
+ "rarity": "other",
+ "description": "Graft-versus-host disease (GVHD) is a common complication following an allogeneic tissue transplant. It is commonly associated with stem cell or bone marrow transplant but the term also applies to other forms of tissue graft.",
+ "associatedGeneCount": 59,
+ "genesScored": 40,
+ "genesWithDrugs": 9,
+ "knownDrugCount": 23,
+ "candidatesConsidered": 132,
+ "pathsTwoHop": 19,
+ "pathsThreeHop": 288,
+ "candidates": [
+  {
+   "id": "CHEMBL1743029",
+   "name": "Ibalizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "HIV infectious disease",
+    "HIV-1 infection",
+    "viral infectious disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "T-cell surface antigen CD4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 0.144583,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.0681,
+     "contribution": 0.068139,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0681
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "HLA-DPB1",
+     "geneId": "ENSG00000223865",
+     "geneName": "major histocompatibility complex, class II, DP beta 1",
+     "assoc": 0.041,
+     "contribution": 0.029855,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "CD4",
+     "viaScore": 0.96
+    },
+    {
+     "gene": "CD8A",
+     "geneId": "ENSG00000153563",
+     "geneName": "CD8 subunit alpha",
+     "assoc": 0.0289,
+     "contribution": 0.021863,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0289
+      }
+     ],
+     "hops": 3,
+     "via": "CD4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL256907",
+   "name": "Maraviroc",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "viral infectious disease",
+    "HIV infectious disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "C-C chemokine receptor type 5 antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 2,
+   "score": 0.7738,
+   "rawScore": 0.11232,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CCL8",
+     "geneId": "ENSG00000108700",
+     "geneName": "C-C motif chemokine ligand 8",
+     "assoc": 0.0608,
+     "contribution": 0.060732,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "CCR5",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.0681,
+     "contribution": 0.051588,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0681
+      }
+     ],
+     "hops": 3,
+     "via": "CCR5",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3989977",
+   "name": "Emapalumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Primary hemophagocytic lymphohistiocytosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interferon gamma inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
+   "score": 0.6985,
+   "rawScore": 0.101573,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FOXP3",
+     "geneId": "ENSG00000049768",
+     "geneName": "forkhead box P3",
+     "assoc": 0.0289,
+     "contribution": 0.028357,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0289
+      }
+     ],
+     "hops": 3,
+     "via": "IFNG",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.024148,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.021319,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "IFNG",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201589",
+   "name": "Omalizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "asthma",
+    "Airway obstruction",
+    "rhinitis",
+    "urticaria"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Ig epsilon chain C region inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
+   "score": 0.402,
+   "rawScore": 0.059273,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IGHE",
+     "geneId": "ENSG00000211891",
+     "geneName": "immunoglobulin heavy constant epsilon",
+     "assoc": 0.0593,
+     "contribution": 0.059273,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0593
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201833",
+   "name": "Golimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "juvenile arthritis due to defect in LACC1",
+    "spondylitis",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 10,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 14,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 11,
+   "score": 0.363,
+   "rawScore": 0.053705,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0547,
+     "contribution": 0.025047,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.041,
+     "contribution": 0.018842,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.005045,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 6,
+   "mechanisms": [
+    "Interleukin-1 beta inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.3145,
+   "rawScore": 0.046787,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.016271,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.008386,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.007923,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 9,
+   "mechanisms": [
+    "Interleukin-1 beta inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.3145,
+   "rawScore": 0.046787,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.016271,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.008386,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.007923,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2103839",
+   "name": "Ridaforolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Serine/threonine-protein kinase mTOR inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.3095,
+   "rawScore": 0.046073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.0608,
+     "contribution": 0.046073,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201571",
+   "name": "Alefacept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Pain",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "T-cell surface antigen CD2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2887,
+   "rawScore": 0.043103,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD8A",
+     "geneId": "ENSG00000153563",
+     "geneName": "CD8 subunit alpha",
+     "assoc": 0.0289,
+     "contribution": 0.021841,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0289
+      }
+     ],
+     "hops": 3,
+     "via": "CD2",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "GZMA",
+     "geneId": "ENSG00000145649",
+     "geneName": "granzyme A",
+     "assoc": 0.0304,
+     "contribution": 0.021262,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "CD2",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201823",
+   "name": "Abatacept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "juvenile idiopathic arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "T-lymphocyte activation antigen CD80 inhibitor",
+    "T-lymphocyte activation antigen CD86 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.263,
+   "rawScore": 0.039443,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.015432,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD80",
+     "viaScore": 0.972
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00601,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD80",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00601,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD86",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1742990",
+   "name": "Belatacept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "kidney transplant",
+    "immune system disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "T-lymphocyte activation antigen CD80 inhibitor",
+    "T-lymphocyte activation antigen CD86 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 17,
+   "score": 0.263,
+   "rawScore": 0.039443,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.015432,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD80",
+     "viaScore": 0.972
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00601,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD80",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00601,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD86",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594575",
+   "name": "Sabatolimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Hepatitis A virus cellular receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.2422,
+   "rawScore": 0.036476,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.036476,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL163",
+   "name": "Ritonavir",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "hepatitis C virus infection",
+    "chronic hepatitis C virus infection",
+    "viral infectious disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor",
+    "Human immunodeficiency virus type 1 protease inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.2272,
+   "rawScore": 0.034332,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CYP3A4",
+     "geneId": "ENSG00000160868",
+     "geneName": "cytochrome P450 family 3 subfamily A member 4",
+     "assoc": 0.0182,
+     "contribution": 0.007939,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CYP3A5",
+     "geneId": "ENSG00000106258",
+     "geneName": "cytochrome P450 family 3 subfamily A member 5",
+     "assoc": 0.0182,
+     "contribution": 0.007939,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GSTA1",
+     "geneId": "ENSG00000243955",
+     "geneName": "glutathione S-transferase alpha 1",
+     "assoc": 0.0182,
+     "contribution": 0.007589,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095208",
+   "name": "Cobicistat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "infection",
+    "HIV infectious disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.2272,
+   "rawScore": 0.034332,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CYP3A4",
+     "geneId": "ENSG00000160868",
+     "geneName": "cytochrome P450 family 3 subfamily A member 4",
+     "assoc": 0.0182,
+     "contribution": 0.007939,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CYP3A5",
+     "geneId": "ENSG00000106258",
+     "geneName": "cytochrome P450 family 3 subfamily A member 5",
+     "assoc": 0.0182,
+     "contribution": 0.007939,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GSTA1",
+     "geneId": "ENSG00000243955",
+     "geneName": "glutathione S-transferase alpha 1",
+     "assoc": 0.0182,
+     "contribution": 0.007589,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.956
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 partial agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.2195,
+   "rawScore": 0.033243,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.0681,
+     "contribution": 0.033243,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0681
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.2195,
+   "rawScore": 0.033243,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.0681,
+     "contribution": 0.033243,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0681
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL518924",
+   "name": "Mavorixafor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "inborn error of immunity"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.2195,
+   "rawScore": 0.033243,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.0681,
+     "contribution": 0.033243,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0681
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL75880",
+   "name": "Perhexiline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "angina pectoris",
+    "cardiovascular disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Carnitine O-palmitoyltransferase 1, muscle isoform inhibitor",
+    "Carnitine palmitoyltransferase 2 inhibitor",
+    "Serine/threonine-protein kinase mTOR inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.1946,
+   "rawScore": 0.029689,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.0608,
+     "contribution": 0.029689,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2325741",
+   "name": "Capivasertib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast neoplasm",
+    "breast cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Serine/threonine-protein kinase AKT inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.1944,
+   "rawScore": 0.029659,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.0608,
+     "contribution": 0.029659,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "AKT1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Cytotoxic T-lymphocyte protein 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.1889,
+   "rawScore": 0.028873,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.013822,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.007923,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "BTLA",
+     "geneId": "ENSG00000186265",
+     "geneName": "B and T lymphocyte associated",
+     "assoc": 0.0182,
+     "contribution": 0.007129,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.898
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Cytotoxic T-lymphocyte protein 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1889,
+   "rawScore": 0.028873,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.013822,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.007923,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "BTLA",
+     "geneId": "ENSG00000186265",
+     "geneName": "B and T lymphocyte associated",
+     "assoc": 0.0182,
+     "contribution": 0.007129,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.898
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301587",
+   "name": "Durvalumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "hepatocellular carcinoma",
+    "small cell lung carcinoma",
+    "neoplasm",
+    "urothelial carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 5,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297729",
+   "name": "Cosibelimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck squamous cell carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297828",
+   "name": "Adebrelimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3833373",
+   "name": "Avelumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neuroendocrine neoplasm",
+    "Merkel cell skin cancer",
+    "neoplasm",
+    "urothelial carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 other"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594535",
+   "name": "Sugemalimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707227",
+   "name": "Atezolizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "lung cancer",
+    "non-small cell lung carcinoma",
+    "transitional cell carcinoma",
+    "breast cancer"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.1863,
+   "rawScore": 0.028497,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HAVCR2",
+     "geneId": "ENSG00000135077",
+     "geneName": "hepatitis A virus cellular receptor 2",
+     "assoc": 0.0365,
+     "contribution": 0.013473,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0182,
+     "contribution": 0.00511,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICOS",
+     "geneId": "ENSG00000163600",
+     "geneName": "inducible T cell costimulator",
+     "assoc": 0.0182,
+     "contribution": 0.00509,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Janus Kinase (JAK) inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.1486,
+   "rawScore": 0.023116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.00487,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.002932,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.002753,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Janus Kinase (JAK) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 35,
+   "score": 0.1486,
+   "rawScore": 0.023116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.00487,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.002932,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.002753,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1789941",
+   "name": "Ruxolitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acquired polycythemia vera",
+    "essential thrombocythemia",
+    "myelofibrosis",
+    "chronic graft versus host disease"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 8,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor",
+    "Tyrosine-protein kinase JAK1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
+   "score": 0.1486,
+   "rawScore": 0.023116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.00487,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.002932,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.002753,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1486,
+   "rawScore": 0.023116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.00487,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.002932,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.002753,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 38,
+   "score": 0.1486,
+   "rawScore": 0.023116,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.041,
+     "contribution": 0.00487,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.041
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL4",
+     "geneId": "ENSG00000113520",
+     "geneName": "interleukin 4",
+     "assoc": 0.0182,
+     "contribution": 0.002932,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0241,
+     "contribution": 0.002753,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0241
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "atopic eczema",
+    "Eczematoid dermatitis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.1441,
+   "rawScore": 0.022477,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.0608,
+     "contribution": 0.022477,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201182",
+   "name": "Temsirolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "mantle cell lymphoma",
+    "renal cell carcinoma"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.1441,
+   "rawScore": 0.022477,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.0608,
+     "contribution": 0.022477,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.999
+    }
+   ]
+  }
+ ],
+ "knownRanked": []
+}

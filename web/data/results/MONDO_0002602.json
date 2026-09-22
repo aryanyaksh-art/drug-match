@@ -249,16 +249,15 @@
    ]
   },
   {
-   "id": "CHEMBL254219",
-   "name": "Digitoxin",
+   "id": "CHEMBL3545057",
+   "name": "Acetyldigitoxin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "heart failure",
-    "Arrhythmia"
+    "congestive heart failure",
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium/potassium-transporting ATPase inhibitor"
    ],
@@ -493,15 +492,16 @@
    ]
   },
   {
-   "id": "CHEMBL3545057",
-   "name": "Acetyldigitoxin",
+   "id": "CHEMBL1614",
+   "name": "Deslanoside",
    "drugType": "Small molecule",
    "approvedFor": [
-    "congestive heart failure",
-    "cardiovascular disorder"
+    "cardiovascular disorder",
+    "Arrhythmia",
+    "heart failure"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Sodium/potassium-transporting ATPase inhibitor"
    ],
@@ -739,13 +739,13 @@
    ]
   },
   {
-   "id": "CHEMBL1614",
-   "name": "Deslanoside",
+   "id": "CHEMBL254219",
+   "name": "Digitoxin",
    "drugType": "Small molecule",
    "approvedFor": [
     "cardiovascular disorder",
-    "Arrhythmia",
-    "heart failure"
+    "heart failure",
+    "Arrhythmia"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
@@ -946,6 +946,130 @@
    ]
   },
   {
+   "id": "CHEMBL3833321",
+   "name": "Lecanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Cognitive impairment",
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Amyloid-beta A4 protein inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.5009,
+   "rawScore": 1.288959,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APP",
+     "geneId": "ENSG00000142192",
+     "geneName": "amyloid beta precursor protein",
+     "assoc": 1.0,
+     "contribution": 0.574349,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9974
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9541
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9516
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8763
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PRNP",
+     "geneId": "ENSG00000171867",
+     "geneName": "prion protein (Kanno blood group)",
+     "assoc": 1.0,
+     "contribution": 0.434405,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9922
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9689
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9535
+      },
+      {
+       "id": "animal_model",
+       "score": 0.9372
+      },
+      {
+       "id": "affected_pathway",
+       "score": 0.8382
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "PSEN1",
+     "geneId": "ENSG00000080815",
+     "geneName": "presenilin 1",
+     "assoc": 1.0,
+     "contribution": 0.280206,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9863
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9514
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9397
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7716
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297245",
    "name": "Donanemab",
    "drugType": "Antibody",
@@ -962,7 +1086,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 10,
    "score": 0.5009,
    "rawScore": 1.288959,
    "geneCount": 1,
@@ -1077,7 +1201,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.5009,
    "rawScore": 1.288959,
    "geneCount": 1,
@@ -1196,130 +1320,6 @@
     {
      "type": "Black Box Warning",
      "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 11,
-   "score": 0.5009,
-   "rawScore": 1.288959,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APP",
-     "geneId": "ENSG00000142192",
-     "geneName": "amyloid beta precursor protein",
-     "assoc": 1.0,
-     "contribution": 0.574349,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9974
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9541
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9516
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8763
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRNP",
-     "geneId": "ENSG00000171867",
-     "geneName": "prion protein (Kanno blood group)",
-     "assoc": 1.0,
-     "contribution": 0.434405,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9922
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9689
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9535
-      },
-      {
-       "id": "animal_model",
-       "score": 0.9372
-      },
-      {
-       "id": "affected_pathway",
-       "score": 0.8382
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "PSEN1",
-     "geneId": "ENSG00000080815",
-     "geneName": "presenilin 1",
-     "assoc": 1.0,
-     "contribution": 0.280206,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9863
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9514
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9397
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7716
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833321",
-   "name": "Lecanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Cognitive impairment",
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -2377,247 +2377,6 @@
    ]
   },
   {
-   "id": "CHEMBL807",
-   "name": "Memantine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Alzheimer disease",
-    "dementia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.3127,
-   "rawScore": 0.816666,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.199856,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.102853,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.102853,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.3127,
-   "rawScore": 0.816666,
-   "geneCount": 7,
-   "paths": [
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.199856,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.102853,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "GRIN2A",
-     "geneId": "ENSG00000183454",
-     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
-     "assoc": 1.0,
-     "contribution": 0.102853,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9479
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.944
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8567
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8435
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7003
-      }
-     ],
-     "hops": 3,
-     "via": "GRIN3A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL395091",
    "name": "Esketamine",
    "drugType": "Small molecule",
@@ -2634,7 +2393,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 22,
    "score": 0.3127,
    "rawScore": 0.816666,
    "geneCount": 7,
@@ -2766,7 +2525,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 25,
+   "rank": 23,
    "score": 0.3127,
    "rawScore": 0.816666,
    "geneCount": 7,
@@ -2884,6 +2643,247 @@
    "mechanisms": [
     "Matrix protein 2 inhibitor",
     "Glutamate [NMDA] receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.3127,
+   "rawScore": 0.816666,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.199856,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.102853,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.102853,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL807",
+   "name": "Memantine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.3127,
+   "rawScore": 0.816666,
+   "geneCount": 7,
+   "paths": [
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.199856,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.102853,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN2B",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "GRIN2A",
+     "geneId": "ENSG00000183454",
+     "geneName": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "assoc": 1.0,
+     "contribution": 0.102853,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9479
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.944
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8567
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8435
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7003
+      }
+     ],
+     "hops": 3,
+     "via": "GRIN3A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL742",
+   "name": "Ketamine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3050,15 +3050,17 @@
    ]
   },
   {
-   "id": "CHEMBL16",
-   "name": "Phenytoin",
+   "id": "CHEMBL79",
+   "name": "Lidocaine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy",
-    "Seizure"
+    "arthritic joint disease",
+    "inflammation",
+    "Myalgia",
+    "burn"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 21,
    "mechanisms": [
     "Sodium channel alpha subunit blocker",
     "Sodium channel alpha subunit blocker"
@@ -3066,19 +3068,7 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
      "detail": "misuse"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
     }
    ],
    "withdrawn": false,
@@ -3182,11 +3172,11 @@
    ]
   },
   {
-   "id": "CHEMBL315985",
-   "name": "Eslicarbazepine",
+   "id": "CHEMBL569",
+   "name": "Procaine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy"
+    "hemorrhoid"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
@@ -3410,19 +3400,24 @@
    ]
   },
   {
-   "id": "CHEMBL861",
-   "name": "Mephenytoin",
+   "id": "CHEMBL1242",
+   "name": "Phenazopyridine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy"
+    "Pain"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 1,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 31,
    "score": 0.2778,
@@ -3523,22 +3518,24 @@
    ]
   },
   {
-   "id": "CHEMBL58323",
-   "name": "Lacosamide",
+   "id": "CHEMBL315838",
+   "name": "Encainide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "focal epilepsy",
-    "Seizure",
-    "convulsion",
-    "epilepsy"
+    "cardiac arrhythmia"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 32,
    "score": 0.2778,
@@ -3639,18 +3636,28 @@
    ]
   },
   {
-   "id": "CHEMBL1197",
-   "name": "Hexylcaine",
+   "id": "CHEMBL741",
+   "name": "Lamotrigine",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "major depressive disorder",
+    "epilepsy",
+    "focal epilepsy",
+    "bipolar disorder"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 8,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 33,
    "score": 0.2778,
    "rawScore": 0.729266,
@@ -3750,18 +3757,26 @@
    ]
   },
   {
-   "id": "CHEMBL1179047",
-   "name": "Chloroprocaine",
+   "id": "CHEMBL1762",
+   "name": "Tocainide",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "Ventricular arrhythmia",
+    "cardiac arrhythmia"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 34,
    "score": 0.2778,
    "rawScore": 0.729266,
@@ -3861,14 +3876,17 @@
    ]
   },
   {
-   "id": "CHEMBL1087",
-   "name": "Mepivacaine",
+   "id": "CHEMBL750",
+   "name": "Zonisamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "pain agnosia"
+    "focal epilepsy",
+    "Parkinson disease",
+    "epilepsy",
+    "Parkinsonism"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 5,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
@@ -3974,18 +3992,17 @@
    ]
   },
   {
-   "id": "CHEMBL698",
-   "name": "Tetracaine",
+   "id": "CHEMBL1201754",
+   "name": "Rufinamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hemorrhoid",
-    "Pruritus",
-    "Pain"
+    "epilepsy",
+    "Lennox-Gastaut syndrome",
+    "Seizure"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 3,
    "mechanisms": [
-    "Sodium channel alpha subunit blocker",
     "Sodium channel alpha subunit blocker"
    ],
    "warnings": [],
@@ -4090,14 +4107,12 @@
    ]
   },
   {
-   "id": "CHEMBL569",
-   "name": "Procaine",
+   "id": "CHEMBL1201242",
+   "name": "Indecainide",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "hemorrhoid"
-   ],
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 0,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
@@ -4105,6 +4120,254 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 37,
+   "score": 0.2778,
+   "rawScore": 0.729266,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087623,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9839
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9552
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9467
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8942
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 1.0,
+     "contribution": 0.087623,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.974
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9661
+      },
+      {
+       "id": "literature",
+       "score": 0.9391
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9121
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN2A",
+     "geneId": "ENSG00000136531",
+     "geneName": "sodium voltage-gated channel alpha subunit 2",
+     "assoc": 0.9997,
+     "contribution": 0.0876,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9456
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.913
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7969
+      },
+      {
+       "id": "literature",
+       "score": 0.7252
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL108",
+   "name": "Carbamazepine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "bipolar I disorder",
+    "trigeminal neuralgia",
+    "glossopharyngeal nerve disorder",
+    "Seizure"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 38,
+   "score": 0.2778,
+   "rawScore": 0.729266,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087623,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9839
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9552
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9467
+      },
+      {
+       "id": "animal_model",
+       "score": 0.8942
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 1.0,
+     "contribution": 0.087623,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.974
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9661
+      },
+      {
+       "id": "literature",
+       "score": 0.9391
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.9121
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN2A",
+     "geneId": "ENSG00000136531",
+     "geneName": "sodium voltage-gated channel alpha subunit 2",
+     "assoc": 0.9997,
+     "contribution": 0.0876,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9456
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.913
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7969
+      },
+      {
+       "id": "literature",
+       "score": 0.7252
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1294",
+   "name": "Quinidine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiac arrhythmia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
    "score": 0.2778,
    "rawScore": 0.729266,
    "geneCount": 10,
@@ -4217,245 +4480,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
-   "score": 0.2778,
-   "rawScore": 0.729266,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087623,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9839
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9552
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9467
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8942
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 1.0,
-     "contribution": 0.087623,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.974
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9661
-      },
-      {
-       "id": "literature",
-       "score": 0.9391
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9121
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN2A",
-     "geneId": "ENSG00000136531",
-     "geneName": "sodium voltage-gated channel alpha subunit 2",
-     "assoc": 0.9997,
-     "contribution": 0.0876,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9456
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.913
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7969
-      },
-      {
-       "id": "literature",
-       "score": 0.7252
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1195",
-   "name": "Propoxycaine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.2778,
-   "rawScore": 0.729266,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087623,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9839
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9552
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9467
-      },
-      {
-       "id": "animal_model",
-       "score": 0.8942
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 1.0,
-     "contribution": 0.087623,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.974
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9661
-      },
-      {
-       "id": "literature",
-       "score": 0.9391
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.9121
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN2A",
-     "geneId": "ENSG00000136531",
-     "geneName": "sodium voltage-gated channel alpha subunit 2",
-     "assoc": 0.9997,
-     "contribution": 0.0876,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9456
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.913
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7969
-      },
-      {
-       "id": "literature",
-       "score": 0.7252
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201336",
-   "name": "Fosphenytoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "misuse"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 40,
    "score": 0.2778,
    "rawScore": 0.729266,
@@ -4706,8 +4730,8 @@
    ]
   },
   {
-   "id": "CHEMBL90555",
-   "name": "Vincristine",
+   "id": "CHEMBL159",
+   "name": "Vinblastine",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm"
@@ -4717,15 +4741,10 @@
    "mechanisms": [
     "Tubulin inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "misuse"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 212,
+   "blackBox": false,
+   "rank": 208,
    "score": 0.0457,
    "rawScore": 0.146982,
    "geneCount": 15,
@@ -4799,8 +4818,8 @@
    ]
   },
   {
-   "id": "CHEMBL159",
-   "name": "Vinblastine",
+   "id": "CHEMBL90555",
+   "name": "Vincristine",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm"
@@ -4810,10 +4829,15 @@
    "mechanisms": [
     "Tubulin inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 216,
+   "blackBox": true,
+   "rank": 212,
    "score": 0.0457,
    "rawScore": 0.146982,
    "geneCount": 15,
@@ -4910,7 +4934,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 299,
+   "rank": 296,
    "score": 0.0141,
    "rawScore": 0.067585,
    "geneCount": 3,

@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 9,
  "knownDrugCount": 7,
- "candidatesConsidered": 264,
+ "candidatesConsidered": 265,
  "pathsTwoHop": 107,
- "pathsThreeHop": 477,
+ "pathsThreeHop": 490,
  "candidates": [
   {
    "id": "CHEMBL75880",
@@ -266,68 +266,6 @@
    ]
   },
   {
-   "id": "CHEMBL404271",
-   "name": "Acarbose",
-   "drugType": "Oligosaccharide",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "diabetes mellitus"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Maltase-glucoamylase inhibitor",
-    "Pancreatic alpha-amylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
-   "score": 0.3869,
-   "rawScore": 0.627345,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PYGM",
-     "geneId": "ENSG00000068976",
-     "geneName": "glycogen phosphorylase, muscle associated",
-     "assoc": 0.7305,
-     "contribution": 0.45613,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7174
-      },
-      {
-       "id": "literature",
-       "score": 0.0465
-      }
-     ],
-     "hops": 3,
-     "via": "MGAM",
-     "viaScore": 0.969
-    },
-    {
-     "gene": "GAA",
-     "geneId": "ENSG00000171298",
-     "geneName": "alpha glucosidase",
-     "assoc": 0.4377,
-     "contribution": 0.171214,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4377
-      }
-     ],
-     "hops": 3,
-     "via": "MGAM",
-     "viaScore": 0.942
-    }
-   ]
-  },
-  {
    "id": "CHEMBL95889",
    "name": "Betaine",
    "drugType": "Small molecule",
@@ -344,7 +282,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 5,
    "score": 0.3138,
    "rawScore": 0.510983,
    "geneCount": 2,
@@ -382,6 +320,68 @@
      "hops": 3,
      "via": "BHMT2",
      "viaScore": 0.979
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL404271",
+   "name": "Acarbose",
+   "drugType": "Oligosaccharide",
+   "approvedFor": [
+    "type 2 diabetes mellitus",
+    "diabetes mellitus"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Maltase-glucoamylase inhibitor",
+    "Pancreatic alpha-amylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.2914,
+   "rawScore": 0.475438,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "PYGM",
+     "geneId": "ENSG00000068976",
+     "geneName": "glycogen phosphorylase, muscle associated",
+     "assoc": 0.7305,
+     "contribution": 0.345682,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7174
+      },
+      {
+       "id": "literature",
+       "score": 0.0465
+      }
+     ],
+     "hops": 3,
+     "via": "MGAM",
+     "viaScore": 0.969
+    },
+    {
+     "gene": "GAA",
+     "geneId": "ENSG00000171298",
+     "geneName": "alpha glucosidase",
+     "assoc": 0.4377,
+     "contribution": 0.129756,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4377
+      }
+     ],
+     "hops": 3,
+     "via": "MGAM",
+     "viaScore": 0.942
     }
    ]
   },
@@ -466,16 +466,17 @@
    ]
   },
   {
-   "id": "CHEMBL1008",
-   "name": "Bepridil",
+   "id": "CHEMBL1628502",
+   "name": "Gabapentin Enacarbil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "neuralgia",
+    "restless legs syndrome"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Voltage-gated calcium channel blocker"
+    "Voltage-gated calcium channel modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -547,20 +548,24 @@
    ]
   },
   {
-   "id": "CHEMBL1628502",
-   "name": "Gabapentin Enacarbil",
+   "id": "CHEMBL404849",
+   "name": "Suloctidil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neuralgia",
-    "restless legs syndrome"
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Voltage-gated calcium channel modulator"
+    "Voltage-gated calcium channel blocker"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 9,
    "score": 0.2487,
@@ -713,17 +718,19 @@
    ]
   },
   {
-   "id": "CHEMBL473159",
-   "name": "Phloroglucinol",
+   "id": "CHEMBL1059",
+   "name": "Pregabalin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "urinary system disorder",
-    "gastrointestinal disease"
+    "Seizure",
+    "spinal cord injury",
+    "chronic obstructive pulmonary disease",
+    "neuropathic pain"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 9,
    "mechanisms": [
-    "Voltage-gated calcium channel blocker"
+    "Voltage-gated calcium channel modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -795,19 +802,16 @@
    ]
   },
   {
-   "id": "CHEMBL1059",
-   "name": "Pregabalin",
+   "id": "CHEMBL1008",
+   "name": "Bepridil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Seizure",
-    "spinal cord injury",
-    "chronic obstructive pulmonary disease",
-    "neuropathic pain"
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 9,
+   "indicationCount": 1,
    "mechanisms": [
-    "Voltage-gated calcium channel modulator"
+    "Voltage-gated calcium channel blocker"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -879,24 +883,20 @@
    ]
   },
   {
-   "id": "CHEMBL404849",
-   "name": "Suloctidil",
+   "id": "CHEMBL473159",
+   "name": "Phloroglucinol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "urinary system disorder",
+    "gastrointestinal disease"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Voltage-gated calcium channel blocker"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 13,
    "score": 0.2487,
@@ -1190,26 +1190,20 @@
    ]
   },
   {
-   "id": "CHEMBL4297517",
-   "name": "Mavacamten",
+   "id": "CHEMBL1800955",
+   "name": "Omecamtiv Mecarbil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertrophic cardiomyopathy",
     "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Cardiac myosin inhibitor"
+    "Cardiac myosin activator"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 17,
    "score": 0.2107,
    "rawScore": 0.346985,
@@ -1281,20 +1275,26 @@
    ]
   },
   {
-   "id": "CHEMBL1800955",
-   "name": "Omecamtiv Mecarbil",
+   "id": "CHEMBL4297517",
+   "name": "Mavacamten",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hypertrophic cardiomyopathy",
     "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Cardiac myosin activator"
+    "Cardiac myosin inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 18,
    "score": 0.2107,
    "rawScore": 0.346985,
@@ -1439,18 +1439,18 @@
    ]
   },
   {
-   "id": "CHEMBL672",
-   "name": "Fenofibrate",
+   "id": "CHEMBL981",
+   "name": "Fenofibric Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus",
-    "inherited lipid metabolism disorder",
     "type 2 diabetes mellitus",
-    "familial hyperlipidemia"
+    "Hypercholesterolemia",
+    "cardiovascular disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 9,
+   "indicationCount": 3,
    "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
    "warnings": [],
@@ -1531,16 +1531,17 @@
    ]
   },
   {
-   "id": "CHEMBL247951",
-   "name": "Pemafibrate",
+   "id": "CHEMBL672",
+   "name": "Fenofibrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "familial hyperlipidemia",
-    "cardiovascular disorder",
-    "hyperlipidemia"
+    "diabetes mellitus",
+    "inherited lipid metabolism disorder",
+    "type 2 diabetes mellitus",
+    "familial hyperlipidemia"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 9,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
@@ -1548,96 +1549,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 22,
-   "score": 0.2008,
-   "rawScore": 0.331189,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LPIN1",
-     "geneId": "ENSG00000134324",
-     "geneName": "lipin 1",
-     "assoc": 0.8189,
-     "contribution": 0.331189,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7478
-      },
-      {
-       "id": "literature",
-       "score": 0.2819
-      }
-     ],
-     "hops": 3,
-     "via": "PPARA",
-     "viaScore": 0.974
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL981",
-   "name": "Fenofibric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "type 2 diabetes mellitus",
-    "Hypercholesterolemia",
-    "cardiovascular disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist",
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.2008,
-   "rawScore": 0.331189,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LPIN1",
-     "geneId": "ENSG00000134324",
-     "geneName": "lipin 1",
-     "assoc": 0.8189,
-     "contribution": 0.331189,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7478
-      },
-      {
-       "id": "literature",
-       "score": 0.2819
-      }
-     ],
-     "hops": 3,
-     "via": "PPARA",
-     "viaScore": 0.974
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL557555",
-   "name": "Ciprofibrate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hyperlipoproteinemia",
-    "cardiovascular disorder"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
    "score": 0.2008,
    "rawScore": 0.331189,
    "geneCount": 1,
@@ -1702,6 +1613,95 @@
    ],
    "withdrawn": true,
    "blackBox": false,
+   "rank": 23,
+   "score": 0.2008,
+   "rawScore": 0.331189,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LPIN1",
+     "geneId": "ENSG00000134324",
+     "geneName": "lipin 1",
+     "assoc": 0.8189,
+     "contribution": 0.331189,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7478
+      },
+      {
+       "id": "literature",
+       "score": 0.2819
+      }
+     ],
+     "hops": 3,
+     "via": "PPARA",
+     "viaScore": 0.974
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL247951",
+   "name": "Pemafibrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "familial hyperlipidemia",
+    "cardiovascular disorder",
+    "hyperlipidemia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.2008,
+   "rawScore": 0.331189,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LPIN1",
+     "geneId": "ENSG00000134324",
+     "geneName": "lipin 1",
+     "assoc": 0.8189,
+     "contribution": 0.331189,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7478
+      },
+      {
+       "id": "literature",
+       "score": 0.2819
+      }
+     ],
+     "hops": 3,
+     "via": "PPARA",
+     "viaScore": 0.974
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL557555",
+   "name": "Ciprofibrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hyperlipoproteinemia",
+    "cardiovascular disorder"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
    "score": 0.2008,
    "rawScore": 0.331189,
@@ -1731,8 +1731,8 @@
    ]
   },
   {
-   "id": "CHEMBL2108278",
-   "name": "Eteplirsen",
+   "id": "CHEMBL4297762",
+   "name": "Golodirsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
     "Duchenne muscular dystrophy",
@@ -1775,55 +1775,12 @@
    ]
   },
   {
-   "id": "CHEMBL4650241",
-   "name": "Delandistrogene Moxeparvovec",
-   "drugType": "Gene",
-   "approvedFor": [
-    "Becker muscular dystrophy"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Dystrophin exogenous gene"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.1884,
-   "rawScore": 0.311591,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "DMD",
-     "geneId": "ENSG00000198947",
-     "geneName": "dystrophin",
-     "assoc": 0.5932,
-     "contribution": 0.311591,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5593
-      },
-      {
-       "id": "literature",
-       "score": 0.0768
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297762",
-   "name": "Golodirsen",
+   "id": "CHEMBL4297566",
+   "name": "Casimersen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "Duchenne muscular dystrophy",
-    "muscular dystrophy"
+    "muscular dystrophy",
+    "Duchenne muscular dystrophy"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
@@ -1833,7 +1790,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 27,
    "score": 0.1884,
    "rawScore": 0.311591,
    "geneCount": 1,
@@ -1877,6 +1834,49 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 28,
+   "score": 0.1884,
+   "rawScore": 0.311591,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "DMD",
+     "geneId": "ENSG00000198947",
+     "geneName": "dystrophin",
+     "assoc": 0.5932,
+     "contribution": 0.311591,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5593
+      },
+      {
+       "id": "literature",
+       "score": 0.0768
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650241",
+   "name": "Delandistrogene Moxeparvovec",
+   "drugType": "Gene",
+   "approvedFor": [
+    "Becker muscular dystrophy"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Dystrophin exogenous gene"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 29,
    "score": 0.1884,
    "rawScore": 0.311591,
@@ -1906,12 +1906,12 @@
    ]
   },
   {
-   "id": "CHEMBL4297566",
-   "name": "Casimersen",
+   "id": "CHEMBL2108278",
+   "name": "Eteplirsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "muscular dystrophy",
-    "Duchenne muscular dystrophy"
+    "Duchenne muscular dystrophy",
+    "muscular dystrophy"
    ],
    "possiblyAlreadyApproved": null,
    "indicationCount": 2,
@@ -2051,44 +2051,22 @@
    ]
   },
   {
-   "id": "CHEMBL1908360",
-   "name": "Everolimus",
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "pancreatic neoplasm",
-    "kidney angiomyolipoma",
-    "astrocytoma (excluding glioblastoma)",
-    "tuberous sclerosis"
+    "atopic eczema",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 13,
+   "indicationCount": 2,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "nephrotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
      "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
@@ -2122,12 +2100,16 @@
    ]
   },
   {
-   "id": "CHEMBL219410",
-   "name": "Zotarolimus",
+   "id": "CHEMBL1201182",
+   "name": "Temsirolimus",
    "drugType": "Small molecule",
-   "approvedFor": [],
+   "approvedFor": [
+    "neoplasm",
+    "mantle cell lymphoma",
+    "renal cell carcinoma"
+   ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
+   "indicationCount": 3,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
@@ -2283,22 +2265,48 @@
    ]
   },
   {
-   "id": "CHEMBL1201182",
-   "name": "Temsirolimus",
+   "id": "CHEMBL1908360",
+   "name": "Everolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "mantle cell lymphoma",
-    "renal cell carcinoma"
+    "pancreatic neoplasm",
+    "kidney angiomyolipoma",
+    "astrocytoma (excluding glioblastoma)",
+    "tuberous sclerosis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 13,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 37,
    "score": 0.1529,
    "rawScore": 0.255046,
@@ -2328,26 +2336,18 @@
    ]
   },
   {
-   "id": "CHEMBL1200686",
-   "name": "Pimecrolimus",
+   "id": "CHEMBL219410",
+   "name": "Zotarolimus",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "atopic eczema",
-    "Eczematoid dermatitis"
-   ],
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 0,
    "mechanisms": [
     "FK506-binding protein 1A inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 38,
    "score": 0.1529,
    "rawScore": 0.255046,
@@ -2422,14 +2422,15 @@
    ]
   },
   {
-   "id": "CHEMBL1275868",
-   "name": "Azelnidipine",
+   "id": "CHEMBL1484",
+   "name": "Nicardipine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension"
+    "cardiovascular disorder",
+    "hypertensive disorder"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Voltage-gated L-type calcium channel blocker"
    ],
@@ -2507,15 +2508,14 @@
    ]
   },
   {
-   "id": "CHEMBL452076",
-   "name": "Cilnidipine",
+   "id": "CHEMBL1275868",
+   "name": "Azelnidipine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "cardiovascular disorder"
+    "Hypertension"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Voltage-gated L-type calcium channel blocker"
    ],

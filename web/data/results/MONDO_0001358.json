@@ -7,9 +7,9 @@
  "genesScored": 48,
  "genesWithDrugs": 37,
  "knownDrugCount": 12,
- "candidatesConsidered": 469,
+ "candidatesConsidered": 470,
  "pathsTwoHop": 537,
- "pathsThreeHop": 906,
+ "pathsThreeHop": 977,
  "candidates": [
   {
    "id": "CHEMBL585",
@@ -665,26 +665,23 @@
    ]
   },
   {
-   "id": "CHEMBL2107884",
-   "name": "Reslizumab",
+   "id": "CHEMBL2108429",
+   "name": "Mepolizumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "hypereosinophilic syndrome",
+    "chronic rhinosinusitis",
     "Airway obstruction",
     "asthma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 8,
    "score": 0.3986,
    "rawScore": 1.312849,
@@ -859,23 +856,26 @@
    ]
   },
   {
-   "id": "CHEMBL2108429",
-   "name": "Mepolizumab",
+   "id": "CHEMBL2107884",
+   "name": "Reslizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "hypereosinophilic syndrome",
-    "chronic rhinosinusitis",
     "Airway obstruction",
     "asthma"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.3986,
    "rawScore": 1.312849,
@@ -1506,8 +1506,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 19,
-   "score": 0.2252,
-   "rawScore": 0.743203,
+   "score": 0.2337,
+   "rawScore": 0.771085,
    "geneCount": 10,
    "paths": [
     {
@@ -1679,126 +1679,23 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 21,
-   "score": 0.223,
-   "rawScore": 0.735913,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "IL4R",
-     "geneId": "ENSG00000077238",
-     "geneName": "interleukin 4 receptor",
-     "assoc": 0.9893,
-     "contribution": 0.157468,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9378
-      },
-      {
-       "id": "literature",
-       "score": 0.6574
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4999
-      }
-     ],
-     "hops": 3,
-     "via": "JAK3",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "IL7R",
-     "geneId": "ENSG00000168685",
-     "geneName": "interleukin 7 receptor",
-     "assoc": 0.9743,
-     "contribution": 0.155077,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9599
-      },
-      {
-       "id": "literature",
-       "score": 0.3592
-      }
-     ],
-     "hops": 3,
-     "via": "JAK3",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.9957,
-     "contribution": 0.142393,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9695
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8579
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 22,
    "score": 0.223,
    "rawScore": 0.735913,
    "geneCount": 4,
@@ -1900,7 +1797,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 23,
+   "rank": 22,
    "score": 0.223,
    "rawScore": 0.735913,
    "geneCount": 4,
@@ -2003,6 +1900,97 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 23,
+   "score": 0.223,
+   "rawScore": 0.735913,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "IL4R",
+     "geneId": "ENSG00000077238",
+     "geneName": "interleukin 4 receptor",
+     "assoc": 0.9893,
+     "contribution": 0.157468,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9378
+      },
+      {
+       "id": "literature",
+       "score": 0.6574
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4999
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL7R",
+     "geneId": "ENSG00000168685",
+     "geneName": "interleukin 7 receptor",
+     "assoc": 0.9743,
+     "contribution": 0.155077,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9599
+      },
+      {
+       "id": "literature",
+       "score": 0.3592
+      }
+     ],
+     "hops": 3,
+     "via": "JAK3",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.9957,
+     "contribution": 0.142393,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9695
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8579
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 24,
    "score": 0.223,
    "rawScore": 0.735913,
@@ -2078,22 +2066,34 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 25,
    "score": 0.223,
    "rawScore": 0.735913,
@@ -2169,6 +2169,175 @@
    ]
   },
   {
+   "id": "CHEMBL113",
+   "name": "Caffeine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "orthostatic hypotension",
+    "Headache",
+    "attention deficit-hyperactivity disorder",
+    "Pain"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 7,
+   "mechanisms": [
+    "Adenosine receptor antagonist",
+    "Adenosine receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2119,
+   "rawScore": 0.699638,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "ADORA1",
+     "geneId": "ENSG00000163485",
+     "geneName": "adenosine A1 receptor",
+     "assoc": 0.8208,
+     "contribution": 0.27077,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.785
+      },
+      {
+       "id": "literature",
+       "score": 0.1666
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADORA1",
+     "geneId": "ENSG00000163485",
+     "geneName": "adenosine A1 receptor",
+     "assoc": 0.8208,
+     "contribution": 0.177556,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.785
+      },
+      {
+       "id": "literature",
+       "score": 0.1666
+      }
+     ],
+     "hops": 3,
+     "via": "ADORA3",
+     "viaScore": 0.907
+    },
+    {
+     "gene": "ADORA2A",
+     "geneId": "ENSG00000128271",
+     "geneName": "adenosine A2a receptor",
+     "assoc": 0.2658,
+     "contribution": 0.070099,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2658
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL477",
+   "name": "Adenosine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "paroxysmal tachycardia",
+    "Wolff-Parkinson-White syndrome",
+    "Paroxysmal supraventricular tachycardia"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 4,
+   "mechanisms": [
+    "Adenosine receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.2119,
+   "rawScore": 0.699638,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "ADORA1",
+     "geneId": "ENSG00000163485",
+     "geneName": "adenosine A1 receptor",
+     "assoc": 0.8208,
+     "contribution": 0.27077,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.785
+      },
+      {
+       "id": "literature",
+       "score": 0.1666
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADORA1",
+     "geneId": "ENSG00000163485",
+     "geneName": "adenosine A1 receptor",
+     "assoc": 0.8208,
+     "contribution": 0.177556,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.785
+      },
+      {
+       "id": "literature",
+       "score": 0.1666
+      }
+     ],
+     "hops": 3,
+     "via": "ADORA3",
+     "viaScore": 0.907
+    },
+    {
+     "gene": "ADORA2A",
+     "geneId": "ENSG00000128271",
+     "geneName": "adenosine A2a receptor",
+     "assoc": 0.2658,
+     "contribution": 0.070099,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2658
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3833307",
    "name": "Satralizumab",
    "drugType": "Antibody",
@@ -2184,7 +2353,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 28,
    "score": 0.2065,
    "rawScore": 0.681622,
    "geneCount": 2,
@@ -2234,187 +2403,27 @@
    ]
   },
   {
-   "id": "CHEMBL477",
-   "name": "Adenosine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "paroxysmal tachycardia",
-    "Wolff-Parkinson-White syndrome",
-    "Paroxysmal supraventricular tachycardia"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
-   "mechanisms": [
-    "Adenosine receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.1997,
-   "rawScore": 0.659413,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "ADORA1",
-     "geneId": "ENSG00000163485",
-     "geneName": "adenosine A1 receptor",
-     "assoc": 0.8208,
-     "contribution": 0.27077,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.785
-      },
-      {
-       "id": "literature",
-       "score": 0.1666
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADORA1",
-     "geneId": "ENSG00000163485",
-     "geneName": "adenosine A1 receptor",
-     "assoc": 0.8208,
-     "contribution": 0.177556,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.785
-      },
-      {
-       "id": "literature",
-       "score": 0.1666
-      }
-     ],
-     "hops": 3,
-     "via": "ADORA3",
-     "viaScore": 0.907
-    },
-    {
-     "gene": "ADORA2A",
-     "geneId": "ENSG00000128271",
-     "geneName": "adenosine A2a receptor",
-     "assoc": 0.2658,
-     "contribution": 0.070099,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2658
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL113",
-   "name": "Caffeine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "orthostatic hypotension",
-    "Headache",
-    "attention deficit-hyperactivity disorder",
-    "Pain"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 7,
-   "mechanisms": [
-    "Adenosine receptor antagonist",
-    "Adenosine receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.1997,
-   "rawScore": 0.659413,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "ADORA1",
-     "geneId": "ENSG00000163485",
-     "geneName": "adenosine A1 receptor",
-     "assoc": 0.8208,
-     "contribution": 0.27077,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.785
-      },
-      {
-       "id": "literature",
-       "score": 0.1666
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADORA1",
-     "geneId": "ENSG00000163485",
-     "geneName": "adenosine A1 receptor",
-     "assoc": 0.8208,
-     "contribution": 0.177556,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.785
-      },
-      {
-       "id": "literature",
-       "score": 0.1666
-      }
-     ],
-     "hops": 3,
-     "via": "ADORA3",
-     "viaScore": 0.907
-    },
-    {
-     "gene": "ADORA2A",
-     "geneId": "ENSG00000128271",
-     "geneName": "adenosine A2a receptor",
-     "assoc": 0.2658,
-     "contribution": 0.070099,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2658
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL6068330",
-   "name": "Nogapendekin Alfa Inbakicept",
+   "id": "CHEMBL1201438",
+   "name": "Aldesleukin",
    "drugType": "Protein",
-   "approvedFor": [],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 0,
-   "mechanisms": [
-    "Interleukin-15 receptor agonist"
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma",
+    "metastatic melanoma"
    ],
-   "warnings": [],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-2 receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 29,
    "score": 0.1736,
    "rawScore": 0.573787,
@@ -2585,31 +2594,17 @@
    ]
   },
   {
-   "id": "CHEMBL1201605",
-   "name": "Daclizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "multiple sclerosis",
-    "relapsing-remitting multiple sclerosis",
-    "immune system disorder",
-    "kidney transplant"
-   ],
+   "id": "CHEMBL6068330",
+   "name": "Nogapendekin Alfa Inbakicept",
+   "drugType": "Protein",
+   "approvedFor": [],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 4,
+   "indicationCount": 0,
    "mechanisms": [
-    "Interleukin-2 receptor inhibitor"
+    "Interleukin-15 receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "immune system toxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 31,
    "score": 0.1736,
@@ -2686,27 +2681,32 @@
    ]
   },
   {
-   "id": "CHEMBL1201438",
-   "name": "Aldesleukin",
-   "drugType": "Protein",
+   "id": "CHEMBL1201605",
+   "name": "Daclizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma",
-    "metastatic melanoma"
+    "multiple sclerosis",
+    "relapsing-remitting multiple sclerosis",
+    "immune system disorder",
+    "kidney transplant"
    ],
    "possiblyAlreadyApproved": null,
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-2 receptor agonist"
+    "Interleukin-2 receptor inhibitor"
    ],
    "warnings": [
     {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "immune system toxicity"
     }
    ],
-   "withdrawn": false,
-   "blackBox": true,
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 32,
    "score": 0.1736,
    "rawScore": 0.573787,
@@ -3037,6 +3037,58 @@
    ]
   },
   {
+   "id": "CHEMBL3544914",
+   "name": "Tezacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lung injury",
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1475,
+   "rawScore": 0.488009,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.9993,
+     "contribution": 0.488009,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8903
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8706
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6243
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL5314934",
    "name": "Vanzacaftor",
    "drugType": "Small molecule",
@@ -3051,7 +3103,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 37,
    "score": 0.1475,
    "rawScore": 0.488009,
    "geneCount": 1,
@@ -3105,110 +3157,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
-   "score": 0.1475,
-   "rawScore": 0.488009,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.9993,
-     "contribution": 0.488009,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8903
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8706
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6243
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298128",
-   "name": "Elexacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 38,
-   "score": 0.1475,
-   "rawScore": 0.488009,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.9993,
-     "contribution": 0.488009,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8903
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.8706
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8655
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6243
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544914",
-   "name": "Tezacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lung injury",
-    "cystic fibrosis"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
    "score": 0.1475,
    "rawScore": 0.488009,
    "geneCount": 1,
@@ -3256,6 +3205,57 @@
    "indicationCount": 2,
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.1475,
+   "rawScore": 0.488009,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.9993,
+     "contribution": 0.488009,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8903
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.8706
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8655
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6243
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298128",
+   "name": "Elexacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cystic fibrosis"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3321,7 +3321,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 140,
+   "rank": 161,
    "score": 0.0617,
    "rawScore": 0.206013,
    "geneCount": 1,
@@ -3400,7 +3400,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 147,
+   "rank": 165,
    "score": 0.0617,
    "rawScore": 0.206013,
    "geneCount": 1,
@@ -3459,6 +3459,83 @@
    ]
   },
   {
+   "id": "CHEMBL1621597",
+   "name": "Ipratropium",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Airway obstruction"
+   ],
+   "possiblyAlreadyApproved": null,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Muscarinic acetylcholine receptor M3 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 272,
+   "score": 0.0491,
+   "rawScore": 0.164694,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CHRM3",
+     "geneId": "ENSG00000133019",
+     "geneName": "cholinergic receptor muscarinic 3",
+     "assoc": 0.4425,
+     "contribution": 0.105528,
+     "drugsOnGene": 36,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3187
+      },
+      {
+       "id": "literature",
+       "score": 0.1816
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CHRM1",
+     "geneId": "ENSG00000168539",
+     "geneName": "cholinergic receptor muscarinic 1",
+     "assoc": 0.1738,
+     "contribution": 0.037727,
+     "drugsOnGene": 36,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1738
+      }
+     ],
+     "hops": 3,
+     "via": "CHRM3",
+     "viaScore": 0.91
+    },
+    {
+     "gene": "CHRM5",
+     "geneId": "ENSG00000184984",
+     "geneName": "cholinergic receptor muscarinic 5",
+     "assoc": 0.1271,
+     "contribution": 0.021439,
+     "drugsOnGene": 36,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.1271
+      }
+     ],
+     "hops": 3,
+     "via": "CHRM3",
+     "viaScore": 0.933
+    }
+   ]
+  },
+  {
    "id": "CHEMBL79",
    "name": "Lidocaine",
    "drugType": "Small molecule",
@@ -3482,7 +3559,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 272,
+   "rank": 282,
    "score": 0.0439,
    "rawScore": 0.147583,
    "geneCount": 10,
@@ -3561,66 +3638,6 @@
      "hops": 3,
      "via": "SCN4A",
      "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1621597",
-   "name": "Ipratropium",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Airway obstruction"
-   ],
-   "possiblyAlreadyApproved": null,
-   "indicationCount": 1,
-   "mechanisms": [
-    "Muscarinic acetylcholine receptor M3 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 328,
-   "score": 0.0376,
-   "rawScore": 0.126967,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CHRM3",
-     "geneId": "ENSG00000133019",
-     "geneName": "cholinergic receptor muscarinic 3",
-     "assoc": 0.4425,
-     "contribution": 0.105528,
-     "drugsOnGene": 36,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3187
-      },
-      {
-       "id": "literature",
-       "score": 0.1816
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CHRM5",
-     "geneId": "ENSG00000184984",
-     "geneName": "cholinergic receptor muscarinic 5",
-     "assoc": 0.1271,
-     "contribution": 0.021439,
-     "drugsOnGene": 36,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.1271
-      }
-     ],
-     "hops": 3,
-     "via": "CHRM3",
-     "viaScore": 0.933
     }
    ]
   }
