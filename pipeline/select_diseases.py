@@ -21,7 +21,11 @@ Ordering is by ontology id purely for reproducibility.
 
 Run this only when you want to regenerate the list:
 
-    python pipeline/select_diseases.py > pipeline/generated_diseases.py
+    python pipeline/select_diseases.py
+
+It writes pipeline/generated_diseases.py itself, as UTF-8. Redirecting stdout
+instead would re-encode through the console codepage, which on Windows turns
+names like Chediak-Higashi into invalid bytes.
 """
 import json
 import os
@@ -119,19 +123,27 @@ def main():
     print("screened %d, %d passed the rule, keeping %d"
           % (len(stats), passed, len(kept)), file=sys.stderr)
 
-    print('"""Diseases selected programmatically by pipeline/select_diseases.py.')
-    print()
-    print("Rule: at least %d associated genes and at least %d known drug."
-          % (MIN_TARGETS, MIN_KNOWN_DRUGS))
-    print("Every disease meeting it is included. Not hand-picked, not capped.")
-    print('"""')
-    print()
-    print("GENERATED = [")
-    for efo, s in kept:
-        name = s["name"].replace('"', "'")
-        print('    ("%s", "%s"),  # %d genes, %d known drugs'
-              % (efo, name, s["targets"], s["drugs"]))
-    print("]")
+    lines = [
+        '"""Diseases selected programmatically by pipeline/select_diseases.py.',
+        "",
+        "Rule: at least %d associated genes and at least %d known drug."
+        % (MIN_TARGETS, MIN_KNOWN_DRUGS),
+        "Every disease meeting it is included. Not hand-picked, not capped.",
+        '"""',
+        "",
+        "GENERATED = [",
+    ]
+    for efo, stat in kept:
+        name = stat["name"].replace('"', "'")
+        lines.append('    ("%s", "%s"),  # %d genes, %d known drugs'
+                     % (efo, name, stat["targets"], stat["drugs"]))
+    lines.append("]")
+
+    out_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                            "generated_diseases.py")
+    with open(out_path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write("\n".join(lines) + "\n")
+    print("wrote %s" % out_path, file=sys.stderr)
 
 
 if __name__ == "__main__":
