@@ -12,21 +12,33 @@
  "pathsThreeHop": 442,
  "candidates": [
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 7,
    "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 1,
    "score": 1.0,
    "rawScore": 2.189102,
@@ -200,139 +212,22 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 3,
-   "score": 1.0,
-   "rawScore": 2.189102,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.9724,
-     "contribution": 0.222336,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8404
-      },
-      {
-       "id": "literature",
-       "score": 0.7513
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "JAK3",
-     "geneId": "ENSG00000105639",
-     "geneName": "Janus kinase 3",
-     "assoc": 0.7324,
-     "contribution": 0.205426,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4116
-      },
-      {
-       "id": "literature",
-       "score": 0.164
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.694,
-     "contribution": 0.194662,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6773
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0518
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 4,
+   "blackBox": false,
+   "rank": 3,
    "score": 1.0,
    "rawScore": 2.189102,
    "geneCount": 4,
@@ -434,6 +329,111 @@
     {
      "type": "Black Box Warning",
      "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 4,
+   "score": 1.0,
+   "rawScore": 2.189102,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.9724,
+     "contribution": 0.222336,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8404
+      },
+      {
+       "id": "literature",
+       "score": 0.7513
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "JAK3",
+     "geneId": "ENSG00000105639",
+     "geneName": "Janus kinase 3",
+     "assoc": 0.7324,
+     "contribution": 0.205426,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.4559
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4116
+      },
+      {
+       "id": "literature",
+       "score": 0.164
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.694,
+     "contribution": 0.194662,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6773
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0518
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Janus Kinase (JAK) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
@@ -1025,15 +1025,16 @@
    ]
   },
   {
-   "id": "CHEMBL3990014",
-   "name": "Mirikizumab",
+   "id": "CHEMBL2364648",
+   "name": "Guselkumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "pustular psoriasis",
     "Crohn disease",
     "immune system disorder",
-    "ulcerative colitis"
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Interleukin-23 inhibitor"
    ],
@@ -1041,88 +1042,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 12,
-   "score": 0.6395,
-   "rawScore": 1.407391,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IL12B",
-     "geneId": "ENSG00000113302",
-     "geneName": "interleukin 12B",
-     "assoc": 0.9029,
-     "contribution": 0.334185,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8855
-      },
-      {
-       "id": "literature",
-       "score": 0.1521
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL23A",
-     "geneId": "ENSG00000110944",
-     "geneName": "interleukin 23 subunit alpha",
-     "assoc": 0.8786,
-     "contribution": 0.325184,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8786
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL12B",
-     "geneId": "ENSG00000113302",
-     "geneName": "interleukin 12B",
-     "assoc": 0.9029,
-     "contribution": 0.191747,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8855
-      },
-      {
-       "id": "literature",
-       "score": 0.1521
-      }
-     ],
-     "hops": 3,
-     "via": "IL23A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108681",
-   "name": "Tildrakizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis vulgaris",
-    "psoriasis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-23 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 13,
    "score": 0.6395,
    "rawScore": 1.407391,
    "geneCount": 2,
@@ -1205,6 +1124,88 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 13,
+   "score": 0.6395,
+   "rawScore": 1.407391,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IL12B",
+     "geneId": "ENSG00000113302",
+     "geneName": "interleukin 12B",
+     "assoc": 0.9029,
+     "contribution": 0.334185,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8855
+      },
+      {
+       "id": "literature",
+       "score": 0.1521
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL23A",
+     "geneId": "ENSG00000110944",
+     "geneName": "interleukin 23 subunit alpha",
+     "assoc": 0.8786,
+     "contribution": 0.325184,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8786
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL12B",
+     "geneId": "ENSG00000113302",
+     "geneName": "interleukin 12B",
+     "assoc": 0.9029,
+     "contribution": 0.191747,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8855
+      },
+      {
+       "id": "literature",
+       "score": 0.1521
+      }
+     ],
+     "hops": 3,
+     "via": "IL23A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108681",
+   "name": "Tildrakizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis vulgaris",
+    "psoriasis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-23 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 14,
    "score": 0.6395,
    "rawScore": 1.407391,
@@ -1272,16 +1273,15 @@
    ]
   },
   {
-   "id": "CHEMBL2364648",
-   "name": "Guselkumab",
+   "id": "CHEMBL3990014",
+   "name": "Mirikizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "pustular psoriasis",
     "Crohn disease",
     "immune system disorder",
-    "psoriasis vulgaris"
+    "ulcerative colitis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Interleukin-23 inhibitor"
    ],
@@ -1545,31 +1545,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 18,
    "score": 0.5256,
    "rawScore": 1.160599,
@@ -1649,19 +1637,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 19,
    "score": 0.5256,
    "rawScore": 1.160599,
@@ -1841,136 +1841,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 21,
-   "score": 0.5256,
-   "rawScore": 1.160599,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.9795,
-     "contribution": 0.449753,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9641
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4291
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.9798,
-     "contribution": 0.449424,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.871
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7365
-      },
-      {
-       "id": "animal_model",
-       "score": 0.405
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.9993,
-     "contribution": 0.261423,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9881
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.894
-      },
-      {
-       "id": "animal_model",
-       "score": 0.445
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 22,
    "score": 0.5256,
    "rawScore": 1.160599,
    "geneCount": 1,
@@ -2074,6 +1958,110 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 22,
+   "score": 0.5256,
+   "rawScore": 1.160599,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.9795,
+     "contribution": 0.449753,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9641
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4291
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.9798,
+     "contribution": 0.449424,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.871
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7365
+      },
+      {
+       "id": "animal_model",
+       "score": 0.405
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.9993,
+     "contribution": 0.261423,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9881
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.894
+      },
+      {
+       "id": "animal_model",
+       "score": 0.445
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 23,
    "score": 0.5256,
    "rawScore": 1.160599,
@@ -2153,19 +2141,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 24,
    "score": 0.5256,
    "rawScore": 1.160599,
@@ -2784,83 +2784,72 @@
    ]
   },
   {
-   "id": "CHEMBL608533",
-   "name": "Midostaurin",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "acute myeloid leukemia",
-    "systemic mastocytosis",
-    "mastocytosis",
-    "mast cell leukemia"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
    "indicationCount": 6,
    "mechanisms": [
-    "Tyrosine-protein kinase receptor FLT3 inhibitor",
-    "Vascular endothelial growth factor receptor 2 inhibitor",
-    "Platelet-derived growth factor receptor inhibitor"
+    "Interleukin-1 beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 31,
-   "score": 0.4024,
-   "rawScore": 0.893496,
-   "geneCount": 15,
+   "score": 0.4016,
+   "rawScore": 0.891778,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "PRKCB",
-     "geneId": "ENSG00000166501",
-     "geneName": "protein kinase C beta",
-     "assoc": 0.7233,
-     "contribution": 0.244852,
-     "drugsOnGene": 1,
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8236,
+     "contribution": 0.460723,
+     "drugsOnGene": 2,
      "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7233
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ADCY7",
-     "geneId": "ENSG00000121281",
-     "geneName": "adenylate cyclase 7",
-     "assoc": 0.8231,
-     "contribution": 0.164827,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8094
-      },
       {
        "id": "literature",
-       "score": 0.0719
+       "score": 0.7009
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4101
       }
      ],
      "hops": 3,
-     "via": "PRKCD",
-     "viaScore": 0.918
+     "via": "IL1B",
+     "viaScore": 0.974
     },
     {
-     "gene": "PRKCB",
-     "geneId": "ENSG00000166501",
-     "geneName": "protein kinase C beta",
-     "assoc": 0.7233,
-     "contribution": 0.152417,
-     "drugsOnGene": 1,
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.9993,
+     "contribution": 0.431055,
+     "drugsOnGene": 2,
      "evidence": [
       {
+       "id": "literature",
+       "score": 0.9881
+      },
+      {
        "id": "genetic_association",
-       "score": 0.7233
+       "score": 0.894
+      },
+      {
+       "id": "animal_model",
+       "score": 0.445
       }
      ],
      "hops": 3,
-     "via": "PRKCD",
-     "viaScore": 0.966
+     "via": "IL1B",
+     "viaScore": 0.991
     }
    ]
   },
@@ -2935,72 +2924,83 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL608533",
+   "name": "Midostaurin",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "acute myeloid leukemia",
+    "systemic mastocytosis",
+    "mastocytosis",
+    "mast cell leukemia"
    ],
    "indicationCount": 6,
    "mechanisms": [
-    "Interleukin-1 beta inhibitor"
+    "Tyrosine-protein kinase receptor FLT3 inhibitor",
+    "Vascular endothelial growth factor receptor 2 inhibitor",
+    "Platelet-derived growth factor receptor inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 33,
-   "score": 0.4016,
-   "rawScore": 0.891778,
-   "geneCount": 1,
+   "score": 0.3919,
+   "rawScore": 0.870725,
+   "geneCount": 16,
    "paths": [
     {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8236,
-     "contribution": 0.460723,
-     "drugsOnGene": 2,
+     "gene": "PRKCB",
+     "geneId": "ENSG00000166501",
+     "geneName": "protein kinase C beta",
+     "assoc": 0.7233,
+     "contribution": 0.238612,
+     "drugsOnGene": 1,
      "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7009
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4101
-      }
-     ],
-     "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.974
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.9993,
-     "contribution": 0.431055,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9881
-      },
       {
        "id": "genetic_association",
-       "score": 0.894
+       "score": 0.7233
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ADCY7",
+     "geneId": "ENSG00000121281",
+     "geneName": "adenylate cyclase 7",
+     "assoc": 0.8231,
+     "contribution": 0.160626,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8094
       },
       {
-       "id": "animal_model",
-       "score": 0.445
+       "id": "literature",
+       "score": 0.0719
       }
      ],
      "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.991
+     "via": "PRKCD",
+     "viaScore": 0.918
+    },
+    {
+     "gene": "PRKCB",
+     "geneId": "ENSG00000166501",
+     "geneName": "protein kinase C beta",
+     "assoc": 0.7233,
+     "contribution": 0.148532,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7233
+      }
+     ],
+     "hops": 3,
+     "via": "PRKCD",
+     "viaScore": 0.966
     }
    ]
   },
@@ -3337,89 +3337,6 @@
    ]
   },
   {
-   "id": "CHEMBL704",
-   "name": "Mesalamine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "proctitis",
-    "ulcerative colitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.3097,
-   "rawScore": 0.692391,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PPARG",
-     "geneId": "ENSG00000132170",
-     "geneName": "peroxisome proliferator activated receptor gamma",
-     "assoc": 0.7998,
-     "contribution": 0.199962,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7998
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8236,
-     "contribution": 0.170342,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7009
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4101
-      }
-     ],
-     "hops": 3,
-     "via": "ALOX5",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.8236,
-     "contribution": 0.092585,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7009
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL425",
    "name": "Olsalazine",
    "drugType": "Small molecule",
@@ -3435,7 +3352,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 38,
    "score": 0.3097,
    "rawScore": 0.692391,
    "geneCount": 4,
@@ -3513,6 +3430,89 @@
     "Peroxisome proliferator-activated receptor gamma agonist",
     "Arachidonate 5-lipoxygenase inhibitor",
     "Cyclooxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.3097,
+   "rawScore": 0.692391,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "PPARG",
+     "geneId": "ENSG00000132170",
+     "geneName": "peroxisome proliferator activated receptor gamma",
+     "assoc": 0.7998,
+     "contribution": 0.199962,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7998
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8236,
+     "contribution": 0.170342,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7009
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4101
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.8236,
+     "contribution": 0.092585,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7009
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL704",
+   "name": "Mesalamine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "proctitis",
+    "ulcerative colitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Arachidonate 5-lipoxygenase inhibitor",
+    "Cyclooxygenase inhibitor",
+    "Peroxisome proliferator-activated receptor gamma agonist"
    ],
    "warnings": [],
    "withdrawn": false,

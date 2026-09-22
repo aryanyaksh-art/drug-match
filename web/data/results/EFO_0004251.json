@@ -9,7 +9,7 @@
  "knownDrugCount": 52,
  "candidatesConsidered": 150,
  "pathsTwoHop": 132,
- "pathsThreeHop": 418,
+ "pathsThreeHop": 419,
  "candidates": [
   {
    "id": "CHEMBL3414621",
@@ -105,21 +105,33 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 7,
    "mechanisms": [
+    "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 2,
    "score": 0.7372,
    "rawScore": 1.834956,
@@ -285,33 +297,21 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
     "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 4,
    "score": 0.7372,
    "rawScore": 1.834956,
@@ -413,7 +413,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 5,
+   "rank": 6,
    "score": 0.7372,
    "rawScore": 1.834956,
    "geneCount": 4,
@@ -601,12 +601,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -690,12 +690,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -779,8 +779,8 @@
    ]
   },
   {
-   "id": "CHEMBL255863",
-   "name": "Nilotinib",
+   "id": "CHEMBL4208229",
+   "name": "Asciminib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
@@ -788,21 +788,12 @@
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Tyrosine-protein kinase ABL inhibitor",
-    "Bcr/Abl fusion protein inhibitor"
+    "Bcr/Abl fusion protein inhibitor",
+    "Tyrosine-protein kinase ABL inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 13,
    "score": 0.5921,
    "rawScore": 1.475874,
@@ -978,8 +969,8 @@
    ]
   },
   {
-   "id": "CHEMBL4208229",
-   "name": "Asciminib",
+   "id": "CHEMBL255863",
+   "name": "Nilotinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
@@ -987,12 +978,21 @@
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Bcr/Abl fusion protein inhibitor",
-    "Tyrosine-protein kinase ABL inhibitor"
+    "Tyrosine-protein kinase ABL inhibitor",
+    "Bcr/Abl fusion protein inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 15,
    "score": 0.5921,
    "rawScore": 1.475874,
@@ -2298,6 +2298,63 @@
    ]
   },
   {
+   "id": "CHEMBL3545185",
+   "name": "Selinexor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "diffuse large B-cell lymphoma",
+    "plasma cell myeloma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Exportin-1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.3465,
+   "rawScore": 0.867864,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NUP214",
+     "geneId": "ENSG00000126883",
+     "geneName": "nucleoporin 214",
+     "assoc": 0.6079,
+     "contribution": 0.607323,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6079
+      }
+     ],
+     "hops": 3,
+     "via": "XPO1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TNFSF13",
+     "geneId": "ENSG00000161955",
+     "geneName": "TNF superfamily member 13",
+     "assoc": 0.5054,
+     "contribution": 0.260541,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5054
+      }
+     ],
+     "hops": 3,
+     "via": "XPO1",
+     "viaScore": 0.8
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1908391",
    "name": "Masitinib",
    "drugType": "Small molecule",
@@ -2313,7 +2370,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 34,
    "score": 0.3261,
    "rawScore": 0.817457,
    "geneCount": 4,
@@ -2419,7 +2476,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
+   "rank": 36,
    "score": 0.2969,
    "rawScore": 0.745104,
    "geneCount": 9,
@@ -2511,7 +2568,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 37,
    "score": 0.2888,
    "rawScore": 0.725096,
    "geneCount": 2,
@@ -2606,7 +2663,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 37,
+   "rank": 38,
    "score": 0.2848,
    "rawScore": 0.715239,
    "geneCount": 1,
@@ -2653,7 +2710,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 39,
    "score": 0.2795,
    "rawScore": 0.702004,
    "geneCount": 3,
@@ -2724,22 +2781,20 @@
    ]
   },
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 40,
    "score": 0.2794,
    "rawScore": 0.701859,
    "geneCount": 1,
@@ -2768,20 +2823,22 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 40,
+   "rank": 41,
    "score": 0.2794,
    "rawScore": 0.701859,
    "geneCount": 1,
@@ -2825,7 +2882,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
+   "rank": 42,
    "score": 0.2767,
    "rawScore": 0.69507,
    "geneCount": 6,
@@ -2926,7 +2983,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 42,
+   "rank": 43,
    "score": 0.2619,
    "rawScore": 0.658496,
    "geneCount": 3,
@@ -3010,7 +3067,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 43,
+   "rank": 44,
    "score": 0.2522,
    "rawScore": 0.634353,
    "geneCount": 4,
@@ -3085,103 +3142,6 @@
      "hops": 3,
      "via": "PDGFRB",
      "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL608533",
-   "name": "Midostaurin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia",
-    "systemic mastocytosis",
-    "mastocytosis",
-    "mast cell leukemia"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Tyrosine-protein kinase receptor FLT3 inhibitor",
-    "Vascular endothelial growth factor receptor 2 inhibitor",
-    "Platelet-derived growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 44,
-   "score": 0.2413,
-   "rawScore": 0.607404,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "FLT3",
-     "geneId": "ENSG00000122025",
-     "geneName": "fms related receptor tyrosine kinase 3",
-     "assoc": 0.8937,
-     "contribution": 0.12562,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7729
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDGFRA",
-     "geneId": "ENSG00000134853",
-     "geneName": "platelet derived growth factor receptor alpha",
-     "assoc": 0.8614,
-     "contribution": 0.107916,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      },
-      {
-       "id": "literature",
-       "score": 0.3501
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.8911,
-     "contribution": 0.10211,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "affected_pathway",
-       "score": 0.6079
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.4068
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
     }
    ]
   },
@@ -3382,6 +3342,103 @@
    ]
   },
   {
+   "id": "CHEMBL608533",
+   "name": "Midostaurin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia",
+    "systemic mastocytosis",
+    "mastocytosis",
+    "mast cell leukemia"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Tyrosine-protein kinase receptor FLT3 inhibitor",
+    "Vascular endothelial growth factor receptor 2 inhibitor",
+    "Platelet-derived growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 47,
+   "score": 0.235,
+   "rawScore": 0.591924,
+   "geneCount": 16,
+   "paths": [
+    {
+     "gene": "FLT3",
+     "geneId": "ENSG00000122025",
+     "geneName": "fms related receptor tyrosine kinase 3",
+     "assoc": 0.8937,
+     "contribution": 0.122418,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7729
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5319
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDGFRA",
+     "geneId": "ENSG00000134853",
+     "geneName": "platelet derived growth factor receptor alpha",
+     "assoc": 0.8614,
+     "contribution": 0.105166,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.4559
+      },
+      {
+       "id": "literature",
+       "score": 0.3501
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "KIT",
+     "geneId": "ENSG00000157404",
+     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.8911,
+     "contribution": 0.099508,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "affected_pathway",
+       "score": 0.6079
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5319
+      },
+      {
+       "id": "literature",
+       "score": 0.4068
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1289494",
    "name": "Tivozanib",
    "drugType": "Small molecule",
@@ -3398,7 +3455,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 47,
+   "rank": 48,
    "score": 0.2303,
    "rawScore": 0.580185,
    "geneCount": 5,
@@ -3475,58 +3532,6 @@
      "viaScore": 0.989
     }
    ]
-  },
-  {
-   "id": "CHEMBL4297610",
-   "name": "Olutasidenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia",
-    "acute myeloid leukemia by FAB classification"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 48,
-   "score": 0.2283,
-   "rawScore": 0.575314,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IDH1",
-     "geneId": "ENSG00000138413",
-     "geneName": "isocitrate dehydrogenase (NADP(+)) 1",
-     "assoc": 0.8928,
-     "contribution": 0.575314,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.803
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.4559
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
   }
  ],
  "knownRanked": [
@@ -3558,7 +3563,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
+   "rank": 5,
    "score": 0.7372,
    "rawScore": 1.834956,
    "geneCount": 4,
@@ -4219,7 +4224,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 35,
    "score": 0.3219,
    "rawScore": 0.806936,
    "geneCount": 4,
@@ -4364,7 +4369,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 107,
+   "rank": 106,
    "score": 0.1059,
    "rawScore": 0.272282,
    "geneCount": 1,

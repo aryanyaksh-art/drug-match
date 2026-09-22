@@ -7,9 +7,9 @@
  "genesScored": 47,
  "genesWithDrugs": 17,
  "knownDrugCount": 3,
- "candidatesConsidered": 293,
+ "candidatesConsidered": 294,
  "pathsTwoHop": 77,
- "pathsThreeHop": 355,
+ "pathsThreeHop": 373,
  "candidates": [
   {
    "id": "CHEMBL1201607",
@@ -227,16 +227,18 @@
    ]
   },
   {
-   "id": "CHEMBL5095030",
-   "name": "Motixafortide",
-   "drugType": "Protein",
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
+    "C-X-C chemokine receptor type 4 partial agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -283,18 +285,16 @@
    ]
   },
   {
-   "id": "CHEMBL18442",
-   "name": "Plerixafor",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm",
-    "lymphoma",
-    "non-Hodgkin lymphoma"
+    "neoplasm"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 partial agonist"
+    "C-X-C chemokine receptor type 4 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -771,38 +771,40 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1421",
+   "name": "Dasatinib Anhydrous",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "chronic myelogenous leukemia, BCR-ABL1 positive",
+    "acute lymphoblastic leukemia",
+    "blast phase chronic myelogenous leukemia, BCR-ABL1 positive",
+    "lymphoid leukemia"
    ],
-   "indicationCount": 4,
+   "indicationCount": 5,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Bcr/Abl fusion protein inhibitor",
+    "Bcr/Abl fusion protein inhibitor",
+    "Ephrin type-A receptor 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 15,
-   "score": 0.3109,
-   "rawScore": 0.194331,
-   "geneCount": 1,
+   "score": 0.3115,
+   "rawScore": 0.194694,
+   "geneCount": 15,
    "paths": [
     {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.1691,
-     "contribution": 0.108999,
-     "drugsOnGene": 3,
+     "gene": "FYN",
+     "geneId": "ENSG00000010810",
+     "geneName": "FYN proto-oncogene, Src family tyrosine kinase",
+     "assoc": 0.1337,
+     "contribution": 0.045273,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1691
+       "score": 0.1337
       }
      ],
      "hops": 2,
@@ -810,21 +812,38 @@
      "viaScore": null
     },
     {
-     "gene": "IL17A",
-     "geneId": "ENSG00000112115",
-     "geneName": "interleukin 17A",
-     "assoc": 0.2353,
-     "contribution": 0.085332,
-     "drugsOnGene": 3,
+     "gene": "PRNP",
+     "geneId": "ENSG00000171867",
+     "geneName": "prion protein (Kanno blood group)",
+     "assoc": 0.1336,
+     "contribution": 0.033925,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.2353
+       "score": 0.1336
       }
      ],
      "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.98
+     "via": "FYN",
+     "viaScore": 0.99
+    },
+    {
+     "gene": "SYK",
+     "geneId": "ENSG00000165025",
+     "geneName": "spleen associated tyrosine kinase",
+     "assoc": 0.2239,
+     "contribution": 0.03296,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2239
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.999
     }
    ]
   },
@@ -884,6 +903,64 @@
    ]
   },
   {
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Interleukin-6 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.3109,
+   "rawScore": 0.194331,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.1691,
+     "contribution": 0.108999,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1691
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL17A",
+     "geneId": "ENSG00000112115",
+     "geneName": "interleukin 17A",
+     "assoc": 0.2353,
+     "contribution": 0.085332,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2353
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.98
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1743050",
    "name": "Olokizumab",
    "drugType": "Antibody",
@@ -897,7 +974,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.3109,
    "rawScore": 0.194331,
    "geneCount": 1,
@@ -955,7 +1032,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 19,
    "score": 0.3063,
    "rawScore": 0.19159,
    "geneCount": 3,
@@ -1010,7 +1087,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.3035,
    "rawScore": 0.189906,
    "geneCount": 1,
@@ -1060,7 +1137,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.2725,
    "rawScore": 0.171453,
    "geneCount": 3,
@@ -1102,6 +1179,61 @@
    ]
   },
   {
+   "id": "CHEMBL571546",
+   "name": "Tirbanibulin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "actinic keratosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase SRC inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.2458,
+   "rawScore": 0.155527,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SYK",
+     "geneId": "ENSG00000165025",
+     "geneName": "spleen associated tyrosine kinase",
+     "assoc": 0.2239,
+     "contribution": 0.09737,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2239
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FYN",
+     "geneId": "ENSG00000010810",
+     "geneName": "FYN proto-oncogene, Src family tyrosine kinase",
+     "assoc": 0.1337,
+     "contribution": 0.058158,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1337
+      }
+     ],
+     "hops": 3,
+     "via": "SRC",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3833321",
    "name": "Lecanemab",
    "drugType": "Antibody",
@@ -1122,7 +1254,77 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 21,
+   "rank": 23,
+   "score": 0.2396,
+   "rawScore": 0.151806,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PRNP",
+     "geneId": "ENSG00000171867",
+     "geneName": "prion protein (Kanno blood group)",
+     "assoc": 0.1336,
+     "contribution": 0.058026,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1336
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "LCN2",
+     "geneId": "ENSG00000148346",
+     "geneName": "lipocalin 2",
+     "assoc": 0.1462,
+     "contribution": 0.052718,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1462
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.974
+    },
+    {
+     "gene": "MAPT",
+     "geneId": "ENSG00000186868",
+     "geneName": "microtubule associated protein tau",
+     "assoc": 0.1368,
+     "contribution": 0.041063,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1368
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Amyloid-beta A4 protein stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
    "score": 0.2396,
    "rawScore": 0.151806,
    "geneCount": 1,
@@ -1196,77 +1398,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
-   "score": 0.2396,
-   "rawScore": 0.151806,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PRNP",
-     "geneId": "ENSG00000171867",
-     "geneName": "prion protein (Kanno blood group)",
-     "assoc": 0.1336,
-     "contribution": 0.058026,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1336
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "LCN2",
-     "geneId": "ENSG00000148346",
-     "geneName": "lipocalin 2",
-     "assoc": 0.1462,
-     "contribution": 0.052718,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1462
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.974
-    },
-    {
-     "gene": "MAPT",
-     "geneId": "ENSG00000186868",
-     "geneName": "microtubule associated protein tau",
-     "assoc": 0.1368,
-     "contribution": 0.041063,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1368
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.995
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
+   "rank": 25,
    "score": 0.2396,
    "rawScore": 0.151806,
    "geneCount": 1,
@@ -1344,7 +1476,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 24,
+   "rank": 26,
    "score": 0.2396,
    "rawScore": 0.151806,
    "geneCount": 1,
@@ -1403,150 +1535,6 @@
    ]
   },
   {
-   "id": "CHEMBL1421",
-   "name": "Dasatinib Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic myelogenous leukemia, BCR-ABL1 positive",
-    "acute lymphoblastic leukemia",
-    "blast phase chronic myelogenous leukemia, BCR-ABL1 positive",
-    "lymphoid leukemia"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Bcr/Abl fusion protein inhibitor",
-    "Bcr/Abl fusion protein inhibitor",
-    "Ephrin type-A receptor 2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.2351,
-   "rawScore": 0.149109,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "FYN",
-     "geneId": "ENSG00000010810",
-     "geneName": "FYN proto-oncogene, Src family tyrosine kinase",
-     "assoc": 0.1337,
-     "contribution": 0.045273,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1337
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRNP",
-     "geneId": "ENSG00000171867",
-     "geneName": "prion protein (Kanno blood group)",
-     "assoc": 0.1336,
-     "contribution": 0.033925,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1336
-      }
-     ],
-     "hops": 3,
-     "via": "FYN",
-     "viaScore": 0.99
-    },
-    {
-     "gene": "SYK",
-     "geneId": "ENSG00000165025",
-     "geneName": "spleen associated tyrosine kinase",
-     "assoc": 0.2239,
-     "contribution": 0.03296,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2239
-      }
-     ],
-     "hops": 3,
-     "via": "SRC",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 26,
-   "score": 0.2337,
-   "rawScore": 0.148302,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.1724,
-     "contribution": 0.079071,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1724
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1508,
-     "contribution": 0.069231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1508
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108887",
    "name": "Afelimomab",
    "drugType": "Antibody",
@@ -1561,69 +1549,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 27,
-   "score": 0.2337,
-   "rawScore": 0.148302,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.1724,
-     "contribution": 0.079071,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1724
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1508,
-     "contribution": 0.069231,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1508
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 28,
    "score": 0.2337,
    "rawScore": 0.148302,
    "geneCount": 1,
@@ -1690,6 +1615,69 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 28,
+   "score": 0.2337,
+   "rawScore": 0.148302,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.1724,
+     "contribution": 0.079071,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1724
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1508,
+     "contribution": 0.069231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1508
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 29,
    "score": 0.2337,
    "rawScore": 0.148302,
@@ -1732,31 +1720,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 12,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 30,
    "score": 0.2337,
    "rawScore": 0.148302,
@@ -1866,19 +1842,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 32,
    "score": 0.2337,
    "rawScore": 0.148302,
@@ -1921,39 +1909,69 @@
    ]
   },
   {
-   "id": "CHEMBL2070241",
-   "name": "Bremelanotide",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Melanocortin receptor 4 agonist",
-    "Melanocortin receptor 4 agonist"
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "warnings": [],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 33,
-   "score": 0.2275,
-   "rawScore": 0.144612,
+   "score": 0.2337,
+   "rawScore": 0.148302,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "FTO",
-     "geneId": "ENSG00000140718",
-     "geneName": "FTO alpha-ketoglutarate dependent dioxygenase",
-     "assoc": 0.2021,
-     "contribution": 0.144612,
-     "drugsOnGene": 2,
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.1724,
+     "contribution": 0.079071,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.2021
+       "score": 0.1724
       }
      ],
      "hops": 3,
-     "via": "MC4R",
-     "viaScore": 0.944
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1508,
+     "contribution": 0.069231,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1508
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   },
@@ -1999,6 +2017,43 @@
    ]
   },
   {
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Melanocortin receptor 4 agonist",
+    "Melanocortin receptor 4 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.2275,
+   "rawScore": 0.144612,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FTO",
+     "geneId": "ENSG00000140718",
+     "geneName": "FTO alpha-ketoglutarate dependent dioxygenase",
+     "assoc": 0.2021,
+     "contribution": 0.144612,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2021
+      }
+     ],
+     "hops": 3,
+     "via": "MC4R",
+     "viaScore": 0.944
+    }
+   ]
+  },
+  {
    "id": "CHEMBL256907",
    "name": "Maraviroc",
    "drugType": "Small molecule",
@@ -2019,7 +2074,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
+   "rank": 36,
    "score": 0.2215,
    "rawScore": 0.141017,
    "geneCount": 1,
@@ -2058,7 +2113,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 37,
    "score": 0.2132,
    "rawScore": 0.136038,
    "geneCount": 1,
@@ -2083,14 +2138,14 @@
    ]
   },
   {
-   "id": "CHEMBL1743068",
-   "name": "Secukinumab",
+   "id": "CHEMBL1743034",
+   "name": "Ixekizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "psoriasis",
+    "psoriatic arthritis",
     "psoriasis vulgaris",
-    "spondyloarthropathy",
-    "immune system disorder"
+    "psoriasis",
+    "pustular psoriasis"
    ],
    "indicationCount": 6,
    "mechanisms": [
@@ -2099,7 +2154,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 38,
    "score": 0.2116,
    "rawScore": 0.135125,
    "geneCount": 1,
@@ -2135,47 +2190,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
-   "score": 0.2116,
-   "rawScore": 0.135125,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL17A",
-     "geneId": "ENSG00000112115",
-     "geneName": "interleukin 17A",
-     "assoc": 0.2353,
-     "contribution": 0.135125,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2353
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743034",
-   "name": "Ixekizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "psoriatic arthritis",
-    "psoriasis vulgaris",
-    "psoriasis",
-    "pustular psoriasis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Interleukin 17A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 39,
    "score": 0.2116,
    "rawScore": 0.135125,
@@ -2201,30 +2215,25 @@
    ]
   },
   {
-   "id": "CHEMBL1742996",
-   "name": "Brodalumab",
+   "id": "CHEMBL1743068",
+   "name": "Secukinumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "psoriasis",
     "psoriasis vulgaris",
-    "psoriatic arthritis",
-    "pustular psoriasis",
+    "spondyloarthropathy",
     "immune system disorder"
    ],
-   "indicationCount": 5,
+   "indicationCount": 6,
    "mechanisms": [
-    "Interleukin-17 receptor A antagonist"
+    "Interleukin 17A inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "psychiatric toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 40,
-   "score": 0.2114,
-   "rawScore": 0.13499,
+   "score": 0.2116,
+   "rawScore": 0.135125,
    "geneCount": 1,
    "paths": [
     {
@@ -2232,17 +2241,17 @@
      "geneId": "ENSG00000112115",
      "geneName": "interleukin 17A",
      "assoc": 0.2353,
-     "contribution": 0.13499,
-     "drugsOnGene": 1,
+     "contribution": 0.135125,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "literature",
        "score": 0.2353
       }
      ],
-     "hops": 3,
-     "via": "IL17RA",
-     "viaScore": 0.999
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
    ]
   }
@@ -2264,11 +2273,28 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 249,
-   "score": 0.0149,
-   "rawScore": 0.017813,
+   "rank": 199,
+   "score": 0.0688,
+   "rawScore": 0.049936,
    "geneCount": 1,
    "paths": [
+    {
+     "gene": "CYP11B2",
+     "geneId": "ENSG00000179142",
+     "geneName": "cytochrome P450 family 11 subfamily B member 2",
+     "assoc": 0.1322,
+     "contribution": 0.032123,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1322
+      }
+     ],
+     "hops": 3,
+     "via": "CYP19A1",
+     "viaScore": 0.947
+    },
     {
      "gene": "CYP19A1",
      "geneId": "ENSG00000137869",
@@ -2326,7 +2352,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 284,
+   "rank": 285,
    "score": 0.0082,
    "rawScore": 0.01383,
    "geneCount": 1,
@@ -2367,7 +2393,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 291,
+   "rank": 292,
    "score": 0.0038,
    "rawScore": 0.011157,
    "geneCount": 3,

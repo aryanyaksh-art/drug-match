@@ -9,7 +9,7 @@
  "knownDrugCount": 1,
  "candidatesConsidered": 258,
  "pathsTwoHop": 121,
- "pathsThreeHop": 317,
+ "pathsThreeHop": 461,
  "candidates": [
   {
    "id": "CHEMBL265502",
@@ -159,22 +159,98 @@
    ]
   },
   {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3039545",
+   "name": "Luspatercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "neoplasm",
-    "cholangiocarcinoma"
+    "anemia",
+    "myelodysplastic syndrome",
+    "Beta-thalassemia",
+    "anemia (phenotype)"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
-    "Fibroblast growth factor receptor inhibitor"
+    "Transforming growth factor beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 3,
+   "score": 0.5923,
+   "rawScore": 0.676722,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "MSX1",
+     "geneId": "ENSG00000163132",
+     "geneName": "msh homeobox 1",
+     "assoc": 0.3819,
+     "contribution": 0.205219,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3819
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB3",
+     "viaScore": 0.834
+    },
+    {
+     "gene": "LTBP3",
+     "geneId": "ENSG00000168056",
+     "geneName": "latent transforming growth factor beta binding protein 3",
+     "assoc": 0.3866,
+     "contribution": 0.159897,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3866
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB1",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "LTBP3",
+     "geneId": "ENSG00000168056",
+     "geneName": "latent transforming growth factor beta binding protein 3",
+     "assoc": 0.3866,
+     "contribution": 0.159094,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3866
+      }
+     ],
+     "hops": 3,
+     "via": "TGFB2",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3701238",
+   "name": "Futibatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer",
+    "intrahepatic cholangiocarcinoma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 4,
    "score": 0.5613,
    "rawScore": 0.641714,
    "geneCount": 4,
@@ -249,81 +325,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
-   "score": 0.5613,
-   "rawScore": 0.641714,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.462,
-     "contribution": 0.115493,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.462
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR2",
-     "geneId": "ENSG00000066468",
-     "geneName": "fibroblast growth factor receptor 2",
-     "assoc": 0.4508,
-     "contribution": 0.10752,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4508
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR1",
-     "geneId": "ENSG00000077782",
-     "geneName": "fibroblast growth factor receptor 1",
-     "assoc": 0.4437,
-     "contribution": 0.105813,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4437
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3701238",
-   "name": "Futibatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "biliary tract cancer",
-    "neoplasm",
-    "cancer",
-    "intrahepatic cholangiocarcinoma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 5,
    "score": 0.5613,
    "rawScore": 0.641714,
@@ -383,33 +384,32 @@
    ]
   },
   {
-   "id": "CHEMBL3686884",
-   "name": "E-7090",
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "biliary tract cancer",
-    "cancer"
+    "neoplasm",
+    "cholangiocarcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Fibroblast growth factor receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor"
+    "Fibroblast growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 6,
-   "score": 0.5592,
-   "rawScore": 0.639374,
-   "geneCount": 3,
+   "score": 0.5613,
+   "rawScore": 0.641714,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "FGFR3",
      "geneId": "ENSG00000068078",
      "geneName": "fibroblast growth factor receptor 3",
      "assoc": 0.462,
-     "contribution": 0.129578,
+     "contribution": 0.115493,
      "drugsOnGene": 8,
      "evidence": [
       {
@@ -426,7 +426,7 @@
      "geneId": "ENSG00000066468",
      "geneName": "fibroblast growth factor receptor 2",
      "assoc": 0.4508,
-     "contribution": 0.120633,
+     "contribution": 0.10752,
      "drugsOnGene": 9,
      "evidence": [
       {
@@ -443,7 +443,7 @@
      "geneId": "ENSG00000077782",
      "geneName": "fibroblast growth factor receptor 1",
      "assoc": 0.4437,
-     "contribution": 0.118717,
+     "contribution": 0.105813,
      "drugsOnGene": 9,
      "evidence": [
       {
@@ -535,6 +535,81 @@
    ]
   },
   {
+   "id": "CHEMBL3686884",
+   "name": "E-7090",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "biliary tract cancer",
+    "cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.5592,
+   "rawScore": 0.639374,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.462,
+     "contribution": 0.129578,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.462
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR2",
+     "geneId": "ENSG00000066468",
+     "geneName": "fibroblast growth factor receptor 2",
+     "assoc": 0.4508,
+     "contribution": 0.120633,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4508
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR1",
+     "geneId": "ENSG00000077782",
+     "geneName": "fibroblast growth factor receptor 1",
+     "assoc": 0.4437,
+     "contribution": 0.118717,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4437
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL477772",
    "name": "Pazopanib",
    "drugType": "Small molecule",
@@ -556,7 +631,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 8,
+   "rank": 9,
    "score": 0.3682,
    "rawScore": 0.424165,
    "geneCount": 11,
@@ -629,7 +704,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 10,
    "score": 0.3656,
    "rawScore": 0.421304,
    "geneCount": 1,
@@ -702,7 +777,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.3656,
    "rawScore": 0.421304,
    "geneCount": 1,
@@ -774,7 +849,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
    "score": 0.3597,
    "rawScore": 0.414663,
    "geneCount": 1,
@@ -822,7 +897,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 12,
+   "rank": 13,
    "score": 0.3358,
    "rawScore": 0.387736,
    "geneCount": 18,
@@ -881,87 +956,27 @@
    ]
   },
   {
-   "id": "CHEMBL2165326",
-   "name": "Aprocitentan",
+   "id": "CHEMBL2103873",
+   "name": "Macitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "pulmonary hypertension",
+    "pulmonary arterial hypertension"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "teratogenicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 13,
-   "score": 0.3351,
-   "rawScore": 0.386944,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.5333,
-     "contribution": 0.211028,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5333
-      }
-     ],
-     "hops": 3,
-     "via": "EDNRB",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.5333,
-     "contribution": 0.175916,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5333
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL282724",
-   "name": "Sitaxentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist",
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
    "rank": 14,
    "score": 0.3351,
    "rawScore": 0.386944,
@@ -1071,23 +1086,21 @@
    ]
   },
   {
-   "id": "CHEMBL2103873",
-   "name": "Macitentan",
+   "id": "CHEMBL2165326",
+   "name": "Aprocitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertensive disorder",
-    "cardiovascular disorder",
-    "pulmonary hypertension",
-    "pulmonary arterial hypertension"
+    "Hypertension",
+    "hypertensive disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "teratogenicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
@@ -1196,6 +1209,125 @@
    ]
   },
   {
+   "id": "CHEMBL282724",
+   "name": "Sitaxentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary arterial hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist",
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.3351,
+   "rawScore": 0.386944,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.5333,
+     "contribution": 0.211028,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5333
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.5333,
+     "contribution": 0.175916,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5333
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL443684",
+   "name": "Navitoclax",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Apoptosis regulator Bcl-W inhibitor",
+    "Apoptosis regulator Bcl-X inhibitor",
+    "Apoptosis regulator Bcl-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.3131,
+   "rawScore": 0.362112,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "TP73",
+     "geneId": "ENSG00000078900",
+     "geneName": "tumor protein p73",
+     "assoc": 0.3713,
+     "contribution": 0.198095,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3713
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2L1",
+     "viaScore": 0.929
+    },
+    {
+     "gene": "TP53BP2",
+     "geneId": "ENSG00000143514",
+     "geneName": "tumor protein p53 binding protein 2",
+     "assoc": 0.4476,
+     "contribution": 0.164017,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4476
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3707326",
    "name": "Burosumab",
    "drugType": "Antibody",
@@ -1212,7 +1344,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 20,
    "score": 0.2898,
    "rawScore": 0.335901,
    "geneCount": 1,
@@ -1251,7 +1383,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 21,
    "score": 0.2789,
    "rawScore": 0.323601,
    "geneCount": 4,
@@ -1326,7 +1458,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 22,
    "score": 0.2701,
    "rawScore": 0.313609,
    "geneCount": 38,
@@ -1400,7 +1532,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 23,
    "score": 0.2687,
    "rawScore": 0.312122,
    "geneCount": 4,
@@ -1472,7 +1604,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 24,
    "score": 0.2452,
    "rawScore": 0.285571,
    "geneCount": 1,
@@ -1511,7 +1643,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 25,
    "score": 0.2452,
    "rawScore": 0.285571,
    "geneCount": 1,
@@ -1549,7 +1681,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 26,
    "score": 0.2305,
    "rawScore": 0.269051,
    "geneCount": 1,
@@ -1590,7 +1722,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 27,
    "score": 0.2278,
    "rawScore": 0.265964,
    "geneCount": 25,
@@ -1664,7 +1796,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 28,
    "score": 0.224,
    "rawScore": 0.261737,
    "geneCount": 6,
@@ -1723,14 +1855,13 @@
    ]
   },
   {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "basal cell carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -1742,7 +1873,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 27,
+   "rank": 29,
    "score": 0.2211,
    "rawScore": 0.258411,
    "geneCount": 1,
@@ -1767,13 +1898,14 @@
    ]
   },
   {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "neoplasm",
+    "basal cell carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -1785,7 +1917,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
+   "rank": 30,
    "score": 0.2211,
    "rawScore": 0.258411,
    "geneCount": 1,
@@ -1834,7 +1966,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 29,
+   "rank": 31,
    "score": 0.2211,
    "rawScore": 0.258411,
    "geneCount": 1,
@@ -1872,7 +2004,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 32,
    "score": 0.2144,
    "rawScore": 0.2509,
    "geneCount": 4,
@@ -1927,7 +2059,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
+   "rank": 33,
    "score": 0.1977,
    "rawScore": 0.232122,
    "geneCount": 1,
@@ -1965,7 +2097,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 34,
    "score": 0.1977,
    "rawScore": 0.232122,
    "geneCount": 1,
@@ -2017,7 +2149,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 33,
+   "rank": 35,
    "score": 0.1892,
    "rawScore": 0.222551,
    "geneCount": 9,
@@ -2076,47 +2208,6 @@
    ]
   },
   {
-   "id": "CHEMBL3039545",
-   "name": "Luspatercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "anemia",
-    "myelodysplastic syndrome",
-    "Beta-thalassemia",
-    "anemia (phenotype)"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Transforming growth factor beta inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
-   "score": 0.1738,
-   "rawScore": 0.205219,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "MSX1",
-     "geneId": "ENSG00000163132",
-     "geneName": "msh homeobox 1",
-     "assoc": 0.3819,
-     "contribution": 0.205219,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3819
-      }
-     ],
-     "hops": 3,
-     "via": "TGFB3",
-     "viaScore": 0.834
-    }
-   ]
-  },
-  {
    "id": "CHEMBL24828",
    "name": "Vandetanib",
    "drugType": "Small molecule",
@@ -2140,7 +2231,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
+   "rank": 36,
    "score": 0.1732,
    "rawScore": 0.20445,
    "geneCount": 24,
@@ -2215,7 +2306,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 37,
    "score": 0.1695,
    "rawScore": 0.200282,
    "geneCount": 5,
@@ -2290,7 +2381,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 38,
    "score": 0.163,
    "rawScore": 0.192988,
    "geneCount": 6,
@@ -2328,7 +2419,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 39,
    "score": 0.1581,
    "rawScore": 0.187472,
    "geneCount": 2,
@@ -2370,150 +2461,91 @@
    ]
   },
   {
-   "id": "CHEMBL1289926",
-   "name": "Axitinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743082",
+   "name": "Trastuzumab Emtansine",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
+    "breast cancer",
     "neoplasm",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.1568,
-   "rawScore": 0.18596,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "FOXC2",
-     "geneId": "ENSG00000176692",
-     "geneName": "forkhead box C2",
-     "assoc": 0.4532,
-     "contribution": 0.065687,
-     "drugsOnGene": 13,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4532
-      }
-     ],
-     "hops": 3,
-     "via": "FLT4",
-     "viaScore": 0.828
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.4267,
-     "contribution": 0.063243,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4267
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.4267,
-     "contribution": 0.057031,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4267
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4303214",
-   "name": "Fruquintinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "neoplasm",
-    "colorectal cancer",
-    "cancer"
+    "breast neoplasm",
+    "breast carcinoma"
    ],
    "indicationCount": 4,
    "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 binding agent",
+    "Tubulin inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 40,
-   "score": 0.1568,
-   "rawScore": 0.18596,
-   "geneCount": 3,
+   "score": 0.158,
+   "rawScore": 0.187349,
+   "geneCount": 16,
    "paths": [
     {
-     "gene": "FOXC2",
-     "geneId": "ENSG00000176692",
-     "geneName": "forkhead box C2",
-     "assoc": 0.4532,
-     "contribution": 0.065687,
-     "drugsOnGene": 13,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3877,
+     "contribution": 0.03859,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4532
+       "score": 0.3877
       }
      ],
-     "hops": 3,
-     "via": "FLT4",
-     "viaScore": 0.828
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.4267,
-     "contribution": 0.063243,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4267
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.4267,
-     "contribution": 0.057031,
+     "gene": "NRG1",
+     "geneId": "ENSG00000157168",
+     "geneName": "neuregulin 1",
+     "assoc": 0.4203,
+     "contribution": 0.025612,
      "drugsOnGene": 17,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4267
+       "score": 0.4203
       }
      ],
      "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3877,
+     "contribution": 0.017701,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3877
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
     }
    ]
   }
@@ -2549,7 +2581,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 167,
+   "rank": 178,
    "score": 0.0252,
    "rawScore": 0.037713,
    "geneCount": 10,

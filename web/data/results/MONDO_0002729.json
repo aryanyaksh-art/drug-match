@@ -12,17 +12,16 @@
  "pathsThreeHop": 117,
  "candidates": [
   {
-   "id": "CHEMBL1201716",
-   "name": "Mecasermin",
-   "drugType": "Protein",
+   "id": "CHEMBL1743079",
+   "name": "Teprotumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "Growth delay",
-    "Laron syndrome",
-    "hypothyroidism"
+    "Graves ophthalmopathy",
+    "Graves disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Insulin-like growth factor I receptor agonist"
+    "Insulin-like growth factor I receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -52,16 +51,17 @@
    ]
   },
   {
-   "id": "CHEMBL1743079",
-   "name": "Teprotumumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201716",
+   "name": "Mecasermin",
+   "drugType": "Protein",
    "approvedFor": [
-    "Graves ophthalmopathy",
-    "Graves disease"
+    "Growth delay",
+    "Laron syndrome",
+    "hypothyroidism"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Insulin-like growth factor I receptor antagonist"
+    "Insulin-like growth factor I receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -226,89 +226,63 @@
    ]
   },
   {
-   "id": "CHEMBL2095208",
-   "name": "Cobicistat",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3301581",
+   "name": "Abaloparatide",
+   "drugType": "Protein",
    "approvedFor": [
-    "HIV-1 infection",
-    "infection",
-    "HIV infectious disease"
+    "osteoporosis",
+    "postmenopausal osteoporosis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Cytochrome P450 3A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
-   "score": 0.8306,
-   "rawScore": 0.05629,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GSTM2",
-     "geneId": "ENSG00000213366",
-     "geneName": "glutathione S-transferase mu 2",
-     "assoc": 0.1216,
-     "contribution": 0.05629,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 3,
-     "via": "CYP3A4",
-     "viaScore": 0.948
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL163",
-   "name": "Ritonavir",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "HIV-1 infection",
-    "hepatitis C virus infection",
-    "chronic hepatitis C virus infection",
-    "viral infectious disease"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Cytochrome P450 3A inhibitor",
-    "Human immunodeficiency virus type 1 protease inhibitor"
+    "Parathyroid hormone receptor agonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
-   "score": 0.8306,
-   "rawScore": 0.05629,
-   "geneCount": 3,
+   "rank": 5,
+   "score": 0.8186,
+   "rawScore": 0.055545,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "GSTM2",
-     "geneId": "ENSG00000213366",
-     "geneName": "glutathione S-transferase mu 2",
-     "assoc": 0.1216,
-     "contribution": 0.05629,
-     "drugsOnGene": 2,
+     "gene": "PTHLH",
+     "geneId": "ENSG00000087494",
+     "geneName": "parathyroid hormone like hormone",
+     "assoc": 0.0608,
+     "contribution": 0.031903,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1216
+       "score": 0.0608
       }
      ],
      "hops": 3,
-     "via": "CYP3A4",
-     "viaScore": 0.948
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.0699,
+     "contribution": 0.023642,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0699
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
     }
    ]
   },
@@ -333,6 +307,62 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 6,
+   "score": 0.8186,
+   "rawScore": 0.055545,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PTHLH",
+     "geneId": "ENSG00000087494",
+     "geneName": "parathyroid hormone like hormone",
+     "assoc": 0.0608,
+     "contribution": 0.031903,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PTH",
+     "geneId": "ENSG00000152266",
+     "geneName": "parathyroid hormone",
+     "assoc": 0.0699,
+     "contribution": 0.023642,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0699
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201549",
+   "name": "Teriparatide Acetate",
+   "drugType": "Protein",
+   "approvedFor": [
+    "bone fracture",
+    "osteoporosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 7,
    "score": 0.8186,
    "rawScore": 0.055545,
@@ -493,140 +523,23 @@
    ]
   },
   {
-   "id": "CHEMBL3301581",
-   "name": "Abaloparatide",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
    "drugType": "Protein",
    "approvedFor": [
-    "osteoporosis",
-    "postmenopausal osteoporosis"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Parathyroid hormone receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 10,
-   "score": 0.8186,
-   "rawScore": 0.055545,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PTHLH",
-     "geneId": "ENSG00000087494",
-     "geneName": "parathyroid hormone like hormone",
-     "assoc": 0.0608,
-     "contribution": 0.031903,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "PTH",
-     "geneId": "ENSG00000152266",
-     "geneName": "parathyroid hormone",
-     "assoc": 0.0699,
-     "contribution": 0.023642,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0699
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201549",
-   "name": "Teriparatide Acetate",
-   "drugType": "Protein",
-   "approvedFor": [
-    "bone fracture",
-    "osteoporosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Parathyroid hormone receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 11,
-   "score": 0.8186,
-   "rawScore": 0.055545,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PTHLH",
-     "geneId": "ENSG00000087494",
-     "geneName": "parathyroid hormone like hormone",
-     "assoc": 0.0608,
-     "contribution": 0.031903,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "PTH",
-     "geneId": "ENSG00000152266",
-     "geneName": "parathyroid hormone",
-     "assoc": 0.0699,
-     "contribution": 0.023642,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0699
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
-   ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 10,
    "score": 0.8121,
    "rawScore": 0.055142,
    "geneCount": 1,
@@ -668,23 +581,23 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 11,
    "score": 0.8121,
    "rawScore": 0.055142,
    "geneCount": 1,
@@ -741,7 +654,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 12,
    "score": 0.7404,
    "rawScore": 0.050668,
    "geneCount": 2,
@@ -779,7 +692,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 13,
    "score": 0.7377,
    "rawScore": 0.050501,
    "geneCount": 1,
@@ -804,12 +717,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -818,7 +731,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 14,
    "score": 0.7356,
    "rawScore": 0.050366,
    "geneCount": 1,
@@ -843,12 +756,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -857,7 +770,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 15,
    "score": 0.7356,
    "rawScore": 0.050366,
    "geneCount": 1,
@@ -878,6 +791,93 @@
      "hops": 3,
      "via": "KRAS",
      "viaScore": 0.911
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2095208",
+   "name": "Cobicistat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "infection",
+    "HIV infectious disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.7324,
+   "rawScore": 0.050171,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "GSTM2",
+     "geneId": "ENSG00000213366",
+     "geneName": "glutathione S-transferase mu 2",
+     "assoc": 0.1216,
+     "contribution": 0.050171,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.948
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL163",
+   "name": "Ritonavir",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "hepatitis C virus infection",
+    "chronic hepatitis C virus infection",
+    "viral infectious disease"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Cytochrome P450 3A inhibitor",
+    "Human immunodeficiency virus type 1 protease inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 17,
+   "score": 0.7324,
+   "rawScore": 0.050171,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "GSTM2",
+     "geneId": "ENSG00000213366",
+     "geneName": "glutathione S-transferase mu 2",
+     "assoc": 0.1216,
+     "contribution": 0.050171,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 3,
+     "via": "CYP3A4",
+     "viaScore": 0.948
     }
    ]
   },
@@ -1544,6 +1544,85 @@
    ]
   },
   {
+   "id": "CHEMBL1201438",
+   "name": "Aldesleukin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma",
+    "metastatic melanoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-2 receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.3961,
+   "rawScore": 0.029199,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "IL2",
+     "geneId": "ENSG00000109471",
+     "geneName": "interleukin 2",
+     "assoc": 0.0608,
+     "contribution": 0.010321,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL2",
+     "geneId": "ENSG00000109471",
+     "geneName": "interleukin 2",
+     "assoc": 0.0608,
+     "contribution": 0.009439,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RB",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL2",
+     "geneId": "ENSG00000109471",
+     "geneName": "interleukin 2",
+     "assoc": 0.0608,
+     "contribution": 0.009439,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201439",
    "name": "Basiliximab",
    "drugType": "Antibody",
@@ -1563,7 +1642,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 31,
+   "rank": 32,
    "score": 0.3961,
    "rawScore": 0.029199,
    "geneCount": 3,
@@ -1647,85 +1726,6 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 32,
-   "score": 0.3961,
-   "rawScore": 0.029199,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "IL2",
-     "geneId": "ENSG00000109471",
-     "geneName": "interleukin 2",
-     "assoc": 0.0608,
-     "contribution": 0.010321,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL2",
-     "geneId": "ENSG00000109471",
-     "geneName": "interleukin 2",
-     "assoc": 0.0608,
-     "contribution": 0.009439,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RB",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IL2",
-     "geneId": "ENSG00000109471",
-     "geneName": "interleukin 2",
-     "assoc": 0.0608,
-     "contribution": 0.009439,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201438",
-   "name": "Aldesleukin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma",
-    "metastatic melanoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-2 receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 33,
    "score": 0.3961,
    "rawScore": 0.029199,
@@ -1826,26 +1826,20 @@
    ]
   },
   {
-   "id": "CHEMBL3545184",
-   "name": "Etelcalcetide",
-   "drugType": "Protein",
+   "id": "CHEMBL4297621",
+   "name": "Evocalcet",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "secondary hyperparathyroidism",
-    "parathyroid gland disorder"
+    "parathyroid gland disorder",
+    "secondary hyperparathyroidism"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Calcium sensing receptor agonist",
-    "Calcium sensing receptor agonist"
+    "Calcium sensing receptor positive allosteric modulator"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 35,
    "score": 0.3706,
    "rawScore": 0.027608,
@@ -1871,20 +1865,26 @@
    ]
   },
   {
-   "id": "CHEMBL4297621",
-   "name": "Evocalcet",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3545184",
+   "name": "Etelcalcetide",
+   "drugType": "Protein",
    "approvedFor": [
-    "parathyroid gland disorder",
-    "secondary hyperparathyroidism"
+    "secondary hyperparathyroidism",
+    "parathyroid gland disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Calcium sensing receptor positive allosteric modulator"
+    "Calcium sensing receptor agonist",
+    "Calcium sensing receptor agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 36,
    "score": 0.3706,
    "rawScore": 0.027608,
@@ -1910,61 +1910,6 @@
    ]
   },
   {
-   "id": "CHEMBL3545110",
-   "name": "Ribociclib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.3662,
-   "rawScore": 0.02733,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "CDKN2A",
-     "geneId": "ENSG00000147889",
-     "geneName": "cyclin dependent kinase inhibitor 2A",
-     "assoc": 0.0547,
-     "contribution": 0.013665,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0547
-      }
-     ],
-     "hops": 3,
-     "via": "CDK6",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CDKN2A",
-     "geneId": "ENSG00000147889",
-     "geneName": "cyclin dependent kinase inhibitor 2A",
-     "assoc": 0.0547,
-     "contribution": 0.013665,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0547
-      }
-     ],
-     "hops": 3,
-     "via": "CDK4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3301610",
    "name": "Abemaciclib",
    "drugType": "Small molecule",
@@ -1982,7 +1927,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 37,
    "score": 0.3662,
    "rawScore": 0.02733,
    "geneCount": 2,
@@ -2035,6 +1980,61 @@
    "mechanisms": [
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.3662,
+   "rawScore": 0.02733,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "CDKN2A",
+     "geneId": "ENSG00000147889",
+     "geneName": "cyclin dependent kinase inhibitor 2A",
+     "assoc": 0.0547,
+     "contribution": 0.013665,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "CDK6",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CDKN2A",
+     "geneId": "ENSG00000147889",
+     "geneName": "cyclin dependent kinase inhibitor 2A",
+     "assoc": 0.0547,
+     "contribution": 0.013665,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 3,
+     "via": "CDK4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545110",
+   "name": "Ribociclib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "warnings": [],
@@ -2227,7 +2227,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 99,
+   "rank": 95,
    "score": 0.1187,
    "rawScore": 0.011899,
    "geneCount": 1,

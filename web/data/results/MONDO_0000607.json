@@ -7,9 +7,9 @@
  "genesScored": 27,
  "genesWithDrugs": 24,
  "knownDrugCount": 105,
- "candidatesConsidered": 173,
+ "candidatesConsidered": 175,
  "pathsTwoHop": 192,
- "pathsThreeHop": 212,
+ "pathsThreeHop": 238,
  "candidates": [
   {
    "id": "CHEMBL1743029",
@@ -411,11 +411,11 @@
    ]
   },
   {
-   "id": "CHEMBL27759",
-   "name": "Entinostat",
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "Duchenne muscular dystrophy"
    ],
    "indicationCount": 1,
    "mechanisms": [
@@ -424,7 +424,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 10,
    "score": 0.7547,
    "rawScore": 0.675012,
    "geneCount": 11,
@@ -483,11 +483,11 @@
    ]
   },
   {
-   "id": "CHEMBL1213492",
-   "name": "Givinostat",
+   "id": "CHEMBL27759",
+   "name": "Entinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Duchenne muscular dystrophy"
+    "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
@@ -496,7 +496,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 11,
    "score": 0.7547,
    "rawScore": 0.675012,
    "geneCount": 11,
@@ -733,16 +733,18 @@
    ]
   },
   {
-   "id": "CHEMBL5095030",
-   "name": "Motixafortide",
-   "drugType": "Protein",
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
+    "C-X-C chemokine receptor type 4 partial agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -772,18 +774,16 @@
    ]
   },
   {
-   "id": "CHEMBL18442",
-   "name": "Plerixafor",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm",
-    "lymphoma",
-    "non-Hodgkin lymphoma"
+    "neoplasm"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 partial agonist"
+    "C-X-C chemokine receptor type 4 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -827,17 +827,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.4794,
-   "rawScore": 0.429309,
-   "geneCount": 36,
+   "rank": 22,
+   "score": 0.4691,
+   "rawScore": 0.420125,
+   "geneCount": 38,
    "paths": [
     {
      "gene": "PSMB10",
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.056903,
+     "contribution": 0.055686,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -854,7 +854,7 @@
      "geneId": "ENSG00000222028",
      "geneName": "proteasome subunit beta 11",
      "assoc": 0.3203,
-     "contribution": 0.043869,
+     "contribution": 0.04293,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -871,7 +871,7 @@
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.026101,
+     "contribution": 0.025543,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -933,21 +933,33 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 26,
    "score": 0.2322,
    "rawScore": 0.208754,
@@ -1015,33 +1027,21 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 27,
    "score": 0.2322,
    "rawScore": 0.208754,
@@ -1124,7 +1124,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 29,
    "score": 0.2322,
    "rawScore": 0.208754,
    "geneCount": 4,
@@ -1191,96 +1191,6 @@
    ]
   },
   {
-   "id": "CHEMBL464",
-   "name": "Etretinate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "keratosis",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.2102,
-   "rawScore": 0.189148,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.122564,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.061469,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 3,
-     "via": "RARA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "RXRB",
-     "geneId": "ENSG00000204231",
-     "geneName": "retinoid X receptor beta",
-     "assoc": 0.0182,
-     "contribution": 0.005116,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1131",
    "name": "Acitretin",
    "drugType": "Small molecule",
@@ -1304,9 +1214,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
-   "score": 0.2102,
-   "rawScore": 0.189148,
+   "rank": 31,
+   "score": 0.2155,
+   "rawScore": 0.193811,
    "geneCount": 6,
    "paths": [
     {
@@ -1386,9 +1296,99 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 32,
+   "score": 0.2155,
+   "rawScore": 0.193811,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.122564,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.061469,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.005116,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL464",
+   "name": "Etretinate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "keratosis",
+    "psoriasis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 33,
-   "score": 0.2102,
-   "rawScore": 0.189148,
+   "score": 0.2155,
+   "rawScore": 0.193811,
    "geneCount": 6,
    "paths": [
     {
@@ -1468,8 +1468,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 34,
-   "score": 0.1963,
-   "rawScore": 0.176696,
+   "score": 0.2001,
+   "rawScore": 0.180082,
    "geneCount": 2,
    "paths": [
     {
@@ -1513,6 +1513,23 @@
      "hops": 3,
      "via": "PPARA",
      "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003386,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.98
     }
    ]
   },
@@ -1533,55 +1550,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 35,
-   "score": 0.1962,
-   "rawScore": 0.176647,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.176647,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 3,
-     "via": "NR1H4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Bile acid receptor FXR agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 36,
    "score": 0.1962,
    "rawScore": 0.176647,
    "geneCount": 1,
@@ -1634,6 +1602,55 @@
    ],
    "withdrawn": true,
    "blackBox": true,
+   "rank": 36,
+   "score": 0.1962,
+   "rawScore": 0.176647,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.176647,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 3,
+     "via": "NR1H4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Bile acid receptor FXR agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 37,
    "score": 0.1962,
    "rawScore": 0.176647,
@@ -1678,8 +1695,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 39,
-   "score": 0.1666,
-   "rawScore": 0.150241,
+   "score": 0.174,
+   "rawScore": 0.156796,
    "geneCount": 3,
    "paths": [
     {
@@ -1723,6 +1740,23 @@
      "hops": 3,
      "via": "PPARA",
      "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003675,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "PPARD",
+     "viaScore": 0.948
     }
    ]
   },
@@ -1746,8 +1780,8 @@
    "withdrawn": true,
    "blackBox": false,
    "rank": 41,
-   "score": 0.132,
-   "rawScore": 0.119321,
+   "score": 0.137,
+   "rawScore": 0.12379,
    "geneCount": 1,
    "paths": [
     {
@@ -1770,6 +1804,23 @@
      "hops": 3,
      "via": "PPARG",
      "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.004468,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.98
     }
    ]
   },
@@ -1793,9 +1844,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 43,
-   "score": 0.132,
-   "rawScore": 0.119321,
+   "rank": 42,
+   "score": 0.137,
+   "rawScore": 0.12379,
    "geneCount": 1,
    "paths": [
     {
@@ -1818,20 +1869,36 @@
      "hops": 3,
      "via": "PPARG",
      "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.004468,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.98
     }
    ]
   },
   {
-   "id": "CHEMBL457",
-   "name": "Gemfibrozil",
+   "id": "CHEMBL247951",
+   "name": "Pemafibrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "coronary artery disorder",
     "familial hyperlipidemia",
-    "Abdominal pain",
-    "cardiovascular disorder"
+    "cardiovascular disorder",
+    "hyperlipidemia"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
@@ -1867,17 +1934,17 @@
    ]
   },
   {
-   "id": "CHEMBL672",
-   "name": "Fenofibrate",
+   "id": "CHEMBL981",
+   "name": "Fenofibric Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus",
-    "inherited lipid metabolism disorder",
     "type 2 diabetes mellitus",
-    "familial hyperlipidemia"
+    "Hypercholesterolemia",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 9,
+   "indicationCount": 3,
    "mechanisms": [
+    "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
    "warnings": [],
@@ -1976,14 +2043,16 @@
    ]
   },
   {
-   "id": "CHEMBL557555",
-   "name": "Ciprofibrate",
+   "id": "CHEMBL457",
+   "name": "Gemfibrozil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperlipoproteinemia",
+    "coronary artery disorder",
+    "familial hyperlipidemia",
+    "Abdominal pain",
     "cardiovascular disorder"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
@@ -2019,15 +2088,16 @@
    ]
   },
   {
-   "id": "CHEMBL247951",
-   "name": "Pemafibrate",
+   "id": "CHEMBL672",
+   "name": "Fenofibrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "familial hyperlipidemia",
-    "cardiovascular disorder",
-    "hyperlipidemia"
+    "diabetes mellitus",
+    "inherited lipid metabolism disorder",
+    "type 2 diabetes mellitus",
+    "familial hyperlipidemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 9,
    "mechanisms": [
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
@@ -2063,17 +2133,15 @@
    ]
   },
   {
-   "id": "CHEMBL981",
-   "name": "Fenofibric Acid",
+   "id": "CHEMBL557555",
+   "name": "Ciprofibrate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "type 2 diabetes mellitus",
-    "Hypercholesterolemia",
+    "hyperlipoproteinemia",
     "cardiovascular disorder"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Peroxisome proliferator-activated receptor alpha agonist",
     "Peroxisome proliferator-activated receptor alpha agonist"
    ],
    "warnings": [],
@@ -2166,8 +2234,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 52,
-   "score": 0.0949,
-   "rawScore": 0.086267,
+   "score": 0.0998,
+   "rawScore": 0.090589,
    "geneCount": 2,
    "paths": [
     {
@@ -2190,6 +2258,272 @@
      "hops": 3,
      "via": "PPARA",
      "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.004322,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "PPARD",
+     "viaScore": 0.948
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL38",
+   "name": "Tretinoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "freckles",
+    "hyperpigmentation of the skin",
+    "acne",
+    "acute promyelocytic leukemia"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Retinoic acid receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 53,
+   "score": 0.0961,
+   "rawScore": 0.087261,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.081108,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003078,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.993
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003075,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARB",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1265",
+   "name": "Adapalene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acne"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Retinoic acid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 55,
+   "score": 0.0961,
+   "rawScore": 0.087261,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.081108,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003078,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.993
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003075,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARB",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL547",
+   "name": "Isotretinoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acne"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Retinoic acid receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 56,
+   "score": 0.0961,
+   "rawScore": 0.087261,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4778,
+     "contribution": 0.081108,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4336
+      },
+      {
+       "id": "literature",
+       "score": 0.078
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003078,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.993
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.0182,
+     "contribution": 0.003075,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "RARB",
+     "viaScore": 0.992
     }
    ]
   },
@@ -2225,7 +2559,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 53,
+   "rank": 57,
    "score": 0.0946,
    "rawScore": 0.085966,
    "geneCount": 1,
@@ -2266,153 +2600,6 @@
      ],
      "hops": 3,
      "via": "JAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL38",
-   "name": "Tretinoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "freckles",
-    "hyperpigmentation of the skin",
-    "acne",
-    "acute promyelocytic leukemia"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Retinoic acid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 55,
-   "score": 0.0892,
-   "rawScore": 0.081108,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.081108,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 3,
-     "via": "RARA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL547",
-   "name": "Isotretinoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acne"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Retinoic acid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 56,
-   "score": 0.0892,
-   "rawScore": 0.081108,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.081108,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 3,
-     "via": "RARA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1265",
-   "name": "Adapalene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acne"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Retinoic acid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 57,
-   "score": 0.0892,
-   "rawScore": 0.081108,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4778,
-     "contribution": 0.081108,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4336
-      },
-      {
-       "id": "literature",
-       "score": 0.078
-      }
-     ],
-     "hops": 3,
-     "via": "RARA",
      "viaScore": 0.999
     }
    ]
@@ -2510,7 +2697,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 8,
    "score": 0.7547,
    "rawScore": 0.675012,
    "geneCount": 11,
@@ -2592,7 +2779,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 11,
+   "rank": 9,
    "score": 0.7547,
    "rawScore": 0.675012,
    "geneCount": 11,
@@ -2849,9 +3036,9 @@
    ]
   },
   {
-   "id": "CHEMBL2141296",
-   "name": "Ixazomib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL451887",
+   "name": "Carfilzomib",
+   "drugType": "Protein",
    "approvedFor": [
     "plasma cell myeloma",
     "neoplasm"
@@ -2863,17 +3050,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.4794,
-   "rawScore": 0.429309,
-   "geneCount": 36,
+   "rank": 20,
+   "score": 0.4691,
+   "rawScore": 0.420125,
+   "geneCount": 38,
    "paths": [
     {
      "gene": "PSMB10",
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.056903,
+     "contribution": 0.055686,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2890,7 +3077,7 @@
      "geneId": "ENSG00000222028",
      "geneName": "proteasome subunit beta 11",
      "assoc": 0.3203,
-     "contribution": 0.043869,
+     "contribution": 0.04293,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2907,7 +3094,7 @@
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.026101,
+     "contribution": 0.025543,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2937,17 +3124,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
-   "score": 0.4794,
-   "rawScore": 0.429309,
-   "geneCount": 36,
+   "rank": 21,
+   "score": 0.4691,
+   "rawScore": 0.420125,
+   "geneCount": 38,
    "paths": [
     {
      "gene": "PSMB10",
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.056903,
+     "contribution": 0.055686,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2964,7 +3151,7 @@
      "geneId": "ENSG00000222028",
      "geneName": "proteasome subunit beta 11",
      "assoc": 0.3203,
-     "contribution": 0.043869,
+     "contribution": 0.04293,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2981,7 +3168,7 @@
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.026101,
+     "contribution": 0.025543,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -2996,9 +3183,9 @@
    ]
   },
   {
-   "id": "CHEMBL451887",
-   "name": "Carfilzomib",
-   "drugType": "Protein",
+   "id": "CHEMBL2141296",
+   "name": "Ixazomib",
+   "drugType": "Small molecule",
    "approvedFor": [
     "plasma cell myeloma",
     "neoplasm"
@@ -3011,16 +3198,16 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 23,
-   "score": 0.4794,
-   "rawScore": 0.429309,
-   "geneCount": 36,
+   "score": 0.4691,
+   "rawScore": 0.420125,
+   "geneCount": 38,
    "paths": [
     {
      "gene": "PSMB10",
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.056903,
+     "contribution": 0.055686,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -3037,7 +3224,7 @@
      "geneId": "ENSG00000222028",
      "geneName": "proteasome subunit beta 11",
      "assoc": 0.3203,
-     "contribution": 0.043869,
+     "contribution": 0.04293,
      "drugsOnGene": 4,
      "evidence": [
       {
@@ -3054,7 +3241,7 @@
      "geneId": "ENSG00000205220",
      "geneName": "proteasome 20S subunit beta 10",
      "assoc": 0.4154,
-     "contribution": 0.026101,
+     "contribution": 0.025543,
      "drugsOnGene": 4,
      "evidence": [
       {

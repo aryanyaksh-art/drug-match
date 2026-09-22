@@ -9,7 +9,7 @@
  "knownDrugCount": 3,
  "candidatesConsidered": 272,
  "pathsTwoHop": 175,
- "pathsThreeHop": 391,
+ "pathsThreeHop": 392,
  "candidates": [
   {
    "id": "CHEMBL2095222",
@@ -87,14 +87,15 @@
    ]
   },
   {
-   "id": "CHEMBL3545057",
-   "name": "Acetyldigitoxin",
+   "id": "CHEMBL254219",
+   "name": "Digitoxin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "congestive heart failure",
-    "cardiovascular disorder"
+    "cardiovascular disorder",
+    "heart failure",
+    "Arrhythmia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Sodium/potassium-transporting ATPase inhibitor"
    ],
@@ -102,6 +103,93 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 2,
+   "score": 0.5712,
+   "rawScore": 0.657589,
+   "geneCount": 8,
+   "paths": [
+    {
+     "gene": "ATP1A3",
+     "geneId": "ENSG00000105409",
+     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
+     "assoc": 0.6949,
+     "contribution": 0.158884,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6911
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP1A3",
+     "geneId": "ENSG00000105409",
+     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
+     "assoc": 0.6949,
+     "contribution": 0.072807,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6911
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ATP1B1",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "ATP1A3",
+     "geneId": "ENSG00000105409",
+     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
+     "assoc": 0.6949,
+     "contribution": 0.072661,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6911
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "FXYD2",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1751",
+   "name": "Digoxin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "Arrhythmia",
+    "heart failure",
+    "atrial fibrillation"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Sodium/potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
    "score": 0.5712,
    "rawScore": 0.657589,
    "geneCount": 8,
@@ -187,90 +275,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
-   "score": 0.5712,
-   "rawScore": 0.657589,
-   "geneCount": 8,
-   "paths": [
-    {
-     "gene": "ATP1A3",
-     "geneId": "ENSG00000105409",
-     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
-     "assoc": 0.6949,
-     "contribution": 0.158884,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6911
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP1A3",
-     "geneId": "ENSG00000105409",
-     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
-     "assoc": 0.6949,
-     "contribution": 0.072807,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6911
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ATP1B1",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "ATP1A3",
-     "geneId": "ENSG00000105409",
-     "geneName": "ATPase Na+/K+ transporting subunit alpha 3",
-     "assoc": 0.6949,
-     "contribution": 0.072661,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6911
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "FXYD2",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL506569",
-   "name": "Lanatoside C",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium/potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 4,
    "score": 0.5712,
    "rawScore": 0.657589,
@@ -342,15 +346,14 @@
    ]
   },
   {
-   "id": "CHEMBL254219",
-   "name": "Digitoxin",
+   "id": "CHEMBL3545057",
+   "name": "Acetyldigitoxin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "heart failure",
-    "Arrhythmia"
+    "congestive heart failure",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium/potassium-transporting ATPase inhibitor"
    ],
@@ -428,16 +431,13 @@
    ]
   },
   {
-   "id": "CHEMBL1751",
-   "name": "Digoxin",
+   "id": "CHEMBL506569",
+   "name": "Lanatoside C",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder",
-    "Arrhythmia",
-    "heart failure",
-    "atrial fibrillation"
+    "cardiovascular disorder"
    ],
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
     "Sodium/potassium-transporting ATPase inhibitor"
    ],
@@ -762,17 +762,13 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
+    "Amyloid-beta A4 protein stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -835,13 +831,17 @@
    ]
   },
   {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1105,6 +1105,78 @@
    ]
   },
   {
+   "id": "CHEMBL1257",
+   "name": "Enflurane",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Potassium channel subfamily K member 10 opener",
+    "Potassium channel subfamily K member 18 opener",
+    "Glycine receptor (alpha-1/beta) positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.4294,
+   "rawScore": 0.495017,
+   "geneCount": 23,
+   "paths": [
+    {
+     "gene": "GLRA1",
+     "geneId": "ENSG00000145888",
+     "geneName": "glycine receptor alpha 1",
+     "assoc": 0.7292,
+     "contribution": 0.101598,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7292
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GLRB",
+     "geneId": "ENSG00000109738",
+     "geneName": "glycine receptor beta",
+     "assoc": 0.705,
+     "contribution": 0.098227,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.705
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GLRA1",
+     "geneId": "ENSG00000145888",
+     "geneName": "glycine receptor alpha 1",
+     "assoc": 0.7292,
+     "contribution": 0.082497,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7292
+      }
+     ],
+     "hops": 3,
+     "via": "GLRB",
+     "viaScore": 0.812
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1200694",
    "name": "Sevoflurane",
    "drugType": "Small molecule",
@@ -1118,7 +1190,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.4294,
    "rawScore": 0.495017,
    "geneCount": 23,
@@ -1190,7 +1262,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 19,
    "score": 0.4294,
    "rawScore": 0.495017,
    "geneCount": 23,
@@ -1262,7 +1334,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.4294,
    "rawScore": 0.495017,
    "geneCount": 23,
@@ -1334,78 +1406,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.4294,
-   "rawScore": 0.495017,
-   "geneCount": 23,
-   "paths": [
-    {
-     "gene": "GLRA1",
-     "geneId": "ENSG00000145888",
-     "geneName": "glycine receptor alpha 1",
-     "assoc": 0.7292,
-     "contribution": 0.101598,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7292
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GLRB",
-     "geneId": "ENSG00000109738",
-     "geneName": "glycine receptor beta",
-     "assoc": 0.705,
-     "contribution": 0.098227,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.705
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GLRA1",
-     "geneId": "ENSG00000145888",
-     "geneName": "glycine receptor alpha 1",
-     "assoc": 0.7292,
-     "contribution": 0.082497,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7292
-      }
-     ],
-     "hops": 3,
-     "via": "GLRB",
-     "viaScore": 0.812
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1257",
-   "name": "Enflurane",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Potassium channel subfamily K member 10 opener",
-    "Potassium channel subfamily K member 18 opener",
-    "Glycine receptor (alpha-1/beta) positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 21,
    "score": 0.4294,
    "rawScore": 0.495017,
@@ -1465,15 +1465,75 @@
    ]
   },
   {
-   "id": "CHEMBL4297229",
-   "name": "Prabotulinumtoxin A",
+   "id": "CHEMBL3707359",
+   "name": "Daxibotulinumtoxina",
    "drugType": "Unknown",
    "approvedFor": [
     "skin aging"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Synaptosomal nerve-associated protein 25 (SNAP-25) proteolytic enzyme"
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.4204,
+   "rawScore": 0.484685,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SNAP25",
+     "geneId": "ENSG00000132639",
+     "geneName": "synaptosome associated protein 25",
+     "assoc": 0.5974,
+     "contribution": 0.274291,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5821
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PRRT2",
+     "geneId": "ENSG00000167371",
+     "geneName": "proline rich transmembrane protein 2",
+     "assoc": 0.7271,
+     "contribution": 0.210395,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7271
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.978
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108035",
+   "name": "Incobotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "cervical cancer",
+    "Spasticity"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
    ],
    "warnings": [
     {
@@ -1483,7 +1543,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 22,
+   "rank": 23,
    "score": 0.4204,
    "rawScore": 0.484685,
    "geneCount": 1,
@@ -1542,65 +1602,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
-   "score": 0.4204,
-   "rawScore": 0.484685,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SNAP25",
-     "geneId": "ENSG00000132639",
-     "geneName": "synaptosome associated protein 25",
-     "assoc": 0.5974,
-     "contribution": 0.274291,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5821
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRRT2",
-     "geneId": "ENSG00000167371",
-     "geneName": "proline rich transmembrane protein 2",
-     "assoc": 0.7271,
-     "contribution": 0.210395,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7271
-      }
-     ],
-     "hops": 3,
-     "via": "SNAP25",
-     "viaScore": 0.978
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3707359",
-   "name": "Daxibotulinumtoxina",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "skin aging"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 24,
    "score": 0.4204,
    "rawScore": 0.484685,
@@ -1647,16 +1648,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108035",
-   "name": "Incobotulinumtoxina",
+   "id": "CHEMBL4297229",
+   "name": "Prabotulinumtoxin A",
    "drugType": "Unknown",
    "approvedFor": [
-    "cervical cancer",
-    "Spasticity"
+    "skin aging"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) proteolytic enzyme"
    ],
    "warnings": [
     {
@@ -1816,20 +1816,19 @@
    ]
   },
   {
-   "id": "CHEMBL4559134",
-   "name": "Selpercatinib",
+   "id": "CHEMBL4582651",
+   "name": "Pralsetinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neoplasm",
     "non-small cell lung carcinoma",
-    "thyroid cancer",
-    "thyroid tumor",
-    "neoplasm"
+    "medullary thyroid gland carcinoma"
    ],
-   "indicationCount": 5,
+   "indicationCount": 3,
    "mechanisms": [
     "Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor",
-    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor"
+    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1884,19 +1883,20 @@
    ]
   },
   {
-   "id": "CHEMBL4582651",
-   "name": "Pralsetinib",
+   "id": "CHEMBL4559134",
+   "name": "Selpercatinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "non-small cell lung carcinoma",
-    "medullary thyroid gland carcinoma"
+    "thyroid cancer",
+    "thyroid tumor",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
     "Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor",
-    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor"
+    "Tyrosine-protein kinase receptor RET inhibitor",
+    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1951,148 +1951,6 @@
    ]
   },
   {
-   "id": "CHEMBL113461",
-   "name": "Tedisamil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiac arrhythmia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Voltage-gated potassium channel blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.3164,
-   "rawScore": 0.365541,
-   "geneCount": 40,
-   "paths": [
-    {
-     "gene": "KCNA1",
-     "geneId": "ENSG00000111262",
-     "geneName": "potassium voltage-gated channel subfamily A member 1",
-     "assoc": 0.6564,
-     "contribution": 0.086206,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6564
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.7414,
-     "contribution": 0.084602,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7414
-      }
-     ],
-     "hops": 3,
-     "via": "KCNQ2",
-     "viaScore": 0.95
-    },
-    {
-     "gene": "KCNA1",
-     "geneId": "ENSG00000111262",
-     "geneName": "potassium voltage-gated channel subfamily A member 1",
-     "assoc": 0.6564,
-     "contribution": 0.049265,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6564
-      }
-     ],
-     "hops": 3,
-     "via": "KCNA2",
-     "viaScore": 0.995
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL821",
-   "name": "Guanidine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Voltage-gated potassium channel blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.3164,
-   "rawScore": 0.365541,
-   "geneCount": 40,
-   "paths": [
-    {
-     "gene": "KCNA1",
-     "geneId": "ENSG00000111262",
-     "geneName": "potassium voltage-gated channel subfamily A member 1",
-     "assoc": 0.6564,
-     "contribution": 0.086206,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6564
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.7414,
-     "contribution": 0.084602,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7414
-      }
-     ],
-     "hops": 3,
-     "via": "KCNQ2",
-     "viaScore": 0.95
-    },
-    {
-     "gene": "KCNA1",
-     "geneId": "ENSG00000111262",
-     "geneName": "potassium voltage-gated channel subfamily A member 1",
-     "assoc": 0.6564,
-     "contribution": 0.049265,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6564
-      }
-     ],
-     "hops": 3,
-     "via": "KCNA2",
-     "viaScore": 0.995
-    }
-   ]
-  },
-  {
    "id": "CHEMBL284348",
    "name": "Dalfampridine",
    "drugType": "Small molecule",
@@ -2106,7 +1964,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 32,
    "score": 0.3164,
    "rawScore": 0.365541,
    "geneCount": 40,
@@ -2177,6 +2035,148 @@
    "indicationCount": 15,
    "mechanisms": [
     "Voltage-gated potassium channel blocker",
+    "Voltage-gated potassium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.3164,
+   "rawScore": 0.365541,
+   "geneCount": 40,
+   "paths": [
+    {
+     "gene": "KCNA1",
+     "geneId": "ENSG00000111262",
+     "geneName": "potassium voltage-gated channel subfamily A member 1",
+     "assoc": 0.6564,
+     "contribution": 0.086206,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6564
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.7414,
+     "contribution": 0.084602,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7414
+      }
+     ],
+     "hops": 3,
+     "via": "KCNQ2",
+     "viaScore": 0.95
+    },
+    {
+     "gene": "KCNA1",
+     "geneId": "ENSG00000111262",
+     "geneName": "potassium voltage-gated channel subfamily A member 1",
+     "assoc": 0.6564,
+     "contribution": 0.049265,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6564
+      }
+     ],
+     "hops": 3,
+     "via": "KCNA2",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL821",
+   "name": "Guanidine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Voltage-gated potassium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.3164,
+   "rawScore": 0.365541,
+   "geneCount": 40,
+   "paths": [
+    {
+     "gene": "KCNA1",
+     "geneId": "ENSG00000111262",
+     "geneName": "potassium voltage-gated channel subfamily A member 1",
+     "assoc": 0.6564,
+     "contribution": 0.086206,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6564
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.7414,
+     "contribution": 0.084602,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7414
+      }
+     ],
+     "hops": 3,
+     "via": "KCNQ2",
+     "viaScore": 0.95
+    },
+    {
+     "gene": "KCNA1",
+     "geneId": "ENSG00000111262",
+     "geneName": "potassium voltage-gated channel subfamily A member 1",
+     "assoc": 0.6564,
+     "contribution": 0.049265,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6564
+      }
+     ],
+     "hops": 3,
+     "via": "KCNA2",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL113461",
+   "name": "Tedisamil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiac arrhythmia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
     "Voltage-gated potassium channel blocker"
    ],
    "warnings": [],
@@ -2429,6 +2429,113 @@
    ]
   },
   {
+   "id": "CHEMBL1096882",
+   "name": "Fludarabine Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "DNA polymerase (alpha/delta/epsilon) inhibitor",
+    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 38,
+   "score": 0.2546,
+   "rawScore": 0.294684,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "REV3L",
+     "geneId": "ENSG00000009413",
+     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
+     "assoc": 0.6466,
+     "contribution": 0.074153,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.0932
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "POLD2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "REV3L",
+     "geneId": "ENSG00000009413",
+     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
+     "assoc": 0.6466,
+     "contribution": 0.074005,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.0932
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "POLD3",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "REV3L",
+     "geneId": "ENSG00000009413",
+     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
+     "assoc": 0.6466,
+     "contribution": 0.073411,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.0932
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.0061
+      }
+     ],
+     "hops": 3,
+     "via": "POLE",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
    "id": "CHEMBL888",
    "name": "Gemcitabine",
    "drugType": "Small molecule",
@@ -2444,7 +2551,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 39,
    "score": 0.2546,
    "rawScore": 0.294684,
    "geneCount": 14,
@@ -2543,113 +2650,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
-   "score": 0.2546,
-   "rawScore": 0.294684,
-   "geneCount": 14,
-   "paths": [
-    {
-     "gene": "REV3L",
-     "geneId": "ENSG00000009413",
-     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
-     "assoc": 0.6466,
-     "contribution": 0.074153,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.0932
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.0061
-      }
-     ],
-     "hops": 3,
-     "via": "POLD2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "REV3L",
-     "geneId": "ENSG00000009413",
-     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
-     "assoc": 0.6466,
-     "contribution": 0.074005,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.0932
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.0061
-      }
-     ],
-     "hops": 3,
-     "via": "POLD3",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "REV3L",
-     "geneId": "ENSG00000009413",
-     "geneName": "REV3 like, DNA directed polymerase zeta catalytic subunit",
-     "assoc": 0.6466,
-     "contribution": 0.073411,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.0932
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.0061
-      }
-     ],
-     "hops": 3,
-     "via": "POLE",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 40,
    "score": 0.2546,
    "rawScore": 0.294684,
@@ -2733,23 +2733,19 @@
    ]
   },
   {
-   "id": "CHEMBL404849",
-   "name": "Suloctidil",
+   "id": "CHEMBL473159",
+   "name": "Phloroglucinol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "urinary system disorder",
+    "gastrointestinal disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Voltage-gated calcium channel blocker"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 41,
    "score": 0.2326,

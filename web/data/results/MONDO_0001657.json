@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 11,
  "knownDrugCount": 63,
- "candidatesConsidered": 127,
+ "candidatesConsidered": 157,
  "pathsTwoHop": 68,
- "pathsThreeHop": 194,
+ "pathsThreeHop": 224,
  "candidates": [
   {
    "id": "CHEMBL2396661",
@@ -283,12 +283,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -376,12 +376,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -582,7 +582,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 7,
    "score": 0.4654,
    "rawScore": 1.246828,
    "geneCount": 2,
@@ -681,7 +681,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 8,
    "score": 0.4654,
    "rawScore": 1.246828,
    "geneCount": 2,
@@ -1306,15 +1306,13 @@
    ]
   },
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -1354,13 +1352,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -1400,23 +1400,108 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
+   "id": "CHEMBL2103875",
+   "name": "Trametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neurofibromatosis type 1",
-    "neoplasm",
-    "plexiform neurofibroma"
+    "glioma",
+    "melanoma",
+    "metastatic melanoma",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 18,
+   "score": 0.2609,
+   "rawScore": 0.704374,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP2K2",
+     "geneId": "ENSG00000126934",
+     "geneName": "mitogen-activated protein kinase kinase 2",
+     "assoc": 0.7219,
+     "contribution": 0.287401,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7219
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "BRAF",
+     "geneId": "ENSG00000157764",
+     "geneName": "B-Raf proto-oncogene, serine/threonine kinase",
+     "assoc": 0.9073,
+     "contribution": 0.232515,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8387
+      },
+      {
+       "id": "literature",
+       "score": 0.2862
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MAP2K2",
+     "geneId": "ENSG00000126934",
+     "geneName": "mitogen-activated protein kinase kinase 2",
+     "assoc": 0.7219,
+     "contribution": 0.184458,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7219
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "neurofibromatosis type 1",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
    "score": 0.2609,
    "rawScore": 0.704374,
    "geneCount": 2,
@@ -1499,7 +1584,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.2609,
    "rawScore": 0.704374,
    "geneCount": 2,
@@ -1582,91 +1667,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.2609,
-   "rawScore": 0.704374,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP2K2",
-     "geneId": "ENSG00000126934",
-     "geneName": "mitogen-activated protein kinase kinase 2",
-     "assoc": 0.7219,
-     "contribution": 0.287401,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7219
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "BRAF",
-     "geneId": "ENSG00000157764",
-     "geneName": "B-Raf proto-oncogene, serine/threonine kinase",
-     "assoc": 0.9073,
-     "contribution": 0.232515,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8387
-      },
-      {
-       "id": "literature",
-       "score": 0.2862
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "MAP2K2",
-     "geneId": "ENSG00000126934",
-     "geneName": "mitogen-activated protein kinase kinase 2",
-     "assoc": 0.7219,
-     "contribution": 0.184458,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7219
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103875",
-   "name": "Trametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "glioma",
-    "melanoma",
-    "metastatic melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 21,
    "score": 0.2609,
    "rawScore": 0.704374,
@@ -1734,18 +1734,18 @@
    ]
   },
   {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "neurofibromatosis type 1",
+    "neoplasm",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2099,6 +2099,72 @@
    ]
   },
   {
+   "id": "CHEMBL3301612",
+   "name": "Encorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "metastatic melanoma",
+    "colorectal neoplasm",
+    "melanoma",
+    "neoplasm"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Serine/threonine-protein kinase B-raf inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.2479,
+   "rawScore": 0.669801,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "BRAF",
+     "geneId": "ENSG00000157764",
+     "geneName": "B-Raf proto-oncogene, serine/threonine kinase",
+     "assoc": 0.9073,
+     "contribution": 0.443071,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8387
+      },
+      {
+       "id": "literature",
+       "score": 0.2862
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1945
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAP2K2",
+     "geneId": "ENSG00000126934",
+     "geneName": "mitogen-activated protein kinase kinase 2",
+     "assoc": 0.7219,
+     "contribution": 0.22673,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7219
+      }
+     ],
+     "hops": 3,
+     "via": "BRAF",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2028663",
    "name": "Dabrafenib",
    "drugType": "Small molecule",
@@ -2114,7 +2180,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 28,
    "score": 0.2479,
    "rawScore": 0.669801,
    "geneCount": 1,
@@ -2179,72 +2245,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
-   "score": 0.2479,
-   "rawScore": 0.669801,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "BRAF",
-     "geneId": "ENSG00000157764",
-     "geneName": "B-Raf proto-oncogene, serine/threonine kinase",
-     "assoc": 0.9073,
-     "contribution": 0.443071,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8387
-      },
-      {
-       "id": "literature",
-       "score": 0.2862
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1945
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAP2K2",
-     "geneId": "ENSG00000126934",
-     "geneName": "mitogen-activated protein kinase kinase 2",
-     "assoc": 0.7219,
-     "contribution": 0.22673,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7219
-      }
-     ],
-     "hops": 3,
-     "via": "BRAF",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301612",
-   "name": "Encorafenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "metastatic melanoma",
-    "colorectal neoplasm",
-    "melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Serine/threonine-protein kinase B-raf inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 29,
    "score": 0.2479,
    "rawScore": 0.669801,
@@ -2295,13 +2295,15 @@
    ]
   },
   {
-   "id": "CHEMBL1201532",
-   "name": "Thyrotropin",
-   "drugType": "Unknown",
+   "id": "CHEMBL1201533",
+   "name": "Thyrotropin Alfa",
+   "drugType": "Protein",
    "approvedFor": [
-    "hypothyroidism"
+    "thyroid gland carcinoma",
+    "thyroid cancer",
+    "thyroid tumor"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -2341,15 +2343,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201533",
-   "name": "Thyrotropin Alfa",
-   "drugType": "Protein",
+   "id": "CHEMBL1201532",
+   "name": "Thyrotropin",
+   "drugType": "Unknown",
    "approvedFor": [
-    "thyroid gland carcinoma",
-    "thyroid cancer",
-    "thyroid tumor"
+    "hypothyroidism"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -2491,22 +2491,19 @@
    ]
   },
   {
-   "id": "CHEMBL4297610",
-   "name": "Olutasidenib",
+   "id": "CHEMBL3989958",
+   "name": "Ivosidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia",
-    "acute myeloid leukemia by FAB classification"
+    "acute myeloid leukemia by FAB classification",
+    "cholangiocarcinoma",
+    "acute myeloid leukemia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -2547,19 +2544,22 @@
    ]
   },
   {
-   "id": "CHEMBL3989958",
-   "name": "Ivosidenib",
+   "id": "CHEMBL4297610",
+   "name": "Olutasidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia by FAB classification",
-    "cholangiocarcinoma",
-    "acute myeloid leukemia"
+    "acute myeloid leukemia",
+    "acute myeloid leukemia by FAB classification"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -2990,16 +2990,14 @@
    ]
   },
   {
-   "id": "CHEMBL3643413",
-   "name": "Leniolisib",
+   "id": "CHEMBL4297615",
+   "name": "Parsaclisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastric cancer",
     "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "PI3-kinase p110-delta subunit inhibitor",
     "PI3-kinase p110-delta subunit inhibitor"
    ],
    "warnings": [],
@@ -3055,14 +3053,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297615",
-   "name": "Parsaclisib",
+   "id": "CHEMBL3643413",
+   "name": "Leniolisib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "gastric cancer",
     "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
+    "PI3-kinase p110-delta subunit inhibitor",
     "PI3-kinase p110-delta subunit inhibitor"
    ],
    "warnings": [],
@@ -3133,7 +3133,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 9,
    "score": 0.4654,
    "rawScore": 1.246828,
    "geneCount": 2,
@@ -3231,7 +3231,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 44,
+   "rank": 55,
    "score": 0.1501,
    "rawScore": 0.410423,
    "geneCount": 1,
@@ -3482,7 +3482,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 91,
+   "rank": 86,
    "score": 0.0839,
    "rawScore": 0.234675,
    "geneCount": 1,
@@ -3527,7 +3527,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 127,
+   "rank": 157,
    "score": 0.0,
    "rawScore": 0.012159,
    "geneCount": 1,

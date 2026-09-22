@@ -7,18 +7,21 @@
  "genesScored": 50,
  "genesWithDrugs": 0,
  "knownDrugCount": 3,
- "candidatesConsidered": 46,
+ "candidatesConsidered": 55,
  "pathsTwoHop": 0,
- "pathsThreeHop": 67,
+ "pathsThreeHop": 76,
  "candidates": [
   {
-   "id": "CHEMBL2110588",
-   "name": "Eliglustat",
+   "id": "CHEMBL1029",
+   "name": "Miglustat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Gaucher disease"
+    "Glycogen storage disease due to acid maltase deficiency",
+    "Niemann-Pick disease",
+    "Gaucher disease type 1",
+    "Niemann-Pick disease type C"
    ],
-   "indicationCount": 1,
+   "indicationCount": 5,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
    ],
@@ -54,16 +57,13 @@
    ]
   },
   {
-   "id": "CHEMBL1029",
-   "name": "Miglustat",
+   "id": "CHEMBL2110588",
+   "name": "Eliglustat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Glycogen storage disease due to acid maltase deficiency",
-    "Niemann-Pick disease",
-    "Gaucher disease type 1",
-    "Niemann-Pick disease type C"
+    "Gaucher disease"
    ],
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
     "Ceramide glucosyltransferase inhibitor"
    ],
@@ -99,6 +99,55 @@
    ]
   },
   {
+   "id": "CHEMBL1201569",
+   "name": "Rimabotulinumtoxinb",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Dystonia",
+    "Torticollis",
+    "Parkinson disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Vesicle-associated membrane protein 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 3,
+   "score": 0.9225,
+   "rawScore": 0.631046,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.631046,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "VAMP2",
+     "viaScore": 0.95
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1200907",
    "name": "Trilostane",
    "drugType": "Small molecule",
@@ -112,7 +161,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
+   "rank": 4,
    "score": 0.8192,
    "rawScore": 0.574057,
    "geneCount": 1,
@@ -166,7 +215,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 4,
+   "rank": 5,
    "score": 0.7986,
    "rawScore": 0.562694,
    "geneCount": 1,
@@ -195,53 +244,6 @@
      "hops": 3,
      "via": "EPAS1",
      "viaScore": 0.888
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4559134",
-   "name": "Selpercatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "thyroid cancer",
-    "thyroid tumor",
-    "neoplasm"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor",
-    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
-   "score": 0.5732,
-   "rawScore": 0.438346,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "KIF5A",
-     "geneId": "ENSG00000155980",
-     "geneName": "kinesin family member 5A",
-     "assoc": 0.9254,
-     "contribution": 0.438346,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9109
-      },
-      {
-       "id": "literature",
-       "score": 0.1622
-      }
-     ],
-     "hops": 3,
-     "via": "KIF5B",
-     "viaScore": 0.97
     }
    ]
   },
@@ -292,6 +294,53 @@
    ]
   },
   {
+   "id": "CHEMBL4559134",
+   "name": "Selpercatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "thyroid cancer",
+    "thyroid tumor",
+    "neoplasm"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Coiled-coil domain-containing protein 6/Tyrosine-protein kinase receptor RET inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor",
+    "Kinesin-1 heavy chain/ Tyrosine-protein kinase receptor RET inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.5732,
+   "rawScore": 0.438346,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "KIF5A",
+     "geneId": "ENSG00000155980",
+     "geneName": "kinesin family member 5A",
+     "assoc": 0.9254,
+     "contribution": 0.438346,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9109
+      },
+      {
+       "id": "literature",
+       "score": 0.1622
+      }
+     ],
+     "hops": 3,
+     "via": "KIF5B",
+     "viaScore": 0.97
+    }
+   ]
+  },
+  {
    "id": "CHEMBL571546",
    "name": "Tirbanibulin",
    "drugType": "Small molecule",
@@ -305,7 +354,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 8,
    "score": 0.5682,
    "rawScore": 0.435583,
    "geneCount": 1,
@@ -347,7 +396,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.5394,
    "rawScore": 0.419719,
    "geneCount": 2,
@@ -406,7 +455,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 9,
+   "rank": 10,
    "score": 0.5278,
    "rawScore": 0.41328,
    "geneCount": 4,
@@ -471,7 +520,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.4256,
    "rawScore": 0.356912,
    "geneCount": 1,
@@ -519,7 +568,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 11,
+   "rank": 12,
    "score": 0.4171,
    "rawScore": 0.35222,
    "geneCount": 1,
@@ -567,7 +616,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.4171,
    "rawScore": 0.35222,
    "geneCount": 1,
@@ -588,6 +637,374 @@
      "hops": 3,
      "via": "ABCA1",
      "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707359",
+   "name": "Daxibotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "skin aging"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108035",
+   "name": "Incobotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "cervical cancer",
+    "Spasticity"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3707322",
+   "name": "Letibotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "skin aging"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297229",
+   "name": "Prabotulinumtoxin A",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "skin aging"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) proteolytic enzyme"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 17,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108570",
+   "name": "Abobotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "cervical cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 18,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201574",
+   "name": "Onabotulinumtoxina",
+   "drugType": "Unknown",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297862",
+   "name": "Botulinum Toxin Type A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "urgency urinary incontinence",
+    "overactive bladder",
+    "benign essential blepharospasm",
+    "migraine disorder"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) hydrolytic enzyme"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.3292,
+   "rawScore": 0.303779,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VAMP1",
+     "geneId": "ENSG00000139190",
+     "geneName": "vesicle associated membrane protein 1",
+     "assoc": 0.8765,
+     "contribution": 0.303779,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8742
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "SNAP25",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL488",
+   "name": "Aminoglutethimide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Cytochrome P450 11A1 inhibitor",
+    "Cytochrome P450 19A1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.2768,
+   "rawScore": 0.274838,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "CYP7B1",
+     "geneId": "ENSG00000172817",
+     "geneName": "cytochrome P450 family 7 subfamily B member 1",
+     "assoc": 0.9212,
+     "contribution": 0.274838,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9137
+      },
+      {
+       "id": "literature",
+       "score": 0.0878
+      }
+     ],
+     "hops": 3,
+     "via": "CYP11A1",
+     "viaScore": 0.948
     }
    ]
   },
@@ -613,7 +1030,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 13,
+   "rank": 22,
    "score": 0.2768,
    "rawScore": 0.274838,
    "geneCount": 2,
@@ -642,64 +1059,20 @@
    ]
   },
   {
-   "id": "CHEMBL488",
-   "name": "Aminoglutethimide",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4650438",
+   "name": "Olezarsen",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "neoplasm"
+    "familial chylomicronemia syndrome"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Cytochrome P450 11A1 inhibitor",
-    "Cytochrome P450 19A1 inhibitor"
+    "Apolipoprotein C-III mRNA antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
-   "score": 0.2768,
-   "rawScore": 0.274838,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "CYP7B1",
-     "geneId": "ENSG00000172817",
-     "geneName": "cytochrome P450 family 7 subfamily B member 1",
-     "assoc": 0.9212,
-     "contribution": 0.274838,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9137
-      },
-      {
-       "id": "literature",
-       "score": 0.0878
-      }
-     ],
-     "hops": 3,
-     "via": "CYP11A1",
-     "viaScore": 0.948
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 15,
+   "rank": 23,
    "score": 0.2624,
    "rawScore": 0.266933,
    "geneCount": 1,
@@ -724,20 +1097,21 @@
    ]
   },
   {
-   "id": "CHEMBL4650438",
-   "name": "Olezarsen",
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "familial chylomicronemia syndrome"
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Apolipoprotein C-III mRNA antisense inhibitor"
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 24,
    "score": 0.2624,
    "rawScore": 0.266933,
    "geneCount": 1,
@@ -779,7 +1153,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 25,
    "score": 0.2247,
    "rawScore": 0.246101,
    "geneCount": 4,
@@ -820,7 +1194,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 26,
    "score": 0.1933,
    "rawScore": 0.228814,
    "geneCount": 5,
@@ -862,7 +1236,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 27,
    "score": 0.1184,
    "rawScore": 0.187488,
    "geneCount": 5,
@@ -907,83 +1281,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.0762,
-   "rawScore": 0.164202,
-   "geneCount": 11,
-   "paths": [
-    {
-     "gene": "KDM5C",
-     "geneId": "ENSG00000126012",
-     "geneName": "lysine demethylase 5C",
-     "assoc": 0.9055,
-     "contribution": 0.164202,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9055
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.969
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL27759",
-   "name": "Entinostat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Histone deacetylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.0762,
-   "rawScore": 0.164202,
-   "geneCount": 11,
-   "paths": [
-    {
-     "gene": "KDM5C",
-     "geneId": "ENSG00000126012",
-     "geneName": "lysine demethylase 5C",
-     "assoc": 0.9055,
-     "contribution": 0.164202,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9055
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.969
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1213492",
-   "name": "Givinostat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Duchenne muscular dystrophy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Histone deacetylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
+   "rank": 28,
    "score": 0.0762,
    "rawScore": 0.164202,
    "geneCount": 11,
@@ -1023,7 +1321,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 29,
    "score": 0.0762,
    "rawScore": 0.164202,
    "geneCount": 11,
@@ -1071,7 +1369,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 24,
+   "rank": 30,
    "score": 0.0762,
    "rawScore": 0.164202,
    "geneCount": 11,
@@ -1096,6 +1394,128 @@
    ]
   },
   {
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Duchenne muscular dystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.0762,
+   "rawScore": 0.164202,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "KDM5C",
+     "geneId": "ENSG00000126012",
+     "geneName": "lysine demethylase 5C",
+     "assoc": 0.9055,
+     "contribution": 0.164202,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9055
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.969
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL27759",
+   "name": "Entinostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Histone deacetylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.0762,
+   "rawScore": 0.164202,
+   "geneCount": 11,
+   "paths": [
+    {
+     "gene": "KDM5C",
+     "geneId": "ENSG00000126012",
+     "geneName": "lysine demethylase 5C",
+     "assoc": 0.9055,
+     "contribution": 0.164202,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9055
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC1",
+     "viaScore": 0.969
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL256997",
+   "name": "Ataluren",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Duchenne muscular dystrophy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "80S Ribosome modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.0544,
+   "rawScore": 0.152183,
+   "geneCount": 78,
+   "paths": [
+    {
+     "gene": "UCHL1",
+     "geneId": "ENSG00000154277",
+     "geneName": "ubiquitin C-terminal hydrolase L1",
+     "assoc": 0.8773,
+     "contribution": 0.152183,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8064
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3438
+      },
+      {
+       "id": "literature",
+       "score": 0.034
+      }
+     ],
+     "hops": 3,
+     "via": "RPS27A",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1421",
    "name": "Dasatinib Anhydrous",
    "drugType": "Small molecule",
@@ -1114,7 +1534,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 34,
    "score": 0.0458,
    "rawScore": 0.147446,
    "geneCount": 15,
@@ -1139,29 +1559,20 @@
    ]
   },
   {
-   "id": "CHEMBL553025",
-   "name": "Vinorelbine",
+   "id": "CHEMBL2108628",
+   "name": "Paclitaxel Poliglumex",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Tubulin inhibitor"
+    "Tubulin stabiliser"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 26,
+   "blackBox": false,
+   "rank": 35,
    "score": 0.0134,
    "rawScore": 0.129591,
    "geneCount": 15,
@@ -1219,23 +1630,25 @@
    ]
   },
   {
-   "id": "CHEMBL107",
-   "name": "Colchicine",
+   "id": "CHEMBL90555",
+   "name": "Vincristine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "coronary artery disorder",
-    "familial Mediterranean fever",
-    "myocardial infarction",
-    "gout"
+    "neoplasm"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Tubulin inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
+   "blackBox": true,
+   "rank": 36,
    "score": 0.0134,
    "rawScore": 0.129591,
    "geneCount": 15,
@@ -1335,7 +1748,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
+   "rank": 37,
    "score": 0.0134,
    "rawScore": 0.129591,
    "geneCount": 15,
@@ -1393,8 +1806,8 @@
    ]
   },
   {
-   "id": "CHEMBL90555",
-   "name": "Vincristine",
+   "id": "CHEMBL553025",
+   "name": "Vinorelbine",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm"
@@ -1406,12 +1819,16 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "misuse"
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 29,
+   "rank": 38,
    "score": 0.0134,
    "rawScore": 0.129591,
    "geneCount": 15,
@@ -1469,14 +1886,14 @@
    ]
   },
   {
-   "id": "CHEMBL1683590",
-   "name": "Eribulin",
+   "id": "CHEMBL107",
+   "name": "Colchicine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "breast cancer",
-    "liposarcoma",
-    "breast neoplasm",
-    "neoplasm"
+    "coronary artery disorder",
+    "familial Mediterranean fever",
+    "myocardial infarction",
+    "gout"
    ],
    "indicationCount": 4,
    "mechanisms": [
@@ -1485,169 +1902,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL428647",
-   "name": "Paclitaxel",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast neoplasm",
-    "breast carcinoma",
-    "neoplasm",
-    "gastroesophageal junction adenocarcinoma"
-   ],
-   "indicationCount": 11,
-   "mechanisms": [
-    "Tubulin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 31,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108628",
-   "name": "Paclitaxel Poliglumex",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Tubulin stabiliser"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
+   "rank": 39,
    "score": 0.0134,
    "rawScore": 0.129591,
    "geneCount": 15,
@@ -1718,563 +1973,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2110725",
-   "name": "Vinflunine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Tubulin inhibitor",
-    "Tubulin inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201748",
-   "name": "Cabazitaxel",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "prostate neoplasm",
-    "breast cancer",
-    "prostate cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Tubulin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 35,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201752",
-   "name": "Ixabepilone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast cancer",
-    "breast carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Tubulin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 36,
-   "score": 0.0134,
-   "rawScore": 0.129591,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.065512,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.064079,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301582",
-   "name": "Polatuzumab Vedotin",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "diffuse large B-cell lymphoma",
-    "B-cell non-Hodgkin lymphoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Tubulin inhibitor",
-    "B-cell antigen receptor complex-associated protein beta chain binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.0075,
-   "rawScore": 0.126288,
-   "geneCount": 16,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.063842,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.062446,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743082",
-   "name": "Trastuzumab Emtansine",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "breast cancer",
-    "neoplasm",
-    "breast neoplasm",
-    "breast carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 binding agent",
-    "Tubulin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 38,
-   "score": 0.0075,
-   "rawScore": 0.126288,
-   "geneCount": 16,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.063842,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.062446,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301589",
-   "name": "Enfortumab Vedotin",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "transitional cell carcinoma",
-    "urothelial carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Nectin-4 binding agent",
-    "Tubulin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 39,
-   "score": 0.0075,
-   "rawScore": 0.126288,
-   "geneCount": 16,
-   "paths": [
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.063842,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBA1A",
-     "viaScore": 0.96
-    },
-    {
-     "gene": "KIF1A",
-     "geneId": "ENSG00000130294",
-     "geneName": "kinesin family member 1A",
-     "assoc": 0.8817,
-     "contribution": 0.062446,
-     "drugsOnGene": 20,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7945
-      },
-      {
-       "id": "animal_model",
-       "score": 0.274
-      },
-      {
-       "id": "literature",
-       "score": 0.2067
-      }
-     ],
-     "hops": 3,
-     "via": "TUBB2B",
-     "viaScore": 0.939
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743028",
-   "name": "Glembatumumab Vedotin",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "lymphoma"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Transmembrane glycoprotein NMB binding agent",
-    "Tubulin inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 40,
-   "score": 0.0075,
-   "rawScore": 0.126288,
-   "geneCount": 16,
+   "score": 0.0134,
+   "rawScore": 0.129591,
+   "geneCount": 15,
    "paths": [
     {
      "gene": "KIF1A",
      "geneId": "ENSG00000130294",
      "geneName": "kinesin family member 1A",
      "assoc": 0.8817,
-     "contribution": 0.063842,
+     "contribution": 0.065512,
      "drugsOnGene": 20,
      "evidence": [
       {
@@ -2299,7 +2008,7 @@
      "geneId": "ENSG00000130294",
      "geneName": "kinesin family member 1A",
      "assoc": 0.8817,
-     "contribution": 0.062446,
+     "contribution": 0.064079,
      "drugsOnGene": 20,
      "evidence": [
       {

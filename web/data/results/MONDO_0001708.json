@@ -12,16 +12,16 @@
  "pathsThreeHop": 101,
  "candidates": [
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -70,16 +70,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -128,21 +128,33 @@
    ]
   },
   {
-   "id": "CHEMBL4297507",
-   "name": "Delgocitinib",
+   "id": "CHEMBL3622821",
+   "name": "Upadacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "dermatitis",
-    "Eczematoid dermatitis"
+    "temporal arteritis",
+    "psoriatic arthritis",
+    "rheumatoid arthritis",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase TYK2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 4,
    "score": 0.6293,
    "rawScore": 0.056494,
@@ -202,34 +214,96 @@
    ]
   },
   {
-   "id": "CHEMBL3622821",
-   "name": "Upadacitinib",
+   "id": "CHEMBL4297507",
+   "name": "Delgocitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "temporal arteritis",
-    "psoriatic arthritis",
-    "rheumatoid arthritis",
-    "ankylosing spondylitis"
+    "atopic eczema",
+    "dermatitis",
+    "Eczematoid dermatitis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase TYK2 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 5,
+   "score": 0.6293,
+   "rawScore": 0.056494,
+   "geneCount": 4,
+   "paths": [
     {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.027283,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.015639,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "JAK2",
+     "geneId": "ENSG00000096968",
+     "geneName": "Janus kinase 2",
+     "assoc": 0.0365,
+     "contribution": 0.00834,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
    ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 5,
+   "blackBox": false,
+   "rank": 6,
    "score": 0.6293,
    "rawScore": 0.056494,
    "geneCount": 4,
@@ -316,80 +390,6 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 7,
-   "score": 0.6293,
-   "rawScore": 0.056494,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.027283,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.015639,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "JAK2",
-     "geneId": "ENSG00000096968",
-     "geneName": "Janus kinase 2",
-     "assoc": 0.0365,
-     "contribution": 0.00834,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 8,
    "score": 0.6293,
    "rawScore": 0.056494,
    "geneCount": 4,
@@ -792,17 +792,27 @@
    ]
   },
   {
-   "id": "CHEMBL2109047",
-   "name": "Interferon Alfa-N3",
+   "id": "CHEMBL1201558",
+   "name": "Interferon Alfa-2B",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "hairy cell leukemia",
+    "hepatitis B virus infection",
+    "melanoma"
+   ],
+   "indicationCount": 12,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 15,
    "score": 0.392,
    "rawScore": 0.035749,
@@ -905,14 +915,11 @@
    ]
   },
   {
-   "id": "CHEMBL1201562",
-   "name": "Interferon Beta-1A",
+   "id": "CHEMBL2109047",
+   "name": "Interferon Alfa-N3",
    "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
@@ -920,61 +927,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 17,
-   "score": 0.392,
-   "rawScore": 0.035749,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.018185,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.017563,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107842",
-   "name": "Albinterferon Alfa-2B",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
    "score": 0.392,
    "rawScore": 0.035749,
    "geneCount": 2,
@@ -1037,238 +989,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 19,
-   "score": 0.392,
-   "rawScore": 0.035749,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.018185,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.017563,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201563",
-   "name": "Interferon Beta-1B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 20,
-   "score": 0.392,
-   "rawScore": 0.035749,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.018185,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.017563,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297819",
-   "name": "Ropeginterferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "acquired polycythemia vera",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.392,
-   "rawScore": 0.035749,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.018185,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.017563,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108677",
-   "name": "Peginterferon Beta-1A",
-   "drugType": "Protein",
-   "approvedFor": [
-    "multiple sclerosis",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.392,
-   "rawScore": 0.035749,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.018185,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.0973,
-     "contribution": 0.017563,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201558",
-   "name": "Interferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "hairy cell leukemia",
-    "hepatitis B virus infection",
-    "melanoma"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 23,
+   "rank": 18,
    "score": 0.392,
    "rawScore": 0.035749,
    "geneCount": 2,
@@ -1329,7 +1050,63 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 24,
+   "rank": 19,
+   "score": 0.392,
+   "rawScore": 0.035749,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.018185,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.017563,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201562",
+   "name": "Interferon Beta-1A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "multiple sclerosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
    "score": 0.392,
    "rawScore": 0.035749,
    "geneCount": 2,
@@ -1392,6 +1169,229 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 21,
+   "score": 0.392,
+   "rawScore": 0.035749,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.018185,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.017563,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201563",
+   "name": "Interferon Beta-1B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "multiple sclerosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.392,
+   "rawScore": 0.035749,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.018185,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.017563,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297819",
+   "name": "Ropeginterferon Alfa-2B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "acquired polycythemia vera",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.392,
+   "rawScore": 0.035749,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.018185,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.017563,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107842",
+   "name": "Albinterferon Alfa-2B",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.392,
+   "rawScore": 0.035749,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.018185,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.0973,
+     "contribution": 0.017563,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108677",
+   "name": "Peginterferon Beta-1A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "multiple sclerosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 25,
    "score": 0.392,
    "rawScore": 0.035749,
@@ -1699,14 +1699,13 @@
    ]
   },
   {
-   "id": "CHEMBL1200386",
-   "name": "Prednicarbate",
+   "id": "CHEMBL1201263",
+   "name": "Hydrocortamate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammation",
-    "skin disorder"
+    "inflammation"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
@@ -1738,16 +1737,56 @@
    ]
   },
   {
-   "id": "CHEMBL1766",
-   "name": "Desoximetasone",
+   "id": "CHEMBL1091",
+   "name": "Hydrocortisone Acetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inflammation",
+    "Pruritus",
     "skin disorder",
-    "psoriasis vulgaris",
-    "psoriasis"
+    "inflammation"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1650",
+   "name": "Cortisone Acetate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "lateral epicondylitis",
+    "pulmonary tuberculosis",
+    "leukemia",
+    "frozen shoulder"
+   ],
+   "indicationCount": 43,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
@@ -1779,16 +1818,14 @@
    ]
   },
   {
-   "id": "CHEMBL2040682",
-   "name": "Ciclesonide",
+   "id": "CHEMBL1200545",
+   "name": "Diflorasone Diacetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Nasal congestion",
-    "perennial allergic rhinitis",
-    "allergic rhinitis",
-    "asthma"
+    "rosacea",
+    "skin disorder"
    ],
-   "indicationCount": 6,
+   "indicationCount": 2,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
@@ -1796,6 +1833,42 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 36,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201231",
+   "name": "Prednisolone Phosphoric Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -1833,45 +1906,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200953",
-   "name": "Hydrocortisone Probutate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "skin disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
+   "rank": 38,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -1907,86 +1942,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200538",
-   "name": "Betamethasone Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "ulcerative colitis",
-    "type III hypersensitivity disease",
-    "asthma",
-    "anemia"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 42,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201148",
-   "name": "Meprednisone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "chronic obstructive pulmonary disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 43,
+   "rank": 39,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2027,7 +1983,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 45,
+   "rank": 41,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2052,16 +2008,132 @@
    ]
   },
   {
-   "id": "CHEMBL1676",
-   "name": "Fluticasone Furoate",
+   "id": "CHEMBL1200953",
+   "name": "Hydrocortisone Probutate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "allergic rhinitis",
-    "bronchitis",
-    "pulmonary emphysema",
-    "asthma"
+    "skin disorder"
    ],
-   "indicationCount": 9,
+   "indicationCount": 1,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1683",
+   "name": "Hydrocortisone Butyrate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "skin disorder",
+    "seborrheic dermatitis",
+    "atopic eczema"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200600",
+   "name": "Fluorometholone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acne",
+    "hemorrhoid",
+    "inflammation",
+    "eye inflammation"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200877",
+   "name": "Flumethasone Pivalate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "contact dermatitis"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
@@ -2069,93 +2141,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 46,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1370",
-   "name": "Budesonide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary emphysema",
-    "ulcerative colitis",
-    "allergic rhinitis",
-    "perennial allergic rhinitis"
-   ],
-   "indicationCount": 14,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 47,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL989",
-   "name": "Fluocinolone Acetonide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "infectious disease",
-    "eye inflammation",
-    "inflammation",
-    "uveitis"
-   ],
-   "indicationCount": 11,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 48,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2264,7 +2249,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
+   "rank": 8,
    "score": 0.6293,
    "rawScore": 0.056494,
    "geneCount": 4,
@@ -2414,20 +2399,23 @@
    ]
   },
   {
-   "id": "CHEMBL1200878",
-   "name": "Triamcinolone Hexacetonide",
+   "id": "CHEMBL650",
+   "name": "Methylprednisolone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "osteoarthritis"
+    "ulcerative colitis",
+    "Crohn disease",
+    "posterior uveitis",
+    "psoriatic arthritis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 17,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 34,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2452,18 +2440,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201207",
-   "name": "Betamethasone Phosphoric Acid",
+   "id": "CHEMBL1200878",
+   "name": "Triamcinolone Hexacetonide",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "osteoarthritis"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 40,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2504,7 +2494,48 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 45,
+   "score": 0.1784,
+   "rawScore": 0.017073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NR3C1",
+     "geneId": "ENSG00000113580",
+     "geneName": "nuclear receptor subfamily 3 group C member 1",
+     "assoc": 0.0866,
+     "contribution": 0.017073,
+     "drugsOnGene": 58,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0866
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL632",
+   "name": "Betamethasone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Airway obstruction",
+    "hemorrhoid",
+    "eye inflammation",
+    "inflammation"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glucocorticoid receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 55,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2545,7 +2576,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 61,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2570,23 +2601,23 @@
    ]
   },
   {
-   "id": "CHEMBL1504",
-   "name": "Triamcinolone Acetonide",
+   "id": "CHEMBL1364144",
+   "name": "Methylprednisolone Acetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pain",
-    "tenosynovitis",
-    "injury",
-    "dermatitis"
+    "osteoarthritis",
+    "dermatitis",
+    "type III hypersensitivity disease",
+    "frozen shoulder"
    ],
-   "indicationCount": 20,
+   "indicationCount": 13,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 44,
+   "rank": 66,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,
@@ -2611,55 +2642,14 @@
    ]
   },
   {
-   "id": "CHEMBL650",
-   "name": "Methylprednisolone",
+   "id": "CHEMBL1451",
+   "name": "Triamcinolone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "ulcerative colitis",
-    "Crohn disease",
-    "posterior uveitis",
-    "psoriatic arthritis"
-   ],
-   "indicationCount": 17,
-   "mechanisms": [
-    "Glucocorticoid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 52,
-   "score": 0.1784,
-   "rawScore": 0.017073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NR3C1",
-     "geneId": "ENSG00000113580",
-     "geneName": "nuclear receptor subfamily 3 group C member 1",
-     "assoc": 0.0866,
-     "contribution": 0.017073,
-     "drugsOnGene": 58,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0866
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200384",
-   "name": "Betamethasone Dipropionate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "psoriasis",
-    "tinea infection",
-    "psoriasis vulgaris",
-    "skin disorder"
+    "skin disorder",
+    "Nasal congestion",
+    "eye inflammation",
+    "Airway obstruction"
    ],
    "indicationCount": 6,
    "mechanisms": [
@@ -2668,7 +2658,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 53,
+   "rank": 70,
    "score": 0.1784,
    "rawScore": 0.017073,
    "geneCount": 1,

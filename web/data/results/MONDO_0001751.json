@@ -9,16 +9,16 @@
  "knownDrugCount": 9,
  "candidatesConsidered": 179,
  "pathsTwoHop": 77,
- "pathsThreeHop": 200,
+ "pathsThreeHop": 201,
  "candidates": [
   {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
+   "id": "CHEMBL566315",
+   "name": "Obeticholic Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis",
+    "cholangitis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -27,10 +27,14 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
    ],
-   "withdrawn": false,
+   "withdrawn": true,
    "blackBox": true,
    "rank": 2,
    "score": 1.0,
@@ -123,13 +127,13 @@
    ]
   },
   {
-   "id": "CHEMBL566315",
-   "name": "Obeticholic Acid",
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis",
-    "cholangitis"
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -138,14 +142,10 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "benefits are no longer considered to outweigh its risks"
+     "detail": "hepatotoxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
    "rank": 3,
    "score": 1.0,
@@ -469,7 +469,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 6,
    "score": 0.5361,
    "rawScore": 1.207582,
    "geneCount": 1,
@@ -560,6 +560,125 @@
    ]
   },
   {
+   "id": "CHEMBL2219536",
+   "name": "Mipomersen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "familial hypercholesterolemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Apo-B 100 mRNA antisense inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 8,
+   "score": 0.4493,
+   "rawScore": 1.019423,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LSR",
+     "geneId": "ENSG00000105699",
+     "geneName": "lipolysis stimulated lipoprotein receptor",
+     "assoc": 0.6182,
+     "contribution": 0.523617,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      },
+      {
+       "id": "literature",
+       "score": 0.1569
+      }
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.847
+    },
+    {
+     "gene": "LIPA",
+     "geneId": "ENSG00000107798",
+     "geneName": "lipase A, lysosomal acid type",
+     "assoc": 0.8834,
+     "contribution": 0.495806,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5036
+      },
+      {
+       "id": "literature",
+       "score": 0.0213
+      }
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.871
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1337",
+   "name": "Nitisinone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "tyrosinemia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "4-hydroxyphenylpyruvate dioxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 9,
+   "score": 0.4093,
+   "rawScore": 0.932657,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FAH",
+     "geneId": "ENSG00000103876",
+     "geneName": "fumarylacetoacetate hydrolase",
+     "assoc": 0.9392,
+     "contribution": 0.932657,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.739
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "HPD",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2095208",
    "name": "Cobicistat",
    "drugType": "Small molecule",
@@ -575,17 +694,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
-   "score": 0.4125,
-   "rawScore": 0.939552,
-   "geneCount": 3,
+   "rank": 10,
+   "score": 0.3654,
+   "rawScore": 0.837423,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "UGT1A1",
      "geneId": "ENSG00000241635",
      "geneName": "UDP glucuronosyltransferase family 1 member A1",
      "assoc": 0.8157,
-     "contribution": 0.39598,
+     "contribution": 0.352937,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -606,7 +725,7 @@
      "geneId": "ENSG00000134538",
      "geneName": "solute carrier organic anion transporter family member 1B1",
      "assoc": 0.8901,
-     "contribution": 0.307023,
+     "contribution": 0.27365,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -631,7 +750,7 @@
      "geneId": "ENSG00000167165",
      "geneName": "UDP glucuronosyltransferase family 1 member A6",
      "assoc": 0.4873,
-     "contribution": 0.236549,
+     "contribution": 0.210836,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -668,17 +787,17 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 9,
-   "score": 0.4125,
-   "rawScore": 0.939552,
-   "geneCount": 3,
+   "rank": 11,
+   "score": 0.3654,
+   "rawScore": 0.837423,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "UGT1A1",
      "geneId": "ENSG00000241635",
      "geneName": "UDP glucuronosyltransferase family 1 member A1",
      "assoc": 0.8157,
-     "contribution": 0.39598,
+     "contribution": 0.352937,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -699,7 +818,7 @@
      "geneId": "ENSG00000134538",
      "geneName": "solute carrier organic anion transporter family member 1B1",
      "assoc": 0.8901,
-     "contribution": 0.307023,
+     "contribution": 0.27365,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -724,7 +843,7 @@
      "geneId": "ENSG00000167165",
      "geneName": "UDP glucuronosyltransferase family 1 member A6",
      "assoc": 0.4873,
-     "contribution": 0.236549,
+     "contribution": 0.210836,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -735,52 +854,6 @@
      "hops": 3,
      "via": "CYP3A4",
      "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1337",
-   "name": "Nitisinone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "tyrosinemia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "4-hydroxyphenylpyruvate dioxygenase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 10,
-   "score": 0.4093,
-   "rawScore": 0.932657,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FAH",
-     "geneId": "ENSG00000103876",
-     "geneName": "fumarylacetoacetate hydrolase",
-     "assoc": 0.9392,
-     "contribution": 0.932657,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
-      },
-      {
-       "id": "animal_model",
-       "score": 0.739
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "HPD",
-     "viaScore": 0.993
     }
    ]
   },
@@ -799,7 +872,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
    "score": 0.289,
    "rawScore": 0.671987,
    "geneCount": 2,
@@ -864,7 +937,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.2448,
    "rawScore": 0.576077,
    "geneCount": 3,
@@ -908,7 +981,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.2418,
    "rawScore": 0.569542,
    "geneCount": 1,
@@ -955,7 +1028,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.2329,
    "rawScore": 0.550348,
    "geneCount": 1,
@@ -998,7 +1071,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 15,
+   "rank": 16,
    "score": 0.2207,
    "rawScore": 0.52397,
    "geneCount": 1,
@@ -1055,7 +1128,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 16,
+   "rank": 17,
    "score": 0.2203,
    "rawScore": 0.523129,
    "geneCount": 1,
@@ -1102,7 +1175,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.2177,
    "rawScore": 0.517376,
    "geneCount": 2,
@@ -1131,58 +1204,6 @@
      "hops": 3,
      "via": "HNF4A",
      "viaScore": 0.851
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2219536",
-   "name": "Mipomersen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "familial hypercholesterolemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apo-B 100 mRNA antisense inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 18,
-   "score": 0.2077,
-   "rawScore": 0.495806,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LIPA",
-     "geneId": "ENSG00000107798",
-     "geneName": "lipase A, lysosomal acid type",
-     "assoc": 0.8834,
-     "contribution": 0.495806,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5036
-      },
-      {
-       "id": "literature",
-       "score": 0.0213
-      }
-     ],
-     "hops": 3,
-     "via": "APOB",
-     "viaScore": 0.871
     }
    ]
   },
@@ -1259,20 +1280,68 @@
    ]
   },
   {
-   "id": "CHEMBL4298128",
-   "name": "Elexacaftor",
+   "id": "CHEMBL2103870",
+   "name": "Lumacaftor",
    "drugType": "Small molecule",
    "approvedFor": [
+    "acute lung injury",
     "cystic fibrosis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
+   "mechanisms": [
+    "Cystic fibrosis transmembrane conductance regulator stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.1861,
+   "rawScore": 0.448925,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CFTR",
+     "geneId": "ENSG00000001626",
+     "geneName": "CF transmembrane conductance regulator",
+     "assoc": 0.9193,
+     "contribution": 0.448925,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.7599
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5945
+      },
+      {
+       "id": "literature",
+       "score": 0.1705
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3544914",
+   "name": "Tezacaftor",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute lung injury",
+    "cystic fibrosis"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.1861,
    "rawScore": 0.448925,
    "geneCount": 1,
@@ -1321,53 +1390,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.1861,
-   "rawScore": 0.448925,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CFTR",
-     "geneId": "ENSG00000001626",
-     "geneName": "CF transmembrane conductance regulator",
-     "assoc": 0.9193,
-     "contribution": 0.448925,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.7599
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5945
-      },
-      {
-       "id": "literature",
-       "score": 0.1705
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103870",
-   "name": "Lumacaftor",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute lung injury",
-    "cystic fibrosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Cystic fibrosis transmembrane conductance regulator stabiliser"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 22,
    "score": 0.1861,
    "rawScore": 0.448925,
@@ -1401,8 +1423,8 @@
    ]
   },
   {
-   "id": "CHEMBL5314934",
-   "name": "Vanzacaftor",
+   "id": "CHEMBL4298128",
+   "name": "Elexacaftor",
    "drugType": "Small molecule",
    "approvedFor": [
     "cystic fibrosis"
@@ -1447,14 +1469,13 @@
    ]
   },
   {
-   "id": "CHEMBL3544914",
-   "name": "Tezacaftor",
+   "id": "CHEMBL5314934",
+   "name": "Vanzacaftor",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute lung injury",
     "cystic fibrosis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Cystic fibrosis transmembrane conductance regulator positive modulator"
    ],
@@ -2108,17 +2129,15 @@
    ]
   },
   {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2197,15 +2216,17 @@
    ]
   },
   {
-   "id": "CHEMBL2110732",
-   "name": "Dacomitinib Anhydrous",
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2239,66 +2260,6 @@
    ]
   },
   {
-   "id": "CHEMBL464",
-   "name": "Etretinate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "keratosis",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.097,
-   "rawScore": 0.255886,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.9985,
-     "contribution": 0.255886,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8625
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.825
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.814
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6553
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1131",
    "name": "Acitretin",
    "drugType": "Small molecule",
@@ -2322,7 +2283,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 39,
+   "rank": 38,
    "score": 0.097,
    "rawScore": 0.255886,
    "geneCount": 6,
@@ -2373,6 +2334,66 @@
    ],
    "warnings": [],
    "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.097,
+   "rawScore": 0.255886,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.9985,
+     "contribution": 0.255886,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8625
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.825
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.814
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6553
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL464",
+   "name": "Etretinate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "keratosis",
+    "psoriasis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Retinoid receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 40,
    "score": 0.097,
@@ -2655,7 +2676,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
    "score": 0.5361,
    "rawScore": 1.207582,
    "geneCount": 1,

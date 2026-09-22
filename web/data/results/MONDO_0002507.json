@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 3,
  "knownDrugCount": 1,
- "candidatesConsidered": 83,
+ "candidatesConsidered": 85,
  "pathsTwoHop": 18,
- "pathsThreeHop": 81,
+ "pathsThreeHop": 83,
  "candidates": [
   {
    "id": "CHEMBL3039545",
@@ -87,12 +87,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -134,12 +134,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -221,6 +221,50 @@
    ]
   },
   {
+   "id": "CHEMBL1201573",
+   "name": "Oprelvekin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "Thrombocytopenia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interleukin 11 receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.3171,
+   "rawScore": 0.44813,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TGDS",
+     "geneId": "ENSG00000088451",
+     "geneName": "TDP-glucose 4,6-dehydratase",
+     "assoc": 0.576,
+     "contribution": 0.44813,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.576
+      }
+     ],
+     "hops": 3,
+     "via": "IL11RA",
+     "viaScore": 0.778
+    }
+   ]
+  },
+  {
    "id": "CHEMBL265502",
    "name": "Suramin",
    "drugType": "Small molecule",
@@ -232,7 +276,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 5,
+   "rank": 6,
    "score": 0.3163,
    "rawScore": 0.447215,
    "geneCount": 1,
@@ -268,7 +312,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
    "score": 0.2752,
    "rawScore": 0.397909,
    "geneCount": 1,
@@ -306,7 +350,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 8,
    "score": 0.2752,
    "rawScore": 0.397909,
    "geneCount": 1,
@@ -348,7 +392,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.2736,
    "rawScore": 0.396011,
    "geneCount": 4,
@@ -432,55 +476,6 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 9,
-   "score": 0.1911,
-   "rawScore": 0.297036,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PRDM16",
-     "geneId": "ENSG00000142611",
-     "geneName": "PR/SET domain 16",
-     "assoc": 0.6852,
-     "contribution": 0.297036,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6852
-      }
-     ],
-     "hops": 3,
-     "via": "PPARG",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL121",
-   "name": "Rosiglitazone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus",
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
    "rank": 10,
    "score": 0.1911,
    "rawScore": 0.297036,
@@ -550,23 +545,115 @@
    ]
   },
   {
-   "id": "CHEMBL3686884",
-   "name": "E-7090",
+   "id": "CHEMBL121",
+   "name": "Rosiglitazone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "biliary tract cancer",
-    "cancer"
+    "diabetes mellitus",
+    "type 2 diabetes mellitus"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Fibroblast growth factor receptor 2 inhibitor",
-    "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor"
+    "Peroxisome proliferator-activated receptor gamma agonist",
+    "Peroxisome proliferator-activated receptor gamma agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.1911,
+   "rawScore": 0.297036,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PRDM16",
+     "geneId": "ENSG00000142611",
+     "geneName": "PR/SET domain 16",
+     "assoc": 0.6852,
+     "contribution": 0.297036,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6852
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095292",
+   "name": "Tarlatamab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "small cell lung carcinoma",
+    "cancer"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Delta-like protein 3 binding agent",
+    "T cell surface glycoprotein CD3 binding agent"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
+   "score": 0.1841,
+   "rawScore": 0.288698,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "MESP2",
+     "geneId": "ENSG00000188095",
+     "geneName": "mesoderm posterior bHLH transcription factor 2",
+     "assoc": 0.5865,
+     "contribution": 0.288698,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5865
+      }
+     ],
+     "hops": 3,
+     "via": "DLL3",
+     "viaScore": 0.857
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297522",
+   "name": "Pemigatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cholangiocarcinoma",
+    "biliary tract cancer",
+    "neoplasm",
+    "cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor 3 inhibitor",
+    "Fibroblast growth factor receptor 1 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.1801,
    "rawScore": 0.283912,
    "geneCount": 3,
@@ -608,25 +695,23 @@
    ]
   },
   {
-   "id": "CHEMBL4297522",
-   "name": "Pemigatinib",
+   "id": "CHEMBL3686884",
+   "name": "E-7090",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cholangiocarcinoma",
     "biliary tract cancer",
-    "neoplasm",
     "cancer"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
-    "Fibroblast growth factor receptor 3 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor",
     "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
+    "Fibroblast growth factor receptor 3 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 15,
    "score": 0.1801,
    "rawScore": 0.283912,
    "geneCount": 3,
@@ -678,164 +763,6 @@
     "primary cutaneous T-cell non-Hodgkin lymphoma"
    ],
    "indicationCount": 5,
-   "mechanisms": [
-    "Histone deacetylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 14,
-   "score": 0.1637,
-   "rawScore": 0.264225,
-   "geneCount": 11,
-   "paths": [
-    {
-     "gene": "REST",
-     "geneId": "ENSG00000084093",
-     "geneName": "RE1 silencing transcription factor",
-     "assoc": 0.9515,
-     "contribution": 0.134137,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7993
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3589
-      },
-      {
-       "id": "literature",
-       "score": 0.0379
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "REST",
-     "geneId": "ENSG00000084093",
-     "geneName": "RE1 silencing transcription factor",
-     "assoc": 0.9515,
-     "contribution": 0.130088,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7993
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3589
-      },
-      {
-       "id": "literature",
-       "score": 0.0379
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC2",
-     "viaScore": 0.964
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL27759",
-   "name": "Entinostat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Histone deacetylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 15,
-   "score": 0.1637,
-   "rawScore": 0.264225,
-   "geneCount": 11,
-   "paths": [
-    {
-     "gene": "REST",
-     "geneId": "ENSG00000084093",
-     "geneName": "RE1 silencing transcription factor",
-     "assoc": 0.9515,
-     "contribution": 0.134137,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7993
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3589
-      },
-      {
-       "id": "literature",
-       "score": 0.0379
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC1",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "REST",
-     "geneId": "ENSG00000084093",
-     "geneName": "RE1 silencing transcription factor",
-     "assoc": 0.9515,
-     "contribution": 0.130088,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7993
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3589
-      },
-      {
-       "id": "literature",
-       "score": 0.0379
-      }
-     ],
-     "hops": 3,
-     "via": "HDAC2",
-     "viaScore": 0.964
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1213492",
-   "name": "Givinostat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Duchenne muscular dystrophy"
-   ],
-   "indicationCount": 1,
    "mechanisms": [
     "Histone deacetylase inhibitor"
    ],
@@ -1078,117 +1005,160 @@
    ]
   },
   {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
+   "id": "CHEMBL1213492",
+   "name": "Givinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "cholangiocarcinoma"
+    "Duchenne muscular dystrophy"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
-    "Fibroblast growth factor receptor inhibitor"
+    "Histone deacetylase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 19,
-   "score": 0.1544,
-   "rawScore": 0.253051,
-   "geneCount": 4,
+   "score": 0.1637,
+   "rawScore": 0.264225,
+   "geneCount": 11,
    "paths": [
     {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5907,
-     "contribution": 0.147674,
-     "drugsOnGene": 8,
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9515,
+     "contribution": 0.134137,
+     "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5907
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5907,
-     "contribution": 0.105377,
-     "drugsOnGene": 9,
-     "evidence": [
+       "id": "genetic_association",
+       "score": 0.7993
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
       {
        "id": "animal_model",
-       "score": 0.5907
+       "score": 0.3589
+      },
+      {
+       "id": "literature",
+       "score": 0.0379
       }
      ],
      "hops": 3,
-     "via": "FGFR2",
-     "viaScore": 0.987
+     "via": "HDAC1",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9515,
+     "contribution": 0.130088,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7993
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3589
+      },
+      {
+       "id": "literature",
+       "score": 0.0379
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC2",
+     "viaScore": 0.964
     }
    ]
   },
   {
-   "id": "CHEMBL3545376",
-   "name": "Erdafitinib",
+   "id": "CHEMBL27759",
+   "name": "Entinostat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "cancer",
-    "urothelial carcinoma",
-    "urinary bladder carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
+    "Histone deacetylase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 20,
-   "score": 0.1544,
-   "rawScore": 0.253051,
-   "geneCount": 4,
+   "score": 0.1637,
+   "rawScore": 0.264225,
+   "geneCount": 11,
    "paths": [
     {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5907,
-     "contribution": 0.147674,
-     "drugsOnGene": 8,
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9515,
+     "contribution": 0.134137,
+     "drugsOnGene": 6,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5907
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FGFR3",
-     "geneId": "ENSG00000068078",
-     "geneName": "fibroblast growth factor receptor 3",
-     "assoc": 0.5907,
-     "contribution": 0.105377,
-     "drugsOnGene": 9,
-     "evidence": [
+       "id": "genetic_association",
+       "score": 0.7993
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
       {
        "id": "animal_model",
-       "score": 0.5907
+       "score": 0.3589
+      },
+      {
+       "id": "literature",
+       "score": 0.0379
       }
      ],
      "hops": 3,
-     "via": "FGFR2",
-     "viaScore": 0.987
+     "via": "HDAC1",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "REST",
+     "geneId": "ENSG00000084093",
+     "geneName": "RE1 silencing transcription factor",
+     "assoc": 0.9515,
+     "contribution": 0.130088,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7993
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3589
+      },
+      {
+       "id": "literature",
+       "score": 0.0379
+      }
+     ],
+     "hops": 3,
+     "via": "HDAC2",
+     "viaScore": 0.964
     }
    ]
   },
@@ -1251,6 +1221,121 @@
    ]
   },
   {
+   "id": "CHEMBL3545376",
+   "name": "Erdafitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cancer",
+    "urothelial carcinoma",
+    "urinary bladder carcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.1544,
+   "rawScore": 0.253051,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5907,
+     "contribution": 0.147674,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5907
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5907,
+     "contribution": 0.105377,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5907
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cholangiocarcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor",
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.1544,
+   "rawScore": 0.253051,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5907,
+     "contribution": 0.147674,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5907
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FGFR3",
+     "geneId": "ENSG00000068078",
+     "geneName": "fibroblast growth factor receptor 3",
+     "assoc": 0.5907,
+     "contribution": 0.105377,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5907
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR2",
+     "viaScore": 0.987
+    }
+   ]
+  },
+  {
    "id": "CHEMBL601719",
    "name": "Crizotinib",
    "drugType": "Small molecule",
@@ -1267,7 +1352,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 24,
    "score": 0.151,
    "rawScore": 0.248968,
    "geneCount": 6,
@@ -1306,7 +1391,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 25,
    "score": 0.1311,
    "rawScore": 0.225111,
    "geneCount": 2,
@@ -1331,112 +1416,31 @@
    ]
   },
   {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743047",
+   "name": "Necitumumab",
+   "drugType": "Antibody",
    "approvedFor": [
+    "colorectal cancer",
+    "non-small cell squamous lung carcinoma",
     "non-small cell lung carcinoma",
-    "cancer",
     "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
+     "type": "Black Box Warning",
+     "detail": "metabolic toxicity"
+    },
     {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 26,
    "score": 0.1154,
    "rawScore": 0.206232,
@@ -1470,127 +1474,22 @@
    ]
   },
   {
-   "id": "CHEMBL1743047",
-   "name": "Necitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colorectal cancer",
-    "non-small cell squamous lung carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "metabolic toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 27,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL939",
-   "name": "Gefitinib",
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "head and neck squamous cell carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3786343",
-   "name": "Olmutinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "lung cancer",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 27,
    "score": 0.1154,
    "rawScore": 0.206232,
    "geneCount": 1,
@@ -1640,6 +1539,107 @@
     {
      "type": "Black Box Warning",
      "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
     }
    ],
    "withdrawn": false,
@@ -1723,16 +1723,16 @@
    ]
   },
   {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
@@ -1771,66 +1771,21 @@
    ]
   },
   {
-   "id": "CHEMBL4298088",
-   "name": "Cetuximab Sarotalocan",
-   "drugType": "Antibody drug conjugate",
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "head and neck cancer"
+    "lung cancer",
+    "neoplasm"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108359",
-   "name": "Nimotuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 33,
    "score": 0.1154,
    "rawScore": 0.206232,
    "geneCount": 1,
@@ -1887,7 +1842,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
+   "rank": 34,
    "score": 0.1154,
    "rawScore": 0.206232,
    "geneCount": 1,
@@ -1920,74 +1875,20 @@
    ]
   },
   {
-   "id": "CHEMBL2087361",
-   "name": "Icotinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
-    "neoplasm"
+    "head and neck cancer"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Epidermal growth factor receptor erbB1 binding agent"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
-   "score": 0.1154,
-   "rawScore": 0.206232,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SOS1",
-     "geneId": "ENSG00000115904",
-     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
-     "assoc": 0.9548,
-     "contribution": 0.206232,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8589
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201827",
-   "name": "Panitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "colorectal cancer",
-    "colorectal neoplasm",
-    "colorectal adenocarcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 37,
+   "rank": 35,
    "score": 0.1154,
    "rawScore": 0.206232,
    "geneCount": 1,
@@ -2035,6 +1936,98 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 36,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 38,
    "score": 0.1154,
    "rawScore": 0.206232,
@@ -2068,117 +2061,94 @@
    ]
   },
   {
-   "id": "CHEMBL468",
-   "name": "Thalidomide",
-   "drugType": "Small molecule",
+   "id": "CHEMBL2108359",
+   "name": "Nimotuzumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "plasma cell myeloma",
-    "immune system disorder"
+    "head and neck cancer"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 39,
-   "score": 0.1035,
-   "rawScore": 0.192058,
-   "geneCount": 4,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "FBXO11",
-     "geneId": "ENSG00000138081",
-     "geneName": "F-box protein 11",
-     "assoc": 0.5951,
-     "contribution": 0.192058,
-     "drugsOnGene": 3,
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5951
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
       }
      ],
      "hops": 3,
-     "via": "RBX1",
-     "viaScore": 0.872
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL848",
-   "name": "Lenalidomide",
+   "id": "CHEMBL2087361",
+   "name": "Icotinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "follicular lymphoma",
-    "mantle cell lymphoma",
-    "plasma cell myeloma",
-    "immune system disorder"
+    "neoplasm"
    ],
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
-    "CRL4(CRBN) E3 ubiquitin ligase modulator",
-    "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 40,
-   "score": 0.1035,
-   "rawScore": 0.192058,
-   "geneCount": 4,
+   "score": 0.1154,
+   "rawScore": 0.206232,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "FBXO11",
-     "geneId": "ENSG00000138081",
-     "geneName": "F-box protein 11",
-     "assoc": 0.5951,
-     "contribution": 0.192058,
-     "drugsOnGene": 3,
+     "gene": "SOS1",
+     "geneId": "ENSG00000115904",
+     "geneName": "SOS Ras/Rac guanine nucleotide exchange factor 1",
+     "assoc": 0.9548,
+     "contribution": 0.206232,
+     "drugsOnGene": 23,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.5951
+       "id": "genetic_association",
+       "score": 0.8589
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.6079
+      },
+      {
+       "id": "literature",
+       "score": 0.1824
       }
      ],
      "hops": 3,
-     "via": "RBX1",
-     "viaScore": 0.872
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   }

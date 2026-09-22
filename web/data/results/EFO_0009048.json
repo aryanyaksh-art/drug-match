@@ -7,18 +7,18 @@
  "genesScored": 38,
  "genesWithDrugs": 4,
  "knownDrugCount": 4,
- "candidatesConsidered": 37,
+ "candidatesConsidered": 43,
  "pathsTwoHop": 9,
- "pathsThreeHop": 46,
+ "pathsThreeHop": 52,
  "candidates": [
   {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
+   "id": "CHEMBL566315",
+   "name": "Obeticholic Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis",
+    "cholangitis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -27,10 +27,14 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
    ],
-   "withdrawn": false,
+   "withdrawn": true,
    "blackBox": true,
    "rank": 2,
    "score": 1.0,
@@ -107,13 +111,13 @@
    ]
   },
   {
-   "id": "CHEMBL566315",
-   "name": "Obeticholic Acid",
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis",
-    "cholangitis"
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -122,14 +126,10 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "benefits are no longer considered to outweigh its risks"
+     "detail": "hepatotoxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
    "rank": 3,
    "score": 1.0,
@@ -632,17 +632,14 @@
    ]
   },
   {
-   "id": "CHEMBL4297588",
-   "name": "Odevixibat",
+   "id": "CHEMBL3039515",
+   "name": "Elobixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "progressive familial intrahepatic cholestasis",
-    "Pruritus",
-    "Alagille syndrome"
+    "Constipation"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -685,14 +682,17 @@
    ]
   },
   {
-   "id": "CHEMBL3039515",
-   "name": "Elobixibat",
+   "id": "CHEMBL4297588",
+   "name": "Odevixibat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Constipation"
+    "progressive familial intrahepatic cholestasis",
+    "Pruritus",
+    "Alagille syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
+    "Ileal bile acid transporter inhibitor",
     "Ileal bile acid transporter inhibitor"
    ],
    "warnings": [],
@@ -803,6 +803,47 @@
    ]
   },
   {
+   "id": "CHEMBL3545313",
+   "name": "Bempedoic Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "coronary artery disorder",
+    "familial hypercholesterolemia",
+    "atherosclerosis",
+    "Hypercholesterolemia"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "ATP-citrate synthase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.1093,
+   "rawScore": 0.291898,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MLXIPL",
+     "geneId": "ENSG00000009950",
+     "geneName": "MLX interacting protein like",
+     "assoc": 0.3204,
+     "contribution": 0.291898,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3204
+      }
+     ],
+     "hops": 3,
+     "via": "ACLY",
+     "viaScore": 0.911
+    }
+   ]
+  },
+  {
    "id": "CHEMBL271227",
    "name": "Abiraterone Acetate",
    "drugType": "Small molecule",
@@ -818,7 +859,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.1073,
    "rawScore": 0.287743,
    "geneCount": 1,
@@ -861,55 +902,6 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 18,
-   "score": 0.1047,
-   "rawScore": 0.282487,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PRDM16",
-     "geneId": "ENSG00000142611",
-     "geneName": "PR/SET domain 16",
-     "assoc": 0.6516,
-     "contribution": 0.282487,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6516
-      }
-     ],
-     "hops": 3,
-     "via": "PPARG",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL121",
-   "name": "Rosiglitazone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "diabetes mellitus",
-    "type 2 diabetes mellitus"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Peroxisome proliferator-activated receptor gamma agonist",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
    "rank": 19,
    "score": 0.1047,
    "rawScore": 0.282487,
@@ -979,6 +971,55 @@
    ]
   },
   {
+   "id": "CHEMBL121",
+   "name": "Rosiglitazone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus",
+    "type 2 diabetes mellitus"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Peroxisome proliferator-activated receptor gamma agonist",
+    "Peroxisome proliferator-activated receptor gamma agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.1047,
+   "rawScore": 0.282487,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PRDM16",
+     "geneId": "ENSG00000142611",
+     "geneName": "PR/SET domain 16",
+     "assoc": 0.6516,
+     "contribution": 0.282487,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6516
+      }
+     ],
+     "hops": 3,
+     "via": "PPARG",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
    "id": "CHEMBL53418",
    "name": "Danthron",
    "drugType": "Small molecule",
@@ -997,7 +1038,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 21,
+   "rank": 22,
    "score": 0.1021,
    "rawScore": 0.277044,
    "geneCount": 1,
@@ -1022,52 +1063,6 @@
      "hops": 3,
      "via": "RXRA",
      "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1670",
-   "name": "Mitotane",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "adrenal cortex neoplasm",
-    "neoplasm",
-    "adrenal cortex carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Cytochrome P450 11A1 inhibitor",
-    "Cytochrome P450 11B1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 22,
-   "score": 0.0784,
-   "rawScore": 0.228159,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "SULT2A1",
-     "geneId": "ENSG00000105398",
-     "geneName": "sulfotransferase family 2A member 1",
-     "assoc": 0.7573,
-     "contribution": 0.228159,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7573
-      }
-     ],
-     "hops": 3,
-     "via": "CYP11A1",
-     "viaScore": 0.814
     }
    ]
   },
@@ -1111,6 +1106,52 @@
    ]
   },
   {
+   "id": "CHEMBL1670",
+   "name": "Mitotane",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "adrenal cortex neoplasm",
+    "neoplasm",
+    "adrenal cortex carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Cytochrome P450 11A1 inhibitor",
+    "Cytochrome P450 11B1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 24,
+   "score": 0.0784,
+   "rawScore": 0.228159,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "SULT2A1",
+     "geneId": "ENSG00000105398",
+     "geneName": "sulfotransferase family 2A member 1",
+     "assoc": 0.7573,
+     "contribution": 0.228159,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7573
+      }
+     ],
+     "hops": 3,
+     "via": "CYP11A1",
+     "viaScore": 0.814
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4297530",
    "name": "Saroglitazar",
    "drugType": "Small molecule",
@@ -1125,7 +1166,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 25,
    "score": 0.0716,
    "rawScore": 0.214085,
    "geneCount": 2,
@@ -1164,7 +1205,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 26,
    "score": 0.056,
    "rawScore": 0.182033,
    "geneCount": 3,
@@ -1209,7 +1250,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 26,
+   "rank": 27,
    "score": 0.0543,
    "rawScore": 0.178526,
    "geneCount": 3,
@@ -1238,6 +1279,45 @@
    ]
   },
   {
+   "id": "CHEMBL3261331",
+   "name": "Resmetirom",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cirrhosis of liver",
+    "metabolic dysfunction-associated steatotic liver disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Thyroid hormone receptor beta-1 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.0481,
+   "rawScore": 0.165631,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "JMJD1C",
+     "geneId": "ENSG00000171988",
+     "geneName": "jumonji domain containing 1C",
+     "assoc": 0.3917,
+     "contribution": 0.165631,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3917
+      }
+     ],
+     "hops": 3,
+     "via": "THRB",
+     "viaScore": 0.805
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201346",
    "name": "Balsalazide",
    "drugType": "Small molecule",
@@ -1253,7 +1333,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 29,
    "score": 0.0464,
    "rawScore": 0.162246,
    "geneCount": 4,
@@ -1294,7 +1374,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 30,
    "score": 0.0464,
    "rawScore": 0.162246,
    "geneCount": 4,
@@ -1334,7 +1414,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 31,
    "score": 0.0464,
    "rawScore": 0.162246,
    "geneCount": 4,
@@ -1376,7 +1456,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 32,
    "score": 0.0411,
    "rawScore": 0.151153,
    "geneCount": 5,
@@ -1397,58 +1477,6 @@
      "hops": 3,
      "via": "CYP17A1",
      "viaScore": 0.778
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL464",
-   "name": "Etretinate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "keratosis",
-    "psoriasis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Retinoid receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.0334,
-   "rawScore": 0.135297,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "NR1H4",
-     "geneId": "ENSG00000012504",
-     "geneName": "nuclear receptor subfamily 1 group H member 4",
-     "assoc": 0.5279,
-     "contribution": 0.135297,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5148
-      },
-      {
-       "id": "literature",
-       "score": 0.027
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.999
     }
    ]
   },
@@ -1476,7 +1504,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
+   "rank": 33,
    "score": 0.0334,
    "rawScore": 0.135297,
    "geneCount": 6,
@@ -1520,7 +1548,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 34,
    "score": 0.0334,
    "rawScore": 0.135297,
    "geneCount": 6,
@@ -1549,76 +1577,218 @@
    ]
   },
   {
-   "id": "CHEMBL113461",
-   "name": "Tedisamil",
+   "id": "CHEMBL464",
+   "name": "Etretinate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiac arrhythmia"
+    "keratosis",
+    "psoriasis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Voltage-gated potassium channel blocker"
+    "Retinoid receptor agonist"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
-   "rank": 34,
-   "score": 0.0,
-   "rawScore": 0.066494,
-   "geneCount": 40,
+   "rank": 35,
+   "score": 0.0334,
+   "rawScore": 0.135297,
+   "geneCount": 6,
    "paths": [
     {
-     "gene": "KCNH8",
-     "geneId": "ENSG00000183960",
-     "geneName": "potassium voltage-gated channel subfamily H member 8",
-     "assoc": 0.5063,
-     "contribution": 0.066494,
-     "drugsOnGene": 4,
+     "gene": "NR1H4",
+     "geneId": "ENSG00000012504",
+     "geneName": "nuclear receptor subfamily 1 group H member 4",
+     "assoc": 0.5279,
+     "contribution": 0.135297,
+     "drugsOnGene": 5,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.5063
+       "id": "animal_model",
+       "score": 0.5148
+      },
+      {
+       "id": "literature",
+       "score": 0.027
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL821",
-   "name": "Guanidine",
+   "id": "CHEMBL1624",
+   "name": "Levothyroxine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "hypothyroidism"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
-    "Voltage-gated potassium channel blocker"
+    "Thyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
+   "score": 0.0286,
+   "rawScore": 0.125525,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "JMJD1C",
+     "geneId": "ENSG00000171988",
+     "geneName": "jumonji domain containing 1C",
+     "assoc": 0.3917,
+     "contribution": 0.125525,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3917
+      }
+     ],
+     "hops": 3,
+     "via": "THRB",
+     "viaScore": 0.805
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1544",
+   "name": "Liothyronine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hypothyroidism"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Thyroid hormone receptor agonist",
+    "Thyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 37,
+   "score": 0.0286,
+   "rawScore": 0.125525,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "JMJD1C",
+     "geneId": "ENSG00000171988",
+     "geneName": "jumonji domain containing 1C",
+     "assoc": 0.3917,
+     "contribution": 0.125525,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3917
+      }
+     ],
+     "hops": 3,
+     "via": "THRB",
+     "viaScore": 0.805
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL559",
+   "name": "Dextrothyroxine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Thyroid hormone receptor agonist",
+    "Thyroid hormone receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
-   "score": 0.0,
-   "rawScore": 0.066494,
-   "geneCount": 40,
+   "rank": 38,
+   "score": 0.0286,
+   "rawScore": 0.125525,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "KCNH8",
-     "geneId": "ENSG00000183960",
-     "geneName": "potassium voltage-gated channel subfamily H member 8",
-     "assoc": 0.5063,
-     "contribution": 0.066494,
-     "drugsOnGene": 4,
+     "gene": "JMJD1C",
+     "geneId": "ENSG00000171988",
+     "geneName": "jumonji domain containing 1C",
+     "assoc": 0.3917,
+     "contribution": 0.125525,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.5063
+       "score": 0.3917
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "THRB",
+     "viaScore": 0.805
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL41632",
+   "name": "Tiratricol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "thyrotoxicosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Thyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.0286,
+   "rawScore": 0.125525,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "JMJD1C",
+     "geneId": "ENSG00000171988",
+     "geneName": "jumonji domain containing 1C",
+     "assoc": 0.3917,
+     "contribution": 0.125525,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3917
+      }
+     ],
+     "hops": 3,
+     "via": "THRB",
+     "viaScore": 0.805
     }
    ]
   },
@@ -1636,7 +1806,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 40,
    "score": 0.0,
    "rawScore": 0.066494,
    "geneCount": 40,
@@ -1678,7 +1848,43 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 41,
+   "score": 0.0,
+   "rawScore": 0.066494,
+   "geneCount": 40,
+   "paths": [
+    {
+     "gene": "KCNH8",
+     "geneId": "ENSG00000183960",
+     "geneName": "potassium voltage-gated channel subfamily H member 8",
+     "assoc": 0.5063,
+     "contribution": 0.066494,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5063
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL821",
+   "name": "Guanidine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Voltage-gated potassium channel blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 42,
    "score": 0.0,
    "rawScore": 0.066494,
    "geneCount": 40,

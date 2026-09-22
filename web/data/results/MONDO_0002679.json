@@ -7,9 +7,9 @@
  "genesScored": 43,
  "genesWithDrugs": 16,
  "knownDrugCount": 15,
- "candidatesConsidered": 300,
+ "candidatesConsidered": 303,
  "pathsTwoHop": 183,
- "pathsThreeHop": 450,
+ "pathsThreeHop": 454,
  "candidates": [
   {
    "id": "CHEMBL2219536",
@@ -149,18 +149,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -224,15 +221,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -451,17 +451,13 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
+    "Amyloid-beta A4 protein stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -529,13 +525,17 @@
    ]
   },
   {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -954,6 +954,68 @@
    ]
   },
   {
+   "id": "CHEMBL256907",
+   "name": "Maraviroc",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "HIV-1 infection",
+    "viral infectious disease",
+    "HIV infectious disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "C-C chemokine receptor type 5 antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
+   "score": 0.4098,
+   "rawScore": 0.46122,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CXCL16",
+     "geneId": "ENSG00000161921",
+     "geneName": "C-X-C motif chemokine ligand 16",
+     "assoc": 0.3344,
+     "contribution": 0.239209,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3344
+      }
+     ],
+     "hops": 3,
+     "via": "CCR5",
+     "viaScore": 0.944
+    },
+    {
+     "gene": "C5AR1",
+     "geneId": "ENSG00000197405",
+     "geneName": "complement C5a receptor 1",
+     "assoc": 0.4423,
+     "contribution": 0.222011,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4423
+      }
+     ],
+     "hops": 3,
+     "via": "CCR5",
+     "viaScore": 0.874
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4594575",
    "name": "Sabatolimab",
    "drugType": "Antibody",
@@ -967,7 +1029,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 16,
    "score": 0.4065,
    "rawScore": 0.457561,
    "geneCount": 1,
@@ -1007,7 +1069,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 17,
    "score": 0.3925,
    "rawScore": 0.44227,
    "geneCount": 1,
@@ -1028,62 +1090,6 @@
      "hops": 2,
      "via": null,
      "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.3835,
-   "rawScore": 0.432388,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOH",
-     "geneId": "ENSG00000091583",
-     "geneName": "apolipoprotein H",
-     "assoc": 0.6566,
-     "contribution": 0.316491,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6566
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.987
-    },
-    {
-     "gene": "APOC1",
-     "geneId": "ENSG00000130208",
-     "geneName": "apolipoprotein C1",
-     "assoc": 0.202,
-     "contribution": 0.115896,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.202
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.999
     }
    ]
   },
@@ -1143,6 +1149,62 @@
    ]
   },
   {
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.3835,
+   "rawScore": 0.432388,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOH",
+     "geneId": "ENSG00000091583",
+     "geneName": "apolipoprotein H",
+     "assoc": 0.6566,
+     "contribution": 0.316491,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6566
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.987
+    },
+    {
+     "gene": "APOC1",
+     "geneId": "ENSG00000130208",
+     "geneName": "apolipoprotein C1",
+     "assoc": 0.202,
+     "contribution": 0.115896,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.202
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4299940",
    "name": "Mitapivat",
    "drugType": "Small molecule",
@@ -1155,7 +1217,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.355,
    "rawScore": 0.40122,
    "geneCount": 1,
@@ -1194,7 +1256,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.3374,
    "rawScore": 0.381928,
    "geneCount": 1,
@@ -1233,7 +1295,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 22,
    "score": 0.3079,
    "rawScore": 0.349619,
    "geneCount": 2,
@@ -1289,7 +1351,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 23,
    "score": 0.3072,
    "rawScore": 0.348866,
    "geneCount": 2,
@@ -1336,7 +1398,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 23,
+   "rank": 24,
    "score": 0.3068,
    "rawScore": 0.348394,
    "geneCount": 1,
@@ -1377,7 +1439,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 25,
    "score": 0.2992,
    "rawScore": 0.340113,
    "geneCount": 2,
@@ -1433,7 +1495,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 26,
    "score": 0.2992,
    "rawScore": 0.340113,
    "geneCount": 2,
@@ -1490,7 +1552,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 27,
    "score": 0.2772,
    "rawScore": 0.316063,
    "geneCount": 1,
@@ -1529,7 +1591,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 28,
    "score": 0.2769,
    "rawScore": 0.315747,
    "geneCount": 1,
@@ -1554,73 +1616,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 28,
-   "score": 0.2668,
-   "rawScore": 0.304641,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.6964,
-     "contribution": 0.193269,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6964
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.4257,
-     "contribution": 0.111372,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4257
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108887",
    "name": "Afelimomab",
    "drugType": "Antibody",
@@ -1635,69 +1630,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 29,
-   "score": 0.2668,
-   "rawScore": 0.304641,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.6964,
-     "contribution": 0.193269,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6964
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.4257,
-     "contribution": 0.111372,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4257
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
    "score": 0.2668,
    "rawScore": 0.304641,
    "geneCount": 1,
@@ -1764,6 +1696,69 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 30,
+   "score": 0.2668,
+   "rawScore": 0.304641,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.6964,
+     "contribution": 0.193269,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6964
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.4257,
+     "contribution": 0.111372,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4257
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 31,
    "score": 0.2668,
    "rawScore": 0.304641,
@@ -1806,31 +1801,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 12,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 32,
    "score": 0.2668,
    "rawScore": 0.304641,
@@ -1940,19 +1923,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 34,
    "score": 0.2668,
    "rawScore": 0.304641,
@@ -1995,6 +1990,114 @@
    ]
   },
   {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 35,
+   "score": 0.2668,
+   "rawScore": 0.304641,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.6964,
+     "contribution": 0.193269,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6964
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.4257,
+     "contribution": 0.111372,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4257
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107333",
+   "name": "Dimethyl Fumarate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "relapsing-remitting multiple sclerosis",
+    "multiple sclerosis",
+    "immune system disorder",
+    "psoriasis"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Kelch-like ECH-associated protein 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.264,
+   "rawScore": 0.301619,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFE2L2",
+     "geneId": "ENSG00000116044",
+     "geneName": "NFE2 like bZIP transcription factor 2",
+     "assoc": 0.4685,
+     "contribution": 0.301619,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.4685
+      }
+     ],
+     "hops": 3,
+     "via": "KEAP1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3989944",
    "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
@@ -2010,7 +2113,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
+   "rank": 37,
    "score": 0.264,
    "rawScore": 0.301619,
    "geneCount": 1,
@@ -2048,48 +2151,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
-   "score": 0.264,
-   "rawScore": 0.301619,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFE2L2",
-     "geneId": "ENSG00000116044",
-     "geneName": "NFE2 like bZIP transcription factor 2",
-     "assoc": 0.4685,
-     "contribution": 0.301619,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.4685
-      }
-     ],
-     "hops": 3,
-     "via": "KEAP1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107333",
-   "name": "Dimethyl Fumarate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "relapsing-remitting multiple sclerosis",
-    "multiple sclerosis",
-    "immune system disorder",
-    "psoriasis"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Kelch-like ECH-associated protein 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
+   "rank": 38,
    "score": 0.264,
    "rawScore": 0.301619,
    "geneCount": 1,
@@ -2128,7 +2190,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 39,
    "score": 0.2616,
    "rawScore": 0.298972,
    "geneCount": 1,
@@ -2168,7 +2230,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 40,
    "score": 0.2557,
    "rawScore": 0.29244,
    "geneCount": 1,
@@ -2191,64 +2253,6 @@
      "viaScore": 0.997
     }
    ]
-  },
-  {
-   "id": "CHEMBL1201584",
-   "name": "Abciximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "intermediate coronary syndrome",
-    "angina pectoris"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Integrin alpha-IIb/beta-3 inhibitor",
-    "Integrin alpha-V/beta-3 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.2527,
-   "rawScore": 0.289192,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "VWF",
-     "geneId": "ENSG00000110799",
-     "geneName": "von Willebrand factor",
-     "assoc": 0.6639,
-     "contribution": 0.144669,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6639
-      }
-     ],
-     "hops": 3,
-     "via": "ITGA2B",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "VWF",
-     "geneId": "ENSG00000110799",
-     "geneName": "von Willebrand factor",
-     "assoc": 0.6639,
-     "contribution": 0.144524,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6639
-      }
-     ],
-     "hops": 3,
-     "via": "ITGB3",
-     "viaScore": 0.998
-    }
-   ]
   }
  ],
  "knownRanked": [
@@ -2264,7 +2268,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 61,
+   "rank": 64,
    "score": 0.199,
    "rawScore": 0.230452,
    "geneCount": 7,
@@ -2339,7 +2343,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 160,
+   "rank": 166,
    "score": 0.0657,
    "rawScore": 0.084533,
    "geneCount": 1,
@@ -2385,7 +2389,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 224,
+   "rank": 225,
    "score": 0.0317,
    "rawScore": 0.047281,
    "geneCount": 1,
@@ -2433,7 +2437,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 225,
+   "rank": 228,
    "score": 0.0317,
    "rawScore": 0.047281,
    "geneCount": 1,
@@ -2474,7 +2478,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 265,
+   "rank": 271,
    "score": 0.0153,
    "rawScore": 0.029331,
    "geneCount": 2,

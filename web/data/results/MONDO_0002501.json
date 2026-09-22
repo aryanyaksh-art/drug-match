@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 18,
  "knownDrugCount": 11,
- "candidatesConsidered": 215,
+ "candidatesConsidered": 217,
  "pathsTwoHop": 159,
- "pathsThreeHop": 325,
+ "pathsThreeHop": 367,
  "candidates": [
   {
    "id": "CHEMBL2396661",
@@ -30,7 +30,7 @@
    "blackBox": false,
    "rank": 1,
    "score": 1.0,
-   "rawScore": 3.076127,
+   "rawScore": 3.312316,
    "geneCount": 1,
    "paths": [
     {
@@ -118,7 +118,7 @@
    "blackBox": false,
    "rank": 2,
    "score": 1.0,
-   "rawScore": 3.076127,
+   "rawScore": 3.312316,
    "geneCount": 1,
    "paths": [
     {
@@ -209,8 +209,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 3,
-   "score": 0.8604,
-   "rawScore": 2.655246,
+   "score": 0.8947,
+   "rawScore": 2.969898,
    "geneCount": 2,
    "paths": [
     {
@@ -283,12 +283,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -298,7 +298,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 4,
-   "score": 0.6091,
+   "score": 0.5649,
    "rawScore": 1.897442,
    "geneCount": 1,
    "paths": [
@@ -368,12 +368,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -383,7 +383,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
-   "score": 0.6091,
+   "score": 0.5649,
    "rawScore": 1.897442,
    "geneCount": 1,
    "paths": [
@@ -471,7 +471,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 6,
-   "score": 0.4697,
+   "score": 0.4356,
    "rawScore": 1.476838,
    "geneCount": 3,
    "paths": [
@@ -537,31 +537,51 @@
    ]
   },
   {
-   "id": "CHEMBL3545110",
-   "name": "Ribociclib",
+   "id": "CHEMBL3039502",
+   "name": "Duvelisib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor"
+   "approvedFor": [
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm",
+    "follicular lymphoma"
    ],
-   "warnings": [],
+   "indicationCount": 3,
+   "mechanisms": [
+    "PI3-kinase p110-gamma subunit inhibitor",
+    "PI3-kinase p110-delta subunit inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 7,
-   "score": 0.3264,
-   "rawScore": 1.044693,
+   "score": 0.3848,
+   "rawScore": 1.311649,
    "geneCount": 2,
    "paths": [
     {
-     "gene": "RB1",
-     "geneId": "ENSG00000139687",
-     "geneName": "RB transcriptional corepressor 1",
-     "assoc": 0.7439,
-     "contribution": 0.245136,
-     "drugsOnGene": 4,
+     "gene": "PIK3R1",
+     "geneId": "ENSG00000145675",
+     "geneName": "phosphoinositide-3-kinase regulatory subunit 1",
+     "assoc": 0.7477,
+     "contribution": 0.325129,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "somatic_mutation",
@@ -569,46 +589,50 @@
       },
       {
        "id": "literature",
-       "score": 0.0789
+       "score": 0.0927
       }
      ],
      "hops": 3,
-     "via": "CDK4",
+     "via": "PIK3CG",
      "viaScore": 0.999
     },
     {
-     "gene": "CDKN2C",
-     "geneId": "ENSG00000123080",
-     "geneName": "cyclin dependent kinase inhibitor 2C",
-     "assoc": 0.7219,
-     "contribution": 0.202287,
-     "drugsOnGene": 4,
+     "gene": "PIK3CB",
+     "geneId": "ENSG00000051382",
+     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta",
+     "assoc": 0.5699,
+     "contribution": 0.277498,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "somatic_mutation",
-       "score": 0.7219
+       "score": 0.5699
       }
      ],
      "hops": 3,
-     "via": "CDK6",
-     "viaScore": 0.999
+     "via": "PIK3CG",
+     "viaScore": 0.997
     },
     {
-     "gene": "CDKN2C",
-     "geneId": "ENSG00000123080",
-     "geneName": "cyclin dependent kinase inhibitor 2C",
-     "assoc": 0.7219,
-     "contribution": 0.202287,
-     "drugsOnGene": 4,
+     "gene": "NRAS",
+     "geneId": "ENSG00000213281",
+     "geneName": "NRAS proto-oncogene, GTPase",
+     "assoc": 0.6321,
+     "contribution": 0.24939,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "somatic_mutation",
-       "score": 0.7219
+       "score": 0.6206
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
       }
      ],
      "hops": 3,
-     "via": "CDK4",
-     "viaScore": 0.999
+     "via": "PIK3CG",
+     "viaScore": 0.991
     }
    ]
   },
@@ -631,7 +655,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
-   "score": 0.3264,
+   "score": 0.3027,
    "rawScore": 1.044693,
    "geneCount": 2,
    "paths": [
@@ -710,7 +734,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 9,
-   "score": 0.3264,
+   "score": 0.3027,
    "rawScore": 1.044693,
    "geneCount": 2,
    "paths": [
@@ -772,51 +796,31 @@
    ]
   },
   {
-   "id": "CHEMBL3039502",
-   "name": "Duvelisib",
+   "id": "CHEMBL3545110",
+   "name": "Ribociclib",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm",
-    "follicular lymphoma"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "PI3-kinase p110-gamma subunit inhibitor",
-    "PI3-kinase p110-delta subunit inhibitor"
+    "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 10,
-   "score": 0.2779,
-   "rawScore": 0.898496,
+   "score": 0.3027,
+   "rawScore": 1.044693,
    "geneCount": 2,
    "paths": [
     {
-     "gene": "PIK3R1",
-     "geneId": "ENSG00000145675",
-     "geneName": "phosphoinositide-3-kinase regulatory subunit 1",
-     "assoc": 0.7477,
-     "contribution": 0.325129,
-     "drugsOnGene": 1,
+     "gene": "RB1",
+     "geneId": "ENSG00000139687",
+     "geneName": "RB transcriptional corepressor 1",
+     "assoc": 0.7439,
+     "contribution": 0.245136,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "somatic_mutation",
@@ -824,54 +828,46 @@
       },
       {
        "id": "literature",
-       "score": 0.0927
+       "score": 0.0789
       }
      ],
      "hops": 3,
-     "via": "PIK3CG",
+     "via": "CDK4",
      "viaScore": 0.999
     },
     {
-     "gene": "NRAS",
-     "geneId": "ENSG00000213281",
-     "geneName": "NRAS proto-oncogene, GTPase",
-     "assoc": 0.6321,
-     "contribution": 0.24939,
-     "drugsOnGene": 1,
+     "gene": "CDKN2C",
+     "geneId": "ENSG00000123080",
+     "geneName": "cyclin dependent kinase inhibitor 2C",
+     "assoc": 0.7219,
+     "contribution": 0.202287,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "somatic_mutation",
-       "score": 0.6206
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
+       "score": 0.7219
       }
      ],
      "hops": 3,
-     "via": "PIK3CG",
-     "viaScore": 0.991
+     "via": "CDK6",
+     "viaScore": 0.999
     },
     {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.165197,
-     "drugsOnGene": 6,
+     "gene": "CDKN2C",
+     "geneId": "ENSG00000123080",
+     "geneName": "cyclin dependent kinase inhibitor 2C",
+     "assoc": 0.7219,
+     "contribution": 0.202287,
+     "drugsOnGene": 4,
      "evidence": [
       {
        "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
+       "score": 0.7219
       }
      ],
      "hops": 3,
-     "via": "PIK3CD",
-     "viaScore": 0.998
+     "via": "CDK4",
+     "viaScore": 0.999
     }
    ]
   },
@@ -893,7 +889,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 11,
-   "score": 0.2477,
+   "score": 0.2298,
    "rawScore": 0.807586,
    "geneCount": 6,
    "paths": [
@@ -951,6 +947,432 @@
    ]
   },
   {
+   "id": "CHEMBL4297774",
+   "name": "Amivantamab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Hepatocyte growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.2252,
+   "rawScore": 0.792949,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.252809,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.166579,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.103642,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.2238,
+   "rawScore": 0.788339,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.210937,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.14164,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.118131,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.2238,
+   "rawScore": 0.788339,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.210937,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.14164,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.118131,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1173655",
+   "name": "Afatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.2238,
+   "rawScore": 0.788339,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.210937,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.14164,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.118131,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545311",
+   "name": "Brigatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "anaplastic large cell lymphoma",
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "ALK tyrosine kinase receptor inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.2106,
+   "rawScore": 0.745286,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ALK",
+     "geneId": "ENSG00000171094",
+     "geneName": "ALK receptor tyrosine kinase",
+     "assoc": 0.5895,
+     "contribution": 0.205147,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.0456
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.166579,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.103642,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108594",
    "name": "Eptotermin Alfa",
    "drugType": "Protein",
@@ -968,8 +1390,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
-   "score": 0.2227,
+   "rank": 17,
+   "score": 0.2066,
    "rawScore": 0.732194,
    "geneCount": 4,
    "paths": [
@@ -1040,8 +1462,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
-   "score": 0.2197,
+   "rank": 18,
+   "score": 0.2037,
    "rawScore": 0.722927,
    "geneCount": 1,
    "paths": [
@@ -1128,8 +1550,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
-   "score": 0.2165,
+   "rank": 19,
+   "score": 0.2007,
    "rawScore": 0.713223,
    "geneCount": 9,
    "paths": [
@@ -1199,6 +1621,1313 @@
    ]
   },
   {
+   "id": "CHEMBL1743047",
+   "name": "Necitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal cancer",
+    "non-small cell squamous lung carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "metabolic toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 20,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201577",
+   "name": "Cetuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "colorectal adenocarcinoma",
+    "colorectal carcinoma",
+    "colorectal neoplasm",
+    "head and neck neoplasm"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 24,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545308",
+   "name": "Rociletinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "lung cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4650319",
+   "name": "Mobocertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4558324",
+   "name": "Lazertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108359",
+   "name": "Nimotuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2087361",
+   "name": "Icotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.2006,
+   "rawScore": 0.712718,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.219803,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.136757,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "PTPRK",
+     "geneId": "ENSG00000152894",
+     "geneName": "protein tyrosine phosphatase receptor type K",
+     "assoc": 0.5699,
+     "contribution": 0.1348,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.829
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1946170",
    "name": "Regorafenib",
    "drugType": "Small molecule",
@@ -1222,8 +2951,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 15,
-   "score": 0.2128,
+   "rank": 35,
+   "score": 0.1974,
    "rawScore": 0.702239,
    "geneCount": 18,
    "paths": [
@@ -1293,341 +3022,6 @@
    ]
   },
   {
-   "id": "CHEMBL2110732",
-   "name": "Dacomitinib Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.2126,
-   "rawScore": 0.701475,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.210937,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.14164,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.118131,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL180022",
-   "name": "Neratinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.2126,
-   "rawScore": 0.701475,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.210937,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.14164,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.118131,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1173655",
-   "name": "Afatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.2126,
-   "rawScore": 0.701475,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.210937,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.14164,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ERBB4",
-     "geneId": "ENSG00000178568",
-     "geneName": "erb-b2 receptor tyrosine kinase 4",
-     "assoc": 0.5699,
-     "contribution": 0.118131,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297774",
-   "name": "Amivantamab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Hepatocyte growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 19,
-   "score": 0.209,
-   "rawScore": 0.69079,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.252809,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.166579,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.103642,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2403108",
    "name": "Ceritinib",
    "drugType": "Small molecule",
@@ -1644,8 +3038,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.2073,
+   "rank": 36,
+   "score": 0.1922,
    "rawScore": 0.685572,
    "geneCount": 3,
    "paths": [
@@ -1731,8 +3125,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.2063,
+   "rank": 37,
+   "score": 0.1913,
    "rawScore": 0.682475,
    "geneCount": 6,
    "paths": [
@@ -1802,6 +3196,184 @@
    ]
   },
   {
+   "id": "CHEMBL554",
+   "name": "Lapatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 38,
+   "score": 0.1902,
+   "rawScore": 0.67907,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.166579,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.138931,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.103642,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.1902,
+   "rawScore": 0.67907,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.7704,
+     "contribution": 0.166579,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      },
+      {
+       "id": "literature",
+       "score": 0.3554
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.1719
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ERBB4",
+     "geneId": "ENSG00000178568",
+     "geneName": "erb-b2 receptor tyrosine kinase 4",
+     "assoc": 0.5699,
+     "contribution": 0.138931,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.5699
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MET",
+     "geneId": "ENSG00000105976",
+     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
+     "assoc": 0.635,
+     "contribution": 0.103642,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.6037
+      },
+      {
+       "id": "literature",
+       "score": 0.079
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.996
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3348923",
    "name": "Tovorafenib",
    "drugType": "Small molecule",
@@ -1816,8 +3388,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
-   "score": 0.1938,
+   "rank": 40,
+   "score": 0.1798,
    "rawScore": 0.64504,
    "geneCount": 3,
    "paths": [
@@ -1882,1513 +3454,6 @@
      ],
      "hops": 3,
      "via": "RAF1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3545311",
-   "name": "Brigatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "anaplastic large cell lymphoma",
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "ALK tyrosine kinase receptor inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.1932,
-   "rawScore": 0.643127,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ALK",
-     "geneId": "ENSG00000171094",
-     "geneName": "ALK receptor tyrosine kinase",
-     "assoc": 0.5895,
-     "contribution": 0.205147,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.0456
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.166579,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.103642,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Telomerase reverse transcriptase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
-   "score": 0.1876,
-   "rawScore": 0.626247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TERT",
-     "geneId": "ENSG00000164362",
-     "geneName": "telomerase reverse transcriptase",
-     "assoc": 0.8263,
-     "contribution": 0.626247,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5992
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.0744
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "anemia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Telomerase reverse transcriptase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1876,
-   "rawScore": 0.626247,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TERT",
-     "geneId": "ENSG00000164362",
-     "geneName": "telomerase reverse transcriptase",
-     "assoc": 0.8263,
-     "contribution": 0.626247,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5992
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5319
-      },
-      {
-       "id": "literature",
-       "score": 0.0744
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103830",
-   "name": "Fostamatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Thrombocytopenia",
-    "hemorrhage",
-    "autoimmune thrombocytopenic purpura"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Tyrosine-protein kinase SYK inhibitor",
-    "Tyrosine-protein kinase SYK inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.1733,
-   "rawScore": 0.583008,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "SYK",
-     "geneId": "ENSG00000165025",
-     "geneName": "spleen associated tyrosine kinase",
-     "assoc": 0.583,
-     "contribution": 0.583008,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743047",
-   "name": "Necitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colorectal cancer",
-    "non-small cell squamous lung carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "metabolic toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL939",
-   "name": "Gefitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "head and neck squamous cell carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3786343",
-   "name": "Olmutinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "lung cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201577",
-   "name": "Cetuximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colorectal adenocarcinoma",
-    "colorectal carcinoma",
-    "colorectal neoplasm",
-    "head and neck neoplasm"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 33,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3545308",
-   "name": "Rociletinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298088",
-   "name": "Cetuximab Sarotalocan",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108359",
-   "name": "Nimotuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4650319",
-   "name": "Mobocertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 38,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2087361",
-   "name": "Icotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201827",
-   "name": "Panitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "colorectal cancer",
-    "colorectal neoplasm",
-    "colorectal adenocarcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 40,
-   "score": 0.1716,
-   "rawScore": 0.577918,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.7704,
-     "contribution": 0.219803,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.5699
-      },
-      {
-       "id": "literature",
-       "score": 0.3554
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.1719
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MET",
-     "geneId": "ENSG00000105976",
-     "geneName": "MET proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.635,
-     "contribution": 0.136757,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.079
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "PIK3CA",
-     "geneId": "ENSG00000121879",
-     "geneName": "phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha",
-     "assoc": 0.6941,
-     "contribution": 0.127473,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.6037
-      },
-      {
-       "id": "literature",
-       "score": 0.228
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
      "viaScore": 0.999
     }
    ]

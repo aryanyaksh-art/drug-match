@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 5,
  "knownDrugCount": 7,
- "candidatesConsidered": 146,
+ "candidatesConsidered": 157,
  "pathsTwoHop": 28,
- "pathsThreeHop": 175,
+ "pathsThreeHop": 186,
  "candidates": [
   {
    "id": "CHEMBL2110572",
@@ -271,8 +271,8 @@
    ]
   },
   {
-   "id": "CHEMBL388590",
-   "name": "Benzbromarone",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
     "gout"
@@ -281,17 +281,8 @@
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Unfavourable benefit-risk evaluation"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 6,
    "score": 0.5585,
@@ -318,19 +309,27 @@
    ]
   },
   {
-   "id": "CHEMBL4594446",
-   "name": "Dotinurad",
+   "id": "CHEMBL388590",
+   "name": "Benzbromarone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Unfavourable benefit-risk evaluation"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 7,
    "score": 0.5585,
@@ -401,13 +400,14 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL4594446",
+   "name": "Dotinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
@@ -712,39 +712,47 @@
    ]
   },
   {
-   "id": "CHEMBL2070241",
-   "name": "Bremelanotide",
+   "id": "CHEMBL1201569",
+   "name": "Rimabotulinumtoxinb",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Melanocortin receptor 4 agonist",
-    "Melanocortin receptor 4 agonist"
+   "approvedFor": [
+    "Dystonia",
+    "Torticollis",
+    "Parkinson disease"
    ],
-   "warnings": [],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Vesicle-associated membrane protein 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 14,
-   "score": 0.4707,
-   "rawScore": 0.243954,
+   "score": 0.4754,
+   "rawScore": 0.246177,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "NEGR1",
-     "geneId": "ENSG00000172260",
-     "geneName": "neuronal growth regulator 1",
-     "assoc": 0.3809,
-     "contribution": 0.243954,
-     "drugsOnGene": 2,
+     "gene": "SYT1",
+     "geneId": "ENSG00000067715",
+     "geneName": "synaptotagmin 1",
+     "assoc": 0.3824,
+     "contribution": 0.246177,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.3809
+       "score": 0.3824
       }
      ],
      "hops": 3,
-     "via": "MC4R",
-     "viaScore": 0.845
+     "via": "VAMP2",
+     "viaScore": 0.999
     }
    ]
   },
@@ -790,6 +798,79 @@
    ]
   },
   {
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Melanocortin receptor 4 agonist",
+    "Melanocortin receptor 4 agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.4707,
+   "rawScore": 0.243954,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NEGR1",
+     "geneId": "ENSG00000172260",
+     "geneName": "neuronal growth regulator 1",
+     "assoc": 0.3809,
+     "contribution": 0.243954,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3809
+      }
+     ],
+     "hops": 3,
+     "via": "MC4R",
+     "viaScore": 0.845
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL265502",
+   "name": "Suramin",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Acidic fibroblast growth factor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.4644,
+   "rawScore": 0.241002,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SYT1",
+     "geneId": "ENSG00000067715",
+     "geneName": "synaptotagmin 1",
+     "assoc": 0.3824,
+     "contribution": 0.241002,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3824
+      }
+     ],
+     "hops": 3,
+     "via": "FGF1",
+     "viaScore": 0.978
+    }
+   ]
+  },
+  {
    "id": "CHEMBL712",
    "name": "Anisindione",
    "drugType": "Small molecule",
@@ -803,7 +884,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 18,
    "score": 0.4284,
    "rawScore": 0.224026,
    "geneCount": 1,
@@ -844,7 +925,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 19,
    "score": 0.4203,
    "rawScore": 0.220239,
    "geneCount": 2,
@@ -899,7 +980,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 20,
    "score": 0.4099,
    "rawScore": 0.215312,
    "geneCount": 2,
@@ -940,7 +1021,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 19,
+   "rank": 21,
    "score": 0.3865,
    "rawScore": 0.204333,
    "geneCount": 1,
@@ -988,7 +1069,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 20,
+   "rank": 22,
    "score": 0.3825,
    "rawScore": 0.202412,
    "geneCount": 24,
@@ -1063,7 +1144,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 23,
    "score": 0.3755,
    "rawScore": 0.199128,
    "geneCount": 3,
@@ -1104,7 +1185,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 24,
    "score": 0.3687,
    "rawScore": 0.195939,
    "geneCount": 3,
@@ -1142,7 +1223,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 25,
    "score": 0.3608,
    "rawScore": 0.192215,
    "geneCount": 6,
@@ -1163,6 +1244,51 @@
      "hops": 2,
      "via": null,
      "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3989958",
+   "name": "Ivosidenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia by FAB classification",
+    "cholangiocarcinoma",
+    "acute myeloid leukemia"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 26,
+   "score": 0.3216,
+   "rawScore": 0.173741,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ACO1",
+     "geneId": "ENSG00000122729",
+     "geneName": "aconitase 1",
+     "assoc": 0.4192,
+     "contribution": 0.173741,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4192
+      }
+     ],
+     "hops": 3,
+     "via": "IDH1",
+     "viaScore": 0.998
     }
    ]
   },
@@ -1190,52 +1316,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 24,
-   "score": 0.3216,
-   "rawScore": 0.173741,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ACO1",
-     "geneId": "ENSG00000122729",
-     "geneName": "aconitase 1",
-     "assoc": 0.4192,
-     "contribution": 0.173741,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4192
-      }
-     ],
-     "hops": 3,
-     "via": "IDH1",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3989958",
-   "name": "Ivosidenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia by FAB classification",
-    "cholangiocarcinoma",
-    "acute myeloid leukemia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 25,
+   "rank": 27,
    "score": 0.3216,
    "rawScore": 0.173741,
    "geneCount": 1,
@@ -1274,7 +1355,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 28,
    "score": 0.3159,
    "rawScore": 0.171087,
    "geneCount": 2,
@@ -1321,7 +1402,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 27,
+   "rank": 29,
    "score": 0.3153,
    "rawScore": 0.170808,
    "geneCount": 2,
@@ -1363,7 +1444,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 30,
    "score": 0.2989,
    "rawScore": 0.163089,
    "geneCount": 2,
@@ -1401,7 +1482,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 31,
    "score": 0.2931,
    "rawScore": 0.160333,
    "geneCount": 3,
@@ -1475,7 +1556,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 32,
    "score": 0.2931,
    "rawScore": 0.160333,
    "geneCount": 3,
@@ -1550,7 +1631,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
+   "rank": 33,
    "score": 0.2931,
    "rawScore": 0.160333,
    "geneCount": 3,
@@ -1623,7 +1704,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 34,
    "score": 0.2801,
    "rawScore": 0.154213,
    "geneCount": 2,
@@ -1687,7 +1768,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 33,
+   "rank": 35,
    "score": 0.2615,
    "rawScore": 0.145473,
    "geneCount": 3,
@@ -1712,6 +1793,47 @@
    ]
   },
   {
+   "id": "CHEMBL2403108",
+   "name": "Ceritinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "NPM/ALK (Nucleophosmin/ALK tyrosine kinase receptor) inhibitor",
+    "ALK tyrosine kinase receptor inhibitor",
+    "EML4-ALK inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.2552,
+   "rawScore": 0.142527,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "NAP1L4",
+     "geneId": "ENSG00000205531",
+     "geneName": "nucleosome assembly protein 1 like 4",
+     "assoc": 0.3886,
+     "contribution": 0.142527,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.3886
+      }
+     ],
+     "hops": 3,
+     "via": "NPM1",
+     "viaScore": 0.751
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1289494",
    "name": "Tivozanib",
    "drugType": "Small molecule",
@@ -1728,7 +1850,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 37,
    "score": 0.2143,
    "rawScore": 0.123239,
    "geneCount": 5,
@@ -1805,7 +1927,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
+   "rank": 38,
    "score": 0.2087,
    "rawScore": 0.120617,
    "geneCount": 15,
@@ -1862,7 +1984,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
+   "rank": 39,
    "score": 0.1959,
    "rawScore": 0.114572,
    "geneCount": 6,
@@ -1921,212 +2043,39 @@
    ]
   },
   {
-   "id": "CHEMBL1289926",
-   "name": "Axitinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3707359",
+   "name": "Daxibotulinumtoxina",
+   "drugType": "Unknown",
    "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.1716,
-   "rawScore": 0.103134,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.054894,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.984
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.04824,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4303214",
-   "name": "Fruquintinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "neoplasm",
-    "colorectal cancer",
-    "cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.1716,
-   "rawScore": 0.103134,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.054894,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.984
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.04824,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1289601",
-   "name": "Lenvatinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "renal cell carcinoma",
-    "thyroid tumor",
-    "differentiated thyroid carcinoma",
-    "thyroid cancer"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.1716,
-   "rawScore": 0.103134,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.054894,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.984
-    },
-    {
-     "gene": "ANGPT1",
-     "geneId": "ENSG00000154188",
-     "geneName": "angiopoietin 1",
-     "assoc": 0.479,
-     "contribution": 0.04824,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.994
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4594611",
-   "name": "Patritumab Deruxtecan",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "neoplasm"
+    "skin aging"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Receptor tyrosine-protein kinase erbB-3 binding agent",
-    "DNA topoisomerase I inhibitor"
+    "Synaptosomal nerve-associated protein 25 (SNAP-25) inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 40,
-   "score": 0.1709,
-   "rawScore": 0.102832,
-   "geneCount": 2,
+   "score": 0.1926,
+   "rawScore": 0.113034,
+   "geneCount": 1,
    "paths": [
     {
-     "gene": "NRG1",
-     "geneId": "ENSG00000157168",
-     "geneName": "neuregulin 1",
-     "assoc": 0.367,
-     "contribution": 0.102832,
-     "drugsOnGene": 3,
+     "gene": "SYT1",
+     "geneId": "ENSG00000067715",
+     "geneName": "synaptotagmin 1",
+     "assoc": 0.3824,
+     "contribution": 0.113034,
+     "drugsOnGene": 7,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.367
+       "score": 0.3824
       }
      ],
      "hops": 3,
-     "via": "ERBB3",
+     "via": "SNAP25",
      "viaScore": 0.999
     }
    ]

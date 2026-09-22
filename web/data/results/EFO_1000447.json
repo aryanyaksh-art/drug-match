@@ -9,7 +9,7 @@
  "knownDrugCount": 2,
  "candidatesConsidered": 381,
  "pathsTwoHop": 77,
- "pathsThreeHop": 514,
+ "pathsThreeHop": 515,
  "candidates": [
   {
    "id": "CHEMBL3348923",
@@ -97,22 +97,23 @@
    ]
   },
   {
-   "id": "CHEMBL1229517",
-   "name": "Vemurafenib",
+   "id": "CHEMBL3301612",
+   "name": "Encorafenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "metastatic melanoma",
-    "melanoma"
+    "colorectal neoplasm",
+    "melanoma",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
+   "rank": 2,
    "score": 0.907,
    "rawScore": 0.463011,
    "geneCount": 1,
@@ -162,16 +163,15 @@
    ]
   },
   {
-   "id": "CHEMBL3301612",
-   "name": "Encorafenib",
+   "id": "CHEMBL1229517",
+   "name": "Vemurafenib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neoplasm",
     "metastatic melanoma",
-    "colorectal neoplasm",
-    "melanoma",
-    "neoplasm"
+    "melanoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
@@ -228,12 +228,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -288,12 +288,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -530,23 +530,23 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neurofibromatosis type 1",
     "neoplasm",
+    "neurofibromatosis type 1",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 10,
    "score": 0.3975,
    "rawScore": 0.2033,
    "geneCount": 2,
@@ -591,7 +591,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.3975,
    "rawScore": 0.2033,
    "geneCount": 2,
@@ -636,7 +636,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
    "score": 0.3975,
    "rawScore": 0.2033,
    "geneCount": 2,
@@ -665,18 +665,18 @@
    ]
   },
   {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "neurofibromatosis type 1",
+    "neoplasm",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1101,18 +1101,30 @@
    ]
   },
   {
-   "id": "CHEMBL3647420",
-   "name": "Pyrotinib",
+   "id": "CHEMBL554",
+   "name": "Lapatinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 20,
    "score": 0.0959,
    "rawScore": 0.049561,
@@ -1172,30 +1184,18 @@
    ]
   },
   {
-   "id": "CHEMBL554",
-   "name": "Lapatinib",
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 21,
    "score": 0.0959,
    "rawScore": 0.049561,
@@ -1558,22 +1558,19 @@
    ]
   },
   {
-   "id": "CHEMBL4297610",
-   "name": "Olutasidenib",
+   "id": "CHEMBL3989958",
+   "name": "Ivosidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia",
-    "acute myeloid leukemia by FAB classification"
+    "acute myeloid leukemia by FAB classification",
+    "cholangiocarcinoma",
+    "acute myeloid leukemia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -1606,19 +1603,22 @@
    ]
   },
   {
-   "id": "CHEMBL3989958",
-   "name": "Ivosidenib",
+   "id": "CHEMBL4297610",
+   "name": "Olutasidenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia by FAB classification",
-    "cholangiocarcinoma",
-    "acute myeloid leukemia"
+    "acute myeloid leukemia",
+    "acute myeloid leukemia by FAB classification"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
@@ -1651,6 +1651,62 @@
    ]
   },
   {
+   "id": "CHEMBL3414621",
+   "name": "Tazemetostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "follicular lymphoma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Histone-lysine N-methyltransferase EZH2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.0701,
+   "rawScore": 0.036439,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EED",
+     "geneId": "ENSG00000074266",
+     "geneName": "embryonic ectoderm development",
+     "assoc": 0.0182,
+     "contribution": 0.01822,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "EZH2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "SUZ12",
+     "geneId": "ENSG00000178691",
+     "geneName": "SUZ12 polycomb repressive complex 2 subunit",
+     "assoc": 0.0182,
+     "contribution": 0.01822,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "EZH2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108253",
    "name": "Arcitumomab",
    "drugType": "Antibody",
@@ -1666,7 +1722,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 31,
    "score": 0.0697,
    "rawScore": 0.036234,
    "geneCount": 1,
@@ -1691,94 +1747,31 @@
    ]
   },
   {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743047",
+   "name": "Necitumumab",
+   "drugType": "Antibody",
    "approvedFor": [
+    "colorectal cancer",
+    "non-small cell squamous lung carcinoma",
     "non-small cell lung carcinoma",
-    "cancer",
     "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
+   "warnings": [
     {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "type": "Black Box Warning",
+     "detail": "metabolic toxicity"
     },
     {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 32,
    "score": 0.0674,
    "rawScore": 0.035073,
@@ -1838,249 +1831,22 @@
    ]
   },
   {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 33,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743047",
-   "name": "Necitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "colorectal cancer",
-    "non-small cell squamous lung carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "metabolic toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL939",
-   "name": "Gefitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "head and neck squamous cell carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3786343",
-   "name": "Olmutinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "lung cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
    "score": 0.0674,
    "rawScore": 0.035073,
    "geneCount": 1,
@@ -2160,7 +1926,160 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 37,
+   "rank": 34,
+   "score": 0.0674,
+   "rawScore": 0.035073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.0667,
+     "contribution": 0.019031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "USP8",
+     "geneId": "ENSG00000138592",
+     "geneName": "ubiquitin specific peptidase 8",
+     "assoc": 0.0365,
+     "contribution": 0.00784,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EPCAM",
+     "geneId": "ENSG00000119888",
+     "geneName": "epithelial cell adhesion molecule",
+     "assoc": 0.0243,
+     "contribution": 0.004853,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 35,
+   "score": 0.0674,
+   "rawScore": 0.035073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.0667,
+     "contribution": 0.019031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "USP8",
+     "geneId": "ENSG00000138592",
+     "geneName": "ubiquitin specific peptidase 8",
+     "assoc": 0.0365,
+     "contribution": 0.00784,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EPCAM",
+     "geneId": "ENSG00000119888",
+     "geneName": "epithelial cell adhesion molecule",
+     "assoc": 0.0243,
+     "contribution": 0.004853,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
    "score": 0.0674,
    "rawScore": 0.035073,
    "geneCount": 1,
@@ -2232,6 +2151,80 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 37,
+   "score": 0.0674,
+   "rawScore": 0.035073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.0667,
+     "contribution": 0.019031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "USP8",
+     "geneId": "ENSG00000138592",
+     "geneName": "ubiquitin specific peptidase 8",
+     "assoc": 0.0365,
+     "contribution": 0.00784,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EPCAM",
+     "geneId": "ENSG00000119888",
+     "geneName": "epithelial cell adhesion molecule",
+     "assoc": 0.0243,
+     "contribution": 0.004853,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 38,
    "score": 0.0674,
    "rawScore": 0.035073,
@@ -2291,166 +2284,21 @@
    ]
   },
   {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "lung cancer",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 39,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298088",
-   "name": "Cetuximab Sarotalocan",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.0674,
-   "rawScore": 0.035073,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EGFR",
-     "geneId": "ENSG00000146648",
-     "geneName": "epidermal growth factor receptor",
-     "assoc": 0.0667,
-     "contribution": 0.019031,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0667
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "USP8",
-     "geneId": "ENSG00000138592",
-     "geneName": "ubiquitin specific peptidase 8",
-     "assoc": 0.0365,
-     "contribution": 0.00784,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EPCAM",
-     "geneId": "ENSG00000119888",
-     "geneName": "epithelial cell adhesion molecule",
-     "assoc": 0.0243,
-     "contribution": 0.004853,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0243
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.923
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108359",
-   "name": "Nimotuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "head and neck cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 41,
    "score": 0.0674,
    "rawScore": 0.035073,
    "geneCount": 1,
@@ -2533,6 +2381,152 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 40,
+   "score": 0.0674,
+   "rawScore": 0.035073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.0667,
+     "contribution": 0.019031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "USP8",
+     "geneId": "ENSG00000138592",
+     "geneName": "ubiquitin specific peptidase 8",
+     "assoc": 0.0365,
+     "contribution": 0.00784,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EPCAM",
+     "geneId": "ENSG00000119888",
+     "geneName": "epithelial cell adhesion molecule",
+     "assoc": 0.0243,
+     "contribution": 0.004853,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 41,
+   "score": 0.0674,
+   "rawScore": 0.035073,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EGFR",
+     "geneId": "ENSG00000146648",
+     "geneName": "epidermal growth factor receptor",
+     "assoc": 0.0667,
+     "contribution": 0.019031,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0667
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "USP8",
+     "geneId": "ENSG00000138592",
+     "geneName": "ubiquitin specific peptidase 8",
+     "assoc": 0.0365,
+     "contribution": 0.00784,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EPCAM",
+     "geneId": "ENSG00000119888",
+     "geneName": "epithelial cell adhesion molecule",
+     "assoc": 0.0243,
+     "contribution": 0.004853,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0243
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.923
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4558324",
+   "name": "Lazertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 42,
    "score": 0.0674,
    "rawScore": 0.035073,
@@ -2609,7 +2603,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
+   "rank": 3,
    "score": 0.907,
    "rawScore": 0.463011,
    "geneCount": 1,
@@ -2677,7 +2671,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 9,
    "score": 0.3975,
    "rawScore": 0.2033,
    "geneCount": 2,

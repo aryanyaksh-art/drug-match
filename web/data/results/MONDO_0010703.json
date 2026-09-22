@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 7,
  "knownDrugCount": 3,
- "candidatesConsidered": 134,
+ "candidatesConsidered": 186,
  "pathsTwoHop": 18,
- "pathsThreeHop": 156,
+ "pathsThreeHop": 235,
  "candidates": [
   {
    "id": "CHEMBL897",
@@ -152,93 +152,25 @@
    ]
   },
   {
-   "id": "CHEMBL559",
-   "name": "Dextrothyroxine",
+   "id": "CHEMBL1624",
+   "name": "Levothyroxine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cardiovascular disorder"
+    "hypothyroidism"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Thyroid hormone receptor agonist",
     "Thyroid hormone receptor agonist"
    ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 4,
-   "score": 0.4878,
-   "rawScore": 0.578759,
-   "geneCount": 2,
-   "paths": [
+   "warnings": [
     {
-     "gene": "THRB",
-     "geneId": "ENSG00000151090",
-     "geneName": "thyroid hormone receptor beta",
-     "assoc": 0.4273,
-     "contribution": 0.170117,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4273
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "THRA",
-     "geneId": "ENSG00000126351",
-     "geneName": "thyroid hormone receptor alpha",
-     "assoc": 0.3848,
-     "contribution": 0.16751,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3848
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "THRB",
-     "geneId": "ENSG00000151090",
-     "geneName": "thyroid hormone receptor beta",
-     "assoc": 0.4273,
-     "contribution": 0.132222,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4273
-      }
-     ],
-     "hops": 3,
-     "via": "THRA",
-     "viaScore": 0.938
+     "type": "Black Box Warning",
+     "detail": null
     }
-   ]
-  },
-  {
-   "id": "CHEMBL41632",
-   "name": "Tiratricol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "thyrotoxicosis"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Thyroid hormone receptor agonist"
-   ],
-   "warnings": [],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
+   "blackBox": true,
+   "rank": 4,
    "score": 0.4878,
    "rawScore": 0.578759,
    "geneCount": 2,
@@ -316,6 +248,79 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 5,
+   "score": 0.4878,
+   "rawScore": 0.578759,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "THRB",
+     "geneId": "ENSG00000151090",
+     "geneName": "thyroid hormone receptor beta",
+     "assoc": 0.4273,
+     "contribution": 0.170117,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4273
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "THRA",
+     "geneId": "ENSG00000126351",
+     "geneName": "thyroid hormone receptor alpha",
+     "assoc": 0.3848,
+     "contribution": 0.16751,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3848
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "THRB",
+     "geneId": "ENSG00000151090",
+     "geneName": "thyroid hormone receptor beta",
+     "assoc": 0.4273,
+     "contribution": 0.132222,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4273
+      }
+     ],
+     "hops": 3,
+     "via": "THRA",
+     "viaScore": 0.938
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL559",
+   "name": "Dextrothyroxine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Thyroid hormone receptor agonist",
+    "Thyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 6,
    "score": 0.4878,
    "rawScore": 0.578759,
@@ -375,24 +380,19 @@
    ]
   },
   {
-   "id": "CHEMBL1624",
-   "name": "Levothyroxine",
+   "id": "CHEMBL41632",
+   "name": "Tiratricol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypothyroidism"
+    "thyrotoxicosis"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Thyroid hormone receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 7,
    "score": 0.4878,
    "rawScore": 0.578759,
@@ -697,65 +697,240 @@
    ]
   },
   {
-   "id": "CHEMBL35",
-   "name": "Furosemide",
+   "id": "CHEMBL53418",
+   "name": "Danthron",
    "drugType": "Small molecule",
    "approvedFor": [
-    "pulmonary edema",
-    "congestive heart failure",
-    "hypertensive disorder",
-    "Hypertension"
+    "Constipation"
    ],
-   "indicationCount": 9,
+   "indicationCount": 1,
    "mechanisms": [
-    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+    "Retinoid X receptor alpha antagonist"
    ],
    "warnings": [
     {
-     "type": "Black Box Warning",
-     "detail": null
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
     }
    ],
-   "withdrawn": false,
-   "blackBox": true,
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 13,
-   "score": 0.3383,
-   "rawScore": 0.407566,
+   "score": 0.3542,
+   "rawScore": 0.425749,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "SLC12A1",
-     "geneId": "ENSG00000074803",
-     "geneName": "solute carrier family 12 member 1",
-     "assoc": 0.4261,
-     "contribution": 0.244714,
-     "drugsOnGene": 4,
+     "gene": "THRB",
+     "geneId": "ENSG00000151090",
+     "geneName": "thyroid hormone receptor beta",
+     "assoc": 0.4273,
+     "contribution": 0.168926,
+     "drugsOnGene": 5,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4261
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "UMOD",
-     "geneId": "ENSG00000169344",
-     "geneName": "uromodulin",
-     "assoc": 0.4659,
-     "contribution": 0.162852,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4659
+       "score": 0.4273
       }
      ],
      "hops": 3,
-     "via": "SLC12A1",
-     "viaScore": 0.803
+     "via": "RXRA",
+     "viaScore": 0.993
+    },
+    {
+     "gene": "THRA",
+     "geneId": "ENSG00000126351",
+     "geneName": "thyroid hormone receptor alpha",
+     "assoc": 0.3848,
+     "contribution": 0.148151,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3848
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.967
+    },
+    {
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.3942,
+     "contribution": 0.108673,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3942
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298189",
+   "name": "Eladocagene Exuparvovec",
+   "drugType": "Gene",
+   "approvedFor": [
+    "inborn disorder of amino acid metabolism"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "DDC exogenous gene"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.3476,
+   "rawScore": 0.418199,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.4468,
+     "contribution": 0.283008,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4468
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.135191,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.937
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1096979",
+   "name": "Benserazide",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "DOPA decarboxylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.3476,
+   "rawScore": 0.418199,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.4468,
+     "contribution": 0.283008,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4468
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.135191,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.937
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201236",
+   "name": "Carbidopa Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "DOPA decarboxylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.3476,
+   "rawScore": 0.418199,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PAH",
+     "geneId": "ENSG00000171759",
+     "geneName": "phenylalanine hydroxylase",
+     "assoc": 0.4468,
+     "contribution": 0.283008,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4468
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.135191,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "DDC",
+     "viaScore": 0.937
     }
    ]
   },
@@ -776,7 +951,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 17,
    "score": 0.3383,
    "rawScore": 0.407566,
    "geneCount": 1,
@@ -835,7 +1010,70 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 18,
+   "score": 0.3383,
+   "rawScore": 0.407566,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SLC12A1",
+     "geneId": "ENSG00000074803",
+     "geneName": "solute carrier family 12 member 1",
+     "assoc": 0.4261,
+     "contribution": 0.244714,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4261
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "UMOD",
+     "geneId": "ENSG00000169344",
+     "geneName": "uromodulin",
+     "assoc": 0.4659,
+     "contribution": 0.162852,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4659
+      }
+     ],
+     "hops": 3,
+     "via": "SLC12A1",
+     "viaScore": 0.803
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL35",
+   "name": "Furosemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary edema",
+    "congestive heart failure",
+    "hypertensive disorder",
+    "Hypertension"
+   ],
+   "indicationCount": 9,
+   "mechanisms": [
+    "Sodium-(potassium)-chloride cotransporter 2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
    "score": 0.3383,
    "rawScore": 0.407566,
    "geneCount": 1,
@@ -902,7 +1140,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 16,
+   "rank": 20,
    "score": 0.3383,
    "rawScore": 0.407566,
    "geneCount": 1,
@@ -975,7 +1213,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 17,
+   "rank": 21,
    "score": 0.3264,
    "rawScore": 0.393926,
    "geneCount": 1,
@@ -1017,7 +1255,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 22,
    "score": 0.3234,
    "rawScore": 0.390527,
    "geneCount": 1,
@@ -1055,7 +1293,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 23,
    "score": 0.3153,
    "rawScore": 0.381195,
    "geneCount": 1,
@@ -1094,7 +1332,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 24,
    "score": 0.3039,
    "rawScore": 0.368178,
    "geneCount": 1,
@@ -1136,8 +1374,8 @@
    ]
   },
   {
-   "id": "CHEMBL388590",
-   "name": "Benzbromarone",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
     "gout"
@@ -1146,19 +1384,10 @@
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Unfavourable benefit-risk evaluation"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 25,
    "score": 0.2651,
    "rawScore": 0.323675,
    "geneCount": 1,
@@ -1204,21 +1433,29 @@
    ]
   },
   {
-   "id": "CHEMBL4594446",
-   "name": "Dotinurad",
+   "id": "CHEMBL388590",
+   "name": "Benzbromarone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Unfavourable benefit-risk evaluation"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
-   "rank": 22,
+   "rank": 26,
    "score": 0.2651,
    "rawScore": 0.323675,
    "geneCount": 1,
@@ -1283,7 +1520,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 23,
+   "rank": 27,
    "score": 0.2651,
    "rawScore": 0.323675,
    "geneCount": 1,
@@ -1329,20 +1566,21 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL4594446",
+   "name": "Dotinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 28,
    "score": 0.2651,
    "rawScore": 0.323675,
    "geneCount": 1,
@@ -1388,35 +1626,95 @@
    ]
   },
   {
-   "id": "CHEMBL53418",
-   "name": "Danthron",
+   "id": "CHEMBL2105695",
+   "name": "Telotristat Ethyl",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Constipation"
+    "carcinoid tumor",
+    "carcinoid syndrome",
+    "neuroendocrine neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Retinoid X receptor alpha antagonist"
+    "Tryptophan 5-hydroxylase inhibitor",
+    "Tryptophan 5-hydroxylase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.2648,
+   "rawScore": 0.323421,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.163577,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "TPH1",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.159844,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "TPH2",
+     "viaScore": 0.942
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1023",
+   "name": "Bexarotene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Retinoid X receptor agonist"
    ],
    "warnings": [
     {
-     "type": "Withdrawn",
-     "detail": "carcinogenicity"
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
     }
    ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.2593,
-   "rawScore": 0.317077,
-   "geneCount": 1,
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.222,
+   "rawScore": 0.27435,
+   "geneCount": 3,
    "paths": [
     {
      "gene": "THRB",
      "geneId": "ENSG00000151090",
      "geneName": "thyroid hormone receptor beta",
      "assoc": 0.4273,
-     "contribution": 0.168926,
+     "contribution": 0.108855,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1433,7 +1731,7 @@
      "geneId": "ENSG00000126351",
      "geneName": "thyroid hormone receptor alpha",
      "assoc": 0.3848,
-     "contribution": 0.148151,
+     "contribution": 0.095467,
      "drugsOnGene": 5,
      "evidence": [
       {
@@ -1444,137 +1742,100 @@
      "hops": 3,
      "via": "RXRA",
      "viaScore": 0.967
+    },
+    {
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.3942,
+     "contribution": 0.070028,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3942
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4298189",
-   "name": "Eladocagene Exuparvovec",
-   "drugType": "Gene",
+   "id": "CHEMBL2051955",
+   "name": "Levosimendan",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "inborn disorder of amino acid metabolism"
+    "cardiovascular disorder",
+    "congestive heart failure"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "DDC exogenous gene"
+    "Phosphodiesterase 3 inhibitor",
+    "Troponin, cardiac muscle positive modulator"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
-   "score": 0.2295,
-   "rawScore": 0.283008,
-   "geneCount": 1,
+   "rank": 31,
+   "score": 0.2066,
+   "rawScore": 0.256709,
+   "geneCount": 5,
    "paths": [
     {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.4468,
-     "contribution": 0.283008,
-     "drugsOnGene": 3,
+     "gene": "TPM1",
+     "geneId": "ENSG00000140416",
+     "geneName": "tropomyosin 1",
+     "assoc": 0.3796,
+     "contribution": 0.128355,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4468
+       "score": 0.3796
       }
      ],
      "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
+     "via": "TNNT2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TPM1",
+     "geneId": "ENSG00000140416",
+     "geneName": "tropomyosin 1",
+     "assoc": 0.3796,
+     "contribution": 0.128355,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3796
+      }
+     ],
+     "hops": 3,
+     "via": "TNNI3",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.2295,
-   "rawScore": 0.283008,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.4468,
-     "contribution": 0.283008,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4468
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096979",
-   "name": "Benserazide",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.2295,
-   "rawScore": 0.283008,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PAH",
-     "geneId": "ENSG00000171759",
-     "geneName": "phenylalanine hydroxylase",
-     "assoc": 0.4468,
-     "contribution": 0.283008,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4468
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.983
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 32,
    "score": 0.1977,
    "rawScore": 0.246491,
    "geneCount": 1,
@@ -1599,22 +1860,23 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 33,
    "score": 0.1977,
    "rawScore": 0.246491,
    "geneCount": 1,
@@ -1658,7 +1920,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 31,
+   "rank": 34,
    "score": 0.19,
    "rawScore": 0.237692,
    "geneCount": 1,
@@ -1696,7 +1958,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 35,
    "score": 0.1879,
    "rawScore": 0.235312,
    "geneCount": 1,
@@ -1721,23 +1983,23 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 36,
    "score": 0.181,
    "rawScore": 0.227462,
    "geneCount": 1,
@@ -1762,23 +2024,23 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 37,
    "score": 0.181,
    "rawScore": 0.227462,
    "geneCount": 1,
@@ -1817,7 +2079,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
+   "rank": 38,
    "score": 0.1798,
    "rawScore": 0.226038,
    "geneCount": 1,
@@ -1863,7 +2125,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 36,
+   "rank": 39,
    "score": 0.1788,
    "rawScore": 0.224894,
    "geneCount": 1,
@@ -1892,6 +2154,44 @@
    ]
   },
   {
+   "id": "CHEMBL3545369",
+   "name": "Epacadostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Indoleamine 2,3-dioxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 40,
+   "score": 0.176,
+   "rawScore": 0.221663,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TDO2",
+     "geneId": "ENSG00000151790",
+     "geneName": "tryptophan 2,3-dioxygenase",
+     "assoc": 0.3898,
+     "contribution": 0.221663,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3898
+      }
+     ],
+     "hops": 3,
+     "via": "IDO1",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108709",
    "name": "Collagenase Clostridium Histolyticum",
    "drugType": "Enzyme",
@@ -1908,7 +2208,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 41,
    "score": 0.1739,
    "rawScore": 0.219245,
    "geneCount": 25,
@@ -1953,255 +2253,6 @@
      "geneName": "collagen type IV alpha 4 chain",
      "assoc": 0.4009,
      "contribution": 0.04406,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4009
-      }
-     ],
-     "hops": 3,
-     "via": "COL15A1",
-     "viaScore": 0.915
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4279047",
-   "name": "Vorasidenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "glioma",
-    "oligodendroglioma",
-    "astrocytoma (excluding glioblastoma)"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Isocitrate dehydrogenase [NADP] cytoplasmic inhibitor",
-    "IDH1/IDH2 inhibitor",
-    "Isocitrate dehydrogenase [NADP], mitochondrial inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 38,
-   "score": 0.1698,
-   "rawScore": 0.214621,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ALDH5A1",
-     "geneId": "ENSG00000112294",
-     "geneName": "aldehyde dehydrogenase 5 family member A1",
-     "assoc": 0.3939,
-     "contribution": 0.116173,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3749
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "IDH2",
-     "viaScore": 0.894
-    },
-    {
-     "gene": "ALDH5A1",
-     "geneId": "ENSG00000112294",
-     "geneName": "aldehyde dehydrogenase 5 family member A1",
-     "assoc": 0.3939,
-     "contribution": 0.098448,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3749
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "IDH1",
-     "viaScore": 0.891
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1023",
-   "name": "Bexarotene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "primary cutaneous T-cell non-Hodgkin lymphoma",
-    "neoplasm",
-    "T-cell non-Hodgkin lymphoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Retinoid X receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 39,
-   "score": 0.1608,
-   "rawScore": 0.204322,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "THRB",
-     "geneId": "ENSG00000151090",
-     "geneName": "thyroid hormone receptor beta",
-     "assoc": 0.4273,
-     "contribution": 0.108855,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4273
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.993
-    },
-    {
-     "gene": "THRA",
-     "geneId": "ENSG00000126351",
-     "geneName": "thyroid hormone receptor alpha",
-     "assoc": 0.3848,
-     "contribution": 0.095467,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3848
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.967
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3545313",
-   "name": "Bempedoic Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "coronary artery disorder",
-    "familial hypercholesterolemia",
-    "atherosclerosis",
-    "Hypercholesterolemia"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "ATP-citrate synthase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.1596,
-   "rawScore": 0.202947,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ALDH5A1",
-     "geneId": "ENSG00000112294",
-     "geneName": "aldehyde dehydrogenase 5 family member A1",
-     "assoc": 0.3939,
-     "contribution": 0.202947,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3749
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "ACLY",
-     "viaScore": 0.897
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 41,
-   "score": 0.1443,
-   "rawScore": 0.185435,
-   "geneCount": 38,
-   "paths": [
-    {
-     "gene": "COL4A4",
-     "geneId": "ENSG00000081052",
-     "geneName": "collagen type IV alpha 4 chain",
-     "assoc": 0.4009,
-     "contribution": 0.07091,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4009
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "COL4A4",
-     "geneId": "ENSG00000081052",
-     "geneName": "collagen type IV alpha 4 chain",
-     "assoc": 0.4009,
-     "contribution": 0.040524,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4009
-      }
-     ],
-     "hops": 3,
-     "via": "COL4A3",
-     "viaScore": 0.995
-    },
-    {
-     "gene": "COL4A4",
-     "geneId": "ENSG00000081052",
-     "geneName": "collagen type IV alpha 4 chain",
-     "assoc": 0.4009,
-     "contribution": 0.037265,
      "drugsOnGene": 2,
      "evidence": [
       {

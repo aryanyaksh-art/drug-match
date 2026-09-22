@@ -7,20 +7,18 @@
  "genesScored": 48,
  "genesWithDrugs": 16,
  "knownDrugCount": 133,
- "candidatesConsidered": 167,
+ "candidatesConsidered": 190,
  "pathsTwoHop": 181,
- "pathsThreeHop": 177,
+ "pathsThreeHop": 246,
  "candidates": [
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -81,13 +79,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -304,7 +304,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 6,
+   "rank": 8,
    "score": 0.4274,
    "rawScore": 0.606905,
    "geneCount": 2,
@@ -391,7 +391,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 7,
+   "rank": 10,
    "score": 0.4274,
    "rawScore": 0.606905,
    "geneCount": 2,
@@ -878,16 +878,17 @@
    ]
   },
   {
-   "id": "CHEMBL1852688",
-   "name": "Infigratinib",
+   "id": "CHEMBL3701238",
+   "name": "Futibatinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "biliary tract cancer",
     "neoplasm",
-    "cholangiocarcinoma"
+    "cancer",
+    "intrahepatic cholangiocarcinoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
@@ -1043,17 +1044,16 @@
    ]
   },
   {
-   "id": "CHEMBL3701238",
-   "name": "Futibatinib",
+   "id": "CHEMBL1852688",
+   "name": "Infigratinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "biliary tract cancer",
     "neoplasm",
-    "cancer",
-    "intrahepatic cholangiocarcinoma"
+    "cholangiocarcinoma"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor",
     "Fibroblast growth factor receptor inhibitor"
    ],
    "warnings": [],
@@ -1432,6 +1432,85 @@
    ]
   },
   {
+   "id": "CHEMBL2035187",
+   "name": "Pacritinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "myelofibrosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Activin receptor type-1 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase receptor FLT3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.2599,
+   "rawScore": 0.374907,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "TOLLIP",
+     "geneId": "ENSG00000078902",
+     "geneName": "toll interacting protein",
+     "assoc": 0.8039,
+     "contribution": 0.349552,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5927
+      },
+      {
+       "id": "literature",
+       "score": 0.5184
+      }
+     ],
+     "hops": 3,
+     "via": "IRAK1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNGR1",
+     "geneId": "ENSG00000027697",
+     "geneName": "interferon gamma receptor 1",
+     "assoc": 0.2037,
+     "contribution": 0.021367,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2037
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNGR2",
+     "geneId": "ENSG00000159128",
+     "geneName": "interferon gamma receptor 2",
+     "assoc": 0.0304,
+     "contribution": 0.003988,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "JAK2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL9194",
    "name": "Atrasentan",
    "drugType": "Small molecule",
@@ -1445,7 +1524,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 25,
    "score": 0.2514,
    "rawScore": 0.363093,
    "geneCount": 1,
@@ -1504,7 +1583,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 26,
    "score": 0.2514,
    "rawScore": 0.363093,
    "geneCount": 1,
@@ -1563,7 +1642,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 27,
    "score": 0.2509,
    "rawScore": 0.36242,
    "geneCount": 2,
@@ -1645,7 +1724,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 28,
    "score": 0.2503,
    "rawScore": 0.361649,
    "geneCount": 6,
@@ -1712,63 +1791,16 @@
    ]
   },
   {
-   "id": "CHEMBL2035187",
-   "name": "Pacritinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL3990033",
+   "name": "Inclisiran",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "myelofibrosis",
-    "neoplasm"
+    "cardiovascular disorder",
+    "familial hypercholesterolemia"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Activin receptor type-1 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase receptor FLT3 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.2416,
-   "rawScore": 0.349552,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "TOLLIP",
-     "geneId": "ENSG00000078902",
-     "geneName": "toll interacting protein",
-     "assoc": 0.8039,
-     "contribution": 0.349552,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5927
-      },
-      {
-       "id": "literature",
-       "score": 0.5184
-      }
-     ],
-     "hops": 3,
-     "via": "IRAK1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2364655",
-   "name": "Evolocumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "stroke disorder",
-    "familial hypercholesterolemia",
-    "coronary artery disorder",
-    "homozygous familial hypercholesterolemia"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Subtilisin/kexin type 9 inhibitor"
+    "PCSK9 mRNA RNAi inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1802,11 +1834,16 @@
    ]
   },
   {
-   "id": "CHEMBL4594554",
-   "name": "Tafolecimab",
+   "id": "CHEMBL2364655",
+   "name": "Evolocumab",
    "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "stroke disorder",
+    "familial hypercholesterolemia",
+    "coronary artery disorder",
+    "homozygous familial hypercholesterolemia"
+   ],
+   "indicationCount": 8,
    "mechanisms": [
     "Subtilisin/kexin type 9 inhibitor"
    ],
@@ -1814,49 +1851,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 30,
-   "score": 0.2221,
-   "rawScore": 0.322583,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PCSK5",
-     "geneId": "ENSG00000099139",
-     "geneName": "proprotein convertase subtilisin/kexin type 5",
-     "assoc": 0.7083,
-     "contribution": 0.322583,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.479
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4401
-      }
-     ],
-     "hops": 3,
-     "via": "PCSK9",
-     "viaScore": 0.867
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3990033",
-   "name": "Inclisiran",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "familial hypercholesterolemia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "PCSK9 mRNA RNAi inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
    "score": 0.2221,
    "rawScore": 0.322583,
    "geneCount": 1,
@@ -1901,7 +1895,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 31,
    "score": 0.2221,
    "rawScore": 0.322583,
    "geneCount": 1,
@@ -1942,6 +1936,46 @@
    "indicationCount": 4,
    "mechanisms": [
     "PCSK9 mRNA rnai inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.2221,
+   "rawScore": 0.322583,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PCSK5",
+     "geneId": "ENSG00000099139",
+     "geneName": "proprotein convertase subtilisin/kexin type 5",
+     "assoc": 0.7083,
+     "contribution": 0.322583,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.479
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4401
+      }
+     ],
+     "hops": 3,
+     "via": "PCSK9",
+     "viaScore": 0.867
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594554",
+   "name": "Tafolecimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Subtilisin/kexin type 9 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2462,7 +2496,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 43,
+   "rank": 44,
    "score": 0.1696,
    "rawScore": 0.249806,
    "geneCount": 1,
@@ -2504,7 +2538,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 44,
+   "rank": 45,
    "score": 0.1696,
    "rawScore": 0.249806,
    "geneCount": 1,
@@ -2549,7 +2583,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 45,
+   "rank": 46,
    "score": 0.166,
    "rawScore": 0.244844,
    "geneCount": 1,
@@ -2665,24 +2699,20 @@
    ]
   },
   {
-   "id": "CHEMBL957",
-   "name": "Bosentan",
+   "id": "CHEMBL2103873",
+   "name": "Macitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "congenital heart disease",
-    "pulmonary arterial hypertension",
-    "systemic sclerosis",
-    "hypertensive disorder"
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "pulmonary hypertension",
+    "pulmonary arterial hypertension"
    ],
-   "indicationCount": 5,
+   "indicationCount": 4,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
@@ -2690,7 +2720,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 8,
+   "rank": 6,
    "score": 0.4274,
    "rawScore": 0.606905,
    "geneCount": 2,
@@ -2757,20 +2787,24 @@
    ]
   },
   {
-   "id": "CHEMBL2103873",
-   "name": "Macitentan",
+   "id": "CHEMBL957",
+   "name": "Bosentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertensive disorder",
-    "cardiovascular disorder",
-    "pulmonary hypertension",
-    "pulmonary arterial hypertension"
+    "congenital heart disease",
+    "pulmonary arterial hypertension",
+    "systemic sclerosis",
+    "hypertensive disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 5,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
@@ -2778,7 +2812,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 9,
+   "rank": 7,
    "score": 0.4274,
    "rawScore": 0.606905,
    "geneCount": 2,
@@ -2865,7 +2899,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 10,
+   "rank": 9,
    "score": 0.4274,
    "rawScore": 0.606905,
    "geneCount": 2,
@@ -3017,6 +3051,81 @@
    ]
   },
   {
+   "id": "CHEMBL1201564",
+   "name": "Interferon Gamma-1B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "chronic granulomatous disease",
+    "idiopathic pulmonary fibrosis",
+    "osteopetrosis",
+    "inflammation"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Interferon gamma receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 43,
+   "score": 0.178,
+   "rawScore": 0.261465,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNGR1",
+     "geneId": "ENSG00000027697",
+     "geneName": "interferon gamma receptor 1",
+     "assoc": 0.2037,
+     "contribution": 0.154392,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2037
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNGR1",
+     "geneId": "ENSG00000027697",
+     "geneName": "interferon gamma receptor 1",
+     "assoc": 0.2037,
+     "contribution": 0.070819,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2037
+      }
+     ],
+     "hops": 3,
+     "via": "IFNGR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNGR2",
+     "geneId": "ENSG00000159128",
+     "geneName": "interferon gamma receptor 2",
+     "assoc": 0.0304,
+     "contribution": 0.023036,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL4303201",
    "name": "Catequentinib",
    "drugType": "Small molecule",
@@ -3030,7 +3139,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 46,
+   "rank": 47,
    "score": 0.1583,
    "rawScore": 0.234192,
    "geneCount": 4,
@@ -3084,64 +3193,6 @@
       {
        "id": "literature",
        "score": 0.1691
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201564",
-   "name": "Interferon Gamma-1B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "chronic granulomatous disease",
-    "idiopathic pulmonary fibrosis",
-    "osteopetrosis",
-    "inflammation"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Interferon gamma receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 60,
-   "score": 0.1173,
-   "rawScore": 0.177428,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNGR1",
-     "geneId": "ENSG00000027697",
-     "geneName": "interferon gamma receptor 1",
-     "assoc": 0.2037,
-     "contribution": 0.154392,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2037
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNGR2",
-     "geneId": "ENSG00000159128",
-     "geneName": "interferon gamma receptor 2",
-     "assoc": 0.0304,
-     "contribution": 0.023036,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0304
       }
      ],
      "hops": 2,
@@ -3215,11 +3266,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201207",
-   "name": "Betamethasone Phosphoric Acid",
+   "id": "CHEMBL650",
+   "name": "Methylprednisolone",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "ulcerative colitis",
+    "Crohn disease",
+    "posterior uveitis",
+    "psoriatic arthritis"
+   ],
+   "indicationCount": 17,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
@@ -3255,23 +3311,18 @@
    ]
   },
   {
-   "id": "CHEMBL384467",
-   "name": "Dexamethasone",
+   "id": "CHEMBL1201231",
+   "name": "Prednisolone Phosphoric Acid",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "choroiditis",
-    "juvenile idiopathic arthritis",
-    "nephrotic syndrome",
-    "primary adrenal insufficiency"
-   ],
-   "indicationCount": 75,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 77,
+   "rank": 76,
    "score": 0.0908,
    "rawScore": 0.140753,
    "geneCount": 1,

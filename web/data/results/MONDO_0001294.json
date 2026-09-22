@@ -7,9 +7,9 @@
  "genesScored": 41,
  "genesWithDrugs": 3,
  "knownDrugCount": 2,
- "candidatesConsidered": 56,
+ "candidatesConsidered": 72,
  "pathsTwoHop": 5,
- "pathsThreeHop": 77,
+ "pathsThreeHop": 132,
  "candidates": [
   {
    "id": "CHEMBL232202",
@@ -136,7 +136,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 3,
-   "score": 0.7479,
+   "score": 0.7602,
    "rawScore": 0.696801,
    "geneCount": 1,
    "paths": [
@@ -199,7 +199,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 4,
-   "score": 0.7452,
+   "score": 0.7576,
    "rawScore": 0.694575,
    "geneCount": 1,
    "paths": [
@@ -257,7 +257,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
-   "score": 0.7121,
+   "score": 0.7262,
    "rawScore": 0.667017,
    "geneCount": 6,
    "paths": [
@@ -336,7 +336,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 6,
-   "score": 0.5253,
+   "score": 0.5485,
    "rawScore": 0.511383,
    "geneCount": 1,
    "paths": [
@@ -377,7 +377,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 7,
-   "score": 0.478,
+   "score": 0.5035,
    "rawScore": 0.471969,
    "geneCount": 25,
    "paths": [
@@ -453,7 +453,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
-   "score": 0.4655,
+   "score": 0.4916,
    "rawScore": 0.46156,
    "geneCount": 4,
    "paths": [
@@ -528,7 +528,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 9,
-   "score": 0.3906,
+   "score": 0.4204,
    "rawScore": 0.399187,
    "geneCount": 38,
    "paths": [
@@ -613,7 +613,7 @@
    "withdrawn": true,
    "blackBox": false,
    "rank": 10,
-   "score": 0.3691,
+   "score": 0.3999,
    "rawScore": 0.381244,
    "geneCount": 2,
    "paths": [
@@ -670,7 +670,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 11,
-   "score": 0.3522,
+   "score": 0.3839,
    "rawScore": 0.367188,
    "geneCount": 1,
    "paths": [
@@ -694,6 +694,54 @@
    ]
   },
   {
+   "id": "CHEMBL1324",
+   "name": "Tolcapone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hepatic failure",
+    "Parkinson disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Catechol O-methyltransferase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.3769,
+   "rawScore": 0.361019,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CYP1B1",
+     "geneId": "ENSG00000138061",
+     "geneName": "cytochrome P450 family 1 subfamily B member 1",
+     "assoc": 0.577,
+     "contribution": 0.361019,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.577
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.971
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1089318",
    "name": "Opicapone",
    "drugType": "Small molecule",
@@ -707,8 +755,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
-   "score": 0.3448,
+   "rank": 13,
+   "score": 0.3769,
    "rawScore": 0.361019,
    "geneCount": 1,
    "paths": [
@@ -745,8 +793,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
-   "score": 0.3448,
+   "rank": 14,
+   "score": 0.3769,
    "rawScore": 0.361019,
    "geneCount": 1,
    "paths": [
@@ -770,50 +818,530 @@
    ]
   },
   {
-   "id": "CHEMBL1324",
-   "name": "Tolcapone",
+   "id": "CHEMBL3426621",
+   "name": "Ripasudil",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hepatic failure",
-    "Parkinson disease"
+    "glaucoma"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Rho-associated protein kinase inhibitor",
+    "Rho-associated protein kinase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.317,
+   "rawScore": 0.308558,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.157122,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK1",
+     "viaScore": 0.967
+    },
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.151436,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK2",
+     "viaScore": 0.932
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594250",
+   "name": "Netarsudil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "open-angle glaucoma",
+    "ocular hypertension",
+    "glaucoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Rho-associated protein kinase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.317,
+   "rawScore": 0.308558,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.157122,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK1",
+     "viaScore": 0.967
+    },
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.151436,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK2",
+     "viaScore": 0.932
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL38380",
+   "name": "Fasudil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Rho-associated protein kinase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.317,
+   "rawScore": 0.308558,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.157122,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK1",
+     "viaScore": 0.967
+    },
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.151436,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK2",
+     "viaScore": 0.932
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2005186",
+   "name": "Belumosudil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "graft versus host disease",
+    "immune system disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Catechol O-methyltransferase inhibitor"
+    "Rho-associated protein kinase 2 inhibitor",
+    "Rho-associated protein kinase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.317,
+   "rawScore": 0.308558,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.157122,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK1",
+     "viaScore": 0.967
+    },
+    {
+     "gene": "LIMK2",
+     "geneId": "ENSG00000182541",
+     "geneName": "LIM domain kinase 2",
+     "assoc": 0.4926,
+     "contribution": 0.151436,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4926
+      }
+     ],
+     "hops": 3,
+     "via": "ROCK2",
+     "viaScore": 0.932
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110732",
+   "name": "Dacomitinib Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.3007,
+   "rawScore": 0.29432,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.106701,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.073721,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.060359,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL180022",
+   "name": "Neratinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.3007,
+   "rawScore": 0.29432,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.106701,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.073721,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.060359,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1173655",
+   "name": "Afatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-4 inhibitor",
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.3007,
+   "rawScore": 0.29432,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.106701,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.073721,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.060359,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL24828",
+   "name": "Vandetanib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "medullary thyroid gland carcinoma",
+    "thyroid gland carcinoma",
+    "thyroid tumor"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Ephrin receptor inhibitor",
+    "Tyrosine-protein kinase BRK inhibitor",
+    "Tyrosine-protein kinase receptor RET inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
+     "detail": "cardiotoxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
-   "rank": 14,
-   "score": 0.3448,
-   "rawScore": 0.361019,
-   "geneCount": 1,
+   "rank": 22,
+   "score": 0.2977,
+   "rawScore": 0.29169,
+   "geneCount": 24,
    "paths": [
     {
-     "gene": "CYP1B1",
-     "geneId": "ENSG00000138061",
-     "geneName": "cytochrome P450 family 1 subfamily B member 1",
-     "assoc": 0.577,
-     "contribution": 0.361019,
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.110997,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "PTK6",
+     "viaScore": 0.978
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.052582,
      "drugsOnGene": 3,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.577
+       "score": 0.5075
       }
      ],
      "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.971
+     "via": "ERBB3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.046444,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB4",
+     "viaScore": 0.989
     }
    ]
   },
@@ -833,8 +1361,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
-   "score": 0.2492,
+   "rank": 23,
+   "score": 0.2859,
    "rawScore": 0.281345,
    "geneCount": 1,
    "paths": [
@@ -858,129 +1386,6 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neurofibromatosis type 1",
-    "neoplasm",
-    "plexiform neurofibroma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.1799,
-   "rawScore": 0.223567,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.5678,
-     "contribution": 0.223567,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5678
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2146883",
-   "name": "Cobimetinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "melanoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.1799,
-   "rawScore": 0.223567,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.5678,
-     "contribution": 0.223567,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5678
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3187723",
-   "name": "Binimetinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "metastatic melanoma",
-    "melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.1799,
-   "rawScore": 0.223567,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.5678,
-     "contribution": 0.223567,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5678
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2103875",
    "name": "Trametinib",
    "drugType": "Small molecule",
@@ -999,8 +1404,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
-   "score": 0.1799,
+   "rank": 24,
+   "score": 0.2199,
    "rawScore": 0.223567,
    "geneCount": 2,
    "paths": [
@@ -1040,8 +1445,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.1799,
+   "rank": 25,
+   "score": 0.2199,
    "rawScore": 0.223567,
    "geneCount": 2,
    "paths": [
@@ -1065,6 +1470,339 @@
    ]
   },
   {
+   "id": "CHEMBL2146883",
+   "name": "Cobimetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "melanoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2199,
+   "rawScore": 0.223567,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.5678,
+     "contribution": 0.223567,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5678
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3187723",
+   "name": "Binimetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "metastatic melanoma",
+    "melanoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.2199,
+   "rawScore": 0.223567,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.5678,
+     "contribution": 0.223567,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5678
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neurofibromatosis type 1",
+    "neoplasm",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.2199,
+   "rawScore": 0.223567,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.5678,
+     "contribution": 0.223567,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5678
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL554",
+   "name": "Lapatinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 29,
+   "score": 0.2166,
+   "rawScore": 0.220655,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.086702,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.070988,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.062966,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.2166,
+   "rawScore": 0.220655,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.086702,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.070988,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.062966,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4298025",
+   "name": "Zenocutuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "pancreatic neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "ErbB-2/ErbB-3 heterodimer inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.208,
+   "rawScore": 0.213061,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.142073,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB3",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.070988,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1743028",
    "name": "Glembatumumab Vedotin",
    "drugType": "Antibody drug conjugate",
@@ -1079,8 +1817,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.1601,
+   "rank": 32,
+   "score": 0.2012,
    "rawScore": 0.207137,
    "geneCount": 16,
    "paths": [
@@ -1100,543 +1838,6 @@
      "hops": 2,
      "via": null,
      "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL313971",
-   "name": "Zucapsaicin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Arthralgia",
-    "Myalgia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vanilloid receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.1323,
-   "rawScore": 0.183937,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TRPM3",
-     "geneId": "ENSG00000083067",
-     "geneName": "transient receptor potential cation channel subfamily M member 3",
-     "assoc": 0.5544,
-     "contribution": 0.183937,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5544
-      }
-     ],
-     "hops": 3,
-     "via": "TRPV1",
-     "viaScore": 0.799
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL294199",
-   "name": "Capsaicin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Arthralgia",
-    "neuralgia",
-    "frozen shoulder",
-    "arthritic joint disease"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "Vanilloid receptor opener"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.1323,
-   "rawScore": 0.183937,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TRPM3",
-     "geneId": "ENSG00000083067",
-     "geneName": "transient receptor potential cation channel subfamily M member 3",
-     "assoc": 0.5544,
-     "contribution": 0.183937,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5544
-      }
-     ],
-     "hops": 3,
-     "via": "TRPV1",
-     "viaScore": 0.799
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298189",
-   "name": "Eladocagene Exuparvovec",
-   "drugType": "Gene",
-   "approvedFor": [
-    "inborn disorder of amino acid metabolism"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "DDC exogenous gene"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
-   "score": 0.1289,
-   "rawScore": 0.181109,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TYR",
-     "geneId": "ENSG00000077498",
-     "geneName": "tyrosinase",
-     "assoc": 0.5087,
-     "contribution": 0.181109,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5087
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.962
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1289,
-   "rawScore": 0.181109,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TYR",
-     "geneId": "ENSG00000077498",
-     "geneName": "tyrosinase",
-     "assoc": 0.5087,
-     "contribution": 0.181109,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5087
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.962
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096979",
-   "name": "Benserazide",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.1289,
-   "rawScore": 0.181109,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TYR",
-     "geneId": "ENSG00000077498",
-     "geneName": "tyrosinase",
-     "assoc": 0.5087,
-     "contribution": 0.181109,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5087
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.962
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1308",
-   "name": "Fomepizole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "poisoning"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Alcohol dehydrogenase class I inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.1242,
-   "rawScore": 0.177173,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "AWAT2",
-     "geneId": "ENSG00000147160",
-     "geneName": "acyl-CoA wax alcohol acyltransferase 2",
-     "assoc": 0.5272,
-     "contribution": 0.177173,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5272
-      }
-     ],
-     "hops": 3,
-     "via": "ADH1A",
-     "viaScore": 0.908
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL256087",
-   "name": "Menthol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Headache",
-    "disease of the tendon",
-    "skin infection",
-    "injury"
-   ],
-   "indicationCount": 29,
-   "mechanisms": [
-    "Transient receptor potential cation channel subfamily M member 8 opener",
-    "Transient receptor potential cation channel subfamily A member 1 opener"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.1117,
-   "rawScore": 0.166816,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TRPM3",
-     "geneId": "ENSG00000083067",
-     "geneName": "transient receptor potential cation channel subfamily M member 3",
-     "assoc": 0.5544,
-     "contribution": 0.166816,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5544
-      }
-     ],
-     "hops": 3,
-     "via": "TRPA1",
-     "viaScore": 0.813
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298138",
-   "name": "Repotrectinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cancer",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "NT-3 growth factor receptor inhibitor",
-    "Neurotrophic tyrosine kinase receptor type 2 inhibitor",
-    "CD74-ROS1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.0965,
-   "rawScore": 0.154131,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.154131,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "SDC4",
-     "viaScore": 0.78
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL24828",
-   "name": "Vandetanib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "medullary thyroid gland carcinoma",
-    "thyroid gland carcinoma",
-    "thyroid tumor"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Ephrin receptor inhibitor",
-    "Tyrosine-protein kinase BRK inhibitor",
-    "Tyrosine-protein kinase receptor RET inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
-   "score": 0.0833,
-   "rawScore": 0.143086,
-   "geneCount": 24,
-   "paths": [
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.110997,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "PTK6",
-     "viaScore": 0.978
-    },
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.032089,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909285",
-   "name": "Nitrefazole",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Alcohol dehydrogenase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "hematological toxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.0727,
-   "rawScore": 0.134272,
-   "geneCount": 6,
-   "paths": [
-    {
-     "gene": "AWAT2",
-     "geneId": "ENSG00000147160",
-     "geneName": "acyl-CoA wax alcohol acyltransferase 2",
-     "assoc": 0.5272,
-     "contribution": 0.134272,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5272
-      }
-     ],
-     "hops": 3,
-     "via": "ADH1A",
-     "viaScore": 0.908
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.0488,
-   "rawScore": 0.114404,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.114404,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.0488,
-   "rawScore": 0.114404,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.114404,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
-   "score": 0.0488,
-   "rawScore": 0.114404,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.114404,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6279
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.991
     }
    ]
   },
@@ -1666,9 +1867,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 35,
-   "score": 0.0488,
-   "rawScore": 0.114404,
+   "rank": 33,
+   "score": 0.1902,
+   "rawScore": 0.197488,
    "geneCount": 1,
    "paths": [
     {
@@ -1687,67 +1888,45 @@
      "hops": 3,
      "via": "EGFR",
      "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL939",
-   "name": "Gefitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "head and neck squamous cell carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
-   "score": 0.0488,
-   "rawScore": 0.114404,
-   "geneCount": 1,
-   "paths": [
+    },
     {
-     "gene": "GPNMB",
-     "geneId": "ENSG00000136235",
-     "geneName": "glycoprotein nmb",
-     "assoc": 0.6279,
-     "contribution": 0.114404,
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
      "drugsOnGene": 23,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.6279
+       "score": 0.5075
       }
      ],
      "hops": 3,
      "via": "EGFR",
-     "viaScore": 0.991
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3786343",
-   "name": "Olmutinib",
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "lung cancer",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
-   "score": 0.0488,
-   "rawScore": 0.114404,
+   "rank": 34,
+   "score": 0.1902,
+   "rawScore": 0.197488,
    "geneCount": 1,
    "paths": [
     {
@@ -1766,6 +1945,23 @@
      "hops": 3,
      "via": "EGFR",
      "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1791,9 +1987,9 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 38,
-   "score": 0.0488,
-   "rawScore": 0.114404,
+   "rank": 35,
+   "score": 0.1902,
+   "rawScore": 0.197488,
    "geneCount": 1,
    "paths": [
     {
@@ -1812,6 +2008,142 @@
      "hops": 3,
      "via": "EGFR",
      "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1902,
+   "rawScore": 0.197488,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.114404,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 37,
+   "score": 0.1902,
+   "rawScore": 0.197488,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.114404,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
@@ -1829,9 +2161,9 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
-   "score": 0.0488,
-   "rawScore": 0.114404,
+   "rank": 38,
+   "score": 0.1902,
+   "rawScore": 0.197488,
    "geneCount": 1,
    "paths": [
     {
@@ -1850,28 +2182,101 @@
      "hops": 3,
      "via": "EGFR",
      "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.1902,
+   "rawScore": 0.197488,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GPNMB",
+     "geneId": "ENSG00000136235",
+     "geneName": "glycoprotein nmb",
+     "assoc": 0.6279,
+     "contribution": 0.114404,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6279
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "lung cancer",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 40,
-   "score": 0.0488,
-   "rawScore": 0.114404,
+   "score": 0.1902,
+   "rawScore": 0.197488,
    "geneCount": 1,
    "paths": [
     {
@@ -1890,6 +2295,23 @@
      "hops": 3,
      "via": "EGFR",
      "viaScore": 0.991
+    },
+    {
+     "gene": "TGFA",
+     "geneId": "ENSG00000163235",
+     "geneName": "transforming growth factor alpha",
+     "assoc": 0.5075,
+     "contribution": 0.083084,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5075
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.999
     }
    ]
   }

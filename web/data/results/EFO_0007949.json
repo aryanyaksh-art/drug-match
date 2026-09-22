@@ -7,9 +7,9 @@
  "genesScored": 37,
  "genesWithDrugs": 8,
  "knownDrugCount": 18,
- "candidatesConsidered": 231,
+ "candidatesConsidered": 232,
  "pathsTwoHop": 43,
- "pathsThreeHop": 314,
+ "pathsThreeHop": 329,
  "candidates": [
   {
    "id": "CHEMBL1743029",
@@ -86,18 +86,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -161,15 +158,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -305,16 +305,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -380,16 +380,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -527,6 +527,61 @@
    ]
   },
   {
+   "id": "CHEMBL4594575",
+   "name": "Sabatolimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Hepatitis A virus cellular receptor 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.6256,
+   "rawScore": 0.180659,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "HMGB1",
+     "geneId": "ENSG00000189403",
+     "geneName": "high mobility group box 1",
+     "assoc": 0.1767,
+     "contribution": 0.132697,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1767
+      }
+     ],
+     "hops": 3,
+     "via": "HAVCR2",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "LGALS9",
+     "geneId": "ENSG00000168961",
+     "geneName": "galectin 9",
+     "assoc": 0.0836,
+     "contribution": 0.047962,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0836
+      }
+     ],
+     "hops": 3,
+     "via": "HAVCR2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3833307",
    "name": "Satralizumab",
    "drugType": "Antibody",
@@ -541,7 +596,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.5819,
    "rawScore": 0.168566,
    "geneCount": 2,
@@ -613,7 +668,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 10,
    "score": 0.5464,
    "rawScore": 0.158738,
    "geneCount": 1,
@@ -675,80 +730,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 10,
-   "score": 0.472,
-   "rawScore": 0.138123,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CST3",
-     "geneId": "ENSG00000101439",
-     "geneName": "cystatin C",
-     "assoc": 0.1114,
-     "contribution": 0.059334,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1114
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.927
-    },
-    {
-     "gene": "TTR",
-     "geneId": "ENSG00000118271",
-     "geneName": "transthyretin",
-     "assoc": 0.0827,
-     "contribution": 0.04667,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0827
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.982
-    },
-    {
-     "gene": "LCN2",
-     "geneId": "ENSG00000148346",
-     "geneName": "lipocalin 2",
-     "assoc": 0.0891,
-     "contribution": 0.032119,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0891
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.974
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 11,
    "score": 0.472,
    "rawScore": 0.138123,
@@ -878,25 +859,21 @@
    ]
   },
   {
-   "id": "CHEMBL3039540",
-   "name": "Aducanumab",
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
    "drugType": "Antibody",
    "approvedFor": [
     "Alzheimer disease",
+    "Cognitive impairment",
     "dementia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein binding agent"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 13,
    "score": 0.472,
    "rawScore": 0.138123,
@@ -956,39 +933,228 @@
    ]
   },
   {
-   "id": "CHEMBL4594575",
-   "name": "Sabatolimab",
+   "id": "CHEMBL3039540",
+   "name": "Aducanumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Amyloid-beta A4 protein binding agent"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.472,
+   "rawScore": 0.138123,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CST3",
+     "geneId": "ENSG00000101439",
+     "geneName": "cystatin C",
+     "assoc": 0.1114,
+     "contribution": 0.059334,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1114
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.927
+    },
+    {
+     "gene": "TTR",
+     "geneId": "ENSG00000118271",
+     "geneName": "transthyretin",
+     "assoc": 0.0827,
+     "contribution": 0.04667,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0827
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "LCN2",
+     "geneId": "ENSG00000148346",
+     "geneName": "lipocalin 2",
+     "assoc": 0.0891,
+     "contribution": 0.032119,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0891
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.974
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
     "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Hepatitis A virus cellular receptor 2 inhibitor"
+    "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
-   "score": 0.4524,
-   "rawScore": 0.132697,
+   "rank": 15,
+   "score": 0.3981,
+   "rawScore": 0.117657,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "HMGB1",
-     "geneId": "ENSG00000189403",
-     "geneName": "high mobility group box 1",
-     "assoc": 0.1767,
-     "contribution": 0.132697,
-     "drugsOnGene": 1,
+     "gene": "LCN2",
+     "geneId": "ENSG00000148346",
+     "geneName": "lipocalin 2",
+     "assoc": 0.0891,
+     "contribution": 0.04299,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1767
+       "score": 0.0891
       }
      ],
      "hops": 3,
-     "via": "HAVCR2",
+     "via": "CTLA4",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.0894,
+     "contribution": 0.038609,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0894
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "LGALS9",
+     "geneId": "ENSG00000168961",
+     "geneName": "galectin 9",
+     "assoc": 0.0836,
+     "contribution": 0.036057,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0836
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Cytotoxic T-lymphocyte protein 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.3981,
+   "rawScore": 0.117657,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "LCN2",
+     "geneId": "ENSG00000148346",
+     "geneName": "lipocalin 2",
+     "assoc": 0.0891,
+     "contribution": 0.04299,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0891
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.0894,
+     "contribution": 0.038609,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0894
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
+     "viaScore": 0.992
+    },
+    {
+     "gene": "LGALS9",
+     "geneId": "ENSG00000168961",
+     "geneName": "galectin 9",
+     "assoc": 0.0836,
+     "contribution": 0.036057,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0836
+      }
+     ],
+     "hops": 3,
+     "via": "CTLA4",
      "viaScore": 0.991
     }
    ]
@@ -1005,7 +1171,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 17,
    "score": 0.3492,
    "rawScore": 0.104111,
    "geneCount": 2,
@@ -1061,7 +1227,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 18,
    "score": 0.3386,
    "rawScore": 0.101174,
    "geneCount": 2,
@@ -1100,7 +1266,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 19,
    "score": 0.3376,
    "rawScore": 0.100896,
    "geneCount": 1,
@@ -1157,7 +1323,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 20,
    "score": 0.3376,
    "rawScore": 0.100896,
    "geneCount": 1,
@@ -1213,7 +1379,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 21,
    "score": 0.3376,
    "rawScore": 0.100896,
    "geneCount": 1,
@@ -1269,7 +1435,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 22,
    "score": 0.3317,
    "rawScore": 0.099256,
    "geneCount": 1,
@@ -1310,7 +1476,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 23,
    "score": 0.3197,
    "rawScore": 0.095925,
    "geneCount": 3,
@@ -1385,7 +1551,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 24,
    "score": 0.3175,
    "rawScore": 0.095324,
    "geneCount": 1,
@@ -1427,7 +1593,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 25,
    "score": 0.3134,
    "rawScore": 0.094186,
    "geneCount": 2,
@@ -1485,7 +1651,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 26,
    "score": 0.3076,
    "rawScore": 0.092573,
    "geneCount": 38,
@@ -1557,80 +1723,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
-   "score": 0.3006,
-   "rawScore": 0.090655,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "GC",
-     "geneId": "ENSG00000145321",
-     "geneName": "GC vitamin D binding protein",
-     "assoc": 0.1033,
-     "contribution": 0.039954,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1033
-      }
-     ],
-     "hops": 3,
-     "via": "FGB",
-     "viaScore": 0.931
-    },
-    {
-     "gene": "F2",
-     "geneId": "ENSG00000180210",
-     "geneName": "coagulation factor II, thrombin",
-     "assoc": 0.0834,
-     "contribution": 0.016901,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "FGA",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "F2",
-     "geneId": "ENSG00000180210",
-     "geneName": "coagulation factor II, thrombin",
-     "assoc": 0.0834,
-     "contribution": 0.016901,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0834
-      }
-     ],
-     "hops": 3,
-     "via": "FGG",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201505",
-   "name": "Fibrinolysin, Human",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "wound healing"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Fibrinogen inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
+   "rank": 27,
    "score": 0.3006,
    "rawScore": 0.090655,
    "geneCount": 3,
@@ -1704,7 +1797,80 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 28,
+   "score": 0.3006,
+   "rawScore": 0.090655,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "GC",
+     "geneId": "ENSG00000145321",
+     "geneName": "GC vitamin D binding protein",
+     "assoc": 0.1033,
+     "contribution": 0.039954,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1033
+      }
+     ],
+     "hops": 3,
+     "via": "FGB",
+     "viaScore": 0.931
+    },
+    {
+     "gene": "F2",
+     "geneId": "ENSG00000180210",
+     "geneName": "coagulation factor II, thrombin",
+     "assoc": 0.0834,
+     "contribution": 0.016901,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "FGA",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "F2",
+     "geneId": "ENSG00000180210",
+     "geneName": "coagulation factor II, thrombin",
+     "assoc": 0.0834,
+     "contribution": 0.016901,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0834
+      }
+     ],
+     "hops": 3,
+     "via": "FGG",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201505",
+   "name": "Fibrinolysin, Human",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Recurrent thrombophlebitis",
+    "wound healing"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Fibrinogen inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
    "score": 0.3006,
    "rawScore": 0.090655,
    "geneCount": 3,
@@ -1778,7 +1944,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 30,
    "score": 0.2971,
    "rawScore": 0.089669,
    "geneCount": 1,
@@ -1816,7 +1982,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 31,
    "score": 0.2965,
    "rawScore": 0.089501,
    "geneCount": 1,
@@ -1861,7 +2027,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 30,
+   "rank": 32,
    "score": 0.2918,
    "rawScore": 0.088209,
    "geneCount": 1,
@@ -1886,21 +2052,20 @@
    ]
   },
   {
-   "id": "CHEMBL4297551",
-   "name": "Efgartigimod Alfa",
-   "drugType": "Protein",
+   "id": "CHEMBL4297820",
+   "name": "Rozanolixizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
     "myasthenia gravis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 antagonist"
+    "IgG receptor FcRn large subunit p51 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
+   "rank": 33,
    "score": 0.2893,
    "rawScore": 0.087519,
    "geneCount": 1,
@@ -1925,20 +2090,21 @@
    ]
   },
   {
-   "id": "CHEMBL4297820",
-   "name": "Rozanolixizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4297551",
+   "name": "Efgartigimod Alfa",
+   "drugType": "Protein",
    "approvedFor": [
+    "immune system disorder",
     "myasthenia gravis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 inhibitor"
+    "IgG receptor FcRn large subunit p51 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 34,
    "score": 0.2893,
    "rawScore": 0.087519,
    "geneCount": 1,
@@ -1976,7 +2142,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 35,
    "score": 0.2893,
    "rawScore": 0.087519,
    "geneCount": 1,
@@ -1997,121 +2163,6 @@
      "hops": 3,
      "via": "FCGRT",
      "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Cytotoxic T-lymphocyte protein 4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
-   "score": 0.2679,
-   "rawScore": 0.0816,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LCN2",
-     "geneId": "ENSG00000148346",
-     "geneName": "lipocalin 2",
-     "assoc": 0.0891,
-     "contribution": 0.04299,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0891
-      }
-     ],
-     "hops": 3,
-     "via": "CTLA4",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.0894,
-     "contribution": 0.038609,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0894
-      }
-     ],
-     "hops": 3,
-     "via": "CTLA4",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Cytotoxic T-lymphocyte protein 4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
-   "score": 0.2679,
-   "rawScore": 0.0816,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "LCN2",
-     "geneId": "ENSG00000148346",
-     "geneName": "lipocalin 2",
-     "assoc": 0.0891,
-     "contribution": 0.04299,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0891
-      }
-     ],
-     "hops": 3,
-     "via": "CTLA4",
-     "viaScore": 0.988
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.0894,
-     "contribution": 0.038609,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0894
-      }
-     ],
-     "hops": 3,
-     "via": "CTLA4",
-     "viaScore": 0.992
     }
    ]
   },
@@ -2484,48 +2535,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 95,
-   "score": 0.1096,
-   "rawScore": 0.037752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CSF3",
-     "geneId": "ENSG00000108342",
-     "geneName": "colony stimulating factor 3",
-     "assoc": 0.1732,
-     "contribution": 0.037752,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1732
-      }
-     ],
-     "hops": 3,
-     "via": "CSF3R",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201567",
-   "name": "Filgrastim",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neutropenia",
-    "aplastic anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Granulocyte colony stimulating factor receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 97,
+   "rank": 105,
    "score": 0.1096,
    "rawScore": 0.037752,
    "geneCount": 1,
@@ -2566,7 +2576,48 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 98,
+   "rank": 106,
+   "score": 0.1096,
+   "rawScore": 0.037752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.1732,
+     "contribution": 0.037752,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1732
+      }
+     ],
+     "hops": 3,
+     "via": "CSF3R",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201567",
+   "name": "Filgrastim",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neutropenia",
+    "aplastic anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Granulocyte colony stimulating factor receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 113,
    "score": 0.1096,
    "rawScore": 0.037752,
    "geneCount": 1,

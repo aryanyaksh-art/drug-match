@@ -12,12 +12,12 @@
  "pathsThreeHop": 240,
  "candidates": [
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -105,12 +105,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -398,6 +398,113 @@
    ]
   },
   {
+   "id": "CHEMBL1096882",
+   "name": "Fludarabine Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "DNA polymerase (alpha/delta/epsilon) inhibitor",
+    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.7619,
+   "rawScore": 1.243058,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "POLE",
+     "geneId": "ENSG00000177084",
+     "geneName": "DNA polymerase epsilon, catalytic subunit",
+     "assoc": 0.9592,
+     "contribution": 0.191702,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8127
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7424
+      },
+      {
+       "id": "literature",
+       "score": 0.1539
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "POLD1",
+     "geneId": "ENSG00000062822",
+     "geneName": "DNA polymerase delta 1, catalytic subunit",
+     "assoc": 0.8451,
+     "contribution": 0.168892,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7747
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.2907
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "POLE",
+     "geneId": "ENSG00000177084",
+     "geneName": "DNA polymerase epsilon, catalytic subunit",
+     "assoc": 0.9592,
+     "contribution": 0.109994,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8127
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7424
+      },
+      {
+       "id": "literature",
+       "score": 0.1539
+      }
+     ],
+     "hops": 3,
+     "via": "POLD1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL888",
    "name": "Gemcitabine",
    "drugType": "Small molecule",
@@ -413,7 +520,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 5,
+   "rank": 6,
    "score": 0.7619,
    "rawScore": 1.243058,
    "geneCount": 14,
@@ -512,113 +619,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
-   "score": 0.7619,
-   "rawScore": 1.243058,
-   "geneCount": 14,
-   "paths": [
-    {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.9592,
-     "contribution": 0.191702,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8127
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7424
-      },
-      {
-       "id": "literature",
-       "score": 0.1539
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "POLD1",
-     "geneId": "ENSG00000062822",
-     "geneName": "DNA polymerase delta 1, catalytic subunit",
-     "assoc": 0.8451,
-     "contribution": 0.168892,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7747
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.2907
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "POLE",
-     "geneId": "ENSG00000177084",
-     "geneName": "DNA polymerase epsilon, catalytic subunit",
-     "assoc": 0.9592,
-     "contribution": 0.109994,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.8127
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7424
-      },
-      {
-       "id": "literature",
-       "score": 0.1539
-      }
-     ],
-     "hops": 3,
-     "via": "POLD1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 7,
    "score": 0.7619,
    "rawScore": 1.243058,
@@ -1270,15 +1270,16 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL2107333",
+   "name": "Dimethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
     "relapsing-remitting multiple sclerosis",
-    "multiple sclerosis"
+    "multiple sclerosis",
+    "immune system disorder",
+    "psoriasis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -1339,13 +1340,15 @@
    ]
   },
   {
-   "id": "CHEMBL589586",
-   "name": "Monomethyl Fumarate",
+   "id": "CHEMBL3989944",
+   "name": "Diroximel Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
+    "relapsing-remitting multiple sclerosis",
     "multiple sclerosis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -1406,16 +1409,13 @@
    ]
   },
   {
-   "id": "CHEMBL2107333",
-   "name": "Dimethyl Fumarate",
+   "id": "CHEMBL589586",
+   "name": "Monomethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "relapsing-remitting multiple sclerosis",
-    "multiple sclerosis",
-    "immune system disorder",
-    "psoriasis"
+    "multiple sclerosis"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -1719,15 +1719,16 @@
    ]
   },
   {
-   "id": "CHEMBL2028663",
-   "name": "Dabrafenib",
+   "id": "CHEMBL3301612",
+   "name": "Encorafenib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "glioma",
-    "neoplasm",
-    "melanoma"
+    "metastatic melanoma",
+    "colorectal neoplasm",
+    "melanoma",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
@@ -1788,12 +1789,12 @@
    ]
   },
   {
-   "id": "CHEMBL1229517",
-   "name": "Vemurafenib",
+   "id": "CHEMBL2028663",
+   "name": "Dabrafenib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "glioma",
     "neoplasm",
-    "metastatic melanoma",
     "melanoma"
    ],
    "indicationCount": 3,
@@ -1857,16 +1858,15 @@
    ]
   },
   {
-   "id": "CHEMBL3301612",
-   "name": "Encorafenib",
+   "id": "CHEMBL1229517",
+   "name": "Vemurafenib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "neoplasm",
     "metastatic melanoma",
-    "colorectal neoplasm",
-    "melanoma",
-    "neoplasm"
+    "melanoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
     "Serine/threonine-protein kinase B-raf inhibitor"
    ],
@@ -2174,71 +2174,6 @@
    ]
   },
   {
-   "id": "CHEMBL443684",
-   "name": "Navitoclax",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Apoptosis regulator Bcl-W inhibitor",
-    "Apoptosis regulator Bcl-X inhibitor",
-    "Apoptosis regulator Bcl-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.3937,
-   "rawScore": 0.678211,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "BAX",
-     "geneId": "ENSG00000087088",
-     "geneName": "BCL2 associated X, apoptosis regulator",
-     "assoc": 0.8454,
-     "contribution": 0.412438,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7447
-      },
-      {
-       "id": "literature",
-       "score": 0.3943
-      }
-     ],
-     "hops": 3,
-     "via": "BCL2L1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BAX",
-     "geneId": "ENSG00000087088",
-     "geneName": "BCL2 associated X, apoptosis regulator",
-     "assoc": 0.8454,
-     "contribution": 0.265773,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "somatic_mutation",
-       "score": 0.7447
-      },
-      {
-       "id": "literature",
-       "score": 0.3943
-      }
-     ],
-     "hops": 3,
-     "via": "BCL2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2103839",
    "name": "Ridaforolimus",
    "drugType": "Small molecule",
@@ -2252,7 +2187,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 26,
    "score": 0.3812,
    "rawScore": 0.659039,
    "geneCount": 1,
@@ -2303,7 +2238,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 27,
    "score": 0.3669,
    "rawScore": 0.637121,
    "geneCount": 9,
@@ -2386,34 +2321,31 @@
    ]
   },
   {
-   "id": "CHEMBL468",
-   "name": "Thalidomide",
+   "id": "CHEMBL43452",
+   "name": "Pomalidomide",
    "drugType": "Small molecule",
    "approvedFor": [
+    "immune system disorder",
     "plasma cell myeloma",
-    "immune system disorder"
+    "systemic sclerosis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
     "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Withdrawn",
      "detail": "teratogenicity"
     },
     {
      "type": "Black Box Warning",
-     "detail": "teratogenicity"
+     "detail": "vascular toxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
-   "rank": 29,
+   "rank": 28,
    "score": 0.3569,
    "rawScore": 0.621792,
    "geneCount": 4,
@@ -2505,6 +2437,87 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 29,
+   "score": 0.3569,
+   "rawScore": 0.621792,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FBXO11",
+     "geneId": "ENSG00000138081",
+     "geneName": "F-box protein 11",
+     "assoc": 0.9817,
+     "contribution": 0.316815,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.89
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.8333
+      }
+     ],
+     "hops": 3,
+     "via": "RBX1",
+     "viaScore": 0.872
+    },
+    {
+     "gene": "FBXW7",
+     "geneId": "ENSG00000109670",
+     "geneName": "F-box and WD repeat domain containing 7",
+     "assoc": 0.8248,
+     "contribution": 0.304977,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.8104
+      },
+      {
+       "id": "literature",
+       "score": 0.076
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.0
+      }
+     ],
+     "hops": 3,
+     "via": "RBX1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL468",
+   "name": "Thalidomide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "immune system disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
    "rank": 30,
    "score": 0.3569,
    "rawScore": 0.621792,
@@ -2559,92 +2572,78 @@
    ]
   },
   {
-   "id": "CHEMBL43452",
-   "name": "Pomalidomide",
+   "id": "CHEMBL443684",
+   "name": "Navitoclax",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
-    "plasma cell myeloma",
-    "systemic sclerosis"
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
-    "CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+    "Apoptosis regulator Bcl-W inhibitor",
+    "Apoptosis regulator Bcl-X inhibitor",
+    "Apoptosis regulator Bcl-2 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 31,
-   "score": 0.3569,
-   "rawScore": 0.621792,
+   "score": 0.3456,
+   "rawScore": 0.604491,
    "geneCount": 4,
    "paths": [
     {
-     "gene": "FBXO11",
-     "geneId": "ENSG00000138081",
-     "geneName": "F-box protein 11",
-     "assoc": 0.9817,
-     "contribution": 0.316815,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.89
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.8333
-      }
-     ],
-     "hops": 3,
-     "via": "RBX1",
-     "viaScore": 0.872
-    },
-    {
-     "gene": "FBXW7",
-     "geneId": "ENSG00000109670",
-     "geneName": "F-box and WD repeat domain containing 7",
-     "assoc": 0.8248,
-     "contribution": 0.304977,
-     "drugsOnGene": 3,
+     "gene": "BAX",
+     "geneId": "ENSG00000087088",
+     "geneName": "BCL2 associated X, apoptosis regulator",
+     "assoc": 0.8454,
+     "contribution": 0.367607,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "somatic_mutation",
-       "score": 0.8104
+       "score": 0.7447
       },
       {
        "id": "literature",
-       "score": 0.076
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.0
+       "score": 0.3943
       }
      ],
      "hops": 3,
-     "via": "RBX1",
+     "via": "BCL2L1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BAX",
+     "geneId": "ENSG00000087088",
+     "geneName": "BCL2 associated X, apoptosis regulator",
+     "assoc": 0.8454,
+     "contribution": 0.236884,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "somatic_mutation",
+       "score": 0.7447
+      },
+      {
+       "id": "literature",
+       "score": 0.3943
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "basal cell carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -2685,13 +2684,14 @@
    ]
   },
   {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "neoplasm",
+    "basal cell carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -2920,16 +2920,14 @@
    ]
   },
   {
-   "id": "CHEMBL3643413",
-   "name": "Leniolisib",
+   "id": "CHEMBL4297615",
+   "name": "Parsaclisib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastric cancer",
     "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "PI3-kinase p110-delta subunit inhibitor",
     "PI3-kinase p110-delta subunit inhibitor"
    ],
    "warnings": [],
@@ -2993,14 +2991,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297615",
-   "name": "Parsaclisib",
+   "id": "CHEMBL3643413",
+   "name": "Leniolisib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "gastric cancer",
     "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
+    "PI3-kinase p110-delta subunit inhibitor",
     "PI3-kinase p110-delta subunit inhibitor"
    ],
    "warnings": [],

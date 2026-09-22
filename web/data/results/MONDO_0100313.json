@@ -9,7 +9,7 @@
  "knownDrugCount": 45,
  "candidatesConsidered": 119,
  "pathsTwoHop": 94,
- "pathsThreeHop": 76,
+ "pathsThreeHop": 77,
  "candidates": [
   {
    "id": "CHEMBL2108709",
@@ -119,6 +119,61 @@
    ]
   },
   {
+   "id": "CHEMBL4594497",
+   "name": "Sepofarsen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "eye disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "CEP290 mRNA positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 3,
+   "score": 0.5128,
+   "rawScore": 1.068499,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CEP290",
+     "geneId": "ENSG00000198707",
+     "geneName": "centrosomal protein 290",
+     "assoc": 0.5958,
+     "contribution": 0.595772,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5958
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SDCCAG8",
+     "geneId": "ENSG00000054282",
+     "geneName": "SHH signaling and ciliogenesis regulator SDCCAG8",
+     "assoc": 0.5471,
+     "contribution": 0.472727,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5471
+      }
+     ],
+     "hops": 3,
+     "via": "CEP290",
+     "viaScore": 0.864
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201571",
    "name": "Alefacept",
    "drugType": "Protein",
@@ -133,7 +188,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
+   "rank": 4,
    "score": 0.4667,
    "rawScore": 0.973957,
    "geneCount": 1,
@@ -186,7 +241,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
+   "rank": 5,
    "score": 0.4346,
    "rawScore": 0.908212,
    "geneCount": 38,
@@ -303,7 +358,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 5,
+   "rank": 6,
    "score": 0.3375,
    "rawScore": 0.709198,
    "geneCount": 2,
@@ -332,53 +387,6 @@
      "hops": 3,
      "via": "TRPV4",
      "viaScore": 0.94
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 6,
-   "score": 0.3237,
-   "rawScore": 0.680897,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOL1",
-     "geneId": "ENSG00000100342",
-     "geneName": "apolipoprotein L1",
-     "assoc": 0.9723,
-     "contribution": 0.680897,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7897
-      },
-      {
-       "id": "literature",
-       "score": 0.6995
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.5623
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.924
     }
    ]
   },
@@ -429,50 +437,59 @@
    ]
   },
   {
-   "id": "CHEMBL4594497",
-   "name": "Sepofarsen",
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "eye disorder"
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "CEP290 mRNA positive modulator"
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
-   "score": 0.2821,
-   "rawScore": 0.595772,
+   "score": 0.3237,
+   "rawScore": 0.680897,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "CEP290",
-     "geneId": "ENSG00000198707",
-     "geneName": "centrosomal protein 290",
-     "assoc": 0.5958,
-     "contribution": 0.595772,
-     "drugsOnGene": 1,
+     "gene": "APOL1",
+     "geneId": "ENSG00000100342",
+     "geneName": "apolipoprotein L1",
+     "assoc": 0.9723,
+     "contribution": 0.680897,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.5958
+       "score": 0.7897
+      },
+      {
+       "id": "literature",
+       "score": 0.6995
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.5623
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.924
     }
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -510,12 +527,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -643,88 +660,28 @@
    ]
   },
   {
-   "id": "CHEMBL2165326",
-   "name": "Aprocitentan",
+   "id": "CHEMBL2103873",
+   "name": "Macitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Hypertension",
-    "hypertensive disorder"
+    "hypertensive disorder",
+    "cardiovascular disorder",
+    "pulmonary hypertension",
+    "pulmonary arterial hypertension"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "teratogenicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
    "rank": 13,
-   "score": 0.2054,
-   "rawScore": 0.438567,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.6044,
-     "contribution": 0.239182,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6044
-      }
-     ],
-     "hops": 3,
-     "via": "EDNRB",
-     "viaScore": 0.994
-    },
-    {
-     "gene": "EDNRA",
-     "geneId": "ENSG00000151617",
-     "geneName": "endothelin receptor type A",
-     "assoc": 0.6044,
-     "contribution": 0.199386,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6044
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL282724",
-   "name": "Sitaxentan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pulmonary arterial hypertension",
-    "hypertensive disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Endothelin receptor, ET-A/ET-B antagonist",
-    "Endothelin receptor, ET-A/ET-B antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 14,
    "score": 0.2054,
    "rawScore": 0.438567,
    "geneCount": 2,
@@ -791,7 +748,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 15,
+   "rank": 14,
    "score": 0.2054,
    "rawScore": 0.438567,
    "geneCount": 2,
@@ -833,28 +790,26 @@
    ]
   },
   {
-   "id": "CHEMBL2103873",
-   "name": "Macitentan",
+   "id": "CHEMBL2165326",
+   "name": "Aprocitentan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hypertensive disorder",
-    "cardiovascular disorder",
-    "pulmonary hypertension",
-    "pulmonary arterial hypertension"
+    "Hypertension",
+    "hypertensive disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Endothelin receptor, ET-A/ET-B antagonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "teratogenicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 16,
+   "rank": 15,
    "score": 0.2054,
    "rawScore": 0.438567,
    "geneCount": 2,
@@ -916,6 +871,68 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 16,
+   "score": 0.2054,
+   "rawScore": 0.438567,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.6044,
+     "contribution": 0.239182,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6044
+      }
+     ],
+     "hops": 3,
+     "via": "EDNRB",
+     "viaScore": 0.994
+    },
+    {
+     "gene": "EDNRA",
+     "geneId": "ENSG00000151617",
+     "geneName": "endothelin receptor type A",
+     "assoc": 0.6044,
+     "contribution": 0.199386,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6044
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL282724",
+   "name": "Sitaxentan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pulmonary arterial hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Endothelin receptor, ET-A/ET-B antagonist",
+    "Endothelin receptor, ET-A/ET-B antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 17,
    "score": 0.2054,
    "rawScore": 0.438567,
@@ -1056,13 +1073,14 @@
    ]
   },
   {
-   "id": "CHEMBL1218",
-   "name": "Ramelteon",
+   "id": "CHEMBL45",
+   "name": "Melatonin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "insomnia"
+    "insomnia",
+    "autism"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Melatonin receptor agonist"
    ],
@@ -1102,14 +1120,13 @@
    ]
   },
   {
-   "id": "CHEMBL45",
-   "name": "Melatonin",
+   "id": "CHEMBL1218",
+   "name": "Ramelteon",
    "drugType": "Small molecule",
    "approvedFor": [
-    "insomnia",
-    "autism"
+    "insomnia"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Melatonin receptor agonist"
    ],
@@ -1149,150 +1166,6 @@
    ]
   },
   {
-   "id": "CHEMBL1069",
-   "name": "Valsartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "stroke disorder",
-    "congestive heart failure",
-    "heart failure"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 23,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL813",
-   "name": "Eprosartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 24,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1951143",
-   "name": "Fimasartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1200692",
    "name": "Olmesartan Medoxomil",
    "drugType": "Small molecule",
@@ -1318,49 +1191,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 26,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL938",
-   "name": "Saralasin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Hypertension"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
+   "rank": 23,
    "score": 0.124,
    "rawScore": 0.271722,
    "geneCount": 1,
@@ -1408,274 +1239,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL408403",
-   "name": "Angiotensin Ii",
-   "drugType": "Protein",
-   "approvedFor": [
-    "Increased blood pressure",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1516",
-   "name": "Olmesartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 30,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL432162",
-   "name": "Tasosartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL57242",
-   "name": "Azilsartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1017",
-   "name": "Telmisartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "hypertensive disorder",
-    "myocardial infarction",
-    "stroke disorder"
-   ],
-   "indicationCount": 7,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 33,
-   "score": 0.124,
-   "rawScore": 0.271722,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.271722,
-     "drugsOnGene": 16,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1016",
-   "name": "Candesartan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hypertension",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Type-1 angiotensin II receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 34,
+   "rank": 24,
    "score": 0.124,
    "rawScore": 0.271722,
    "geneCount": 1,
@@ -1729,7 +1293,460 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 25,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1016",
+   "name": "Candesartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1951143",
+   "name": "Fimasartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1017",
+   "name": "Telmisartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiovascular disorder",
+    "hypertensive disorder",
+    "myocardial infarction",
+    "stroke disorder"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL57242",
+   "name": "Azilsartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL813",
+   "name": "Eprosartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL408403",
+   "name": "Angiotensin Ii",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Increased blood pressure",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1069",
+   "name": "Valsartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "stroke disorder",
+    "congestive heart failure",
+    "heart failure"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 33,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1516",
+   "name": "Olmesartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL938",
+   "name": "Saralasin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Hypertension"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 35,
+   "score": 0.124,
+   "rawScore": 0.271722,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.271722,
+     "drugsOnGene": 16,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL432162",
+   "name": "Tasosartan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Type-1 angiotensin II receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
    "score": 0.124,
    "rawScore": 0.271722,
    "geneCount": 1,
@@ -1939,8 +1956,57 @@
    ]
   },
   {
-   "id": "CHEMBL838",
-   "name": "Benazepril",
+   "id": "CHEMBL1581",
+   "name": "Perindopril",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Angiotensin-converting enzyme inhibitor",
+    "Angiotensin-converting enzyme inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 42,
+   "score": 0.0769,
+   "rawScore": 0.175004,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AGTR1",
+     "geneId": "ENSG00000144891",
+     "geneName": "angiotensin II receptor type 1",
+     "assoc": 0.8237,
+     "contribution": 0.175004,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6942
+      },
+      {
+       "id": "literature",
+       "score": 0.4236
+      }
+     ],
+     "hops": 3,
+     "via": "ACE",
+     "viaScore": 0.974
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3039598",
+   "name": "Fosinopril",
    "drugType": "Small molecule",
    "approvedFor": [
     "cardiovascular disorder",
@@ -1954,15 +2020,11 @@
     {
      "type": "Black Box Warning",
      "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": null
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 42,
+   "rank": 43,
    "score": 0.0769,
    "rawScore": 0.175004,
    "geneCount": 1,
@@ -2012,49 +2074,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 43,
-   "score": 0.0769,
-   "rawScore": 0.175004,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AGTR1",
-     "geneId": "ENSG00000144891",
-     "geneName": "angiotensin II receptor type 1",
-     "assoc": 0.8237,
-     "contribution": 0.175004,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6942
-      },
-      {
-       "id": "literature",
-       "score": 0.4236
-      }
-     ],
-     "hops": 3,
-     "via": "ACE",
-     "viaScore": 0.974
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL431",
-   "name": "Spirapril",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiovascular disorder",
-    "Hypertension"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Angiotensin-converting enzyme inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 44,
    "score": 0.0769,
    "rawScore": 0.175004,
@@ -2276,7 +2295,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 36,
+   "rank": 31,
    "score": 0.124,
    "rawScore": 0.271722,
    "geneCount": 1,
@@ -2359,7 +2378,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 64,
+   "rank": 71,
    "score": 0.035,
    "rawScore": 0.089192,
    "geneCount": 1,
@@ -2404,7 +2423,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 65,
+   "rank": 87,
    "score": 0.035,
    "rawScore": 0.089192,
    "geneCount": 1,
@@ -2449,7 +2468,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 86,
+   "rank": 105,
    "score": 0.035,
    "rawScore": 0.089192,
    "geneCount": 1,

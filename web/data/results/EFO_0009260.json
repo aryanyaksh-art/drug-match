@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 3,
  "knownDrugCount": 5,
- "candidatesConsidered": 109,
+ "candidatesConsidered": 113,
  "pathsTwoHop": 5,
- "pathsThreeHop": 145,
+ "pathsThreeHop": 155,
  "candidates": [
   {
    "id": "CHEMBL441738",
@@ -352,16 +352,15 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -397,15 +396,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -586,6 +586,54 @@
    ]
   },
   {
+   "id": "CHEMBL1324",
+   "name": "Tolcapone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hepatic failure",
+    "Parkinson disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Catechol O-methyltransferase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 9,
+   "score": 0.1963,
+   "rawScore": 0.476521,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CYP1B1",
+     "geneId": "ENSG00000138061",
+     "geneName": "cytochrome P450 family 1 subfamily B member 1",
+     "assoc": 0.7616,
+     "contribution": 0.476521,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7616
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.971
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1089318",
    "name": "Opicapone",
    "drugType": "Small molecule",
@@ -599,7 +647,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 9,
+   "rank": 10,
    "score": 0.1963,
    "rawScore": 0.476521,
    "geneCount": 1,
@@ -637,54 +685,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
-   "score": 0.1963,
-   "rawScore": 0.476521,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CYP1B1",
-     "geneId": "ENSG00000138061",
-     "geneName": "cytochrome P450 family 1 subfamily B member 1",
-     "assoc": 0.7616,
-     "contribution": 0.476521,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7616
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.971
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1324",
-   "name": "Tolcapone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hepatic failure",
-    "Parkinson disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Catechol O-methyltransferase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
    "rank": 11,
    "score": 0.1963,
    "rawScore": 0.476521,
@@ -804,15 +804,13 @@
    ]
   },
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -848,13 +846,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -929,69 +929,6 @@
    ]
   },
   {
-   "id": "CHEMBL3545110",
-   "name": "Ribociclib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Cyclin-dependent kinase 6 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor",
-    "Cyclin-dependent kinase 4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.1649,
-   "rawScore": 0.407105,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "CDKN2B",
-     "geneId": "ENSG00000147883",
-     "geneName": "cyclin dependent kinase inhibitor 2B",
-     "assoc": 0.7264,
-     "contribution": 0.203552,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7161
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "CDK6",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CDKN2B",
-     "geneId": "ENSG00000147883",
-     "geneName": "cyclin dependent kinase inhibitor 2B",
-     "assoc": 0.7264,
-     "contribution": 0.203552,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7161
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "CDK4",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL3301610",
    "name": "Abemaciclib",
    "drugType": "Small molecule",
@@ -1009,7 +946,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 17,
    "score": 0.1649,
    "rawScore": 0.407105,
    "geneCount": 2,
@@ -1070,6 +1007,69 @@
    "mechanisms": [
     "Cyclin-dependent kinase 6 inhibitor",
     "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1649,
+   "rawScore": 0.407105,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "CDKN2B",
+     "geneId": "ENSG00000147883",
+     "geneName": "cyclin dependent kinase inhibitor 2B",
+     "assoc": 0.7264,
+     "contribution": 0.203552,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7161
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CDK6",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CDKN2B",
+     "geneId": "ENSG00000147883",
+     "geneName": "cyclin dependent kinase inhibitor 2B",
+     "assoc": 0.7264,
+     "contribution": 0.203552,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7161
+      },
+      {
+       "id": "literature",
+       "score": 0.0365
+      }
+     ],
+     "hops": 3,
+     "via": "CDK4",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545110",
+   "name": "Ribociclib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Cyclin-dependent kinase 6 inhibitor",
+    "Cyclin-dependent kinase 4 inhibitor",
     "Cyclin-dependent kinase 4 inhibitor"
    ],
    "warnings": [],
@@ -1204,180 +1204,116 @@
    ]
   },
   {
-   "id": "CHEMBL553",
-   "name": "Erlotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL4298195",
+   "name": "Narsoplimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Mannan-binding lectin serine protease 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 21,
-   "score": 0.1246,
-   "rawScore": 0.317991,
+   "score": 0.1407,
+   "rawScore": 0.353513,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
+     "gene": "COLEC10",
+     "geneId": "ENSG00000184374",
+     "geneName": "collectin subfamily member 10",
+     "assoc": 0.4834,
+     "contribution": 0.353513,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
+       "score": 0.4834
       }
      ],
      "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
+     "via": "MASP2",
+     "viaScore": 0.965
     }
    ]
   },
   {
-   "id": "CHEMBL4761468",
-   "name": "Aumolertinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743007",
+   "name": "Daratumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "plasma cell myeloma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Lymphocyte differentiation antigen CD38 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 22,
-   "score": 0.1246,
-   "rawScore": 0.317991,
+   "score": 0.1383,
+   "rawScore": 0.348333,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
+     "gene": "TPCN2",
+     "geneId": "ENSG00000162341",
+     "geneName": "two pore segment channel 2",
+     "assoc": 0.4985,
+     "contribution": 0.348333,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
+       "score": 0.4985
       }
      ],
      "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
+     "via": "CD38",
+     "viaScore": 0.922
     }
    ]
   },
   {
-   "id": "CHEMBL4297258",
-   "name": "Firmonertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL3545131",
+   "name": "Isatuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "plasma cell myeloma"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Lymphocyte differentiation antigen CD38 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 23,
-   "score": 0.1246,
-   "rawScore": 0.317991,
+   "score": 0.1383,
+   "rawScore": 0.348333,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
+     "gene": "TPCN2",
+     "geneId": "ENSG00000162341",
+     "geneName": "two pore segment channel 2",
+     "assoc": 0.4985,
+     "contribution": 0.348333,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
+       "score": 0.4985
       }
      ],
      "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
+     "via": "CD38",
+     "viaScore": 0.922
     }
    ]
   },
@@ -1453,82 +1389,22 @@
    ]
   },
   {
-   "id": "CHEMBL939",
-   "name": "Gefitinib",
+   "id": "CHEMBL3353410",
+   "name": "Osimertinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "head and neck squamous cell carcinoma",
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor",
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 25,
-   "score": 0.1246,
-   "rawScore": 0.317991,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3786343",
-   "name": "Olmutinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "lung cancer",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
    "score": 0.1246,
    "rawScore": 0.317991,
    "geneCount": 1,
@@ -1595,7 +1471,134 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 26,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4761468",
+   "name": "Aumolertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "non-small cell lung carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 27,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201827",
+   "name": "Panitumumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "colorectal cancer",
+    "colorectal neoplasm",
+    "colorectal adenocarcinoma"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
    "score": 0.1246,
    "rawScore": 0.317991,
    "geneCount": 1,
@@ -1654,67 +1657,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
-   "score": 0.1246,
-   "rawScore": 0.317991,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3353410",
-   "name": "Osimertinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 29,
    "score": 0.1246,
    "rawScore": 0.317991,
@@ -1761,15 +1703,17 @@
    ]
   },
   {
-   "id": "CHEMBL4298088",
-   "name": "Cetuximab Sarotalocan",
-   "drugType": "Antibody drug conjugate",
+   "id": "CHEMBL939",
+   "name": "Gefitinib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "head and neck cancer"
+    "head and neck squamous cell carcinoma",
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 binding agent"
+    "Epidermal growth factor receptor erbB1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1820,13 +1764,14 @@
    ]
   },
   {
-   "id": "CHEMBL2108359",
-   "name": "Nimotuzumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL3786343",
+   "name": "Olmutinib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "head and neck cancer"
+    "lung cancer",
+    "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor"
    ],
@@ -1949,87 +1894,20 @@
    ]
   },
   {
-   "id": "CHEMBL2087361",
-   "name": "Icotinib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4298088",
+   "name": "Cetuximab Sarotalocan",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
-    "neoplasm"
+    "head and neck cancer"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
+    "Epidermal growth factor receptor erbB1 binding agent"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 33,
-   "score": 0.1246,
-   "rawScore": 0.317991,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.202857,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.115134,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201827",
-   "name": "Panitumumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neoplasm",
-    "colorectal cancer",
-    "colorectal neoplasm",
-    "colorectal adenocarcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
    "score": 0.1246,
    "rawScore": 0.317991,
    "geneCount": 1,
@@ -2090,7 +1968,243 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 34,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL553",
+   "name": "Erlotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "non-small cell lung carcinoma",
+    "cancer",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 35,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297258",
+   "name": "Firmonertinib",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108359",
+   "name": "Nimotuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "head and neck cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1246,
+   "rawScore": 0.317991,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "KRT5",
+     "geneId": "ENSG00000186081",
+     "geneName": "keratin 5",
+     "assoc": 0.8034,
+     "contribution": 0.202857,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7972
+      },
+      {
+       "id": "literature",
+       "score": 0.0304
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.885
+    },
+    {
+     "gene": "TNS3",
+     "geneId": "ENSG00000136205",
+     "geneName": "tensin 3",
+     "assoc": 0.6844,
+     "contribution": 0.115134,
+     "drugsOnGene": 23,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6844
+      }
+     ],
+     "hops": 3,
+     "via": "EGFR",
+     "viaScore": 0.915
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2087361",
+   "name": "Icotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Epidermal growth factor receptor erbB1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
    "score": 0.1246,
    "rawScore": 0.317991,
    "geneCount": 1,
@@ -2149,47 +2263,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
-   "score": 0.1105,
-   "rawScore": 0.286763,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TYR",
-     "geneId": "ENSG00000077498",
-     "geneName": "tyrosinase",
-     "assoc": 0.8054,
-     "contribution": 0.286763,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7917
-      },
-      {
-       "id": "literature",
-       "score": 0.0659
-      }
-     ],
-     "hops": 3,
-     "via": "DDC",
-     "viaScore": 0.962
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "DOPA decarboxylase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
+   "rank": 39,
    "score": 0.1105,
    "rawScore": 0.286763,
    "geneCount": 1,
@@ -2229,7 +2303,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 40,
    "score": 0.1105,
    "rawScore": 0.286763,
    "geneCount": 1,
@@ -2254,125 +2328,6 @@
      "hops": 3,
      "via": "DDC",
      "viaScore": 0.962
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3647420",
-   "name": "Pyrotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.0898,
-   "rawScore": 0.240992,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.153737,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.087255,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297774",
-   "name": "Amivantamab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Epidermal growth factor receptor erbB1 inhibitor",
-    "Hepatocyte growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.0898,
-   "rawScore": 0.240992,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "KRT5",
-     "geneId": "ENSG00000186081",
-     "geneName": "keratin 5",
-     "assoc": 0.8034,
-     "contribution": 0.153737,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7972
-      },
-      {
-       "id": "literature",
-       "score": 0.0304
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.885
-    },
-    {
-     "gene": "TNS3",
-     "geneId": "ENSG00000136205",
-     "geneName": "tensin 3",
-     "assoc": 0.6844,
-     "contribution": 0.087255,
-     "drugsOnGene": 23,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6844
-      }
-     ],
-     "hops": 3,
-     "via": "EGFR",
-     "viaScore": 0.915
     }
    ]
   }

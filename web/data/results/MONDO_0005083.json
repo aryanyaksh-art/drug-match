@@ -7,9 +7,9 @@
  "genesScored": 48,
  "genesWithDrugs": 28,
  "knownDrugCount": 195,
- "candidatesConsidered": 262,
+ "candidatesConsidered": 265,
  "pathsTwoHop": 185,
- "pathsThreeHop": 334,
+ "pathsThreeHop": 401,
  "candidates": [
   {
    "id": "CHEMBL4298102",
@@ -119,7 +119,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.4752,
    "rawScore": 1.552731,
    "geneCount": 1,
@@ -186,6 +186,96 @@
      "hops": 3,
      "via": "IFNG",
      "viaScore": 0.959
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 16,
+   "score": 0.4038,
+   "rawScore": 1.321693,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.275193,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.157741,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "JAK1",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.141968,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 3,
+     "via": "TYK2",
+     "viaScore": 0.951
     }
    ]
   },
@@ -292,96 +382,6 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.4038,
-   "rawScore": 1.321693,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.275193,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.157741,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "JAK1",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.141968,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "TYK2",
-     "viaScore": 0.951
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2048028",
    "name": "Lifitegrast",
    "drugType": "Small molecule",
@@ -396,9 +396,9 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.316,
-   "rawScore": 1.037834,
+   "rank": 21,
+   "score": 0.3453,
+   "rawScore": 1.132632,
    "geneCount": 2,
    "paths": [
     {
@@ -448,33 +448,30 @@
      "geneId": "ENSG00000005844",
      "geneName": "integrin subunit alpha L",
      "assoc": 0.1652,
-     "contribution": 0.080686,
-     "drugsOnGene": 3,
+     "contribution": 0.094799,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
        "score": 0.1652
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "ITGB2",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -550,15 +547,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -718,6 +718,79 @@
    ]
   },
   {
+   "id": "CHEMBL1201570",
+   "name": "Anakinra",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "CINCA syndrome"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-1 receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2811,
+   "rawScore": 0.925006,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL36RN",
+     "geneId": "ENSG00000136695",
+     "geneName": "interleukin 36 receptor antagonist",
+     "assoc": 0.9973,
+     "contribution": 0.48405,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8954
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7784
+      },
+      {
+       "id": "literature",
+       "score": 0.6015
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5959
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.2647
+      }
+     ],
+     "hops": 3,
+     "via": "IL1R1",
+     "viaScore": 0.924
+    },
+    {
+     "gene": "IL1RL2",
+     "geneId": "ENSG00000115598",
+     "geneName": "interleukin 1 receptor like 2",
+     "assoc": 0.7084,
+     "contribution": 0.440956,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7084
+      }
+     ],
+     "hops": 3,
+     "via": "IL1R1",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108887",
    "name": "Afelimomab",
    "drugType": "Antibody",
@@ -802,7 +875,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 32,
+   "rank": 30,
    "score": 0.2754,
    "rawScore": 0.906727,
    "geneCount": 1,
@@ -876,7 +949,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 35,
    "score": 0.2143,
    "rawScore": 0.708867,
    "geneCount": 3,
@@ -962,7 +1035,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 38,
    "score": 0.2074,
    "rawScore": 0.686537,
    "geneCount": 1,
@@ -1026,9 +1099,9 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 38,
-   "score": 0.1941,
-   "rawScore": 0.643766,
+   "rank": 39,
+   "score": 0.2063,
+   "rawScore": 0.68325,
    "geneCount": 1,
    "paths": [
     {
@@ -1074,21 +1147,21 @@
      "viaScore": null
     },
     {
-     "gene": "RARB",
-     "geneId": "ENSG00000077092",
-     "geneName": "retinoic acid receptor beta",
-     "assoc": 0.07,
-     "contribution": 0.021047,
+     "gene": "RARA",
+     "geneId": "ENSG00000131759",
+     "geneName": "retinoic acid receptor alpha",
+     "assoc": 0.074,
+     "contribution": 0.029443,
      "drugsOnGene": 5,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.07
+       "score": 0.074
       }
      ],
      "hops": 3,
      "via": "RXRA",
-     "viaScore": 0.996
+     "viaScore": 0.999
     }
    ]
   },
@@ -1108,7 +1181,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 40,
    "score": 0.1933,
    "rawScore": 0.641175,
    "geneCount": 3,
@@ -1157,7 +1230,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 40,
+   "rank": 41,
    "score": 0.185,
    "rawScore": 0.614218,
    "geneCount": 3,
@@ -1205,7 +1278,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
+   "rank": 42,
    "score": 0.1804,
    "rawScore": 0.599477,
    "geneCount": 3,
@@ -1274,7 +1347,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 42,
+   "rank": 43,
    "score": 0.1801,
    "rawScore": 0.598335,
    "geneCount": 1,
@@ -1315,18 +1388,201 @@
    ]
   },
   {
-   "id": "CHEMBL2109047",
-   "name": "Interferon Alfa-N3",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL705",
+   "name": "Alitretinoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Eczematoid dermatitis",
+    "Kaposi's sarcoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
+    "Retinoid receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 46,
+   "rank": 45,
+   "score": 0.1669,
+   "rawScore": 0.555821,
+   "geneCount": 6,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.9304,
+     "contribution": 0.188554,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8692
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4676
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.79
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4504,
+     "contribution": 0.115556,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3497
+      },
+      {
+       "id": "literature",
+       "score": 0.1549
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4504,
+     "contribution": 0.057954,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3497
+      },
+      {
+       "id": "literature",
+       "score": 0.1549
+      }
+     ],
+     "hops": 3,
+     "via": "RARA",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1023",
+   "name": "Bexarotene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "neoplasm",
+    "T-cell non-Hodgkin lymphoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Retinoid X receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 47,
+   "score": 0.1634,
+   "rawScore": 0.544542,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.9304,
+     "contribution": 0.248799,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8692
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4676
+      }
+     ],
+     "hops": 3,
+     "via": "RXRA",
+     "viaScore": 0.79
+    },
+    {
+     "gene": "RXRA",
+     "geneId": "ENSG00000186350",
+     "geneName": "retinoid X receptor alpha",
+     "assoc": 0.4504,
+     "contribution": 0.152478,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3497
+      },
+      {
+       "id": "literature",
+       "score": 0.1549
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "RXRB",
+     "geneId": "ENSG00000204231",
+     "geneName": "retinoid X receptor beta",
+     "assoc": 0.1084,
+     "contribution": 0.040125,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1084
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201558",
+   "name": "Interferon Alfa-2B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "hairy cell leukemia",
+    "hepatitis B virus infection",
+    "melanoma"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 51,
    "score": 0.1512,
    "rawScore": 0.504792,
    "geneCount": 2,
@@ -1419,7 +1675,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 47,
+   "rank": 52,
    "score": 0.1512,
    "rawScore": 0.504792,
    "geneCount": 2,
@@ -1494,109 +1750,18 @@
    ]
   },
   {
-   "id": "CHEMBL1201562",
-   "name": "Interferon Beta-1A",
+   "id": "CHEMBL2109047",
+   "name": "Interferon Alfa-N3",
    "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 48,
-   "score": 0.1512,
-   "rawScore": 0.504792,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.18343,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.177156,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.144207,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.966
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107842",
-   "name": "Albinterferon Alfa-2B",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 49,
+   "rank": 53,
    "score": 0.1512,
    "rawScore": 0.504792,
    "geneCount": 2,
@@ -1681,369 +1846,6 @@
     "neoplasm"
    ],
    "indicationCount": 4,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 50,
-   "score": 0.1512,
-   "rawScore": 0.504792,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.18343,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.177156,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.144207,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.966
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201563",
-   "name": "Interferon Beta-1B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 51,
-   "score": 0.1512,
-   "rawScore": 0.504792,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.18343,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.177156,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.144207,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.966
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297819",
-   "name": "Ropeginterferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "acquired polycythemia vera",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 52,
-   "score": 0.1512,
-   "rawScore": 0.504792,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.18343,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.177156,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.144207,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.966
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108677",
-   "name": "Peginterferon Beta-1A",
-   "drugType": "Protein",
-   "approvedFor": [
-    "multiple sclerosis",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 53,
-   "score": 0.1512,
-   "rawScore": 0.504792,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.18343,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TYK2",
-     "geneId": "ENSG00000105397",
-     "geneName": "tyrosine kinase 2",
-     "assoc": 0.9811,
-     "contribution": 0.177156,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9357
-      },
-      {
-       "id": "literature",
-       "score": 0.7062
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNLR1",
-     "geneId": "ENSG00000185436",
-     "geneName": "interferon lambda receptor 1",
-     "assoc": 0.9267,
-     "contribution": 0.144207,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8284
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4975
-      },
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.966
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201558",
-   "name": "Interferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "hairy cell leukemia",
-    "hepatitis B virus infection",
-    "melanoma"
-   ],
-   "indicationCount": 12,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
@@ -2224,27 +2026,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201560",
-   "name": "Peginterferon Alfa-2A",
+   "id": "CHEMBL1201562",
+   "name": "Interferon Beta-1A",
    "drugType": "Protein",
    "approvedFor": [
-    "chronic hepatitis B virus infection",
-    "acquired polycythemia vera",
     "neoplasm",
-    "chronic hepatitis C virus infection"
+    "multiple sclerosis"
    ],
-   "indicationCount": 6,
+   "indicationCount": 2,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 56,
    "score": 0.1512,
    "rawScore": 0.504792,
@@ -2320,231 +2115,453 @@
    ]
   },
   {
-   "id": "CHEMBL1023",
-   "name": "Bexarotene",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201560",
+   "name": "Peginterferon Alfa-2A",
+   "drugType": "Protein",
    "approvedFor": [
-    "primary cutaneous T-cell non-Hodgkin lymphoma",
+    "chronic hepatitis B virus infection",
+    "acquired polycythemia vera",
     "neoplasm",
-    "T-cell non-Hodgkin lymphoma"
+    "chronic hepatitis C virus infection"
    ],
-   "indicationCount": 3,
+   "indicationCount": 6,
    "mechanisms": [
-    "Retinoid X receptor agonist"
+    "Interferon alpha/beta receptor agonist"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "teratogenicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
    "blackBox": true,
    "rank": 57,
-   "score": 0.1448,
-   "rawScore": 0.484219,
-   "geneCount": 3,
+   "score": 0.1512,
+   "rawScore": 0.504792,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.9304,
-     "contribution": 0.248799,
-     "drugsOnGene": 5,
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.18343,
+     "drugsOnGene": 11,
      "evidence": [
       {
-       "id": "literature",
-       "score": 0.8692
+       "id": "genetic_association",
+       "score": 0.9357
       },
       {
-       "id": "animal_model",
-       "score": 0.4676
+       "id": "literature",
+       "score": 0.7062
       }
      ],
      "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.79
+     "via": "IFNAR2",
+     "viaScore": 0.999
     },
     {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4504,
-     "contribution": 0.152478,
-     "drugsOnGene": 5,
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.177156,
+     "drugsOnGene": 12,
      "evidence": [
       {
-       "id": "animal_model",
-       "score": 0.3497
+       "id": "genetic_association",
+       "score": 0.9357
       },
       {
        "id": "literature",
-       "score": 0.1549
+       "score": 0.7062
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
     },
     {
-     "gene": "RXRB",
-     "geneId": "ENSG00000204231",
-     "geneName": "retinoid X receptor beta",
-     "assoc": 0.1084,
-     "contribution": 0.040125,
-     "drugsOnGene": 4,
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.144207,
+     "drugsOnGene": 12,
      "evidence": [
       {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
        "id": "literature",
-       "score": 0.1084
+       "score": 0.1495
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.966
     }
    ]
   },
   {
-   "id": "CHEMBL1201570",
-   "name": "Anakinra",
+   "id": "CHEMBL1201563",
+   "name": "Interferon Beta-1B",
    "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "CINCA syndrome"
+    "neoplasm",
+    "multiple sclerosis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Interleukin-1 receptor antagonist"
+    "Interferon alpha/beta receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 58,
-   "score": 0.1447,
-   "rawScore": 0.48405,
-   "geneCount": 1,
+   "score": 0.1512,
+   "rawScore": 0.504792,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "IL36RN",
-     "geneId": "ENSG00000136695",
-     "geneName": "interleukin 36 receptor antagonist",
-     "assoc": 0.9973,
-     "contribution": 0.48405,
-     "drugsOnGene": 1,
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.18343,
+     "drugsOnGene": 11,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.8954
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.7784
+       "score": 0.9357
       },
       {
        "id": "literature",
-       "score": 0.6015
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5959
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.2647
+       "score": 0.7062
       }
      ],
      "hops": 3,
-     "via": "IL1R1",
-     "viaScore": 0.924
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.177156,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.144207,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.966
     }
    ]
   },
   {
-   "id": "CHEMBL705",
-   "name": "Alitretinoin",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4297819",
+   "name": "Ropeginterferon Alfa-2B",
+   "drugType": "Protein",
    "approvedFor": [
-    "Eczematoid dermatitis",
-    "Kaposi's sarcoma",
+    "acquired polycythemia vera",
     "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Retinoid receptor agonist"
+    "Interferon alpha/beta receptor positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 59,
+   "score": 0.1512,
+   "rawScore": 0.504792,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.18343,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.177156,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.144207,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107842",
+   "name": "Albinterferon Alfa-2B",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 60,
+   "score": 0.1512,
+   "rawScore": 0.504792,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.18343,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.177156,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.144207,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.966
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108677",
+   "name": "Peginterferon Beta-1A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "multiple sclerosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 61,
-   "score": 0.1416,
-   "rawScore": 0.473913,
-   "geneCount": 6,
+   "score": 0.1512,
+   "rawScore": 0.504792,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.9304,
-     "contribution": 0.188554,
-     "drugsOnGene": 5,
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.18343,
+     "drugsOnGene": 11,
      "evidence": [
       {
-       "id": "literature",
-       "score": 0.8692
+       "id": "genetic_association",
+       "score": 0.9357
       },
       {
-       "id": "animal_model",
-       "score": 0.4676
+       "id": "literature",
+       "score": 0.7062
       }
      ],
      "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.79
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4504,
-     "contribution": 0.115556,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3497
-      },
-      {
-       "id": "literature",
-       "score": 0.1549
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "RXRA",
-     "geneId": "ENSG00000186350",
-     "geneName": "retinoid X receptor alpha",
-     "assoc": 0.4504,
-     "contribution": 0.057954,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3497
-      },
-      {
-       "id": "literature",
-       "score": 0.1549
-      }
-     ],
-     "hops": 3,
-     "via": "RARA",
+     "via": "IFNAR2",
      "viaScore": 0.999
+    },
+    {
+     "gene": "TYK2",
+     "geneId": "ENSG00000105397",
+     "geneName": "tyrosine kinase 2",
+     "assoc": 0.9811,
+     "contribution": 0.177156,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9357
+      },
+      {
+       "id": "literature",
+       "score": 0.7062
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNLR1",
+     "geneId": "ENSG00000185436",
+     "geneName": "interferon lambda receptor 1",
+     "assoc": 0.9267,
+     "contribution": 0.144207,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8284
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4975
+      },
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.966
     }
    ]
   },
@@ -2601,119 +2618,6 @@
    ]
   },
   {
-   "id": "CHEMBL608533",
-   "name": "Midostaurin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "acute myeloid leukemia",
-    "systemic mastocytosis",
-    "mastocytosis",
-    "mast cell leukemia"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Tyrosine-protein kinase receptor FLT3 inhibitor",
-    "Vascular endothelial growth factor receptor 2 inhibitor",
-    "Platelet-derived growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 64,
-   "score": 0.1358,
-   "rawScore": 0.454977,
-   "geneCount": 15,
-   "paths": [
-    {
-     "gene": "CARD14",
-     "geneId": "ENSG00000141527",
-     "geneName": "caspase recruitment domain family member 14",
-     "assoc": 0.9995,
-     "contribution": 0.203193,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.922
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8274
-      },
-      {
-       "id": "literature",
-       "score": 0.8212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7656
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.089
-      }
-     ],
-     "hops": 3,
-     "via": "PRKCQ",
-     "viaScore": 0.932
-    },
-    {
-     "gene": "CARD14",
-     "geneId": "ENSG00000141527",
-     "geneName": "caspase recruitment domain family member 14",
-     "assoc": 0.9995,
-     "contribution": 0.199704,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.922
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8274
-      },
-      {
-       "id": "literature",
-       "score": 0.8212
-      },
-      {
-       "id": "animal_model",
-       "score": 0.7656
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.089
-      }
-     ],
-     "hops": 3,
-     "via": "PRKCB",
-     "viaScore": 0.916
-    },
-    {
-     "gene": "SH2B3",
-     "geneId": "ENSG00000111252",
-     "geneName": "SH2B adaptor protein 3",
-     "assoc": 0.9044,
-     "contribution": 0.05208,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.894
-      },
-      {
-       "id": "literature",
-       "score": 0.0979
-      }
-     ],
-     "hops": 3,
-     "via": "KIT",
-     "viaScore": 0.875
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1287853",
    "name": "Fedratinib",
    "drugType": "Small molecule",
@@ -2736,7 +2640,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 65,
+   "rank": 64,
    "score": 0.1343,
    "rawScore": 0.450151,
    "geneCount": 2,
@@ -2807,6 +2711,119 @@
      "hops": 3,
      "via": "JAK2",
      "viaScore": 0.934
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL608533",
+   "name": "Midostaurin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "acute myeloid leukemia",
+    "systemic mastocytosis",
+    "mastocytosis",
+    "mast cell leukemia"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "Tyrosine-protein kinase receptor FLT3 inhibitor",
+    "Vascular endothelial growth factor receptor 2 inhibitor",
+    "Platelet-derived growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 65,
+   "score": 0.1322,
+   "rawScore": 0.443382,
+   "geneCount": 16,
+   "paths": [
+    {
+     "gene": "CARD14",
+     "geneId": "ENSG00000141527",
+     "geneName": "caspase recruitment domain family member 14",
+     "assoc": 0.9995,
+     "contribution": 0.198014,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.922
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8274
+      },
+      {
+       "id": "literature",
+       "score": 0.8212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7656
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.089
+      }
+     ],
+     "hops": 3,
+     "via": "PRKCQ",
+     "viaScore": 0.932
+    },
+    {
+     "gene": "CARD14",
+     "geneId": "ENSG00000141527",
+     "geneName": "caspase recruitment domain family member 14",
+     "assoc": 0.9995,
+     "contribution": 0.194615,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.922
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8274
+      },
+      {
+       "id": "literature",
+       "score": 0.8212
+      },
+      {
+       "id": "animal_model",
+       "score": 0.7656
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.089
+      }
+     ],
+     "hops": 3,
+     "via": "PRKCB",
+     "viaScore": 0.916
+    },
+    {
+     "gene": "SH2B3",
+     "geneId": "ENSG00000111252",
+     "geneName": "SH2B adaptor protein 3",
+     "assoc": 0.9044,
+     "contribution": 0.050753,
+     "drugsOnGene": 15,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.894
+      },
+      {
+       "id": "literature",
+       "score": 0.0979
+      }
+     ],
+     "hops": 3,
+     "via": "KIT",
+     "viaScore": 0.875
     }
    ]
   },
@@ -2985,62 +3002,23 @@
    ]
   },
   {
-   "id": "CHEMBL1040",
-   "name": "Calcifediol Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Vitamin D receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 72,
-   "score": 0.1096,
-   "rawScore": 0.370389,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VDR",
-     "geneId": "ENSG00000111424",
-     "geneName": "vitamin D receptor",
-     "assoc": 0.9304,
-     "contribution": 0.370389,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8692
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4676
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200810",
-   "name": "Doxercalciferol",
+   "id": "CHEMBL1200622",
+   "name": "Paricalcitol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "parathyroid gland disorder",
+    "secondary hyperparathyroidism",
     "chronic kidney disease",
-    "secondary hyperparathyroidism"
+    "hyperparathyroidism",
+    "parathyroid gland disorder"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 73,
+   "rank": 69,
    "score": 0.1096,
    "rawScore": 0.370389,
    "geneCount": 1,
@@ -3069,18 +3047,62 @@
    ]
   },
   {
-   "id": "CHEMBL1601669",
-   "name": "Alfacalcidol",
+   "id": "CHEMBL4297608",
+   "name": "Eldecalcitol",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "osteoporosis"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Vitamin D receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 74,
+   "rank": 70,
+   "score": 0.1096,
+   "rawScore": 0.370389,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VDR",
+     "geneId": "ENSG00000111424",
+     "geneName": "vitamin D receptor",
+     "assoc": 0.9304,
+     "contribution": 0.370389,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8692
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4676
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2356023",
+   "name": "Dihydrotachysterol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypocalcemia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Vitamin D receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 71,
    "score": 0.1096,
    "rawScore": 0.370389,
    "geneCount": 1,
@@ -3307,14 +3329,14 @@
    ]
   },
   {
-   "id": "CHEMBL1743068",
-   "name": "Secukinumab",
+   "id": "CHEMBL1743034",
+   "name": "Ixekizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "psoriasis",
+    "psoriatic arthritis",
     "psoriasis vulgaris",
-    "spondyloarthropathy",
-    "immune system disorder"
+    "psoriasis",
+    "pustular psoriasis"
    ],
    "indicationCount": 6,
    "mechanisms": [
@@ -3406,14 +3428,14 @@
    ]
   },
   {
-   "id": "CHEMBL1743034",
-   "name": "Ixekizumab",
+   "id": "CHEMBL1743068",
+   "name": "Secukinumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "psoriatic arthritis",
-    "psoriasis vulgaris",
     "psoriasis",
-    "pustular psoriasis"
+    "psoriasis vulgaris",
+    "spondyloarthropathy",
+    "immune system disorder"
    ],
    "indicationCount": 6,
    "mechanisms": [
@@ -3505,6 +3527,97 @@
    ]
   },
   {
+   "id": "CHEMBL4297911",
+   "name": "Spesolimab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis vulgaris",
+    "pustular psoriasis",
+    "psoriasis"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "IL36 receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.5243,
+   "rawScore": 1.711555,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IL1RL2",
+     "geneId": "ENSG00000115598",
+     "geneName": "interleukin 1 receptor like 2",
+     "assoc": 0.7084,
+     "contribution": 0.536852,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7084
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL36RN",
+     "geneId": "ENSG00000136695",
+     "geneName": "interleukin 36 receptor antagonist",
+     "assoc": 0.9973,
+     "contribution": 0.396617,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8954
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.7784
+      },
+      {
+       "id": "literature",
+       "score": 0.6015
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5959
+      },
+      {
+       "id": "rna_expression",
+       "score": 0.2647
+      }
+     ],
+     "hops": 3,
+     "via": "IL1RL2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IL1RL2",
+     "geneId": "ENSG00000115598",
+     "geneName": "interleukin 1 receptor like 2",
+     "assoc": 0.7084,
+     "contribution": 0.344214,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7084
+      }
+     ],
+     "hops": 3,
+     "via": "IL1RAP",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201835",
    "name": "Ustekinumab",
    "drugType": "Antibody",
@@ -3522,7 +3635,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
+   "rank": 7,
    "score": 0.4937,
    "rawScore": 1.612536,
    "geneCount": 3,
@@ -3627,7 +3740,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 7,
+   "rank": 8,
    "score": 0.4937,
    "rawScore": 1.612536,
    "geneCount": 3,
@@ -3718,121 +3831,16 @@
    ]
   },
   {
-   "id": "CHEMBL3990014",
-   "name": "Mirikizumab",
+   "id": "CHEMBL2364648",
+   "name": "Guselkumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "pustular psoriasis",
     "Crohn disease",
     "immune system disorder",
-    "ulcerative colitis"
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-23 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 9,
-   "score": 0.4652,
-   "rawScore": 1.520287,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IL12B",
-     "geneId": "ENSG00000113302",
-     "geneName": "interleukin 12B",
-     "assoc": 0.9964,
-     "contribution": 0.368791,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9716
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.5075
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.3513
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL23A",
-     "geneId": "ENSG00000110944",
-     "geneName": "interleukin 23 subunit alpha",
-     "assoc": 0.9767,
-     "contribution": 0.361492,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.956
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.4007
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.1179
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL12B",
-     "geneId": "ENSG00000113302",
-     "geneName": "interleukin 12B",
-     "assoc": 0.9964,
-     "contribution": 0.211603,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9716
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.6079
-      },
-      {
-       "id": "literature",
-       "score": 0.5075
-      },
-      {
-       "id": "rna_expression",
-       "score": 0.3513
-      }
-     ],
-     "hops": 3,
-     "via": "IL23A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108681",
-   "name": "Tildrakizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis vulgaris",
-    "psoriasis"
-   ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Interleukin-23 inhibitor"
    ],
@@ -4037,16 +4045,15 @@
    ]
   },
   {
-   "id": "CHEMBL2364648",
-   "name": "Guselkumab",
+   "id": "CHEMBL2108681",
+   "name": "Tildrakizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "pustular psoriasis",
-    "Crohn disease",
     "immune system disorder",
-    "psoriasis vulgaris"
+    "psoriasis vulgaris",
+    "psoriasis"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Interleukin-23 inhibitor"
    ],

@@ -7,9 +7,9 @@
  "genesScored": 46,
  "genesWithDrugs": 15,
  "knownDrugCount": 3,
- "candidatesConsidered": 249,
+ "candidatesConsidered": 258,
  "pathsTwoHop": 123,
- "pathsThreeHop": 330,
+ "pathsThreeHop": 344,
  "candidates": [
   {
    "id": "CHEMBL1201823",
@@ -249,16 +249,15 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -324,15 +323,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -443,18 +443,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -501,15 +498,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -611,6 +611,78 @@
    ]
   },
   {
+   "id": "CHEMBL3545369",
+   "name": "Epacadostat",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Indoleamine 2,3-dioxygenase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.6165,
+   "rawScore": 0.070882,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ASMT",
+     "geneId": "ENSG00000196433",
+     "geneName": "acetylserotonin O-methyltransferase",
+     "assoc": 0.0395,
+     "contribution": 0.036631,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0395
+      }
+     ],
+     "hops": 3,
+     "via": "IDO1",
+     "viaScore": 0.927
+    },
+    {
+     "gene": "AANAT",
+     "geneId": "ENSG00000129673",
+     "geneName": "aralkylamine N-acetyltransferase",
+     "assoc": 0.0395,
+     "contribution": 0.02113,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0395
+      }
+     ],
+     "hops": 3,
+     "via": "IDO1",
+     "viaScore": 0.931
+    },
+    {
+     "gene": "TPH1",
+     "geneId": "ENSG00000129167",
+     "geneName": "tryptophan hydroxylase 1",
+     "assoc": 0.0213,
+     "contribution": 0.013122,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0213
+      }
+     ],
+     "hops": 3,
+     "via": "IDO1",
+     "viaScore": 0.957
+    }
+   ]
+  },
+  {
    "id": "CHEMBL256147",
    "name": "Tilarginine",
    "drugType": "Small molecule",
@@ -623,7 +695,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.543,
    "rawScore": 0.06268,
    "geneCount": 3,
@@ -648,90 +720,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 11,
-   "score": 0.5259,
-   "rawScore": 0.060777,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1246,
-     "contribution": 0.034588,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1246
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0418,
-     "contribution": 0.019203,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0418
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.0334,
-     "contribution": 0.006986,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0334
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108887",
    "name": "Afelimomab",
    "drugType": "Antibody",
@@ -746,86 +734,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 12,
-   "score": 0.5259,
-   "rawScore": 0.060777,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1246,
-     "contribution": 0.034588,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1246
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0418,
-     "contribution": 0.019203,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0418
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.0334,
-     "contribution": 0.006986,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0334
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 13,
    "score": 0.5259,
    "rawScore": 0.060777,
    "geneCount": 1,
@@ -909,6 +817,86 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 13,
+   "score": 0.5259,
+   "rawScore": 0.060777,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1246,
+     "contribution": 0.034588,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1246
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0418,
+     "contribution": 0.019203,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0418
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0334,
+     "contribution": 0.006986,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0334
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 14,
    "score": 0.5259,
    "rawScore": 0.060777,
@@ -968,31 +956,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 12,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 15,
    "score": 0.5259,
    "rawScore": 0.060777,
@@ -1136,20 +1112,116 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 17,
+   "score": 0.5259,
+   "rawScore": 0.060777,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1246,
+     "contribution": 0.034588,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1246
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0418,
+     "contribution": 0.019203,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0418
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.0334,
+     "contribution": 0.006986,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0334
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 18,
    "score": 0.5259,
    "rawScore": 0.060777,
    "geneCount": 1,
@@ -1221,7 +1293,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 19,
    "score": 0.4999,
    "rawScore": 0.057873,
    "geneCount": 1,
@@ -1263,78 +1335,100 @@
    ]
   },
   {
-   "id": "CHEMBL3545369",
-   "name": "Epacadostat",
+   "id": "CHEMBL2103875",
+   "name": "Trametinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "glioma",
+    "melanoma",
+    "metastatic melanoma",
     "neoplasm"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Indoleamine 2,3-dioxygenase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 19,
-   "score": 0.4989,
-   "rawScore": 0.057761,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ASMT",
-     "geneId": "ENSG00000196433",
-     "geneName": "acetylserotonin O-methyltransferase",
-     "assoc": 0.0395,
-     "contribution": 0.036631,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0395
-      }
-     ],
-     "hops": 3,
-     "via": "IDO1",
-     "viaScore": 0.927
-    },
-    {
-     "gene": "AANAT",
-     "geneId": "ENSG00000129673",
-     "geneName": "aralkylamine N-acetyltransferase",
-     "assoc": 0.0395,
-     "contribution": 0.02113,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0395
-      }
-     ],
-     "hops": 3,
-     "via": "IDO1",
-     "viaScore": 0.931
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neurofibromatosis type 1",
-    "neoplasm",
-    "plexiform neurofibroma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 20,
+   "score": 0.4358,
+   "rawScore": 0.05073,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP2K1",
+     "geneId": "ENSG00000169032",
+     "geneName": "mitogen-activated protein kinase kinase 1",
+     "assoc": 0.0608,
+     "contribution": 0.024202,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "MAP2K1",
+     "geneId": "ENSG00000169032",
+     "geneName": "mitogen-activated protein kinase kinase 1",
+     "assoc": 0.0608,
+     "contribution": 0.015533,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K2",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "MAPK1",
+     "geneId": "ENSG00000100030",
+     "geneName": "mitogen-activated protein kinase 1",
+     "assoc": 0.0182,
+     "contribution": 0.005497,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "neurofibromatosis type 1",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
    "score": 0.4358,
    "rawScore": 0.05073,
    "geneCount": 2,
@@ -1409,7 +1503,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 22,
    "score": 0.4358,
    "rawScore": 0.05073,
    "geneCount": 2,
@@ -1484,83 +1578,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
-   "score": 0.4358,
-   "rawScore": 0.05073,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP2K1",
-     "geneId": "ENSG00000169032",
-     "geneName": "mitogen-activated protein kinase kinase 1",
-     "assoc": 0.0608,
-     "contribution": 0.024202,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MAP2K1",
-     "geneId": "ENSG00000169032",
-     "geneName": "mitogen-activated protein kinase kinase 1",
-     "assoc": 0.0608,
-     "contribution": 0.015533,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K2",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "MAPK1",
-     "geneId": "ENSG00000100030",
-     "geneName": "mitogen-activated protein kinase 1",
-     "assoc": 0.0182,
-     "contribution": 0.005497,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103875",
-   "name": "Trametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "glioma",
-    "melanoma",
-    "metastatic melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 23,
    "score": 0.4358,
    "rawScore": 0.05073,
@@ -1620,18 +1637,18 @@
    ]
   },
   {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "neurofibromatosis type 1",
+    "neoplasm",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1901,15 +1918,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297729",
-   "name": "Cosibelimab",
+   "id": "CHEMBL3833373",
+   "name": "Avelumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "head and neck squamous cell carcinoma"
+    "neuroendocrine neoplasm",
+    "Merkel cell skin cancer",
+    "neoplasm",
+    "urothelial carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
+    "Programmed cell death 1 ligand 1 other"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1973,16 +1993,13 @@
    ]
   },
   {
-   "id": "CHEMBL3707227",
-   "name": "Atezolizumab",
+   "id": "CHEMBL4297729",
+   "name": "Cosibelimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "lung cancer",
-    "non-small cell lung carcinoma",
-    "transitional cell carcinoma",
-    "breast cancer"
+    "head and neck squamous cell carcinoma"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
@@ -1990,6 +2007,76 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 30,
+   "score": 0.3174,
+   "rawScore": 0.037528,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.0334,
+     "contribution": 0.016329,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0334
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CTLA4",
+     "geneId": "ENSG00000163599",
+     "geneName": "cytotoxic T-lymphocyte associated protein 4",
+     "assoc": 0.0401,
+     "contribution": 0.011238,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0401
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.0355,
+     "contribution": 0.009961,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0355
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297828",
+   "name": "Adebrelimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
    "score": 0.3174,
    "rawScore": 0.037528,
    "geneCount": 1,
@@ -2062,81 +2149,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
-   "score": 0.3174,
-   "rawScore": 0.037528,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.0334,
-     "contribution": 0.016329,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0334
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CTLA4",
-     "geneId": "ENSG00000163599",
-     "geneName": "cytotoxic T-lymphocyte associated protein 4",
-     "assoc": 0.0401,
-     "contribution": 0.011238,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0401
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.0355,
-     "contribution": 0.009961,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0355
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833373",
-   "name": "Avelumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neuroendocrine neoplasm",
-    "Merkel cell skin cancer",
-    "neoplasm",
-    "urothelial carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Programmed cell death 1 ligand 1 other"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 32,
    "score": 0.3174,
    "rawScore": 0.037528,
@@ -2196,11 +2208,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297828",
-   "name": "Adebrelimab",
+   "id": "CHEMBL3707227",
+   "name": "Atezolizumab",
    "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "lung cancer",
+    "non-small cell lung carcinoma",
+    "transitional cell carcinoma",
+    "breast cancer"
+   ],
+   "indicationCount": 8,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
@@ -2330,23 +2347,18 @@
    ]
   },
   {
-   "id": "CHEMBL436",
-   "name": "Tolrestat",
+   "id": "CHEMBL56337",
+   "name": "Epalrestat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetes mellitus"
+    "diabetic neuropathy"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Aldose reductase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
    "rank": 35,
    "score": 0.2862,
@@ -2373,18 +2385,23 @@
    ]
   },
   {
-   "id": "CHEMBL56337",
-   "name": "Epalrestat",
+   "id": "CHEMBL436",
+   "name": "Tolrestat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "diabetic neuropathy"
+    "diabetes mellitus"
    ],
    "indicationCount": 1,
    "mechanisms": [
     "Aldose reductase inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 36,
    "score": 0.2862,
@@ -2675,7 +2692,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 167,
+   "rank": 171,
    "score": 0.0508,
    "rawScore": 0.007793,
    "geneCount": 4,

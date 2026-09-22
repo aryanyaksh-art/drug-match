@@ -7,9 +7,9 @@
  "genesScored": 46,
  "genesWithDrugs": 12,
  "knownDrugCount": 8,
- "candidatesConsidered": 184,
+ "candidatesConsidered": 237,
  "pathsTwoHop": 34,
- "pathsThreeHop": 330,
+ "pathsThreeHop": 441,
  "candidates": [
   {
    "id": "CHEMBL1743029",
@@ -29,7 +29,7 @@
    "blackBox": false,
    "rank": 1,
    "score": 1.0,
-   "rawScore": 1.098565,
+   "rawScore": 1.208807,
    "geneCount": 1,
    "paths": [
     {
@@ -101,8 +101,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 2,
-   "score": 0.4511,
-   "rawScore": 0.497962,
+   "score": 0.501,
+   "rawScore": 0.607873,
    "geneCount": 1,
    "paths": [
     {
@@ -121,6 +121,23 @@
      "hops": 3,
      "via": "CD2",
      "viaScore": 0.998
+    },
+    {
+     "gene": "CD5",
+     "geneId": "ENSG00000110448",
+     "geneName": "CD5 molecule",
+     "assoc": 0.1459,
+     "contribution": 0.109911,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1459
+      }
+     ],
+     "hops": 3,
+     "via": "CD2",
+     "viaScore": 0.994
     }
    ]
   },
@@ -139,7 +156,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 3,
-   "score": 0.3825,
+   "score": 0.3475,
    "rawScore": 0.422966,
    "geneCount": 1,
    "paths": [
@@ -225,7 +242,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 4,
-   "score": 0.3035,
+   "score": 0.2757,
    "rawScore": 0.336545,
    "geneCount": 4,
    "paths": [
@@ -299,7 +316,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
-   "score": 0.3035,
+   "score": 0.2757,
    "rawScore": 0.336545,
    "geneCount": 4,
    "paths": [
@@ -357,34 +374,23 @@
    ]
   },
   {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.3035,
+   "score": 0.2757,
    "rawScore": 0.336545,
    "geneCount": 4,
    "paths": [
@@ -470,7 +476,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 7,
-   "score": 0.3035,
+   "score": 0.2757,
    "rawScore": 0.336545,
    "geneCount": 4,
    "paths": [
@@ -528,23 +534,34 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 8,
-   "score": 0.3035,
+   "score": 0.2757,
    "rawScore": 0.336545,
    "geneCount": 4,
    "paths": [
@@ -598,61 +615,6 @@
      "hops": 3,
      "via": "JAK3",
      "viaScore": 0.942
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743069",
-   "name": "Sifalimumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interferon alpha inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 9,
-   "score": 0.2941,
-   "rawScore": 0.326198,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.205573,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.120625,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNA1",
-     "viaScore": 0.993
     }
    ]
   },
@@ -670,8 +632,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
-   "score": 0.2705,
+   "rank": 9,
+   "score": 0.2458,
    "rawScore": 0.300431,
    "geneCount": 4,
    "paths": [
@@ -746,8 +708,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
-   "score": 0.2684,
+   "rank": 10,
+   "score": 0.2438,
    "rawScore": 0.298128,
    "geneCount": 2,
    "paths": [
@@ -833,8 +795,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 12,
-   "score": 0.2684,
+   "rank": 11,
+   "score": 0.2438,
    "rawScore": 0.298128,
    "geneCount": 2,
    "paths": [
@@ -927,8 +889,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 13,
-   "score": 0.2637,
+   "rank": 12,
+   "score": 0.2395,
    "rawScore": 0.292949,
    "geneCount": 4,
    "paths": [
@@ -972,8 +934,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 14,
-   "score": 0.2551,
+   "rank": 13,
+   "score": 0.2317,
    "rawScore": 0.283538,
    "geneCount": 1,
    "paths": [
@@ -1008,8 +970,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
-   "score": 0.2509,
+   "rank": 14,
+   "score": 0.2279,
    "rawScore": 0.278923,
    "geneCount": 2,
    "paths": [
@@ -1081,8 +1043,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 16,
-   "score": 0.2486,
+   "rank": 15,
+   "score": 0.2259,
    "rawScore": 0.276477,
    "geneCount": 1,
    "paths": [
@@ -1154,64 +1116,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
-   "score": 0.22,
-   "rawScore": 0.245148,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD4",
-     "geneId": "ENSG00000010610",
-     "geneName": "CD4 molecule",
-     "assoc": 0.3745,
-     "contribution": 0.18271,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3745
-      }
-     ],
-     "hops": 3,
-     "via": "CXCR4",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "MIF",
-     "geneId": "ENSG00000240972",
-     "geneName": "macrophage migration inhibitory factor",
-     "assoc": 0.1517,
-     "contribution": 0.062438,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1517
-      }
-     ],
-     "hops": 3,
-     "via": "CXCR4",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL5095030",
-   "name": "Motixafortide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "plasma cell myeloma",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.22,
+   "rank": 16,
+   "score": 0.1999,
    "rawScore": 0.245148,
    "geneCount": 1,
    "paths": [
@@ -1268,8 +1174,64 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
-   "score": 0.22,
+   "rank": 17,
+   "score": 0.1999,
+   "rawScore": 0.245148,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.3745,
+     "contribution": 0.18271,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3745
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MIF",
+     "geneId": "ENSG00000240972",
+     "geneName": "macrophage migration inhibitory factor",
+     "assoc": 0.1517,
+     "contribution": 0.062438,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1517
+      }
+     ],
+     "hops": 3,
+     "via": "CXCR4",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "plasma cell myeloma",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "C-X-C chemokine receptor type 4 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.1999,
    "rawScore": 0.245148,
    "geneCount": 1,
    "paths": [
@@ -1344,8 +1306,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 20,
-   "score": 0.2103,
+   "rank": 19,
+   "score": 0.1911,
    "rawScore": 0.23458,
    "geneCount": 2,
    "paths": [
@@ -1417,8 +1379,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.2077,
+   "rank": 20,
+   "score": 0.1887,
    "rawScore": 0.231736,
    "geneCount": 2,
    "paths": [
@@ -1442,19 +1404,29 @@
    ]
   },
   {
-   "id": "CHEMBL2109047",
-   "name": "Interferon Alfa-N3",
+   "id": "CHEMBL1201558",
+   "name": "Interferon Alfa-2B",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "hairy cell leukemia",
+    "hepatitis B virus infection",
+    "melanoma"
+   ],
+   "indicationCount": 12,
    "mechanisms": [
     "Interferon alpha/beta receptor agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.1897,
+   "blackBox": true,
+   "rank": 21,
+   "score": 0.1723,
    "rawScore": 0.212017,
    "geneCount": 2,
    "paths": [
@@ -1530,226 +1502,78 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 22,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2109047",
+   "name": "Interferon Alfa-N3",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2107842",
-   "name": "Albinterferon Alfa-2B",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 24,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201562",
-   "name": "Interferon Beta-1A",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201563",
-   "name": "Interferon Beta-1B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "multiple sclerosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.1897,
+   "score": 0.1723,
    "rawScore": 0.212017,
    "geneCount": 2,
    "paths": [
@@ -1828,234 +1652,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 27,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297819",
-   "name": "Ropeginterferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "acquired polycythemia vera",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor positive modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108677",
-   "name": "Peginterferon Beta-1A",
-   "drugType": "Protein",
-   "approvedFor": [
-    "multiple sclerosis",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.1897,
-   "rawScore": 0.212017,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.054693,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNA1",
-     "geneId": "ENSG00000197919",
-     "geneName": "interferon alpha 1",
-     "assoc": 0.319,
-     "contribution": 0.05316,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.319
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "IFNB1",
-     "geneId": "ENSG00000171855",
-     "geneName": "interferon beta 1",
-     "assoc": 0.2925,
-     "contribution": 0.052822,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2925
-      }
-     ],
-     "hops": 3,
-     "via": "IFNAR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201558",
-   "name": "Interferon Alfa-2B",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "hairy cell leukemia",
-    "hepatitis B virus infection",
-    "melanoma"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "Interferon alpha/beta receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
-   "score": 0.1897,
+   "rank": 24,
+   "score": 0.1723,
    "rawScore": 0.212017,
    "geneCount": 2,
    "paths": [
@@ -2132,8 +1730,154 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 31,
-   "score": 0.1897,
+   "rank": 25,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201562",
+   "name": "Interferon Beta-1A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "multiple sclerosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201563",
+   "name": "Interferon Beta-1B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "multiple sclerosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.1723,
    "rawScore": 0.212017,
    "geneCount": 2,
    "paths": [
@@ -2212,8 +1956,226 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
-   "score": 0.1897,
+   "rank": 28,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297819",
+   "name": "Ropeginterferon Alfa-2B",
+   "drugType": "Protein",
+   "approvedFor": [
+    "acquired polycythemia vera",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor positive modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 29,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2107842",
+   "name": "Albinterferon Alfa-2B",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.1723,
+   "rawScore": 0.212017,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.054693,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNA1",
+     "geneId": "ENSG00000197919",
+     "geneName": "interferon alpha 1",
+     "assoc": 0.319,
+     "contribution": 0.05316,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.319
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "IFNB1",
+     "geneId": "ENSG00000171855",
+     "geneName": "interferon beta 1",
+     "assoc": 0.2925,
+     "contribution": 0.052822,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2925
+      }
+     ],
+     "hops": 3,
+     "via": "IFNAR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108677",
+   "name": "Peginterferon Beta-1A",
+   "drugType": "Protein",
+   "approvedFor": [
+    "multiple sclerosis",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Interferon alpha/beta receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.1723,
    "rawScore": 0.212017,
    "geneCount": 2,
    "paths": [
@@ -2288,8 +2250,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
-   "score": 0.1894,
+   "rank": 32,
+   "score": 0.1721,
    "rawScore": 0.211698,
    "geneCount": 2,
    "paths": [
@@ -2363,8 +2325,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
-   "score": 0.1782,
+   "rank": 33,
+   "score": 0.1619,
    "rawScore": 0.199459,
    "geneCount": 3,
    "paths": [
@@ -2422,90 +2384,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 35,
-   "score": 0.1679,
-   "rawScore": 0.188116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF10A",
-     "geneId": "ENSG00000104689",
-     "geneName": "TNF receptor superfamily member 10a",
-     "assoc": 0.1824,
-     "contribution": 0.083489,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1454,
-     "contribution": 0.066773,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1454
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1812,
-     "contribution": 0.037854,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1812
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2108887",
    "name": "Afelimomab",
    "drugType": "Antibody",
@@ -2519,88 +2397,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
-   "score": 0.1679,
-   "rawScore": 0.188116,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF10A",
-     "geneId": "ENSG00000104689",
-     "geneName": "TNF receptor superfamily member 10a",
-     "assoc": 0.1824,
-     "contribution": 0.083489,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1824
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1454,
-     "contribution": 0.066773,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1454
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IFNG",
-     "geneId": "ENSG00000111537",
-     "geneName": "interferon gamma",
-     "assoc": 0.1812,
-     "contribution": 0.037854,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1812
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.991
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 37,
-   "score": 0.1679,
+   "rank": 34,
+   "score": 0.1525,
    "rawScore": 0.188116,
    "geneCount": 1,
    "paths": [
@@ -2683,8 +2481,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 38,
-   "score": 0.1679,
+   "rank": 35,
+   "score": 0.1525,
    "rawScore": 0.188116,
    "geneCount": 1,
    "paths": [
@@ -2742,33 +2540,101 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
+    "inflammation",
     "ankylosing spondylitis",
-    "psoriasis vulgaris"
+    "immune system disorder",
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 12,
+   "indicationCount": 6,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
+     "detail": null
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 39,
-   "score": 0.1679,
+   "rank": 36,
+   "score": 0.1525,
+   "rawScore": 0.188116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.1824,
+     "contribution": 0.083489,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1454,
+     "contribution": 0.066773,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1454
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.1812,
+     "contribution": 0.037854,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1812
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1525,
    "rawScore": 0.188116,
    "geneCount": 1,
    "paths": [
@@ -2851,8 +2717,176 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 38,
+   "score": 0.1525,
+   "rawScore": 0.188116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.1824,
+     "contribution": 0.083489,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1454,
+     "contribution": 0.066773,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1454
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.1812,
+     "contribution": 0.037854,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1812
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.1525,
+   "rawScore": 0.188116,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF10A",
+     "geneId": "ENSG00000104689",
+     "geneName": "TNF receptor superfamily member 10a",
+     "assoc": 0.1824,
+     "contribution": 0.083489,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1824
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1454,
+     "contribution": 0.066773,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1454
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IFNG",
+     "geneId": "ENSG00000111537",
+     "geneName": "interferon gamma",
+     "assoc": 0.1812,
+     "contribution": 0.037854,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1812
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.991
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 40,
-   "score": 0.1679,
+   "score": 0.1525,
    "rawScore": 0.188116,
    "geneCount": 1,
    "paths": [
@@ -2932,8 +2966,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 44,
-   "score": 0.1674,
+   "rank": 43,
+   "score": 0.1521,
    "rawScore": 0.187656,
    "geneCount": 3,
    "paths": [
@@ -3007,8 +3041,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 92,
-   "score": 0.0441,
+   "rank": 111,
+   "score": 0.04,
    "rawScore": 0.052664,
    "geneCount": 1,
    "paths": [

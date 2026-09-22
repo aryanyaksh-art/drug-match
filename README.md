@@ -41,13 +41,15 @@ So a method that only looks at a disease's own genes finds nothing for exactly t
 
 Adding that hop moved nitisinone from rank 27 of 33 to **rank 2 of 119**.
 
-Measured across every disease rather than that one case, the hop helps, but modestly and unevenly — 142 diseases improve, 124 worsen. The benefit concentrates exactly where the reasoning said it should:
+Measured across every disease rather than that one case, the hop helps, and more clearly at this scale — 650 diseases improve, 456 worsen. The benefit still concentrates where the reasoning said it should:
 
 | group | direct paths only | with the hop | change |
 |---|---|---|---|
-| rare | 33.8% | 28.4% | −5.4% |
-| common | 33.7% | 31.1% | −2.6% |
-| auto-selected | 39.0% | 38.3% | −0.7% |
+| rare | 33.3% | 27.7% | −5.7% |
+| common | 33.4% | 30.9% | −2.5% |
+| auto-selected | 40.4% | 38.2% | −2.2% |
+
+Rare diseases still gain more than twice what common ones do, holding steady from the smaller runs.
 
 Longer paths are not penalised by an invented constant. They damp naturally, because the interaction score is always below 1 and the third node introduces another degree term.
 
@@ -63,41 +65,49 @@ This is also why no train/test split is needed: there are no fitted parameters t
 
 ## Does it work?
 
-Measured against **4,089 drug–disease pairs already known to work**, across 307 diseases. Three rankings are compared over the identical candidate pool:
+Measured against **12,688 drug–disease pairs already known to work**, across 1,268 diseases (of 1,887 total — the rest had no known drug reach the candidate pool). Three rankings are compared over the identical candidate pool:
 
 | method | top 5% | top 10% | top 25% | median |
 |---|---|---|---|---|
-| **ours** | **10.9%** | **18.3%** | **39.4%** | **33.5%** |
-| no damping (w = 0) | 8.8% | 14.9% | 34.4% | 40.0% |
-| popularity, disease ignored | 3.3% | 6.6% | 18.2% | 59.6% |
+| **ours** | **9.4%** | **17.4%** | **36.7%** | **36.8%** |
+| no damping (w = 0) | 8.8% | 15.7% | 33.8% | 41.0% |
+| popularity, disease ignored | 4.2% | 8.7% | 21.2% | 56.5% |
 | random | 5.0% | 10.0% | 25.0% | 50.0% |
 
-The popularity row is the important one. Ranking drugs by how many genes they hit, ignoring the disease entirely, does **worse than random**. So the biology is doing the work, not the arithmetic.
+Popularity — ranking drugs by how many genes they hit, ignoring the disease entirely — still does **worse than random** at 4.5x the scale. So the biology is doing the work, not the arithmetic.
 
-Bootstrapping over diseases — not over pairs, which are correlated within a disease — puts the median at **33.9%, 95% CI [31.8%, 36.4%]**. The interval excludes random.
+Bootstrapping over diseases puts the median at **36.8%, 95% CI [35.2%, 38.5%]**. The interval excludes random.
 
-For **59 of 307** diseases the single top-ranked candidate is already a real treatment, and for **118 of 307** one appears in the top five.
+For **154 of 1,268** diseases the single top-ranked candidate is already a real treatment, and for **396 of 1,268** one appears in the top five.
 
-**Rare diseases are the best-served group**, at a 27.9% median against 33.5% overall. That is the point of the project, and it is not an accident — see the interaction hop below.
+**Rare diseases remain the best-served group**, at a 26.1% median against 36.8% overall — a wider gap than at smaller scale, not a narrower one.
+
+### The headline keeps getting worse as the sample grows, on purpose
+
+| Diseases | Median rank percentile |
+|---|---|
+| 100 (curated only) | 31.1% |
+| 420 (100 curated + 320 auto-selected) | 33.5% |
+| 1,887 (100 curated + 1,787 auto-selected) | 36.8% |
+
+Every disease added past the curated 100 was added by a rule fixed in advance, not by us. The rule cannot tell whether a disease is easy or hard for the method — it only checks that enough data exists to test on. So the honest trend is that our curated set was flattering the result, and the number moves toward the truth as more of that flattery is diluted out. We are showing the whole trend rather than only the final number.
+
+What does **not** move as the sample grows: popularity stays worse than random, damping still helps over no damping, rare diseases stay the best-served group, and alkaptonuria and Huntington remain the same two demos.
 
 ### Where it falls down
 
-Eighty-nine of 307 diseases rank worse than random. They are not evenly spread:
-
 | group | worse than random |
 |---|---|
-| rare, hand-curated | 7 of 68 |
-| common, hand-curated | 2 of 32 |
-| auto-selected | 80 of ~207 |
+| rare, hand-curated | 8 of 57 (14%) |
+| common, hand-curated | 2 of 32 (6%) |
+| auto-selected | 381 of 1,179 (32%) |
 
-The auto-selected set is where the method struggles, and it drags the headline down from the 31.1% we saw on the curated set alone. Many of those diseases are broad ontology terms — "deafness", "peritoneal fibrosis" — where the disease definition is too vague for gene association to mean much.
+We tested *why* the auto-selected set does worse. The first guess was that broad ontology terms are categories rather than diseases — "cancer" is not a thing you treat — and that breadth would explain the failures. **That guess was wrong.** Bucketing every disease by how many genes are associated with it, the sparsest quartile does worst (37.4% at ~50-400 genes) and the richest quartile does best (34.6% at 2,500+ genes). The trend is small but consistent, and it runs the opposite direction from the breadth guess. The limiting factor is how much is known about a disease, not how broadly it is named — and that also explains why our curated set looked good in the first place: Duchenne has 2,533 associated genes, alkaptonuria 441. We had unknowingly picked well-studied diseases.
 
-That gap only became visible once we stopped choosing diseases ourselves, which is the argument for having stopped.
+Two further honest notes, updated at this scale:
 
-Two further honest notes:
-
-- **Text mining carries more signal than any other evidence type.** That is uncomfortable, because papers co-mention a gene and a disease partly *because* a drug already links them, so literature evidence may quietly re-import what we excluded. Removing all literature-derived evidence moves the median to 36.4% — worse, but still clear of chance. The result does not rest on it.
-- **The negative control does not fully collapse.** Scoring each disease against a different disease's known drugs gives 44.2%, not a clean 50%, because many diseases share common treatments so some drugs rank well everywhere.
+- **The literature-leak concern looks smaller now than it did on fewer diseases.** At 100 diseases removing all literature-derived evidence cost 4.7 points; at 1,887 it costs 0.7. The datatypes that matter most here are `genetic_association` and `somatic_mutation`, not text mining. We are reporting the shift rather than picking whichever run supports the cleaner story.
+- **The negative control gets closer to a clean 50% as the sample grows** — 42.5% at 100 diseases, 44.2% at 420, 46.3% at 1,887 — which is what you would expect if the small-sample gap was partly noise from diseases sharing common treatments in a smaller pool.
 
 Run `python pipeline/analysis.py` to reproduce all of this.
 
@@ -139,9 +149,11 @@ diagrams/              SVG diagrams for the presentation
 CITATIONS.md           sources, verified rather than recalled
 ```
 
-The set is 420 diseases: 68 rare and 32 common that we chose, plus 320 selected programmatically. The common ones are included for **validation density** — rare diseases have too few known approved drugs to measure ranking quality against on their own.
+The set is 1,887 diseases: 68 rare and 32 common that we chose, plus 1,787 selected programmatically — every disease under ten therapeutic areas meeting the rule, with no cap. The common ones are included for **validation density** — rare diseases have too few known approved drugs to measure ranking quality against on their own.
 
-The 320 are chosen by `select_diseases.py`, which screens all 15,717 diseases under ten therapeutic areas against a rule written down before any result was seen: at least 50 associated genes and at least one known drug, ordered by ontology id. That ordering has nothing to do with quality, so the cut is not a hidden quality filter. The point is that nobody can ask whether we picked diseases we knew would work.
+The 1,787 are chosen by `select_diseases.py`, which screens all 15,717 diseases under ten therapeutic areas against a rule written down before any result was seen: at least 50 associated genes and at least one known drug. There is no cap — every disease meeting the rule is included, so there is no cut that could be mistaken for a quality filter. The point is that nobody can ask whether we picked diseases we knew would work, because we did not pick them at all.
+
+The website ships a bounded subset of the auto-selected diseases (data is ~65KB per disease; shipping all 1,787 would mean a multi-hundred-megabyte deployment for no benefit to someone searching it). Validation and every analysis figure use the full 1,887. The site footer states both numbers so nobody mistakes what is browsable for what was measured.
 
 ---
 

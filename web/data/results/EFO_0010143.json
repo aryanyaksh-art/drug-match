@@ -9,7 +9,7 @@
  "knownDrugCount": 5,
  "candidatesConsidered": 144,
  "pathsTwoHop": 63,
- "pathsThreeHop": 204,
+ "pathsThreeHop": 209,
  "candidates": [
   {
    "id": "CHEMBL3414621",
@@ -51,6 +51,90 @@
    ]
   },
   {
+   "id": "CHEMBL4585668",
+   "name": "Belzutifan",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "neoplasm",
+    "von Hippel-Lindau disease",
+    "hemangioblastoma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Endothelial PAS domain-containing protein 1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 2,
+   "score": 0.3154,
+   "rawScore": 0.152206,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "EPAS1",
+     "geneId": "ENSG00000116016",
+     "geneName": "endothelial PAS domain protein 1",
+     "assoc": 0.0823,
+     "contribution": 0.082276,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0823
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "VHL",
+     "geneId": "ENSG00000134086",
+     "geneName": "von Hippel-Lindau tumor suppressor",
+     "assoc": 0.0731,
+     "contribution": 0.047044,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0731
+      }
+     ],
+     "hops": 3,
+     "via": "EPAS1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "EGLN1",
+     "geneId": "ENSG00000135766",
+     "geneName": "egl-9 family hypoxia inducible factor 1",
+     "assoc": 0.0302,
+     "contribution": 0.022885,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0302
+      }
+     ],
+     "hops": 3,
+     "via": "EPAS1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL443684",
    "name": "Navitoclax",
    "drugType": "Small molecule",
@@ -66,17 +150,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
-   "score": 0.333,
-   "rawScore": 0.160567,
-   "geneCount": 3,
+   "rank": 3,
+   "score": 0.2963,
+   "rawScore": 0.143113,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "CASP9",
      "geneId": "ENSG00000132906",
      "geneName": "caspase 9",
      "assoc": 0.079,
-     "contribution": 0.05052,
+     "contribution": 0.045028,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -93,7 +177,7 @@
      "geneId": "ENSG00000171552",
      "geneName": "BCL2 like 1",
      "assoc": 0.0608,
-     "contribution": 0.039175,
+     "contribution": 0.034916,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -110,7 +194,7 @@
      "geneId": "ENSG00000172115",
      "geneName": "cytochrome c, somatic",
      "assoc": 0.079,
-     "contribution": 0.038518,
+     "contribution": 0.034331,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -140,7 +224,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 3,
+   "rank": 4,
    "score": 0.2877,
    "rawScore": 0.138992,
    "geneCount": 3,
@@ -178,73 +262,6 @@
      "hops": 3,
      "via": "AKT1",
      "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4585668",
-   "name": "Belzutifan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "renal cell carcinoma",
-    "neoplasm",
-    "von Hippel-Lindau disease",
-    "hemangioblastoma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Endothelial PAS domain-containing protein 1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 4,
-   "score": 0.2673,
-   "rawScore": 0.12932,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "EPAS1",
-     "geneId": "ENSG00000116016",
-     "geneName": "endothelial PAS domain protein 1",
-     "assoc": 0.0823,
-     "contribution": 0.082276,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0823
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "VHL",
-     "geneId": "ENSG00000134086",
-     "geneName": "von Hippel-Lindau tumor suppressor",
-     "assoc": 0.0731,
-     "contribution": 0.047044,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0731
-      }
-     ],
-     "hops": 3,
-     "via": "EPAS1",
-     "viaScore": 0.999
     }
    ]
   },
@@ -458,8 +475,8 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 8,
-   "score": 0.1883,
-   "rawScore": 0.091728,
+   "score": 0.2053,
+   "rawScore": 0.099808,
    "geneCount": 3,
    "paths": [
     {
@@ -532,8 +549,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 9,
-   "score": 0.1883,
-   "rawScore": 0.091728,
+   "score": 0.2053,
+   "rawScore": 0.099808,
    "geneCount": 3,
    "paths": [
     {
@@ -590,24 +607,29 @@
    ]
   },
   {
-   "id": "CHEMBL2338329",
-   "name": "Roxadustat",
+   "id": "CHEMBL3544988",
+   "name": "Daprodustat",
    "drugType": "Small molecule",
    "approvedFor": [
-    "chronic renal failure syndrome",
     "anemia",
-    "anemia (phenotype)"
+    "anemia (phenotype)",
+    "chronic kidney disease"
    ],
    "indicationCount": 3,
    "mechanisms": [
     "Hypoxia-inducible factor prolyl hydroxylase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 10,
-   "score": 0.1673,
-   "rawScore": 0.081757,
+   "score": 0.1825,
+   "rawScore": 0.088959,
    "geneCount": 4,
    "paths": [
     {
@@ -664,29 +686,24 @@
    ]
   },
   {
-   "id": "CHEMBL3544988",
-   "name": "Daprodustat",
+   "id": "CHEMBL2338329",
+   "name": "Roxadustat",
    "drugType": "Small molecule",
    "approvedFor": [
+    "chronic renal failure syndrome",
     "anemia",
-    "anemia (phenotype)",
-    "chronic kidney disease"
+    "anemia (phenotype)"
    ],
    "indicationCount": 3,
    "mechanisms": [
     "Hypoxia-inducible factor prolyl hydroxylase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 11,
-   "score": 0.1673,
-   "rawScore": 0.081757,
+   "score": 0.1825,
+   "rawScore": 0.088959,
    "geneCount": 4,
    "paths": [
     {
@@ -1144,6 +1161,45 @@
    ]
   },
   {
+   "id": "CHEMBL1201421",
+   "name": "Pegaptanib Sodium",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "macular degeneration",
+    "wet macular degeneration"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Vascular endothelial growth factor A antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.1088,
+   "rawScore": 0.053924,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.1299,
+     "contribution": 0.053924,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1299
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL5314727",
    "name": "Bevacizumab Gamma",
    "drugType": "Antibody",
@@ -1157,7 +1213,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.1088,
    "rawScore": 0.053924,
    "geneCount": 1,
@@ -1197,84 +1253,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
-   "score": 0.1088,
-   "rawScore": 0.053924,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.1299,
-     "contribution": 0.053924,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1299
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297684",
-   "name": "Abicipar Pegol",
-   "drugType": "Protein",
-   "approvedFor": [
-    "ocular vascular disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vascular endothelial growth factor A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 21,
-   "score": 0.1088,
-   "rawScore": 0.053924,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.1299,
-     "contribution": 0.053924,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1299
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201421",
-   "name": "Pegaptanib Sodium",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "macular degeneration",
-    "wet macular degeneration"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Vascular endothelial growth factor A antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
    "score": 0.1088,
    "rawScore": 0.053924,
    "geneCount": 1,
@@ -1309,6 +1288,44 @@
     "choroidal neovascularization"
    ],
    "indicationCount": 11,
+   "mechanisms": [
+    "Vascular endothelial growth factor A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.1088,
+   "rawScore": 0.053924,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.1299,
+     "contribution": 0.053924,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1299
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297684",
+   "name": "Abicipar Pegol",
+   "drugType": "Protein",
+   "approvedFor": [
+    "ocular vascular disorder"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Vascular endothelial growth factor A inhibitor"
    ],
@@ -1454,16 +1471,16 @@
    ]
   },
   {
-   "id": "CHEMBL4303214",
-   "name": "Fruquintinib",
+   "id": "CHEMBL1289601",
+   "name": "Lenvatinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "colorectal neoplasm",
-    "neoplasm",
-    "colorectal cancer",
-    "cancer"
+    "renal cell carcinoma",
+    "thyroid tumor",
+    "differentiated thyroid carcinoma",
+    "thyroid cancer"
    ],
-   "indicationCount": 4,
+   "indicationCount": 5,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
@@ -1529,16 +1546,16 @@
    ]
   },
   {
-   "id": "CHEMBL1289601",
-   "name": "Lenvatinib",
+   "id": "CHEMBL4303214",
+   "name": "Fruquintinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "renal cell carcinoma",
-    "thyroid tumor",
-    "differentiated thyroid carcinoma",
-    "thyroid cancer"
+    "colorectal neoplasm",
+    "neoplasm",
+    "colorectal cancer",
+    "cancer"
    ],
-   "indicationCount": 5,
+   "indicationCount": 4,
    "mechanisms": [
     "Vascular endothelial growth factor receptor inhibitor"
    ],
@@ -1604,16 +1621,13 @@
    ]
   },
   {
-   "id": "CHEMBL1743062",
-   "name": "Ramucirumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL3186534",
+   "name": "Rivoceranib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "gastroesophageal junction adenocarcinoma",
-    "gastric neoplasm",
-    "non-small cell lung carcinoma",
-    "gastric adenocarcinoma"
+    "breast cancer"
    ],
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
@@ -1662,13 +1676,16 @@
    ]
   },
   {
-   "id": "CHEMBL3186534",
-   "name": "Rivoceranib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743062",
+   "name": "Ramucirumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "breast cancer"
+    "gastroesophageal junction adenocarcinoma",
+    "gastric neoplasm",
+    "non-small cell lung carcinoma",
+    "gastric adenocarcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 6,
    "mechanisms": [
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
@@ -1828,23 +1845,100 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
+   "id": "CHEMBL2103875",
+   "name": "Trametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neurofibromatosis type 1",
-    "neoplasm",
-    "plexiform neurofibroma"
+    "glioma",
+    "melanoma",
+    "metastatic melanoma",
+    "neoplasm"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 32,
+   "score": 0.0948,
+   "rawScore": 0.047261,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAPK3",
+     "geneId": "ENSG00000102882",
+     "geneName": "mitogen-activated protein kinase 3",
+     "assoc": 0.0912,
+     "contribution": 0.036267,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0912
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MAPK1",
+     "geneId": "ENSG00000100030",
+     "geneName": "mitogen-activated protein kinase 1",
+     "assoc": 0.0182,
+     "contribution": 0.005497,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MAPK1",
+     "geneId": "ENSG00000100030",
+     "geneName": "mitogen-activated protein kinase 1",
+     "assoc": 0.0182,
+     "contribution": 0.005497,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "neurofibromatosis type 1",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
    "score": 0.0948,
    "rawScore": 0.047261,
    "geneCount": 2,
@@ -1919,7 +2013,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 34,
    "score": 0.0948,
    "rawScore": 0.047261,
    "geneCount": 2,
@@ -1994,83 +2088,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
-   "score": 0.0948,
-   "rawScore": 0.047261,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAPK3",
-     "geneId": "ENSG00000102882",
-     "geneName": "mitogen-activated protein kinase 3",
-     "assoc": 0.0912,
-     "contribution": 0.036267,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0912
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "MAPK1",
-     "geneId": "ENSG00000100030",
-     "geneName": "mitogen-activated protein kinase 1",
-     "assoc": 0.0182,
-     "contribution": 0.005497,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "MAPK1",
-     "geneId": "ENSG00000100030",
-     "geneName": "mitogen-activated protein kinase 1",
-     "assoc": 0.0182,
-     "contribution": 0.005497,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103875",
-   "name": "Trametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "glioma",
-    "melanoma",
-    "metastatic melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 35,
    "score": 0.0948,
    "rawScore": 0.047261,
@@ -2130,18 +2147,18 @@
    ]
   },
   {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "neurofibromatosis type 1",
+    "neoplasm",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,

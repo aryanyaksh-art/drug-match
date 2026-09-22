@@ -9,15 +9,15 @@
  "knownDrugCount": 32,
  "candidatesConsidered": 245,
  "pathsTwoHop": 242,
- "pathsThreeHop": 289,
+ "pathsThreeHop": 429,
  "candidates": [
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -109,12 +109,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -586,23 +586,25 @@
    ]
   },
   {
-   "id": "CHEMBL2146883",
-   "name": "Cobimetinib",
+   "id": "CHEMBL2103875",
+   "name": "Trametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "melanoma"
+    "glioma",
+    "melanoma",
+    "metastatic melanoma",
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 11,
    "score": 0.2342,
    "rawScore": 0.303971,
    "geneCount": 2,
@@ -669,25 +671,23 @@
    ]
   },
   {
-   "id": "CHEMBL2103875",
-   "name": "Trametinib",
+   "id": "CHEMBL2146883",
+   "name": "Cobimetinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "glioma",
-    "melanoma",
-    "metastatic melanoma",
-    "neoplasm"
+    "neoplasm",
+    "melanoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
     "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase; MEK1/2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 13,
    "score": 0.2342,
    "rawScore": 0.303971,
    "geneCount": 2,
@@ -1881,6 +1881,68 @@
    ]
   },
   {
+   "id": "CHEMBL3301612",
+   "name": "Encorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "metastatic melanoma",
+    "colorectal neoplasm",
+    "melanoma",
+    "neoplasm"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Serine/threonine-protein kinase B-raf inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.1122,
+   "rawScore": 0.146202,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MAP2K1",
+     "geneId": "ENSG00000169032",
+     "geneName": "mitogen-activated protein kinase kinase 1",
+     "assoc": 0.4529,
+     "contribution": 0.142383,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3896
+      },
+      {
+       "id": "literature",
+       "score": 0.1037
+      }
+     ],
+     "hops": 3,
+     "via": "BRAF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "MAP2K2",
+     "geneId": "ENSG00000126934",
+     "geneName": "mitogen-activated protein kinase kinase 2",
+     "assoc": 0.0122,
+     "contribution": 0.003819,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "BRAF",
+     "viaScore": 0.998
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2028663",
    "name": "Dabrafenib",
    "drugType": "Small molecule",
@@ -1896,7 +1958,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 37,
+   "rank": 38,
    "score": 0.1122,
    "rawScore": 0.146202,
    "geneCount": 1,
@@ -1957,68 +2019,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
-   "score": 0.1122,
-   "rawScore": 0.146202,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "MAP2K1",
-     "geneId": "ENSG00000169032",
-     "geneName": "mitogen-activated protein kinase kinase 1",
-     "assoc": 0.4529,
-     "contribution": 0.142383,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.3896
-      },
-      {
-       "id": "literature",
-       "score": 0.1037
-      }
-     ],
-     "hops": 3,
-     "via": "BRAF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "MAP2K2",
-     "geneId": "ENSG00000126934",
-     "geneName": "mitogen-activated protein kinase kinase 2",
-     "assoc": 0.0122,
-     "contribution": 0.003819,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "BRAF",
-     "viaScore": 0.998
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301612",
-   "name": "Encorafenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "metastatic melanoma",
-    "colorectal neoplasm",
-    "melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Serine/threonine-protein kinase B-raf inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 39,
    "score": 0.1122,
    "rawScore": 0.146202,
@@ -2065,273 +2065,190 @@
    ]
   },
   {
-   "id": "CHEMBL1023",
-   "name": "Bexarotene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "primary cutaneous T-cell non-Hodgkin lymphoma",
-    "neoplasm",
-    "T-cell non-Hodgkin lymphoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Retinoid X receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 40,
-   "score": 0.1041,
-   "rawScore": 0.135721,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ABCA1",
-     "geneId": "ENSG00000165029",
-     "geneName": "ATP binding cassette subfamily A member 1",
-     "assoc": 0.4377,
-     "contribution": 0.135721,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4377
-      }
-     ],
-     "hops": 3,
-     "via": "RXRA",
-     "viaScore": 0.916
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200686",
-   "name": "Pimecrolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "atopic eczema",
-    "Eczematoid dermatitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 41,
-   "score": 0.1007,
-   "rawScore": 0.131373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131373,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.269
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL219410",
-   "name": "Zotarolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 42,
-   "score": 0.1007,
-   "rawScore": 0.131373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131373,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.269
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201182",
-   "name": "Temsirolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "mantle cell lymphoma",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 44,
-   "score": 0.1007,
-   "rawScore": 0.131373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131373,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.269
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL269732",
-   "name": "Tacrolimus Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "graft versus host disease",
-    "conjunctivitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 45,
-   "score": 0.1007,
-   "rawScore": 0.131373,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131373,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.269
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2103839",
-   "name": "Ridaforolimus",
+   "id": "CHEMBL2108628",
+   "name": "Paclitaxel Poliglumex",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Serine/threonine-protein kinase mTOR inhibitor"
+    "Tubulin stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 47,
-   "score": 0.1006,
-   "rawScore": 0.131242,
-   "geneCount": 1,
+   "rank": 40,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
    "paths": [
     {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131242,
-     "drugsOnGene": 2,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.269
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
       }
      ],
      "hops": 3,
-     "via": "MTOR",
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL1201288",
-   "name": "Dantrolene",
+   "id": "CHEMBL90555",
+   "name": "Vincristine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Fever"
+    "neoplasm"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Ryanodine receptor 3 antagonist",
-    "Ryanodine receptor 1 antagonist"
+    "Tubulin inhibitor"
    ],
    "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 41,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL92",
+   "name": "Docetaxel Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "head and neck squamous cell carcinoma",
+    "prostate cancer",
+    "gastric neoplasm"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Tubulin stabiliser",
+    "Tubulin inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
     {
      "type": "Black Box Warning",
      "detail": "hepatotoxicity"
@@ -2339,131 +2256,472 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 48,
-   "score": 0.1006,
-   "rawScore": 0.131242,
-   "geneCount": 2,
+   "rank": 42,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
    "paths": [
     {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131242,
-     "drugsOnGene": 1,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.269
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
       }
      ],
      "hops": 3,
-     "via": "RYR1",
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL608533",
-   "name": "Midostaurin",
+   "id": "CHEMBL553025",
+   "name": "Vinorelbine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acute myeloid leukemia",
-    "systemic mastocytosis",
-    "mastocytosis",
-    "mast cell leukemia"
+    "neoplasm"
    ],
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase receptor FLT3 inhibitor",
-    "Vascular endothelial growth factor receptor 2 inhibitor",
-    "Platelet-derived growth factor receptor inhibitor"
+    "Tubulin inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 49,
-   "score": 0.1001,
-   "rawScore": 0.130596,
+   "blackBox": true,
+   "rank": 43,
+   "score": 0.1049,
+   "rawScore": 0.136797,
    "geneCount": 15,
    "paths": [
     {
-     "gene": "SPRED1",
-     "geneId": "ENSG00000166068",
-     "geneName": "sprouty related EVH1 domain containing 1",
-     "assoc": 0.9003,
-     "contribution": 0.058713,
-     "drugsOnGene": 15,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
      "evidence": [
       {
-       "id": "genetic_association",
-       "score": 0.7622
-      },
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4392
-      },
-      {
-       "id": "literature",
-       "score": 0.2522
+       "score": 0.3196
       }
      ],
      "hops": 3,
-     "via": "KIT",
-     "viaScore": 0.751
+     "via": "TUBB3",
+     "viaScore": 0.999
     },
     {
-     "gene": "PDGFRB",
-     "geneId": "ENSG00000113721",
-     "geneName": "platelet derived growth factor receptor beta",
-     "assoc": 0.3962,
-     "contribution": 0.046667,
-     "drugsOnGene": 14,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.3701
-      },
-      {
-       "id": "literature",
-       "score": 0.0414
+       "score": 0.3196
       }
      ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "KIT",
-     "geneId": "ENSG00000157404",
-     "geneName": "KIT proto-oncogene, receptor tyrosine kinase",
-     "assoc": 0.1622,
-     "contribution": 0.01859,
-     "drugsOnGene": 15,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1622
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL41355",
-   "name": "Ezogabine",
+   "id": "CHEMBL107",
+   "name": "Colchicine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy",
-    "Seizure",
-    "Behcet disease"
+    "coronary artery disorder",
+    "familial Mediterranean fever",
+    "myocardial infarction",
+    "gout"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Tubulin inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 44,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2110725",
+   "name": "Vinflunine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Tubulin inhibitor",
+    "Tubulin inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 46,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL428647",
+   "name": "Paclitaxel",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast neoplasm",
+    "breast carcinoma",
+    "neoplasm",
+    "gastroesophageal junction adenocarcinoma"
+   ],
+   "indicationCount": 11,
+   "mechanisms": [
+    "Tubulin inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 47,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1683590",
+   "name": "Eribulin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "breast cancer",
+    "liposarcoma",
+    "breast neoplasm",
+    "neoplasm"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Tubulin inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 48,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
+   "paths": [
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201752",
+   "name": "Ixabepilone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer",
+    "breast carcinoma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "KCNQ (Kv7) potassium channel opener"
+    "Tubulin inhibitor"
    ],
    "warnings": [
     {
@@ -2473,67 +2731,84 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 50,
-   "score": 0.099,
-   "rawScore": 0.129071,
-   "geneCount": 5,
+   "rank": 49,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
    "paths": [
     {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.4731,
-     "contribution": 0.124023,
-     "drugsOnGene": 5,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4731
+       "score": 0.3196
       }
      ],
-     "hops": 3,
-     "via": "KCNQ2",
-     "viaScore": 0.95
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 0.0304,
-     "contribution": 0.005048,
-     "drugsOnGene": 5,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
      "evidence": [
       {
-       "id": "literature",
-       "score": 0.0304
+       "id": "animal_model",
+       "score": 0.3196
       }
      ],
      "hops": 3,
-     "via": "KCNQ2",
-     "viaScore": 0.934
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
     }
    ]
   }
  ],
  "knownRanked": [
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
+   "id": "CHEMBL1614701",
+   "name": "Selumetinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neurofibromatosis type 1",
     "neoplasm",
+    "neurofibromatosis type 1",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
    "score": 0.2342,
    "rawScore": 0.303971,
    "geneCount": 2,
@@ -2616,7 +2891,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.2342,
    "rawScore": 0.303971,
    "geneCount": 2,
@@ -2683,18 +2958,18 @@
    ]
   },
   {
-   "id": "CHEMBL1614701",
-   "name": "Selumetinib",
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
     "neurofibromatosis type 1",
+    "neoplasm",
     "plexiform neurofibroma"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -3202,60 +3477,74 @@
    ]
   },
   {
-   "id": "CHEMBL413",
-   "name": "Sirolimus",
+   "id": "CHEMBL159",
+   "name": "Vinblastine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "plasma cell myeloma",
-    "kidney transplant",
-    "Gorham-Stout disease",
-    "vascular malformation"
+    "neoplasm"
    ],
-   "indicationCount": 21,
+   "indicationCount": 1,
    "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
+    "Tubulin inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 43,
-   "score": 0.1007,
-   "rawScore": 0.131373,
-   "geneCount": 1,
+   "blackBox": false,
+   "rank": 45,
+   "score": 0.1049,
+   "rawScore": 0.136797,
+   "geneCount": 15,
    "paths": [
     {
-     "gene": "FKBP1A",
-     "geneId": "ENSG00000088832",
-     "geneName": "FKBP prolyl isomerase 1A",
-     "assoc": 0.269,
-     "contribution": 0.131373,
-     "drugsOnGene": 6,
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.03264,
+     "drugsOnGene": 20,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.269
+       "score": 0.3196
       }
      ],
      "hops": 2,
      "via": null,
      "viaScore": null
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1A",
+     "geneId": "ENSG00000167552",
+     "geneName": "tubulin alpha 1a",
+     "assoc": 0.3196,
+     "contribution": 0.014972,
+     "drugsOnGene": 20,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.3196
+      }
+     ],
+     "hops": 3,
+     "via": "TUBB2A",
+     "viaScore": 0.999
     }
    ]
   },
@@ -3301,7 +3590,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 46,
+   "rank": 61,
    "score": 0.1007,
    "rawScore": 0.131373,
    "geneCount": 1,

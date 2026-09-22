@@ -9,14 +9,18 @@
  "knownDrugCount": 2,
  "candidatesConsidered": 136,
  "pathsTwoHop": 273,
- "pathsThreeHop": 466,
+ "pathsThreeHop": 867,
  "candidates": [
   {
-   "id": "CHEMBL2070241",
-   "name": "Bremelanotide",
+   "id": "CHEMBL3301624",
+   "name": "Setmelanotide",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "obesity disorder",
+    "Obesity",
+    "Bardet-Biedl syndrome"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
@@ -53,15 +57,11 @@
    ]
   },
   {
-   "id": "CHEMBL3301624",
-   "name": "Setmelanotide",
+   "id": "CHEMBL2070241",
+   "name": "Bremelanotide",
    "drugType": "Protein",
-   "approvedFor": [
-    "obesity disorder",
-    "Obesity",
-    "Bardet-Biedl syndrome"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Melanocortin receptor 4 agonist",
     "Melanocortin receptor 4 agonist"
@@ -98,15 +98,13 @@
    ]
   },
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -142,13 +140,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -198,8 +198,8 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
-   "score": 0.5724,
-   "rawScore": 0.34687,
+   "score": 0.5798,
+   "rawScore": 0.351075,
    "geneCount": 1,
    "paths": [
     {
@@ -218,6 +218,23 @@
      "hops": 3,
      "via": "MTOR",
      "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1B",
+     "geneId": "ENSG00000123416",
+     "geneName": "tubulin alpha 1b",
+     "assoc": 0.0122,
+     "contribution": 0.004206,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "MTOR",
+     "viaScore": 0.994
     }
    ]
   },
@@ -425,16 +442,15 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -483,15 +499,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -598,15 +615,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297729",
-   "name": "Cosibelimab",
+   "id": "CHEMBL3833373",
+   "name": "Avelumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "head and neck squamous cell carcinoma"
+    "neuroendocrine neoplasm",
+    "Merkel cell skin cancer",
+    "neoplasm",
+    "urothelial carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Programmed cell death 1 ligand 1 inhibitor"
+    "Programmed cell death 1 ligand 1 other"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -653,16 +673,13 @@
    ]
   },
   {
-   "id": "CHEMBL3707227",
-   "name": "Atezolizumab",
+   "id": "CHEMBL4297729",
+   "name": "Cosibelimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "lung cancer",
-    "non-small cell lung carcinoma",
-    "transitional cell carcinoma",
-    "breast cancer"
+    "head and neck squamous cell carcinoma"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
@@ -670,6 +687,59 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 13,
+   "score": 0.3871,
+   "rawScore": 0.240292,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD274",
+     "geneId": "ENSG00000120217",
+     "geneName": "CD274 molecule",
+     "assoc": 0.356,
+     "contribution": 0.173872,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.356
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PDCD1",
+     "geneId": "ENSG00000188389",
+     "geneName": "programmed cell death 1",
+     "assoc": 0.237,
+     "contribution": 0.06642,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.237
+      }
+     ],
+     "hops": 3,
+     "via": "CD274",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4297828",
+   "name": "Adebrelimab",
+   "drugType": "Antibody",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Programmed cell death 1 ligand 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.3871,
    "rawScore": 0.240292,
    "geneCount": 1,
@@ -725,64 +795,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
-   "score": 0.3871,
-   "rawScore": 0.240292,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD274",
-     "geneId": "ENSG00000120217",
-     "geneName": "CD274 molecule",
-     "assoc": 0.356,
-     "contribution": 0.173872,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.356
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PDCD1",
-     "geneId": "ENSG00000188389",
-     "geneName": "programmed cell death 1",
-     "assoc": 0.237,
-     "contribution": 0.06642,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.237
-      }
-     ],
-     "hops": 3,
-     "via": "CD274",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3833373",
-   "name": "Avelumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "neuroendocrine neoplasm",
-    "Merkel cell skin cancer",
-    "neoplasm",
-    "urothelial carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Programmed cell death 1 ligand 1 other"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 15,
    "score": 0.3871,
    "rawScore": 0.240292,
@@ -825,11 +837,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297828",
-   "name": "Adebrelimab",
+   "id": "CHEMBL3707227",
+   "name": "Atezolizumab",
    "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "lung cancer",
+    "non-small cell lung carcinoma",
+    "transitional cell carcinoma",
+    "breast cancer"
+   ],
+   "indicationCount": 8,
    "mechanisms": [
     "Programmed cell death 1 ligand 1 inhibitor"
    ],
@@ -1062,8 +1079,8 @@
    "withdrawn": true,
    "blackBox": false,
    "rank": 20,
-   "score": 0.3579,
-   "rawScore": 0.223521,
+   "score": 0.3626,
+   "rawScore": 0.226231,
    "geneCount": 3,
    "paths": [
     {
@@ -1082,6 +1099,23 @@
      "hops": 3,
      "via": "MTOR",
      "viaScore": 0.999
+    },
+    {
+     "gene": "TUBA1B",
+     "geneId": "ENSG00000123416",
+     "geneName": "tubulin alpha 1b",
+     "assoc": 0.0122,
+     "contribution": 0.00271,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "MTOR",
+     "viaScore": 0.994
     }
    ]
   },
@@ -1568,18 +1602,17 @@
    ]
   },
   {
-   "id": "CHEMBL4297840",
-   "name": "Tislelizumab",
+   "id": "CHEMBL4298124",
+   "name": "Dostarlimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "esophageal cancer",
-    "Hodgkins lymphoma",
+    "endometrial cancer",
     "neoplasm",
-    "gastric neoplasm"
+    "endometrial neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1626,15 +1659,11 @@
    ]
   },
   {
-   "id": "CHEMBL4298124",
-   "name": "Dostarlimab",
+   "id": "CHEMBL4297715",
+   "name": "Camrelizumab",
    "drugType": "Antibody",
-   "approvedFor": [
-    "endometrial cancer",
-    "neoplasm",
-    "endometrial neoplasm"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -1683,16 +1712,13 @@
    ]
   },
   {
-   "id": "CHEMBL4298037",
-   "name": "Retifanlimab",
+   "id": "CHEMBL4297829",
+   "name": "Sintilimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "squamous cell carcinoma",
-    "Merkel cell skin cancer",
-    "neuroendocrine carcinoma"
+    "Hodgkins lymphoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -1741,18 +1767,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297723",
-   "name": "Cemiplimab",
+   "id": "CHEMBL4297843",
+   "name": "Toripalimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "cervical cancer",
-    "basal cell carcinoma",
+    "urothelial carcinoma",
+    "Niemann-Pick disease type B",
     "neoplasm",
-    "cancer"
+    "esophageal squamous cell carcinoma"
    ],
-   "indicationCount": 7,
+   "indicationCount": 6,
    "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1799,16 +1825,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108738",
-   "name": "Nivolumab",
+   "id": "CHEMBL3137343",
+   "name": "Pembrolizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "colorectal neoplasm",
-    "metastatic melanoma",
-    "head and neck squamous cell carcinoma"
+    "non-small cell lung carcinoma",
+    "Hodgkins lymphoma",
+    "melanoma",
+    "transitional cell carcinoma"
    ],
-   "indicationCount": 14,
+   "indicationCount": 9,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
    ],
@@ -1910,18 +1936,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297843",
-   "name": "Toripalimab",
+   "id": "CHEMBL4297840",
+   "name": "Tislelizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "urothelial carcinoma",
-    "Niemann-Pick disease type B",
+    "esophageal cancer",
+    "Hodgkins lymphoma",
     "neoplasm",
-    "esophageal squamous cell carcinoma"
+    "gastric neoplasm"
    ],
-   "indicationCount": 6,
+   "indicationCount": 7,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1968,13 +1994,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297829",
-   "name": "Sintilimab",
+   "id": "CHEMBL4298037",
+   "name": "Retifanlimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "Hodgkins lymphoma"
+    "neoplasm",
+    "squamous cell carcinoma",
+    "Merkel cell skin cancer",
+    "neuroendocrine carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -2023,13 +2052,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297715",
-   "name": "Camrelizumab",
+   "id": "CHEMBL4297723",
+   "name": "Cemiplimab",
    "drugType": "Antibody",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "cervical cancer",
+    "basal cell carcinoma",
+    "neoplasm",
+    "cancer"
+   ],
+   "indicationCount": 7,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2076,16 +2110,16 @@
    ]
   },
   {
-   "id": "CHEMBL3137343",
-   "name": "Pembrolizumab",
+   "id": "CHEMBL2108738",
+   "name": "Nivolumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "Hodgkins lymphoma",
-    "melanoma",
-    "transitional cell carcinoma"
+    "neoplasm",
+    "colorectal neoplasm",
+    "metastatic melanoma",
+    "head and neck squamous cell carcinoma"
    ],
-   "indicationCount": 9,
+   "indicationCount": 14,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
    ],

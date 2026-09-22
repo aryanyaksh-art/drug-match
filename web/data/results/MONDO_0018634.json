@@ -9,7 +9,7 @@
  "knownDrugCount": 5,
  "candidatesConsidered": 291,
  "pathsTwoHop": 154,
- "pathsThreeHop": 273,
+ "pathsThreeHop": 286,
  "candidates": [
   {
    "id": "CHEMBL3833321",
@@ -127,17 +127,13 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
+    "Amyloid-beta A4 protein stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -237,13 +233,17 @@
    ]
   },
   {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -457,6 +457,104 @@
    ]
   },
   {
+   "id": "CHEMBL2219536",
+   "name": "Mipomersen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "familial hypercholesterolemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Apo-B 100 mRNA antisense inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.6421,
+   "rawScore": 2.077256,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOE",
+     "geneId": "ENSG00000130203",
+     "geneName": "apolipoprotein E",
+     "assoc": 0.9368,
+     "contribution": 0.709269,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8522
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3814
+      },
+      {
+       "id": "literature",
+       "score": 0.3087
+      }
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOA1",
+     "geneId": "ENSG00000118137",
+     "geneName": "apolipoprotein A1",
+     "assoc": 0.9722,
+     "contribution": 0.625871,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8568
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7555
+      },
+      {
+       "id": "literature",
+       "score": 0.2065
+      }
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOA2",
+     "geneId": "ENSG00000158874",
+     "geneName": "apolipoprotein A2",
+     "assoc": 0.5428,
+     "contribution": 0.410992,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5253
+      },
+      {
+       "id": "literature",
+       "score": 0.0371
+      }
+     ],
+     "hops": 3,
+     "via": "APOB",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1770916",
    "name": "Nirogacestat",
    "drugType": "Small molecule",
@@ -472,7 +570,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 5,
+   "rank": 6,
    "score": 0.634,
    "rawScore": 2.051436,
    "geneCount": 6,
@@ -559,100 +657,6 @@
    ]
   },
   {
-   "id": "CHEMBL2219536",
-   "name": "Mipomersen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "familial hypercholesterolemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apo-B 100 mRNA antisense inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 6,
-   "score": 0.5132,
-   "rawScore": 1.666264,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOE",
-     "geneId": "ENSG00000130203",
-     "geneName": "apolipoprotein E",
-     "assoc": 0.9368,
-     "contribution": 0.709269,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8522
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3814
-      },
-      {
-       "id": "literature",
-       "score": 0.3087
-      }
-     ],
-     "hops": 3,
-     "via": "APOB",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "APOA1",
-     "geneId": "ENSG00000118137",
-     "geneName": "apolipoprotein A1",
-     "assoc": 0.9722,
-     "contribution": 0.625871,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8568
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7555
-      },
-      {
-       "id": "literature",
-       "score": 0.2065
-      }
-     ],
-     "hops": 3,
-     "via": "APOB",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "APOC1",
-     "geneId": "ENSG00000130208",
-     "geneName": "apolipoprotein C1",
-     "assoc": 0.4387,
-     "contribution": 0.331124,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4387
-      }
-     ],
-     "hops": 3,
-     "via": "APOB",
-     "viaScore": 0.996
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4297794",
    "name": "Nemolizumab",
    "drugType": "Antibody",
@@ -727,16 +731,15 @@
    ]
   },
   {
-   "id": "CHEMBL1201505",
-   "name": "Fibrinolysin, Human",
+   "id": "CHEMBL2108481",
+   "name": "Ancrod",
    "drugType": "Unknown",
    "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "wound healing"
+    "Recurrent thrombophlebitis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Fibrinogen inhibitor"
+    "Fibrinogen hydrolytic enzyme"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -922,15 +925,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108481",
-   "name": "Ancrod",
+   "id": "CHEMBL1201505",
+   "name": "Fibrinolysin, Human",
    "drugType": "Unknown",
    "approvedFor": [
-    "Recurrent thrombophlebitis"
+    "Recurrent thrombophlebitis",
+    "wound healing"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Fibrinogen hydrolytic enzyme"
+    "Fibrinogen inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1081,6 +1085,362 @@
    ]
   },
   {
+   "id": "CHEMBL4650438",
+   "name": "Olezarsen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "familial chylomicronemia syndrome"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Apolipoprotein C-III mRNA antisense inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.316,
+   "rawScore": 1.037496,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOA1",
+     "geneId": "ENSG00000118137",
+     "geneName": "apolipoprotein A1",
+     "assoc": 0.9722,
+     "contribution": 0.474322,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8568
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7555
+      },
+      {
+       "id": "literature",
+       "score": 0.2065
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOA2",
+     "geneId": "ENSG00000158874",
+     "geneName": "apolipoprotein A2",
+     "assoc": 0.5428,
+     "contribution": 0.311473,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5253
+      },
+      {
+       "id": "literature",
+       "score": 0.0371
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOC1",
+     "geneId": "ENSG00000130208",
+     "geneName": "apolipoprotein C1",
+     "assoc": 0.4387,
+     "contribution": 0.251701,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4387
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3544994",
+   "name": "Volanesorsen",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "hypertriglyceridemia",
+    "cardiovascular disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.316,
+   "rawScore": 1.037496,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "APOA1",
+     "geneId": "ENSG00000118137",
+     "geneName": "apolipoprotein A1",
+     "assoc": 0.9722,
+     "contribution": 0.474322,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_literature",
+       "score": 0.8568
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.7555
+      },
+      {
+       "id": "literature",
+       "score": 0.2065
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOA2",
+     "geneId": "ENSG00000158874",
+     "geneName": "apolipoprotein A2",
+     "assoc": 0.5428,
+     "contribution": 0.311473,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5253
+      },
+      {
+       "id": "literature",
+       "score": 0.0371
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "APOC1",
+     "geneId": "ENSG00000130208",
+     "geneName": "apolipoprotein C1",
+     "assoc": 0.4387,
+     "contribution": 0.251701,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4387
+      }
+     ],
+     "hops": 3,
+     "via": "APOC3",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
+   "score": 0.2928,
+   "rawScore": 0.963496,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLI3",
+     "geneId": "ENSG00000106571",
+     "geneName": "GLI family zinc finger 3",
+     "assoc": 0.7737,
+     "contribution": 0.486129,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7737
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "PTCH2",
+     "geneId": "ENSG00000117425",
+     "geneName": "patched 2",
+     "assoc": 0.746,
+     "contribution": 0.477367,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.746
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "basal cell carcinoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Smoothened homolog inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 15,
+   "score": 0.2928,
+   "rawScore": 0.963496,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLI3",
+     "geneId": "ENSG00000106571",
+     "geneName": "GLI family zinc finger 3",
+     "assoc": 0.7737,
+     "contribution": 0.486129,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7737
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "PTCH2",
+     "geneId": "ENSG00000117425",
+     "geneName": "patched 2",
+     "assoc": 0.746,
+     "contribution": 0.477367,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.746
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2043437",
+   "name": "Glasdegib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "juvenile myelomonocytic leukemia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Smoothened homolog antagonist",
+    "Smoothened homolog antagonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 16,
+   "score": 0.2928,
+   "rawScore": 0.963496,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GLI3",
+     "geneId": "ENSG00000106571",
+     "geneName": "GLI family zinc finger 3",
+     "assoc": 0.7737,
+     "contribution": 0.486129,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7737
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.975
+    },
+    {
+     "gene": "PTCH2",
+     "geneId": "ENSG00000117425",
+     "geneName": "patched 2",
+     "assoc": 0.746,
+     "contribution": 0.477367,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.746
+      }
+     ],
+     "hops": 3,
+     "via": "SMO",
+     "viaScore": 0.993
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201584",
    "name": "Abciximab",
    "drugType": "Antibody",
@@ -1097,7 +1457,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 17,
    "score": 0.2841,
    "rawScore": 0.935803,
    "geneCount": 3,
@@ -1164,21 +1524,30 @@
    ]
   },
   {
-   "id": "CHEMBL2048028",
-   "name": "Lifitegrast",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201575",
+   "name": "Efalizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "eye disorder",
-    "dry eye syndrome"
+    "psoriasis vulgaris",
+    "psoriasis"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+    "Integrin alpha-L/beta-2 (LFA-1) inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Serious side effects"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
-   "rank": 13,
+   "rank": 18,
    "score": 0.2782,
    "rawScore": 0.916952,
    "geneCount": 2,
@@ -1220,30 +1589,21 @@
    ]
   },
   {
-   "id": "CHEMBL1201575",
-   "name": "Efalizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL2048028",
+   "name": "Lifitegrast",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "psoriasis vulgaris",
-    "psoriasis"
+    "eye disorder",
+    "dry eye syndrome"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) inhibitor"
+    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Serious side effects"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 19,
    "score": 0.2782,
    "rawScore": 0.916952,
    "geneCount": 2,
@@ -1300,7 +1660,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 20,
    "score": 0.2371,
    "rawScore": 0.785897,
    "geneCount": 1,
@@ -1321,133 +1681,6 @@
      "hops": 2,
      "via": null,
      "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3544994",
-   "name": "Volanesorsen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "hypertriglyceridemia",
-    "cardiovascular disorder"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Apolipoprotein C-III mRNA 3'UTR antisense inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.2183,
-   "rawScore": 0.726022,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOA1",
-     "geneId": "ENSG00000118137",
-     "geneName": "apolipoprotein A1",
-     "assoc": 0.9722,
-     "contribution": 0.474322,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8568
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7555
-      },
-      {
-       "id": "literature",
-       "score": 0.2065
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "APOC1",
-     "geneId": "ENSG00000130208",
-     "geneName": "apolipoprotein C1",
-     "assoc": 0.4387,
-     "contribution": 0.251701,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4387
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4650438",
-   "name": "Olezarsen",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "familial chylomicronemia syndrome"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Apolipoprotein C-III mRNA antisense inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.2183,
-   "rawScore": 0.726022,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "APOA1",
-     "geneId": "ENSG00000118137",
-     "geneName": "apolipoprotein A1",
-     "assoc": 0.9722,
-     "contribution": 0.474322,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_literature",
-       "score": 0.8568
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.7555
-      },
-      {
-       "id": "literature",
-       "score": 0.2065
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "APOC1",
-     "geneId": "ENSG00000130208",
-     "geneName": "apolipoprotein C1",
-     "assoc": 0.4387,
-     "contribution": 0.251701,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4387
-      }
-     ],
-     "hops": 3,
-     "via": "APOC3",
-     "viaScore": 0.999
     }
    ]
   },
@@ -1483,7 +1716,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 18,
+   "rank": 21,
    "score": 0.1893,
    "rawScore": 0.633547,
    "geneCount": 1,
@@ -1564,7 +1797,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 19,
+   "rank": 22,
    "score": 0.1869,
    "rawScore": 0.625871,
    "geneCount": 1,
@@ -1613,7 +1846,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 23,
    "score": 0.1815,
    "rawScore": 0.60869,
    "geneCount": 1,
@@ -1653,7 +1886,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
+   "rank": 24,
    "score": 0.1815,
    "rawScore": 0.60869,
    "geneCount": 1,
@@ -1699,7 +1932,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 25,
    "score": 0.1662,
    "rawScore": 0.559865,
    "geneCount": 2,
@@ -1735,7 +1968,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 26,
    "score": 0.1649,
    "rawScore": 0.555711,
    "geneCount": 1,
@@ -1774,7 +2007,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 27,
    "score": 0.1589,
    "rawScore": 0.536458,
    "geneCount": 1,
@@ -1826,7 +2059,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 25,
+   "rank": 28,
    "score": 0.156,
    "rawScore": 0.527181,
    "geneCount": 1,
@@ -1875,7 +2108,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 29,
    "score": 0.1557,
    "rawScore": 0.52625,
    "geneCount": 5,
@@ -1933,7 +2166,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 30,
    "score": 0.1544,
    "rawScore": 0.522097,
    "geneCount": 3,
@@ -1978,7 +2211,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 31,
    "score": 0.1461,
    "rawScore": 0.495556,
    "geneCount": 2,
@@ -2042,7 +2275,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 32,
    "score": 0.1461,
    "rawScore": 0.495556,
    "geneCount": 2,
@@ -2105,7 +2338,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 33,
    "score": 0.1443,
    "rawScore": 0.489792,
    "geneCount": 1,
@@ -2134,142 +2367,6 @@
      "hops": 3,
      "via": "BDKRB2",
      "viaScore": 0.917
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "basal cell carcinoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 31,
-   "score": 0.1431,
-   "rawScore": 0.486129,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLI3",
-     "geneId": "ENSG00000106571",
-     "geneName": "GLI family zinc finger 3",
-     "assoc": 0.7737,
-     "contribution": 0.486129,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7737
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.975
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Smoothened homolog inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 32,
-   "score": 0.1431,
-   "rawScore": 0.486129,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLI3",
-     "geneId": "ENSG00000106571",
-     "geneName": "GLI family zinc finger 3",
-     "assoc": 0.7737,
-     "contribution": 0.486129,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7737
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.975
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2043437",
-   "name": "Glasdegib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "juvenile myelomonocytic leukemia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Smoothened homolog antagonist",
-    "Smoothened homolog antagonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 33,
-   "score": 0.1431,
-   "rawScore": 0.486129,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GLI3",
-     "geneId": "ENSG00000106571",
-     "geneName": "GLI family zinc finger 3",
-     "assoc": 0.7737,
-     "contribution": 0.486129,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7737
-      }
-     ],
-     "hops": 3,
-     "via": "SMO",
-     "viaScore": 0.975
     }
    ]
   },
@@ -2594,15 +2691,17 @@
    ]
   },
   {
-   "id": "CHEMBL4594334",
-   "name": "Eplontersen",
-   "drugType": "Oligonucleotide",
+   "id": "CHEMBL3940890",
+   "name": "Acoramidis",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "familial amyloid neuropathy"
+    "familial amyloid neuropathy",
+    "cardiovascular disorder"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Transthyretin mRNA antisense inhibitor"
+    "Transthyretin stabiliser",
+    "Transthyretin stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2648,22 +2747,20 @@
    ]
   },
   {
-   "id": "CHEMBL3940890",
-   "name": "Acoramidis",
-   "drugType": "Small molecule",
+   "id": "CHEMBL4594334",
+   "name": "Eplontersen",
+   "drugType": "Oligonucleotide",
    "approvedFor": [
-    "familial amyloid neuropathy",
-    "cardiovascular disorder"
+    "familial amyloid neuropathy"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Transthyretin stabiliser",
-    "Transthyretin stabiliser"
+    "Transthyretin mRNA antisense inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 41,
+   "rank": 40,
    "score": 0.1208,
    "rawScore": 0.415034,
    "geneCount": 1,
@@ -2706,25 +2803,21 @@
  ],
  "knownRanked": [
   {
-   "id": "CHEMBL4297770",
-   "name": "Inotersen",
+   "id": "CHEMBL3989987",
+   "name": "Patisiran",
    "drugType": "Oligonucleotide",
    "approvedFor": [
+    "amyloidosis",
     "hereditary amyloidosis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "Transthyretin mRNA antisense inhibitor"
+    "Transthyretin mRNA RNAi inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 40,
+   "blackBox": false,
+   "rank": 42,
    "score": 0.1208,
    "rawScore": 0.415034,
    "geneCount": 1,
@@ -2777,62 +2870,6 @@
    "mechanisms": [
     "Transthyretin stabiliser",
     "Transthyretin stabiliser"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 42,
-   "score": 0.1208,
-   "rawScore": 0.415034,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TTR",
-     "geneId": "ENSG00000118271",
-     "geneName": "transthyretin",
-     "assoc": 0.9995,
-     "contribution": 0.415034,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.9516
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8752
-      },
-      {
-       "id": "literature",
-       "score": 0.7168
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.5775
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3002
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4594511",
-   "name": "Vutrisiran",
-   "drugType": "Oligonucleotide",
-   "approvedFor": [
-    "polyneuropathy",
-    "hereditary amyloidosis",
-    "familial amyloid neuropathy"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Transthyretin mRNA rnai inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2935,16 +2972,76 @@
    ]
   },
   {
-   "id": "CHEMBL3989987",
-   "name": "Patisiran",
+   "id": "CHEMBL4297770",
+   "name": "Inotersen",
    "drugType": "Oligonucleotide",
    "approvedFor": [
-    "amyloidosis",
     "hereditary amyloidosis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Transthyretin mRNA RNAi inhibitor"
+    "Transthyretin mRNA antisense inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 45,
+   "score": 0.1208,
+   "rawScore": 0.415034,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TTR",
+     "geneId": "ENSG00000118271",
+     "geneName": "transthyretin",
+     "assoc": 0.9995,
+     "contribution": 0.415034,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.9516
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8752
+      },
+      {
+       "id": "literature",
+       "score": 0.7168
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.5775
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3002
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4594511",
+   "name": "Vutrisiran",
+   "drugType": "Oligonucleotide",
+   "approvedFor": [
+    "polyneuropathy",
+    "hereditary amyloidosis",
+    "familial amyloid neuropathy"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Transthyretin mRNA rnai inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,

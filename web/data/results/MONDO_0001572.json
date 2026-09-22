@@ -12,15 +12,13 @@
  "pathsThreeHop": 364,
  "candidates": [
   {
-   "id": "CHEMBL2107856",
-   "name": "Imetelstat",
+   "id": "CHEMBL2108702",
+   "name": "Imetelstat Sodium",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia",
-    "neoplasm",
-    "myelodysplastic syndrome"
+    "anemia"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -77,13 +75,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108702",
-   "name": "Imetelstat Sodium",
+   "id": "CHEMBL2107856",
+   "name": "Imetelstat",
    "drugType": "Unknown",
    "approvedFor": [
-    "anemia"
+    "anemia",
+    "neoplasm",
+    "myelodysplastic syndrome"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Telomerase reverse transcriptase inhibitor"
    ],
@@ -653,17 +653,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201716",
-   "name": "Mecasermin",
-   "drugType": "Protein",
+   "id": "CHEMBL1743079",
+   "name": "Teprotumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "Growth delay",
-    "Laron syndrome",
-    "hypothyroidism"
+    "Graves ophthalmopathy",
+    "Graves disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Insulin-like growth factor I receptor agonist"
+    "Insulin-like growth factor I receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -697,16 +696,17 @@
    ]
   },
   {
-   "id": "CHEMBL1743079",
-   "name": "Teprotumumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201716",
+   "name": "Mecasermin",
+   "drugType": "Protein",
    "approvedFor": [
-    "Graves ophthalmopathy",
-    "Graves disease"
+    "Growth delay",
+    "Laron syndrome",
+    "hypothyroidism"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Insulin-like growth factor I receptor antagonist"
+    "Insulin-like growth factor I receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -740,6 +740,89 @@
    ]
   },
   {
+   "id": "CHEMBL1096882",
+   "name": "Fludarabine Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "B-cell chronic lymphocytic leukemia",
+    "neoplasm"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "DNA polymerase (alpha/delta/epsilon) inhibitor",
+    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.5245,
+   "rawScore": 0.598073,
+   "geneCount": 14,
+   "paths": [
+    {
+     "gene": "PRIM1",
+     "geneId": "ENSG00000198056",
+     "geneName": "DNA primase subunit 1",
+     "assoc": 0.7649,
+     "contribution": 0.152878,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7649
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PRIM1",
+     "geneId": "ENSG00000198056",
+     "geneName": "DNA primase subunit 1",
+     "assoc": 0.7649,
+     "contribution": 0.074585,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7649
+      }
+     ],
+     "hops": 3,
+     "via": "POLA2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "PRIM1",
+     "geneId": "ENSG00000198056",
+     "geneName": "DNA primase subunit 1",
+     "assoc": 0.7649,
+     "contribution": 0.074585,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7649
+      }
+     ],
+     "hops": 3,
+     "via": "PRIM2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL888",
    "name": "Gemcitabine",
    "drugType": "Small molecule",
@@ -755,7 +838,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.5245,
    "rawScore": 0.598073,
    "geneCount": 14,
@@ -830,89 +913,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
-   "score": 0.5245,
-   "rawScore": 0.598073,
-   "geneCount": 14,
-   "paths": [
-    {
-     "gene": "PRIM1",
-     "geneId": "ENSG00000198056",
-     "geneName": "DNA primase subunit 1",
-     "assoc": 0.7649,
-     "contribution": 0.152878,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7649
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PRIM1",
-     "geneId": "ENSG00000198056",
-     "geneName": "DNA primase subunit 1",
-     "assoc": 0.7649,
-     "contribution": 0.074585,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7649
-      }
-     ],
-     "hops": 3,
-     "via": "POLA2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "PRIM1",
-     "geneId": "ENSG00000198056",
-     "geneName": "DNA primase subunit 1",
-     "assoc": 0.7649,
-     "contribution": 0.074585,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7649
-      }
-     ],
-     "hops": 3,
-     "via": "PRIM2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1096882",
-   "name": "Fludarabine Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "B-cell chronic lymphocytic leukemia",
-    "neoplasm"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "DNA polymerase (alpha/delta/epsilon) inhibitor",
-    "Ribonucleoside-diphosphate reductase RR1 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 14,
    "score": 0.5245,
    "rawScore": 0.598073,
@@ -1143,6 +1143,363 @@
    ]
   },
   {
+   "id": "CHEMBL1201477",
+   "name": "Polyestradiol Phosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "prostate cancer"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.4272,
+   "rawScore": 0.49752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9458,
+     "contribution": 0.24264,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8676
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5908
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GREB1",
+     "geneId": "ENSG00000196208",
+     "geneName": "growth regulating estrogen receptor binding 1",
+     "assoc": 0.8301,
+     "contribution": 0.158643,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8099
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "NCOA2",
+     "geneId": "ENSG00000140396",
+     "geneName": "nuclear receptor coactivator 2",
+     "assoc": 0.7148,
+     "contribution": 0.096237,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7113
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL494753",
+   "name": "Estrone Sulfuric Acid",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 19,
+   "score": 0.4272,
+   "rawScore": 0.49752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9458,
+     "contribution": 0.24264,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8676
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5908
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GREB1",
+     "geneId": "ENSG00000196208",
+     "geneName": "growth regulating estrogen receptor binding 1",
+     "assoc": 0.8301,
+     "contribution": 0.158643,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8099
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "NCOA2",
+     "geneId": "ENSG00000140396",
+     "geneName": "nuclear receptor coactivator 2",
+     "assoc": 0.7148,
+     "contribution": 0.096237,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7113
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1018",
+   "name": "Dienestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Atrophic Vaginitis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.4272,
+   "rawScore": 0.49752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9458,
+     "contribution": 0.24264,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8676
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5908
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GREB1",
+     "geneId": "ENSG00000196208",
+     "geneName": "growth regulating estrogen receptor binding 1",
+     "assoc": 0.8301,
+     "contribution": 0.158643,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8099
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "NCOA2",
+     "geneId": "ENSG00000140396",
+     "geneName": "nuclear receptor coactivator 2",
+     "assoc": 0.7148,
+     "contribution": 0.096237,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7113
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL411",
+   "name": "Diethylstilbestrol",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.4272,
+   "rawScore": 0.49752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9458,
+     "contribution": 0.24264,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8676
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5908
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GREB1",
+     "geneId": "ENSG00000196208",
+     "geneName": "growth regulating estrogen receptor binding 1",
+     "assoc": 0.8301,
+     "contribution": 0.158643,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8099
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "NCOA2",
+     "geneId": "ENSG00000140396",
+     "geneName": "nuclear receptor coactivator 2",
+     "assoc": 0.7148,
+     "contribution": 0.096237,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7113
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL691",
    "name": "Ethinyl Estradiol",
    "drugType": "Small molecule",
@@ -1159,7 +1516,91 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 22,
+   "score": 0.4272,
+   "rawScore": 0.49752,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.9458,
+     "contribution": 0.24264,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.8676
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.5908
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "GREB1",
+     "geneId": "ENSG00000196208",
+     "geneName": "growth regulating estrogen receptor binding 1",
+     "assoc": 0.8301,
+     "contribution": 0.158643,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.8099
+      },
+      {
+       "id": "literature",
+       "score": 0.1064
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.983
+    },
+    {
+     "gene": "NCOA2",
+     "geneId": "ENSG00000140396",
+     "geneName": "nuclear receptor coactivator 2",
+     "assoc": 0.7148,
+     "contribution": 0.096237,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7113
+      },
+      {
+       "id": "literature",
+       "score": 0.0122
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2355051",
+   "name": "Clomiphene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "female infertility"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor alpha modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1265,7 +1706,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 18,
+   "rank": 24,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1336,20 +1777,18 @@
    ]
   },
   {
-   "id": "CHEMBL2355051",
-   "name": "Clomiphene",
+   "id": "CHEMBL1405",
+   "name": "Estrone",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "female infertility"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Estrogen receptor alpha modulator"
+    "Estrogen receptor alpha agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 25,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1433,106 +1872,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 21,
-   "score": 0.4272,
-   "rawScore": 0.49752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9458,
-     "contribution": 0.24264,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8676
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5908
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GREB1",
-     "geneId": "ENSG00000196208",
-     "geneName": "growth regulating estrogen receptor binding 1",
-     "assoc": 0.8301,
-     "contribution": 0.158643,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8099
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.983
-    },
-    {
-     "gene": "NCOA2",
-     "geneId": "ENSG00000140396",
-     "geneName": "nuclear receptor coactivator 2",
-     "assoc": 0.7148,
-     "contribution": 0.096237,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7113
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL494753",
-   "name": "Estrone Sulfuric Acid",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 22,
+   "rank": 26,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1634,7 +1974,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 23,
+   "rank": 27,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1721,180 +2061,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
-   "score": 0.4272,
-   "rawScore": 0.49752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9458,
-     "contribution": 0.24264,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8676
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5908
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GREB1",
-     "geneId": "ENSG00000196208",
-     "geneName": "growth regulating estrogen receptor binding 1",
-     "assoc": 0.8301,
-     "contribution": 0.158643,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8099
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.983
-    },
-    {
-     "gene": "NCOA2",
-     "geneId": "ENSG00000140396",
-     "geneName": "nuclear receptor coactivator 2",
-     "assoc": 0.7148,
-     "contribution": 0.096237,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7113
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1018",
-   "name": "Dienestrol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Atrophic Vaginitis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.4272,
-   "rawScore": 0.49752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9458,
-     "contribution": 0.24264,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8676
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5908
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GREB1",
-     "geneId": "ENSG00000196208",
-     "geneName": "growth regulating estrogen receptor binding 1",
-     "assoc": 0.8301,
-     "contribution": 0.158643,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8099
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.983
-    },
-    {
-     "gene": "NCOA2",
-     "geneId": "ENSG00000140396",
-     "geneName": "nuclear receptor coactivator 2",
-     "assoc": 0.7148,
-     "contribution": 0.096237,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7113
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL411",
-   "name": "Diethylstilbestrol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
+   "rank": 28,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -1982,7 +2149,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
+   "rank": 29,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -2081,173 +2248,6 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
-   "score": 0.4272,
-   "rawScore": 0.49752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9458,
-     "contribution": 0.24264,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8676
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5908
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GREB1",
-     "geneId": "ENSG00000196208",
-     "geneName": "growth regulating estrogen receptor binding 1",
-     "assoc": 0.8301,
-     "contribution": 0.158643,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8099
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.983
-    },
-    {
-     "gene": "NCOA2",
-     "geneId": "ENSG00000140396",
-     "geneName": "nuclear receptor coactivator 2",
-     "assoc": 0.7148,
-     "contribution": 0.096237,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7113
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1405",
-   "name": "Estrone",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.4272,
-   "rawScore": 0.49752,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.9458,
-     "contribution": 0.24264,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.8676
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.5908
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GREB1",
-     "geneId": "ENSG00000196208",
-     "geneName": "growth regulating estrogen receptor binding 1",
-     "assoc": 0.8301,
-     "contribution": 0.158643,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.8099
-      },
-      {
-       "id": "literature",
-       "score": 0.1064
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.983
-    },
-    {
-     "gene": "NCOA2",
-     "geneId": "ENSG00000140396",
-     "geneName": "nuclear receptor coactivator 2",
-     "assoc": 0.7148,
-     "contribution": 0.096237,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7113
-      },
-      {
-       "id": "literature",
-       "score": 0.0122
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201477",
-   "name": "Polyestradiol Phosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "prostate cancer"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor alpha agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 30,
    "score": 0.4272,
    "rawScore": 0.49752,
@@ -2360,31 +2360,19 @@
    ]
   },
   {
-   "id": "CHEMBL2007641",
-   "name": "Pertuzumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4298178",
+   "name": "Trastuzumab Duocarmazine",
+   "drugType": "Antibody drug conjugate",
    "approvedFor": [
-    "neoplasm",
-    "breast neoplasm",
-    "breast cancer",
-    "breast carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 5,
+   "indicationCount": 1,
    "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+    "Receptor protein-tyrosine kinase erbB-2 binding agent"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 32,
    "score": 0.3694,
    "rawScore": 0.437772,
@@ -2529,6 +2517,101 @@
    ]
   },
   {
+   "id": "CHEMBL1201585",
+   "name": "Trastuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "gastric neoplasm",
+    "neoplasm",
+    "gastric adenocarcinoma",
+    "breast cancer"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 34,
+   "score": 0.3694,
+   "rawScore": 0.437772,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PGR",
+     "geneId": "ENSG00000082175",
+     "geneName": "progesterone receptor",
+     "assoc": 0.9573,
+     "contribution": 0.30206,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7491
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6187
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5536
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "CD44",
+     "geneId": "ENSG00000026508",
+     "geneName": "CD44 molecule (IN blood group)",
+     "assoc": 0.7346,
+     "contribution": 0.135712,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6653
+      },
+      {
+       "id": "literature",
+       "score": 0.2071
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3989868",
    "name": "Tucatinib",
    "drugType": "Small molecule",
@@ -2545,7 +2628,86 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 35,
+   "score": 0.3694,
+   "rawScore": 0.437772,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PGR",
+     "geneId": "ENSG00000082175",
+     "geneName": "progesterone receptor",
+     "assoc": 0.9573,
+     "contribution": 0.30206,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7491
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.6187
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5536
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.98
+    },
+    {
+     "gene": "CD44",
+     "geneId": "ENSG00000026508",
+     "geneName": "CD44 molecule (IN blood group)",
+     "assoc": 0.7346,
+     "contribution": 0.135712,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6653
+      },
+      {
+       "id": "literature",
+       "score": 0.2071
+      }
+     ],
+     "hops": 3,
+     "via": "ERBB2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2007641",
+   "name": "Pertuzumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "neoplasm",
+    "breast neoplasm",
+    "breast cancer",
+    "breast carcinoma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "teratogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 36,
    "score": 0.3694,
    "rawScore": 0.437772,
    "geneCount": 1,
@@ -2613,168 +2775,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
-   "score": 0.3694,
-   "rawScore": 0.437772,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PGR",
-     "geneId": "ENSG00000082175",
-     "geneName": "progesterone receptor",
-     "assoc": 0.9573,
-     "contribution": 0.30206,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7491
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6187
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5536
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.98
-    },
-    {
-     "gene": "CD44",
-     "geneId": "ENSG00000026508",
-     "geneName": "CD44 molecule (IN blood group)",
-     "assoc": 0.7346,
-     "contribution": 0.135712,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6653
-      },
-      {
-       "id": "literature",
-       "score": 0.2071
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4298178",
-   "name": "Trastuzumab Duocarmazine",
-   "drugType": "Antibody drug conjugate",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 36,
-   "score": 0.3694,
-   "rawScore": 0.437772,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PGR",
-     "geneId": "ENSG00000082175",
-     "geneName": "progesterone receptor",
-     "assoc": 0.9573,
-     "contribution": 0.30206,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7491
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.6187
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5536
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.98
-    },
-    {
-     "gene": "CD44",
-     "geneId": "ENSG00000026508",
-     "geneName": "CD44 molecule (IN blood group)",
-     "assoc": 0.7346,
-     "contribution": 0.135712,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6653
-      },
-      {
-       "id": "literature",
-       "score": 0.2071
-      }
-     ],
-     "hops": 3,
-     "via": "ERBB2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201585",
-   "name": "Trastuzumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "gastric neoplasm",
-    "neoplasm",
-    "gastric adenocarcinoma",
-    "breast cancer"
-   ],
-   "indicationCount": 8,
-   "mechanisms": [
-    "Receptor protein-tyrosine kinase erbB-2 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "teratogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "respiratory toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 37,
    "score": 0.3694,
    "rawScore": 0.437772,
@@ -2906,18 +2906,30 @@
    ]
   },
   {
-   "id": "CHEMBL3647420",
-   "name": "Pyrotinib",
+   "id": "CHEMBL554",
+   "name": "Lapatinib",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "neoplasm",
+    "breast cancer"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 40,
    "score": 0.3549,
    "rawScore": 0.422815,
@@ -2993,30 +3005,18 @@
    ]
   },
   {
-   "id": "CHEMBL554",
-   "name": "Lapatinib",
+   "id": "CHEMBL3647420",
+   "name": "Pyrotinib",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Epidermal growth factor receptor erbB1 inhibitor",
     "Receptor protein-tyrosine kinase erbB-2 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 41,
    "score": 0.3549,
    "rawScore": 0.422815,
@@ -3131,7 +3131,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 20,
+   "rank": 17,
    "score": 0.4272,
    "rawScore": 0.49752,
    "geneCount": 1,
@@ -3202,27 +3202,23 @@
    ]
   },
   {
-   "id": "CHEMBL260538",
-   "name": "Ulipristal Acetate",
+   "id": "CHEMBL1201146",
+   "name": "Norethindrone Acetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "leiomyoma",
-    "contraception",
-    "Uterine leiomyoma"
+    "acne",
+    "hypogonadism",
+    "endometriosis",
+    "leiomyoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
-    "Progesterone receptor modulator"
+    "Progesterone receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
-   "rank": 50,
+   "rank": 54,
    "score": 0.3408,
    "rawScore": 0.408247,
    "geneCount": 1,
@@ -3276,21 +3272,25 @@
    ]
   },
   {
-   "id": "CHEMBL1201146",
-   "name": "Norethindrone Acetate",
+   "id": "CHEMBL260538",
+   "name": "Ulipristal Acetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "acne",
-    "hypogonadism",
-    "endometriosis",
-    "leiomyoma"
+    "leiomyoma",
+    "contraception",
+    "Uterine leiomyoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
-    "Progesterone receptor agonist"
+    "Progesterone receptor modulator"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
    "rank": 62,
    "score": 0.3408,
@@ -3410,46 +3410,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201509",
-   "name": "Gonadotropin, Chorionic",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Luteinizing hormone/Choriogonadotropin receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 118,
-   "score": 0.1437,
-   "rawScore": 0.20447,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "FSHB",
-     "geneId": "ENSG00000131808",
-     "geneName": "follicle stimulating hormone subunit beta",
-     "assoc": 0.8051,
-     "contribution": 0.20447,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7966
-      },
-      {
-       "id": "literature",
-       "score": 0.0416
-      }
-     ],
-     "hops": 3,
-     "via": "LHCGR",
-     "viaScore": 0.99
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201464",
    "name": "Choriogonadotropin Alfa",
    "drugType": "Protein",
@@ -3495,23 +3455,59 @@
    ]
   },
   {
-   "id": "CHEMBL1800159",
-   "name": "Relugolix",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "prostate cancer",
-    "Menorrhagia",
-    "Abdominal pain"
-   ],
-   "indicationCount": 8,
+   "id": "CHEMBL1201509",
+   "name": "Gonadotropin, Chorionic",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Gonadotropin-releasing hormone receptor antagonist"
+    "Luteinizing hormone/Choriogonadotropin receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 154,
+   "rank": 120,
+   "score": 0.1437,
+   "rawScore": 0.20447,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "FSHB",
+     "geneId": "ENSG00000131808",
+     "geneName": "follicle stimulating hormone subunit beta",
+     "assoc": 0.8051,
+     "contribution": 0.20447,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7966
+      },
+      {
+       "id": "literature",
+       "score": 0.0416
+      }
+     ],
+     "hops": 3,
+     "via": "LHCGR",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1007",
+   "name": "Gonadorelin",
+   "drugType": "Protein",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Gonadotropin-releasing hormone receptor agonist",
+    "Gonadotropin-releasing hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 147,
    "score": 0.0993,
    "rawScore": 0.158558,
    "geneCount": 1,
@@ -3557,19 +3553,23 @@
    ]
   },
   {
-   "id": "CHEMBL1007",
-   "name": "Gonadorelin",
-   "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL1800159",
+   "name": "Relugolix",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "prostate cancer",
+    "Menorrhagia",
+    "Abdominal pain"
+   ],
+   "indicationCount": 8,
    "mechanisms": [
-    "Gonadotropin-releasing hormone receptor agonist",
-    "Gonadotropin-releasing hormone receptor agonist"
+    "Gonadotropin-releasing hormone receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 156,
+   "rank": 150,
    "score": 0.0993,
    "rawScore": 0.158558,
    "geneCount": 1,

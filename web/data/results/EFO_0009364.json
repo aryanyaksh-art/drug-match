@@ -9,7 +9,7 @@
  "knownDrugCount": 9,
  "candidatesConsidered": 325,
  "pathsTwoHop": 164,
- "pathsThreeHop": 331,
+ "pathsThreeHop": 333,
  "candidates": [
   {
    "id": "CHEMBL1201589",
@@ -137,16 +137,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -212,16 +212,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -342,57 +342,78 @@
    ]
   },
   {
-   "id": "CHEMBL2048028",
-   "name": "Lifitegrast",
+   "id": "CHEMBL1433",
+   "name": "Doxycycline Anhydrous",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "eye disorder",
-    "dry eye syndrome"
-   ],
-   "indicationCount": 2,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+    "Bacterial 70S ribosome inhibitor",
+    "Matrix metalloproteinase 8 inhibitor",
+    "Matrix metalloproteinase 8 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 6,
-   "score": 0.2433,
-   "rawScore": 0.04159,
-   "geneCount": 2,
+   "score": 0.2504,
+   "rawScore": 0.042797,
+   "geneCount": 4,
    "paths": [
     {
-     "gene": "ICAM1",
-     "geneId": "ENSG00000090339",
-     "geneName": "intercellular adhesion molecule 1",
-     "assoc": 0.0608,
-     "contribution": 0.022477,
-     "drugsOnGene": 2,
+     "gene": "MMP7",
+     "geneId": "ENSG00000137673",
+     "geneName": "matrix metallopeptidase 7",
+     "assoc": 0.0182,
+     "contribution": 0.010475,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.0608
+       "score": 0.0182
       }
      ],
-     "hops": 3,
-     "via": "ITGB2",
-     "viaScore": 0.999
+     "hops": 2,
+     "via": null,
+     "viaScore": null
     },
     {
-     "gene": "ICAM1",
-     "geneId": "ENSG00000090339",
-     "geneName": "intercellular adhesion molecule 1",
-     "assoc": 0.0608,
-     "contribution": 0.019112,
-     "drugsOnGene": 3,
+     "gene": "MMP7",
+     "geneId": "ENSG00000137673",
+     "geneName": "matrix metallopeptidase 7",
+     "assoc": 0.0182,
+     "contribution": 0.009197,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.0608
+       "score": 0.0182
       }
      ],
      "hops": 3,
-     "via": "ITGAL",
+     "via": "MMP1",
+     "viaScore": 0.878
+    },
+    {
+     "gene": "TIMP1",
+     "geneId": "ENSG00000102265",
+     "geneName": "TIMP metallopeptidase inhibitor 1",
+     "assoc": 0.0182,
+     "contribution": 0.007931,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 3,
+     "via": "MMP1",
      "viaScore": 0.999
     }
    ]
@@ -463,6 +484,62 @@
    ]
   },
   {
+   "id": "CHEMBL2048028",
+   "name": "Lifitegrast",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "eye disorder",
+    "dry eye syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 8,
+   "score": 0.2433,
+   "rawScore": 0.04159,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ICAM1",
+     "geneId": "ENSG00000090339",
+     "geneName": "intercellular adhesion molecule 1",
+     "assoc": 0.0608,
+     "contribution": 0.022477,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "ITGB2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "ICAM1",
+     "geneId": "ENSG00000090339",
+     "geneName": "intercellular adhesion molecule 1",
+     "assoc": 0.0608,
+     "contribution": 0.019112,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "ITGAL",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3707229",
    "name": "Tezepelumab",
    "drugType": "Antibody",
@@ -478,7 +555,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 8,
+   "rank": 9,
    "score": 0.231,
    "rawScore": 0.039516,
    "geneCount": 1,
@@ -494,47 +571,6 @@
       {
        "id": "literature",
        "score": 0.0395
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2108429",
-   "name": "Mepolizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "hypereosinophilic syndrome",
-    "chronic rhinosinusitis",
-    "Airway obstruction",
-    "asthma"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Interleukin-5 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 9,
-   "score": 0.2289,
-   "rawScore": 0.039175,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL5",
-     "geneId": "ENSG00000113525",
-     "geneName": "interleukin 5",
-     "assoc": 0.0608,
-     "contribution": 0.039175,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
       }
      ],
      "hops": 2,
@@ -628,6 +664,47 @@
    ]
   },
   {
+   "id": "CHEMBL2108429",
+   "name": "Mepolizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "hypereosinophilic syndrome",
+    "chronic rhinosinusitis",
+    "Airway obstruction",
+    "asthma"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Interleukin-5 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 12,
+   "score": 0.2289,
+   "rawScore": 0.039175,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL5",
+     "geneId": "ENSG00000113525",
+     "geneName": "interleukin 5",
+     "assoc": 0.0608,
+     "contribution": 0.039175,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1742991",
    "name": "Benralizumab",
    "drugType": "Antibody",
@@ -642,7 +719,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.2287,
    "rawScore": 0.039136,
    "geneCount": 1,
@@ -681,7 +758,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.2187,
    "rawScore": 0.037457,
    "geneCount": 2,
@@ -737,7 +814,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.2129,
    "rawScore": 0.036476,
    "geneCount": 1,
@@ -753,47 +830,6 @@
       {
        "id": "literature",
        "score": 0.0365
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Interleukin-6 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 15,
-   "score": 0.2057,
-   "rawScore": 0.035257,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL6",
-     "geneId": "ENSG00000136244",
-     "geneName": "interleukin 6",
-     "assoc": 0.0547,
-     "contribution": 0.035257,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0547
       }
      ],
      "hops": 2,
@@ -841,6 +877,47 @@
    ]
   },
   {
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Interleukin-6 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 17,
+   "score": 0.2057,
+   "rawScore": 0.035257,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL6",
+     "geneId": "ENSG00000136244",
+     "geneName": "interleukin 6",
+     "assoc": 0.0547,
+     "contribution": 0.035257,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0547
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1743050",
    "name": "Olokizumab",
    "drugType": "Antibody",
@@ -854,7 +931,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.2057,
    "rawScore": 0.035257,
    "geneCount": 1,
@@ -895,7 +972,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 18,
+   "rank": 19,
    "score": 0.1962,
    "rawScore": 0.033659,
    "geneCount": 1,
@@ -936,7 +1013,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 19,
+   "rank": 20,
    "score": 0.1911,
    "rawScore": 0.032796,
    "geneCount": 1,
@@ -993,7 +1070,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 20,
+   "rank": 21,
    "score": 0.1824,
    "rawScore": 0.031331,
    "geneCount": 1,
@@ -1014,83 +1091,6 @@
      "hops": 3,
      "via": "IL1R1",
      "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1433",
-   "name": "Doxycycline Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Bacterial 70S ribosome inhibitor",
-    "Matrix metalloproteinase 8 inhibitor",
-    "Matrix metalloproteinase 8 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 21,
-   "score": 0.1603,
-   "rawScore": 0.027603,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "MMP7",
-     "geneId": "ENSG00000137673",
-     "geneName": "matrix metallopeptidase 7",
-     "assoc": 0.0182,
-     "contribution": 0.010475,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "MMP7",
-     "geneId": "ENSG00000137673",
-     "geneName": "matrix metallopeptidase 7",
-     "assoc": 0.0182,
-     "contribution": 0.009197,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "MMP1",
-     "viaScore": 0.878
-    },
-    {
-     "gene": "TIMP1",
-     "geneId": "ENSG00000102265",
-     "geneName": "TIMP metallopeptidase inhibitor 1",
-     "assoc": 0.0182,
-     "contribution": 0.007931,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 3,
-     "via": "MMP1",
-     "viaScore": 0.999
     }
    ]
   },
@@ -1151,16 +1151,18 @@
    ]
   },
   {
-   "id": "CHEMBL5095030",
-   "name": "Motixafortide",
-   "drugType": "Protein",
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
+    "C-X-C chemokine receptor type 4 partial agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1207,18 +1209,16 @@
    ]
   },
   {
-   "id": "CHEMBL18442",
-   "name": "Plerixafor",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm",
-    "lymphoma",
-    "non-Hodgkin lymphoma"
+    "neoplasm"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 partial agonist"
+    "C-X-C chemokine receptor type 4 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1647,8 +1647,8 @@
    ]
   },
   {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
+   "id": "CHEMBL1096979",
+   "name": "Benserazide",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
@@ -1683,8 +1683,8 @@
    ]
   },
   {
-   "id": "CHEMBL1096979",
-   "name": "Benserazide",
+   "id": "CHEMBL1201236",
+   "name": "Carbidopa Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
@@ -1719,18 +1719,28 @@
    ]
   },
   {
-   "id": "CHEMBL1909286",
-   "name": "Phenoxypropazine",
+   "id": "CHEMBL1256841",
+   "name": "Nialamide",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "major depressive disorder"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
      "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+    },
+    {
+     "type": "Withdrawn",
      "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -1740,68 +1750,6 @@
    "withdrawn": true,
    "blackBox": false,
    "rank": 36,
-   "score": 0.1113,
-   "rawScore": 0.019346,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "AOC1",
-     "geneId": "ENSG00000002726",
-     "geneName": "amine oxidase copper containing 1",
-     "assoc": 0.0608,
-     "contribution": 0.009846,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.971
-    },
-    {
-     "gene": "AOC1",
-     "geneId": "ENSG00000002726",
-     "geneName": "amine oxidase copper containing 1",
-     "assoc": 0.0608,
-     "contribution": 0.0095,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0608
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.97
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Hepatotoxicity; Drug Interaction"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 37,
    "score": 0.1113,
    "rawScore": 0.019346,
    "geneCount": 2,
@@ -1862,7 +1810,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 38,
+   "rank": 37,
    "score": 0.1113,
    "rawScore": 0.019346,
    "geneCount": 2,
@@ -1927,7 +1875,7 @@
    ],
    "withdrawn": true,
    "blackBox": true,
-   "rank": 39,
+   "rank": 38,
    "score": 0.1113,
    "rawScore": 0.019346,
    "geneCount": 2,
@@ -1995,6 +1943,62 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 39,
+   "score": 0.1113,
+   "rawScore": 0.019346,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "AOC1",
+     "geneId": "ENSG00000002726",
+     "geneName": "amine oxidase copper containing 1",
+     "assoc": 0.0608,
+     "contribution": 0.009846,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.971
+    },
+    {
+     "gene": "AOC1",
+     "geneId": "ENSG00000002726",
+     "geneName": "amine oxidase copper containing 1",
+     "assoc": 0.0608,
+     "contribution": 0.0095,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0608
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.97
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL673",
+   "name": "Pargyline",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hypertension",
+    "hypertensive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 40,
    "score": 0.1113,
    "rawScore": 0.019346,
@@ -2037,28 +2041,18 @@
    ]
   },
   {
-   "id": "CHEMBL1256841",
-   "name": "Nialamide",
+   "id": "CHEMBL1909286",
+   "name": "Phenoxypropazine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
      "type": "Withdrawn",
-     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
-    },
-    {
-     "type": "Withdrawn",
      "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -2182,7 +2176,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 190,
+   "rank": 218,
    "score": 0.0175,
    "rawScore": 0.003522,
    "geneCount": 1,

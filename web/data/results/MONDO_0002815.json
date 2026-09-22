@@ -7,9 +7,9 @@
  "genesScored": 49,
  "genesWithDrugs": 20,
  "knownDrugCount": 2,
- "candidatesConsidered": 182,
+ "candidatesConsidered": 192,
  "pathsTwoHop": 63,
- "pathsThreeHop": 283,
+ "pathsThreeHop": 323,
  "candidates": [
   {
    "id": "CHEMBL1201823",
@@ -321,31 +321,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 5,
    "score": 0.4504,
    "rawScore": 0.211333,
@@ -405,19 +393,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 6,
    "score": 0.4504,
    "rawScore": 0.211333,
@@ -557,116 +557,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 8,
-   "score": 0.4504,
-   "rawScore": 0.211333,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1573,
-     "contribution": 0.072241,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1573
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "FAS",
-     "geneId": "ENSG00000026103",
-     "geneName": "Fas cell surface death receptor",
-     "assoc": 0.0973,
-     "contribution": 0.044528,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.0638,
-     "contribution": 0.02928,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0638
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
    "score": 0.4504,
    "rawScore": 0.211333,
    "geneCount": 1,
@@ -750,6 +654,90 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 9,
+   "score": 0.4504,
+   "rawScore": 0.211333,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1573,
+     "contribution": 0.072241,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1573
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "FAS",
+     "geneId": "ENSG00000026103",
+     "geneName": "Fas cell surface death receptor",
+     "assoc": 0.0973,
+     "contribution": 0.044528,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.0638,
+     "contribution": 0.02928,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0638
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.4504,
    "rawScore": 0.211333,
@@ -809,19 +797,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.4504,
    "rawScore": 0.211333,
@@ -1028,16 +1028,15 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -1086,15 +1085,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -1200,18 +1200,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1275,15 +1272,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1556,16 +1556,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -1614,16 +1614,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -2251,18 +2251,17 @@
    ]
   },
   {
-   "id": "CHEMBL4297840",
-   "name": "Tislelizumab",
+   "id": "CHEMBL4298124",
+   "name": "Dostarlimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "esophageal cancer",
-    "Hodgkins lymphoma",
+    "endometrial cancer",
     "neoplasm",
-    "gastric neoplasm"
+    "endometrial neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2309,15 +2308,11 @@
    ]
   },
   {
-   "id": "CHEMBL4298124",
-   "name": "Dostarlimab",
+   "id": "CHEMBL4297715",
+   "name": "Camrelizumab",
    "drugType": "Antibody",
-   "approvedFor": [
-    "endometrial cancer",
-    "neoplasm",
-    "endometrial neoplasm"
-   ],
-   "indicationCount": 3,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -2366,16 +2361,13 @@
    ]
   },
   {
-   "id": "CHEMBL4298037",
-   "name": "Retifanlimab",
+   "id": "CHEMBL4297829",
+   "name": "Sintilimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "squamous cell carcinoma",
-    "Merkel cell skin cancer",
-    "neuroendocrine carcinoma"
+    "Hodgkins lymphoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
     "Programmed cell death protein 1 antagonist"
    ],
@@ -2424,18 +2416,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297723",
-   "name": "Cemiplimab",
+   "id": "CHEMBL4297843",
+   "name": "Toripalimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "cervical cancer",
-    "basal cell carcinoma",
+    "urothelial carcinoma",
+    "Niemann-Pick disease type B",
     "neoplasm",
-    "cancer"
+    "esophageal squamous cell carcinoma"
    ],
-   "indicationCount": 7,
+   "indicationCount": 6,
    "mechanisms": [
-    "Programmed cell death protein 1 inhibitor"
+    "Programmed cell death protein 1 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2482,16 +2474,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108738",
-   "name": "Nivolumab",
+   "id": "CHEMBL3137343",
+   "name": "Pembrolizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "neoplasm",
-    "colorectal neoplasm",
-    "metastatic melanoma",
-    "head and neck squamous cell carcinoma"
+    "non-small cell lung carcinoma",
+    "Hodgkins lymphoma",
+    "melanoma",
+    "transitional cell carcinoma"
    ],
-   "indicationCount": 14,
+   "indicationCount": 9,
    "mechanisms": [
     "Programmed cell death protein 1 inhibitor"
    ],
@@ -2593,18 +2585,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297843",
-   "name": "Toripalimab",
+   "id": "CHEMBL4297840",
+   "name": "Tislelizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "urothelial carcinoma",
-    "Niemann-Pick disease type B",
+    "esophageal cancer",
+    "Hodgkins lymphoma",
     "neoplasm",
-    "esophageal squamous cell carcinoma"
+    "gastric neoplasm"
    ],
-   "indicationCount": 6,
+   "indicationCount": 7,
    "mechanisms": [
-    "Programmed cell death protein 1 antagonist"
+    "Programmed cell death protein 1 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,

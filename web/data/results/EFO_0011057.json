@@ -7,9 +7,9 @@
  "genesScored": 44,
  "genesWithDrugs": 21,
  "knownDrugCount": 4,
- "candidatesConsidered": 320,
+ "candidatesConsidered": 322,
  "pathsTwoHop": 159,
- "pathsThreeHop": 510,
+ "pathsThreeHop": 512,
  "candidates": [
   {
    "id": "CHEMBL2103830",
@@ -70,14 +70,13 @@
    ]
   },
   {
-   "id": "CHEMBL473417",
-   "name": "Vismodegib",
+   "id": "CHEMBL2105737",
+   "name": "Sonidegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "basal cell carcinoma"
+    "neoplasm"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -131,13 +130,14 @@
    ]
   },
   {
-   "id": "CHEMBL2105737",
-   "name": "Sonidegib",
+   "id": "CHEMBL473417",
+   "name": "Vismodegib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm"
+    "neoplasm",
+    "basal cell carcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Smoothened homolog inhibitor"
    ],
@@ -257,11 +257,14 @@
    ]
   },
   {
-   "id": "CHEMBL742",
-   "name": "Ketamine",
+   "id": "CHEMBL807",
+   "name": "Memantine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "Alzheimer disease",
+    "dementia"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
@@ -410,17 +413,16 @@
    ]
   },
   {
-   "id": "CHEMBL395091",
-   "name": "Esketamine",
+   "id": "CHEMBL660",
+   "name": "Amantadine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "depressive disorder",
-    "major depressive disorder"
+    "Parkinson disease"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "Glutamate [NMDA] receptor negative allosteric modulator",
-    "Glutamate [NMDA] receptor negative allosteric modulator"
+    "Matrix protein 2 inhibitor",
+    "Glutamate [NMDA] receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -484,16 +486,13 @@
    ]
   },
   {
-   "id": "CHEMBL660",
-   "name": "Amantadine",
+   "id": "CHEMBL742",
+   "name": "Ketamine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "Parkinson disease"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Matrix protein 2 inhibitor",
-    "Glutamate [NMDA] receptor antagonist"
+    "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -557,15 +556,16 @@
    ]
   },
   {
-   "id": "CHEMBL807",
-   "name": "Memantine",
+   "id": "CHEMBL395091",
+   "name": "Esketamine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Alzheimer disease",
-    "dementia"
+    "depressive disorder",
+    "major depressive disorder"
    ],
    "indicationCount": 2,
    "mechanisms": [
+    "Glutamate [NMDA] receptor negative allosteric modulator",
     "Glutamate [NMDA] receptor negative allosteric modulator"
    ],
    "warnings": [],
@@ -630,31 +630,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 10,
    "score": 0.5502,
    "rawScore": 0.143463,
@@ -697,19 +685,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.5502,
    "rawScore": 0.143463,
@@ -815,99 +815,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 13,
-   "score": 0.5502,
-   "rawScore": 0.143463,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.1586,
-     "contribution": 0.072749,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1586
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.154,
-     "contribution": 0.070714,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.154
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 14,
    "score": 0.5502,
    "rawScore": 0.143463,
    "geneCount": 1,
@@ -974,6 +895,73 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 14,
+   "score": 0.5502,
+   "rawScore": 0.143463,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.1586,
+     "contribution": 0.072749,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1586
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.154,
+     "contribution": 0.070714,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.154
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 15,
    "score": 0.5502,
    "rawScore": 0.143463,
@@ -1016,19 +1004,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 16,
    "score": 0.5502,
    "rawScore": 0.143463,
@@ -1356,6 +1356,85 @@
    ]
   },
   {
+   "id": "CHEMBL1201466",
+   "name": "Estrogens, Conjugated Synthetic A",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Atrophy",
+    "osteoporosis",
+    "menopause"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 22,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
    "id": "CHEMBL46740",
    "name": "Bazedoxifene",
    "drugType": "Small molecule",
@@ -1370,7 +1449,79 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 23,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200598",
+   "name": "Diethylstilbestrol Diphosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
    "score": 0.4912,
    "rawScore": 0.128744,
    "geneCount": 2,
@@ -1440,163 +1591,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201649",
-   "name": "Estrogens, Conjugated",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "osteoporosis",
-    "primary ovarian failure",
-    "breast cancer",
-    "postmenopausal osteoporosis"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 24,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL141305",
-   "name": "Cyclofenil",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Infertility"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
    "rank": 25,
    "score": 0.4912,
    "rawScore": 0.128744,
@@ -1656,16 +1650,15 @@
    ]
   },
   {
-   "id": "CHEMBL328190",
-   "name": "Lasofoxifene",
+   "id": "CHEMBL1201165",
+   "name": "Quinestrol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "osteoporosis"
+    "breast cancer"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Estrogen receptor modulator",
-    "Estrogen receptor modulator"
+    "Estrogen receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1729,23 +1722,21 @@
    ]
   },
   {
-   "id": "CHEMBL1201468",
-   "name": "Estrogens, Esterified",
-   "drugType": "Unknown",
+   "id": "CHEMBL1655",
+   "name": "Toremifene",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "Atrophy",
-    "hypogonadism",
-    "breast cancer",
-    "primary ovarian failure"
+    "neoplasm",
+    "breast cancer"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "Estrogen receptor agonist"
+    "Estrogen receptor modulator"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "cardiotoxicity"
     }
    ],
    "withdrawn": false,
@@ -1809,22 +1800,35 @@
    ]
   },
   {
-   "id": "CHEMBL1201466",
-   "name": "Estrogens, Conjugated Synthetic A",
-   "drugType": "Unknown",
+   "id": "CHEMBL2105395",
+   "name": "Ospemifene",
+   "drugType": "Small molecule",
    "approvedFor": [
+    "Dyspareunia",
+    "postmenopausal atrophic vaginitis",
     "Atrophy",
-    "osteoporosis",
-    "menopause"
+    "Atrophic Vaginitis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
-    "Estrogen receptor agonist"
+    "Estrogen receptor modulator"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
@@ -1983,6 +1987,306 @@
    ]
   },
   {
+   "id": "CHEMBL193482",
+   "name": "Estriol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 30,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL141305",
+   "name": "Cyclofenil",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Infertility"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL328190",
+   "name": "Lasofoxifene",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "osteoporosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor modulator",
+    "Estrogen receptor modulator"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201468",
+   "name": "Estrogens, Esterified",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "Atrophy",
+    "hypogonadism",
+    "breast cancer",
+    "primary ovarian failure"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 33,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
    "id": "CHEMBL226267",
    "name": "Arzoxifene",
    "drugType": "Small molecule",
@@ -1996,7 +2300,87 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 34,
+   "score": 0.4912,
+   "rawScore": 0.128744,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ESR2",
+     "geneId": "ENSG00000140009",
+     "geneName": "estrogen receptor 2",
+     "assoc": 0.1216,
+     "contribution": 0.029668,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1216
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ESR1",
+     "geneId": "ENSG00000091831",
+     "geneName": "estrogen receptor 1",
+     "assoc": 0.1421,
+     "contribution": 0.02762,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1421
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "AHR",
+     "geneId": "ENSG00000106546",
+     "geneName": "aryl hydrocarbon receptor",
+     "assoc": 0.1395,
+     "contribution": 0.02457,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1395
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.906
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201649",
+   "name": "Estrogens, Conjugated",
+   "drugType": "Unknown",
+   "approvedFor": [
+    "osteoporosis",
+    "primary ovarian failure",
+    "breast cancer",
+    "postmenopausal osteoporosis"
+   ],
+   "indicationCount": 9,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 35,
    "score": 0.4912,
    "rawScore": 0.128744,
    "geneCount": 2,
@@ -2070,390 +2454,6 @@
     {
      "type": "Black Box Warning",
      "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 31,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1200598",
-   "name": "Diethylstilbestrol Diphosphate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL193482",
-   "name": "Estriol",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1655",
-   "name": "Toremifene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "breast cancer"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201165",
-   "name": "Quinestrol",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "breast cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Estrogen receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
-   "score": 0.4912,
-   "rawScore": 0.128744,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ESR2",
-     "geneId": "ENSG00000140009",
-     "geneName": "estrogen receptor 2",
-     "assoc": 0.1216,
-     "contribution": 0.029668,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1216
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ESR1",
-     "geneId": "ENSG00000091831",
-     "geneName": "estrogen receptor 1",
-     "assoc": 0.1421,
-     "contribution": 0.02762,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1421
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "AHR",
-     "geneId": "ENSG00000106546",
-     "geneName": "aryl hydrocarbon receptor",
-     "assoc": 0.1395,
-     "contribution": 0.02457,
-     "drugsOnGene": 30,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1395
-      }
-     ],
-     "hops": 3,
-     "via": "ESR1",
-     "viaScore": 0.906
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2105395",
-   "name": "Ospemifene",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Dyspareunia",
-    "postmenopausal atrophic vaginitis",
-    "Atrophy",
-    "Atrophic Vaginitis"
-   ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Estrogen receptor modulator"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
@@ -2691,7 +2691,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 181,
+   "rank": 183,
    "score": 0.1393,
    "rawScore": 0.040879,
    "geneCount": 2,

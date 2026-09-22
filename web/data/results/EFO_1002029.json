@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 17,
  "knownDrugCount": 22,
- "candidatesConsidered": 275,
+ "candidatesConsidered": 295,
  "pathsTwoHop": 84,
- "pathsThreeHop": 389,
+ "pathsThreeHop": 459,
  "candidates": [
   {
    "id": "CHEMBL1743081",
@@ -26,7 +26,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
+   "rank": 1,
    "score": 1.0,
    "rawScore": 1.547785,
    "geneCount": 1,
@@ -97,6 +97,97 @@
    ]
   },
   {
+   "id": "CHEMBL1201438",
+   "name": "Aldesleukin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "neoplasm",
+    "renal cell carcinoma",
+    "metastatic melanoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-2 receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 5,
+   "score": 0.7855,
+   "rawScore": 1.216713,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "IL2RB",
+     "geneId": "ENSG00000100385",
+     "geneName": "interleukin 2 receptor subunit beta",
+     "assoc": 0.5694,
+     "contribution": 0.192752,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5614
+      },
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL2RA",
+     "geneId": "ENSG00000134460",
+     "geneName": "interleukin 2 receptor subunit alpha",
+     "assoc": 0.4855,
+     "contribution": 0.179698,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4432
+      },
+      {
+       "id": "literature",
+       "score": 0.076
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "TSLP",
+     "geneId": "ENSG00000145777",
+     "geneName": "thymic stromal lymphopoietin",
+     "assoc": 0.9181,
+     "contribution": 0.177229,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.7364
+      },
+      {
+       "id": "literature",
+       "score": 0.6892
+      }
+     ],
+     "hops": 3,
+     "via": "IL2RG",
+     "viaScore": 0.885
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201439",
    "name": "Basiliximab",
    "drugType": "Antibody",
@@ -116,7 +207,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 5,
+   "rank": 6,
    "score": 0.7855,
    "rawScore": 1.216713,
    "geneCount": 3,
@@ -212,97 +303,6 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 6,
-   "score": 0.7855,
-   "rawScore": 1.216713,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "IL2RB",
-     "geneId": "ENSG00000100385",
-     "geneName": "interleukin 2 receptor subunit beta",
-     "assoc": 0.5694,
-     "contribution": 0.192752,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5614
-      },
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL2RA",
-     "geneId": "ENSG00000134460",
-     "geneName": "interleukin 2 receptor subunit alpha",
-     "assoc": 0.4855,
-     "contribution": 0.179698,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4432
-      },
-      {
-       "id": "literature",
-       "score": 0.076
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "TSLP",
-     "geneId": "ENSG00000145777",
-     "geneName": "thymic stromal lymphopoietin",
-     "assoc": 0.9181,
-     "contribution": 0.177229,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.7364
-      },
-      {
-       "id": "literature",
-       "score": 0.6892
-      }
-     ],
-     "hops": 3,
-     "via": "IL2RG",
-     "viaScore": 0.885
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201438",
-   "name": "Aldesleukin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "neoplasm",
-    "renal cell carcinoma",
-    "metastatic melanoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-2 receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
    "rank": 7,
    "score": 0.7855,
    "rawScore": 1.216713,
@@ -475,7 +475,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 11,
+   "rank": 10,
    "score": 0.7063,
    "rawScore": 1.094337,
    "geneCount": 1,
@@ -819,32 +819,21 @@
    ]
   },
   {
-   "id": "CHEMBL221959",
-   "name": "Tofacitinib",
+   "id": "CHEMBL3301607",
+   "name": "Filgotinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Janus Kinase (JAK) inhibitor"
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK2 inhibitor",
+    "Tyrosine-protein kinase JAK3 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 17,
    "score": 0.4013,
    "rawScore": 0.623459,
@@ -1014,21 +1003,32 @@
    ]
   },
   {
-   "id": "CHEMBL3301607",
-   "name": "Filgotinib",
+   "id": "CHEMBL221959",
+   "name": "Tofacitinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "rheumatoid arthritis"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK2 inhibitor",
-    "Tyrosine-protein kinase JAK3 inhibitor"
+    "Janus Kinase (JAK) inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 19,
    "score": 0.4013,
    "rawScore": 0.623459,
@@ -1214,80 +1214,6 @@
    ]
   },
   {
-   "id": "CHEMBL443684",
-   "name": "Navitoclax",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Apoptosis regulator Bcl-W inhibitor",
-    "Apoptosis regulator Bcl-X inhibitor",
-    "Apoptosis regulator Bcl-2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.361,
-   "rawScore": 0.561353,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "BCL2L11",
-     "geneId": "ENSG00000153094",
-     "geneName": "BCL2 like 11",
-     "assoc": 0.5117,
-     "contribution": 0.21228,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5117
-      }
-     ],
-     "hops": 3,
-     "via": "BCL2L1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BCL2L11",
-     "geneId": "ENSG00000153094",
-     "geneName": "BCL2 like 11",
-     "assoc": 0.5117,
-     "contribution": 0.21228,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5117
-      }
-     ],
-     "hops": 3,
-     "via": "BCL2L2",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "BCL2L11",
-     "geneId": "ENSG00000153094",
-     "geneName": "BCL2 like 11",
-     "assoc": 0.5117,
-     "contribution": 0.136792,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.5117
-      }
-     ],
-     "hops": 3,
-     "via": "BCL2",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL4297911",
    "name": "Spesolimab",
    "drugType": "Antibody",
@@ -1304,7 +1230,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 23,
+   "rank": 22,
    "score": 0.358,
    "rawScore": 0.556715,
    "geneCount": 2,
@@ -1350,6 +1276,165 @@
    ]
   },
   {
+   "id": "CHEMBL1201570",
+   "name": "Anakinra",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "immune system disorder",
+    "CINCA syndrome"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Interleukin-1 receptor antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 23,
+   "score": 0.3369,
+   "rawScore": 0.52414,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "IL33",
+     "geneId": "ENSG00000137033",
+     "geneName": "interleukin 33",
+     "assoc": 0.9218,
+     "contribution": 0.52414,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7746
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.653
+      }
+     ],
+     "hops": 3,
+     "via": "IL1R1",
+     "viaScore": 0.99
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL443684",
+   "name": "Navitoclax",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Apoptosis regulator Bcl-W inhibitor",
+    "Apoptosis regulator Bcl-X inhibitor",
+    "Apoptosis regulator Bcl-2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.3215,
+   "rawScore": 0.500334,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "BCL2L11",
+     "geneId": "ENSG00000153094",
+     "geneName": "BCL2 like 11",
+     "assoc": 0.5117,
+     "contribution": 0.189206,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5117
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2L1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BCL2L11",
+     "geneId": "ENSG00000153094",
+     "geneName": "BCL2 like 11",
+     "assoc": 0.5117,
+     "contribution": 0.189206,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5117
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2L2",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "BCL2L11",
+     "geneId": "ENSG00000153094",
+     "geneName": "BCL2 like 11",
+     "assoc": 0.5117,
+     "contribution": 0.121923,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5117
+      }
+     ],
+     "hops": 3,
+     "via": "BCL2",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL513",
+   "name": "Carmustine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "medulloblastoma",
+    "ependymoma",
+    "plasma cell myeloma",
+    "neoplasm"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "Glutathione reductase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 25,
+   "score": 0.3085,
+   "rawScore": 0.480339,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GPX4",
+     "geneId": "ENSG00000167468",
+     "geneName": "glutathione peroxidase 4",
+     "assoc": 0.4901,
+     "contribution": 0.480339,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4901
+      }
+     ],
+     "hops": 3,
+     "via": "GSR",
+     "viaScore": 0.98
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2095208",
    "name": "Cobicistat",
    "drugType": "Small molecule",
@@ -1365,17 +1450,17 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
-   "score": 0.3425,
-   "rawScore": 0.532831,
-   "geneCount": 3,
+   "rank": 26,
+   "score": 0.305,
+   "rawScore": 0.474913,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "CYP2S1",
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.177987,
+     "contribution": 0.15864,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1392,7 +1477,7 @@
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.17761,
+     "contribution": 0.158304,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1409,7 +1494,7 @@
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.177234,
+     "contribution": 0.157969,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1446,17 +1531,17 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 25,
-   "score": 0.3425,
-   "rawScore": 0.532831,
-   "geneCount": 3,
+   "rank": 27,
+   "score": 0.305,
+   "rawScore": 0.474913,
+   "geneCount": 4,
    "paths": [
     {
      "gene": "CYP2S1",
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.177987,
+     "contribution": 0.15864,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1473,7 +1558,7 @@
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.17761,
+     "contribution": 0.158304,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1490,7 +1575,7 @@
      "geneId": "ENSG00000167600",
      "geneName": "cytochrome P450 family 2 subfamily S member 1",
      "assoc": 0.5985,
-     "contribution": 0.177234,
+     "contribution": 0.157969,
      "drugsOnGene": 2,
      "evidence": [
       {
@@ -1501,91 +1586,6 @@
      "hops": 3,
      "via": "CYP3A7",
      "viaScore": 0.941
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201570",
-   "name": "Anakinra",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "immune system disorder",
-    "CINCA syndrome"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Interleukin-1 receptor antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.3369,
-   "rawScore": 0.52414,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "IL33",
-     "geneId": "ENSG00000137033",
-     "geneName": "interleukin 33",
-     "assoc": 0.9218,
-     "contribution": 0.52414,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7746
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.653
-      }
-     ],
-     "hops": 3,
-     "via": "IL1R1",
-     "viaScore": 0.99
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL513",
-   "name": "Carmustine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "medulloblastoma",
-    "ependymoma",
-    "plasma cell myeloma",
-    "neoplasm"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "Glutathione reductase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 27,
-   "score": 0.3085,
-   "rawScore": 0.480339,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GPX4",
-     "geneId": "ENSG00000167468",
-     "geneName": "glutathione peroxidase 4",
-     "assoc": 0.4901,
-     "contribution": 0.480339,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4901
-      }
-     ],
-     "hops": 3,
-     "via": "GSR",
-     "viaScore": 0.98
     }
    ]
   },
@@ -1807,16 +1807,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -1848,16 +1848,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -1945,16 +1945,16 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 34,
-   "score": 0.2345,
-   "rawScore": 0.366076,
-   "geneCount": 77,
+   "score": 0.2333,
+   "rawScore": 0.364191,
+   "geneCount": 78,
    "paths": [
     {
      "gene": "RPS26",
      "geneId": "ENSG00000197728",
      "geneName": "ribosomal protein S26",
      "assoc": 0.4941,
-     "contribution": 0.086936,
+     "contribution": 0.086488,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -1971,7 +1971,7 @@
      "geneId": "ENSG00000197728",
      "geneName": "ribosomal protein S26",
      "assoc": 0.4941,
-     "contribution": 0.039877,
+     "contribution": 0.039672,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -1988,7 +1988,7 @@
      "geneId": "ENSG00000197728",
      "geneName": "ribosomal protein S26",
      "assoc": 0.4941,
-     "contribution": 0.039877,
+     "contribution": 0.039672,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -2546,18 +2546,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2591,15 +2588,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2675,64 +2675,17 @@
    ]
   },
   {
-   "id": "CHEMBL2108611",
-   "name": "Inotuzumab Ozogamicin",
-   "drugType": "Antibody drug conjugate",
+   "id": "CHEMBL1201466",
+   "name": "Estrogens, Conjugated Synthetic A",
+   "drugType": "Unknown",
    "approvedFor": [
-    "neoplasm",
-    "acute lymphoblastic leukemia",
-    "B-cell acute lymphoblastic leukemia"
+    "Atrophy",
+    "osteoporosis",
+    "menopause"
    ],
    "indicationCount": 3,
    "mechanisms": [
-    "CD22 binding agent"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 46,
-   "score": 0.1383,
-   "rawScore": 0.217448,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PTPRC",
-     "geneId": "ENSG00000081237",
-     "geneName": "protein tyrosine phosphatase receptor type C",
-     "assoc": 0.5001,
-     "contribution": 0.217448,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4554
-      },
-      {
-       "id": "literature",
-       "score": 0.082
-      }
-     ],
-     "hops": 3,
-     "via": "CD22",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201608",
-   "name": "Muromonab-Cd3",
-   "drugType": "Unknown",
-   "approvedFor": [
-    "graft versus host disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "T cell surface glycoprotein CD3 inhibitor"
+    "Estrogen receptor agonist"
    ],
    "warnings": [
     {
@@ -2742,139 +2695,217 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 47,
-   "score": 0.1361,
-   "rawScore": 0.21416,
-   "geneCount": 3,
+   "rank": 46,
+   "score": 0.1473,
+   "rawScore": 0.231366,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.07221,
-     "drugsOnGene": 11,
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.6675,
+     "contribution": 0.127435,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.4542
+       "score": 0.5262
+      },
+      {
+       "id": "literature",
+       "score": 0.2981
       }
      ],
      "hops": 3,
-     "via": "CD3G",
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.057843,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4517
+      }
+     ],
+     "hops": 3,
+     "via": "ESR2",
      "viaScore": 0.999
     },
     {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.07221,
-     "drugsOnGene": 11,
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.046087,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.4542
+       "score": 0.4517
       }
      ],
      "hops": 3,
-     "via": "CD3D",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.06974,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4542
-      }
-     ],
-     "hops": 3,
-     "via": "CD3E",
+     "via": "ESR1",
      "viaScore": 0.999
     }
    ]
   },
   {
-   "id": "CHEMBL4594503",
-   "name": "Talquetamab",
-   "drugType": "Antibody",
+   "id": "CHEMBL46740",
+   "name": "Bazedoxifene",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "plasma cell myeloma"
+    "postmenopausal osteoporosis",
+    "osteopetrosis"
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "G-protein coupled receptor family C group 5 member D binding agent",
-    "T cell surface glycoprotein CD3 binding agent"
+    "Estrogen receptor modulator"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 48,
-   "score": 0.1361,
-   "rawScore": 0.21416,
-   "geneCount": 3,
+   "blackBox": false,
+   "rank": 47,
+   "score": 0.1473,
+   "rawScore": 0.231366,
+   "geneCount": 2,
    "paths": [
     {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.07221,
-     "drugsOnGene": 11,
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.6675,
+     "contribution": 0.127435,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.4542
+       "score": 0.5262
+      },
+      {
+       "id": "literature",
+       "score": 0.2981
       }
      ],
      "hops": 3,
-     "via": "CD3G",
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.057843,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4517
+      }
+     ],
+     "hops": 3,
+     "via": "ESR2",
      "viaScore": 0.999
     },
     {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.07221,
-     "drugsOnGene": 11,
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.046087,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.4542
+       "score": 0.4517
       }
      ],
      "hops": 3,
-     "via": "CD3D",
+     "via": "ESR1",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200598",
+   "name": "Diethylstilbestrol Diphosphate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Estrogen receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 48,
+   "score": 0.1473,
+   "rawScore": 0.231366,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "GATA3",
+     "geneId": "ENSG00000107485",
+     "geneName": "GATA binding protein 3",
+     "assoc": 0.6675,
+     "contribution": 0.127435,
+     "drugsOnGene": 30,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.5262
+      },
+      {
+       "id": "literature",
+       "score": 0.2981
+      }
+     ],
+     "hops": 3,
+     "via": "ESR1",
+     "viaScore": 0.982
+    },
+    {
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.057843,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4517
+      }
+     ],
+     "hops": 3,
+     "via": "ESR2",
      "viaScore": 0.999
     },
     {
-     "gene": "CD247",
-     "geneId": "ENSG00000198821",
-     "geneName": "CD247 molecule",
-     "assoc": 0.4542,
-     "contribution": 0.06974,
-     "drugsOnGene": 12,
+     "gene": "NCOA1",
+     "geneId": "ENSG00000084676",
+     "geneName": "nuclear receptor coactivator 1",
+     "assoc": 0.4517,
+     "contribution": 0.046087,
+     "drugsOnGene": 30,
      "evidence": [
       {
        "id": "genetic_association",
-       "score": 0.4542
+       "score": 0.4517
       }
      ],
      "hops": 3,
-     "via": "CD3E",
+     "via": "ESR1",
      "viaScore": 0.999
     }
    ]
@@ -2896,7 +2927,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 1,
+   "rank": 2,
    "score": 1.0,
    "rawScore": 1.547785,
    "geneCount": 1,
@@ -3119,16 +3150,15 @@
    ]
   },
   {
-   "id": "CHEMBL2108429",
-   "name": "Mepolizumab",
+   "id": "CHEMBL4650469",
+   "name": "Depemokimab",
    "drugType": "Antibody",
    "approvedFor": [
-    "hypereosinophilic syndrome",
-    "chronic rhinosinusitis",
-    "Airway obstruction",
-    "asthma"
+    "asthma",
+    "nasal cavity polyp",
+    "Nasal polyposis"
    ],
-   "indicationCount": 5,
+   "indicationCount": 3,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
@@ -3202,22 +3232,23 @@
    ]
   },
   {
-   "id": "CHEMBL4650469",
-   "name": "Depemokimab",
+   "id": "CHEMBL2108429",
+   "name": "Mepolizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "asthma",
-    "nasal cavity polyp",
-    "Nasal polyposis"
+    "hypereosinophilic syndrome",
+    "chronic rhinosinusitis",
+    "Airway obstruction",
+    "asthma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 5,
    "mechanisms": [
     "Interleukin-5 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.7063,
    "rawScore": 1.094337,
    "geneCount": 1,
@@ -3495,7 +3526,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 106,
+   "rank": 128,
    "score": 0.0887,
    "rawScore": 0.140943,
    "geneCount": 2,
@@ -3545,23 +3576,28 @@
    ]
   },
   {
-   "id": "CHEMBL1676",
-   "name": "Fluticasone Furoate",
+   "id": "CHEMBL1370",
+   "name": "Budesonide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "allergic rhinitis",
-    "bronchitis",
     "pulmonary emphysema",
-    "asthma"
+    "ulcerative colitis",
+    "allergic rhinitis",
+    "perennial allergic rhinitis"
    ],
-   "indicationCount": 9,
+   "indicationCount": 14,
    "mechanisms": [
     "Glucocorticoid receptor agonist"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 211,
+   "blackBox": true,
+   "rank": 225,
    "score": 0.0529,
    "rawScore": 0.085637,
    "geneCount": 1,

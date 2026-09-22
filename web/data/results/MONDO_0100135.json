@@ -7,9 +7,9 @@
  "genesScored": 43,
  "genesWithDrugs": 22,
  "knownDrugCount": 11,
- "candidatesConsidered": 375,
+ "candidatesConsidered": 377,
  "pathsTwoHop": 745,
- "pathsThreeHop": 3127,
+ "pathsThreeHop": 3129,
  "candidates": [
   {
    "id": "CHEMBL3833321",
@@ -95,17 +95,13 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
+    "Amyloid-beta A4 protein stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -173,13 +169,17 @@
    ]
   },
   {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -638,11 +638,13 @@
    ]
   },
   {
-   "id": "CHEMBL1093",
-   "name": "Articaine",
+   "id": "CHEMBL492",
+   "name": "Etidocaine",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "Pain"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
@@ -736,22 +738,25 @@
    ]
   },
   {
-   "id": "CHEMBL750",
-   "name": "Zonisamide",
+   "id": "CHEMBL1075",
+   "name": "Moricizine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "focal epilepsy",
-    "Parkinson disease",
-    "epilepsy",
-    "Parkinsonism"
+    "Arrhythmia",
+    "cardiac arrhythmia"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 9,
    "score": 0.7501,
    "rawScore": 0.913648,
@@ -839,13 +844,14 @@
    ]
   },
   {
-   "id": "CHEMBL492",
-   "name": "Etidocaine",
+   "id": "CHEMBL87992",
+   "name": "Eslicarbazepine Acetate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pain"
+    "epilepsy",
+    "Seizure"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
@@ -939,18 +945,338 @@
    ]
   },
   {
-   "id": "CHEMBL1077896",
-   "name": "Ropivacaine",
+   "id": "CHEMBL315838",
+   "name": "Encainide",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "cardiac arrhythmia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 11,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1087",
+   "name": "Mepivacaine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "pain agnosia"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL517",
+   "name": "Disopyramide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiac arrhythmia",
+    "Urinary incontinence",
+    "Ventricular arrhythmia"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 13,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1095",
+   "name": "Ethotoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy",
+    "Focal impaired awareness seizure",
+    "Seizure"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -1048,329 +1374,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201336",
-   "name": "Fosphenytoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "misuse"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 13,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL370805",
-   "name": "Cocaine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "misuse"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "psychiatric toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 14,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL58323",
-   "name": "Lacosamide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "focal epilepsy",
-    "Seizure",
-    "convulsion",
-    "epilepsy"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 15,
    "score": 0.7501,
    "rawScore": 0.913648,
@@ -1458,22 +1461,27 @@
    ]
   },
   {
-   "id": "CHEMBL698",
-   "name": "Tetracaine",
+   "id": "CHEMBL741",
+   "name": "Lamotrigine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hemorrhoid",
-    "Pruritus",
-    "Pain"
+    "major depressive disorder",
+    "epilepsy",
+    "focal epilepsy",
+    "bipolar disorder"
    ],
-   "indicationCount": 3,
+   "indicationCount": 8,
    "mechanisms": [
-    "Sodium channel alpha subunit blocker",
     "Sodium channel alpha subunit blocker"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 16,
    "score": 0.7501,
    "rawScore": 0.913648,
@@ -1561,24 +1569,37 @@
    ]
   },
   {
-   "id": "CHEMBL1242",
-   "name": "Phenazopyridine",
+   "id": "CHEMBL640",
+   "name": "Procainamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pain"
+    "Ventricular arrhythmia",
+    "cardiac arrhythmia"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
    "warnings": [
     {
-     "type": "Withdrawn",
-     "detail": "carcinogenicity"
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
     }
    ],
-   "withdrawn": true,
-   "blackBox": false,
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 17,
    "score": 0.7501,
    "rawScore": 0.913648,
@@ -1666,36 +1687,524 @@
    ]
   },
   {
-   "id": "CHEMBL108",
-   "name": "Carbamazepine",
+   "id": "CHEMBL1077896",
+   "name": "Ropivacaine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 18,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1068",
+   "name": "Oxcarbazepine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "bipolar I disorder",
-    "trigeminal neuralgia",
-    "glossopharyngeal nerve disorder",
-    "Seizure"
+    "epilepsy",
+    "Seizure",
+    "focal epilepsy"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 19,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1179047",
+   "name": "Chloroprocaine",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 20,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200",
+   "name": "Benoxinate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Pruritus"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL744",
+   "name": "Riluzole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "amyotrophic lateral sclerosis"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1762",
+   "name": "Tocainide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Ventricular arrhythmia",
+    "cardiac arrhythmia"
+   ],
+   "indicationCount": 2,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "hematological toxicity"
+     "detail": null
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 18,
+   "rank": 23,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -1814,1645 +2323,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 19,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL79",
-   "name": "Lidocaine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "arthritic joint disease",
-    "inflammation",
-    "Myalgia",
-    "burn"
-   ],
-   "indicationCount": 21,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker",
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "misuse"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 20,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1195",
-   "name": "Propoxycaine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL861",
-   "name": "Mephenytoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 22,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1068",
-   "name": "Oxcarbazepine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy",
-    "Seizure",
-    "focal epilepsy"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL315985",
-   "name": "Eslicarbazepine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 24,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL569",
-   "name": "Procaine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "hemorrhoid"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL517",
-   "name": "Disopyramide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiac arrhythmia",
-    "Urinary incontinence",
-    "Ventricular arrhythmia"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "musculoskeletal toxicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 26,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1075",
-   "name": "Moricizine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Arrhythmia",
-    "cardiac arrhythmia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 27,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL918",
-   "name": "Phenacemide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1194",
-   "name": "Prilocaine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain",
-    "physiological sexual disorder",
-    "premature ejaculation"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker",
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 29,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL744",
-   "name": "Riluzole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "amyotrophic lateral sclerosis"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 30,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1095",
-   "name": "Ethotoin",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy",
-    "Focal impaired awareness seizure",
-    "Seizure"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201217",
-   "name": "Dyclonine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Pain"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 32,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL87992",
-   "name": "Eslicarbazepine Acetate",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "epilepsy",
-    "Seizure"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1762",
-   "name": "Tocainide",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Ventricular arrhythmia",
-    "cardiac arrhythmia"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1179047",
-   "name": "Chloroprocaine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 35,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -3566,7 +2437,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 36,
+   "rank": 25,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -3653,133 +2524,27 @@
    ]
   },
   {
-   "id": "CHEMBL315838",
-   "name": "Encainide",
+   "id": "CHEMBL370805",
+   "name": "Cocaine",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "cardiac arrhythmia"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "cardiotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.7501,
-   "rawScore": 0.913648,
-   "geneCount": 10,
-   "paths": [
-    {
-     "gene": "SCN1A",
-     "geneId": "ENSG00000144285",
-     "geneName": "sodium voltage-gated channel alpha subunit 1",
-     "assoc": 1.0,
-     "contribution": 0.087622,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.9765
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.9593
-      },
-      {
-       "id": "genetic_literature",
-       "score": 0.8365
-      },
-      {
-       "id": "somatic_mutation",
-       "score": 0.7143
-      },
-      {
-       "id": "animal_model",
-       "score": 0.5971
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN8A",
-     "geneId": "ENSG00000196876",
-     "geneName": "sodium voltage-gated channel alpha subunit 8",
-     "assoc": 0.9225,
-     "contribution": 0.080834,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.7765
-      },
-      {
-       "id": "animal_model",
-       "score": 0.6533
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "SCN9A",
-     "geneId": "ENSG00000169432",
-     "geneName": "sodium voltage-gated channel alpha subunit 9",
-     "assoc": 0.7978,
-     "contribution": 0.069909,
-     "drugsOnGene": 44,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.5166
-      },
-      {
-       "id": "animal_model",
-       "score": 0.3938
-      },
-      {
-       "id": "genetic_association",
-       "score": 0.3101
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL741",
-   "name": "Lamotrigine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "major depressive disorder",
-    "epilepsy",
-    "focal epilepsy",
-    "bipolar disorder"
-   ],
-   "indicationCount": 8,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Sodium channel alpha subunit blocker"
    ],
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "dermatological toxicity"
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "psychiatric toxicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 38,
+   "rank": 26,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -3866,11 +2631,114 @@
    ]
   },
   {
-   "id": "CHEMBL1200",
-   "name": "Benoxinate",
+   "id": "CHEMBL58323",
+   "name": "Lacosamide",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pruritus"
+    "focal epilepsy",
+    "Seizure",
+    "convulsion",
+    "epilepsy"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 27,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL315985",
+   "name": "Eslicarbazepine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
    ],
    "indicationCount": 1,
    "mechanisms": [
@@ -3879,7 +2747,341 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 39,
+   "rank": 28,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL108",
+   "name": "Carbamazepine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "bipolar I disorder",
+    "trigeminal neuralgia",
+    "glossopharyngeal nerve disorder",
+    "Seizure"
+   ],
+   "indicationCount": 7,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "hematological toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 29,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201336",
+   "name": "Fosphenytoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 30,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1242",
+   "name": "Phenazopyridine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Pain"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 31,
    "score": 0.7501,
    "rawScore": 0.913648,
    "geneCount": 10,
@@ -3977,6 +3179,830 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 32,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL750",
+   "name": "Zonisamide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "focal epilepsy",
+    "Parkinson disease",
+    "epilepsy",
+    "Parkinsonism"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL698",
+   "name": "Tetracaine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "hemorrhoid",
+    "Pruritus",
+    "Pain"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 34,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL79",
+   "name": "Lidocaine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "arthritic joint disease",
+    "inflammation",
+    "Myalgia",
+    "burn"
+   ],
+   "indicationCount": 21,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "misuse"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 35,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL861",
+   "name": "Mephenytoin",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL918",
+   "name": "Phenacemide",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "epilepsy"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 37,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1194",
+   "name": "Prilocaine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Pain",
+    "physiological sexual disorder",
+    "premature ejaculation"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 38,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201217",
+   "name": "Dyclonine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Pain"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 39,
+   "score": 0.7501,
+   "rawScore": 0.913648,
+   "geneCount": 10,
+   "paths": [
+    {
+     "gene": "SCN1A",
+     "geneId": "ENSG00000144285",
+     "geneName": "sodium voltage-gated channel alpha subunit 1",
+     "assoc": 1.0,
+     "contribution": 0.087622,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.9765
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.9593
+      },
+      {
+       "id": "genetic_literature",
+       "score": 0.8365
+      },
+      {
+       "id": "somatic_mutation",
+       "score": 0.7143
+      },
+      {
+       "id": "animal_model",
+       "score": 0.5971
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN8A",
+     "geneId": "ENSG00000196876",
+     "geneName": "sodium voltage-gated channel alpha subunit 8",
+     "assoc": 0.9225,
+     "contribution": 0.080834,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.7765
+      },
+      {
+       "id": "animal_model",
+       "score": 0.6533
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "SCN9A",
+     "geneId": "ENSG00000169432",
+     "geneName": "sodium voltage-gated channel alpha subunit 9",
+     "assoc": 0.7978,
+     "contribution": 0.069909,
+     "drugsOnGene": 44,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.5166
+      },
+      {
+       "id": "animal_model",
+       "score": 0.3938
+      },
+      {
+       "id": "genetic_association",
+       "score": 0.3101
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1294",
+   "name": "Quinidine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "cardiac arrhythmia"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Sodium channel alpha subunit blocker",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 40,
    "score": 0.7501,
    "rawScore": 0.913648,
@@ -4091,7 +4117,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 76,
+   "rank": 73,
    "score": 0.5585,
    "rawScore": 0.681942,
    "geneCount": 16,
@@ -4268,18 +4294,18 @@
    ]
   },
   {
-   "id": "CHEMBL190461",
-   "name": "Cannabidiol",
+   "id": "CHEMBL465",
+   "name": "Dronabinol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "epilepsy",
-    "Dravet syndrome",
-    "Lennox-Gastaut syndrome",
-    "hamartoma"
+    "Nausea and vomiting",
+    "Anorexia",
+    "cancer",
+    "Nausea"
    ],
-   "indicationCount": 6,
+   "indicationCount": 4,
    "mechanisms": [
-    "Cannabinoid CB1 receptor negative allosteric modulator"
+    "Cannabinoid CB1 receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -4309,18 +4335,18 @@
    ]
   },
   {
-   "id": "CHEMBL465",
-   "name": "Dronabinol",
+   "id": "CHEMBL190461",
+   "name": "Cannabidiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Nausea and vomiting",
-    "Anorexia",
-    "cancer",
-    "Nausea"
+    "epilepsy",
+    "Dravet syndrome",
+    "Lennox-Gastaut syndrome",
+    "hamartoma"
    ],
-   "indicationCount": 4,
+   "indicationCount": 6,
    "mechanisms": [
-    "Cannabinoid CB1 receptor agonist"
+    "Cannabinoid CB1 receptor negative allosteric modulator"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -4364,7 +4390,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 213,
+   "rank": 221,
    "score": 0.0834,
    "rawScore": 0.107182,
    "geneCount": 4,
@@ -4454,7 +4480,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 273,
+   "rank": 272,
    "score": 0.0658,
    "rawScore": 0.085939,
    "geneCount": 1,
@@ -4497,16 +4523,16 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 303,
-   "score": 0.0364,
-   "rawScore": 0.050414,
-   "geneCount": 77,
+   "score": 0.0362,
+   "rawScore": 0.050155,
+   "geneCount": 78,
    "paths": [
     {
      "gene": "RPL27A",
      "geneId": "ENSG00000166441",
      "geneName": "ribosomal protein L27a",
      "assoc": 0.2865,
-     "contribution": 0.050414,
+     "contribution": 0.050155,
      "drugsOnGene": 1,
      "evidence": [
       {

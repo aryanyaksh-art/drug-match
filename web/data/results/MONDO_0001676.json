@@ -7,9 +7,9 @@
  "genesScored": 48,
  "genesWithDrugs": 9,
  "knownDrugCount": 12,
- "candidatesConsidered": 80,
+ "candidatesConsidered": 86,
  "pathsTwoHop": 36,
- "pathsThreeHop": 83,
+ "pathsThreeHop": 90,
  "candidates": [
   {
    "id": "CHEMBL4594565",
@@ -170,13 +170,13 @@
    ]
   },
   {
-   "id": "CHEMBL240597",
-   "name": "Chenodiol",
+   "id": "CHEMBL566315",
+   "name": "Obeticholic Acid",
    "drugType": "Small molecule",
    "approvedFor": [
-    "inborn errors of metabolism",
-    "cholelithiasis",
-    "cerebrotendinous xanthomatosis"
+    "primary biliary cholangitis",
+    "biliary liver cirrhosis",
+    "cholangitis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -185,10 +185,14 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "benefits are no longer considered to outweigh its risks"
     }
    ],
-   "withdrawn": false,
+   "withdrawn": true,
    "blackBox": true,
    "rank": 3,
    "score": 0.9566,
@@ -257,13 +261,13 @@
    ]
   },
   {
-   "id": "CHEMBL566315",
-   "name": "Obeticholic Acid",
+   "id": "CHEMBL240597",
+   "name": "Chenodiol",
    "drugType": "Small molecule",
    "approvedFor": [
-    "primary biliary cholangitis",
-    "biliary liver cirrhosis",
-    "cholangitis"
+    "inborn errors of metabolism",
+    "cholelithiasis",
+    "cerebrotendinous xanthomatosis"
    ],
    "indicationCount": 3,
    "mechanisms": [
@@ -272,14 +276,10 @@
    "warnings": [
     {
      "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "benefits are no longer considered to outweigh its risks"
+     "detail": "hepatotoxicity"
     }
    ],
-   "withdrawn": true,
+   "withdrawn": false,
    "blackBox": true,
    "rank": 4,
    "score": 0.9566,
@@ -431,16 +431,16 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 6,
-   "score": 0.6917,
-   "rawScore": 0.663499,
-   "geneCount": 15,
+   "score": 0.6724,
+   "rawScore": 0.64659,
+   "geneCount": 16,
    "paths": [
     {
      "gene": "TRPV4",
      "geneId": "ENSG00000111199",
      "geneName": "transient receptor potential cation channel subfamily V member 4",
      "assoc": 0.5727,
-     "contribution": 0.102778,
+     "contribution": 0.100159,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -457,7 +457,7 @@
      "geneId": "ENSG00000111199",
      "geneName": "transient receptor potential cation channel subfamily V member 4",
      "assoc": 0.5727,
-     "contribution": 0.101442,
+     "contribution": 0.098857,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -474,7 +474,7 @@
      "geneId": "ENSG00000111199",
      "geneName": "transient receptor potential cation channel subfamily V member 4",
      "assoc": 0.5727,
-     "contribution": 0.101442,
+     "contribution": 0.098857,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -564,58 +564,59 @@
    ]
   },
   {
-   "id": "CHEMBL2048028",
-   "name": "Lifitegrast",
+   "id": "CHEMBL95889",
+   "name": "Betaine",
    "drugType": "Small molecule",
    "approvedFor": [
-    "eye disorder",
-    "dry eye syndrome"
+    "major depressive disorder",
+    "homocystinuria",
+    "inborn errors of metabolism"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+    "Betaine-homocysteine S-methyltransferase substrate"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
-   "score": 0.523,
-   "rawScore": 0.515717,
+   "score": 0.5684,
+   "rawScore": 0.555464,
    "geneCount": 2,
    "paths": [
     {
-     "gene": "ITGB2",
-     "geneId": "ENSG00000160255",
-     "geneName": "integrin subunit beta 2",
-     "assoc": 0.4855,
-     "contribution": 0.278851,
-     "drugsOnGene": 2,
+     "gene": "MAT1A",
+     "geneId": "ENSG00000151224",
+     "geneName": "methionine adenosyltransferase 1A",
+     "assoc": 0.4912,
+     "contribution": 0.278719,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "animal_model",
-       "score": 0.4855
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ITGB2",
-     "geneId": "ENSG00000160255",
-     "geneName": "integrin subunit beta 2",
-     "assoc": 0.4855,
-     "contribution": 0.236866,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4855
+       "score": 0.4912
       }
      ],
      "hops": 3,
-     "via": "ITGAL",
-     "viaScore": 0.999
+     "via": "BHMT",
+     "viaScore": 0.988
+    },
+    {
+     "gene": "MAT1A",
+     "geneId": "ENSG00000151224",
+     "geneName": "methionine adenosyltransferase 1A",
+     "assoc": 0.4912,
+     "contribution": 0.276745,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4912
+      }
+     ],
+     "hops": 3,
+     "via": "BHMT2",
+     "viaScore": 0.981
     }
    ]
   },
@@ -685,6 +686,62 @@
    ]
   },
   {
+   "id": "CHEMBL2048028",
+   "name": "Lifitegrast",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "eye disorder",
+    "dry eye syndrome"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Integrin alpha-L/beta-2 (LFA-1) antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 10,
+   "score": 0.523,
+   "rawScore": 0.515717,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ITGB2",
+     "geneId": "ENSG00000160255",
+     "geneName": "integrin subunit beta 2",
+     "assoc": 0.4855,
+     "contribution": 0.278851,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4855
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ITGB2",
+     "geneId": "ENSG00000160255",
+     "geneName": "integrin subunit beta 2",
+     "assoc": 0.4855,
+     "contribution": 0.236866,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4855
+      }
+     ],
+     "hops": 3,
+     "via": "ITGAL",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1337",
    "name": "Nitisinone",
    "drugType": "Small molecule",
@@ -698,7 +755,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.5083,
    "rawScore": 0.50282,
    "geneCount": 1,
@@ -749,7 +806,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 11,
+   "rank": 12,
    "score": 0.4297,
    "rawScore": 0.434058,
    "geneCount": 2,
@@ -793,7 +850,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 12,
+   "rank": 13,
    "score": 0.3815,
    "rawScore": 0.391838,
    "geneCount": 1,
@@ -818,8 +875,8 @@
    ]
   },
   {
-   "id": "CHEMBL388590",
-   "name": "Benzbromarone",
+   "id": "CHEMBL832",
+   "name": "Sulfinpyrazone",
    "drugType": "Small molecule",
    "approvedFor": [
     "gout"
@@ -828,19 +885,10 @@
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Unfavourable benefit-risk evaluation"
-    }
-   ],
-   "withdrawn": true,
+   "warnings": [],
+   "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 14,
    "score": 0.3532,
    "rawScore": 0.367011,
    "geneCount": 1,
@@ -869,21 +917,29 @@
    ]
   },
   {
-   "id": "CHEMBL4594446",
-   "name": "Dotinurad",
+   "id": "CHEMBL388590",
+   "name": "Benzbromarone",
    "drugType": "Small molecule",
    "approvedFor": [
-    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
-   "warnings": [],
-   "withdrawn": false,
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "Unfavourable benefit-risk evaluation"
+    }
+   ],
+   "withdrawn": true,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.3532,
    "rawScore": 0.367011,
    "geneCount": 1,
@@ -931,7 +987,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 15,
+   "rank": 16,
    "score": 0.3532,
    "rawScore": 0.367011,
    "geneCount": 1,
@@ -960,20 +1016,21 @@
    ]
   },
   {
-   "id": "CHEMBL832",
-   "name": "Sulfinpyrazone",
+   "id": "CHEMBL4594446",
+   "name": "Dotinurad",
    "drugType": "Small molecule",
    "approvedFor": [
+    "hyperuricemia",
     "gout"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
     "Solute carrier family 22 member 12 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 17,
    "score": 0.3532,
    "rawScore": 0.367011,
    "geneCount": 1,
@@ -1017,7 +1074,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.345,
    "rawScore": 0.359877,
    "geneCount": 3,
@@ -1042,74 +1099,14 @@
    ]
   },
   {
-   "id": "CHEMBL1503",
-   "name": "Omeprazole",
+   "id": "CHEMBL2106370",
+   "name": "Ilaprazole",
    "drugType": "Small molecule",
    "approvedFor": [
-    "duodenal ulcer",
-    "osteoarthritis",
-    "arthritic joint disease",
-    "infection"
-   ],
-   "indicationCount": 13,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor",
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.3262,
-   "rawScore": 0.343424,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171798,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171626,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1219",
-   "name": "Rabeprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastroesophageal reflux disease",
     "Peptic ulcer",
-    "bacterial infectious disease"
+    "gastroesophageal reflux disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1158,8 +1155,8 @@
    ]
   },
   {
-   "id": "CHEMBL2106370",
-   "name": "Ilaprazole",
+   "id": "CHEMBL1502",
+   "name": "Pantoprazole",
    "drugType": "Small molecule",
    "approvedFor": [
     "Peptic ulcer",
@@ -1272,6 +1269,63 @@
    ]
   },
   {
+   "id": "CHEMBL1219",
+   "name": "Rabeprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer",
+    "bacterial infectious disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.3262,
+   "rawScore": 0.343424,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171798,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171626,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1201320",
    "name": "Esomeprazole",
    "drugType": "Small molecule",
@@ -1289,7 +1343,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 23,
    "score": 0.3262,
    "rawScore": 0.343424,
    "geneCount": 2,
@@ -1341,63 +1395,6 @@
    "indicationCount": 2,
    "mechanisms": [
     "Potassium-transporting ATPase blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 23,
-   "score": 0.3262,
-   "rawScore": 0.343424,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171798,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.5694,
-     "contribution": 0.171626,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5694
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4B",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2079130",
-   "name": "Vonoprazan",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Helicobacter pylori infectious disease",
-    "Peptic ulcer",
-    "gastroesophageal reflux disease"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1500,16 +1497,15 @@
    ]
   },
   {
-   "id": "CHEMBL1201863",
-   "name": "Dexlansoprazole",
+   "id": "CHEMBL2079130",
+   "name": "Vonoprazan",
    "drugType": "Small molecule",
    "approvedFor": [
-    "gastroesophageal reflux disease",
+    "Helicobacter pylori infectious disease",
     "Peptic ulcer",
-    "dyspepsia",
-    "esophagitis"
+    "gastroesophageal reflux disease"
    ],
-   "indicationCount": 4,
+   "indicationCount": 3,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1558,14 +1554,16 @@
    ]
   },
   {
-   "id": "CHEMBL1502",
-   "name": "Pantoprazole",
+   "id": "CHEMBL1201863",
+   "name": "Dexlansoprazole",
    "drugType": "Small molecule",
    "approvedFor": [
+    "gastroesophageal reflux disease",
     "Peptic ulcer",
-    "gastroesophageal reflux disease"
+    "dyspepsia",
+    "esophagitis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
     "Potassium-transporting ATPase inhibitor"
    ],
@@ -1573,6 +1571,65 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 27,
+   "score": 0.3262,
+   "rawScore": 0.343424,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171798,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.5694,
+     "contribution": 0.171626,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5694
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4B",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1503",
+   "name": "Omeprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "duodenal ulcer",
+    "osteoarthritis",
+    "arthritic joint disease",
+    "infection"
+   ],
+   "indicationCount": 13,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor",
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
    "score": 0.3262,
    "rawScore": 0.343424,
    "geneCount": 2,
@@ -1625,7 +1682,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 28,
+   "rank": 29,
    "score": 0.291,
    "rawScore": 0.312546,
    "geneCount": 1,
@@ -1650,12 +1707,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -1664,7 +1721,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 30,
    "score": 0.281,
    "rawScore": 0.303777,
    "geneCount": 1,
@@ -1689,12 +1746,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -1703,7 +1760,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 30,
+   "rank": 31,
    "score": 0.281,
    "rawScore": 0.303777,
    "geneCount": 1,
@@ -1764,7 +1821,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 31,
+   "rank": 32,
    "score": 0.2647,
    "rawScore": 0.289543,
    "geneCount": 1,
@@ -1789,6 +1846,51 @@
    ]
   },
   {
+   "id": "CHEMBL187709",
+   "name": "Triparanol",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Delta(24)-sterol reductase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "dermatological toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "occular toxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 33,
+   "score": 0.264,
+   "rawScore": 0.288903,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOAT2",
+     "geneId": "ENSG00000167780",
+     "geneName": "sterol O-acyltransferase 2",
+     "assoc": 0.4754,
+     "contribution": 0.288903,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4754
+      }
+     ],
+     "hops": 3,
+     "via": "DHCR24",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
    "id": "CHEMBL53418",
    "name": "Danthron",
    "drugType": "Small molecule",
@@ -1807,7 +1909,7 @@
    ],
    "withdrawn": true,
    "blackBox": false,
-   "rank": 32,
+   "rank": 34,
    "score": 0.2595,
    "rawScore": 0.285016,
    "geneCount": 1,
@@ -1852,7 +1954,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 33,
+   "rank": 35,
    "score": 0.2521,
    "rawScore": 0.278497,
    "geneCount": 25,
@@ -1911,6 +2013,54 @@
    ]
   },
   {
+   "id": "CHEMBL400599",
+   "name": "Benfluorex",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "diabetes mellitus",
+    "familial hyperlipidemia"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Acyl coenzyme A:cholesterol acyltransferase 1 inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Withdrawn",
+     "detail": "respiratory toxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "cardiotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": false,
+   "rank": 36,
+   "score": 0.2521,
+   "rawScore": 0.278486,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "SOAT2",
+     "geneId": "ENSG00000167780",
+     "geneName": "sterol O-acyltransferase 2",
+     "assoc": 0.4754,
+     "contribution": 0.278486,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.4754
+      }
+     ],
+     "hops": 3,
+     "via": "SOAT1",
+     "viaScore": 0.909
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2396661",
    "name": "Alpelisib",
    "drugType": "Small molecule",
@@ -1927,7 +2077,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 34,
+   "rank": 37,
    "score": 0.2321,
    "rawScore": 0.260943,
    "geneCount": 1,
@@ -1965,7 +2115,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 35,
+   "rank": 38,
    "score": 0.2321,
    "rawScore": 0.260943,
    "geneCount": 1,
@@ -2004,52 +2154,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 36,
-   "score": 0.1929,
-   "rawScore": 0.226699,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "ABCB4",
-     "geneId": "ENSG00000005471",
-     "geneName": "ATP binding cassette subfamily B member 4",
-     "assoc": 0.6363,
-     "contribution": 0.226699,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6225
-      },
-      {
-       "id": "literature",
-       "score": 0.0365
-      }
-     ],
-     "hops": 3,
-     "via": "SLC10A2",
-     "viaScore": 0.858
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4297588",
-   "name": "Odevixibat",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "progressive familial intrahepatic cholestasis",
-    "Pruritus",
-    "Alagille syndrome"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Ileal bile acid transporter inhibitor",
-    "Ileal bile acid transporter inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
+   "rank": 39,
    "score": 0.1929,
    "rawScore": 0.226699,
    "geneCount": 1,
@@ -2091,7 +2196,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 40,
    "score": 0.1929,
    "rawScore": 0.226699,
    "geneCount": 1,
@@ -2118,88 +2223,6 @@
      "viaScore": 0.858
     }
    ]
-  },
-  {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
-   ],
-   "indicationCount": 9,
-   "mechanisms": [
-    "Interleukin-1 beta inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 39,
-   "score": 0.1927,
-   "rawScore": 0.226457,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "UMOD",
-     "geneId": "ENSG00000169344",
-     "geneName": "uromodulin",
-     "assoc": 0.4639,
-     "contribution": 0.226457,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4639
-      }
-     ],
-     "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.85
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "Interleukin-1 beta inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 40,
-   "score": 0.1927,
-   "rawScore": 0.226457,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "UMOD",
-     "geneId": "ENSG00000169344",
-     "geneName": "uromodulin",
-     "assoc": 0.4639,
-     "contribution": 0.226457,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.4639
-      }
-     ],
-     "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.85
-    }
-   ]
   }
  ],
  "knownRanked": [
@@ -2219,7 +2242,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 73,
+   "rank": 79,
    "score": 0.0283,
    "rawScore": 0.082488,
    "geneCount": 1,

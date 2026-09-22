@@ -74,14 +74,15 @@
    ]
   },
   {
-   "id": "CHEMBL382301",
-   "name": "Atosiban",
+   "id": "CHEMBL3301668",
+   "name": "Carbetocin",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "postpartum hemorrhage"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
-    "Oxytocin receptor antagonist",
-    "Oxytocin receptor antagonist"
+    "Oxytocin receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -128,15 +129,14 @@
    ]
   },
   {
-   "id": "CHEMBL3301668",
-   "name": "Carbetocin",
+   "id": "CHEMBL382301",
+   "name": "Atosiban",
    "drugType": "Protein",
-   "approvedFor": [
-    "postpartum hemorrhage"
-   ],
-   "indicationCount": 1,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Oxytocin receptor agonist"
+    "Oxytocin receptor antagonist",
+    "Oxytocin receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -404,16 +404,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -479,16 +479,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -554,18 +554,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -629,15 +626,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -773,6 +773,88 @@
    ]
   },
   {
+   "id": "CHEMBL1324",
+   "name": "Tolcapone",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Hepatic failure",
+    "Parkinson disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Catechol O-methyltransferase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
+    }
+   ],
+   "withdrawn": true,
+   "blackBox": true,
+   "rank": 12,
+   "score": 0.719,
+   "rawScore": 0.277821,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "COMT",
+     "geneId": "ENSG00000093010",
+     "geneName": "catechol-O-methyltransferase",
+     "assoc": 0.3152,
+     "contribution": 0.203124,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3152
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ANKK1",
+     "geneId": "ENSG00000170209",
+     "geneName": "ankyrin repeat and kinase domain containing 1",
+     "assoc": 0.1494,
+     "contribution": 0.043078,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1494
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.852
+    },
+    {
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.1133,
+     "contribution": 0.031619,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1133
+      }
+     ],
+     "hops": 3,
+     "via": "COMT",
+     "viaScore": 0.943
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1089318",
    "name": "Opicapone",
    "drugType": "Small molecule",
@@ -786,7 +868,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 12,
+   "rank": 13,
    "score": 0.719,
    "rawScore": 0.277821,
    "geneCount": 1,
@@ -858,88 +940,6 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
-   "score": 0.719,
-   "rawScore": 0.277821,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "COMT",
-     "geneId": "ENSG00000093010",
-     "geneName": "catechol-O-methyltransferase",
-     "assoc": 0.3152,
-     "contribution": 0.203124,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3152
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ANKK1",
-     "geneId": "ENSG00000170209",
-     "geneName": "ankyrin repeat and kinase domain containing 1",
-     "assoc": 0.1494,
-     "contribution": 0.043078,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1494
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.852
-    },
-    {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.1133,
-     "contribution": 0.031619,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1133
-      }
-     ],
-     "hops": 3,
-     "via": "COMT",
-     "viaScore": 0.943
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1324",
-   "name": "Tolcapone",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Hepatic failure",
-    "Parkinson disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Catechol O-methyltransferase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": true,
    "rank": 14,
    "score": 0.719,
    "rawScore": 0.277821,
@@ -1261,26 +1261,19 @@
    ]
   },
   {
-   "id": "CHEMBL1429",
-   "name": "Desmopressin",
+   "id": "CHEMBL1200690",
+   "name": "Lypressin",
    "drugType": "Protein",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "amnesia"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Vasopressin receptor agonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "metabolic toxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 19,
    "score": 0.4562,
    "rawScore": 0.178896,
@@ -1340,95 +1333,27 @@
    ]
   },
   {
-   "id": "CHEMBL373742",
-   "name": "Vasopressin",
+   "id": "CHEMBL1429",
+   "name": "Desmopressin",
    "drugType": "Protein",
-   "approvedFor": [
-    "Polyuria",
-    "enuresis",
-    "Sepsis",
-    "diabetes insipidus"
-   ],
-   "indicationCount": 4,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Vasopressin receptor agonist"
    ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 20,
-   "score": 0.4562,
-   "rawScore": 0.178896,
-   "geneCount": 3,
-   "paths": [
+   "warnings": [
     {
-     "gene": "OXT",
-     "geneId": "ENSG00000101405",
-     "geneName": "oxytocin/neurophysin I prepropeptide",
-     "assoc": 0.3476,
-     "contribution": 0.070004,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3476
-      }
-     ],
-     "hops": 3,
-     "via": "AVPR1A",
-     "viaScore": 0.993
+     "type": "Black Box Warning",
+     "detail": null
     },
     {
-     "gene": "OXT",
-     "geneId": "ENSG00000101405",
-     "geneName": "oxytocin/neurophysin I prepropeptide",
-     "assoc": 0.3476,
-     "contribution": 0.067944,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3476
-      }
-     ],
-     "hops": 3,
-     "via": "AVPR1B",
-     "viaScore": 0.896
-    },
-    {
-     "gene": "AVP",
-     "geneId": "ENSG00000101200",
-     "geneName": "arginine vasopressin",
-     "assoc": 0.0957,
-     "contribution": 0.014808,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0957
-      }
-     ],
-     "hops": 3,
-     "via": "AVPR1B",
-     "viaScore": 0.995
+     "type": "Black Box Warning",
+     "detail": "metabolic toxicity"
     }
-   ]
-  },
-  {
-   "id": "CHEMBL1200690",
-   "name": "Lypressin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "amnesia"
    ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Vasopressin receptor agonist"
-   ],
-   "warnings": [],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
+   "blackBox": true,
+   "rank": 20,
    "score": 0.4562,
    "rawScore": 0.178896,
    "geneCount": 3,
@@ -1498,7 +1423,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 21,
    "score": 0.4562,
    "rawScore": 0.178896,
    "geneCount": 3,
@@ -1569,6 +1494,81 @@
    "mechanisms": [
     "Vasopressin V1 receptor binding agent",
     "Vasopressin V2 receptor binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.4562,
+   "rawScore": 0.178896,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "OXT",
+     "geneId": "ENSG00000101405",
+     "geneName": "oxytocin/neurophysin I prepropeptide",
+     "assoc": 0.3476,
+     "contribution": 0.070004,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3476
+      }
+     ],
+     "hops": 3,
+     "via": "AVPR1A",
+     "viaScore": 0.993
+    },
+    {
+     "gene": "OXT",
+     "geneId": "ENSG00000101405",
+     "geneName": "oxytocin/neurophysin I prepropeptide",
+     "assoc": 0.3476,
+     "contribution": 0.067944,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3476
+      }
+     ],
+     "hops": 3,
+     "via": "AVPR1B",
+     "viaScore": 0.896
+    },
+    {
+     "gene": "AVP",
+     "geneId": "ENSG00000101200",
+     "geneName": "arginine vasopressin",
+     "assoc": 0.0957,
+     "contribution": 0.014808,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0957
+      }
+     ],
+     "hops": 3,
+     "via": "AVPR1B",
+     "viaScore": 0.995
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL373742",
+   "name": "Vasopressin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Polyuria",
+    "enuresis",
+    "Sepsis",
+    "diabetes insipidus"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Vasopressin receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1687,8 +1687,8 @@
    ]
   },
   {
-   "id": "CHEMBL1201236",
-   "name": "Carbidopa Anhydrous",
+   "id": "CHEMBL1096979",
+   "name": "Benserazide",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
@@ -1740,8 +1740,8 @@
    ]
   },
   {
-   "id": "CHEMBL1096979",
-   "name": "Benserazide",
+   "id": "CHEMBL1201236",
+   "name": "Carbidopa Anhydrous",
    "drugType": "Small molecule",
    "approvedFor": [],
    "indicationCount": 0,
@@ -2009,31 +2009,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 30,
    "score": 0.3279,
    "rawScore": 0.13059,
@@ -2093,19 +2081,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 31,
    "score": 0.3279,
    "rawScore": 0.13059,
@@ -2245,116 +2245,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 33,
-   "score": 0.3279,
-   "rawScore": 0.13059,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1983,
-     "contribution": 0.055025,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1983
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.0963,
-     "contribution": 0.04421,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0963
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.0704,
-     "contribution": 0.018422,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0704
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
    "score": 0.3279,
    "rawScore": 0.13059,
    "geneCount": 1,
@@ -2438,6 +2342,90 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 34,
+   "score": 0.3279,
+   "rawScore": 0.13059,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1983,
+     "contribution": 0.055025,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1983
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.0963,
+     "contribution": 0.04421,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0963
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.0704,
+     "contribution": 0.018422,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0704
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 35,
    "score": 0.3279,
    "rawScore": 0.13059,
@@ -2497,19 +2485,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 36,
    "score": 0.3279,
    "rawScore": 0.13059,
@@ -2608,18 +2608,28 @@
    ]
   },
   {
-   "id": "CHEMBL1909286",
-   "name": "Phenoxypropazine",
+   "id": "CHEMBL1256841",
+   "name": "Nialamide",
    "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "approvedFor": [
+    "major depressive disorder"
+   ],
+   "indicationCount": 1,
    "mechanisms": [
     "Monoamine oxidase inhibitor"
    ],
    "warnings": [
     {
      "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs"
+    },
+    {
+     "type": "Withdrawn",
      "detail": "hepatotoxicity"
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "lack substantial evidence of efficacy and safety"
     },
     {
      "type": "Withdrawn",
@@ -2629,85 +2639,6 @@
    "withdrawn": true,
    "blackBox": false,
    "rank": 38,
-   "score": 0.3243,
-   "rawScore": 0.129251,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "COMT",
-     "geneId": "ENSG00000093010",
-     "geneName": "catechol-O-methyltransferase",
-     "assoc": 0.3152,
-     "contribution": 0.058756,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3152
-      }
-     ],
-     "hops": 3,
-     "via": "MAOB",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "COMT",
-     "geneId": "ENSG00000093010",
-     "geneName": "catechol-O-methyltransferase",
-     "assoc": 0.3152,
-     "contribution": 0.056746,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.3152
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.996
-    },
-    {
-     "gene": "SLC6A4",
-     "geneId": "ENSG00000108576",
-     "geneName": "solute carrier family 6 member 4",
-     "assoc": 0.1133,
-     "contribution": 0.013748,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1133
-      }
-     ],
-     "hops": 3,
-     "via": "MAOA",
-     "viaScore": 0.942
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1909283",
-   "name": "Mebanazine",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Monoamine oxidase inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    },
-    {
-     "type": "Withdrawn",
-     "detail": "Hepatotoxicity; Drug Interaction"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 39,
    "score": 0.3243,
    "rawScore": 0.129251,
    "geneCount": 2,
@@ -2784,6 +2715,88 @@
     }
    ],
    "withdrawn": false,
+   "blackBox": true,
+   "rank": 39,
+   "score": 0.3243,
+   "rawScore": 0.129251,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "COMT",
+     "geneId": "ENSG00000093010",
+     "geneName": "catechol-O-methyltransferase",
+     "assoc": 0.3152,
+     "contribution": 0.058756,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3152
+      }
+     ],
+     "hops": 3,
+     "via": "MAOB",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "COMT",
+     "geneId": "ENSG00000093010",
+     "geneName": "catechol-O-methyltransferase",
+     "assoc": 0.3152,
+     "contribution": 0.056746,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.3152
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.996
+    },
+    {
+     "gene": "SLC6A4",
+     "geneId": "ENSG00000108576",
+     "geneName": "solute carrier family 6 member 4",
+     "assoc": 0.1133,
+     "contribution": 0.013748,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1133
+      }
+     ],
+     "hops": 3,
+     "via": "MAOA",
+     "viaScore": 0.942
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201168",
+   "name": "Isocarboxazid",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "major depressive disorder",
+    "depressive disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Monoamine oxidase inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    },
+    {
+     "type": "Withdrawn",
+     "detail": "reported toxicity and in view of the availability of other less toxic drugs."
+    }
+   ],
+   "withdrawn": true,
    "blackBox": true,
    "rank": 40,
    "score": 0.3243,
@@ -2862,7 +2875,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 173,
+   "rank": 174,
    "score": 0.1308,
    "rawScore": 0.056421,
    "geneCount": 1,

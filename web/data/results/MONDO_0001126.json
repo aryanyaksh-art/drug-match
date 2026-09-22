@@ -7,9 +7,9 @@
  "genesScored": 50,
  "genesWithDrugs": 9,
  "knownDrugCount": 27,
- "candidatesConsidered": 200,
+ "candidatesConsidered": 245,
  "pathsTwoHop": 199,
- "pathsThreeHop": 351,
+ "pathsThreeHop": 400,
  "candidates": [
   {
    "id": "CHEMBL1551724",
@@ -263,48 +263,6 @@
    ]
   },
   {
-   "id": "CHEMBL2108285",
-   "name": "Capromab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "prostate cancer"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Prostate specific antigen binding agent"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 5,
-   "score": 0.5339,
-   "rawScore": 0.406465,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "PSCA",
-     "geneId": "ENSG00000167653",
-     "geneName": "prostate stem cell antigen",
-     "assoc": 0.6867,
-     "contribution": 0.406465,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6606
-      },
-      {
-       "id": "literature",
-       "score": 0.0771
-      }
-     ],
-     "hops": 3,
-     "via": "KLK3",
-     "viaScore": 0.781
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2111112",
    "name": "Vernakalant",
    "drugType": "Small molecule",
@@ -320,9 +278,9 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
-   "score": 0.4961,
-   "rawScore": 0.377993,
+   "rank": 5,
+   "score": 0.5521,
+   "rawScore": 0.420122,
    "geneCount": 6,
    "paths": [
     {
@@ -358,6 +316,65 @@
      "hops": 3,
      "via": "KCNJ3",
      "viaScore": 0.997
+    },
+    {
+     "gene": "PKP2",
+     "geneId": "ENSG00000057294",
+     "geneName": "plakophilin 2",
+     "assoc": 0.4192,
+     "contribution": 0.042129,
+     "drugsOnGene": 49,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4192
+      }
+     ],
+     "hops": 3,
+     "via": "SCN5A",
+     "viaScore": 0.976
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2108285",
+   "name": "Capromab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "prostate cancer"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Prostate specific antigen binding agent"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 6,
+   "score": 0.5339,
+   "rawScore": 0.406465,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "PSCA",
+     "geneId": "ENSG00000167653",
+     "geneName": "prostate stem cell antigen",
+     "assoc": 0.6867,
+     "contribution": 0.406465,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6606
+      },
+      {
+       "id": "literature",
+       "score": 0.0771
+      }
+     ],
+     "hops": 3,
+     "via": "KLK3",
+     "viaScore": 0.781
     }
    ]
   },
@@ -539,8 +556,8 @@
    ]
   },
   {
-   "id": "CHEMBL255863",
-   "name": "Nilotinib",
+   "id": "CHEMBL4208229",
+   "name": "Asciminib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
@@ -548,21 +565,12 @@
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Tyrosine-protein kinase ABL inhibitor",
-    "Bcr/Abl fusion protein inhibitor"
+    "Bcr/Abl fusion protein inhibitor",
+    "Tyrosine-protein kinase ABL inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "musculoskeletal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 10,
    "score": 0.3791,
    "rawScore": 0.289859,
@@ -680,8 +688,8 @@
    ]
   },
   {
-   "id": "CHEMBL4208229",
-   "name": "Asciminib",
+   "id": "CHEMBL255863",
+   "name": "Nilotinib",
    "drugType": "Small molecule",
    "approvedFor": [
     "neoplasm",
@@ -689,12 +697,21 @@
    ],
    "indicationCount": 2,
    "mechanisms": [
-    "Bcr/Abl fusion protein inhibitor",
-    "Tyrosine-protein kinase ABL inhibitor"
+    "Tyrosine-protein kinase ABL inhibitor",
+    "Bcr/Abl fusion protein inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "musculoskeletal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 12,
    "score": 0.3791,
    "rawScore": 0.289859,
@@ -815,13 +832,15 @@
    ]
   },
   {
-   "id": "CHEMBL1201532",
-   "name": "Thyrotropin",
-   "drugType": "Unknown",
+   "id": "CHEMBL1201533",
+   "name": "Thyrotropin Alfa",
+   "drugType": "Protein",
    "approvedFor": [
-    "hypothyroidism"
+    "thyroid gland carcinoma",
+    "thyroid cancer",
+    "thyroid tumor"
    ],
-   "indicationCount": 1,
+   "indicationCount": 3,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -853,15 +872,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201533",
-   "name": "Thyrotropin Alfa",
-   "drugType": "Protein",
+   "id": "CHEMBL1201532",
+   "name": "Thyrotropin",
+   "drugType": "Unknown",
    "approvedFor": [
-    "thyroid gland carcinoma",
-    "thyroid cancer",
-    "thyroid tumor"
+    "hypothyroidism"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Thyroid stimulating hormone receptor agonist"
    ],
@@ -1011,129 +1028,6 @@
    ]
   },
   {
-   "id": "CHEMBL507361",
-   "name": "Mirdametinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neurofibromatosis type 1",
-    "neoplasm",
-    "plexiform neurofibroma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 19,
-   "score": 0.2453,
-   "rawScore": 0.189046,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.4801,
-     "contribution": 0.189046,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4801
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL2146883",
-   "name": "Cobimetinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "melanoma"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 20,
-   "score": 0.2453,
-   "rawScore": 0.189046,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.4801,
-     "contribution": 0.189046,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4801
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3187723",
-   "name": "Binimetinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "metastatic melanoma",
-    "melanoma",
-    "neoplasm"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
-    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 21,
-   "score": 0.2453,
-   "rawScore": 0.189046,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "MAP3K1",
-     "geneId": "ENSG00000095015",
-     "geneName": "mitogen-activated protein kinase kinase kinase 1",
-     "assoc": 0.4801,
-     "contribution": 0.189046,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4801
-      }
-     ],
-     "hops": 3,
-     "via": "MAP2K1",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2103875",
    "name": "Trametinib",
    "drugType": "Small molecule",
@@ -1152,7 +1046,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 22,
+   "rank": 19,
    "score": 0.2453,
    "rawScore": 0.189046,
    "geneCount": 2,
@@ -1193,6 +1087,129 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 20,
+   "score": 0.2453,
+   "rawScore": 0.189046,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.4801,
+     "contribution": 0.189046,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4801
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL2146883",
+   "name": "Cobimetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "melanoma"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 21,
+   "score": 0.2453,
+   "rawScore": 0.189046,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.4801,
+     "contribution": 0.189046,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4801
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3187723",
+   "name": "Binimetinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "metastatic melanoma",
+    "melanoma",
+    "neoplasm"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 22,
+   "score": 0.2453,
+   "rawScore": 0.189046,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "MAP3K1",
+     "geneId": "ENSG00000095015",
+     "geneName": "mitogen-activated protein kinase kinase kinase 1",
+     "assoc": 0.4801,
+     "contribution": 0.189046,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4801
+      }
+     ],
+     "hops": 3,
+     "via": "MAP2K1",
+     "viaScore": 0.989
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL507361",
+   "name": "Mirdametinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neurofibromatosis type 1",
+    "neoplasm",
+    "plexiform neurofibroma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+    "Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 23,
    "score": 0.2453,
    "rawScore": 0.189046,
@@ -1218,6 +1235,83 @@
    ]
   },
   {
+   "id": "CHEMBL220492",
+   "name": "Topiramate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "alcohol dependence",
+    "Lennox-Gastaut syndrome",
+    "Seizure",
+    "epilepsy"
+   ],
+   "indicationCount": 5,
+   "mechanisms": [
+    "Glutamate receptor ionotropic AMPA antagonist",
+    "Glutamate receptor ionotropic kainate antagonist",
+    "Sodium channel alpha subunit blocker"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 24,
+   "score": 0.2336,
+   "rawScore": 0.180229,
+   "geneCount": 37,
+   "paths": [
+    {
+     "gene": "ARC",
+     "geneId": "ENSG00000198576",
+     "geneName": "activity regulated cytoskeleton associated protein",
+     "assoc": 0.6513,
+     "contribution": 0.094773,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6513
+      }
+     ],
+     "hops": 3,
+     "via": "GRIA1",
+     "viaScore": 0.814
+    },
+    {
+     "gene": "PKP2",
+     "geneId": "ENSG00000057294",
+     "geneName": "plakophilin 2",
+     "assoc": 0.4192,
+     "contribution": 0.02035,
+     "drugsOnGene": 49,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4192
+      }
+     ],
+     "hops": 3,
+     "via": "SCN5A",
+     "viaScore": 0.976
+    },
+    {
+     "gene": "GABRB2",
+     "geneId": "ENSG00000145864",
+     "geneName": "gamma-aminobutyric acid type A receptor subunit beta2",
+     "assoc": 0.4265,
+     "contribution": 0.020254,
+     "drugsOnGene": 55,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.4265
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
    "id": "CHEMBL1421",
    "name": "Dasatinib Anhydrous",
    "drugType": "Small molecule",
@@ -1236,7 +1330,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 24,
+   "rank": 25,
    "score": 0.2321,
    "rawScore": 0.179053,
    "geneCount": 15,
@@ -1306,7 +1400,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 25,
+   "rank": 26,
    "score": 0.2272,
    "rawScore": 0.175381,
    "geneCount": 1,
@@ -1331,93 +1425,16 @@
    ]
   },
   {
-   "id": "CHEMBL220492",
-   "name": "Topiramate",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "alcohol dependence",
-    "Lennox-Gastaut syndrome",
-    "Seizure",
-    "epilepsy"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 5,
-   "mechanisms": [
-    "Glutamate receptor ionotropic AMPA antagonist",
-    "Glutamate receptor ionotropic kainate antagonist",
-    "Sodium channel alpha subunit blocker"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.2066,
-   "rawScore": 0.15988,
-   "geneCount": 37,
-   "paths": [
-    {
-     "gene": "ARC",
-     "geneId": "ENSG00000198576",
-     "geneName": "activity regulated cytoskeleton associated protein",
-     "assoc": 0.6513,
-     "contribution": 0.094773,
-     "drugsOnGene": 2,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6513
-      }
-     ],
-     "hops": 3,
-     "via": "GRIA1",
-     "viaScore": 0.814
-    },
-    {
-     "gene": "GABRB2",
-     "geneId": "ENSG00000145864",
-     "geneName": "gamma-aminobutyric acid type A receptor subunit beta2",
-     "assoc": 0.4265,
-     "contribution": 0.020254,
-     "drugsOnGene": 55,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4265
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "GABRB2",
-     "geneId": "ENSG00000145864",
-     "geneName": "gamma-aminobutyric acid type A receptor subunit beta2",
-     "assoc": 0.4265,
-     "contribution": 0.011423,
-     "drugsOnGene": 56,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.4265
-      }
-     ],
-     "hops": 3,
-     "via": "GABRG2",
-     "viaScore": 0.989
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
-   ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -1449,16 +1466,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201830",
-   "name": "Rilonacept",
-   "drugType": "Protein",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "pericarditis",
-    "Arthritis",
-    "Familial cold urticaria",
-    "Muckle-Wells syndrome"
+    "familial Mediterranean fever",
+    "immune system disorder",
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 6,
+   "indicationCount": 9,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -1655,6 +1672,50 @@
    ]
   },
   {
+   "id": "CHEMBL3301581",
+   "name": "Abaloparatide",
+   "drugType": "Protein",
+   "approvedFor": [
+    "osteoporosis",
+    "postmenopausal osteoporosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.1981,
+   "rawScore": 0.153476,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.6001,
+     "contribution": 0.153476,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6001
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
    "id": "CHEMBL2108078",
    "name": "Parathyroid Hormone",
    "drugType": "Protein",
@@ -1675,7 +1736,46 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 31,
+   "rank": 32,
+   "score": 0.1981,
+   "rawScore": 0.153476,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "GNAS",
+     "geneId": "ENSG00000087460",
+     "geneName": "GNAS complex locus",
+     "assoc": 0.6001,
+     "contribution": 0.153476,
+     "drugsOnGene": 5,
+     "evidence": [
+      {
+       "id": "genetic_association",
+       "score": 0.6001
+      }
+     ],
+     "hops": 3,
+     "via": "PTH1R",
+     "viaScore": 0.997
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201549",
+   "name": "Teriparatide Acetate",
+   "drugType": "Protein",
+   "approvedFor": [
+    "bone fracture",
+    "osteoporosis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Parathyroid hormone receptor agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 33,
    "score": 0.1981,
    "rawScore": 0.153476,
    "geneCount": 1,
@@ -1721,7 +1821,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
+   "rank": 34,
    "score": 0.1981,
    "rawScore": 0.153476,
    "geneCount": 1,
@@ -1753,89 +1853,6 @@
     "hypoparathyroidism"
    ],
    "indicationCount": 1,
-   "mechanisms": [
-    "Parathyroid hormone receptor agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 33,
-   "score": 0.1981,
-   "rawScore": 0.153476,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GNAS",
-     "geneId": "ENSG00000087460",
-     "geneName": "GNAS complex locus",
-     "assoc": 0.6001,
-     "contribution": 0.153476,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6001
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL3301581",
-   "name": "Abaloparatide",
-   "drugType": "Protein",
-   "approvedFor": [
-    "osteoporosis",
-    "postmenopausal osteoporosis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Parathyroid hormone receptor agonist"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 34,
-   "score": 0.1981,
-   "rawScore": 0.153476,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "GNAS",
-     "geneId": "ENSG00000087460",
-     "geneName": "GNAS complex locus",
-     "assoc": 0.6001,
-     "contribution": 0.153476,
-     "drugsOnGene": 5,
-     "evidence": [
-      {
-       "id": "genetic_association",
-       "score": 0.6001
-      }
-     ],
-     "hops": 3,
-     "via": "PTH1R",
-     "viaScore": 0.997
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201549",
-   "name": "Teriparatide Acetate",
-   "drugType": "Protein",
-   "approvedFor": [
-    "bone fracture",
-    "osteoporosis"
-   ],
-   "indicationCount": 2,
    "mechanisms": [
     "Parathyroid hormone receptor agonist"
    ],
@@ -1922,81 +1939,6 @@
    ]
   },
   {
-   "id": "CHEMBL704",
-   "name": "Mesalamine",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "proctitis",
-    "ulcerative colitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Arachidonate 5-lipoxygenase inhibitor",
-    "Cyclooxygenase inhibitor",
-    "Peroxisome proliferator-activated receptor gamma agonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 37,
-   "score": 0.1795,
-   "rawScore": 0.139465,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2817,
-     "contribution": 0.05826,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2817
-      }
-     ],
-     "hops": 3,
-     "via": "ALOX5",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "PTGS2",
-     "geneId": "ENSG00000073756",
-     "geneName": "prostaglandin-endoperoxide synthase 2",
-     "assoc": 0.2817,
-     "contribution": 0.031666,
-     "drugsOnGene": 59,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2817
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PTGS1",
-     "geneId": "ENSG00000095303",
-     "geneName": "prostaglandin-endoperoxide synthase 1",
-     "assoc": 0.1666,
-     "contribution": 0.029203,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1666
-      }
-     ],
-     "hops": 3,
-     "via": "ALOX5",
-     "viaScore": 0.97
-    }
-   ]
-  },
-  {
    "id": "CHEMBL425",
    "name": "Olsalazine",
    "drugType": "Small molecule",
@@ -2012,7 +1954,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 38,
+   "rank": 37,
    "score": 0.1795,
    "rawScore": 0.139465,
    "geneCount": 4,
@@ -2086,6 +2028,81 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 38,
+   "score": 0.1795,
+   "rawScore": 0.139465,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2817,
+     "contribution": 0.05826,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2817
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "PTGS2",
+     "geneId": "ENSG00000073756",
+     "geneName": "prostaglandin-endoperoxide synthase 2",
+     "assoc": 0.2817,
+     "contribution": 0.031666,
+     "drugsOnGene": 59,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2817
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PTGS1",
+     "geneId": "ENSG00000095303",
+     "geneName": "prostaglandin-endoperoxide synthase 1",
+     "assoc": 0.1666,
+     "contribution": 0.029203,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1666
+      }
+     ],
+     "hops": 3,
+     "via": "ALOX5",
+     "viaScore": 0.97
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL704",
+   "name": "Mesalamine",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "proctitis",
+    "ulcerative colitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Arachidonate 5-lipoxygenase inhibitor",
+    "Cyclooxygenase inhibitor",
+    "Peroxisome proliferator-activated receptor gamma agonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 39,
    "score": 0.1795,
    "rawScore": 0.139465,
@@ -2145,27 +2162,17 @@
    ]
   },
   {
-   "id": "CHEMBL344159",
-   "name": "Tolvaptan",
+   "id": "CHEMBL420762",
+   "name": "Mozavaptan",
    "drugType": "Small molecule",
-   "approvedFor": [
-    "autosomal dominant polycystic kidney disease",
-    "cardiovascular disorder",
-    "Hyponatremia",
-    "heart failure"
-   ],
-   "indicationCount": 6,
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
     "Vasopressin V2 receptor antagonist"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "hepatotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 40,
    "score": 0.1629,
    "rawScore": 0.126917,
@@ -2193,23 +2200,37 @@
  ],
  "knownRanked": [
   {
-   "id": "CHEMBL25",
-   "name": "Aspirin",
+   "id": "CHEMBL154",
+   "name": "Naproxen",
    "drugType": "Small molecule",
    "approvedFor": [
-    "myocardial infarction",
-    "cerebral infarction",
-    "angina unstable",
-    "Dysmenorrhea"
+    "Pain",
+    "gout",
+    "arthritic joint disease",
+    "Back pain"
    ],
-   "indicationCount": 30,
+   "indicationCount": 23,
    "mechanisms": [
+    "Cyclooxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "gastrointestinal toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "cardiotoxicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 136,
+   "blackBox": true,
+   "rank": 118,
    "score": 0.0855,
    "rawScore": 0.068617,
    "geneCount": 2,
@@ -2251,37 +2272,23 @@
    ]
   },
   {
-   "id": "CHEMBL154",
-   "name": "Naproxen",
+   "id": "CHEMBL25",
+   "name": "Aspirin",
    "drugType": "Small molecule",
    "approvedFor": [
-    "Pain",
-    "gout",
-    "arthritic joint disease",
-    "Back pain"
+    "myocardial infarction",
+    "cerebral infarction",
+    "angina unstable",
+    "Dysmenorrhea"
    ],
-   "indicationCount": 23,
+   "indicationCount": 30,
    "mechanisms": [
-    "Cyclooxygenase inhibitor",
     "Cyclooxygenase inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "gastrointestinal toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "cardiotoxicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
-   "rank": 153,
+   "blackBox": false,
+   "rank": 140,
    "score": 0.0855,
    "rawScore": 0.068617,
    "geneCount": 2,
@@ -2339,7 +2346,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 159,
+   "rank": 163,
    "score": 0.0714,
    "rawScore": 0.058035,
    "geneCount": 1,
@@ -2380,7 +2387,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 161,
+   "rank": 166,
    "score": 0.0714,
    "rawScore": 0.058035,
    "geneCount": 1,
@@ -2405,156 +2412,6 @@
    ]
   },
   {
-   "id": "CHEMBL1503",
-   "name": "Omeprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "duodenal ulcer",
-    "osteoarthritis",
-    "arthritic joint disease",
-    "infection"
-   ],
-   "indicationCount": 13,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor",
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 167,
-   "score": 0.0702,
-   "rawScore": 0.057152,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "HRH2",
-     "geneId": "ENSG00000113749",
-     "geneName": "histamine receptor H2",
-     "assoc": 0.1398,
-     "contribution": 0.037107,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1398
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4A",
-     "viaScore": 0.88
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.0182,
-     "contribution": 0.005503,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4B",
-     "geneId": "ENSG00000186009",
-     "geneName": "ATPase H+/K+ transporting subunit beta",
-     "assoc": 0.0182,
-     "contribution": 0.005503,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1219",
-   "name": "Rabeprazole",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "gastroesophageal reflux disease",
-    "Peptic ulcer",
-    "bacterial infectious disease"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Potassium-transporting ATPase inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 168,
-   "score": 0.0702,
-   "rawScore": 0.057152,
-   "geneCount": 2,
-   "paths": [
-    {
-     "gene": "HRH2",
-     "geneId": "ENSG00000113749",
-     "geneName": "histamine receptor H2",
-     "assoc": 0.1398,
-     "contribution": 0.037107,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1398
-      }
-     ],
-     "hops": 3,
-     "via": "ATP4A",
-     "viaScore": 0.88
-    },
-    {
-     "gene": "ATP4A",
-     "geneId": "ENSG00000105675",
-     "geneName": "ATPase H+/K+ transporting subunit alpha",
-     "assoc": 0.0182,
-     "contribution": 0.005503,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "ATP4B",
-     "geneId": "ENSG00000186009",
-     "geneName": "ATPase H+/K+ transporting subunit beta",
-     "assoc": 0.0182,
-     "contribution": 0.005503,
-     "drugsOnGene": 10,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0182
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL2106370",
    "name": "Ilaprazole",
    "drugType": "Small molecule",
@@ -2569,7 +2426,80 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 169,
+   "rank": 171,
+   "score": 0.0702,
+   "rawScore": 0.057152,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HRH2",
+     "geneId": "ENSG00000113749",
+     "geneName": "histamine receptor H2",
+     "assoc": 0.1398,
+     "contribution": 0.037107,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1398
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4A",
+     "viaScore": 0.88
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.0182,
+     "contribution": 0.005503,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4B",
+     "geneId": "ENSG00000186009",
+     "geneName": "ATPase H+/K+ transporting subunit beta",
+     "assoc": 0.0182,
+     "contribution": 0.005503,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1502",
+   "name": "Pantoprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Peptic ulcer",
+    "gastroesophageal reflux disease"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 172,
    "score": 0.0702,
    "rawScore": 0.057152,
    "geneCount": 2,
@@ -2644,7 +2574,81 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 170,
+   "rank": 173,
+   "score": 0.0702,
+   "rawScore": 0.057152,
+   "geneCount": 2,
+   "paths": [
+    {
+     "gene": "HRH2",
+     "geneId": "ENSG00000113749",
+     "geneName": "histamine receptor H2",
+     "assoc": 0.1398,
+     "contribution": 0.037107,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1398
+      }
+     ],
+     "hops": 3,
+     "via": "ATP4A",
+     "viaScore": 0.88
+    },
+    {
+     "gene": "ATP4A",
+     "geneId": "ENSG00000105675",
+     "geneName": "ATPase H+/K+ transporting subunit alpha",
+     "assoc": 0.0182,
+     "contribution": 0.005503,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ATP4B",
+     "geneId": "ENSG00000186009",
+     "geneName": "ATPase H+/K+ transporting subunit beta",
+     "assoc": 0.0182,
+     "contribution": 0.005503,
+     "drugsOnGene": 10,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0182
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1219",
+   "name": "Rabeprazole",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "gastroesophageal reflux disease",
+    "Peptic ulcer",
+    "bacterial infectious disease"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Potassium-transporting ATPase inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 174,
    "score": 0.0702,
    "rawScore": 0.057152,
    "geneCount": 2,
@@ -2720,7 +2724,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 171,
+   "rank": 175,
    "score": 0.0702,
    "rawScore": 0.057152,
    "geneCount": 2,
@@ -2793,7 +2797,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 172,
+   "rank": 176,
    "score": 0.0702,
    "rawScore": 0.057152,
    "geneCount": 2,

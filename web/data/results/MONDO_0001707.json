@@ -7,9 +7,9 @@
  "genesScored": 45,
  "genesWithDrugs": 15,
  "knownDrugCount": 6,
- "candidatesConsidered": 255,
+ "candidatesConsidered": 259,
  "pathsTwoHop": 57,
- "pathsThreeHop": 330,
+ "pathsThreeHop": 337,
  "candidates": [
   {
    "id": "CHEMBL2051955",
@@ -160,31 +160,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 3,
    "score": 0.6327,
    "rawScore": 0.223711,
@@ -244,19 +232,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 4,
    "score": 0.6327,
    "rawScore": 0.223711,
@@ -396,116 +396,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 6,
-   "score": 0.6327,
-   "rawScore": 0.223711,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.2239,
-     "contribution": 0.102826,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2239
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "LTA",
-     "geneId": "ENSG00000226979",
-     "geneName": "lymphotoxin alpha",
-     "assoc": 0.0973,
-     "contribution": 0.033306,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0973
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.984
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1201,
-     "contribution": 0.03141,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1201
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 7,
    "score": 0.6327,
    "rawScore": 0.223711,
    "geneCount": 1,
@@ -589,6 +493,90 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 7,
+   "score": 0.6327,
+   "rawScore": 0.223711,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.2239,
+     "contribution": 0.102826,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2239
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "LTA",
+     "geneId": "ENSG00000226979",
+     "geneName": "lymphotoxin alpha",
+     "assoc": 0.0973,
+     "contribution": 0.033306,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0973
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.984
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1201,
+     "contribution": 0.03141,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1201
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 8,
    "score": 0.6327,
    "rawScore": 0.223711,
@@ -648,19 +636,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 9,
    "score": 0.6327,
    "rawScore": 0.223711,
@@ -736,7 +736,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 10,
+   "rank": 11,
    "score": 0.6312,
    "rawScore": 0.223177,
    "geneCount": 1,
@@ -867,6 +867,225 @@
    ]
   },
   {
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interleukin-6 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 13,
+   "score": 0.5251,
+   "rawScore": 0.186017,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD163",
+     "geneId": "ENSG00000177575",
+     "geneName": "CD163 molecule",
+     "assoc": 0.1457,
+     "contribution": 0.09053,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1457
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1201,
+     "contribution": 0.044304,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1201
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.0638,
+     "contribution": 0.025658,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0638
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.968
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Interleukin-6 antagonist"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 14,
+   "score": 0.5251,
+   "rawScore": 0.186017,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD163",
+     "geneId": "ENSG00000177575",
+     "geneName": "CD163 molecule",
+     "assoc": 0.1457,
+     "contribution": 0.09053,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1457
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1201,
+     "contribution": 0.044304,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1201
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.0638,
+     "contribution": 0.025658,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0638
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.968
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1743050",
+   "name": "Olokizumab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder"
+   ],
+   "indicationCount": 1,
+   "mechanisms": [
+    "Interleukin-6 inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 15,
+   "score": 0.5251,
+   "rawScore": 0.186017,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "CD163",
+     "geneId": "ENSG00000177575",
+     "geneName": "CD163 molecule",
+     "assoc": 0.1457,
+     "contribution": 0.09053,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1457
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.964
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1201,
+     "contribution": 0.044304,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1201
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.997
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.0638,
+     "contribution": 0.025658,
+     "drugsOnGene": 3,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.0638
+      }
+     ],
+     "hops": 3,
+     "via": "IL6",
+     "viaScore": 0.968
+    }
+   ]
+  },
+  {
    "id": "CHEMBL3989977",
    "name": "Emapalumab",
    "drugType": "Antibody",
@@ -880,7 +1099,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 13,
+   "rank": 16,
    "score": 0.4752,
    "rawScore": 0.168561,
    "geneCount": 1,
@@ -952,7 +1171,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 17,
    "score": 0.4725,
    "rawScore": 0.167618,
    "geneCount": 3,
@@ -1007,225 +1226,6 @@
      "hops": 3,
      "via": "NPR2",
      "viaScore": 0.978
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Interleukin-6 antagonist"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 15,
-   "score": 0.4522,
-   "rawScore": 0.160492,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD163",
-     "geneId": "ENSG00000177575",
-     "geneName": "CD163 molecule",
-     "assoc": 0.1457,
-     "contribution": 0.09053,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1457
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.964
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1201,
-     "contribution": 0.044304,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1201
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.0638,
-     "contribution": 0.025658,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0638
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.968
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interleukin-6 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 16,
-   "score": 0.4522,
-   "rawScore": 0.160492,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD163",
-     "geneId": "ENSG00000177575",
-     "geneName": "CD163 molecule",
-     "assoc": 0.1457,
-     "contribution": 0.09053,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1457
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.964
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1201,
-     "contribution": 0.044304,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1201
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.0638,
-     "contribution": 0.025658,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0638
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.968
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743050",
-   "name": "Olokizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "immune system disorder"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Interleukin-6 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 17,
-   "score": 0.4522,
-   "rawScore": 0.160492,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD163",
-     "geneId": "ENSG00000177575",
-     "geneName": "CD163 molecule",
-     "assoc": 0.1457,
-     "contribution": 0.09053,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1457
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.964
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1201,
-     "contribution": 0.044304,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1201
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.997
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.0638,
-     "contribution": 0.025658,
-     "drugsOnGene": 3,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0638
-      }
-     ],
-     "hops": 3,
-     "via": "IL6",
-     "viaScore": 0.968
     }
    ]
   },
@@ -1618,12 +1618,78 @@
    ]
   },
   {
-   "id": "CHEMBL1200686",
-   "name": "Pimecrolimus",
+   "id": "CHEMBL1908360",
+   "name": "Everolimus",
    "drugType": "Small molecule",
    "approvedFor": [
-    "atopic eczema",
-    "Eczematoid dermatitis"
+    "pancreatic neoplasm",
+    "kidney angiomyolipoma",
+    "astrocytoma (excluding glioblastoma)",
+    "tuberous sclerosis"
+   ],
+   "indicationCount": 13,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "nephrotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 28,
+   "score": 0.1638,
+   "rawScore": 0.059503,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.1609,
+     "contribution": 0.059503,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1609
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL269732",
+   "name": "Tacrolimus Anhydrous",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "graft versus host disease",
+    "conjunctivitis"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -1632,12 +1698,20 @@
    "warnings": [
     {
      "type": "Black Box Warning",
+     "detail": "immune system toxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
      "detail": "carcinogenicity"
     }
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 28,
+   "rank": 29,
    "score": 0.1638,
    "rawScore": 0.059503,
    "geneCount": 1,
@@ -1673,7 +1747,91 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 29,
+   "rank": 30,
+   "score": 0.1638,
+   "rawScore": 0.059503,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.1609,
+     "contribution": 0.059503,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1609
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1200686",
+   "name": "Pimecrolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "atopic eczema",
+    "Eczematoid dermatitis"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 31,
+   "score": 0.1638,
+   "rawScore": 0.059503,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "MTOR",
+     "geneId": "ENSG00000198793",
+     "geneName": "mechanistic target of rapamycin kinase",
+     "assoc": 0.1609,
+     "contribution": 0.059503,
+     "drugsOnGene": 6,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1609
+      }
+     ],
+     "hops": 3,
+     "via": "FKBP1A",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201182",
+   "name": "Temsirolimus",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "mantle cell lymphoma",
+    "renal cell carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "FK506-binding protein 1A inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 32,
    "score": 0.1638,
    "rawScore": 0.059503,
    "geneCount": 1,
@@ -1727,164 +1885,6 @@
     {
      "type": "Black Box Warning",
      "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 30,
-   "score": 0.1638,
-   "rawScore": 0.059503,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "MTOR",
-     "geneId": "ENSG00000198793",
-     "geneName": "mechanistic target of rapamycin kinase",
-     "assoc": 0.1609,
-     "contribution": 0.059503,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1609
-      }
-     ],
-     "hops": 3,
-     "via": "FKBP1A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201182",
-   "name": "Temsirolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "mantle cell lymphoma",
-    "renal cell carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 31,
-   "score": 0.1638,
-   "rawScore": 0.059503,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "MTOR",
-     "geneId": "ENSG00000198793",
-     "geneName": "mechanistic target of rapamycin kinase",
-     "assoc": 0.1609,
-     "contribution": 0.059503,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1609
-      }
-     ],
-     "hops": 3,
-     "via": "FKBP1A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL269732",
-   "name": "Tacrolimus Anhydrous",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "graft versus host disease",
-    "conjunctivitis"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 32,
-   "score": 0.1638,
-   "rawScore": 0.059503,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "MTOR",
-     "geneId": "ENSG00000198793",
-     "geneName": "mechanistic target of rapamycin kinase",
-     "assoc": 0.1609,
-     "contribution": 0.059503,
-     "drugsOnGene": 6,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1609
-      }
-     ],
-     "hops": 3,
-     "via": "FKBP1A",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1908360",
-   "name": "Everolimus",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "pancreatic neoplasm",
-    "kidney angiomyolipoma",
-    "astrocytoma (excluding glioblastoma)",
-    "tuberous sclerosis"
-   ],
-   "indicationCount": 13,
-   "mechanisms": [
-    "FK506-binding protein 1A inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "immune system toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "nephrotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
     }
    ],
    "withdrawn": false,
@@ -2142,17 +2142,13 @@
    ]
   },
   {
-   "id": "CHEMBL4297245",
-   "name": "Donanemab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "Alzheimer disease",
-    "Cognitive impairment",
-    "dementia"
-   ],
-   "indicationCount": 3,
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
    "mechanisms": [
-    "Amyloid-beta A4 protein disrupting agent"
+    "Amyloid-beta A4 protein stabiliser"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2182,13 +2178,17 @@
    ]
   },
   {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
+   "id": "CHEMBL4297245",
+   "name": "Donanemab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "Alzheimer disease",
+    "Cognitive impairment",
+    "dementia"
+   ],
+   "indicationCount": 3,
    "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
+    "Amyloid-beta A4 protein disrupting agent"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2318,7 +2318,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 11,
+   "rank": 10,
    "score": 0.6312,
    "rawScore": 0.223177,
    "geneCount": 1,
@@ -2468,7 +2468,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 109,
+   "rank": 112,
    "score": 0.0665,
    "rawScore": 0.025447,
    "geneCount": 2,

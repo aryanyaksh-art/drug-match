@@ -7,23 +7,20 @@
  "genesScored": 47,
  "genesWithDrugs": 14,
  "knownDrugCount": 6,
- "candidatesConsidered": 271,
+ "candidatesConsidered": 272,
  "pathsTwoHop": 60,
- "pathsThreeHop": 385,
+ "pathsThreeHop": 387,
  "candidates": [
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -87,15 +84,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -303,38 +303,37 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
+   "id": "CHEMBL1743029",
+   "name": "Ibalizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "HIV infectious disease",
+    "HIV-1 infection",
+    "viral infectious disease"
    ],
-   "indicationCount": 9,
+   "indicationCount": 3,
    "mechanisms": [
-    "Interleukin-1 beta inhibitor"
+    "T-cell surface antigen CD4 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
    "rank": 5,
-   "score": 0.5758,
-   "rawScore": 0.181421,
+   "score": 0.7229,
+   "rawScore": 0.226144,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "IL1B",
-     "geneId": "ENSG00000125538",
-     "geneName": "interleukin 1 beta",
-     "assoc": 0.0872,
-     "contribution": 0.066118,
-     "drugsOnGene": 2,
+     "gene": "CD4",
+     "geneId": "ENSG00000010610",
+     "geneName": "CD4 molecule",
+     "assoc": 0.1077,
+     "contribution": 0.107683,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.0872
+       "score": 0.1077
       }
      ],
      "hops": 2,
@@ -342,38 +341,38 @@
      "viaScore": null
     },
     {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1431,
-     "contribution": 0.061718,
-     "drugsOnGene": 2,
+     "gene": "HLA-DRB1",
+     "geneId": "ENSG00000196126",
+     "geneName": "major histocompatibility complex, class II, DR beta 1",
+     "assoc": 0.0856,
+     "contribution": 0.064496,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1431
+       "score": 0.0856
       }
      ],
      "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.991
+     "via": "CD4",
+     "viaScore": 0.994
     },
     {
-     "gene": "CSF3",
-     "geneId": "ENSG00000108342",
-     "geneName": "colony stimulating factor 3",
-     "assoc": 0.1351,
-     "contribution": 0.053585,
-     "drugsOnGene": 2,
+     "gene": "CD7",
+     "geneId": "ENSG00000173762",
+     "geneName": "CD7 molecule",
+     "assoc": 0.079,
+     "contribution": 0.053965,
+     "drugsOnGene": 1,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1351
+       "score": 0.079
       }
      ],
      "hops": 3,
-     "via": "IL1B",
-     "viaScore": 0.996
+     "via": "CD4",
+     "viaScore": 0.901
     }
    ]
   },
@@ -453,47 +452,38 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL1201834",
+   "name": "Canakinumab",
    "drugType": "Antibody",
    "approvedFor": [
+    "familial Mediterranean fever",
     "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "juvenile idiopathic arthritis",
+    "gout"
    ],
-   "indicationCount": 8,
+   "indicationCount": 9,
    "mechanisms": [
-    "TNF-alpha inhibitor"
+    "Interleukin-1 beta inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 7,
-   "score": 0.5711,
-   "rawScore": 0.179968,
+   "score": 0.5758,
+   "rawScore": 0.181421,
    "geneCount": 1,
    "paths": [
     {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1495,
-     "contribution": 0.068649,
-     "drugsOnGene": 7,
+     "gene": "IL1B",
+     "geneId": "ENSG00000125538",
+     "geneName": "interleukin 1 beta",
+     "assoc": 0.0872,
+     "contribution": 0.066118,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
-       "score": 0.1495
+       "score": 0.0872
       }
      ],
      "hops": 2,
@@ -501,29 +491,12 @@
      "viaScore": null
     },
     {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1835,
-     "contribution": 0.050927,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1835
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
      "gene": "IL10",
      "geneId": "ENSG00000136634",
      "geneName": "interleukin 10",
      "assoc": 0.1431,
-     "contribution": 0.03743,
-     "drugsOnGene": 7,
+     "contribution": 0.061718,
+     "drugsOnGene": 2,
      "evidence": [
       {
        "id": "literature",
@@ -531,8 +504,25 @@
       }
      ],
      "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
+     "via": "IL1B",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "CSF3",
+     "geneId": "ENSG00000108342",
+     "geneName": "colony stimulating factor 3",
+     "assoc": 0.1351,
+     "contribution": 0.053585,
+     "drugsOnGene": 2,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1351
+      }
+     ],
+     "hops": 3,
+     "via": "IL1B",
+     "viaScore": 0.996
     }
    ]
   },
@@ -551,86 +541,6 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 8,
-   "score": 0.5711,
-   "rawScore": 0.179968,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.1495,
-     "contribution": 0.068649,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1495
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1835,
-     "contribution": 0.050927,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1835
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    },
-    {
-     "gene": "IL10",
-     "geneId": "ENSG00000136634",
-     "geneName": "interleukin 10",
-     "assoc": 0.1431,
-     "contribution": 0.03743,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1431
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.992
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201831",
-   "name": "Certolizumab Pegol",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "inflammation",
-    "ankylosing spondylitis",
-    "immune system disorder",
-    "rheumatoid arthritis"
-   ],
-   "indicationCount": 6,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": null
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
    "score": 0.5711,
    "rawScore": 0.179968,
    "geneCount": 1,
@@ -714,6 +624,86 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 9,
+   "score": 0.5711,
+   "rawScore": 0.179968,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1495,
+     "contribution": 0.068649,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1835,
+     "contribution": 0.050927,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1835
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1431,
+     "contribution": 0.03743,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1431
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201831",
+   "name": "Certolizumab Pegol",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "inflammation",
+    "ankylosing spondylitis",
+    "immune system disorder",
+    "rheumatoid arthritis"
+   ],
+   "indicationCount": 6,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": null
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.5711,
    "rawScore": 0.179968,
@@ -773,31 +763,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 12,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 11,
    "score": 0.5711,
    "rawScore": 0.179968,
@@ -941,20 +919,116 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 8,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 13,
+   "score": 0.5711,
+   "rawScore": 0.179968,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.1495,
+     "contribution": 0.068649,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1495
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1835,
+     "contribution": 0.050927,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1835
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    },
+    {
+     "gene": "IL10",
+     "geneId": "ENSG00000136634",
+     "geneName": "interleukin 10",
+     "assoc": 0.1431,
+     "contribution": 0.03743,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1431
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.992
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
+   "approvedFor": [
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
+   ],
+   "indicationCount": 12,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
+   "rank": 14,
    "score": 0.5711,
    "rawScore": 0.179968,
    "geneCount": 1,
@@ -1026,7 +1100,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 14,
+   "rank": 15,
    "score": 0.559,
    "rawScore": 0.1763,
    "geneCount": 1,
@@ -1066,7 +1140,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 15,
+   "rank": 16,
    "score": 0.5555,
    "rawScore": 0.175241,
    "geneCount": 1,
@@ -1123,7 +1197,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 16,
+   "rank": 17,
    "score": 0.5526,
    "rawScore": 0.174364,
    "geneCount": 1,
@@ -1165,7 +1239,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 17,
+   "rank": 18,
    "score": 0.549,
    "rawScore": 0.173273,
    "geneCount": 2,
@@ -1220,63 +1294,6 @@
      "hops": 3,
      "via": "IL17F",
      "viaScore": 0.971
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1743029",
-   "name": "Ibalizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "HIV infectious disease",
-    "HIV-1 infection",
-    "viral infectious disease"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "T-cell surface antigen CD4 inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.5454,
-   "rawScore": 0.172179,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "CD4",
-     "geneId": "ENSG00000010610",
-     "geneName": "CD4 molecule",
-     "assoc": 0.1077,
-     "contribution": 0.107683,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1077
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "HLA-DRB1",
-     "geneId": "ENSG00000196126",
-     "geneName": "major histocompatibility complex, class II, DR beta 1",
-     "assoc": 0.0856,
-     "contribution": 0.064496,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.0856
-      }
-     ],
-     "hops": 3,
-     "via": "CD4",
-     "viaScore": 0.994
     }
    ]
   },
@@ -1392,16 +1409,15 @@
    ]
   },
   {
-   "id": "CHEMBL4297551",
-   "name": "Efgartigimod Alfa",
-   "drugType": "Protein",
+   "id": "CHEMBL4297820",
+   "name": "Rozanolixizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
     "myasthenia gravis"
    ],
-   "indicationCount": 2,
+   "indicationCount": 1,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 antagonist"
+    "IgG receptor FcRn large subunit p51 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1431,15 +1447,16 @@
    ]
   },
   {
-   "id": "CHEMBL4297820",
-   "name": "Rozanolixizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL4297551",
+   "name": "Efgartigimod Alfa",
+   "drugType": "Protein",
    "approvedFor": [
+    "immune system disorder",
     "myasthenia gravis"
    ],
-   "indicationCount": 1,
+   "indicationCount": 2,
    "mechanisms": [
-    "IgG receptor FcRn large subunit p51 inhibitor"
+    "IgG receptor FcRn large subunit p51 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1507,17 +1524,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201716",
-   "name": "Mecasermin",
-   "drugType": "Protein",
+   "id": "CHEMBL1743079",
+   "name": "Teprotumumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "Growth delay",
-    "Laron syndrome",
-    "hypothyroidism"
+    "Graves ophthalmopathy",
+    "Graves disease"
    ],
-   "indicationCount": 3,
+   "indicationCount": 2,
    "mechanisms": [
-    "Insulin-like growth factor I receptor agonist"
+    "Insulin-like growth factor I receptor antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1564,16 +1580,17 @@
    ]
   },
   {
-   "id": "CHEMBL1743079",
-   "name": "Teprotumumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201716",
+   "name": "Mecasermin",
+   "drugType": "Protein",
    "approvedFor": [
-    "Graves ophthalmopathy",
-    "Graves disease"
+    "Growth delay",
+    "Laron syndrome",
+    "hypothyroidism"
    ],
-   "indicationCount": 2,
+   "indicationCount": 3,
    "mechanisms": [
-    "Insulin-like growth factor I receptor antagonist"
+    "Insulin-like growth factor I receptor agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1620,67 +1637,6 @@
    ]
   },
   {
-   "id": "CHEMBL522038",
-   "name": "Ximelagatran",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "Recurrent thrombophlebitis",
-    "blood coagulation disease"
-   ],
-   "indicationCount": 2,
-   "mechanisms": [
-    "Thrombin inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Withdrawn",
-     "detail": "hepatotoxicity"
-    }
-   ],
-   "withdrawn": true,
-   "blackBox": false,
-   "rank": 26,
-   "score": 0.4232,
-   "rawScore": 0.135005,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AFP",
-     "geneId": "ENSG00000081051",
-     "geneName": "alpha fetoprotein",
-     "assoc": 0.2445,
-     "contribution": 0.069091,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2445
-      }
-     ],
-     "hops": 3,
-     "via": "F2",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "F2",
-     "geneId": "ENSG00000180210",
-     "geneName": "coagulation factor II, thrombin",
-     "assoc": 0.172,
-     "contribution": 0.065914,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1201662",
    "name": "Desirudin",
    "drugType": "Protein",
@@ -1697,62 +1653,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 27,
-   "score": 0.4232,
-   "rawScore": 0.135005,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "AFP",
-     "geneId": "ENSG00000081051",
-     "geneName": "alpha fetoprotein",
-     "assoc": 0.2445,
-     "contribution": 0.069091,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.2445
-      }
-     ],
-     "hops": 3,
-     "via": "F2",
-     "viaScore": 0.973
-    },
-    {
-     "gene": "F2",
-     "geneId": "ENSG00000180210",
-     "geneName": "coagulation factor II, thrombin",
-     "assoc": 0.172,
-     "contribution": 0.065914,
-     "drugsOnGene": 11,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.172
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL6068492",
-   "name": "Prothrombin",
-   "drugType": "Protein",
-   "approvedFor": [
-    "blood coagulation disease"
-   ],
-   "indicationCount": 1,
-   "mechanisms": [
-    "Thrombin exogenous protein"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 28,
+   "rank": 26,
    "score": 0.4232,
    "rawScore": 0.135005,
    "geneCount": 1,
@@ -1809,6 +1710,130 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 27,
+   "score": 0.4232,
+   "rawScore": 0.135005,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AFP",
+     "geneId": "ENSG00000081051",
+     "geneName": "alpha fetoprotein",
+     "assoc": 0.2445,
+     "contribution": 0.069091,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2445
+      }
+     ],
+     "hops": 3,
+     "via": "F2",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "F2",
+     "geneId": "ENSG00000180210",
+     "geneName": "coagulation factor II, thrombin",
+     "assoc": 0.172,
+     "contribution": 0.065914,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201666",
+   "name": "Lepirudin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Thromboembolism",
+    "Recurrent thrombophlebitis",
+    "Thrombocytopenia"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Thrombin inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 28,
+   "score": 0.4232,
+   "rawScore": 0.135005,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "AFP",
+     "geneId": "ENSG00000081051",
+     "geneName": "alpha fetoprotein",
+     "assoc": 0.2445,
+     "contribution": 0.069091,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.2445
+      }
+     ],
+     "hops": 3,
+     "via": "F2",
+     "viaScore": 0.973
+    },
+    {
+     "gene": "F2",
+     "geneId": "ENSG00000180210",
+     "geneName": "coagulation factor II, thrombin",
+     "assoc": 0.172,
+     "contribution": 0.065914,
+     "drugsOnGene": 11,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.172
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL539697",
+   "name": "Dabigatran Etexilate",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "Recurrent thrombophlebitis",
+    "venous thromboembolism",
+    "ischemic stroke",
+    "atrial fibrillation"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Thrombin inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "neurotoxicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "vascular toxicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 29,
    "score": 0.4232,
    "rawScore": 0.135005,
@@ -1851,15 +1876,15 @@
    ]
   },
   {
-   "id": "CHEMBL48361",
-   "name": "Dabigatran",
-   "drugType": "Small molecule",
+   "id": "CHEMBL6068492",
+   "name": "Prothrombin",
+   "drugType": "Protein",
    "approvedFor": [
-    "Stroke"
+    "blood coagulation disease"
    ],
    "indicationCount": 1,
    "mechanisms": [
-    "Thrombin inhibitor"
+    "Thrombin exogenous protein"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1964,31 +1989,25 @@
    ]
   },
   {
-   "id": "CHEMBL539697",
-   "name": "Dabigatran Etexilate",
+   "id": "CHEMBL522038",
+   "name": "Ximelagatran",
    "drugType": "Small molecule",
    "approvedFor": [
     "Recurrent thrombophlebitis",
-    "venous thromboembolism",
-    "ischemic stroke",
-    "atrial fibrillation"
+    "blood coagulation disease"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
     "Thrombin inhibitor"
    ],
    "warnings": [
     {
-     "type": "Black Box Warning",
-     "detail": "neurotoxicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "vascular toxicity"
+     "type": "Withdrawn",
+     "detail": "hepatotoxicity"
     }
    ],
-   "withdrawn": false,
-   "blackBox": true,
+   "withdrawn": true,
+   "blackBox": false,
    "rank": 32,
    "score": 0.4232,
    "rawScore": 0.135005,
@@ -2031,15 +2050,13 @@
    ]
   },
   {
-   "id": "CHEMBL1201666",
-   "name": "Lepirudin",
-   "drugType": "Protein",
+   "id": "CHEMBL48361",
+   "name": "Dabigatran",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "Thromboembolism",
-    "Recurrent thrombophlebitis",
-    "Thrombocytopenia"
+    "Stroke"
    ],
-   "indicationCount": 3,
+   "indicationCount": 1,
    "mechanisms": [
     "Thrombin inhibitor"
    ],
@@ -2449,15 +2466,16 @@
    ]
   },
   {
-   "id": "CHEMBL3989944",
-   "name": "Diroximel Fumarate",
+   "id": "CHEMBL2107333",
+   "name": "Dimethyl Fumarate",
    "drugType": "Small molecule",
    "approvedFor": [
-    "immune system disorder",
     "relapsing-remitting multiple sclerosis",
-    "multiple sclerosis"
+    "multiple sclerosis",
+    "immune system disorder",
+    "psoriasis"
    ],
-   "indicationCount": 3,
+   "indicationCount": 4,
    "mechanisms": [
     "Kelch-like ECH-associated protein 1 inhibitor"
    ],
@@ -2516,7 +2534,7 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 253,
+   "rank": 250,
    "score": 0.0118,
    "rawScore": 0.009923,
    "geneCount": 1,
@@ -2556,7 +2574,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 262,
+   "rank": 263,
    "score": 0.0067,
    "rawScore": 0.008374,
    "geneCount": 1,

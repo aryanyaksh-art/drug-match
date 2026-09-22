@@ -7,9 +7,9 @@
  "genesScored": 46,
  "genesWithDrugs": 17,
  "knownDrugCount": 3,
- "candidatesConsidered": 242,
+ "candidatesConsidered": 244,
  "pathsTwoHop": 123,
- "pathsThreeHop": 307,
+ "pathsThreeHop": 309,
  "candidates": [
   {
    "id": "CHEMBL2111100",
@@ -270,31 +270,19 @@
    ]
   },
   {
-   "id": "CHEMBL1201581",
-   "name": "Infliximab",
+   "id": "CHEMBL2108887",
+   "name": "Afelimomab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "psoriasis",
-    "psoriasis vulgaris",
-    "ankylosing spondylitis"
+    "immune system disorder"
    ],
-   "indicationCount": 8,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 5,
    "score": 0.5761,
    "rawScore": 0.229103,
@@ -354,19 +342,31 @@
    ]
   },
   {
-   "id": "CHEMBL2108887",
-   "name": "Afelimomab",
+   "id": "CHEMBL1201580",
+   "name": "Adalimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "ulcerative colitis",
+    "rheumatoid arthritis",
+    "hidradenitis suppurativa",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 14,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 6,
    "score": 0.5761,
    "rawScore": 0.229103,
@@ -506,116 +506,20 @@
    ]
   },
   {
-   "id": "CHEMBL1201580",
-   "name": "Adalimumab",
+   "id": "CHEMBL1743054",
+   "name": "Ozoralizumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "ulcerative colitis",
-    "rheumatoid arthritis",
-    "hidradenitis suppurativa",
-    "psoriasis vulgaris"
+    "rheumatoid arthritis"
    ],
-   "indicationCount": 14,
+   "indicationCount": 1,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    }
-   ],
+   "warnings": [],
    "withdrawn": false,
-   "blackBox": true,
+   "blackBox": false,
    "rank": 8,
-   "score": 0.5761,
-   "rawScore": 0.229103,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNF",
-     "geneId": "ENSG00000232810",
-     "geneName": "tumor necrosis factor",
-     "assoc": 0.21,
-     "contribution": 0.096416,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.21
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "NFKB1",
-     "geneId": "ENSG00000109320",
-     "geneName": "nuclear factor kappa B subunit 1",
-     "assoc": 0.1611,
-     "contribution": 0.073897,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1611
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "CRP",
-     "geneId": "ENSG00000132693",
-     "geneName": "C-reactive protein",
-     "assoc": 0.1328,
-     "contribution": 0.036861,
-     "drugsOnGene": 7,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1328
-      }
-     ],
-     "hops": 3,
-     "via": "TNF",
-     "viaScore": 0.938
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1201572",
-   "name": "Etanercept",
-   "drugType": "Protein",
-   "approvedFor": [
-    "rheumatoid arthritis",
-    "necrosis",
-    "ankylosing spondylitis",
-    "psoriasis vulgaris"
-   ],
-   "indicationCount": 12,
-   "mechanisms": [
-    "TNF-alpha inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "carcinogenicity"
-    },
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
    "score": 0.5761,
    "rawScore": 0.229103,
    "geneCount": 1,
@@ -699,6 +603,90 @@
    ],
    "withdrawn": false,
    "blackBox": true,
+   "rank": 9,
+   "score": 0.5761,
+   "rawScore": 0.229103,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNF",
+     "geneId": "ENSG00000232810",
+     "geneName": "tumor necrosis factor",
+     "assoc": 0.21,
+     "contribution": 0.096416,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.21
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "NFKB1",
+     "geneId": "ENSG00000109320",
+     "geneName": "nuclear factor kappa B subunit 1",
+     "assoc": 0.1611,
+     "contribution": 0.073897,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1611
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "CRP",
+     "geneId": "ENSG00000132693",
+     "geneName": "C-reactive protein",
+     "assoc": 0.1328,
+     "contribution": 0.036861,
+     "drugsOnGene": 7,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1328
+      }
+     ],
+     "hops": 3,
+     "via": "TNF",
+     "viaScore": 0.938
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1201581",
+   "name": "Infliximab",
+   "drugType": "Antibody",
+   "approvedFor": [
+    "immune system disorder",
+    "psoriasis",
+    "psoriasis vulgaris",
+    "ankylosing spondylitis"
+   ],
+   "indicationCount": 8,
+   "mechanisms": [
+    "TNF-alpha inhibitor"
+   ],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    }
+   ],
+   "withdrawn": false,
+   "blackBox": true,
    "rank": 10,
    "score": 0.5761,
    "rawScore": 0.229103,
@@ -758,19 +746,31 @@
    ]
   },
   {
-   "id": "CHEMBL1743054",
-   "name": "Ozoralizumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201572",
+   "name": "Etanercept",
+   "drugType": "Protein",
    "approvedFor": [
-    "rheumatoid arthritis"
+    "rheumatoid arthritis",
+    "necrosis",
+    "ankylosing spondylitis",
+    "psoriasis vulgaris"
    ],
-   "indicationCount": 1,
+   "indicationCount": 12,
    "mechanisms": [
     "TNF-alpha inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "carcinogenicity"
+    },
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
+   "blackBox": true,
    "rank": 11,
    "score": 0.5761,
    "rawScore": 0.229103,
@@ -1179,18 +1179,15 @@
    ]
   },
   {
-   "id": "CHEMBL1743070",
-   "name": "Siltuximab",
+   "id": "CHEMBL1743071",
+   "name": "Sirukumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder",
-    "Giant Lymph Node Hyperplasia",
-    "anemia",
-    "idiopathic multicentric Castleman disease"
+    "immune system disorder"
    ],
-   "indicationCount": 4,
+   "indicationCount": 1,
    "mechanisms": [
-    "Interleukin-6 antagonist"
+    "Interleukin-6 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1254,15 +1251,18 @@
    ]
   },
   {
-   "id": "CHEMBL1743071",
-   "name": "Sirukumab",
+   "id": "CHEMBL1743070",
+   "name": "Siltuximab",
    "drugType": "Antibody",
    "approvedFor": [
-    "immune system disorder"
+    "immune system disorder",
+    "Giant Lymph Node Hyperplasia",
+    "anemia",
+    "idiopathic multicentric Castleman disease"
    ],
-   "indicationCount": 1,
+   "indicationCount": 4,
    "mechanisms": [
-    "Interleukin-6 inhibitor"
+    "Interleukin-6 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -1398,16 +1398,15 @@
    ]
   },
   {
-   "id": "CHEMBL1789844",
-   "name": "Ipilimumab",
+   "id": "CHEMBL2108658",
+   "name": "Tremelimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "renal cell carcinoma",
-    "colorectal neoplasm",
-    "neoplasm",
-    "metastatic melanoma"
+    "non-small cell lung carcinoma",
+    "hepatocellular carcinoma",
+    "neoplasm"
    ],
-   "indicationCount": 7,
+   "indicationCount": 3,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -1473,15 +1472,16 @@
    ]
   },
   {
-   "id": "CHEMBL2108658",
-   "name": "Tremelimumab",
+   "id": "CHEMBL1789844",
+   "name": "Ipilimumab",
    "drugType": "Antibody",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "hepatocellular carcinoma",
-    "neoplasm"
+    "renal cell carcinoma",
+    "colorectal neoplasm",
+    "neoplasm",
+    "metastatic melanoma"
    ],
-   "indicationCount": 3,
+   "indicationCount": 7,
    "mechanisms": [
     "Cytotoxic T-lymphocyte protein 4 inhibitor"
    ],
@@ -1743,81 +1743,6 @@
    ]
   },
   {
-   "id": "CHEMBL3545376",
-   "name": "Erdafitinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "neoplasm",
-    "cancer",
-    "urothelial carcinoma",
-    "urinary bladder carcinoma"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Fibroblast growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 25,
-   "score": 0.2503,
-   "rawScore": 0.103815,
-   "geneCount": 4,
-   "paths": [
-    {
-     "gene": "FGF19",
-     "geneId": "ENSG00000162344",
-     "geneName": "fibroblast growth factor 19",
-     "assoc": 0.1155,
-     "contribution": 0.019996,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1155
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR4",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "FGF19",
-     "geneId": "ENSG00000162344",
-     "geneName": "fibroblast growth factor 19",
-     "assoc": 0.1155,
-     "contribution": 0.014341,
-     "drugsOnGene": 9,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1155
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR1",
-     "viaScore": 0.991
-    },
-    {
-     "gene": "FGF19",
-     "geneId": "ENSG00000162344",
-     "geneName": "fibroblast growth factor 19",
-     "assoc": 0.1155,
-     "contribution": 0.014153,
-     "drugsOnGene": 8,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.1155
-      }
-     ],
-     "hops": 3,
-     "via": "FGFR3",
-     "viaScore": 0.933
-    }
-   ]
-  },
-  {
    "id": "CHEMBL1852688",
    "name": "Infigratinib",
    "drugType": "Small molecule",
@@ -1833,7 +1758,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 26,
+   "rank": 25,
    "score": 0.2503,
    "rawScore": 0.103815,
    "geneCount": 4,
@@ -1902,6 +1827,81 @@
     "intrahepatic cholangiocarcinoma"
    ],
    "indicationCount": 5,
+   "mechanisms": [
+    "Fibroblast growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 26,
+   "score": 0.2503,
+   "rawScore": 0.103815,
+   "geneCount": 4,
+   "paths": [
+    {
+     "gene": "FGF19",
+     "geneId": "ENSG00000162344",
+     "geneName": "fibroblast growth factor 19",
+     "assoc": 0.1155,
+     "contribution": 0.019996,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1155
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR4",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "FGF19",
+     "geneId": "ENSG00000162344",
+     "geneName": "fibroblast growth factor 19",
+     "assoc": 0.1155,
+     "contribution": 0.014341,
+     "drugsOnGene": 9,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1155
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR1",
+     "viaScore": 0.991
+    },
+    {
+     "gene": "FGF19",
+     "geneId": "ENSG00000162344",
+     "geneName": "fibroblast growth factor 19",
+     "assoc": 0.1155,
+     "contribution": 0.014153,
+     "drugsOnGene": 8,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.1155
+      }
+     ],
+     "hops": 3,
+     "via": "FGFR3",
+     "viaScore": 0.933
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL3545376",
+   "name": "Erdafitinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "neoplasm",
+    "cancer",
+    "urothelial carcinoma",
+    "urinary bladder carcinoma"
+   ],
+   "indicationCount": 4,
    "mechanisms": [
     "Fibroblast growth factor receptor inhibitor"
    ],
@@ -2068,16 +2068,18 @@
    ]
   },
   {
-   "id": "CHEMBL5095030",
-   "name": "Motixafortide",
-   "drugType": "Protein",
+   "id": "CHEMBL18442",
+   "name": "Plerixafor",
+   "drugType": "Small molecule",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm"
+    "neoplasm",
+    "lymphoma",
+    "non-Hodgkin lymphoma"
    ],
-   "indicationCount": 2,
+   "indicationCount": 5,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 antagonist"
+    "C-X-C chemokine receptor type 4 partial agonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2124,18 +2126,16 @@
    ]
   },
   {
-   "id": "CHEMBL18442",
-   "name": "Plerixafor",
-   "drugType": "Small molecule",
+   "id": "CHEMBL5095030",
+   "name": "Motixafortide",
+   "drugType": "Protein",
    "approvedFor": [
     "plasma cell myeloma",
-    "neoplasm",
-    "lymphoma",
-    "non-Hodgkin lymphoma"
+    "neoplasm"
    ],
-   "indicationCount": 5,
+   "indicationCount": 2,
    "mechanisms": [
-    "C-X-C chemokine receptor type 4 partial agonist"
+    "C-X-C chemokine receptor type 4 antagonist"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2409,18 +2409,20 @@
    ]
   },
   {
-   "id": "CHEMBL3686884",
-   "name": "E-7090",
+   "id": "CHEMBL4297522",
+   "name": "Pemigatinib",
    "drugType": "Small molecule",
    "approvedFor": [
+    "cholangiocarcinoma",
     "biliary tract cancer",
+    "neoplasm",
     "cancer"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Fibroblast growth factor receptor 2 inhibitor",
+    "Fibroblast growth factor receptor 3 inhibitor",
     "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 3 inhibitor"
+    "Fibroblast growth factor receptor 2 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2484,20 +2486,18 @@
    ]
   },
   {
-   "id": "CHEMBL4297522",
-   "name": "Pemigatinib",
+   "id": "CHEMBL3686884",
+   "name": "E-7090",
    "drugType": "Small molecule",
    "approvedFor": [
-    "cholangiocarcinoma",
     "biliary tract cancer",
-    "neoplasm",
     "cancer"
    ],
-   "indicationCount": 4,
+   "indicationCount": 2,
    "mechanisms": [
-    "Fibroblast growth factor receptor 3 inhibitor",
+    "Fibroblast growth factor receptor 2 inhibitor",
     "Fibroblast growth factor receptor 1 inhibitor",
-    "Fibroblast growth factor receptor 2 inhibitor"
+    "Fibroblast growth factor receptor 3 inhibitor"
    ],
    "warnings": [],
    "withdrawn": false,
@@ -2620,16 +2620,16 @@
    ]
   },
   {
-   "id": "CHEMBL1201834",
-   "name": "Canakinumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL1201830",
+   "name": "Rilonacept",
+   "drugType": "Protein",
    "approvedFor": [
-    "familial Mediterranean fever",
-    "immune system disorder",
-    "juvenile idiopathic arthritis",
-    "gout"
+    "pericarditis",
+    "Arthritis",
+    "Familial cold urticaria",
+    "Muckle-Wells syndrome"
    ],
-   "indicationCount": 9,
+   "indicationCount": 6,
    "mechanisms": [
     "Interleukin-1 beta inhibitor"
    ],
@@ -2696,7 +2696,7 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 153,
+   "rank": 157,
    "score": 0.0401,
    "rawScore": 0.022966,
    "geneCount": 4,

@@ -7,10 +7,89 @@
  "genesScored": 49,
  "genesWithDrugs": 17,
  "knownDrugCount": 5,
- "candidatesConsidered": 210,
+ "candidatesConsidered": 239,
  "pathsTwoHop": 135,
- "pathsThreeHop": 319,
+ "pathsThreeHop": 373,
  "candidates": [
+  {
+   "id": "CHEMBL2095222",
+   "name": "Ocriplasmin",
+   "drugType": "Protein",
+   "approvedFor": [
+    "Abnormal retinal morphology",
+    "eye disorder"
+   ],
+   "indicationCount": 2,
+   "mechanisms": [
+    "Laminin hydrolytic enzyme",
+    "Fibronectin proteolytic enzyme",
+    "Collagen hydrolytic enzyme"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 1,
+   "score": 1.0,
+   "rawScore": 1.701654,
+   "geneCount": 38,
+   "paths": [
+    {
+     "gene": "FN1",
+     "geneId": "ENSG00000115414",
+     "geneName": "fibronectin 1",
+     "assoc": 0.6022,
+     "contribution": 0.14055,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6022
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "LAMA1",
+     "geneId": "ENSG00000101680",
+     "geneName": "laminin subunit alpha 1",
+     "assoc": 0.5987,
+     "contribution": 0.139739,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5987
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "ITGAV",
+     "geneId": "ENSG00000138448",
+     "geneName": "integrin subunit alpha V",
+     "assoc": 0.9083,
+     "contribution": 0.136475,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.9046
+      },
+      {
+       "id": "literature",
+       "score": 0.0395
+      }
+     ],
+     "hops": 3,
+     "via": "FN1",
+     "viaScore": 0.999
+    }
+   ]
+  },
   {
    "id": "CHEMBL1770916",
    "name": "Nirogacestat",
@@ -27,8 +106,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 1,
-   "score": 1.0,
+   "rank": 2,
+   "score": 0.882,
    "rawScore": 1.50288,
    "geneCount": 6,
    "paths": [
@@ -111,8 +190,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 2,
-   "score": 0.8326,
+   "rank": 3,
+   "score": 0.7361,
    "rawScore": 1.257357,
    "geneCount": 2,
    "paths": [
@@ -182,67 +261,39 @@
    ]
   },
   {
-   "id": "CHEMBL2095222",
-   "name": "Ocriplasmin",
-   "drugType": "Protein",
+   "id": "CHEMBL1201607",
+   "name": "Natalizumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "Abnormal retinal morphology",
-    "eye disorder"
+    "multiple sclerosis",
+    "inflammation",
+    "relapsing-remitting multiple sclerosis",
+    "Crohn disease"
    ],
-   "indicationCount": 2,
+   "indicationCount": 4,
    "mechanisms": [
-    "Laminin hydrolytic enzyme",
-    "Fibronectin proteolytic enzyme",
-    "Collagen hydrolytic enzyme"
+    "Integrin alpha-4/beta-1 inhibitor",
+    "Integrin alpha-4/beta-7 inhibitor"
    ],
-   "warnings": [],
+   "warnings": [
+    {
+     "type": "Black Box Warning",
+     "detail": "infectious disease"
+    }
+   ],
    "withdrawn": false,
-   "blackBox": false,
-   "rank": 3,
-   "score": 0.7458,
-   "rawScore": 1.130058,
-   "geneCount": 38,
+   "blackBox": true,
+   "rank": 4,
+   "score": 0.668,
+   "rawScore": 1.142521,
+   "geneCount": 3,
    "paths": [
-    {
-     "gene": "FN1",
-     "geneId": "ENSG00000115414",
-     "geneName": "fibronectin 1",
-     "assoc": 0.6022,
-     "contribution": 0.14055,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6022
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "LAMA1",
-     "geneId": "ENSG00000101680",
-     "geneName": "laminin subunit alpha 1",
-     "assoc": 0.5987,
-     "contribution": 0.139739,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5987
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
     {
      "gene": "ITGAV",
      "geneId": "ENSG00000138448",
      "geneName": "integrin subunit alpha V",
      "assoc": 0.9083,
-     "contribution": 0.136475,
+     "contribution": 0.376806,
      "drugsOnGene": 1,
      "evidence": [
       {
@@ -255,7 +306,41 @@
       }
      ],
      "hops": 3,
-     "via": "FN1",
+     "via": "ITGB1",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "THBS1",
+     "geneId": "ENSG00000137801",
+     "geneName": "thrombospondin 1",
+     "assoc": 0.6404,
+     "contribution": 0.309291,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6404
+      }
+     ],
+     "hops": 3,
+     "via": "ITGB1",
+     "viaScore": 0.989
+    },
+    {
+     "gene": "FN1",
+     "geneId": "ENSG00000115414",
+     "geneName": "fibronectin 1",
+     "assoc": 0.6022,
+     "contribution": 0.249811,
+     "drugsOnGene": 1,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6022
+      }
+     ],
+     "hops": 3,
+     "via": "ITGB1",
      "viaScore": 0.999
     }
    ]
@@ -277,9 +362,9 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 4,
-   "score": 0.7102,
-   "rawScore": 1.077952,
+   "rank": 5,
+   "score": 0.6519,
+   "rawScore": 1.115508,
    "geneCount": 3,
    "paths": [
     {
@@ -364,8 +449,82 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 5,
-   "score": 0.643,
+   "rank": 6,
+   "score": 0.5711,
+   "rawScore": 0.979411,
+   "geneCount": 1,
+   "paths": [
+    {
+     "gene": "TNFRSF21",
+     "geneId": "ENSG00000146072",
+     "geneName": "TNF receptor superfamily member 21",
+     "assoc": 0.7397,
+     "contribution": 0.423982,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.7397
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.998
+    },
+    {
+     "gene": "APP",
+     "geneId": "ENSG00000142192",
+     "geneName": "amyloid beta precursor protein",
+     "assoc": 0.6756,
+     "contribution": 0.388007,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6437
+      },
+      {
+       "id": "literature",
+       "score": 0.0895
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "PSEN1",
+     "geneId": "ENSG00000080815",
+     "geneName": "presenilin 1",
+     "assoc": 0.5975,
+     "contribution": 0.167422,
+     "drugsOnGene": 4,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.5975
+      }
+     ],
+     "hops": 3,
+     "via": "APP",
+     "viaScore": 0.999
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL149082",
+   "name": "Tramiprosate",
+   "drugType": "Small molecule",
+   "approvedFor": [],
+   "indicationCount": 0,
+   "mechanisms": [
+    "Amyloid-beta A4 protein stabiliser"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 7,
+   "score": 0.5711,
    "rawScore": 0.979411,
    "geneCount": 1,
    "paths": [
@@ -442,82 +601,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 6,
-   "score": 0.643,
-   "rawScore": 0.979411,
-   "geneCount": 1,
-   "paths": [
-    {
-     "gene": "TNFRSF21",
-     "geneId": "ENSG00000146072",
-     "geneName": "TNF receptor superfamily member 21",
-     "assoc": 0.7397,
-     "contribution": 0.423982,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.7397
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.998
-    },
-    {
-     "gene": "APP",
-     "geneId": "ENSG00000142192",
-     "geneName": "amyloid beta precursor protein",
-     "assoc": 0.6756,
-     "contribution": 0.388007,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6437
-      },
-      {
-       "id": "literature",
-       "score": 0.0895
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "PSEN1",
-     "geneId": "ENSG00000080815",
-     "geneName": "presenilin 1",
-     "assoc": 0.5975,
-     "contribution": 0.167422,
-     "drugsOnGene": 4,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.5975
-      }
-     ],
-     "hops": 3,
-     "via": "APP",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL149082",
-   "name": "Tramiprosate",
-   "drugType": "Small molecule",
-   "approvedFor": [],
-   "indicationCount": 0,
-   "mechanisms": [
-    "Amyloid-beta A4 protein stabiliser"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 7,
-   "score": 0.643,
+   "rank": 8,
+   "score": 0.5711,
    "rawScore": 0.979411,
    "geneCount": 1,
    "paths": [
@@ -598,8 +683,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 8,
-   "score": 0.643,
+   "rank": 9,
+   "score": 0.5711,
    "rawScore": 0.979411,
    "geneCount": 1,
    "paths": [
@@ -661,91 +746,6 @@
    ]
   },
   {
-   "id": "CHEMBL1201607",
-   "name": "Natalizumab",
-   "drugType": "Antibody",
-   "approvedFor": [
-    "multiple sclerosis",
-    "inflammation",
-    "relapsing-remitting multiple sclerosis",
-    "Crohn disease"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Integrin alpha-4/beta-1 inhibitor",
-    "Integrin alpha-4/beta-7 inhibitor"
-   ],
-   "warnings": [
-    {
-     "type": "Black Box Warning",
-     "detail": "infectious disease"
-    }
-   ],
-   "withdrawn": false,
-   "blackBox": true,
-   "rank": 9,
-   "score": 0.6134,
-   "rawScore": 0.935908,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "ITGAV",
-     "geneId": "ENSG00000138448",
-     "geneName": "integrin subunit alpha V",
-     "assoc": 0.9083,
-     "contribution": 0.376806,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.9046
-      },
-      {
-       "id": "literature",
-       "score": 0.0395
-      }
-     ],
-     "hops": 3,
-     "via": "ITGB1",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "THBS1",
-     "geneId": "ENSG00000137801",
-     "geneName": "thrombospondin 1",
-     "assoc": 0.6404,
-     "contribution": 0.309291,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6404
-      }
-     ],
-     "hops": 3,
-     "via": "ITGB1",
-     "viaScore": 0.989
-    },
-    {
-     "gene": "FN1",
-     "geneId": "ENSG00000115414",
-     "geneName": "fibronectin 1",
-     "assoc": 0.6022,
-     "contribution": 0.249811,
-     "drugsOnGene": 1,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6022
-      }
-     ],
-     "hops": 3,
-     "via": "ITGB1",
-     "viaScore": 0.999
-    }
-   ]
-  },
-  {
    "id": "CHEMBL24828",
    "name": "Vandetanib",
    "drugType": "Small molecule",
@@ -770,7 +770,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 10,
-   "score": 0.5355,
+   "score": 0.4774,
    "rawScore": 0.821694,
    "geneCount": 24,
    "paths": [
@@ -864,7 +864,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 11,
-   "score": 0.4809,
+   "score": 0.4299,
    "rawScore": 0.741672,
    "geneCount": 18,
    "paths": [
@@ -948,7 +948,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 12,
-   "score": 0.4765,
+   "score": 0.4261,
    "rawScore": 0.735235,
    "geneCount": 1,
    "paths": [
@@ -1024,7 +1024,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 13,
-   "score": 0.4578,
+   "score": 0.4098,
    "rawScore": 0.707834,
    "geneCount": 4,
    "paths": [
@@ -1112,7 +1112,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 14,
-   "score": 0.4504,
+   "score": 0.4033,
    "rawScore": 0.696936,
    "geneCount": 2,
    "paths": [
@@ -1194,7 +1194,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 15,
-   "score": 0.4089,
+   "score": 0.3672,
    "rawScore": 0.636064,
    "geneCount": 1,
    "paths": [
@@ -1235,7 +1235,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 16,
-   "score": 0.408,
+   "score": 0.3664,
    "rawScore": 0.634699,
    "geneCount": 5,
    "paths": [
@@ -1316,90 +1316,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 17,
-   "score": 0.4063,
-   "rawScore": 0.632287,
-   "geneCount": 3,
-   "paths": [
-    {
-     "gene": "CDH5",
-     "geneId": "ENSG00000179776",
-     "geneName": "cadherin 5",
-     "assoc": 0.6357,
-     "contribution": 0.131758,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6357
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.809,
-     "contribution": 0.119905,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6348
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4771
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.809,
-     "contribution": 0.108128,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6348
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4771
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.85
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL4303214",
-   "name": "Fruquintinib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "colorectal neoplasm",
-    "neoplasm",
-    "colorectal cancer",
-    "cancer"
-   ],
-   "indicationCount": 4,
-   "mechanisms": [
-    "Vascular endothelial growth factor receptor inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
-   "rank": 18,
-   "score": 0.4063,
+   "score": 0.3649,
    "rawScore": 0.632287,
    "geneCount": 3,
    "paths": [
@@ -1481,8 +1398,91 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
+   "rank": 18,
+   "score": 0.3649,
+   "rawScore": 0.632287,
+   "geneCount": 3,
+   "paths": [
+    {
+     "gene": "CDH5",
+     "geneId": "ENSG00000179776",
+     "geneName": "cadherin 5",
+     "assoc": 0.6357,
+     "contribution": 0.131758,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6357
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.809,
+     "contribution": 0.119905,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6348
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4771
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.809,
+     "contribution": 0.108128,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6348
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4771
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.85
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL4303214",
+   "name": "Fruquintinib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "colorectal neoplasm",
+    "neoplasm",
+    "colorectal cancer",
+    "cancer"
+   ],
+   "indicationCount": 4,
+   "mechanisms": [
+    "Vascular endothelial growth factor receptor inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
    "rank": 19,
-   "score": 0.4063,
+   "score": 0.3649,
    "rawScore": 0.632287,
    "geneCount": 3,
    "paths": [
@@ -1562,7 +1562,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 20,
-   "score": 0.3983,
+   "score": 0.358,
    "rawScore": 0.620596,
    "geneCount": 1,
    "paths": [
@@ -1603,7 +1603,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 21,
-   "score": 0.3968,
+   "score": 0.3566,
    "rawScore": 0.618276,
    "geneCount": 1,
    "paths": [
@@ -1653,7 +1653,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 22,
-   "score": 0.3968,
+   "score": 0.3566,
    "rawScore": 0.618276,
    "geneCount": 1,
    "paths": [
@@ -1706,7 +1706,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 23,
-   "score": 0.3824,
+   "score": 0.3441,
    "rawScore": 0.59723,
    "geneCount": 3,
    "paths": [
@@ -1750,7 +1750,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 24,
-   "score": 0.3775,
+   "score": 0.3399,
    "rawScore": 0.590059,
    "geneCount": 6,
    "paths": [
@@ -1831,7 +1831,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 25,
-   "score": 0.3594,
+   "score": 0.3241,
    "rawScore": 0.563558,
    "geneCount": 4,
    "paths": [
@@ -1917,7 +1917,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 26,
-   "score": 0.344,
+   "score": 0.3107,
    "rawScore": 0.540876,
    "geneCount": 1,
    "paths": [
@@ -1959,7 +1959,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 27,
-   "score": 0.3435,
+   "score": 0.3103,
    "rawScore": 0.540212,
    "geneCount": 2,
    "paths": [
@@ -2025,7 +2025,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 28,
-   "score": 0.3401,
+   "score": 0.3072,
    "rawScore": 0.535127,
    "geneCount": 4,
    "paths": [
@@ -2083,16 +2083,13 @@
    ]
   },
   {
-   "id": "CHEMBL1743062",
-   "name": "Ramucirumab",
-   "drugType": "Antibody",
+   "id": "CHEMBL3186534",
+   "name": "Rivoceranib",
+   "drugType": "Small molecule",
    "approvedFor": [
-    "gastroesophageal junction adenocarcinoma",
-    "gastric neoplasm",
-    "non-small cell lung carcinoma",
-    "gastric adenocarcinoma"
+    "breast cancer"
    ],
-   "indicationCount": 6,
+   "indicationCount": 1,
    "mechanisms": [
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
@@ -2100,7 +2097,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 29,
-   "score": 0.3177,
+   "score": 0.2877,
    "rawScore": 0.50228,
    "geneCount": 1,
    "paths": [
@@ -2166,13 +2163,16 @@
    ]
   },
   {
-   "id": "CHEMBL3186534",
-   "name": "Rivoceranib",
-   "drugType": "Small molecule",
+   "id": "CHEMBL1743062",
+   "name": "Ramucirumab",
+   "drugType": "Antibody",
    "approvedFor": [
-    "breast cancer"
+    "gastroesophageal junction adenocarcinoma",
+    "gastric neoplasm",
+    "non-small cell lung carcinoma",
+    "gastric adenocarcinoma"
    ],
-   "indicationCount": 1,
+   "indicationCount": 6,
    "mechanisms": [
     "Vascular endothelial growth factor receptor 2 inhibitor"
    ],
@@ -2180,7 +2180,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 30,
-   "score": 0.3177,
+   "score": 0.2877,
    "rawScore": 0.50228,
    "geneCount": 1,
    "paths": [
@@ -2242,6 +2242,90 @@
      "hops": 3,
      "via": "KDR",
      "viaScore": 0.986
+    }
+   ]
+  },
+  {
+   "id": "CHEMBL1336",
+   "name": "Sorafenib",
+   "drugType": "Small molecule",
+   "approvedFor": [
+    "renal cell carcinoma",
+    "neoplasm",
+    "hepatocellular carcinoma"
+   ],
+   "indicationCount": 3,
+   "mechanisms": [
+    "Serine/threonine-protein kinase RAF inhibitor",
+    "Platelet-derived growth factor receptor beta inhibitor",
+    "Serine/threonine-protein kinase B-raf inhibitor"
+   ],
+   "warnings": [],
+   "withdrawn": false,
+   "blackBox": false,
+   "rank": 31,
+   "score": 0.2874,
+   "rawScore": 0.501717,
+   "geneCount": 9,
+   "paths": [
+    {
+     "gene": "PDGFRB",
+     "geneId": "ENSG00000113721",
+     "geneName": "platelet derived growth factor receptor beta",
+     "assoc": 0.6524,
+     "contribution": 0.094275,
+     "drugsOnGene": 14,
+     "evidence": [
+      {
+       "id": "animal_model",
+       "score": 0.6018
+      },
+      {
+       "id": "literature",
+       "score": 0.1273
+      }
+     ],
+     "hops": 2,
+     "via": null,
+     "viaScore": null
+    },
+    {
+     "gene": "CDH5",
+     "geneId": "ENSG00000179776",
+     "geneName": "cadherin 5",
+     "assoc": 0.6357,
+     "contribution": 0.084904,
+     "drugsOnGene": 17,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6357
+      }
+     ],
+     "hops": 3,
+     "via": "KDR",
+     "viaScore": 0.999
+    },
+    {
+     "gene": "VEGFA",
+     "geneId": "ENSG00000112715",
+     "geneName": "vascular endothelial growth factor A",
+     "assoc": 0.809,
+     "contribution": 0.077266,
+     "drugsOnGene": 12,
+     "evidence": [
+      {
+       "id": "literature",
+       "score": 0.6348
+      },
+      {
+       "id": "animal_model",
+       "score": 0.4771
+      }
+     ],
+     "hops": 3,
+     "via": "FLT1",
+     "viaScore": 0.82
     }
    ]
   },
@@ -2264,8 +2348,8 @@
    "warnings": [],
    "withdrawn": false,
    "blackBox": false,
-   "rank": 31,
-   "score": 0.3173,
+   "rank": 32,
+   "score": 0.2874,
    "rawScore": 0.501717,
    "geneCount": 9,
    "paths": [
@@ -2358,92 +2442,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 32,
-   "score": 0.3173,
-   "rawScore": 0.501717,
-   "geneCount": 9,
-   "paths": [
-    {
-     "gene": "PDGFRB",
-     "geneId": "ENSG00000113721",
-     "geneName": "platelet derived growth factor receptor beta",
-     "assoc": 0.6524,
-     "contribution": 0.094275,
-     "drugsOnGene": 14,
-     "evidence": [
-      {
-       "id": "animal_model",
-       "score": 0.6018
-      },
-      {
-       "id": "literature",
-       "score": 0.1273
-      }
-     ],
-     "hops": 2,
-     "via": null,
-     "viaScore": null
-    },
-    {
-     "gene": "CDH5",
-     "geneId": "ENSG00000179776",
-     "geneName": "cadherin 5",
-     "assoc": 0.6357,
-     "contribution": 0.084904,
-     "drugsOnGene": 17,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6357
-      }
-     ],
-     "hops": 3,
-     "via": "KDR",
-     "viaScore": 0.999
-    },
-    {
-     "gene": "VEGFA",
-     "geneId": "ENSG00000112715",
-     "geneName": "vascular endothelial growth factor A",
-     "assoc": 0.809,
-     "contribution": 0.077266,
-     "drugsOnGene": 12,
-     "evidence": [
-      {
-       "id": "literature",
-       "score": 0.6348
-      },
-      {
-       "id": "animal_model",
-       "score": 0.4771
-      }
-     ],
-     "hops": 3,
-     "via": "FLT1",
-     "viaScore": 0.82
-    }
-   ]
-  },
-  {
-   "id": "CHEMBL1336",
-   "name": "Sorafenib",
-   "drugType": "Small molecule",
-   "approvedFor": [
-    "renal cell carcinoma",
-    "neoplasm",
-    "hepatocellular carcinoma"
-   ],
-   "indicationCount": 3,
-   "mechanisms": [
-    "Serine/threonine-protein kinase RAF inhibitor",
-    "Platelet-derived growth factor receptor beta inhibitor",
-    "Serine/threonine-protein kinase B-raf inhibitor"
-   ],
-   "warnings": [],
-   "withdrawn": false,
-   "blackBox": false,
    "rank": 33,
-   "score": 0.3173,
+   "score": 0.2874,
    "rawScore": 0.501717,
    "geneCount": 9,
    "paths": [
@@ -2523,7 +2523,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 34,
-   "score": 0.3171,
+   "score": 0.2873,
    "rawScore": 0.501509,
    "geneCount": 4,
    "paths": [
@@ -2603,7 +2603,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 35,
-   "score": 0.312,
+   "score": 0.2828,
    "rawScore": 0.493968,
    "geneCount": 1,
    "paths": [
@@ -2648,7 +2648,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 36,
-   "score": 0.3034,
+   "score": 0.2753,
    "rawScore": 0.481372,
    "geneCount": 25,
    "paths": [
@@ -2736,7 +2736,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 37,
-   "score": 0.3019,
+   "score": 0.274,
    "rawScore": 0.479156,
    "geneCount": 6,
    "paths": [
@@ -2798,12 +2798,12 @@
    ]
   },
   {
-   "id": "CHEMBL4594350",
-   "name": "Adagrasib",
+   "id": "CHEMBL4535757",
+   "name": "Sotorasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "neoplasm",
-    "non-small cell lung carcinoma"
+    "non-small cell lung carcinoma",
+    "neoplasm"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -2813,7 +2813,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 38,
-   "score": 0.294,
+   "score": 0.2672,
    "rawScore": 0.467628,
    "geneCount": 1,
    "paths": [
@@ -2849,12 +2849,12 @@
    ]
   },
   {
-   "id": "CHEMBL4535757",
-   "name": "Sotorasib",
+   "id": "CHEMBL4594350",
+   "name": "Adagrasib",
    "drugType": "Small molecule",
    "approvedFor": [
-    "non-small cell lung carcinoma",
-    "neoplasm"
+    "neoplasm",
+    "non-small cell lung carcinoma"
    ],
    "indicationCount": 2,
    "mechanisms": [
@@ -2864,7 +2864,7 @@
    "withdrawn": false,
    "blackBox": false,
    "rank": 39,
-   "score": 0.294,
+   "score": 0.2672,
    "rawScore": 0.467628,
    "geneCount": 1,
    "paths": [
@@ -2922,7 +2922,7 @@
    "withdrawn": false,
    "blackBox": true,
    "rank": 40,
-   "score": 0.2909,
+   "score": 0.2644,
    "rawScore": 0.463019,
    "geneCount": 11,
    "paths": [
@@ -3010,8 +3010,8 @@
    ],
    "withdrawn": false,
    "blackBox": true,
-   "rank": 115,
-   "score": 0.0446,
+   "rank": 127,
+   "score": 0.05,
    "rawScore": 0.101884,
    "geneCount": 2,
    "paths": [
