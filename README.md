@@ -113,6 +113,31 @@ Run `python pipeline/analysis.py` to reproduce all of this.
 
 ---
 
+## A sharper, independent check: does the mechanism point the right way?
+
+Everything above asks "is this drug connected to this disease". This asks a harder question: for genes where human genetics tells us the *direction* of effect -- does losing this gene's function cause the disease, or protect against it -- does the drug's actual mechanism push in the direction that would help?
+
+This echoes a well-known finding: [Nelson et al., *Nature Genetics* 2015](https://doi.org/10.1038/ng.3314) found that approved drugs are markedly more likely than chance to have a mechanism genetically concordant with their target disease. We built a simplified version of that check on our own data.
+
+**The leakage trap here is worse than the one already solved.** Open Targets' direction-of-effect fields are populated for many pairs by `clinical_precedence` -- which is just "a drug with this mechanism is already approved for this disease," restated as evidence. Using it would make the whole check circular. We exclude `clinical_precedence` unconditionally and use only `eva` (ClinVar), `gene2phenotype`, `orphanet`, `genomics_england`, `gene_burden` and `uniprot_variants` -- independent human genetics, never drug history.
+
+Scoped to the curated 100 diseases only, on the (disease, gene) pairs that actually appear in their scored candidate paths:
+
+| | Genetic concordance |
+|---|---|
+| Already-approved drugs | **40.4%** (19 of 47 assessable) |
+| Our novel candidates | **21.1%** (31 of 147 assessable) |
+
+Two-proportion z-test: z = 2.64, p = 0.008. Real drugs are genetically concordant almost twice as often as our candidates, and that gap is unlikely to be noise despite the small sample.
+
+**This is the honest reading:** genetic concordance is a real, independent signal our current ranking does not use. It did not have to line up with the literature -- it does, on the first alphabetical examples: **lumacaftor, tezacaftor, ivacaftor and elexacaftor for cystic fibrosis** (the real CFTR-modulator drug class) and **the urate-transporter inhibitors for gout** both fall out correctly, with the script having no built-in knowledge of what these drugs are.
+
+**Caveats, stated plainly:** only 165 of 1,903 candidate pairs (8.7%) had unambiguous, non-drug-derived direction evidence at all -- most genes simply do not have this data. The sample (47 known, 147 novel) is small. This is reported as a diagnostic finding, not folded into the live ranking score, precisely because a signal this data-sparse should not be allowed to silently reweight a validated result days before a deadline. Filtering or boosting candidates by concordance where the data exists is a legitimate next step, not yet done.
+
+Run `python pipeline/mechanism_direction.py` to reproduce this.
+
+---
+
 ## Running it
 
 ```bash
@@ -140,6 +165,7 @@ The web app reads **only** precomputed JSON. It never calls an API, so it works 
 pipeline/diseases.py   the curated 100 diseases, with resolved MONDO ids
 pipeline/select_diseases.py  picks 320 more by a rule fixed in advance
 pipeline/analysis.py   sensitivity, bootstrap, ablation, negative control
+pipeline/mechanism_direction.py  genetic-concordance check (independent of the main score)
 pipeline/fetch.py      Open Targets GraphQL, batched with aliases
 pipeline/score.py      degree-weighted path scoring, 2-hop and 3-hop
 pipeline/validate.py   ranks known treatments, compares against two baselines
