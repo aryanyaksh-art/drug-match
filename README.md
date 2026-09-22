@@ -4,7 +4,7 @@
 
 # Off The Shelf
 
-**[Live site: off-the-shelf-phi.vercel.app](https://off-the-shelf-phi.vercel.app)** · [How it works](#how-the-ranking-works) · [Does it work?](#does-it-work) · [License: MIT](LICENSE)
+**[Live site: off-the-shelf-phi.vercel.app](https://off-the-shelf-phi.vercel.app)** · [How it works](#how-the-ranking-works) · [Does it work?](#does-it-work) · [License: MIT](LICENSE) · [Handoff doc for a new session](docs/HANDOFF.md)
 
 Finds already-approved drugs that could treat diseases with no good treatment, and shows the biology behind each suggestion.
 
