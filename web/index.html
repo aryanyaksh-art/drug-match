@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Off The Shelf — drug repurposing candidates</title>
-<meta name="description" content="Finds already-approved drugs that could treat diseases with no good treatment, and shows the biology behind each suggestion.">
+<title>Off The Shelf: drug repurposing candidates</title>
+<meta name="description" content="Rank already-approved drugs against diseases with no treatment, and see the biology behind every suggestion.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
   <div class="wrap wide herocontent">
     <div class="herotext">
       <h1>Old drugs.<br>Diseases nobody's<br>tried them on.</h1>
-      <p class="tagline">Type a disease. Get ranked, already-approved drugs, each with the exact biological path connecting it to that disease.</p>
+      <p class="tagline">Type a disease. See which approved drugs might treat it, and exactly why.</p>
 
       <div class="searchrow">
         <label class="srch" for="q">
@@ -38,20 +38,33 @@
     </div>
   </div>
 
-  <div class="callout c1" style="left:87%; top:6%;">
-    <span class="dot"></span><span class="lead"></span>
-    <span class="cnum" id="statDiseases">—</span>
-    <span class="clabel">diseases scored</span>
+  <svg class="hero-lines" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="780" y1="65" x2="900" y2="140"></line>
+    <line x1="720" y1="410" x2="620" y2="460"></line>
+    <line x1="480" y1="860" x2="430" y2="820"></line>
+  </svg>
+
+  <span class="dot" style="left:90%; top:14%;"></span>
+  <span class="dot" style="left:62%; top:46%;"></span>
+  <span class="dot" style="left:43%; top:82%;"></span>
+
+  <div class="callout" style="left:70%; top:4%;">
+    <div class="card">
+      <span class="cnum" id="statDiseases">—</span>
+      <span class="clabel">diseases scored</span>
+    </div>
   </div>
-  <div class="callout c2 down" style="left:64%; top:44%;">
-    <span class="dot"></span><span class="lead"></span>
-    <span class="cnum" id="statPairs">—</span>
-    <span class="clabel">known pairs tested</span>
+  <div class="callout" style="left:70%; top:38%;">
+    <div class="card">
+      <span class="cnum" id="statPairs">—</span>
+      <span class="clabel">known pairs tested</span>
+    </div>
   </div>
-  <div class="callout c3 down right" style="left:44%; top:80%;">
-    <span class="dot"></span><span class="lead"></span>
-    <span class="cnum" id="statRare">—</span>
-    <span class="clabel">rare-disease median</span>
+  <div class="callout" style="left:50%; top:88%;">
+    <div class="card">
+      <span class="cnum" id="statRare">—</span>
+      <span class="clabel">rare-disease median</span>
+    </div>
   </div>
 </header>
 
@@ -65,15 +78,15 @@
   <details class="how">
     <summary>How the ranking works</summary>
     <div class="howbody">
-      <p>Every candidate is reached by a two-step path: a drug <strong>targets a gene</strong>, and that gene is <strong>associated with the disease</strong>. We add up every such path a drug has into the disease.</p>
-      <p>Paths are not counted equally. A gene that hundreds of drugs hit, or a drug that hits hundreds of genes, tells you very little — everything connects through it. So each path is divided by how connected the gene and the drug are, using the damping exponent <code>w = 0.4</code> published in Project Rephetio. A path through a specific, sparsely-connected gene counts for much more than one through a hub.</p>
-      <p class="warn">Open Targets scores gene–disease links partly from <em>known drug</em> evidence. Using that would mean reading the answer off the back of the book, so we exclude it. Every number shown here comes from genetics, animal models, expression and literature only.</p>
-      <p class="credit">Method after <a href="https://doi.org/10.7554/eLife.26726" target="_blank" rel="noopener">Himmelstein et al., Project Rephetio, eLife 2017</a>. Data from the <a href="https://platform.opentargets.org/" target="_blank" rel="noopener">Open Targets Platform</a>. Related modern work: <a href="https://doi.org/10.1038/s41591-024-03233-x" target="_blank" rel="noopener">TxGNN, Nature Medicine 2024</a>.</p>
+      <p>A drug reaches a disease through a two-step path. It targets a gene, and that gene connects to the disease. We add up every path a drug has into a disease and rank drugs by the total.</p>
+      <p>Not every path counts the same. A gene that hundreds of drugs hit tells you almost nothing, because everything runs through it. We divide each path by how connected its gene and drug are, using the damping exponent <code>w = 0.4</code> from Project Rephetio. A path through a rare, specific gene counts for far more than one through a hub.</p>
+      <p class="warn">Open Targets scores some gene-disease links using evidence pulled from known drugs. That would let us read the answer off the back of the book, so we cut it. Every number on this page comes from genetics, animal models, gene expression, and scientific literature. Nothing drug-derived.</p>
+      <p class="credit">Method from <a href="https://doi.org/10.7554/eLife.26726" target="_blank" rel="noopener">Himmelstein et al., Project Rephetio, eLife 2017</a>. Data from the <a href="https://platform.opentargets.org/" target="_blank" rel="noopener">Open Targets Platform</a>. Related work: <a href="https://doi.org/10.1038/s41591-024-03233-x" target="_blank" rel="noopener">TxGNN, Nature Medicine 2024</a>.</p>
     </div>
   </details>
 
   <details class="how">
-    <summary>How we tested it, and where it falls down</summary>
+    <summary>How we tested it, and where it fails</summary>
     <div class="howbody" id="analysis">
       <p class="credit">Loading test results…</p>
     </div>
@@ -83,7 +96,7 @@
 
 <footer class="foot">
   <div class="wrap">
-    <p><strong>This is a hypothesis generator for researchers, not medical advice.</strong> Nothing here has been tested in patients for the disease it is listed under. Every candidate shown would need laboratory work and clinical trials before it could be used. Do not make any treatment decision from this page.</p>
+    <p><strong>This tool generates hypotheses for researchers. It is not medical advice.</strong> Nothing here has been tested in patients for the disease it lists. Every candidate needs laboratory work and clinical trials before anyone could use it. Do not make a treatment decision from this page.</p>
     <p class="meta" id="footmeta"></p>
   </div>
 </footer>

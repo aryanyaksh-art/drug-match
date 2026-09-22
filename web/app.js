@@ -50,10 +50,10 @@ async function boot() {
     renderChips();
     renderFootMeta(payload);
     renderHeroStats(payload);
-    stage.innerHTML = '<p class="empty">Search a disease above, or pick one of the examples.</p>';
+    stage.innerHTML = '<p class="empty">Search a disease above, or try one of the examples below.</p>';
   } catch (err) {
-    stage.innerHTML = '<p class="empty">Could not load the disease index. If you opened this file directly, '
-      + 'run a local server instead: <code>python -m http.server</code> inside the web folder.</p>';
+    stage.innerHTML = '<p class="empty">We could not load the disease index. If you opened this file directly, '
+      + 'run a local server instead. Try <code>python -m http.server</code> inside the web folder.</p>';
     console.error(err);
   }
 }
@@ -85,8 +85,8 @@ function renderFootMeta(payload) {
 
 function renderHeroStats(payload) {
   // Real numbers standing in for the marketing stats a hero section usually
-  // carries -- pulled from the same data the rest of the page reads, so
-  // this can never drift out of sync with what the site actually measures.
+  // carries, pulled from the same data the rest of the page reads. They
+  // can never drift out of sync with what the site actually measures.
   const total = payload.diseasesInCache || index.length;
   const hc = document.getElementById('heroCount');
   if (hc) hc.textContent = `${total.toLocaleString()} diseases scored`;
@@ -106,29 +106,25 @@ function renderAnalysis(a) {
      <td>${pct(d.median)}</td></tr>`).join('');
   const worst = [...a.ablation].sort((x, y) => y.delta - x.delta)[0];
   el.innerHTML = `
-    <p><strong>Is the result stable?</strong> Resampling diseases 
-       ${a.bootstrap.rounds.toLocaleString()} times puts the median between
-       ${pct(a.bootstrap.ci95[0])} and ${pct(a.bootstrap.ci95[1])}.
-       That interval ${a.bootstrap.excludesRandom ? 'excludes' : 'does not exclude'} the 50%
-       a random ranking would give.</p>
+    <p><strong>Stability.</strong> We resampled diseases ${a.bootstrap.rounds.toLocaleString()} times.
+       The median landed between ${pct(a.bootstrap.ci95[0])} and ${pct(a.bootstrap.ci95[1])} every time.
+       That range ${a.bootstrap.excludesRandom ? 'excludes' : 'does not exclude'} the 50% a random
+       ranking would produce.</p>
 
-    <p><strong>Did we pick a lucky constant?</strong> No, and we can prove it by admitting
-       the opposite — a larger damping exponent would score better than the one we use.
-       We keep 0.4 because that is the value the Rephetio paper published, and tuning it
-       would mean we had fitted something.</p>
+    <p><strong>The damping constant.</strong> A larger exponent scores better than the 0.4 we use.
+       We kept 0.4 anyway, because it is the value Rephetio published. Tuning it upward would mean
+       we fitted the model to our own test, and we did not want that.</p>
     <table class="mini"><tr><th>exponent</th><th>median</th></tr>${sweep}</table>
 
-    <p><strong>What if the evidence itself leaks?</strong> Removing ${esc(worst.datatype)}
-       hurts more than removing anything else, and literature evidence is partly a
-       consequence of a drug already linking a gene to a disease. Stripping every
-       literature-derived source still leaves a median of
-       ${pct(a.conservativeFloor.median)}, so the result does not rest on it.</p>
+    <p><strong>Leaking evidence.</strong> Removing ${esc(worst.datatype)} hurts the score more than
+       removing any other evidence type. Literature evidence partly reflects a drug already linked
+       to a gene and a disease, so that is a real concern. We stripped every literature-derived source
+       anyway. The median still landed at ${pct(a.conservativeFloor.median)}, well clear of chance.</p>
 
-    <p><strong>Does it break when it should?</strong> Scoring each disease against a
-       different disease's known drugs moves the median to
-       ${pct(a.negativeControl.mismatched)}. It does not reach a clean 50%, because many
-       diseases share common treatments, so some drugs rank well everywhere. We report
-       that rather than explain it away.</p>`;
+    <p><strong>The negative control.</strong> We scored each disease against a different disease's
+       known drugs. The median moved to ${pct(a.negativeControl.mismatched)}, not a clean 50%, because
+       many diseases share common treatments and some drugs rank well everywhere. We report that number
+       as it stands, not explained away.</p>`;
 }
 
 /* ---------- search ---------- */
@@ -220,7 +216,7 @@ function evidenceRows(paths, drugName) {
       ${chain(drugName, p, currentName)}
       <p class="pathmeta">${esc(p.geneName || '')} · combined association ${p.assoc.toFixed(2)}
         · ${p.drugsOnGene} approved drug${p.drugsOnGene === 1 ? '' : 's'} hit the targeted gene${via}</p>
-      <p class="evtitle">Evidence behind that association (clinical evidence excluded)</p>
+      <p class="evtitle">Evidence behind that link. Clinical evidence excluded.</p>
       ${ev}`;
   }).join('<hr style="border:0;border-top:1px solid var(--line);margin:16px 0">');
 }
@@ -233,19 +229,19 @@ function card(d, i) {
   const moa = d.mechanisms.length
     ? `<p class="moa"><strong>Mechanism:</strong> ${esc(d.mechanisms.join('; '))}</p>` : '';
   const warnList = (d.warnings || []).map((w) =>
-    `${esc(w.type)}${w.detail ? ` — ${esc(w.detail)}` : ''}`);
+    `${esc(w.type)}${w.detail ? `: ${esc(w.detail)}` : ''}`);
   const safety = warnList.length
     ? `<div class="safety"><strong>Safety on record:</strong> ${warnList.join('; ')}.
        ${d.withdrawn
-         ? 'This drug has been withdrawn in at least one market. It is shown because the biology connects, not because it is a sensible candidate.'
-         : 'Relevant to any repurposing decision, and not something this ranking accounts for.'}</div>`
+         ? 'A regulator withdrew this drug in at least one market. We show it because the biology connects. That does not make it a sensible candidate.'
+         : 'Weigh this before you consider repurposing it. Our ranking does not account for it.'}</div>`
     : '';
   const noveltyFlag = d.possiblyAlreadyApproved
-    ? `<div class="safety"><strong>This may already be an approved treatment for this disease.</strong>
-       Its own record separately lists "${esc(d.possiblyAlreadyApproved)}" as an approved indication,
-       which overlaps this disease's name. Our known-drug list did not catch it -- see
+    ? `<div class="safety"><strong>This may already be approved for this disease.</strong>
+       Its own record lists "${esc(d.possiblyAlreadyApproved)}" as an approved indication, which
+       overlaps this disease's name. Our known-drug list missed the connection. See
        <a href="https://github.com/aryanyaksh-art/off-the-shelf#is-novel-always-actually-novel-one-confirmed-case-says-no" target="_blank" rel="noopener">why, and one confirmed example</a>.
-       Treat the "novel" label here with caution.</div>`
+       Treat the novel label here with caution.</div>`
     : '';
   return `
     <div class="card">
@@ -286,30 +282,31 @@ function render(r) {
   // treatment first, which is exactly what alkaptonuria does.
   const thin = r.candidatesConsidered < 25;
   const v = validation
-    ? `<div class="vbadge">Tested against ${validation.knownPairsEvaluated} drug&ndash;disease pairs that
-       are already known to work: for <strong>${validation.diseasesWhereTopCandidateIsKnown} of
-       ${validation.diseasesEvaluated}</strong> diseases the single highest-ranked candidate is a real
-       treatment for that disease, and known treatments land in the top 10% of candidates
-       <strong>${validation.enrichmentOverChanceTopTen}&times;</strong> as often as chance would give.
-       Median position ${pct(validation.medianPercentile)}, where random would be 50%.
-       ${validation.methods ? `<br><span class="vsub">Same candidates ranked by drug popularity
-       alone, ignoring the disease, put them at ${pct(validation.methods.popularity.medianPercentile)}
-       &mdash; so the biology is doing the work, not the arithmetic.</span>` : ''}</div>` : '';
+    ? `<div class="vbadge">We tested this against ${validation.knownPairsEvaluated} drug-disease pairs
+       already known to work. For <strong>${validation.diseasesWhereTopCandidateIsKnown} of
+       ${validation.diseasesEvaluated}</strong> diseases, our top candidate is already a real treatment.
+       Known treatments land in the top 10% of candidates
+       <strong>${validation.enrichmentOverChanceTopTen}&times;</strong> as often as chance predicts.
+       Median position ${pct(validation.medianPercentile)}, where random guessing lands at 50%.
+       ${validation.methods ? `<br><span class="vsub">We also ranked the same candidates by drug
+       popularity alone, ignoring the disease entirely. That method put them at
+       ${pct(validation.methods.popularity.medianPercentile)}. The biology drives our ranking.
+       Popularity alone would not.</span>` : ''}</div>` : '';
 
   const pd = perDisease[r.id];
   const one = pd && pd.knownEvaluated === 1;
   const poor = pd && pd.medianPercentile > 0.5;
   const local = pd ? `<div class="vlocal">
-      <strong>For this disease specifically:</strong>
+      <strong>For this disease:</strong>
       ${one
-        ? `the one drug already known to treat it is <strong>${esc(pd.bestDrug)}</strong>,
-           which our ranking places at ${pd.bestRank} of ${pd.candidatePool}.`
-        : `of the ${pd.knownEvaluated} drugs already known to treat it, the best-placed is
-           <strong>${esc(pd.bestDrug)}</strong> at rank ${pd.bestRank} of ${pd.candidatePool},
-           and the median sits at ${pct(pd.medianPercentile)}.`}
+        ? `the one known treatment is <strong>${esc(pd.bestDrug)}</strong>. Our ranking places it
+           ${pd.bestRank} of ${pd.candidatePool}.`
+        : `${pd.knownEvaluated} drugs already treat this disease. The best-placed,
+           <strong>${esc(pd.bestDrug)}</strong>, ranks ${pd.bestRank} of ${pd.candidatePool}, with a
+           median of ${pct(pd.medianPercentile)}.`}
       ${poor
-        ? ` That is below where random guessing would land, so treat this disease's results with caution.`
-        : ` The engine was never told about ${one ? 'it' : 'any of them'}.`}
+        ? ` That sits below random guessing. Treat these results with caution.`
+        : ` We never told the engine about ${one ? 'it' : 'them'}.`}
     </div>` : '';
 
   stage.innerHTML = `
@@ -326,20 +323,19 @@ function render(r) {
       <b>${r.knownDrugCount}</b> known drug${r.knownDrugCount === 1 ? '' : 's'} held out</p>
     ${local}
     ${v}
-    ${thin ? `<div class="thin">Thin result. Only ${r.candidatesConsidered} approved drugs
-      can be reached from this disease's genes at all, so there is little for the method to work
-      with. That is the honest answer here, and it is exactly the situation that makes these
-      conditions hard to treat.</div>` : ''}
-    ${poor && !thin ? `<div class="thin">This is one of the diseases our method handles badly.
-      Drugs already known to treat it rank below where random guessing would put them, so the
-      suggestions below are weak evidence. We are showing it rather than hiding it.</div>` : ''}
-    <p class="secttl">Approved drugs not currently used for this disease</p>
+    ${thin ? `<div class="thin">Thin result. Only ${r.candidatesConsidered} approved drugs connect
+      to this disease's genes at all. The method has little to work with here. That is also why
+      these conditions are hard to treat in the first place.</div>` : ''}
+    ${poor && !thin ? `<div class="thin">Our method handles this disease badly. Known treatments
+      rank below where random guessing would put them. Treat the suggestions below as weak evidence.
+      We are showing you the failure, not hiding it.</div>` : ''}
+    <p class="secttl">Approved drugs not used for this disease yet</p>
     <div id="cards">${r.candidates.map(card).join('') || '<p class="empty">No candidates found.</p>'}</div>
     ${r.knownRanked.length ? `
       <div class="known">
-        <h3>Known treatments our ranking also found</h3>
-        <p class="sub">Held out of the list above. If the method works, real treatments should
-          surface near the top without being told about them.</p>
+        <h3>Known treatments we found anyway</h3>
+        <p class="sub">We held these out of the list above. If the method works, it should surface
+          real treatments near the top without ever being told about them.</p>
         ${r.knownRanked.map((k) => `<div class="krow"><span>${esc(k.name)}</span>
           <span>rank ${k.rank} of ${r.candidatesConsidered}</span></div>`).join('')}
       </div>` : ''}`;
