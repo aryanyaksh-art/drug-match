@@ -39,13 +39,24 @@ THERAPEUTIC_AREAS = [
     ("OTAR_0000018", "genetic, familial or congenital disease"),
     ("MONDO_0005071", "nervous system disorder"),
     ("OTAR_0000006", "musculoskeletal or connective tissue disease"),
-    ("EFO_0005741", "infectious disease"),
+    ("MONDO_0005550", "infectious disease"),
     ("MONDO_0004992", "cancer or benign tumor"),
-    ("EFO_0000319", "cardiovascular disease"),
-    ("EFO_0009605", "pancreas disease"),
+    ("MONDO_0004995", "cardiovascular disorder"),
+    ("MONDO_0002356", "pancreas disorder"),
     ("MONDO_0002025", "psychiatric disorder"),
+    # MONDO_0005087 was mislabeled "immune system disease" below for a while --
+    # it is actually respiratory system disorder. Both are included now, and
+    # immune system disorder gets its correct id, MONDO_0005046.
+    ("MONDO_0005087", "respiratory system disorder"),
+    ("MONDO_0005046", "immune system disorder"),
+    ("MONDO_0006617", "skin disease"),
+    ("MONDO_0005328", "eye disorder"),
+    ("MONDO_0005151", "endocrine system disorder"),
+    ("MONDO_0002118", "urinary system disorder"),
+    ("MONDO_0005039", "reproductive system disorder"),
+    ("MONDO_0005570", "hematologic disorder"),
+    ("MONDO_0021205", "disorder of ear"),
     ("EFO_0010282", "gastrointestinal disease"),
-    ("MONDO_0005087", "immune system disease"),
 ]
 
 MIN_TARGETS = 50
