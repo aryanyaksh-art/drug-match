@@ -9,18 +9,18 @@ JSON, don't recall the conversation.
 
 ## What this project is
 
-Off The Shelf ranks already-approved drugs against diseases that have no
+Drug Match ranks already-approved drugs against diseases that have no
 treatment, and shows the biological path connecting each suggestion. Built
 for a TFSS HOSA club Biotechnology entry (originally framed as a tryout
 task to join the club, not a formal competition). The user is Aryan
 (aryanyaksh19@gmail.com), working with a partner named Sweta who may be
 building an independent, separate version to compare against.
 
-**Live site:** https://off-the-shelf-phi.vercel.app
-**Repo:** https://github.com/aryanyaksh-art/off-the-shelf
+**Live site:** https://drug-match.vercel.app
+**Repo:** https://github.com/aryanyaksh-art/drug-match
 **Local copy:** `C:\Users\aryan\OneDrive\Desktop\offtheshelf`, tracks
 `origin/main`, pushes auto-deploy via a connected Vercel project
-(`aryanyaksh-4231s-projects/off-the-shelf`, project id
+(`aryanyaksh-4231s-projects/drug-match`, project id
 `prj_W1gx3c9YnEpGxm8GPGUKk26UBQIt`). No manual deploy step needed: commit
 and push to `main` and Vercel builds it.
 

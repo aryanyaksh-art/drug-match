@@ -1,4 +1,4 @@
-/* Off The Shelf - static front end.
+/* Drug Match - static front end.
    Reads only precomputed JSON, so the whole app works with no network. */
 
 const EVIDENCE_LABELS = {
@@ -240,7 +240,7 @@ function card(d, i) {
     ? `<div class="safety"><strong>This may already be approved for this disease.</strong>
        Its own record lists "${esc(d.possiblyAlreadyApproved)}" as an approved indication, which
        overlaps this disease's name. Our known-drug list missed the connection. See
-       <a href="https://github.com/aryanyaksh-art/off-the-shelf#is-novel-always-actually-novel-one-confirmed-case-says-no" target="_blank" rel="noopener">why, and one confirmed example</a>.
+       <a href="https://github.com/aryanyaksh-art/drug-match#is-novel-always-actually-novel-one-confirmed-case-says-no" target="_blank" rel="noopener">why, and one confirmed example</a>.
        Treat the novel label here with caution.</div>`
     : '';
   return `
