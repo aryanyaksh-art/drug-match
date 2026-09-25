@@ -60,10 +60,11 @@ a{color:var(--accent)}
 #q{flex:1; border:0; background:none; color:var(--ink); font:inherit; font-size:16px; outline:none; min-width:0}
 
 .suggest{position:absolute; z-index:20; left:0; right:0; top:calc(100% + 6px);
-  margin:0; padding:6px; list-style:none; background:var(--card);
-  border:1px solid var(--line2); border-radius:var(--radius); max-height:320px; overflow:auto}
-.suggest li{padding:10px 12px; border-radius:6px; cursor:pointer; display:flex; justify-content:space-between; gap:12px}
-.suggest li[aria-selected="true"],.suggest li:hover{background:var(--accent-bg); color:var(--accent)}
+  margin:0; padding:0; list-style:none; background:var(--card);
+  border:1px solid var(--line2); border-radius:0; max-height:320px; overflow:auto}
+.suggest li{padding:10px 12px; border-radius:0; border-left:2px solid transparent;
+  cursor:pointer; display:flex; justify-content:space-between; gap:12px}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--line); color:var(--ink); border-left-color:var(--accent)}
 .suggest .n{font-size:14px; color:var(--ink3)}
 
 .chips{display:flex; flex-wrap:wrap; gap:8px}
