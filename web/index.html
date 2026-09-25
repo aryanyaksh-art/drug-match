@@ -5,86 +5,212 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Drug Match: drug repurposing candidates</title>
 <meta name="description" content="Rank already-approved drugs against diseases with no treatment, and see the biology behind every suggestion.">
+<meta name="color-scheme" content="light dark">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-  <img class="hero-media" src="assets/dna-hero.jpg" alt="Textured 3D render of a DNA double helix">
-  <div class="hero-scrim"></div>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="wrap wide navrow">
-    <span class="brand">Drug Match</span>
-    <span class="herocount" id="heroCount">2,549 diseases scored</span>
-  </div>
+<header class="nav">
+  <div class="wrap navin">
+    <a class="brand" href="#/" aria-label="Drug Match home">
+      <img src="assets/favicon.svg" alt="" width="26" height="26">
+      <span>Drug Match</span>
+    </a>
 
-  <div class="wrap wide herocontent">
-    <div class="herotext">
-      <h1>Old drugs.<br>Diseases nobody's<br>tried them on.</h1>
-      <p class="tagline">Type a disease. See which approved drugs might treat it, and exactly why.</p>
-
-      <div class="searchrow">
-        <label class="srch" for="q">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
-          <input id="q" type="text" placeholder="Search a disease, e.g. alkaptonuria" autocomplete="off" aria-label="Search a disease">
-        </label>
-        <ul id="suggest" class="suggest" role="listbox" hidden></ul>
-      </div>
-
-      <div id="chips" class="chips"></div>
+    <div class="navsearch searchbox" id="navSearch" hidden>
+      <label class="srch small">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input type="search" placeholder="Search diseases…" autocomplete="off" aria-label="Search a disease" spellcheck="false">
+        <kbd>/</kbd>
+      </label>
+      <ul class="suggest" role="listbox" hidden></ul>
     </div>
-  </div>
 
-  <svg class="hero-lines" viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="780" y1="65" x2="900" y2="140"></line>
-    <line x1="720" y1="410" x2="620" y2="460"></line>
-    <line x1="480" y1="860" x2="430" y2="820"></line>
-  </svg>
-
-  <span class="dot" style="left:90%; top:14%;"></span>
-  <span class="dot" style="left:62%; top:46%;"></span>
-  <span class="dot" style="left:43%; top:82%;"></span>
-
-  <div class="callout" style="left:70%; top:4%;">
-    <div class="card">
-      <span class="cnum" id="statDiseases">—</span>
-      <span class="clabel">diseases scored</span>
-    </div>
-  </div>
-  <div class="callout" style="left:70%; top:38%;">
-    <div class="card">
-      <span class="cnum" id="statPairs">—</span>
-      <span class="clabel">known pairs tested</span>
-    </div>
-  </div>
-  <div class="callout" style="left:50%; top:88%;">
-    <div class="card">
-      <span class="cnum" id="statRare">—</span>
-      <span class="clabel">rare-disease median</span>
-    </div>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#browse">Browse</a>
+      <a href="#how">How it works</a>
+      <a href="#accuracy">Accuracy</a>
+    </nav>
   </div>
 </header>
 
-<div class="dark">
-<main class="wrap">
+<main id="main">
 
-  <section id="stage" class="stage">
-    <p class="loading">Loading disease index…</p>
-  </section>
+  <!-- ================= HOME ================= -->
+  <div id="home">
+
+    <section class="hero">
+      <div class="wrap herogrid">
+        <div class="herotext">
+          <p class="eyebrow"><span class="pulse"></span>Drug repurposing explorer</p>
+          <h1>Old drugs.<br><em>New hope</em> for diseases<br>nobody's tried them on.</h1>
+          <p class="lede">Pick a disease. We rank approved, already-safe-in-people drugs by how strongly
+            their targets connect to that disease's genes, and show you exactly why.</p>
+
+          <div class="searchbox hero-search" id="heroSearch">
+            <label class="srch">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              <input type="search" placeholder="Search a disease, e.g. alkaptonuria" autocomplete="off" aria-label="Search a disease" spellcheck="false">
+              <kbd>/</kbd>
+            </label>
+            <ul class="suggest" role="listbox" hidden></ul>
+          </div>
+
+          <div class="tryrow">
+            <span class="trylbl">Try</span>
+            <div id="chips" class="chips"></div>
+          </div>
+        </div>
+
+        <div class="heroart" aria-hidden="true">
+          <img src="assets/dna-hero.jpg" alt="">
+          <div class="floatcard fc1"><b id="statDiseases">2,549</b><span>diseases scored</span></div>
+          <div class="floatcard fc2"><b id="statPairs">16,197</b><span>known treatments used to test it</span></div>
+          <div class="floatcard fc3"><b id="statTop">196</b><span>diseases where our #1 pick is a real treatment</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps wrap" aria-labelledby="stepsTitle">
+      <h2 id="stepsTitle" class="sr">How to read Drug Match</h2>
+      <ol class="stepgrid">
+        <li>
+          <span class="stepnum">1</span>
+          <h3>Pick a disease</h3>
+          <p>Search or browse 599 conditions, from rare genetic disorders to common chronic illnesses.</p>
+        </li>
+        <li>
+          <span class="stepnum">2</span>
+          <h3>We follow the genes</h3>
+          <p>Each disease is linked to genes. Each approved drug acts on genes. Where they meet, there's a lead.</p>
+        </li>
+        <li>
+          <span class="stepnum">3</span>
+          <h3>See the reasoning</h3>
+          <p>Every suggestion comes with the drug → gene → disease path behind it, plus the evidence and safety record.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="browse" class="section wrap" aria-labelledby="browseTitle">
+      <div class="sechead">
+        <div>
+          <p class="kicker">Browse</p>
+          <h2 id="browseTitle">All diseases</h2>
+        </div>
+        <label class="filterin">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input id="browseFilter" type="search" placeholder="Filter by name" aria-label="Filter diseases by name">
+        </label>
+      </div>
+      <div class="tabs" role="tablist" id="browseTabs"></div>
+      <div class="dgrid" id="browseGrid"><p class="muted">Loading diseases…</p></div>
+      <div class="center"><button class="btn ghost" id="browseMore" hidden>Show more</button></div>
+    </section>
+
+    <section id="how" class="section wrap" aria-labelledby="howTitle">
+      <p class="kicker">Method</p>
+      <h2 id="howTitle">How the ranking works</h2>
+      <p class="sublede">No machine learning, nothing trained. A fixed, published formula applied to public biology data.</p>
+
+      <div class="howgrid">
+        <article class="howcard">
+          <h3>Two kinds of path</h3>
+          <p>A drug reaches a disease either directly through a gene it targets, or through one extra
+            step where its target physically interacts with a disease gene.</p>
+          <div class="minipath">
+            <span class="node drug">Drug</span><span class="edge">targets</span>
+            <span class="node gene">Gene</span><span class="edge">linked to</span>
+            <span class="node dis">Disease</span>
+          </div>
+          <div class="minipath">
+            <span class="node drug">Drug</span><span class="edge">targets</span>
+            <span class="node gene">Gene A</span><span class="edge">interacts</span>
+            <span class="node gene">Gene B</span><span class="edge">linked to</span>
+            <span class="node dis">Disease</span>
+          </div>
+        </article>
+
+        <article class="howcard">
+          <h3>Why the extra step matters</h3>
+          <p>The gene behind a rare disease usually has no drug against it, which is often why the disease has no treatment.
+            Alkaptonuria is caused by a broken <b>HGD</b> gene with zero approved drugs. But HGD interacts with <b>HPD</b>,
+            and HPD's drug is <b>nitisinone</b>, the real approved treatment.</p>
+          <p class="callnum">Adding the hop moved nitisinone from rank 27 to <b>rank 2</b>.</p>
+        </article>
+
+        <article class="howcard">
+          <h3>Busy genes count for less</h3>
+          <p>A gene hit by hundreds of drugs, or a drug that hits hundreds of genes, tells you very little.
+            So every path is damped by how connected its nodes are.</p>
+          <div class="formula" aria-label="score equals the sum over paths of association divided by drug degree to the 0.4 times gene degree to the 0.4">
+            <span>score =</span>
+            <span class="sum">Σ</span>
+            <span class="frac"><span>association(gene, disease)</span><span>deg(drug)<sup>0.4</sup> · deg(gene)<sup>0.4</sup></span></span>
+          </div>
+          <p class="fine">0.4 is the exponent published by Project Rephetio. We never tuned it.</p>
+        </article>
+
+        <article class="howcard">
+          <h3>No peeking at the answer</h3>
+          <p>Some gene–disease evidence is derived from drugs that already treat the disease. Using it would be reading the
+            answer off the back of the book, so we exclude the <code>clinical</code> and <code>known_drug</code> evidence types.
+            Every link comes from genetics, animal models, expression data and literature.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="accuracy" class="section wrap" aria-labelledby="accTitle">
+      <p class="kicker">Validation</p>
+      <h2 id="accTitle">Does it actually work?</h2>
+      <p class="sublede" id="accLede">We hid every known treatment from the engine, then checked where it ranked them anyway.</p>
+
+      <div class="kpis" id="kpis"></div>
+
+      <div class="chartcard">
+        <div class="charthead">
+          <h3>Where known treatments land in the ranking</h3>
+          <p>Median position of the real treatment among all candidates. <b>Lower is better.</b> Random guessing lands at 50%.</p>
+        </div>
+        <div id="methodChart" class="hbars"></div>
+      </div>
+
+      <details class="deep">
+        <summary>Stress tests and honest caveats</summary>
+        <div id="analysis" class="deepbody"><p class="muted">Loading analysis…</p></div>
+      </details>
+    </section>
+  </div>
+
+  <!-- ================= DISEASE ================= -->
+  <div id="disease" hidden>
+    <div class="wrap" id="stage"></div>
+  </div>
 
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <p><strong>This tool generates hypotheses for researchers. It is not medical advice.</strong> Nothing here has been tested in patients for the disease it lists. Every candidate needs laboratory work and clinical trials before anyone could use it. Do not make a treatment decision from this page.</p>
-    <p class="meta" id="footmeta"></p>
+    <div class="disclaimer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+      <p><strong>For research, not medical advice.</strong> Nothing here has been tested in patients for the
+        disease it lists. Every candidate needs laboratory work and clinical trials before anyone could use it.
+        Do not make a treatment decision from this page.</p>
+    </div>
+    <div class="footgrid">
+      <p class="meta" id="footmeta"></p>
+      <p class="credits">Method after <a href="https://doi.org/10.7554/eLife.26726" target="_blank" rel="noopener">Project Rephetio</a> ·
+        Data from <a href="https://platform.opentargets.org/" target="_blank" rel="noopener">Open Targets</a> and STRING ·
+        <a href="https://github.com/aryanyaksh-art/drug-match" target="_blank" rel="noopener">Source on GitHub</a></p>
+    </div>
   </div>
 </footer>
-</div>
 
 <script src="app.js"></script>
 </body>
